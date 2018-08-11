@@ -37,12 +37,18 @@ namespace ImagesTest
 
         Pen SmallBluePen = new Pen(Color.Blue, 5);
         Pen BigBluePen = new Pen(Color.Pink, 10);
+        Pen clearPen = new Pen(Color.Transparent, 10);
         private bool aLittle = false;
         private bool aLot = false;
 
         private bool aLittleP = false;
         private bool aLotP = false;
 
+        private bool isLittleSelected = false;
+        private bool isLotSelected = false;
+
+        private bool nextBtnClick = false;
+        private int nextCounter = 0;
 
         //Click Button to change Circle
 
@@ -64,11 +70,15 @@ namespace ImagesTest
         private void changeBoolALittle() {
             aLittle = true;
             aLot = false;
+            isLittleSelected = true;
+            isLotSelected = false;
         }
 
         private void changeBoolALot() {
             aLittle = false;
             aLot = true;
+            isLittleSelected = false;
+            isLotSelected = true;
         }
 
         /// <summary>
@@ -124,6 +134,12 @@ namespace ImagesTest
             } else if (aLot) {
                 DrawCircle(BigBluePen, e, 0, 0, pictureBox6.Size.Width, pictureBox6.Size.Height);
             }
+            //Change Image
+            if (nextBtnClick && nextCounter == 1) {
+                pictureBox6.Image = new Bitmap(@"..\..\resources1\10689985_375007842650011_6464618090116212130_n.jpg");
+            } else if (nextCounter == 2) {
+                pictureBox6.Image = new Bitmap(@"..\..\resources1\22883230_1666426686758964_241905968_n.png");
+            }
 
         }
 
@@ -168,6 +184,26 @@ namespace ImagesTest
             panel2.BringToFront();
             panel2.Invalidate();
         }
+
+
+        /// <summary>
+        /// When the next button is clicked, erases drawing and changes picture
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void nextBtn_Click(object sender, EventArgs e) {
+            nextBtnClick = true;
+            aLittle = false;
+            aLot = false;
+            nextCounter++;
+
+            //Put code above here to write to database on what user has selected.
+            pictureBox6.Invalidate();
+            Console.WriteLine("Counter: " + nextCounter.ToString() + "\n" + "A Little Selected: " + isLittleSelected.ToString() + 
+                "\n" + "A Lot Selected: " + isLotSelected.ToString());
+        }
+
     }
 
 }
