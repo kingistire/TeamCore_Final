@@ -49,6 +49,7 @@ namespace ImagesTest
 
         private bool nextBtnClick = false;
         private int nextCounter = 0;
+        private int test2Counter = 0;
 
         //Click Button to change Circle
 
@@ -139,6 +140,19 @@ namespace ImagesTest
                 pictureBox6.Image = new Bitmap(@"..\..\resources1\10689985_375007842650011_6464618090116212130_n.jpg");
             } else if (nextCounter == 2) {
                 pictureBox6.Image = new Bitmap(@"..\..\resources1\22883230_1666426686758964_241905968_n.png");
+            } else if (nextCounter == 3) {
+                if(MessageBox.Show("You have completed the visual interview. The next interview is XXXX.", "Ok", MessageBoxButtons.OK) == DialogResult.OK) {
+                    pictureBox6.Image = new Bitmap(@"..\..\resources1\black_texture_3-wallpaper-1920x1080.jpg");
+                    nextCounter = 0;
+                    nextBtn.Visible = false;
+                    nextBtn.Enabled = false;
+                    test2NextBtn.Visible = true;
+                    test2NextBtn.Enabled = true;
+                }
+            }
+
+            if(nextBtnClick && test2Counter == 1) {
+                pictureBox6.Image = new Bitmap(@"..\..\resources1\22883230_1666426686758964_241905968_n.png");
             }
 
         }
@@ -193,9 +207,7 @@ namespace ImagesTest
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void nextBtn_Click(object sender, EventArgs e) {
-            nextBtnClick = true;
-            aLittle = false;
-            aLot = false;
+            changeButtonBools();
             nextCounter++;
 
             //Put code above here to write to database on what user has selected.
@@ -204,6 +216,29 @@ namespace ImagesTest
                 "\n" + "A Lot Selected: " + isLotSelected.ToString());
         }
 
+        /// <summary>
+        /// Test 2 button to proceed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void test2NextBtn_Click(object sender, EventArgs e) {
+            changeButtonBools();
+            test2Counter++;
+
+            //Put code above here to write to database on what user has selected.
+            pictureBox6.Invalidate();
+            Console.WriteLine("Counter: " + nextCounter.ToString() + "\n" + "A Little Selected: " + isLittleSelected.ToString() +
+                "\n" + "A Lot Selected: " + isLotSelected.ToString());
+        }
+
+        /// <summary>
+        /// Function to determine if the next button has been clicked, and change the a Little and a Lot button to false to erase the drawing
+        /// </summary>
+        private void changeButtonBools() {
+            nextBtnClick = true;
+            aLittle = false;
+            aLot = false;
+        }
+    }
     }
 
-}

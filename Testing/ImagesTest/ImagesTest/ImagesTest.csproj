@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="resources1\22883230_1666426686758964_241905968_n.png" />
+    <Content Include="resources1\black_texture_3-wallpaper-1920x1080.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
