@@ -231,7 +231,7 @@
             this.topRightALotBtn.TabIndex = 11;
             this.topRightALotBtn.Text = "A Lot";
             this.topRightALotBtn.UseVisualStyleBackColor = true;
-            this.topRightALotBtn.Click += new System.EventHandler(this.topRightALotBtn_Click);
+            this.topRightALotBtn.Click += new System.EventHandler(this.topRightPBALotBtn_Click);
             // 
             // topRightALittleBtn
             // 

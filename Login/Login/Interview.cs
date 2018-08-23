@@ -24,13 +24,18 @@ namespace Login {
         }
 
         private Pen aLittle = new Pen(Color.Blue, 5);
-        private Pen aLot = new Pen(Color.DarkBlue, 10);
+        private Pen aLot = new Pen(Color.Red, 10);
         private bool aLittleBool = false;
         private bool aLotBool = false;
         private bool isLittleSelected = false;
         private bool isLotSelected = false;
+        private int _buttonClicked = 0;
+        private bool prevButtonClick = false;
 
         private bool[] boolArrayForSelectionInterview1 = new bool[12]; //Set to false by default. Bool array goes a little, a lot, a little a lot starting from top left to top right, then bottom left to bottom right
+        private bool[] backUpBoolArrayInterview1 = new bool[12];
+
+        private int[] intArray = new int[6] { 0, 0, 0, 0, 0, 0, };
 
         private bool nextBtnClick = false;
         private int nextCounter = 0;
@@ -93,17 +98,23 @@ namespace Login {
         /// </summary>
         /// <param name="pictureBoxName">Picturebox name</param>
         /// <param name="e"></param>
-        private void DeterminePenSizeDrawing(PictureBox pictureBoxName, PaintEventArgs e) {
-            //If aLittle Button is clicked
-            int index;
-
+        private void DeterminePenSizeDrawing(Object sender, PictureBox pictureBoxName, PaintEventArgs e) {
             //Determine if position is even or not
-            for(int i = 0; i < boolArrayForSelectionInterview1.Length; i++) {
+            //for (int i = 0; i < intArray.Length; i++) {
+            //Console.WriteLine(intArray[i].ToString());
+            //  if(intArray[i] == 1) {
+            //DrawCircle(aLittle, e, 0, 0, pictureBoxName.Size.Width, pictureBoxName.Size.Height);
+            //} else if (intArray[i] == 2) {
+            //  DrawCircle(aLot, e, 0, 0, pictureBoxName.Size.Width, pictureBoxName.Size.Height);
+            //}
+            int index = 0;
+            //Determine if position is even or not
+            for (int i = 0; i < boolArrayForSelectionInterview1.Length; i++) {
                 if (boolArrayForSelectionInterview1[i]) {
                     //Get index value of the array where true
                     index = Array.IndexOf(boolArrayForSelectionInterview1, true);
                     Console.WriteLine(index);
-                    if(index % 2 == 0 || index == 0) {
+                    if (index % 2 == 0 || index == 0) {
                         DrawCircle(aLittle, e, 0, 0, pictureBoxName.Size.Width, pictureBoxName.Size.Height);
                         boolArrayForSelectionInterview1[i] = false;
                     } else {
@@ -112,9 +123,10 @@ namespace Login {
                     }
                 }
             }
-            //When click previous, check array and draw
-
         }
+
+        //}
+
 
         /// <summary>
         /// Draw a circle
@@ -133,50 +145,80 @@ namespace Login {
 
         //Code from here will update the pictureboxes when the user has clicked on a button
         private void topLeftPB_Paint(object sender, PaintEventArgs e) {
-            DeterminePenSizeDrawing(topLeftPB, e);
+            DeterminePenSizeDrawing(sender, topLeftPB, e);
         }
 
         private void topMidPB_Paint(object sender, PaintEventArgs e) {
-            DeterminePenSizeDrawing(topMidPB, e);
+            DeterminePenSizeDrawing(sender, topMidPB, e);
         }
 
         private void topRightPB_Paint(object sender, PaintEventArgs e) {
-            DeterminePenSizeDrawing(topRightPB, e);
+            DeterminePenSizeDrawing(sender, topRightPB, e);
         }
 
         private void bottomLeftPB_Paint(object sender, PaintEventArgs e) {
-            DeterminePenSizeDrawing(bottomLeftPB, e);
+            DeterminePenSizeDrawing(sender, bottomLeftPB, e);
         }
 
         private void bottomMidPB_Paint(object sender, PaintEventArgs e) {
-            DeterminePenSizeDrawing(bottomMidPB, e);
+            DeterminePenSizeDrawing(sender, bottomMidPB, e);
         }
 
         private void bottomRightPB_Paint(object sender, PaintEventArgs e) {
-            DeterminePenSizeDrawing(bottomRightPB, e);
+            DeterminePenSizeDrawing(sender, bottomRightPB, e);
         }
 
         /// <summary>
         /// Call this function when user is going to click on A Little
         /// </summary>
-        private void changeBoolALittle(object sender) {
+        private int[] changeBoolALittle(object sender) {
             if (sender.Equals(topLeftPBALittleBtn)) {
                 changeBoolArray(0, 1);
+                Console.WriteLine("Bottom Mid Set To: " + intArray[0].ToString());
             } else if (sender.Equals(topMidALittleBtn)) {
                 changeBoolArray(2, 3);
+                Console.WriteLine("Bottom Mid Set To: " + intArray[1].ToString());
+            } else if (sender.Equals(topRightALittleBtn)) {
+                changeBoolArray(4, 5);
+                Console.WriteLine("Bottom Mid Set To: " + intArray[2].ToString());
+            } else if (sender.Equals(bottomLeftALittleBtn)) {
+                changeBoolArray(6, 7);
+                Console.WriteLine("Bottom Mid Set To: " + intArray[3].ToString());
+            } else if (sender.Equals(bottomMidALittleBtn)) {
+                changeBoolArray(8, 9);
+                Console.WriteLine("Bottom Mid Set To: " + intArray[4].ToString());
+            } else if (sender.Equals(bottomRightALittleBtn)) {
+                changeBoolArray(10, 11);
+                Console.WriteLine("Bottom Mid Set To: " + intArray[5].ToString());
             }
-            
+
+            return intArray;
+
         }
         /// <summary>
         /// Call this function when user is going to click A Lot
         /// </summary>
-        private void changeBoolALot(object sender) {
+        private int[] changeBoolALot(object sender) {
             if (sender.Equals(topLeftPBALotBtn)) {
                 changeBoolArray(1, 0);
+                Console.WriteLine("Bottom Mid Set to " + intArray[0].ToString());
             } else if (sender.Equals(topMidALotBtn)) {
                 changeBoolArray(3, 2);
+                Console.WriteLine("Bottom Mid Set to " + intArray[1].ToString());
+            } else if (sender.Equals(topRightALotBtn)) {
+                changeBoolArray(5, 4);
+                Console.WriteLine("Bottom Mid Set to " + intArray[2].ToString());
+            } else if (sender.Equals(bottomLeftALotBtn)) {
+                changeBoolArray(7, 6);
+                Console.WriteLine("Bottom Mid Set to " + intArray[3].ToString());
+            } else if (sender.Equals(bottomMidALotBtn)) {
+                changeBoolArray(9, 8);
+                Console.WriteLine("Bottom Mid Set to " + intArray[4].ToString());
+            } else if (sender.Equals(bottomRightALotBtn)) {
+                changeBoolArray(11, 10);
+                Console.WriteLine("Bottom Mid Set to " + intArray[5].ToString());
             }
-
+            return intArray;
         }
 
         private void changeBoolArray(int positionSettingTrue, int positionSettingFalse) {
@@ -190,73 +232,78 @@ namespace Login {
         private void topRightPBALotBtn_Click(object sender, EventArgs e) {
             changeBoolALot(sender);
             //This will refresh the picturebox
-            topLeftPB.Invalidate();
+            topRightPB.Invalidate();
+            _buttonClicked++;
         }
 
         private void topLeftPBALittleBtn_Click(object sender, EventArgs e) {
             changeBoolALittle(sender);
             //This will refresh the picture box
             topLeftPB.Invalidate();
+            _buttonClicked++;
         }
 
         private void topMidALittleBtn_Click(object sender, EventArgs e) {
             changeBoolALittle(sender);
             //This will refresh the picture box
             topMidPB.Invalidate();
+            _buttonClicked++;
         }
 
         private void topMidALotBtn_Click(object sender, EventArgs e) {
             changeBoolALot(sender);
             //This will refresh the picture box
             topMidPB.Invalidate();
+            _buttonClicked++;
         }
 
         private void topRightALittleBtn_Click(object sender, EventArgs e) {
             changeBoolALittle(sender);
             //This will refresh the picture box
             topRightPB.Invalidate();
-        }
-
-        private void topRightALotBtn_Click(object sender, EventArgs e) {
-            changeBoolALot(sender);
-            //This will refresh the picture box
-            topRightPB.Invalidate();
+            _buttonClicked++;
         }
 
         private void bottomLeftALittleBtn_Click(object sender, EventArgs e) {
             changeBoolALittle(sender);
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
+            _buttonClicked++;
         }
 
         private void bottomLeftALotBtn_Click(object sender, EventArgs e) {
             changeBoolALot(sender);
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
+            _buttonClicked++;
         }
 
         private void bottomMidALittleBtn_Click(object sender, EventArgs e) {
             changeBoolALittle(sender);
             //This will refresh the picture box
             bottomMidPB.Invalidate();
+            _buttonClicked++;
         }
 
         private void bottomMidALotBtn_Click(object sender, EventArgs e) {
             changeBoolALot(sender);
             //This will refresh the picture box
             bottomMidPB.Invalidate();
+            _buttonClicked++;
         }
 
         private void bottomRightALittleBtn_Click(object sender, EventArgs e) {
             changeBoolALittle(sender);
             //This will refresh the picture box
             bottomRightPB.Invalidate();
+            _buttonClicked++;
         }
 
         private void bottomRightALotBtn_Click(object sender, EventArgs e) {
             changeBoolALot(sender);
             //This will refresh the picture box
             bottomRightPB.Invalidate();
+            _buttonClicked++;
         }
 
         /// <summary>
@@ -296,11 +343,18 @@ namespace Login {
         }
 
         private void previousInterviewSlideBtn_Click(object sender, EventArgs e) {
+            List<PictureBox> pbList = new List<PictureBox>();
+            prevButtonClick = true;
             //nextCounter--;
             interviewPanel.BringToFront();
-            //foreach(var pb in this.Controls.OfType<PictureBox>()) {
-            //    pb.Invalidate();
-            //}
+            foreach (var pb in this.Controls.OfType<PictureBox>()) {
+                pbList.Add(pb);
+            }
+
+            for (int i = 0; i < pbList.Count; i++) {
+                pbList[i].Invalidate();
+            }
+
             //changeButtonBoolsOnPrevious();
             //if(nextCounter == 0) {
             //    this.previousInterviewSlideBtn.Visible = false;
