@@ -13,3 +13,21 @@ C:\Users\bryce\Desktop\University\2018 S2\Capstone\Login\Login\obj\Debug\Login.A
 C:\Users\bryce\Desktop\University\2018 S2\Capstone\Login\Login\obj\Debug\Login.NewAccount.resources
 C:\Users\bryce\Desktop\University\2018 S2\Capstone\Login\Login\obj\Debug\Login.ViewUsers.resources
 C:\Users\bryce\Desktop\University\2018 S2\Capstone\Login\Login\obj\Debug\My Sensory Experiences.csprojAssemblyReference.cache
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\bin\Debug\Login.exe.config
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\bin\Debug\Login.exe
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\bin\Debug\Login.pdb
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csprojAssemblyReference.cache
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.NewAccount.resources
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.AddUser.resources
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.Interview.resources
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.Login.resources
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.MDIParent1.resources
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.ViewUsers.resources
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.GenerateResource.cache
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.CoreCompileInputs.cache
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.exe
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.pdb
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.DeleteUser.resources
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.EditUser2.resources
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.EditUser1.resources

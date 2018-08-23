@@ -203,9 +203,9 @@
             this.btnSave.ForeColor = System.Drawing.Color.Navy;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.Location = new System.Drawing.Point(282, 482);
+            this.btnSave.Location = new System.Drawing.Point(254, 482);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(148, 53);
+            this.btnSave.Size = new System.Drawing.Size(176, 53);
             this.btnSave.TabIndex = 12;
             this.btnSave.Text = "Add User";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -246,7 +246,7 @@
             this.Controls.Add(this.tbLname);
             this.Controls.Add(this.tbFname);
             this.Name = "AddUser";
-            this.Text = "Add user";
+            this.Text = "Add User";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
