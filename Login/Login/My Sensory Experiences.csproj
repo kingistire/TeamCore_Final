@@ -108,6 +108,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ViewUsers.resx">
       <DependentUpon>ViewUsers.cs</DependentUpon>
@@ -124,6 +125,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="resources\81-kix8WGmL._SL1500_.jpg" />
+    <Content Include="resources\band-maid-daydreaming-mv.jpg" />
+    <Content Include="resources\band-maid-domination-750x400.png" />
+    <Content Include="resources\BAND-MAID-start-over-1130x565.jpg" />
+    <Content Include="resources\BAND-MAID_banner.jpg" />
+    <Content Include="resources\CRCP-10406.jpg" />
+    <Content Include="resources\daydreaming-bandmaid-750x400.jpg" />
+    <Content Include="resources\Holden-VY-SS-Commodore-2002-10-.jpg" />
+    <Content Include="resources\maxres1.jpg" />
+    <Content Include="resources\maxresdefault.jpg" />
+    <Content Include="resources\_a_band-maid_start_over__1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

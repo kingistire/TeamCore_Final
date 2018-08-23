@@ -19,3 +19,14 @@ C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final\Testing\ImagesTest\ImagesTest\o
 C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final\Testing\ImagesTest\ImagesTest\obj\Debug\ImagesTest.exe
 C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final\Testing\ImagesTest\ImagesTest\obj\Debug\ImagesTest.pdb
 C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final\Testing\ImagesTest\ImagesTest\obj\Debug\ImagesTest.g.resources
+D:\Jason Tam\Capstone\Final\Testing\ImagesTest\ImagesTest\bin\Debug\ImagesTest.exe.config
+D:\Jason Tam\Capstone\Final\Testing\ImagesTest\ImagesTest\bin\Debug\ImagesTest.exe
+D:\Jason Tam\Capstone\Final\Testing\ImagesTest\ImagesTest\bin\Debug\ImagesTest.pdb
+D:\Jason Tam\Capstone\Final\Testing\ImagesTest\ImagesTest\obj\Debug\ImagesTest.csprojAssemblyReference.cache
+D:\Jason Tam\Capstone\Final\Testing\ImagesTest\ImagesTest\obj\Debug\ImagesTest.g.resources
+D:\Jason Tam\Capstone\Final\Testing\ImagesTest\ImagesTest\obj\Debug\ImagesTest.Form1.resources
+D:\Jason Tam\Capstone\Final\Testing\ImagesTest\ImagesTest\obj\Debug\ImagesTest.Properties.Resources.resources
+D:\Jason Tam\Capstone\Final\Testing\ImagesTest\ImagesTest\obj\Debug\ImagesTest.csproj.GenerateResource.cache
+D:\Jason Tam\Capstone\Final\Testing\ImagesTest\ImagesTest\obj\Debug\ImagesTest.csproj.CoreCompileInputs.cache
+D:\Jason Tam\Capstone\Final\Testing\ImagesTest\ImagesTest\obj\Debug\ImagesTest.exe
+D:\Jason Tam\Capstone\Final\Testing\ImagesTest\ImagesTest\obj\Debug\ImagesTest.pdb
