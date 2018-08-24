@@ -23,16 +23,16 @@ namespace Login {
         private void btnSave_Click_1(object sender, EventArgs e) {
             string genderSelection = "";
             //if gender is not chosen, program crashes
-            genderSelection = cbGender.Items[cbGender.SelectedIndex].ToString();
+            genderSelection = cbGender.Items[cbGender.SelectedIndex].ToString().Trim();
             con = new SqlConnection("Data Source=DESKTOP-G8RH1E3\\SQLEXPRESS;Initial Catalog=CapstoneDB;Integrated Security=True");
             con.Open();
             cmd = new SqlCommand("INSERT INTO testUser (firstName, lastName, gender, age, phone, email) VALUES (@firstName, @lastName, @gender, @age, @phone, @email)", con);
-            cmd.Parameters.Add("@firstName", tbFname.Text);
-            cmd.Parameters.Add("@lastName", tbLname.Text);
-            cmd.Parameters.Add("@gender", genderSelection);
-            cmd.Parameters.Add("@age", tbAge.Text);
-            cmd.Parameters.Add("@phone", tbPhone.Text);
-            cmd.Parameters.Add("@email", tbEmail.Text);
+            cmd.Parameters.AddWithValue("@firstName", tbFname.Text.Trim());
+            cmd.Parameters.AddWithValue("@lastName", tbLname.Text.Trim());
+            cmd.Parameters.AddWithValue("@gender", genderSelection);
+            cmd.Parameters.AddWithValue("@age", tbAge.Text.Trim());
+            cmd.Parameters.AddWithValue("@phone", tbPhone.Text.Trim());
+            cmd.Parameters.AddWithValue("@email", tbEmail.Text.Trim());
             cmd.ExecuteNonQuery();
             MessageBox.Show("New user has been added successfully.");
             this.Close();

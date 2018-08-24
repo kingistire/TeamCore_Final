@@ -47,6 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditUser2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditUser2.Designer.cs">
+      <DependentUpon>EditUser2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditUser1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditUser1.Designer.cs">
+      <DependentUpon>EditUser1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteUser.Designer.cs">
+      <DependentUpon>DeleteUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +103,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EditUser2.resx">
+      <DependentUpon>EditUser2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditUser1.resx">
+      <DependentUpon>EditUser1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteUser.resx">
+      <DependentUpon>DeleteUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewAccount.resx">
       <DependentUpon>NewAccount.cs</DependentUpon>
     </EmbeddedResource>
