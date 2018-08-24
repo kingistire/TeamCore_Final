@@ -29,7 +29,6 @@ namespace Login {
         private bool aLotBool = false;
         private bool isLittleSelected = false;
         private bool isLotSelected = false;
-        private int _buttonClicked = 0;
         private bool prevButtonClick = false;
 
         private bool[] boolArrayForSelectionInterview1 = new bool[12]; //Set to false by default. Bool array goes a little, a lot, a little a lot starting from top left to top right, then bottom left to bottom right
@@ -76,8 +75,6 @@ namespace Login {
                     nextInterviewSlideBTN.Visible = false;
                     nextInterviewSlideBTN.Enabled = false;
                 }
-            } else if (nextCounter == 0) {
-                originalImages();
             }
         }
 
@@ -113,7 +110,6 @@ namespace Login {
                 if (boolArrayForSelectionInterview1[i]) {
                     //Get index value of the array where true
                     index = Array.IndexOf(boolArrayForSelectionInterview1, true);
-                    Console.WriteLine(index);
                     if (index % 2 == 0 || index == 0) {
                         DrawCircle(aLittle, e, 0, 0, pictureBoxName.Size.Width, pictureBoxName.Size.Height);
                         boolArrayForSelectionInterview1[i] = false;
@@ -174,22 +170,16 @@ namespace Login {
         private int[] changeBoolALittle(object sender) {
             if (sender.Equals(topLeftPBALittleBtn)) {
                 changeBoolArray(0, 1);
-                Console.WriteLine("Bottom Mid Set To: " + intArray[0].ToString());
             } else if (sender.Equals(topMidALittleBtn)) {
                 changeBoolArray(2, 3);
-                Console.WriteLine("Bottom Mid Set To: " + intArray[1].ToString());
             } else if (sender.Equals(topRightALittleBtn)) {
                 changeBoolArray(4, 5);
-                Console.WriteLine("Bottom Mid Set To: " + intArray[2].ToString());
             } else if (sender.Equals(bottomLeftALittleBtn)) {
                 changeBoolArray(6, 7);
-                Console.WriteLine("Bottom Mid Set To: " + intArray[3].ToString());
             } else if (sender.Equals(bottomMidALittleBtn)) {
                 changeBoolArray(8, 9);
-                Console.WriteLine("Bottom Mid Set To: " + intArray[4].ToString());
             } else if (sender.Equals(bottomRightALittleBtn)) {
                 changeBoolArray(10, 11);
-                Console.WriteLine("Bottom Mid Set To: " + intArray[5].ToString());
             }
 
             return intArray;
@@ -201,22 +191,16 @@ namespace Login {
         private int[] changeBoolALot(object sender) {
             if (sender.Equals(topLeftPBALotBtn)) {
                 changeBoolArray(1, 0);
-                Console.WriteLine("Bottom Mid Set to " + intArray[0].ToString());
             } else if (sender.Equals(topMidALotBtn)) {
                 changeBoolArray(3, 2);
-                Console.WriteLine("Bottom Mid Set to " + intArray[1].ToString());
             } else if (sender.Equals(topRightALotBtn)) {
                 changeBoolArray(5, 4);
-                Console.WriteLine("Bottom Mid Set to " + intArray[2].ToString());
             } else if (sender.Equals(bottomLeftALotBtn)) {
                 changeBoolArray(7, 6);
-                Console.WriteLine("Bottom Mid Set to " + intArray[3].ToString());
             } else if (sender.Equals(bottomMidALotBtn)) {
                 changeBoolArray(9, 8);
-                Console.WriteLine("Bottom Mid Set to " + intArray[4].ToString());
             } else if (sender.Equals(bottomRightALotBtn)) {
                 changeBoolArray(11, 10);
-                Console.WriteLine("Bottom Mid Set to " + intArray[5].ToString());
             }
             return intArray;
         }
@@ -233,77 +217,84 @@ namespace Login {
             changeBoolALot(sender);
             //This will refresh the picturebox
             topRightPB.Invalidate();
-            _buttonClicked++;
+             
         }
 
         private void topLeftPBALittleBtn_Click(object sender, EventArgs e) {
             changeBoolALittle(sender);
             //This will refresh the picture box
             topLeftPB.Invalidate();
-            _buttonClicked++;
+             
+        }
+
+        private void topLeftPBALotBtn_Click(object sender, EventArgs e) {
+            changeBoolALot(sender);
+            //This will refresh the picture box
+            topLeftPB.Invalidate();
+             
         }
 
         private void topMidALittleBtn_Click(object sender, EventArgs e) {
             changeBoolALittle(sender);
             //This will refresh the picture box
             topMidPB.Invalidate();
-            _buttonClicked++;
+             
         }
 
         private void topMidALotBtn_Click(object sender, EventArgs e) {
             changeBoolALot(sender);
             //This will refresh the picture box
             topMidPB.Invalidate();
-            _buttonClicked++;
+             
         }
 
         private void topRightALittleBtn_Click(object sender, EventArgs e) {
             changeBoolALittle(sender);
             //This will refresh the picture box
             topRightPB.Invalidate();
-            _buttonClicked++;
+             
         }
 
         private void bottomLeftALittleBtn_Click(object sender, EventArgs e) {
             changeBoolALittle(sender);
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
-            _buttonClicked++;
+             
         }
 
         private void bottomLeftALotBtn_Click(object sender, EventArgs e) {
             changeBoolALot(sender);
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
-            _buttonClicked++;
+             
         }
 
         private void bottomMidALittleBtn_Click(object sender, EventArgs e) {
             changeBoolALittle(sender);
             //This will refresh the picture box
             bottomMidPB.Invalidate();
-            _buttonClicked++;
+             
         }
 
         private void bottomMidALotBtn_Click(object sender, EventArgs e) {
             changeBoolALot(sender);
             //This will refresh the picture box
             bottomMidPB.Invalidate();
-            _buttonClicked++;
+             
         }
 
         private void bottomRightALittleBtn_Click(object sender, EventArgs e) {
             changeBoolALittle(sender);
             //This will refresh the picture box
             bottomRightPB.Invalidate();
-            _buttonClicked++;
+             
         }
 
         private void bottomRightALotBtn_Click(object sender, EventArgs e) {
             changeBoolALot(sender);
             //This will refresh the picture box
             bottomRightPB.Invalidate();
-            _buttonClicked++;
+             
         }
 
         /// <summary>
@@ -314,17 +305,19 @@ namespace Login {
         /// <param name="e"></param>
         private void nextInterviewSlideBTN_Click(object sender, EventArgs e) {
             //changeButtonBoolsOnNext();
-            //nextCounter++;
-            panel2.BringToFront();
+            nextCounter++;
+
+            previousInterviewSlideBtn.Visible = true;
+            interview2NextBtn.Visible = true;
 
             //Call changePictureBoxImage method here
-            //changePictureBoxImage(topLeftPB, "../../resources/_a_band-maid_start_over__1.jpg", 5);
-            //changePictureBoxImage(topMidPB, "../../resources/81-kix8WGmL._SL1500_.jpg", 5);
-            //changePictureBoxImage(topRightPB, "../../resources/band-maid-daydreaming-mv.jpg", 5);
-            //changePictureBoxImage(bottomLeftPB, "../../resources/band-maid-domination-750x400.png", 5);
-            //changePictureBoxImage(bottomMidPB, "../../resources/BAND-MAID-start-over-1130x565.jpg", 5);
-            //changePictureBoxImage(bottomRightPB, "../../resources/BAND-MAID_banner.jpg", 5);
-
+            changePictureBoxImage(topLeftPB, "../../resources/_a_band-maid_start_over__1.jpg", 5);
+            changePictureBoxImage(topMidPB, "../../resources/81-kix8WGmL._SL1500_.jpg", 5);
+            changePictureBoxImage(topRightPB, "../../resources/band-maid-daydreaming-mv.jpg", 5);
+            changePictureBoxImage(bottomLeftPB, "../../resources/band-maid-domination-750x400.png", 5);
+            changePictureBoxImage(bottomMidPB, "../../resources/BAND-MAID-start-over-1130x565.jpg", 5);
+            changePictureBoxImage(bottomRightPB, "../../resources/maxres1.jpg", 5);
+            nextInterviewSlideBTN.Visible = false;
         }
 
         /// <summary>
@@ -342,30 +335,60 @@ namespace Login {
             aLotBool = true;
         }
 
+        /// <summary>
+        /// Previous button functionality
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void previousInterviewSlideBtn_Click(object sender, EventArgs e) {
             List<PictureBox> pbList = new List<PictureBox>();
             prevButtonClick = true;
-            //nextCounter--;
-            interviewPanel.BringToFront();
-            foreach (var pb in this.Controls.OfType<PictureBox>()) {
-                pbList.Add(pb);
-            }
+            nextCounter--;
 
-            for (int i = 0; i < pbList.Count; i++) {
-                pbList[i].Invalidate();
+            changeButtonBoolsOnPrevious();
+            //Depending on nextCounter, change picturebox image
+            if(nextCounter == 0) {
+                this.previousInterviewSlideBtn.Visible = false;
+                originalImages();
+            } else if (nextCounter == 1) {
+                interviewSlide2();
             }
-
-            //changeButtonBoolsOnPrevious();
-            //if(nextCounter == 0) {
-            //    this.previousInterviewSlideBtn.Visible = false;
-            //}
 
         }
 
-        private void topLeftPBALotBtn_Click(object sender, EventArgs e) {
-            changeBoolALot(sender);
-            //This will refresh the picture box
-            topLeftPB.Invalidate();
+        /// <summary>
+        /// Call this when going to the second Interview Slide
+        /// </summary>
+        private void interviewSlide2() {
+            changePictureBoxImage(topLeftPB, "../../resources/_a_band-maid_start_over__1.jpg", 5);
+            changePictureBoxImage(topMidPB, "../../resources/81-kix8WGmL._SL1500_.jpg", 5);
+            changePictureBoxImage(topRightPB, "../../resources/band-maid-daydreaming-mv.jpg", 5);
+            changePictureBoxImage(bottomLeftPB, "../../resources/band-maid-domination-750x400.png", 5);
+            changePictureBoxImage(bottomMidPB, "../../resources/BAND-MAID-start-over-1130x565.jpg", 5);
+            changePictureBoxImage(bottomRightPB, "../../resources/maxres1.jpg", 5);
+            interview2NextBtn.Visible = false;
+            nextInterviewSlideBTN.Visible = true;
+        }
+
+        /// <summary>
+        /// When user clicks on the initial next button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        private void interview2NextBtn_Click(object sender, EventArgs e) {
+            nextCounter++;
+
+            //Make interview button visible.
+            previousInterviewSlideBtn.Visible = true;
+
+            //Call changePictureBoxImage method here
+            changePictureBoxImage(topLeftPB, "../../resources/_a_band-maid_start_over__1.jpg", 5);
+            changePictureBoxImage(topMidPB, "../../resources/81-kix8WGmL._SL1500_.jpg", 5);
+            changePictureBoxImage(topRightPB, "../../resources/band-maid-daydreaming-mv.jpg", 5);
+            changePictureBoxImage(bottomLeftPB, "../../resources/band-maid-domination-750x400.png", 5);
+            changePictureBoxImage(bottomMidPB, "../../resources/BAND-MAID_banner.jpg", 5);
+            changePictureBoxImage(bottomRightPB, "../../resources/maxres1.jpg", 5);
         }
     }
 }

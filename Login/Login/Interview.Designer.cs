@@ -123,6 +123,7 @@
             this.interview2NextBtn.Text = "Next";
             this.interview2NextBtn.UseVisualStyleBackColor = true;
             this.interview2NextBtn.Visible = false;
+            this.interview2NextBtn.Click += new System.EventHandler(this.interview2NextBtn_Click);
             // 
             // previousInterviewSlideBtn
             // 
