@@ -20,22 +20,21 @@ namespace Login {
             createCirclePB(topLeftPB);
             createCirclePB(topRightPB);
             createCirclePB(topMidPB);
+            //Assign images to pictureboxes
             originalImages();
         }
 
+        //Pen variables to draw
         private Pen aLittle = new Pen(Color.Blue, 5);
         private Pen aLot = new Pen(Color.Red, 10);
-        private bool aLittleBool = false;
-        private bool aLotBool = false;
-        private bool isLittleSelected = false;
-        private bool isLotSelected = false;
+
+        //Determine if the previous button was clicked
         private bool prevButtonClick = false;
 
+        //Bool array to draw circles
         private bool[] boolArrayForSelectionInterview1 = new bool[12]; //Set to false by default. Bool array goes a little, a lot, a little a lot starting from top left to top right, then bottom left to bottom right
-        private bool[] backUpBoolArrayInterview1 = new bool[12];
 
-        private int[] intArray = new int[6] { 0, 0, 0, 0, 0, 0, };
-
+        //Extra variables
         private bool nextBtnClick = false;
         private int nextCounter = 0;
         private int interview2Counter = 0;
@@ -82,12 +81,12 @@ namespace Login {
         /// Initial Images when user clicks on back button on second interview slide (when nextCounter === 0)
         /// </summary>
         private void originalImages() {
-            topLeftPB.Image = new Bitmap(@"../../resources/_a_band-maid_start_over__1.jpg");
-            topMidPB.Image = new Bitmap(@"../../resources/81-kix8WGmL._SL1500_.jpg");
-            topRightPB.Image = new Bitmap(@"../../resources/band-maid-daydreaming-mv.jpg");
-            bottomLeftPB.Image = new Bitmap(@"../../resources/band-maid-domination-750x400.png");
-            bottomMidPB.Image = new Bitmap(@"../../resources/BAND-MAID-start-over-1130x565.jpg");
-            bottomRightPB.Image = new Bitmap(@"../../resources/maxresdefault.jpg");
+            topLeftPB.Image = new Bitmap(@"../../resources/");
+            topMidPB.Image = new Bitmap(@"../../resources/");
+            topRightPB.Image = new Bitmap(@"../../resources/");
+            bottomLeftPB.Image = new Bitmap(@"../../resources/");
+            bottomMidPB.Image = new Bitmap(@"../../resources/");
+            bottomRightPB.Image = new Bitmap(@"../../resources/");
         }
 
         /// <summary>
@@ -96,14 +95,6 @@ namespace Login {
         /// <param name="pictureBoxName">Picturebox name</param>
         /// <param name="e"></param>
         private void DeterminePenSizeDrawing(Object sender, PictureBox pictureBoxName, PaintEventArgs e) {
-            //Determine if position is even or not
-            //for (int i = 0; i < intArray.Length; i++) {
-            //Console.WriteLine(intArray[i].ToString());
-            //  if(intArray[i] == 1) {
-            //DrawCircle(aLittle, e, 0, 0, pictureBoxName.Size.Width, pictureBoxName.Size.Height);
-            //} else if (intArray[i] == 2) {
-            //  DrawCircle(aLot, e, 0, 0, pictureBoxName.Size.Width, pictureBoxName.Size.Height);
-            //}
             int index = 0;
             //Determine if position is even or not
             for (int i = 0; i < boolArrayForSelectionInterview1.Length; i++) {
@@ -120,8 +111,6 @@ namespace Login {
                 }
             }
         }
-
-        //}
 
 
         /// <summary>
@@ -167,7 +156,7 @@ namespace Login {
         /// <summary>
         /// Call this function when user is going to click on A Little
         /// </summary>
-        private int[] changeBoolALittle(object sender) {
+        private void changeBoolALittle(object sender) {
             if (sender.Equals(topLeftPBALittleBtn)) {
                 changeBoolArray(0, 1);
             } else if (sender.Equals(topMidALittleBtn)) {
@@ -182,13 +171,11 @@ namespace Login {
                 changeBoolArray(10, 11);
             }
 
-            return intArray;
-
         }
         /// <summary>
         /// Call this function when user is going to click A Lot
         /// </summary>
-        private int[] changeBoolALot(object sender) {
+        private void changeBoolALot(object sender) {
             if (sender.Equals(topLeftPBALotBtn)) {
                 changeBoolArray(1, 0);
             } else if (sender.Equals(topMidALotBtn)) {
@@ -202,9 +189,13 @@ namespace Login {
             } else if (sender.Equals(bottomRightALotBtn)) {
                 changeBoolArray(11, 10);
             }
-            return intArray;
         }
 
+        /// <summary>
+        /// Changes array position from true to false and vice versa
+        /// </summary>
+        /// <param name="positionSettingTrue">Set the index position to true in array</param>
+        /// <param name="positionSettingFalse">Set the index position to false in array</param>
         private void changeBoolArray(int positionSettingTrue, int positionSettingFalse) {
             boolArrayForSelectionInterview1[positionSettingTrue] = true;
             boolArrayForSelectionInterview1[positionSettingFalse] = false;
@@ -297,6 +288,11 @@ namespace Login {
              
         }
 
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////// CHANGING INTERVIEW PAGE FUNCATIONALITY ////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
         /// <summary>
         /// Change a little and a lot to false when the next button is pressed, effectively erasing the drawings.
         /// Increase next counter to replace image
@@ -311,28 +307,13 @@ namespace Login {
             interview2NextBtn.Visible = true;
 
             //Call changePictureBoxImage method here
-            changePictureBoxImage(topLeftPB, "../../resources/_a_band-maid_start_over__1.jpg", 5);
-            changePictureBoxImage(topMidPB, "../../resources/81-kix8WGmL._SL1500_.jpg", 5);
-            changePictureBoxImage(topRightPB, "../../resources/band-maid-daydreaming-mv.jpg", 5);
-            changePictureBoxImage(bottomLeftPB, "../../resources/band-maid-domination-750x400.png", 5);
-            changePictureBoxImage(bottomMidPB, "../../resources/BAND-MAID-start-over-1130x565.jpg", 5);
-            changePictureBoxImage(bottomRightPB, "../../resources/maxres1.jpg", 5);
+            changePictureBoxImage(topLeftPB, "../../resources/", 5);
+            changePictureBoxImage(topMidPB, "../../resources/", 5);
+            changePictureBoxImage(topRightPB, "../../resources/", 5);
+            changePictureBoxImage(bottomLeftPB, "../../resources/", 5);
+            changePictureBoxImage(bottomMidPB, "../../resources/", 5);
+            changePictureBoxImage(bottomRightPB, "../../resources/", 5);
             nextInterviewSlideBTN.Visible = false;
-        }
-
-        /// <summary>
-        /// Function to determine if the next button has been clicked, and change the a Little and a Lot button to false to erase the drawing
-        /// </summary>
-        private void changeButtonBoolsOnNext() {
-            nextBtnClick = true;
-            aLittleBool = false;
-            aLotBool = false;
-        }
-
-        private void changeButtonBoolsOnPrevious() {
-            nextBtnClick = false;
-            aLittleBool = true;
-            aLotBool = true;
         }
 
         /// <summary>
@@ -344,8 +325,6 @@ namespace Login {
             List<PictureBox> pbList = new List<PictureBox>();
             prevButtonClick = true;
             nextCounter--;
-
-            changeButtonBoolsOnPrevious();
             //Depending on nextCounter, change picturebox image
             if(nextCounter == 0) {
                 this.previousInterviewSlideBtn.Visible = false;
@@ -360,12 +339,12 @@ namespace Login {
         /// Call this when going to the second Interview Slide
         /// </summary>
         private void interviewSlide2() {
-            changePictureBoxImage(topLeftPB, "../../resources/_a_band-maid_start_over__1.jpg", 5);
-            changePictureBoxImage(topMidPB, "../../resources/81-kix8WGmL._SL1500_.jpg", 5);
-            changePictureBoxImage(topRightPB, "../../resources/band-maid-daydreaming-mv.jpg", 5);
-            changePictureBoxImage(bottomLeftPB, "../../resources/band-maid-domination-750x400.png", 5);
-            changePictureBoxImage(bottomMidPB, "../../resources/BAND-MAID-start-over-1130x565.jpg", 5);
-            changePictureBoxImage(bottomRightPB, "../../resources/maxres1.jpg", 5);
+            changePictureBoxImage(topLeftPB, "../../resources/", 5);
+            changePictureBoxImage(topMidPB, "../../resources/", 5);
+            changePictureBoxImage(topRightPB, "../../resources/", 5);
+            changePictureBoxImage(bottomLeftPB, "../../resources/", 5);
+            changePictureBoxImage(bottomMidPB, "../../resources/", 5);
+            changePictureBoxImage(bottomRightPB, "../../resources/", 5);
             interview2NextBtn.Visible = false;
             nextInterviewSlideBTN.Visible = true;
         }
@@ -383,12 +362,12 @@ namespace Login {
             previousInterviewSlideBtn.Visible = true;
 
             //Call changePictureBoxImage method here
-            changePictureBoxImage(topLeftPB, "../../resources/_a_band-maid_start_over__1.jpg", 5);
-            changePictureBoxImage(topMidPB, "../../resources/81-kix8WGmL._SL1500_.jpg", 5);
-            changePictureBoxImage(topRightPB, "../../resources/band-maid-daydreaming-mv.jpg", 5);
-            changePictureBoxImage(bottomLeftPB, "../../resources/band-maid-domination-750x400.png", 5);
-            changePictureBoxImage(bottomMidPB, "../../resources/BAND-MAID_banner.jpg", 5);
-            changePictureBoxImage(bottomRightPB, "../../resources/maxres1.jpg", 5);
+            changePictureBoxImage(topLeftPB, "../../resources/", 5);
+            changePictureBoxImage(topMidPB, "../../resources/", 5);
+            changePictureBoxImage(topRightPB, "../../resources/", 5);
+            changePictureBoxImage(bottomLeftPB, "../../resources/", 5);
+            changePictureBoxImage(bottomMidPB, "../../resources/", 5);
+            changePictureBoxImage(bottomRightPB, "../../resources/", 5);
         }
     }
 }
