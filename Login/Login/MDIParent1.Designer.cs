@@ -71,6 +71,7 @@
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(147, 24);
             this.fileToolStripMenuItem.Text = "Start new interview";
+            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
             // manageUsersToolStripMenuItem
             // 
@@ -86,28 +87,28 @@
             // viewUserProfilesToolStripMenuItem
             // 
             this.viewUserProfilesToolStripMenuItem.Name = "viewUserProfilesToolStripMenuItem";
-            this.viewUserProfilesToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.viewUserProfilesToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
             this.viewUserProfilesToolStripMenuItem.Text = "View user profiles";
             this.viewUserProfilesToolStripMenuItem.Click += new System.EventHandler(this.viewUserProfilesToolStripMenuItem_Click);
             // 
             // addNewUserToolStripMenuItem
             // 
             this.addNewUserToolStripMenuItem.Name = "addNewUserToolStripMenuItem";
-            this.addNewUserToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.addNewUserToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
             this.addNewUserToolStripMenuItem.Text = "Add new user";
             this.addNewUserToolStripMenuItem.Click += new System.EventHandler(this.addNewUserToolStripMenuItem_Click);
             // 
             // deleteUserToolStripMenuItem1
             // 
             this.deleteUserToolStripMenuItem1.Name = "deleteUserToolStripMenuItem1";
-            this.deleteUserToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.deleteUserToolStripMenuItem1.Size = new System.Drawing.Size(201, 26);
             this.deleteUserToolStripMenuItem1.Text = "Delete user";
             this.deleteUserToolStripMenuItem1.Click += new System.EventHandler(this.deleteUserToolStripMenuItem1_Click);
             // 
             // editExistingUserToolStripMenuItem
             // 
             this.editExistingUserToolStripMenuItem.Name = "editExistingUserToolStripMenuItem";
-            this.editExistingUserToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.editExistingUserToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
             this.editExistingUserToolStripMenuItem.Text = "Edit existing user";
             this.editExistingUserToolStripMenuItem.Click += new System.EventHandler(this.editExistingUserToolStripMenuItem_Click);
             // 

@@ -22,6 +22,7 @@ namespace Login {
             createCirclePB(topMidPB);
             //Assign images to pictureboxes
             originalImages();
+            lblQuestion.BackColor = picBackground.BackColor;
         }
 
         //Pen variables to draw
@@ -81,12 +82,14 @@ namespace Login {
         /// Initial Images when user clicks on back button on second interview slide (when nextCounter === 0)
         /// </summary>
         private void originalImages() {
+            /*
             topLeftPB.Image = new Bitmap(@"../../resources/");
             topMidPB.Image = new Bitmap(@"../../resources/");
             topRightPB.Image = new Bitmap(@"../../resources/");
             bottomLeftPB.Image = new Bitmap(@"../../resources/");
             bottomMidPB.Image = new Bitmap(@"../../resources/");
             bottomRightPB.Image = new Bitmap(@"../../resources/");
+            */
         }
 
         /// <summary>
@@ -368,6 +371,10 @@ namespace Login {
             changePictureBoxImage(bottomLeftPB, "../../resources/", 5);
             changePictureBoxImage(bottomMidPB, "../../resources/", 5);
             changePictureBoxImage(bottomRightPB, "../../resources/", 5);
+        }
+
+        private void label1_Click(object sender, EventArgs e) {
+
         }
     }
 }

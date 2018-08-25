@@ -52,5 +52,11 @@ namespace Login {
             editUserProfile1.MdiParent = this;
             editUserProfile1.Show();
         }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e) {
+            Interview newInterview = new Interview();
+            newInterview.MdiParent = this;
+            newInterview.Show();
+        }
     }
 }

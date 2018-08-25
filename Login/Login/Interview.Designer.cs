@@ -67,6 +67,10 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.picBackground = new System.Windows.Forms.PictureBox();
+            this.picSense = new System.Windows.Forms.PictureBox();
+            this.lblQuestion = new System.Windows.Forms.Label();
+            this.picInstruction = new System.Windows.Forms.PictureBox();
             this.interviewPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomMidPB)).BeginInit();
@@ -81,10 +85,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSense)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picInstruction)).BeginInit();
             this.SuspendLayout();
             // 
             // interviewPanel
             // 
+            this.interviewPanel.BackColor = System.Drawing.Color.AliceBlue;
+            this.interviewPanel.Controls.Add(this.picInstruction);
+            this.interviewPanel.Controls.Add(this.lblQuestion);
+            this.interviewPanel.Controls.Add(this.picSense);
+            this.interviewPanel.Controls.Add(this.picBackground);
             this.interviewPanel.Controls.Add(this.interview2NextBtn);
             this.interviewPanel.Controls.Add(this.previousInterviewSlideBtn);
             this.interviewPanel.Controls.Add(this.nextInterviewSlideBTN);
@@ -108,17 +120,19 @@
             this.interviewPanel.Controls.Add(this.topLeftPB);
             this.interviewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.interviewPanel.Location = new System.Drawing.Point(0, 0);
+            this.interviewPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.interviewPanel.Name = "interviewPanel";
-            this.interviewPanel.Size = new System.Drawing.Size(986, 527);
+            this.interviewPanel.Size = new System.Drawing.Size(1315, 868);
             this.interviewPanel.TabIndex = 0;
             // 
             // interview2NextBtn
             // 
-            this.interview2NextBtn.Location = new System.Drawing.Point(899, 251);
-            this.interview2NextBtn.MaximumSize = new System.Drawing.Size(175, 50);
-            this.interview2NextBtn.MinimumSize = new System.Drawing.Size(75, 23);
+            this.interview2NextBtn.Location = new System.Drawing.Point(1199, 529);
+            this.interview2NextBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.interview2NextBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.interview2NextBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.interview2NextBtn.Name = "interview2NextBtn";
-            this.interview2NextBtn.Size = new System.Drawing.Size(75, 23);
+            this.interview2NextBtn.Size = new System.Drawing.Size(100, 28);
             this.interview2NextBtn.TabIndex = 20;
             this.interview2NextBtn.Text = "Next";
             this.interview2NextBtn.UseVisualStyleBackColor = true;
@@ -127,11 +141,12 @@
             // 
             // previousInterviewSlideBtn
             // 
-            this.previousInterviewSlideBtn.Location = new System.Drawing.Point(3, 251);
-            this.previousInterviewSlideBtn.MaximumSize = new System.Drawing.Size(175, 50);
-            this.previousInterviewSlideBtn.MinimumSize = new System.Drawing.Size(75, 23);
+            this.previousInterviewSlideBtn.Location = new System.Drawing.Point(4, 529);
+            this.previousInterviewSlideBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.previousInterviewSlideBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.previousInterviewSlideBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.previousInterviewSlideBtn.Name = "previousInterviewSlideBtn";
-            this.previousInterviewSlideBtn.Size = new System.Drawing.Size(75, 23);
+            this.previousInterviewSlideBtn.Size = new System.Drawing.Size(100, 28);
             this.previousInterviewSlideBtn.TabIndex = 19;
             this.previousInterviewSlideBtn.Text = "Previous";
             this.previousInterviewSlideBtn.UseVisualStyleBackColor = true;
@@ -140,11 +155,12 @@
             // 
             // nextInterviewSlideBTN
             // 
-            this.nextInterviewSlideBTN.Location = new System.Drawing.Point(899, 251);
-            this.nextInterviewSlideBTN.MaximumSize = new System.Drawing.Size(175, 50);
-            this.nextInterviewSlideBTN.MinimumSize = new System.Drawing.Size(75, 23);
+            this.nextInterviewSlideBTN.Location = new System.Drawing.Point(1199, 529);
+            this.nextInterviewSlideBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nextInterviewSlideBTN.MaximumSize = new System.Drawing.Size(233, 62);
+            this.nextInterviewSlideBTN.MinimumSize = new System.Drawing.Size(100, 28);
             this.nextInterviewSlideBTN.Name = "nextInterviewSlideBTN";
-            this.nextInterviewSlideBTN.Size = new System.Drawing.Size(75, 23);
+            this.nextInterviewSlideBTN.Size = new System.Drawing.Size(100, 28);
             this.nextInterviewSlideBTN.TabIndex = 18;
             this.nextInterviewSlideBTN.Text = "Next";
             this.nextInterviewSlideBTN.UseVisualStyleBackColor = true;
@@ -152,11 +168,12 @@
             // 
             // bottomRightALotBtn
             // 
-            this.bottomRightALotBtn.Location = new System.Drawing.Point(809, 471);
-            this.bottomRightALotBtn.MaximumSize = new System.Drawing.Size(175, 50);
-            this.bottomRightALotBtn.MinimumSize = new System.Drawing.Size(75, 23);
+            this.bottomRightALotBtn.Location = new System.Drawing.Point(1079, 800);
+            this.bottomRightALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomRightALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.bottomRightALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.bottomRightALotBtn.Name = "bottomRightALotBtn";
-            this.bottomRightALotBtn.Size = new System.Drawing.Size(75, 23);
+            this.bottomRightALotBtn.Size = new System.Drawing.Size(100, 28);
             this.bottomRightALotBtn.TabIndex = 17;
             this.bottomRightALotBtn.Text = "A Lot";
             this.bottomRightALotBtn.UseVisualStyleBackColor = true;
@@ -164,11 +181,12 @@
             // 
             // bottomRightALittleBtn
             // 
-            this.bottomRightALittleBtn.Location = new System.Drawing.Point(723, 471);
-            this.bottomRightALittleBtn.MaximumSize = new System.Drawing.Size(175, 50);
-            this.bottomRightALittleBtn.MinimumSize = new System.Drawing.Size(75, 23);
+            this.bottomRightALittleBtn.Location = new System.Drawing.Point(964, 800);
+            this.bottomRightALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomRightALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.bottomRightALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.bottomRightALittleBtn.Name = "bottomRightALittleBtn";
-            this.bottomRightALittleBtn.Size = new System.Drawing.Size(75, 23);
+            this.bottomRightALittleBtn.Size = new System.Drawing.Size(100, 28);
             this.bottomRightALittleBtn.TabIndex = 16;
             this.bottomRightALittleBtn.Text = "A Little";
             this.bottomRightALittleBtn.UseVisualStyleBackColor = true;
@@ -176,11 +194,12 @@
             // 
             // bottomMidALotBtn
             // 
-            this.bottomMidALotBtn.Location = new System.Drawing.Point(473, 471);
-            this.bottomMidALotBtn.MaximumSize = new System.Drawing.Size(175, 50);
-            this.bottomMidALotBtn.MinimumSize = new System.Drawing.Size(75, 23);
+            this.bottomMidALotBtn.Location = new System.Drawing.Point(631, 800);
+            this.bottomMidALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomMidALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.bottomMidALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.bottomMidALotBtn.Name = "bottomMidALotBtn";
-            this.bottomMidALotBtn.Size = new System.Drawing.Size(75, 23);
+            this.bottomMidALotBtn.Size = new System.Drawing.Size(100, 28);
             this.bottomMidALotBtn.TabIndex = 15;
             this.bottomMidALotBtn.Text = "A Lot";
             this.bottomMidALotBtn.UseVisualStyleBackColor = true;
@@ -188,11 +207,12 @@
             // 
             // bottomMidALittleBtn
             // 
-            this.bottomMidALittleBtn.Location = new System.Drawing.Point(387, 471);
-            this.bottomMidALittleBtn.MaximumSize = new System.Drawing.Size(175, 50);
-            this.bottomMidALittleBtn.MinimumSize = new System.Drawing.Size(75, 23);
+            this.bottomMidALittleBtn.Location = new System.Drawing.Point(516, 800);
+            this.bottomMidALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomMidALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.bottomMidALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.bottomMidALittleBtn.Name = "bottomMidALittleBtn";
-            this.bottomMidALittleBtn.Size = new System.Drawing.Size(75, 23);
+            this.bottomMidALittleBtn.Size = new System.Drawing.Size(100, 28);
             this.bottomMidALittleBtn.TabIndex = 14;
             this.bottomMidALittleBtn.Text = "A Little";
             this.bottomMidALittleBtn.UseVisualStyleBackColor = true;
@@ -200,11 +220,12 @@
             // 
             // bottomLeftALotBtn
             // 
-            this.bottomLeftALotBtn.Location = new System.Drawing.Point(156, 471);
-            this.bottomLeftALotBtn.MaximumSize = new System.Drawing.Size(175, 50);
-            this.bottomLeftALotBtn.MinimumSize = new System.Drawing.Size(75, 23);
+            this.bottomLeftALotBtn.Location = new System.Drawing.Point(208, 800);
+            this.bottomLeftALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomLeftALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.bottomLeftALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.bottomLeftALotBtn.Name = "bottomLeftALotBtn";
-            this.bottomLeftALotBtn.Size = new System.Drawing.Size(75, 23);
+            this.bottomLeftALotBtn.Size = new System.Drawing.Size(100, 28);
             this.bottomLeftALotBtn.TabIndex = 13;
             this.bottomLeftALotBtn.Text = "A Lot";
             this.bottomLeftALotBtn.UseVisualStyleBackColor = true;
@@ -212,11 +233,12 @@
             // 
             // bottomLeftALittleBtn
             // 
-            this.bottomLeftALittleBtn.Location = new System.Drawing.Point(70, 471);
-            this.bottomLeftALittleBtn.MaximumSize = new System.Drawing.Size(175, 50);
-            this.bottomLeftALittleBtn.MinimumSize = new System.Drawing.Size(75, 23);
+            this.bottomLeftALittleBtn.Location = new System.Drawing.Point(93, 800);
+            this.bottomLeftALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomLeftALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.bottomLeftALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.bottomLeftALittleBtn.Name = "bottomLeftALittleBtn";
-            this.bottomLeftALittleBtn.Size = new System.Drawing.Size(75, 23);
+            this.bottomLeftALittleBtn.Size = new System.Drawing.Size(100, 28);
             this.bottomLeftALittleBtn.TabIndex = 12;
             this.bottomLeftALittleBtn.Text = "A Little";
             this.bottomLeftALittleBtn.UseVisualStyleBackColor = true;
@@ -224,11 +246,12 @@
             // 
             // topRightALotBtn
             // 
-            this.topRightALotBtn.Location = new System.Drawing.Point(809, 205);
-            this.topRightALotBtn.MaximumSize = new System.Drawing.Size(175, 50);
-            this.topRightALotBtn.MinimumSize = new System.Drawing.Size(75, 23);
+            this.topRightALotBtn.Location = new System.Drawing.Point(1079, 472);
+            this.topRightALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topRightALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.topRightALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.topRightALotBtn.Name = "topRightALotBtn";
-            this.topRightALotBtn.Size = new System.Drawing.Size(75, 23);
+            this.topRightALotBtn.Size = new System.Drawing.Size(100, 28);
             this.topRightALotBtn.TabIndex = 11;
             this.topRightALotBtn.Text = "A Lot";
             this.topRightALotBtn.UseVisualStyleBackColor = true;
@@ -236,11 +259,12 @@
             // 
             // topRightALittleBtn
             // 
-            this.topRightALittleBtn.Location = new System.Drawing.Point(723, 205);
-            this.topRightALittleBtn.MaximumSize = new System.Drawing.Size(175, 50);
-            this.topRightALittleBtn.MinimumSize = new System.Drawing.Size(75, 23);
+            this.topRightALittleBtn.Location = new System.Drawing.Point(964, 472);
+            this.topRightALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topRightALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.topRightALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.topRightALittleBtn.Name = "topRightALittleBtn";
-            this.topRightALittleBtn.Size = new System.Drawing.Size(75, 23);
+            this.topRightALittleBtn.Size = new System.Drawing.Size(100, 28);
             this.topRightALittleBtn.TabIndex = 10;
             this.topRightALittleBtn.Text = "A Little";
             this.topRightALittleBtn.UseVisualStyleBackColor = true;
@@ -248,11 +272,12 @@
             // 
             // topMidALotBtn
             // 
-            this.topMidALotBtn.Location = new System.Drawing.Point(473, 205);
-            this.topMidALotBtn.MaximumSize = new System.Drawing.Size(175, 50);
-            this.topMidALotBtn.MinimumSize = new System.Drawing.Size(75, 23);
+            this.topMidALotBtn.Location = new System.Drawing.Point(631, 472);
+            this.topMidALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topMidALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.topMidALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.topMidALotBtn.Name = "topMidALotBtn";
-            this.topMidALotBtn.Size = new System.Drawing.Size(75, 23);
+            this.topMidALotBtn.Size = new System.Drawing.Size(100, 28);
             this.topMidALotBtn.TabIndex = 9;
             this.topMidALotBtn.Text = "A Lot";
             this.topMidALotBtn.UseVisualStyleBackColor = true;
@@ -260,11 +285,12 @@
             // 
             // topMidALittleBtn
             // 
-            this.topMidALittleBtn.Location = new System.Drawing.Point(387, 205);
-            this.topMidALittleBtn.MaximumSize = new System.Drawing.Size(175, 50);
-            this.topMidALittleBtn.MinimumSize = new System.Drawing.Size(75, 23);
+            this.topMidALittleBtn.Location = new System.Drawing.Point(516, 472);
+            this.topMidALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topMidALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.topMidALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.topMidALittleBtn.Name = "topMidALittleBtn";
-            this.topMidALittleBtn.Size = new System.Drawing.Size(75, 23);
+            this.topMidALittleBtn.Size = new System.Drawing.Size(100, 28);
             this.topMidALittleBtn.TabIndex = 8;
             this.topMidALittleBtn.Text = "A Little";
             this.topMidALittleBtn.UseVisualStyleBackColor = true;
@@ -272,11 +298,12 @@
             // 
             // topLeftPBALotBtn
             // 
-            this.topLeftPBALotBtn.Location = new System.Drawing.Point(156, 205);
-            this.topLeftPBALotBtn.MaximumSize = new System.Drawing.Size(175, 50);
-            this.topLeftPBALotBtn.MinimumSize = new System.Drawing.Size(75, 23);
+            this.topLeftPBALotBtn.Location = new System.Drawing.Point(208, 472);
+            this.topLeftPBALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topLeftPBALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.topLeftPBALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.topLeftPBALotBtn.Name = "topLeftPBALotBtn";
-            this.topLeftPBALotBtn.Size = new System.Drawing.Size(75, 23);
+            this.topLeftPBALotBtn.Size = new System.Drawing.Size(100, 28);
             this.topLeftPBALotBtn.TabIndex = 7;
             this.topLeftPBALotBtn.Text = "A Lot";
             this.topLeftPBALotBtn.UseVisualStyleBackColor = true;
@@ -284,11 +311,12 @@
             // 
             // topLeftPBALittleBtn
             // 
-            this.topLeftPBALittleBtn.Location = new System.Drawing.Point(70, 205);
-            this.topLeftPBALittleBtn.MaximumSize = new System.Drawing.Size(175, 50);
-            this.topLeftPBALittleBtn.MinimumSize = new System.Drawing.Size(75, 23);
+            this.topLeftPBALittleBtn.Location = new System.Drawing.Point(93, 472);
+            this.topLeftPBALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topLeftPBALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.topLeftPBALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.topLeftPBALittleBtn.Name = "topLeftPBALittleBtn";
-            this.topLeftPBALittleBtn.Size = new System.Drawing.Size(75, 23);
+            this.topLeftPBALittleBtn.Size = new System.Drawing.Size(100, 28);
             this.topLeftPBALittleBtn.TabIndex = 6;
             this.topLeftPBALittleBtn.Text = "A Little";
             this.topLeftPBALittleBtn.UseVisualStyleBackColor = true;
@@ -296,11 +324,12 @@
             // 
             // bottomRightPB
             // 
-            this.bottomRightPB.Location = new System.Drawing.Point(723, 304);
-            this.bottomRightPB.MaximumSize = new System.Drawing.Size(361, 351);
-            this.bottomRightPB.MinimumSize = new System.Drawing.Size(161, 151);
+            this.bottomRightPB.Location = new System.Drawing.Point(964, 594);
+            this.bottomRightPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomRightPB.MaximumSize = new System.Drawing.Size(481, 432);
+            this.bottomRightPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.bottomRightPB.Name = "bottomRightPB";
-            this.bottomRightPB.Size = new System.Drawing.Size(161, 151);
+            this.bottomRightPB.Size = new System.Drawing.Size(215, 186);
             this.bottomRightPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bottomRightPB.TabIndex = 5;
             this.bottomRightPB.TabStop = false;
@@ -308,11 +337,12 @@
             // 
             // bottomMidPB
             // 
-            this.bottomMidPB.Location = new System.Drawing.Point(387, 304);
-            this.bottomMidPB.MaximumSize = new System.Drawing.Size(361, 351);
-            this.bottomMidPB.MinimumSize = new System.Drawing.Size(161, 151);
+            this.bottomMidPB.Location = new System.Drawing.Point(516, 594);
+            this.bottomMidPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomMidPB.MaximumSize = new System.Drawing.Size(481, 432);
+            this.bottomMidPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.bottomMidPB.Name = "bottomMidPB";
-            this.bottomMidPB.Size = new System.Drawing.Size(161, 151);
+            this.bottomMidPB.Size = new System.Drawing.Size(215, 186);
             this.bottomMidPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bottomMidPB.TabIndex = 4;
             this.bottomMidPB.TabStop = false;
@@ -320,11 +350,12 @@
             // 
             // bottomLeftPB
             // 
-            this.bottomLeftPB.Location = new System.Drawing.Point(70, 304);
-            this.bottomLeftPB.MaximumSize = new System.Drawing.Size(361, 351);
-            this.bottomLeftPB.MinimumSize = new System.Drawing.Size(161, 151);
+            this.bottomLeftPB.Location = new System.Drawing.Point(93, 594);
+            this.bottomLeftPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomLeftPB.MaximumSize = new System.Drawing.Size(481, 432);
+            this.bottomLeftPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.bottomLeftPB.Name = "bottomLeftPB";
-            this.bottomLeftPB.Size = new System.Drawing.Size(161, 151);
+            this.bottomLeftPB.Size = new System.Drawing.Size(215, 186);
             this.bottomLeftPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bottomLeftPB.TabIndex = 3;
             this.bottomLeftPB.TabStop = false;
@@ -332,11 +363,12 @@
             // 
             // topRightPB
             // 
-            this.topRightPB.Location = new System.Drawing.Point(723, 37);
-            this.topRightPB.MaximumSize = new System.Drawing.Size(361, 351);
-            this.topRightPB.MinimumSize = new System.Drawing.Size(161, 151);
+            this.topRightPB.Location = new System.Drawing.Point(964, 266);
+            this.topRightPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topRightPB.MaximumSize = new System.Drawing.Size(481, 432);
+            this.topRightPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.topRightPB.Name = "topRightPB";
-            this.topRightPB.Size = new System.Drawing.Size(161, 151);
+            this.topRightPB.Size = new System.Drawing.Size(215, 186);
             this.topRightPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.topRightPB.TabIndex = 2;
             this.topRightPB.TabStop = false;
@@ -344,11 +376,12 @@
             // 
             // topMidPB
             // 
-            this.topMidPB.Location = new System.Drawing.Point(387, 37);
-            this.topMidPB.MaximumSize = new System.Drawing.Size(361, 351);
-            this.topMidPB.MinimumSize = new System.Drawing.Size(161, 151);
+            this.topMidPB.Location = new System.Drawing.Point(516, 266);
+            this.topMidPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topMidPB.MaximumSize = new System.Drawing.Size(481, 432);
+            this.topMidPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.topMidPB.Name = "topMidPB";
-            this.topMidPB.Size = new System.Drawing.Size(161, 151);
+            this.topMidPB.Size = new System.Drawing.Size(215, 186);
             this.topMidPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.topMidPB.TabIndex = 1;
             this.topMidPB.TabStop = false;
@@ -356,11 +389,12 @@
             // 
             // topLeftPB
             // 
-            this.topLeftPB.Location = new System.Drawing.Point(70, 37);
-            this.topLeftPB.MaximumSize = new System.Drawing.Size(361, 351);
-            this.topLeftPB.MinimumSize = new System.Drawing.Size(161, 151);
+            this.topLeftPB.Location = new System.Drawing.Point(93, 266);
+            this.topLeftPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topLeftPB.MaximumSize = new System.Drawing.Size(481, 432);
+            this.topLeftPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.topLeftPB.Name = "topLeftPB";
-            this.topLeftPB.Size = new System.Drawing.Size(161, 151);
+            this.topLeftPB.Size = new System.Drawing.Size(215, 186);
             this.topLeftPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.topLeftPB.TabIndex = 0;
             this.topLeftPB.TabStop = false;
@@ -391,17 +425,19 @@
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(986, 527);
+            this.panel2.Size = new System.Drawing.Size(1315, 868);
             this.panel2.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(899, 251);
-            this.button1.MaximumSize = new System.Drawing.Size(175, 50);
-            this.button1.MinimumSize = new System.Drawing.Size(75, 23);
+            this.button1.Location = new System.Drawing.Point(1199, 309);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.MaximumSize = new System.Drawing.Size(233, 62);
+            this.button1.MinimumSize = new System.Drawing.Size(100, 28);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 20;
             this.button1.Text = "Next";
             this.button1.UseVisualStyleBackColor = true;
@@ -409,11 +445,12 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(3, 251);
-            this.button2.MaximumSize = new System.Drawing.Size(175, 50);
-            this.button2.MinimumSize = new System.Drawing.Size(75, 23);
+            this.button2.Location = new System.Drawing.Point(4, 309);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.MaximumSize = new System.Drawing.Size(233, 62);
+            this.button2.MinimumSize = new System.Drawing.Size(100, 28);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 19;
             this.button2.Text = "Previous";
             this.button2.UseVisualStyleBackColor = true;
@@ -421,224 +458,280 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(899, 251);
-            this.button3.MaximumSize = new System.Drawing.Size(175, 50);
-            this.button3.MinimumSize = new System.Drawing.Size(75, 23);
+            this.button3.Location = new System.Drawing.Point(1199, 309);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.MaximumSize = new System.Drawing.Size(233, 62);
+            this.button3.MinimumSize = new System.Drawing.Size(100, 28);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 18;
             this.button3.Text = "Next";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(809, 471);
-            this.button4.MaximumSize = new System.Drawing.Size(175, 50);
-            this.button4.MinimumSize = new System.Drawing.Size(75, 23);
+            this.button4.Location = new System.Drawing.Point(1079, 580);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.MaximumSize = new System.Drawing.Size(233, 62);
+            this.button4.MinimumSize = new System.Drawing.Size(100, 28);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(100, 28);
             this.button4.TabIndex = 17;
             this.button4.Text = "A Lot";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(723, 471);
-            this.button5.MaximumSize = new System.Drawing.Size(175, 50);
-            this.button5.MinimumSize = new System.Drawing.Size(75, 23);
+            this.button5.Location = new System.Drawing.Point(964, 580);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.MaximumSize = new System.Drawing.Size(233, 62);
+            this.button5.MinimumSize = new System.Drawing.Size(100, 28);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(100, 28);
             this.button5.TabIndex = 16;
             this.button5.Text = "A Little";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(473, 471);
-            this.button6.MaximumSize = new System.Drawing.Size(175, 50);
-            this.button6.MinimumSize = new System.Drawing.Size(75, 23);
+            this.button6.Location = new System.Drawing.Point(631, 580);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.MaximumSize = new System.Drawing.Size(233, 62);
+            this.button6.MinimumSize = new System.Drawing.Size(100, 28);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(100, 28);
             this.button6.TabIndex = 15;
             this.button6.Text = "A Lot";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(387, 471);
-            this.button7.MaximumSize = new System.Drawing.Size(175, 50);
-            this.button7.MinimumSize = new System.Drawing.Size(75, 23);
+            this.button7.Location = new System.Drawing.Point(516, 580);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.MaximumSize = new System.Drawing.Size(233, 62);
+            this.button7.MinimumSize = new System.Drawing.Size(100, 28);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.Size = new System.Drawing.Size(100, 28);
             this.button7.TabIndex = 14;
             this.button7.Text = "A Little";
             this.button7.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(156, 471);
-            this.button8.MaximumSize = new System.Drawing.Size(175, 50);
-            this.button8.MinimumSize = new System.Drawing.Size(75, 23);
+            this.button8.Location = new System.Drawing.Point(208, 580);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.MaximumSize = new System.Drawing.Size(233, 62);
+            this.button8.MinimumSize = new System.Drawing.Size(100, 28);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.Size = new System.Drawing.Size(100, 28);
             this.button8.TabIndex = 13;
             this.button8.Text = "A Lot";
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(70, 471);
-            this.button9.MaximumSize = new System.Drawing.Size(175, 50);
-            this.button9.MinimumSize = new System.Drawing.Size(75, 23);
+            this.button9.Location = new System.Drawing.Point(93, 580);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button9.MaximumSize = new System.Drawing.Size(233, 62);
+            this.button9.MinimumSize = new System.Drawing.Size(100, 28);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.Size = new System.Drawing.Size(100, 28);
             this.button9.TabIndex = 12;
             this.button9.Text = "A Little";
             this.button9.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(809, 205);
-            this.button10.MaximumSize = new System.Drawing.Size(175, 50);
-            this.button10.MinimumSize = new System.Drawing.Size(75, 23);
+            this.button10.Location = new System.Drawing.Point(1079, 252);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button10.MaximumSize = new System.Drawing.Size(233, 62);
+            this.button10.MinimumSize = new System.Drawing.Size(100, 28);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.Size = new System.Drawing.Size(100, 28);
             this.button10.TabIndex = 11;
             this.button10.Text = "A Lot";
             this.button10.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(723, 205);
-            this.button11.MaximumSize = new System.Drawing.Size(175, 50);
-            this.button11.MinimumSize = new System.Drawing.Size(75, 23);
+            this.button11.Location = new System.Drawing.Point(964, 252);
+            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button11.MaximumSize = new System.Drawing.Size(233, 62);
+            this.button11.MinimumSize = new System.Drawing.Size(100, 28);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.Size = new System.Drawing.Size(100, 28);
             this.button11.TabIndex = 10;
             this.button11.Text = "A Little";
             this.button11.UseVisualStyleBackColor = true;
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(473, 205);
-            this.button12.MaximumSize = new System.Drawing.Size(175, 50);
-            this.button12.MinimumSize = new System.Drawing.Size(75, 23);
+            this.button12.Location = new System.Drawing.Point(631, 252);
+            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button12.MaximumSize = new System.Drawing.Size(233, 62);
+            this.button12.MinimumSize = new System.Drawing.Size(100, 28);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.Size = new System.Drawing.Size(100, 28);
             this.button12.TabIndex = 9;
             this.button12.Text = "A Lot";
             this.button12.UseVisualStyleBackColor = true;
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(387, 205);
-            this.button13.MaximumSize = new System.Drawing.Size(175, 50);
-            this.button13.MinimumSize = new System.Drawing.Size(75, 23);
+            this.button13.Location = new System.Drawing.Point(516, 252);
+            this.button13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button13.MaximumSize = new System.Drawing.Size(233, 62);
+            this.button13.MinimumSize = new System.Drawing.Size(100, 28);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
+            this.button13.Size = new System.Drawing.Size(100, 28);
             this.button13.TabIndex = 8;
             this.button13.Text = "A Little";
             this.button13.UseVisualStyleBackColor = true;
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(156, 205);
-            this.button14.MaximumSize = new System.Drawing.Size(175, 50);
-            this.button14.MinimumSize = new System.Drawing.Size(75, 23);
+            this.button14.Location = new System.Drawing.Point(208, 252);
+            this.button14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button14.MaximumSize = new System.Drawing.Size(233, 62);
+            this.button14.MinimumSize = new System.Drawing.Size(100, 28);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
+            this.button14.Size = new System.Drawing.Size(100, 28);
             this.button14.TabIndex = 7;
             this.button14.Text = "A Lot";
             this.button14.UseVisualStyleBackColor = true;
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(70, 205);
-            this.button15.MaximumSize = new System.Drawing.Size(175, 50);
-            this.button15.MinimumSize = new System.Drawing.Size(75, 23);
+            this.button15.Location = new System.Drawing.Point(93, 252);
+            this.button15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button15.MaximumSize = new System.Drawing.Size(233, 62);
+            this.button15.MinimumSize = new System.Drawing.Size(100, 28);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
+            this.button15.Size = new System.Drawing.Size(100, 28);
             this.button15.TabIndex = 6;
             this.button15.Text = "A Little";
             this.button15.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(723, 304);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(361, 351);
-            this.pictureBox1.MinimumSize = new System.Drawing.Size(161, 151);
+            this.pictureBox1.Location = new System.Drawing.Point(964, 374);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(481, 432);
+            this.pictureBox1.MinimumSize = new System.Drawing.Size(215, 186);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(161, 151);
+            this.pictureBox1.Size = new System.Drawing.Size(215, 186);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(387, 304);
-            this.pictureBox2.MaximumSize = new System.Drawing.Size(361, 351);
-            this.pictureBox2.MinimumSize = new System.Drawing.Size(161, 151);
+            this.pictureBox2.Location = new System.Drawing.Point(516, 374);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.MaximumSize = new System.Drawing.Size(481, 432);
+            this.pictureBox2.MinimumSize = new System.Drawing.Size(215, 186);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(161, 151);
+            this.pictureBox2.Size = new System.Drawing.Size(215, 186);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(70, 304);
-            this.pictureBox3.MaximumSize = new System.Drawing.Size(361, 351);
-            this.pictureBox3.MinimumSize = new System.Drawing.Size(161, 151);
+            this.pictureBox3.Location = new System.Drawing.Point(93, 374);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.MaximumSize = new System.Drawing.Size(481, 432);
+            this.pictureBox3.MinimumSize = new System.Drawing.Size(215, 186);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(161, 151);
+            this.pictureBox3.Size = new System.Drawing.Size(215, 186);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(723, 37);
-            this.pictureBox4.MaximumSize = new System.Drawing.Size(361, 351);
-            this.pictureBox4.MinimumSize = new System.Drawing.Size(161, 151);
+            this.pictureBox4.Location = new System.Drawing.Point(964, 46);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.MaximumSize = new System.Drawing.Size(481, 432);
+            this.pictureBox4.MinimumSize = new System.Drawing.Size(215, 186);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(161, 151);
+            this.pictureBox4.Size = new System.Drawing.Size(215, 186);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(387, 37);
-            this.pictureBox5.MaximumSize = new System.Drawing.Size(361, 351);
-            this.pictureBox5.MinimumSize = new System.Drawing.Size(161, 151);
+            this.pictureBox5.Location = new System.Drawing.Point(516, 46);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.MaximumSize = new System.Drawing.Size(481, 432);
+            this.pictureBox5.MinimumSize = new System.Drawing.Size(215, 186);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(161, 151);
+            this.pictureBox5.Size = new System.Drawing.Size(215, 186);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(70, 37);
-            this.pictureBox6.MaximumSize = new System.Drawing.Size(361, 351);
-            this.pictureBox6.MinimumSize = new System.Drawing.Size(161, 151);
+            this.pictureBox6.Location = new System.Drawing.Point(93, 46);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.MaximumSize = new System.Drawing.Size(481, 432);
+            this.pictureBox6.MinimumSize = new System.Drawing.Size(215, 186);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(161, 151);
+            this.pictureBox6.Size = new System.Drawing.Size(215, 186);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
             // 
+            // picBackground
+            // 
+            this.picBackground.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.picBackground.Location = new System.Drawing.Point(0, 0);
+            this.picBackground.Name = "picBackground";
+            this.picBackground.Size = new System.Drawing.Size(1315, 232);
+            this.picBackground.TabIndex = 21;
+            this.picBackground.TabStop = false;
+            // 
+            // picSense
+            // 
+            this.picSense.Location = new System.Drawing.Point(77, 46);
+            this.picSense.Name = "picSense";
+            this.picSense.Size = new System.Drawing.Size(125, 125);
+            this.picSense.TabIndex = 22;
+            this.picSense.TabStop = false;
+            // 
+            // lblQuestion
+            // 
+            this.lblQuestion.AutoSize = true;
+            this.lblQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion.Location = new System.Drawing.Point(327, 82);
+            this.lblQuestion.Name = "lblQuestion";
+            this.lblQuestion.Size = new System.Drawing.Size(609, 32);
+            this.lblQuestion.TabIndex = 23;
+            this.lblQuestion.Text = "Are there some sounds that you make a lot?";
+            this.lblQuestion.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // picInstruction
+            // 
+            this.picInstruction.Location = new System.Drawing.Point(1102, 46);
+            this.picInstruction.Name = "picInstruction";
+            this.picInstruction.Size = new System.Drawing.Size(125, 125);
+            this.picInstruction.TabIndex = 24;
+            this.picInstruction.TabStop = false;
+            // 
             // Interview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 527);
+            this.ClientSize = new System.Drawing.Size(1315, 868);
             this.Controls.Add(this.interviewPanel);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Interview";
             this.Text = "Form1";
             this.interviewPanel.ResumeLayout(false);
+            this.interviewPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomMidPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomLeftPB)).EndInit();
@@ -652,6 +745,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBackground)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSense)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picInstruction)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -702,5 +798,9 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label lblQuestion;
+        private System.Windows.Forms.PictureBox picSense;
+        private System.Windows.Forms.PictureBox picBackground;
+        private System.Windows.Forms.PictureBox picInstruction;
     }
 }
