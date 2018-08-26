@@ -24,6 +24,7 @@ namespace Login {
             originalImages();
             lblQuestion.BackColor = picBackground.BackColor;
         }
+        private bool buttonClick = false;
 
         //Pen variables to draw
         private Pen aLittle = new Pen(Color.Blue, 5);
@@ -131,17 +132,40 @@ namespace Login {
             g.DrawEllipse(pen, x, y, width, height);
         }
 
+        /// <summary>
+        /// Call this funcation to draw circle. Will determine what to draw
+        /// </summary>
+        /// <param name="e"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="width">picturebox.Width</param>
+        /// <param name="height">picturebox.Height</param>
+        /// <param name="index">index of array</param>
+        private void determineDrawing(PaintEventArgs e, int x, int y, int width, int height, int index) {
+            if (page1Selections[index] == 1) {
+                DrawCircle(aLittle, e, x, y, width, height);
+            } else if (page1Selections[index] == 2) {
+                DrawCircle(aLot, e, x, y, width, height);
+            }
+        }
+
         //Code from here will update the pictureboxes when the user has clicked on a button
         private void topLeftPB_Paint(object sender, PaintEventArgs e) {
-            DeterminePenSizeDrawing(sender, topLeftPB, e);
+            //DeterminePenSizeDrawing(sender, topLeftPB, e);
+            determineDrawing(e, 0, 0, topLeftPB.Width, topRightPB.Height, 0);
         }
 
         private void topMidPB_Paint(object sender, PaintEventArgs e) {
-            DeterminePenSizeDrawing(sender, topMidPB, e);
+            determineDrawing(e, 0, 0, topMidPB.Width, topMidPB.Height, 1);
         }
 
         private void topRightPB_Paint(object sender, PaintEventArgs e) {
             DeterminePenSizeDrawing(sender, topRightPB, e);
+            if (page1Selections[2] == 1) {
+                DrawCircle(aLittle, e, 0, 0, topLeftPB.Width, topRightPB.Height);
+            } else if (page1Selections[2] == 2) {
+                DrawCircle(aLot, e, 0, 0, topLeftPB.Width, topRightPB.Height);
+            }
         }
 
         private void bottomLeftPB_Paint(object sender, PaintEventArgs e) {
@@ -156,55 +180,6 @@ namespace Login {
             DeterminePenSizeDrawing(sender, bottomRightPB, e);
         }
 
-        /// <summary>
-        /// Call this function when user is going to click on A Little
-        /// </summary>
-        /*
-         private void changeBoolALittle(object sender) {
-            if (sender.Equals(topLeftPBALittleBtn)) {
-                changeBoolArray(0, 1);
-            } else if (sender.Equals(topMidALittleBtn)) {
-                changeBoolArray(2, 3);
-            } else if (sender.Equals(topRightALittleBtn)) {
-                changeBoolArray(4, 5);
-            } else if (sender.Equals(bottomLeftALittleBtn)) {
-                changeBoolArray(6, 7);
-            } else if (sender.Equals(bottomMidALittleBtn)) {
-                changeBoolArray(8, 9);
-            } else if (sender.Equals(bottomRightALittleBtn)) {
-                changeBoolArray(10, 11);
-            }
-
-        }
-        /// <summary>
-        /// Call this function when user is going to click A Lot
-        /// </summary>
-        private void changeBoolALot(object sender) {
-            if (sender.Equals(topLeftPBALotBtn)) {
-                changeBoolArray(1, 0);
-            } else if (sender.Equals(topMidALotBtn)) {
-                changeBoolArray(3, 2);
-            } else if (sender.Equals(topRightALotBtn)) {
-                changeBoolArray(5, 4);
-            } else if (sender.Equals(bottomLeftALotBtn)) {
-                changeBoolArray(7, 6);
-            } else if (sender.Equals(bottomMidALotBtn)) {
-                changeBoolArray(9, 8);
-            } else if (sender.Equals(bottomRightALotBtn)) {
-                changeBoolArray(11, 10);
-            }
-        }
-        */
-
-        /// <summary>
-        /// Changes array position from true to false and vice versa
-        /// </summary>
-        /// <param name="positionSettingTrue">Set the index position to true in array</param>
-        /// <param name="positionSettingFalse">Set the index position to false in array</param>
-        private void changeBoolArray(int positionSettingTrue, int positionSettingFalse) {
-            boolArrayForSelectionInterview1[positionSettingTrue] = true;
-            boolArrayForSelectionInterview1[positionSettingFalse] = false;
-        }
         //I would simply create an array of size 6, and when they select 'a little' for picture1 (top left)
         //change the first value in the array to 1, 'a lot' would be set to 2.
         //if they make no selection it remains as 0
@@ -214,100 +189,113 @@ namespace Login {
         //////////////////////////////////////// BUTTON CLICKS FOR A LITT AND A LOT ////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         private void topLeftPBALittleBtn_Click(object sender, EventArgs e) {
-            changeBoolALittle(sender);
+            //changeBoolALittle(sender);
             //This will refresh the picture box
             topLeftPB.Invalidate();
             page1Selections[0] = 1;
             //this is just to show the array being updated -- can remove after testing
             label1.Text = string.Join(", ", page1Selections);
+            buttonClick = true;
+
         }
 
         private void topLeftPBALotBtn_Click(object sender, EventArgs e) {
-            changeBoolALot(sender);
+            //changeBoolALot(sender);
             //This will refresh the picture box
             topLeftPB.Invalidate();
             page1Selections[0] = 2;
             label1.Text = string.Join(", ", page1Selections);
+            buttonClick = true;
         }
 
         private void topMidALittleBtn_Click(object sender, EventArgs e) {
-            changeBoolALittle(sender);
+            //changeBoolALittle(sender);
             //This will refresh the picture box
             topMidPB.Invalidate();
             page1Selections[1] = 1;
             label1.Text = string.Join(", ", page1Selections);
+            buttonClick = true;
         }
 
         private void topMidALotBtn_Click(object sender, EventArgs e) {
-            changeBoolALot(sender);
+            //changeBoolALot(sender);
             //This will refresh the picture box
             topMidPB.Invalidate();
             page1Selections[1] = 2;
             label1.Text = string.Join(", ", page1Selections);
+            buttonClick = true;
         }
 
         private void topRightALittleBtn_Click(object sender, EventArgs e) {
-            changeBoolALittle(sender);
+            //changeBoolALittle(sender);
             //This will refresh the picture box
             topRightPB.Invalidate();
             page1Selections[2] = 1;
             label1.Text = string.Join(", ", page1Selections);
+            buttonClick = true;
         }
 
         private void topRightPBALotBtn_Click(object sender, EventArgs e) {
-            changeBoolALot(sender);
+            //changeBoolALot(sender);
             //This will refresh the picturebox
             topRightPB.Invalidate();
             page1Selections[2] = 2;
             label1.Text = string.Join(", ", page1Selections);
+            buttonClick = true;
         }
 
         private void bottomLeftALittleBtn_Click(object sender, EventArgs e) {
-            changeBoolALittle(sender);
+            //changeBoolALittle(sender);
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
             page1Selections[3] = 1;
             label1.Text = string.Join(", ", page1Selections);
+            buttonClick = true;
         }
 
         private void bottomLeftALotBtn_Click(object sender, EventArgs e) {
-            changeBoolALot(sender);
+            //changeBoolALot(sender);
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
             page1Selections[3] = 2;
             label1.Text = string.Join(", ", page1Selections);
+            buttonClick = true;
         }
 
         private void bottomMidALittleBtn_Click(object sender, EventArgs e) {
-            changeBoolALittle(sender);
+            //changeBoolALittle(sender);
             //This will refresh the picture box
             bottomMidPB.Invalidate();
             page1Selections[4] = 1;
             label1.Text = string.Join(", ", page1Selections);
+            buttonClick = true;
         }
 
         private void bottomMidALotBtn_Click(object sender, EventArgs e) {
-            changeBoolALot(sender);
+            //changeBoolALot(sender);
             //This will refresh the picture box
             bottomMidPB.Invalidate();
             page1Selections[4] = 2;
             label1.Text = string.Join(", ", page1Selections);
+            buttonClick = true;
         }
 
         private void bottomRightALittleBtn_Click(object sender, EventArgs e) {
-            changeBoolALittle(sender);
+            //changeBoolALittle(sender);
             //This will refresh the picture box
             bottomRightPB.Invalidate();
             page1Selections[5] = 1;
             label1.Text = string.Join(", ", page1Selections);
+            buttonClick = true;
         }
 
         private void bottomRightALotBtn_Click(object sender, EventArgs e) {
-            changeBoolALot(sender);
+            //changeBoolALot(sender);
             //This will refresh the picture box
             bottomRightPB.Invalidate();
             page1Selections[5] = 2;
             label1.Text = string.Join(", ", page1Selections);
+            buttonClick = true;
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
