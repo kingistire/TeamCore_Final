@@ -376,5 +376,41 @@ namespace Login {
         private void label1_Click(object sender, EventArgs e) {
 
         }
+
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////// Panel Clicking ////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        private void displayButtons(Button buttonName, Button buttonName2) {
+            buttonName.Visible = true;
+            buttonName2.Visible = true;
+        }
+
+        private void topLeftPB_Click(object sender, EventArgs e) {
+            displayButtons(topLeftPBALittleBtn, topLeftPBALotBtn);
+        }
+
+        private void topMidPB_Click(object sender, EventArgs e) {
+            displayButtons(topMidALittleBtn, topMidALotBtn);
+        }
+
+        private void topRightPB_Click(object sender, EventArgs e) {
+            displayButtons(topRightALittleBtn, topRightALotBtn);
+        }
+
+
+        private void bottomLeftPB_Click(object sender, EventArgs e) {
+            displayButtons(bottomLeftALittleBtn, bottomLeftALotBtn);
+        }
+
+        private void bottomMidPB_Click(object sender, EventArgs e) {
+            displayButtons(bottomMidALittleBtn, bottomMidALotBtn);
+        }
+
+        private void bottomRightPB_Click(object sender, EventArgs e) {
+            displayButtons(bottomRightALittleBtn, bottomRightALotBtn);
+        }
+
     }
 }
