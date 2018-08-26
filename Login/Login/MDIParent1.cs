@@ -54,7 +54,7 @@ namespace Login {
         }
 
         private void fileToolStripMenuItem_Click(object sender, EventArgs e) {
-            Interview newInterview = new Interview();
+            InterviewCover newInterview = new InterviewCover();
             newInterview.MdiParent = this;
             newInterview.Show();
         }

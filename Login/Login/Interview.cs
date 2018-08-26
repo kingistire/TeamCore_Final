@@ -61,6 +61,7 @@ namespace Login {
             //pictureBox.Image = new Bitmap (@imageURL);
 
             //Change Image depending on number of button click
+            /*
             if (nextCounter == 1) {
                 pictureBoxName.Image = new Bitmap(@imageURL);
             } else if (nextCounter == 2) {
@@ -77,6 +78,7 @@ namespace Login {
                     nextInterviewSlideBTN.Enabled = false;
                 }
             }
+            */
         }
 
         /// <summary>

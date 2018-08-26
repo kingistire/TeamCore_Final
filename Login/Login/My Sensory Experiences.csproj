@@ -65,6 +65,12 @@
     <Compile Include="DeleteUser.Designer.cs">
       <DependentUpon>DeleteUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterviewCover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterviewCover.Designer.cs">
+      <DependentUpon>InterviewCover.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,7 @@
     <EmbeddedResource Include="DeleteUser.resx">
       <DependentUpon>DeleteUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterviewCover.resx" />
     <EmbeddedResource Include="NewAccount.resx">
       <DependentUpon>NewAccount.cs</DependentUpon>
     </EmbeddedResource>
