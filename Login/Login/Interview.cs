@@ -159,7 +159,8 @@ namespace Login {
         /// <summary>
         /// Call this function when user is going to click on A Little
         /// </summary>
-        private void changeBoolALittle(object sender) {
+        /*
+         private void changeBoolALittle(object sender) {
             if (sender.Equals(topLeftPBALittleBtn)) {
                 changeBoolArray(0, 1);
             } else if (sender.Equals(topMidALittleBtn)) {
@@ -193,6 +194,7 @@ namespace Login {
                 changeBoolArray(11, 10);
             }
         }
+        */
 
         /// <summary>
         /// Changes array position from true to false and vice versa
@@ -206,93 +208,106 @@ namespace Login {
         //I would simply create an array of size 6, and when they select 'a little' for picture1 (top left)
         //change the first value in the array to 1, 'a lot' would be set to 2.
         //if they make no selection it remains as 0
-        //int[] page1Selections = new int[6] {0,0,0,0,0,0};
+        int[] page1Selections = new int[6] {0,0,0,0,0,0};
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// BUTTON CLICKS FOR A LITT AND A LOT ////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        private void topRightPBALotBtn_Click(object sender, EventArgs e) {
-            changeBoolALot(sender);
-            //This will refresh the picturebox
-            topRightPB.Invalidate();
-             
-        }
-
         private void topLeftPBALittleBtn_Click(object sender, EventArgs e) {
             changeBoolALittle(sender);
             //This will refresh the picture box
             topLeftPB.Invalidate();
-             
+            page1Selections[0] = 1;
+            //this is just to show the array being updated -- can remove after testing
+            label1.Text = string.Join(", ", page1Selections);
         }
 
         private void topLeftPBALotBtn_Click(object sender, EventArgs e) {
             changeBoolALot(sender);
             //This will refresh the picture box
             topLeftPB.Invalidate();
-             
+            page1Selections[0] = 2;
+            label1.Text = string.Join(", ", page1Selections);
         }
 
         private void topMidALittleBtn_Click(object sender, EventArgs e) {
             changeBoolALittle(sender);
             //This will refresh the picture box
             topMidPB.Invalidate();
-             
+            page1Selections[1] = 1;
+            label1.Text = string.Join(", ", page1Selections);
         }
 
         private void topMidALotBtn_Click(object sender, EventArgs e) {
             changeBoolALot(sender);
             //This will refresh the picture box
             topMidPB.Invalidate();
-             
+            page1Selections[1] = 2;
+            label1.Text = string.Join(", ", page1Selections);
         }
 
         private void topRightALittleBtn_Click(object sender, EventArgs e) {
             changeBoolALittle(sender);
             //This will refresh the picture box
             topRightPB.Invalidate();
-             
+            page1Selections[2] = 1;
+            label1.Text = string.Join(", ", page1Selections);
+        }
+
+        private void topRightPBALotBtn_Click(object sender, EventArgs e) {
+            changeBoolALot(sender);
+            //This will refresh the picturebox
+            topRightPB.Invalidate();
+            page1Selections[2] = 2;
+            label1.Text = string.Join(", ", page1Selections);
         }
 
         private void bottomLeftALittleBtn_Click(object sender, EventArgs e) {
             changeBoolALittle(sender);
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
-             
+            page1Selections[3] = 1;
+            label1.Text = string.Join(", ", page1Selections);
         }
 
         private void bottomLeftALotBtn_Click(object sender, EventArgs e) {
             changeBoolALot(sender);
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
-             
+            page1Selections[3] = 2;
+            label1.Text = string.Join(", ", page1Selections);
         }
 
         private void bottomMidALittleBtn_Click(object sender, EventArgs e) {
             changeBoolALittle(sender);
             //This will refresh the picture box
             bottomMidPB.Invalidate();
-             
+            page1Selections[4] = 1;
+            label1.Text = string.Join(", ", page1Selections);
         }
 
         private void bottomMidALotBtn_Click(object sender, EventArgs e) {
             changeBoolALot(sender);
             //This will refresh the picture box
             bottomMidPB.Invalidate();
-             
+            page1Selections[4] = 2;
+            label1.Text = string.Join(", ", page1Selections);
         }
 
         private void bottomRightALittleBtn_Click(object sender, EventArgs e) {
             changeBoolALittle(sender);
             //This will refresh the picture box
             bottomRightPB.Invalidate();
-             
+            page1Selections[5] = 1;
+            label1.Text = string.Join(", ", page1Selections);
         }
 
         private void bottomRightALotBtn_Click(object sender, EventArgs e) {
             changeBoolALot(sender);
             //This will refresh the picture box
             bottomRightPB.Invalidate();
-             
+            page1Selections[5] = 2;
+            label1.Text = string.Join(", ", page1Selections);
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
