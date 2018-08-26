@@ -382,33 +382,54 @@ namespace Login {
         //////////////////////////////////////// Panel Clicking ////////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+        private void hideButtons() {
+            topLeftPBALittleBtn.Visible = false;
+            topLeftPBALotBtn.Visible = false;
+            topMidALittleBtn.Visible = false;
+            topMidALotBtn.Visible = false;
+            topRightALittleBtn.Visible = false;
+            topRightALotBtn.Visible = false;
+            bottomLeftALittleBtn.Visible = false;
+            bottomLeftALotBtn.Visible = false;
+            bottomMidALittleBtn.Visible = false;
+            bottomMidALotBtn.Visible = false;
+            bottomRightALittleBtn.Visible = false;
+            bottomRightALotBtn.Visible = false;
+        }
+
         private void displayButtons(Button buttonName, Button buttonName2) {
             buttonName.Visible = true;
             buttonName2.Visible = true;
         }
 
         private void topLeftPB_Click(object sender, EventArgs e) {
+            hideButtons();
             displayButtons(topLeftPBALittleBtn, topLeftPBALotBtn);
         }
 
         private void topMidPB_Click(object sender, EventArgs e) {
+            hideButtons();
             displayButtons(topMidALittleBtn, topMidALotBtn);
         }
 
         private void topRightPB_Click(object sender, EventArgs e) {
+            hideButtons();
             displayButtons(topRightALittleBtn, topRightALotBtn);
         }
 
 
         private void bottomLeftPB_Click(object sender, EventArgs e) {
+            hideButtons();
             displayButtons(bottomLeftALittleBtn, bottomLeftALotBtn);
         }
 
         private void bottomMidPB_Click(object sender, EventArgs e) {
+            hideButtons();
             displayButtons(bottomMidALittleBtn, bottomMidALotBtn);
         }
 
         private void bottomRightPB_Click(object sender, EventArgs e) {
+            hideButtons();
             displayButtons(bottomRightALittleBtn, bottomRightALotBtn);
         }
 
