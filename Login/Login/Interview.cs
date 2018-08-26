@@ -203,6 +203,10 @@ namespace Login {
             boolArrayForSelectionInterview1[positionSettingTrue] = true;
             boolArrayForSelectionInterview1[positionSettingFalse] = false;
         }
+        //I would simply create an array of size 6, and when they select 'a little' for picture1 (top left)
+        //change the first value in the array to 1, 'a lot' would be set to 2.
+        //if they make no selection it remains as 0
+        //int[] page1Selections = new int[6] {0,0,0,0,0,0};
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// BUTTON CLICKS FOR A LITT AND A LOT ////////////////////////////////////////////////////////
@@ -406,32 +410,25 @@ namespace Login {
             hideButtons();
             displayButtons(topLeftPBALittleBtn, topLeftPBALotBtn);
         }
-
         private void topMidPB_Click(object sender, EventArgs e) {
             hideButtons();
             displayButtons(topMidALittleBtn, topMidALotBtn);
         }
-
         private void topRightPB_Click(object sender, EventArgs e) {
             hideButtons();
             displayButtons(topRightALittleBtn, topRightALotBtn);
         }
-
-
         private void bottomLeftPB_Click(object sender, EventArgs e) {
             hideButtons();
             displayButtons(bottomLeftALittleBtn, bottomLeftALotBtn);
         }
-
         private void bottomMidPB_Click(object sender, EventArgs e) {
             hideButtons();
             displayButtons(bottomMidALittleBtn, bottomMidALotBtn);
         }
-
         private void bottomRightPB_Click(object sender, EventArgs e) {
             hideButtons();
             displayButtons(bottomRightALittleBtn, bottomRightALotBtn);
         }
-
     }
 }
