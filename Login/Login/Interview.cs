@@ -91,7 +91,8 @@ namespace Login {
         }
 
         /// <summary>
-        /// Draws the circle border on selected picturebox
+        /// Draws the circle border on selected picturebox. DO NOT USE. TWAS FOR PREVIOUS BUTTON FUNCTIONALITY
+        /// USE determineDrawing() instead
         /// </summary>
         /// <param name="pictureBoxName">Picturebox name</param>
         /// <param name="e"></param>
@@ -157,24 +158,19 @@ namespace Login {
         }
 
         private void topRightPB_Paint(object sender, PaintEventArgs e) {
-            DeterminePenSizeDrawing(sender, topRightPB, e);
-            if (page1Selections[2] == 1) {
-                DrawCircle(aLittle, e, 0, 0, topLeftPB.Width, topRightPB.Height);
-            } else if (page1Selections[2] == 2) {
-                DrawCircle(aLot, e, 0, 0, topLeftPB.Width, topRightPB.Height);
-            }
+            determineDrawing(e, 0, 0, topRightPB.Width, topRightPB.Height, 2);
         }
 
         private void bottomLeftPB_Paint(object sender, PaintEventArgs e) {
-            DeterminePenSizeDrawing(sender, bottomLeftPB, e);
+            determineDrawing(e, 0, 0, bottomLeftPB.Width, bottomLeftPB.Height, 3);
         }
 
         private void bottomMidPB_Paint(object sender, PaintEventArgs e) {
-            DeterminePenSizeDrawing(sender, bottomMidPB, e);
+            determineDrawing(e, 0, 0, bottomMidPB.Width, bottomMidPB.Height, 4);
         }
 
         private void bottomRightPB_Paint(object sender, PaintEventArgs e) {
-            DeterminePenSizeDrawing(sender, bottomRightPB, e);
+            determineDrawing(e, 0, 0, bottomRightPB.Width, bottomRightPB.Height, 5);
         }
 
         //I would simply create an array of size 6, and when they select 'a little' for picture1 (top left)
