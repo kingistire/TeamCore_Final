@@ -279,7 +279,9 @@
             this.Controls.Add(this.tbAge);
             this.Controls.Add(this.tbLname);
             this.Controls.Add(this.tbFname);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "EditUser2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Add User";
             this.Load += new System.EventHandler(this.EditUser2_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

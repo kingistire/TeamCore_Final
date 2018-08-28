@@ -226,6 +226,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(493, 560);
             this.Controls.Add(this.pictureBox1);
@@ -245,7 +246,9 @@
             this.Controls.Add(this.tbAge);
             this.Controls.Add(this.tbLname);
             this.Controls.Add(this.tbFname);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "AddUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Add User";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

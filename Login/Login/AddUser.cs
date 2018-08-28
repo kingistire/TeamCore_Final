@@ -18,6 +18,13 @@ namespace Login {
 
         public AddUser() {
             InitializeComponent();
+            this.Location = new Point(0,0);
+        }
+
+        private void AddUser_Resize(object sender, EventArgs e) {
+            //RestoreBounds Property contains the original shape
+            this.SetBounds(this.RestoreBounds.X, this.RestoreBounds.Y, this.RestoreBounds.Width, this.RestoreBounds.Height);
+            this.Refresh();
         }
 
         private void btnSave_Click_1(object sender, EventArgs e) {

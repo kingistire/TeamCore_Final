@@ -18,6 +18,7 @@ namespace Login {
 
         public EditUser1() {
             InitializeComponent();
+            this.Location = new Point(0, 0);
         }
 
         private void btnSave_Click_1(object sender, EventArgs e) {

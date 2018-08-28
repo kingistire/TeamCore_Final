@@ -118,7 +118,9 @@
     <EmbeddedResource Include="DeleteUser.resx">
       <DependentUpon>DeleteUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InterviewCover.resx" />
+    <EmbeddedResource Include="InterviewCover.resx">
+      <DependentUpon>InterviewCover.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewAccount.resx">
       <DependentUpon>NewAccount.cs</DependentUpon>
     </EmbeddedResource>

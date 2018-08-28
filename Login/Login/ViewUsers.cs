@@ -13,6 +13,7 @@ namespace Login {
     public partial class ViewUsers : Form {
         public ViewUsers() {
             InitializeComponent();
+            this.Location = new Point(0, 0);
         }
 
         private void ViewUsers_Load(object sender, EventArgs e) {

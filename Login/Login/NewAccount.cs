@@ -18,6 +18,7 @@ namespace Login {
 
         public NewAccount() {
             InitializeComponent();
+            this.Location = new Point(0, 0);
         }
 
         /*

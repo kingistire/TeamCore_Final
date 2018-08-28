@@ -118,7 +118,9 @@
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbID);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "EditUser1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Edit existing user";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

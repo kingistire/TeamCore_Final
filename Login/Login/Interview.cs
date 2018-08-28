@@ -8,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Login {
     public partial class Interview : Form {
         public Interview() {
             InitializeComponent();
+            this.Location = new Point(0, 0);
             //Dynamically create the circular picture boxes
             createCirclePB(bottomLeftPB);
             createCirclePB(bottomRightPB);
@@ -23,24 +25,17 @@ namespace Login {
             //Assign images to pictureboxes
             originalImages();
             lblQuestion.BackColor = picBackground.BackColor;
-        }
-        private bool buttonClick = false;
+            }
 
         //Pen variables to draw
         private Pen aLittle = new Pen(Color.Blue, 5);
         private Pen aLot = new Pen(Color.Red, 10);
 
-        //Determine if the previous button was clicked
-        private bool prevButtonClick = false;
-
         //Bool array to draw circles
         private bool[] boolArrayForSelectionInterview1 = new bool[12]; //Set to false by default. Bool array goes a little, a lot, a little a lot starting from top left to top right, then bottom left to bottom right
 
         //Extra variables
-        private bool nextBtnClick = false;
         private int nextCounter = 0;
-        private int interview2Counter = 0;
-
 
         /// <summary>
         /// Dynamically create circular pictureboxes
@@ -197,8 +192,6 @@ namespace Login {
             page1Selections[0] = 1;
             //this is just to show the array being updated -- can remove after testing
             label1.Text = string.Join(", ", page1Selections);
-            buttonClick = true;
-
         }
 
         private void topLeftPBALotBtn_Click(object sender, EventArgs e) {
@@ -207,7 +200,6 @@ namespace Login {
             topLeftPB.Invalidate();
             page1Selections[0] = 2;
             label1.Text = string.Join(", ", page1Selections);
-            buttonClick = true;
         }
 
         private void topMidALittleBtn_Click(object sender, EventArgs e) {
@@ -216,7 +208,6 @@ namespace Login {
             topMidPB.Invalidate();
             page1Selections[1] = 1;
             label1.Text = string.Join(", ", page1Selections);
-            buttonClick = true;
         }
 
         private void topMidALotBtn_Click(object sender, EventArgs e) {
@@ -225,7 +216,6 @@ namespace Login {
             topMidPB.Invalidate();
             page1Selections[1] = 2;
             label1.Text = string.Join(", ", page1Selections);
-            buttonClick = true;
         }
 
         private void topRightALittleBtn_Click(object sender, EventArgs e) {
@@ -234,7 +224,6 @@ namespace Login {
             topRightPB.Invalidate();
             page1Selections[2] = 1;
             label1.Text = string.Join(", ", page1Selections);
-            buttonClick = true;
         }
 
         private void topRightPBALotBtn_Click(object sender, EventArgs e) {
@@ -243,7 +232,6 @@ namespace Login {
             topRightPB.Invalidate();
             page1Selections[2] = 2;
             label1.Text = string.Join(", ", page1Selections);
-            buttonClick = true;
         }
 
         private void bottomLeftALittleBtn_Click(object sender, EventArgs e) {
@@ -252,7 +240,6 @@ namespace Login {
             bottomLeftPB.Invalidate();
             page1Selections[3] = 1;
             label1.Text = string.Join(", ", page1Selections);
-            buttonClick = true;
         }
 
         private void bottomLeftALotBtn_Click(object sender, EventArgs e) {
@@ -261,7 +248,6 @@ namespace Login {
             bottomLeftPB.Invalidate();
             page1Selections[3] = 2;
             label1.Text = string.Join(", ", page1Selections);
-            buttonClick = true;
         }
 
         private void bottomMidALittleBtn_Click(object sender, EventArgs e) {
@@ -270,7 +256,6 @@ namespace Login {
             bottomMidPB.Invalidate();
             page1Selections[4] = 1;
             label1.Text = string.Join(", ", page1Selections);
-            buttonClick = true;
         }
 
         private void bottomMidALotBtn_Click(object sender, EventArgs e) {
@@ -279,7 +264,6 @@ namespace Login {
             bottomMidPB.Invalidate();
             page1Selections[4] = 2;
             label1.Text = string.Join(", ", page1Selections);
-            buttonClick = true;
         }
 
         private void bottomRightALittleBtn_Click(object sender, EventArgs e) {
@@ -288,7 +272,6 @@ namespace Login {
             bottomRightPB.Invalidate();
             page1Selections[5] = 1;
             label1.Text = string.Join(", ", page1Selections);
-            buttonClick = true;
         }
 
         private void bottomRightALotBtn_Click(object sender, EventArgs e) {
@@ -297,36 +280,11 @@ namespace Login {
             bottomRightPB.Invalidate();
             page1Selections[5] = 2;
             label1.Text = string.Join(", ", page1Selections);
-            buttonClick = true;
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// CHANGING INTERVIEW PAGE FUNCATIONALITY ////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-        /// <summary>
-        /// Change a little and a lot to false when the next button is pressed, effectively erasing the drawings.
-        /// Increase next counter to replace image
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void nextInterviewSlideBTN_Click(object sender, EventArgs e) {
-            //changeButtonBoolsOnNext();
-            nextCounter++;
-
-            previousInterviewSlideBtn.Visible = true;
-            interview2NextBtn.Visible = true;
-
-            //Call changePictureBoxImage method here
-            changePictureBoxImage(topLeftPB, "../../resources/", 5);
-            changePictureBoxImage(topMidPB, "../../resources/", 5);
-            changePictureBoxImage(topRightPB, "../../resources/", 5);
-            changePictureBoxImage(bottomLeftPB, "../../resources/", 5);
-            changePictureBoxImage(bottomMidPB, "../../resources/", 5);
-            changePictureBoxImage(bottomRightPB, "../../resources/", 5);
-            nextInterviewSlideBTN.Visible = false;
-        }
 
         /// <summary>
         /// Previous button functionality
@@ -335,57 +293,15 @@ namespace Login {
         /// <param name="e"></param>
         private void previousInterviewSlideBtn_Click(object sender, EventArgs e) {
             List<PictureBox> pbList = new List<PictureBox>();
-            prevButtonClick = true;
             nextCounter--;
             //Depending on nextCounter, change picturebox image
             if(nextCounter == 0) {
                 this.previousInterviewSlideBtn.Visible = false;
                 originalImages();
             } else if (nextCounter == 1) {
-                interviewSlide2();
             }
 
         }
-
-        /// <summary>
-        /// Call this when going to the second Interview Slide
-        /// </summary>
-        private void interviewSlide2() {
-            changePictureBoxImage(topLeftPB, "../../resources/", 5);
-            changePictureBoxImage(topMidPB, "../../resources/", 5);
-            changePictureBoxImage(topRightPB, "../../resources/", 5);
-            changePictureBoxImage(bottomLeftPB, "../../resources/", 5);
-            changePictureBoxImage(bottomMidPB, "../../resources/", 5);
-            changePictureBoxImage(bottomRightPB, "../../resources/", 5);
-            interview2NextBtn.Visible = false;
-            nextInterviewSlideBTN.Visible = true;
-        }
-
-        /// <summary>
-        /// When user clicks on the initial next button
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-
-        private void interview2NextBtn_Click(object sender, EventArgs e) {
-            nextCounter++;
-
-            //Make interview button visible.
-            previousInterviewSlideBtn.Visible = true;
-
-            //Call changePictureBoxImage method here
-            changePictureBoxImage(topLeftPB, "../../resources/", 5);
-            changePictureBoxImage(topMidPB, "../../resources/", 5);
-            changePictureBoxImage(topRightPB, "../../resources/", 5);
-            changePictureBoxImage(bottomLeftPB, "../../resources/", 5);
-            changePictureBoxImage(bottomMidPB, "../../resources/", 5);
-            changePictureBoxImage(bottomRightPB, "../../resources/", 5);
-        }
-
-        private void label1_Click(object sender, EventArgs e) {
-
-        }
-
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// Panel Clicking ////////////////////////////////////////////////////////////////////////////
@@ -434,6 +350,28 @@ namespace Login {
         private void bottomRightPB_Click(object sender, EventArgs e) {
             hideButtons();
             displayButtons(bottomRightALittleBtn, bottomRightALotBtn);
+        }
+
+        private void panel2_Load(object sender, PaintEventArgs e) {
+        }
+
+        /// <summary>
+        /// When user clicks on the initial next button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnNext1_Click_1(object sender, EventArgs e) {
+            //Make interview button visible.
+            //appends label to file on a new line
+            File.AppendAllText(@"c:\test\test.txt", label1.Text + Environment.NewLine);
+            if (nextCounter == 0) {
+                nextCounter++;
+                Interview panel2 = new Interview();
+                panel2.MdiParent = MdiParent;
+                panel2.Location = new Point(0, 0);
+                panel2.Show();
+                this.Close();
+            }       
         }
     }
 }

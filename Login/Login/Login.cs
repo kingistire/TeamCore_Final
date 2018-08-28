@@ -8,12 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace Login {
     public partial class Login : Form {
 
         public Login() {
             InitializeComponent();
+            //clear the textfile
+            StreamWriter strm = File.CreateText(@"c:\test\test.txt");
+            strm.Flush();
+            strm.Close();
         }
 
         private void btnNewAcc_Click(object sender, EventArgs e) {

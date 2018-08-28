@@ -14,16 +14,19 @@ namespace Login {
 
         public MDIParent1() {
             InitializeComponent();
-            //Interview newInterview = new Interview();
-            //newInterview.MdiParent = this;
-            //newInterview.Show();
         }
 
-        private void interviewToolStripMenuItem_Click(object sender, EventArgs e) {
-            Interview newInterview = new Interview();
-            newInterview.MdiParent = this;
-            newInterview.Show();
+        //this code is supposed to check if form exists when you try to open it
+        //if it does exist, bring it to front, otherwise create new instance
+        /*public bool IsFormOpen(Type formType) {
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType().Name == form.Name)
+                    return true;
+            return false;
         }
+        //Then to check and instantiate form1
+        if(!IsFormOpen(typeof (form1))
+        form1 is not open*/
 
         private void label1_Click(object sender, EventArgs e) {
             //label1.Text = ((Form)this.MdiParent).Controls.["label1"]
@@ -55,7 +58,6 @@ namespace Login {
 
         private void fileToolStripMenuItem_Click(object sender, EventArgs e) {
             InterviewCover newInterview = new InterviewCover();
-            newInterview.MdiParent = this;
             newInterview.Show();
         }
     }

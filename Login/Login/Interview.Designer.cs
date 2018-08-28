@@ -23,14 +23,12 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.interviewPanel = new System.Windows.Forms.Panel();
-            this.picInstruction = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblQuestion = new System.Windows.Forms.Label();
-            this.picSense = new System.Windows.Forms.PictureBox();
-            this.picBackground = new System.Windows.Forms.PictureBox();
-            this.interview2NextBtn = new System.Windows.Forms.Button();
+            this.btnNext1 = new System.Windows.Forms.Button();
             this.previousInterviewSlideBtn = new System.Windows.Forms.Button();
-            this.nextInterviewSlideBTN = new System.Windows.Forms.Button();
             this.bottomRightALotBtn = new System.Windows.Forms.Button();
             this.bottomRightALittleBtn = new System.Windows.Forms.Button();
             this.bottomMidALotBtn = new System.Windows.Forms.Button();
@@ -43,36 +41,17 @@
             this.topMidALittleBtn = new System.Windows.Forms.Button();
             this.topLeftPBALotBtn = new System.Windows.Forms.Button();
             this.topLeftPBALittleBtn = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.picInstruction = new System.Windows.Forms.PictureBox();
+            this.picSense = new System.Windows.Forms.PictureBox();
+            this.picBackground = new System.Windows.Forms.PictureBox();
             this.bottomRightPB = new System.Windows.Forms.PictureBox();
             this.bottomMidPB = new System.Windows.Forms.PictureBox();
             this.bottomLeftPB = new System.Windows.Forms.PictureBox();
             this.topRightPB = new System.Windows.Forms.PictureBox();
             this.topMidPB = new System.Windows.Forms.PictureBox();
             this.topLeftPB = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.interviewPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picInstruction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSense)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
@@ -82,59 +61,61 @@
             ((System.ComponentModel.ISupportInitialize)(this.topRightPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.topMidPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.topLeftPB)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
-            // interviewPanel
+            // panel1
             // 
-            this.interviewPanel.BackColor = System.Drawing.Color.AliceBlue;
-            this.interviewPanel.Controls.Add(this.label1);
-            this.interviewPanel.Controls.Add(this.picInstruction);
-            this.interviewPanel.Controls.Add(this.lblQuestion);
-            this.interviewPanel.Controls.Add(this.picSense);
-            this.interviewPanel.Controls.Add(this.picBackground);
-            this.interviewPanel.Controls.Add(this.interview2NextBtn);
-            this.interviewPanel.Controls.Add(this.previousInterviewSlideBtn);
-            this.interviewPanel.Controls.Add(this.nextInterviewSlideBTN);
-            this.interviewPanel.Controls.Add(this.bottomRightALotBtn);
-            this.interviewPanel.Controls.Add(this.bottomRightALittleBtn);
-            this.interviewPanel.Controls.Add(this.bottomMidALotBtn);
-            this.interviewPanel.Controls.Add(this.bottomMidALittleBtn);
-            this.interviewPanel.Controls.Add(this.bottomLeftALotBtn);
-            this.interviewPanel.Controls.Add(this.bottomLeftALittleBtn);
-            this.interviewPanel.Controls.Add(this.topRightALotBtn);
-            this.interviewPanel.Controls.Add(this.topRightALittleBtn);
-            this.interviewPanel.Controls.Add(this.topMidALotBtn);
-            this.interviewPanel.Controls.Add(this.topMidALittleBtn);
-            this.interviewPanel.Controls.Add(this.topLeftPBALotBtn);
-            this.interviewPanel.Controls.Add(this.topLeftPBALittleBtn);
-            this.interviewPanel.Controls.Add(this.bottomRightPB);
-            this.interviewPanel.Controls.Add(this.bottomMidPB);
-            this.interviewPanel.Controls.Add(this.bottomLeftPB);
-            this.interviewPanel.Controls.Add(this.topRightPB);
-            this.interviewPanel.Controls.Add(this.topMidPB);
-            this.interviewPanel.Controls.Add(this.topLeftPB);
-            this.interviewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.interviewPanel.Location = new System.Drawing.Point(0, 0);
-            this.interviewPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.interviewPanel.Name = "interviewPanel";
-            this.interviewPanel.Size = new System.Drawing.Size(1315, 868);
-            this.interviewPanel.TabIndex = 0;
+            this.panel1.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.picInstruction);
+            this.panel1.Controls.Add(this.lblQuestion);
+            this.panel1.Controls.Add(this.picSense);
+            this.panel1.Controls.Add(this.picBackground);
+            this.panel1.Controls.Add(this.btnNext1);
+            this.panel1.Controls.Add(this.previousInterviewSlideBtn);
+            this.panel1.Controls.Add(this.bottomRightALotBtn);
+            this.panel1.Controls.Add(this.bottomRightALittleBtn);
+            this.panel1.Controls.Add(this.bottomMidALotBtn);
+            this.panel1.Controls.Add(this.bottomMidALittleBtn);
+            this.panel1.Controls.Add(this.bottomLeftALotBtn);
+            this.panel1.Controls.Add(this.bottomLeftALittleBtn);
+            this.panel1.Controls.Add(this.topRightALotBtn);
+            this.panel1.Controls.Add(this.topRightALittleBtn);
+            this.panel1.Controls.Add(this.topMidALotBtn);
+            this.panel1.Controls.Add(this.topMidALittleBtn);
+            this.panel1.Controls.Add(this.topLeftPBALotBtn);
+            this.panel1.Controls.Add(this.topLeftPBALittleBtn);
+            this.panel1.Controls.Add(this.bottomRightPB);
+            this.panel1.Controls.Add(this.bottomMidPB);
+            this.panel1.Controls.Add(this.bottomLeftPB);
+            this.panel1.Controls.Add(this.topRightPB);
+            this.panel1.Controls.Add(this.topMidPB);
+            this.panel1.Controls.Add(this.topLeftPB);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1315, 868);
+            this.panel1.TabIndex = 0;
             // 
-            // picInstruction
+            // label2
             // 
-            this.picInstruction.Location = new System.Drawing.Point(1101, 46);
-            this.picInstruction.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picInstruction.Name = "picInstruction";
-            this.picInstruction.Size = new System.Drawing.Size(125, 126);
-            this.picInstruction.TabIndex = 24;
-            this.picInstruction.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(536, 197);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 17);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "panel number:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(536, 165);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 17);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "label to show array";
             // 
             // lblQuestion
             // 
@@ -145,7 +126,218 @@
             this.lblQuestion.Size = new System.Drawing.Size(609, 32);
             this.lblQuestion.TabIndex = 23;
             this.lblQuestion.Text = "Are there some sounds that you make a lot?";
-            this.lblQuestion.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnNext1
+            // 
+            this.btnNext1.Location = new System.Drawing.Point(1202, 529);
+            this.btnNext1.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNext1.MaximumSize = new System.Drawing.Size(233, 62);
+            this.btnNext1.MinimumSize = new System.Drawing.Size(100, 28);
+            this.btnNext1.Name = "btnNext1";
+            this.btnNext1.Size = new System.Drawing.Size(100, 28);
+            this.btnNext1.TabIndex = 20;
+            this.btnNext1.Text = "Next";
+            this.btnNext1.UseVisualStyleBackColor = true;
+            this.btnNext1.Click += new System.EventHandler(this.btnNext1_Click_1);
+            // 
+            // previousInterviewSlideBtn
+            // 
+            this.previousInterviewSlideBtn.Location = new System.Drawing.Point(4, 529);
+            this.previousInterviewSlideBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.previousInterviewSlideBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.previousInterviewSlideBtn.MinimumSize = new System.Drawing.Size(100, 28);
+            this.previousInterviewSlideBtn.Name = "previousInterviewSlideBtn";
+            this.previousInterviewSlideBtn.Size = new System.Drawing.Size(100, 28);
+            this.previousInterviewSlideBtn.TabIndex = 19;
+            this.previousInterviewSlideBtn.Text = "Previous";
+            this.previousInterviewSlideBtn.UseVisualStyleBackColor = true;
+            this.previousInterviewSlideBtn.Visible = false;
+            this.previousInterviewSlideBtn.Click += new System.EventHandler(this.previousInterviewSlideBtn_Click);
+            // 
+            // bottomRightALotBtn
+            // 
+            this.bottomRightALotBtn.Location = new System.Drawing.Point(1079, 800);
+            this.bottomRightALotBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.bottomRightALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.bottomRightALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
+            this.bottomRightALotBtn.Name = "bottomRightALotBtn";
+            this.bottomRightALotBtn.Size = new System.Drawing.Size(100, 28);
+            this.bottomRightALotBtn.TabIndex = 17;
+            this.bottomRightALotBtn.Text = "A Lot";
+            this.bottomRightALotBtn.UseVisualStyleBackColor = true;
+            this.bottomRightALotBtn.Visible = false;
+            this.bottomRightALotBtn.Click += new System.EventHandler(this.bottomRightALotBtn_Click);
+            // 
+            // bottomRightALittleBtn
+            // 
+            this.bottomRightALittleBtn.Location = new System.Drawing.Point(964, 800);
+            this.bottomRightALittleBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.bottomRightALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.bottomRightALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
+            this.bottomRightALittleBtn.Name = "bottomRightALittleBtn";
+            this.bottomRightALittleBtn.Size = new System.Drawing.Size(100, 28);
+            this.bottomRightALittleBtn.TabIndex = 16;
+            this.bottomRightALittleBtn.Text = "A Little";
+            this.bottomRightALittleBtn.UseVisualStyleBackColor = true;
+            this.bottomRightALittleBtn.Visible = false;
+            this.bottomRightALittleBtn.Click += new System.EventHandler(this.bottomRightALittleBtn_Click);
+            // 
+            // bottomMidALotBtn
+            // 
+            this.bottomMidALotBtn.Location = new System.Drawing.Point(631, 800);
+            this.bottomMidALotBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.bottomMidALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.bottomMidALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
+            this.bottomMidALotBtn.Name = "bottomMidALotBtn";
+            this.bottomMidALotBtn.Size = new System.Drawing.Size(100, 28);
+            this.bottomMidALotBtn.TabIndex = 15;
+            this.bottomMidALotBtn.Text = "A Lot";
+            this.bottomMidALotBtn.UseVisualStyleBackColor = true;
+            this.bottomMidALotBtn.Visible = false;
+            this.bottomMidALotBtn.Click += new System.EventHandler(this.bottomMidALotBtn_Click);
+            // 
+            // bottomMidALittleBtn
+            // 
+            this.bottomMidALittleBtn.Location = new System.Drawing.Point(516, 800);
+            this.bottomMidALittleBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.bottomMidALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.bottomMidALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
+            this.bottomMidALittleBtn.Name = "bottomMidALittleBtn";
+            this.bottomMidALittleBtn.Size = new System.Drawing.Size(100, 28);
+            this.bottomMidALittleBtn.TabIndex = 14;
+            this.bottomMidALittleBtn.Text = "A Little";
+            this.bottomMidALittleBtn.UseVisualStyleBackColor = true;
+            this.bottomMidALittleBtn.Visible = false;
+            this.bottomMidALittleBtn.Click += new System.EventHandler(this.bottomMidALittleBtn_Click);
+            // 
+            // bottomLeftALotBtn
+            // 
+            this.bottomLeftALotBtn.Location = new System.Drawing.Point(208, 800);
+            this.bottomLeftALotBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.bottomLeftALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.bottomLeftALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
+            this.bottomLeftALotBtn.Name = "bottomLeftALotBtn";
+            this.bottomLeftALotBtn.Size = new System.Drawing.Size(100, 28);
+            this.bottomLeftALotBtn.TabIndex = 13;
+            this.bottomLeftALotBtn.Text = "A Lot";
+            this.bottomLeftALotBtn.UseVisualStyleBackColor = true;
+            this.bottomLeftALotBtn.Visible = false;
+            this.bottomLeftALotBtn.Click += new System.EventHandler(this.bottomLeftALotBtn_Click);
+            // 
+            // bottomLeftALittleBtn
+            // 
+            this.bottomLeftALittleBtn.Location = new System.Drawing.Point(93, 800);
+            this.bottomLeftALittleBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.bottomLeftALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.bottomLeftALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
+            this.bottomLeftALittleBtn.Name = "bottomLeftALittleBtn";
+            this.bottomLeftALittleBtn.Size = new System.Drawing.Size(100, 28);
+            this.bottomLeftALittleBtn.TabIndex = 12;
+            this.bottomLeftALittleBtn.Text = "A Little";
+            this.bottomLeftALittleBtn.UseVisualStyleBackColor = true;
+            this.bottomLeftALittleBtn.Visible = false;
+            this.bottomLeftALittleBtn.Click += new System.EventHandler(this.bottomLeftALittleBtn_Click);
+            // 
+            // topRightALotBtn
+            // 
+            this.topRightALotBtn.Location = new System.Drawing.Point(1079, 473);
+            this.topRightALotBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.topRightALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.topRightALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
+            this.topRightALotBtn.Name = "topRightALotBtn";
+            this.topRightALotBtn.Size = new System.Drawing.Size(100, 28);
+            this.topRightALotBtn.TabIndex = 11;
+            this.topRightALotBtn.Text = "A Lot";
+            this.topRightALotBtn.UseVisualStyleBackColor = true;
+            this.topRightALotBtn.Visible = false;
+            this.topRightALotBtn.Click += new System.EventHandler(this.topRightPBALotBtn_Click);
+            // 
+            // topRightALittleBtn
+            // 
+            this.topRightALittleBtn.Location = new System.Drawing.Point(964, 473);
+            this.topRightALittleBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.topRightALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.topRightALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
+            this.topRightALittleBtn.Name = "topRightALittleBtn";
+            this.topRightALittleBtn.Size = new System.Drawing.Size(100, 28);
+            this.topRightALittleBtn.TabIndex = 10;
+            this.topRightALittleBtn.Text = "A Little";
+            this.topRightALittleBtn.UseVisualStyleBackColor = true;
+            this.topRightALittleBtn.Visible = false;
+            this.topRightALittleBtn.Click += new System.EventHandler(this.topRightALittleBtn_Click);
+            // 
+            // topMidALotBtn
+            // 
+            this.topMidALotBtn.Location = new System.Drawing.Point(631, 473);
+            this.topMidALotBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.topMidALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.topMidALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
+            this.topMidALotBtn.Name = "topMidALotBtn";
+            this.topMidALotBtn.Size = new System.Drawing.Size(100, 28);
+            this.topMidALotBtn.TabIndex = 9;
+            this.topMidALotBtn.Text = "A Lot";
+            this.topMidALotBtn.UseVisualStyleBackColor = true;
+            this.topMidALotBtn.Visible = false;
+            this.topMidALotBtn.Click += new System.EventHandler(this.topMidALotBtn_Click);
+            // 
+            // topMidALittleBtn
+            // 
+            this.topMidALittleBtn.Location = new System.Drawing.Point(516, 473);
+            this.topMidALittleBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.topMidALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.topMidALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
+            this.topMidALittleBtn.Name = "topMidALittleBtn";
+            this.topMidALittleBtn.Size = new System.Drawing.Size(100, 28);
+            this.topMidALittleBtn.TabIndex = 8;
+            this.topMidALittleBtn.Text = "A Little";
+            this.topMidALittleBtn.UseVisualStyleBackColor = true;
+            this.topMidALittleBtn.Visible = false;
+            this.topMidALittleBtn.Click += new System.EventHandler(this.topMidALittleBtn_Click);
+            // 
+            // topLeftPBALotBtn
+            // 
+            this.topLeftPBALotBtn.Location = new System.Drawing.Point(208, 473);
+            this.topLeftPBALotBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.topLeftPBALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.topLeftPBALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
+            this.topLeftPBALotBtn.Name = "topLeftPBALotBtn";
+            this.topLeftPBALotBtn.Size = new System.Drawing.Size(100, 28);
+            this.topLeftPBALotBtn.TabIndex = 7;
+            this.topLeftPBALotBtn.Text = "A Lot";
+            this.topLeftPBALotBtn.UseVisualStyleBackColor = true;
+            this.topLeftPBALotBtn.Visible = false;
+            this.topLeftPBALotBtn.Click += new System.EventHandler(this.topLeftPBALotBtn_Click);
+            // 
+            // topLeftPBALittleBtn
+            // 
+            this.topLeftPBALittleBtn.Location = new System.Drawing.Point(93, 473);
+            this.topLeftPBALittleBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.topLeftPBALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
+            this.topLeftPBALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
+            this.topLeftPBALittleBtn.Name = "topLeftPBALittleBtn";
+            this.topLeftPBALittleBtn.Size = new System.Drawing.Size(100, 28);
+            this.topLeftPBALittleBtn.TabIndex = 6;
+            this.topLeftPBALittleBtn.Text = "A Little";
+            this.topLeftPBALittleBtn.UseVisualStyleBackColor = true;
+            this.topLeftPBALittleBtn.Visible = false;
+            this.topLeftPBALittleBtn.Click += new System.EventHandler(this.topLeftPBALittleBtn_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1315, 868);
+            this.panel2.TabIndex = 26;
+            // 
+            // picInstruction
+            // 
+            this.picInstruction.Location = new System.Drawing.Point(1101, 46);
+            this.picInstruction.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picInstruction.Name = "picInstruction";
+            this.picInstruction.Size = new System.Drawing.Size(125, 126);
+            this.picInstruction.TabIndex = 24;
+            this.picInstruction.TabStop = false;
             // 
             // picSense
             // 
@@ -166,219 +358,10 @@
             this.picBackground.TabIndex = 21;
             this.picBackground.TabStop = false;
             // 
-            // interview2NextBtn
-            // 
-            this.interview2NextBtn.Location = new System.Drawing.Point(1199, 529);
-            this.interview2NextBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.interview2NextBtn.MaximumSize = new System.Drawing.Size(233, 62);
-            this.interview2NextBtn.MinimumSize = new System.Drawing.Size(100, 28);
-            this.interview2NextBtn.Name = "interview2NextBtn";
-            this.interview2NextBtn.Size = new System.Drawing.Size(100, 28);
-            this.interview2NextBtn.TabIndex = 20;
-            this.interview2NextBtn.Text = "Next";
-            this.interview2NextBtn.UseVisualStyleBackColor = true;
-            this.interview2NextBtn.Visible = false;
-            this.interview2NextBtn.Click += new System.EventHandler(this.interview2NextBtn_Click);
-            // 
-            // previousInterviewSlideBtn
-            // 
-            this.previousInterviewSlideBtn.Location = new System.Drawing.Point(4, 529);
-            this.previousInterviewSlideBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.previousInterviewSlideBtn.MaximumSize = new System.Drawing.Size(233, 62);
-            this.previousInterviewSlideBtn.MinimumSize = new System.Drawing.Size(100, 28);
-            this.previousInterviewSlideBtn.Name = "previousInterviewSlideBtn";
-            this.previousInterviewSlideBtn.Size = new System.Drawing.Size(100, 28);
-            this.previousInterviewSlideBtn.TabIndex = 19;
-            this.previousInterviewSlideBtn.Text = "Previous";
-            this.previousInterviewSlideBtn.UseVisualStyleBackColor = true;
-            this.previousInterviewSlideBtn.Visible = false;
-            this.previousInterviewSlideBtn.Click += new System.EventHandler(this.previousInterviewSlideBtn_Click);
-            // 
-            // nextInterviewSlideBTN
-            // 
-            this.nextInterviewSlideBTN.Location = new System.Drawing.Point(1199, 529);
-            this.nextInterviewSlideBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.nextInterviewSlideBTN.MaximumSize = new System.Drawing.Size(233, 62);
-            this.nextInterviewSlideBTN.MinimumSize = new System.Drawing.Size(100, 28);
-            this.nextInterviewSlideBTN.Name = "nextInterviewSlideBTN";
-            this.nextInterviewSlideBTN.Size = new System.Drawing.Size(100, 28);
-            this.nextInterviewSlideBTN.TabIndex = 18;
-            this.nextInterviewSlideBTN.Text = "Next";
-            this.nextInterviewSlideBTN.UseVisualStyleBackColor = true;
-            this.nextInterviewSlideBTN.Click += new System.EventHandler(this.nextInterviewSlideBTN_Click);
-            // 
-            // bottomRightALotBtn
-            // 
-            this.bottomRightALotBtn.Location = new System.Drawing.Point(1079, 800);
-            this.bottomRightALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bottomRightALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
-            this.bottomRightALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
-            this.bottomRightALotBtn.Name = "bottomRightALotBtn";
-            this.bottomRightALotBtn.Size = new System.Drawing.Size(100, 28);
-            this.bottomRightALotBtn.TabIndex = 17;
-            this.bottomRightALotBtn.Text = "A Lot";
-            this.bottomRightALotBtn.UseVisualStyleBackColor = true;
-            this.bottomRightALotBtn.Visible = false;
-            this.bottomRightALotBtn.Click += new System.EventHandler(this.bottomRightALotBtn_Click);
-            // 
-            // bottomRightALittleBtn
-            // 
-            this.bottomRightALittleBtn.Location = new System.Drawing.Point(964, 800);
-            this.bottomRightALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bottomRightALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
-            this.bottomRightALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
-            this.bottomRightALittleBtn.Name = "bottomRightALittleBtn";
-            this.bottomRightALittleBtn.Size = new System.Drawing.Size(100, 28);
-            this.bottomRightALittleBtn.TabIndex = 16;
-            this.bottomRightALittleBtn.Text = "A Little";
-            this.bottomRightALittleBtn.UseVisualStyleBackColor = true;
-            this.bottomRightALittleBtn.Visible = false;
-            this.bottomRightALittleBtn.Click += new System.EventHandler(this.bottomRightALittleBtn_Click);
-            // 
-            // bottomMidALotBtn
-            // 
-            this.bottomMidALotBtn.Location = new System.Drawing.Point(631, 800);
-            this.bottomMidALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bottomMidALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
-            this.bottomMidALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
-            this.bottomMidALotBtn.Name = "bottomMidALotBtn";
-            this.bottomMidALotBtn.Size = new System.Drawing.Size(100, 28);
-            this.bottomMidALotBtn.TabIndex = 15;
-            this.bottomMidALotBtn.Text = "A Lot";
-            this.bottomMidALotBtn.UseVisualStyleBackColor = true;
-            this.bottomMidALotBtn.Visible = false;
-            this.bottomMidALotBtn.Click += new System.EventHandler(this.bottomMidALotBtn_Click);
-            // 
-            // bottomMidALittleBtn
-            // 
-            this.bottomMidALittleBtn.Location = new System.Drawing.Point(516, 800);
-            this.bottomMidALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bottomMidALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
-            this.bottomMidALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
-            this.bottomMidALittleBtn.Name = "bottomMidALittleBtn";
-            this.bottomMidALittleBtn.Size = new System.Drawing.Size(100, 28);
-            this.bottomMidALittleBtn.TabIndex = 14;
-            this.bottomMidALittleBtn.Text = "A Little";
-            this.bottomMidALittleBtn.UseVisualStyleBackColor = true;
-            this.bottomMidALittleBtn.Visible = false;
-            this.bottomMidALittleBtn.Click += new System.EventHandler(this.bottomMidALittleBtn_Click);
-            // 
-            // bottomLeftALotBtn
-            // 
-            this.bottomLeftALotBtn.Location = new System.Drawing.Point(208, 800);
-            this.bottomLeftALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bottomLeftALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
-            this.bottomLeftALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
-            this.bottomLeftALotBtn.Name = "bottomLeftALotBtn";
-            this.bottomLeftALotBtn.Size = new System.Drawing.Size(100, 28);
-            this.bottomLeftALotBtn.TabIndex = 13;
-            this.bottomLeftALotBtn.Text = "A Lot";
-            this.bottomLeftALotBtn.UseVisualStyleBackColor = true;
-            this.bottomLeftALotBtn.Visible = false;
-            this.bottomLeftALotBtn.Click += new System.EventHandler(this.bottomLeftALotBtn_Click);
-            // 
-            // bottomLeftALittleBtn
-            // 
-            this.bottomLeftALittleBtn.Location = new System.Drawing.Point(93, 800);
-            this.bottomLeftALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bottomLeftALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
-            this.bottomLeftALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
-            this.bottomLeftALittleBtn.Name = "bottomLeftALittleBtn";
-            this.bottomLeftALittleBtn.Size = new System.Drawing.Size(100, 28);
-            this.bottomLeftALittleBtn.TabIndex = 12;
-            this.bottomLeftALittleBtn.Text = "A Little";
-            this.bottomLeftALittleBtn.UseVisualStyleBackColor = true;
-            this.bottomLeftALittleBtn.Visible = false;
-            this.bottomLeftALittleBtn.Click += new System.EventHandler(this.bottomLeftALittleBtn_Click);
-            // 
-            // topRightALotBtn
-            // 
-            this.topRightALotBtn.Location = new System.Drawing.Point(1079, 473);
-            this.topRightALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.topRightALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
-            this.topRightALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
-            this.topRightALotBtn.Name = "topRightALotBtn";
-            this.topRightALotBtn.Size = new System.Drawing.Size(100, 28);
-            this.topRightALotBtn.TabIndex = 11;
-            this.topRightALotBtn.Text = "A Lot";
-            this.topRightALotBtn.UseVisualStyleBackColor = true;
-            this.topRightALotBtn.Visible = false;
-            this.topRightALotBtn.Click += new System.EventHandler(this.topRightPBALotBtn_Click);
-            // 
-            // topRightALittleBtn
-            // 
-            this.topRightALittleBtn.Location = new System.Drawing.Point(964, 473);
-            this.topRightALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.topRightALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
-            this.topRightALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
-            this.topRightALittleBtn.Name = "topRightALittleBtn";
-            this.topRightALittleBtn.Size = new System.Drawing.Size(100, 28);
-            this.topRightALittleBtn.TabIndex = 10;
-            this.topRightALittleBtn.Text = "A Little";
-            this.topRightALittleBtn.UseVisualStyleBackColor = true;
-            this.topRightALittleBtn.Visible = false;
-            this.topRightALittleBtn.Click += new System.EventHandler(this.topRightALittleBtn_Click);
-            // 
-            // topMidALotBtn
-            // 
-            this.topMidALotBtn.Location = new System.Drawing.Point(631, 473);
-            this.topMidALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.topMidALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
-            this.topMidALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
-            this.topMidALotBtn.Name = "topMidALotBtn";
-            this.topMidALotBtn.Size = new System.Drawing.Size(100, 28);
-            this.topMidALotBtn.TabIndex = 9;
-            this.topMidALotBtn.Text = "A Lot";
-            this.topMidALotBtn.UseVisualStyleBackColor = true;
-            this.topMidALotBtn.Visible = false;
-            this.topMidALotBtn.Click += new System.EventHandler(this.topMidALotBtn_Click);
-            // 
-            // topMidALittleBtn
-            // 
-            this.topMidALittleBtn.Location = new System.Drawing.Point(516, 473);
-            this.topMidALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.topMidALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
-            this.topMidALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
-            this.topMidALittleBtn.Name = "topMidALittleBtn";
-            this.topMidALittleBtn.Size = new System.Drawing.Size(100, 28);
-            this.topMidALittleBtn.TabIndex = 8;
-            this.topMidALittleBtn.Text = "A Little";
-            this.topMidALittleBtn.UseVisualStyleBackColor = true;
-            this.topMidALittleBtn.Visible = false;
-            this.topMidALittleBtn.Click += new System.EventHandler(this.topMidALittleBtn_Click);
-            // 
-            // topLeftPBALotBtn
-            // 
-            this.topLeftPBALotBtn.Location = new System.Drawing.Point(208, 473);
-            this.topLeftPBALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.topLeftPBALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
-            this.topLeftPBALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
-            this.topLeftPBALotBtn.Name = "topLeftPBALotBtn";
-            this.topLeftPBALotBtn.Size = new System.Drawing.Size(100, 28);
-            this.topLeftPBALotBtn.TabIndex = 7;
-            this.topLeftPBALotBtn.Text = "A Lot";
-            this.topLeftPBALotBtn.UseVisualStyleBackColor = true;
-            this.topLeftPBALotBtn.Visible = false;
-            this.topLeftPBALotBtn.Click += new System.EventHandler(this.topLeftPBALotBtn_Click);
-            // 
-            // topLeftPBALittleBtn
-            // 
-            this.topLeftPBALittleBtn.Location = new System.Drawing.Point(93, 473);
-            this.topLeftPBALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.topLeftPBALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
-            this.topLeftPBALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
-            this.topLeftPBALittleBtn.Name = "topLeftPBALittleBtn";
-            this.topLeftPBALittleBtn.Size = new System.Drawing.Size(100, 28);
-            this.topLeftPBALittleBtn.TabIndex = 6;
-            this.topLeftPBALittleBtn.Text = "A Little";
-            this.topLeftPBALittleBtn.UseVisualStyleBackColor = true;
-            this.topLeftPBALittleBtn.Visible = false;
-            this.topLeftPBALittleBtn.Click += new System.EventHandler(this.topLeftPBALittleBtn_Click);
-            // 
             // bottomRightPB
             // 
             this.bottomRightPB.Location = new System.Drawing.Point(964, 594);
-            this.bottomRightPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomRightPB.Margin = new System.Windows.Forms.Padding(4);
             this.bottomRightPB.MaximumSize = new System.Drawing.Size(481, 432);
             this.bottomRightPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.bottomRightPB.Name = "bottomRightPB";
@@ -392,7 +375,7 @@
             // bottomMidPB
             // 
             this.bottomMidPB.Location = new System.Drawing.Point(516, 594);
-            this.bottomMidPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomMidPB.Margin = new System.Windows.Forms.Padding(4);
             this.bottomMidPB.MaximumSize = new System.Drawing.Size(481, 432);
             this.bottomMidPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.bottomMidPB.Name = "bottomMidPB";
@@ -406,7 +389,7 @@
             // bottomLeftPB
             // 
             this.bottomLeftPB.Location = new System.Drawing.Point(93, 594);
-            this.bottomLeftPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomLeftPB.Margin = new System.Windows.Forms.Padding(4);
             this.bottomLeftPB.MaximumSize = new System.Drawing.Size(481, 432);
             this.bottomLeftPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.bottomLeftPB.Name = "bottomLeftPB";
@@ -420,7 +403,7 @@
             // topRightPB
             // 
             this.topRightPB.Location = new System.Drawing.Point(964, 266);
-            this.topRightPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topRightPB.Margin = new System.Windows.Forms.Padding(4);
             this.topRightPB.MaximumSize = new System.Drawing.Size(481, 432);
             this.topRightPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.topRightPB.Name = "topRightPB";
@@ -434,7 +417,7 @@
             // topMidPB
             // 
             this.topMidPB.Location = new System.Drawing.Point(516, 266);
-            this.topMidPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topMidPB.Margin = new System.Windows.Forms.Padding(4);
             this.topMidPB.MaximumSize = new System.Drawing.Size(481, 432);
             this.topMidPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.topMidPB.Name = "topMidPB";
@@ -448,7 +431,7 @@
             // topLeftPB
             // 
             this.topLeftPB.Location = new System.Drawing.Point(93, 266);
-            this.topLeftPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topLeftPB.Margin = new System.Windows.Forms.Padding(4);
             this.topLeftPB.MaximumSize = new System.Drawing.Size(481, 432);
             this.topLeftPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.topLeftPB.Name = "topLeftPB";
@@ -459,311 +442,20 @@
             this.topLeftPB.Click += new System.EventHandler(this.topLeftPB_Click);
             this.topLeftPB.Paint += new System.Windows.Forms.PaintEventHandler(this.topLeftPB_Paint);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button10);
-            this.panel2.Controls.Add(this.button11);
-            this.panel2.Controls.Add(this.button12);
-            this.panel2.Controls.Add(this.button13);
-            this.panel2.Controls.Add(this.button14);
-            this.panel2.Controls.Add(this.button15);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.pictureBox5);
-            this.panel2.Controls.Add(this.pictureBox6);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1315, 868);
-            this.panel2.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1199, 309);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.MaximumSize = new System.Drawing.Size(233, 62);
-            this.button1.MinimumSize = new System.Drawing.Size(100, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Next";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(4, 309);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.MaximumSize = new System.Drawing.Size(233, 62);
-            this.button2.MinimumSize = new System.Drawing.Size(100, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 28);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Previous";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.previousInterviewSlideBtn_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(1199, 309);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button3.MaximumSize = new System.Drawing.Size(233, 62);
-            this.button3.MinimumSize = new System.Drawing.Size(100, 28);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 28);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Next";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(1079, 580);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button4.MaximumSize = new System.Drawing.Size(233, 62);
-            this.button4.MinimumSize = new System.Drawing.Size(100, 28);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 28);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "A Lot";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(964, 580);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button5.MaximumSize = new System.Drawing.Size(233, 62);
-            this.button5.MinimumSize = new System.Drawing.Size(100, 28);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 28);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "A Little";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(631, 580);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button6.MaximumSize = new System.Drawing.Size(233, 62);
-            this.button6.MinimumSize = new System.Drawing.Size(100, 28);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 28);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "A Lot";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(516, 580);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button7.MaximumSize = new System.Drawing.Size(233, 62);
-            this.button7.MinimumSize = new System.Drawing.Size(100, 28);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 28);
-            this.button7.TabIndex = 14;
-            this.button7.Text = "A Little";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(208, 580);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button8.MaximumSize = new System.Drawing.Size(233, 62);
-            this.button8.MinimumSize = new System.Drawing.Size(100, 28);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(100, 28);
-            this.button8.TabIndex = 13;
-            this.button8.Text = "A Lot";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(93, 580);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button9.MaximumSize = new System.Drawing.Size(233, 62);
-            this.button9.MinimumSize = new System.Drawing.Size(100, 28);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(100, 28);
-            this.button9.TabIndex = 12;
-            this.button9.Text = "A Little";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(1079, 252);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button10.MaximumSize = new System.Drawing.Size(233, 62);
-            this.button10.MinimumSize = new System.Drawing.Size(100, 28);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(100, 28);
-            this.button10.TabIndex = 11;
-            this.button10.Text = "A Lot";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(964, 252);
-            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button11.MaximumSize = new System.Drawing.Size(233, 62);
-            this.button11.MinimumSize = new System.Drawing.Size(100, 28);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(100, 28);
-            this.button11.TabIndex = 10;
-            this.button11.Text = "A Little";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(631, 252);
-            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button12.MaximumSize = new System.Drawing.Size(233, 62);
-            this.button12.MinimumSize = new System.Drawing.Size(100, 28);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(100, 28);
-            this.button12.TabIndex = 9;
-            this.button12.Text = "A Lot";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(516, 252);
-            this.button13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button13.MaximumSize = new System.Drawing.Size(233, 62);
-            this.button13.MinimumSize = new System.Drawing.Size(100, 28);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(100, 28);
-            this.button13.TabIndex = 8;
-            this.button13.Text = "A Little";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(208, 252);
-            this.button14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button14.MaximumSize = new System.Drawing.Size(233, 62);
-            this.button14.MinimumSize = new System.Drawing.Size(100, 28);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(100, 28);
-            this.button14.TabIndex = 7;
-            this.button14.Text = "A Lot";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(93, 252);
-            this.button15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button15.MaximumSize = new System.Drawing.Size(233, 62);
-            this.button15.MinimumSize = new System.Drawing.Size(100, 28);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(100, 28);
-            this.button15.TabIndex = 6;
-            this.button15.Text = "A Little";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(964, 374);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(481, 432);
-            this.pictureBox1.MinimumSize = new System.Drawing.Size(215, 186);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(215, 186);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(516, 374);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox2.MaximumSize = new System.Drawing.Size(481, 432);
-            this.pictureBox2.MinimumSize = new System.Drawing.Size(215, 186);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(215, 186);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(93, 374);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox3.MaximumSize = new System.Drawing.Size(481, 432);
-            this.pictureBox3.MinimumSize = new System.Drawing.Size(215, 186);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(215, 186);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(964, 46);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox4.MaximumSize = new System.Drawing.Size(481, 432);
-            this.pictureBox4.MinimumSize = new System.Drawing.Size(215, 186);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(215, 186);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(516, 46);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox5.MaximumSize = new System.Drawing.Size(481, 432);
-            this.pictureBox5.MinimumSize = new System.Drawing.Size(215, 186);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(215, 186);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 1;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Location = new System.Drawing.Point(93, 46);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox6.MaximumSize = new System.Drawing.Size(481, 432);
-            this.pictureBox6.MinimumSize = new System.Drawing.Size(215, 186);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(215, 186);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(536, 165);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 17);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "label to show array";
-            // 
             // Interview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1315, 868);
-            this.Controls.Add(this.interviewPanel);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Interview";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.interviewPanel.ResumeLayout(false);
-            this.interviewPanel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picInstruction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSense)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).EndInit();
@@ -773,20 +465,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.topRightPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.topMidPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.topLeftPB)).EndInit();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel interviewPanel;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox bottomRightPB;
         private System.Windows.Forms.PictureBox bottomMidPB;
         private System.Windows.Forms.PictureBox bottomLeftPB;
@@ -806,34 +491,13 @@
         private System.Windows.Forms.Button topMidALotBtn;
         private System.Windows.Forms.Button topMidALittleBtn;
         private System.Windows.Forms.Button previousInterviewSlideBtn;
-        private System.Windows.Forms.Button nextInterviewSlideBTN;
-        private System.Windows.Forms.Button interview2NextBtn;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button btnNext1;
         private System.Windows.Forms.Label lblQuestion;
         private System.Windows.Forms.PictureBox picSense;
         private System.Windows.Forms.PictureBox picBackground;
         private System.Windows.Forms.PictureBox picInstruction;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
     }
 }

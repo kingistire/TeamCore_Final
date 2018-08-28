@@ -118,7 +118,9 @@
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbID);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "DeleteUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Delete User";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
