@@ -24,12 +24,16 @@ namespace Login {
             staticVar = this;
         }
 
-        void AddUser_FormClosing(object sender, FormClosingEventArgs e) {
-            if (e.CloseReason == CloseReason.UserClosing) {
+        //doesnt work
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e) {
+            if (string.Equals((sender as Button).Name, @"CloseButton")) {
+                MessageBox.Show("Are you sure you want to close this window?");
+            }
+            // Do something proper to CloseButton.
+            else {
                 Globals.addUserExists = false;
             }
-        }
-
+}
         private void AddUser_Resize(object sender, EventArgs e) {
             //RestoreBounds Property contains the original shape
             this.SetBounds(this.RestoreBounds.X, this.RestoreBounds.Y, this.RestoreBounds.Width, this.RestoreBounds.Height);

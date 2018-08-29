@@ -16,24 +16,43 @@ namespace Login {
         SqlConnection con;
         SqlDataAdapter da;
 
+        public event System.Windows.Forms.FormClosingEventHandler FormClosing;
+
         public NewAccount() {
             InitializeComponent();
             this.Location = new Point(0, 0);
+            tbPass1.PasswordChar = '*';
+            tbPass2.PasswordChar = '*';
+
         }
 
-        /*
-        private void btnSave_Click_1(object sender, EventArgs e) {
-            con = new SqlConnection("Data Source=DESKTOP-G8RH1E3\\SQLEXPRESS;Initial Catalog=CapstoneDB;Integrated Security=True");
-            con.Open();
-            cmd = new SqlCommand("INSERT INTO testUser (firstName, lastName, gender, age, phone, email) VALUES (@firstName, @lastName, @gender, @age, @phone, @email)", con);
-            cmd.Parameters.Add("@firstName", tbEmail.Text);
-            cmd.Parameters.Add("@lastName", tbFname.Text);
-            cmd.Parameters.Add("@age", tbPass1.Text);
-            cmd.Parameters.Add("@email", tbEmail.Text);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("New user has been added successfully.");
-            this.Close();
+        private void NewAccount_FormClosing(Object sender, FormClosingEventArgs e) {
+            System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
+            messageBoxCS.AppendFormat("{0} = {1}", "CloseReason", e.CloseReason);
+            messageBoxCS.AppendLine();
+            messageBoxCS.AppendFormat("{0} = {1}", "Cancel", e.Cancel);
+            messageBoxCS.AppendLine();
+            MessageBox.Show(messageBoxCS.ToString(), "FormClosing Event");
         }
-        */
-    }
+        /*MessageBox.Show("Are you sure you want to close this window?");
+            DialogResult result = MessageBox.Show("Are you sure you want to close this window?", "Confirmation", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes) {
+                this.Close();
+                Login loginForm = new Login();
+                loginForm.Show();
+            }*/
+    
+            private void btnSave_Click_1(object sender, EventArgs e) {
+                con = new SqlConnection("Data Source=DESKTOP-G8RH1E3\\SQLEXPRESS;Initial Catalog=CapstoneDB;Integrated Security=True");
+                con.Open();
+                cmd = new SqlCommand("INSERT INTO testUser (firstName, lastName, gender, age, phone, email) VALUES (@firstName, @lastName, @gender, @age, @phone, @email)", con);
+                cmd.Parameters.AddWithValue("@firstName", tbEmail.Text);
+                cmd.Parameters.AddWithValue("@lastName", tbFname.Text);
+                cmd.Parameters.AddWithValue("@age", tbPass1.Text);
+                cmd.Parameters.AddWithValue("@email", tbEmail.Text);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("New user has been added successfully.");
+                this.Close();
+            }
+        }
     }

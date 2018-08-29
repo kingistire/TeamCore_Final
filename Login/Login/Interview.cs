@@ -15,7 +15,7 @@ namespace Login {
         public Interview() {
             InitializeComponent();
             this.Location = new Point(0, 0);
-            label2.Text = Globals.interview_page.ToString();
+            //label2.Text = Globals.interview_page.ToString();
             //Dynamically create the circular picture boxes
             createCirclePB(bottomLeftPB);
             createCirclePB(bottomRightPB);
@@ -41,10 +41,13 @@ namespace Login {
             else if (Globals.interview_page == 3) {
                 interviewPage3();
             }
+            else if (Globals.interview_page == 4) {
+                interviewPage4();
+            }
+            else if (Globals.interview_page == 5) {
+                interviewPage5();
+            }
         }
-
-        public static Interview pg1State = null;
-        public static Interview pg2State = null;
 
         //Pen variables to draw
         private Pen aLittle = new Pen(Color.Blue, 5);
@@ -64,35 +67,6 @@ namespace Login {
             System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
             path.AddEllipse(0, 0, pictureBox.Width, pictureBox.Height);
             pictureBox.Region = new Region(path);
-        }
-
-        /// <summary>
-        /// Dynamically change picturebox image
-        /// </summary>
-        /// <param name="pictureBox">Name of PictureBox</param>
-        /// <param name="imageURL">Path to the image as a string</param>
-        private void changePictureBoxImage(PictureBox pictureBoxName, string imageURL, int numberOfSlidesForInterview) {
-            //pictureBox.Image = new Bitmap (@imageURL);
-
-            //Change Image depending on number of button click
-            /*
-            if (nextCounter == 1) {
-                pictureBoxName.Image = new Bitmap(@imageURL);
-            } else if (nextCounter == 2) {
-                pictureBoxName.Image = new Bitmap(@imageURL);
-            } else if (nextCounter == 3) {
-                pictureBoxName.Image = new Bitmap(@imageURL);
-            } else if (nextCounter == 4) {
-                pictureBoxName.Image = new Bitmap(@imageURL);
-            } else if (nextCounter == numberOfSlidesForInterview) {
-                if (MessageBox.Show("You have completed the visual interview. The next interview is XXXX.", "Ok", MessageBoxButtons.OK) == DialogResult.OK) {
-                    pictureBoxName.Image = new Bitmap(@imageURL);
-                    nextCounter = 0;
-                    nextInterviewSlideBTN.Visible = false;
-                    nextInterviewSlideBTN.Enabled = false;
-                }
-            }
-            */
         }
 
         /// <summary>
@@ -302,25 +276,21 @@ namespace Login {
                 interviewForm3.Location = new Point(0, 0);
                 interviewForm3.Show();
             }
+            else if (Globals.interview_page == 4) {
+                this.Hide();
+                Interview interviewForm4 = new Interview();
+                interviewForm4.InstanceRef3 = this;
+                interviewForm4.Location = new Point(0, 0);
+                interviewForm4.Show();
+            }
+            else if (Globals.interview_page == 5) {
+                this.Hide();
+                Interview interviewForm5 = new Interview();
+                interviewForm5.InstanceRef4 = this;
+                interviewForm5.Location = new Point(0, 0);
+                interviewForm5.Show();
+            }
 
-        }
-
-        private Form m_InstanceRef = null;
-        public Form InstanceRef {
-            get {return m_InstanceRef;}
-            set {m_InstanceRef = value;}
-        }
-
-        private Form m_InstanceRef2 = null;
-        public Form InstanceRef2 {
-            get { return m_InstanceRef2; }
-            set { m_InstanceRef2 = value; }
-        }
-
-        private Form m_InstanceRef3 = null;
-        public Form InstanceRef3 {
-            get { return m_InstanceRef3; }
-            set { m_InstanceRef3 = value; }
         }
 
         /// <summary>
@@ -342,18 +312,26 @@ namespace Login {
                 this.Hide();
                 InstanceRef3.Show();
             }
+            else if (Globals.interview_page == 4) {
+                this.Hide();
+                InstanceRef4.Show();
+            }
+            else if (Globals.interview_page == 5) {
+                this.Hide();
+                InstanceRef5.Show();
+            }
         }
 
         /// <summary>
         /// Initial Images when user clicks on back button on second interview slide (when nextCounter === 0)
         /// </summary>
         private void interviewPage1() {
-            //topLeftPB.Image = new Bitmap(@"../../resources/");
+            topLeftPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\11169409_10207513025963219_4499665096783750703_n.jpg");
             topMidPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\1. Hearing\1. Are there some sounds that you don't like_\fireworks.jpg");
             topRightPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\1. Hearing\1. Are there some sounds that you don't like_\loud_voices.PNG");
-            //bottomLeftPB.Image = new Bitmap(@"../../resources/");
-            //bottomMidPB.Image = new Bitmap(@"../../resources/");
-            //bottomRightPB.Image = new Bitmap(@"../../resources/");
+            bottomLeftPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\1. Hearing\1. Are there some sounds that you don't like_\household_ appliances.PNG");
+            bottomMidPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\11169409_10207513025963219_4499665096783750703_n.jpg");
+            bottomRightPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\11169409_10207513025963219_4499665096783750703_n.jpg");
             lblTL.Text = "Other people talking";
             lblTM.Text = "Fireworks";
             lblTR.Text = "Loud voices";
@@ -373,7 +351,7 @@ namespace Login {
             lblTL.Text = "If I am concentrating on something, I don't notice people talking to me";
             lblTM.Text = "I find it hard to listen to the teacher in noisy classrooms";
             lblTR.Text = "I find it hard to listen to someone talking to me when I'm in a group";
-            lblBL.Text = "Other times when it is hard for you to listen?";
+            lblBL.Text = "";
             lblBM.Text = "";
             lblBR.Text = "";
         }
@@ -382,14 +360,46 @@ namespace Login {
             lblQuestion.Text = "Are there some sounds that make it hard for you to concentrate?";
             topLeftPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\Radio on.jpg");
             topMidPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\clock ticking.PNG");
-            //topRightPB.Image = new Bitmap(@"");
+            topRightPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\people_talking.PNG");
             //bottomLeftPB.Image = new Bitmap(@"../../resources/");
             //bottomMidPB.Image = new Bitmap(@"../../resources/");
             //bottomRightPB.Image = new Bitmap(@"../../resources/");
             lblTL.Text = "Radio on";
             lblTM.Text = "Clock ticking";
             lblTR.Text = "People talking";
-            lblBL.Text = "Other sounds that make it hard to concentrate??";
+            lblBL.Text = "";
+            lblBM.Text = "";
+            lblBR.Text = "";
+        }
+
+        private void interviewPage4() {
+            lblQuestion.Text = "Are there some sounds that you like to listen to?";
+            topLeftPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\1. Hearing\4. Are there sounds that you like to listen to_\Computer sounds.jpg");
+            //topMidPB.Image = new Bitmap(@"");
+            topRightPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\1. Hearing\4. Are there sounds that you like to listen to_\fans.PNG");
+            //bottomLeftPB.Image = new Bitmap(@"../../resources/");
+            bottomMidPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\1. Hearing\4. Are there sounds that you like to listen to_\Rhythms.jpg");
+            //bottomRightPB.Image = new Bitmap(@"../../resources/");
+            lblTL.Text = "Computer sounds";
+            lblTM.Text = "Live music";
+            lblTR.Text = "Fans";
+            lblBL.Text = "Music through my phone";
+            lblBM.Text = "Rhythms";
+            lblBR.Text = "";
+        }
+
+        private void interviewPage5() {
+            lblQuestion.Text = "Are there some sounds that you make a lot?";
+            //topLeftPB.Image = new Bitmap(@"");
+            topMidPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\1. Hearing\5. Are there some sounds that you make a lot_\tapping_feet.PNG");
+            topRightPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\1. Hearing\5. Are there some sounds that you make a lot_\Tapping fingers.jpg");
+            bottomLeftPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\1. Hearing\5. Are there some sounds that you make a lot_\clicking_pen.PNG");
+            //bottomMidPB.Image = new Bitmap(@"");
+            //bottomRightPB.Image = new Bitmap(@"../../resources/");
+            lblTL.Text = "Humming or whistling to myself";
+            lblTM.Text = "Tapping feet";
+            lblTR.Text = "Tapping fingers";
+            lblBL.Text = "Clicking pen";
             lblBM.Text = "";
             lblBR.Text = "";
         }
@@ -441,6 +451,36 @@ namespace Login {
         private void bottomRightPB_Click(object sender, EventArgs e) {
             hideButtons();
             displayButtons(bottomRightALittleBtn, bottomRightALotBtn);
+        }
+
+        private Form m_InstanceRef = null;
+        public Form InstanceRef {
+            get { return m_InstanceRef; }
+            set { m_InstanceRef = value; }
+        }
+
+        private Form m_InstanceRef2 = null;
+        public Form InstanceRef2 {
+            get { return m_InstanceRef2; }
+            set { m_InstanceRef2 = value; }
+        }
+
+        private Form m_InstanceRef3 = null;
+        public Form InstanceRef3 {
+            get { return m_InstanceRef3; }
+            set { m_InstanceRef3 = value; }
+        }
+
+        private Form m_InstanceRef4 = null;
+        public Form InstanceRef4 {
+            get { return m_InstanceRef4; }
+            set { m_InstanceRef4 = value; }
+        }
+
+        private Form m_InstanceRef5 = null;
+        public Form InstanceRef5 {
+            get { return m_InstanceRef5; }
+            set { m_InstanceRef5 = value; }
         }
     }
 }

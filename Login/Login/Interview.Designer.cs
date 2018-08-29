@@ -25,8 +25,18 @@
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Interview));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblBR = new System.Windows.Forms.Label();
+            this.lblTR = new System.Windows.Forms.Label();
+            this.lblBL = new System.Windows.Forms.Label();
+            this.lblBM = new System.Windows.Forms.Label();
+            this.lblTM = new System.Windows.Forms.Label();
             this.lblTL = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.picInstruction = new System.Windows.Forms.PictureBox();
             this.lblQuestion = new System.Windows.Forms.Label();
@@ -52,17 +62,6 @@
             this.topRightPB = new System.Windows.Forms.PictureBox();
             this.topMidPB = new System.Windows.Forms.PictureBox();
             this.topLeftPB = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblTM = new System.Windows.Forms.Label();
-            this.lblTR = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblBM = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblBR = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblBL = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picInstruction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSense)).BeginInit();
@@ -90,7 +89,6 @@
             this.panel1.Controls.Add(this.lblBM);
             this.panel1.Controls.Add(this.lblTM);
             this.panel1.Controls.Add(this.lblTL);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.picInstruction);
             this.panel1.Controls.Add(this.lblQuestion);
@@ -123,6 +121,119 @@
             this.panel1.Size = new System.Drawing.Size(1315, 860);
             this.panel1.TabIndex = 0;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1176, 135);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 17);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "A Lot";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1109, 135);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 17);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "A Little";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(2807, 1119);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(25, 17);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Fill";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(2361, 1120);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(25, 17);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Fill";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(1937, 791);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(25, 17);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Fill";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(1487, 791);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 17);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Fill";
+            // 
+            // lblBR
+            // 
+            this.lblBR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBR.Location = new System.Drawing.Point(975, 783);
+            this.lblBR.MaximumSize = new System.Drawing.Size(200, 60);
+            this.lblBR.Name = "lblBR";
+            this.lblBR.Size = new System.Drawing.Size(200, 47);
+            this.lblBR.TabIndex = 27;
+            this.lblBR.Text = "Fill";
+            this.lblBR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTR
+            // 
+            this.lblTR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTR.Location = new System.Drawing.Point(975, 454);
+            this.lblTR.MaximumSize = new System.Drawing.Size(200, 60);
+            this.lblTR.Name = "lblTR";
+            this.lblTR.Size = new System.Drawing.Size(200, 40);
+            this.lblTR.TabIndex = 27;
+            this.lblTR.Text = "Fill";
+            this.lblTR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblBL
+            // 
+            this.lblBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBL.Location = new System.Drawing.Point(107, 783);
+            this.lblBL.MaximumSize = new System.Drawing.Size(200, 60);
+            this.lblBL.Name = "lblBL";
+            this.lblBL.Size = new System.Drawing.Size(200, 47);
+            this.lblBL.TabIndex = 27;
+            this.lblBL.Text = "Fill";
+            this.lblBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblBM
+            // 
+            this.lblBM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBM.Location = new System.Drawing.Point(530, 783);
+            this.lblBM.MaximumSize = new System.Drawing.Size(200, 60);
+            this.lblBM.Name = "lblBM";
+            this.lblBM.Size = new System.Drawing.Size(200, 47);
+            this.lblBM.TabIndex = 27;
+            this.lblBM.Text = "Fill";
+            this.lblBM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTM
+            // 
+            this.lblTM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTM.Location = new System.Drawing.Point(530, 454);
+            this.lblTM.MaximumSize = new System.Drawing.Size(200, 60);
+            this.lblTM.Name = "lblTM";
+            this.lblTM.Size = new System.Drawing.Size(200, 40);
+            this.lblTM.TabIndex = 27;
+            this.lblTM.Text = "Fill";
+            this.lblTM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lblTL
             // 
             this.lblTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,23 +245,13 @@
             this.lblTL.Text = "Fill";
             this.lblTL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(713, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 17);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "panel number:";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(419, 129);
+            this.label1.Location = new System.Drawing.Point(566, 129);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 17);
+            this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 25;
-            this.label1.Text = "label to show array";
             // 
             // picInstruction
             // 
@@ -165,14 +266,15 @@
             // 
             // lblQuestion
             // 
-            this.lblQuestion.AutoSize = true;
             this.lblQuestion.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestion.Location = new System.Drawing.Point(328, 61);
+            this.lblQuestion.Location = new System.Drawing.Point(370, 44);
+            this.lblQuestion.MaximumSize = new System.Drawing.Size(500, 70);
             this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(609, 32);
+            this.lblQuestion.Size = new System.Drawing.Size(500, 70);
             this.lblQuestion.TabIndex = 23;
             this.lblQuestion.Text = "Are there some sounds that you make a lot?";
+            this.lblQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picSense
             // 
@@ -474,119 +576,6 @@
             this.topLeftPB.Click += new System.EventHandler(this.topLeftPB_Click);
             this.topLeftPB.Paint += new System.Windows.Forms.PaintEventHandler(this.topLeftPB_Paint);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1487, 791);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 17);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Fill";
-            // 
-            // lblTM
-            // 
-            this.lblTM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTM.Location = new System.Drawing.Point(530, 454);
-            this.lblTM.MaximumSize = new System.Drawing.Size(200, 60);
-            this.lblTM.Name = "lblTM";
-            this.lblTM.Size = new System.Drawing.Size(200, 40);
-            this.lblTM.TabIndex = 27;
-            this.lblTM.Text = "Fill";
-            this.lblTM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTR
-            // 
-            this.lblTR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTR.Location = new System.Drawing.Point(975, 454);
-            this.lblTR.MaximumSize = new System.Drawing.Size(200, 60);
-            this.lblTR.Name = "lblTR";
-            this.lblTR.Size = new System.Drawing.Size(200, 40);
-            this.lblTR.TabIndex = 27;
-            this.lblTR.Text = "Fill";
-            this.lblTR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1937, 791);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 17);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Fill";
-            // 
-            // lblBM
-            // 
-            this.lblBM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBM.Location = new System.Drawing.Point(530, 783);
-            this.lblBM.MaximumSize = new System.Drawing.Size(200, 60);
-            this.lblBM.Name = "lblBM";
-            this.lblBM.Size = new System.Drawing.Size(200, 47);
-            this.lblBM.TabIndex = 27;
-            this.lblBM.Text = "Fill";
-            this.lblBM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(2361, 1120);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(25, 17);
-            this.label8.TabIndex = 27;
-            this.label8.Text = "Fill";
-            // 
-            // lblBR
-            // 
-            this.lblBR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBR.Location = new System.Drawing.Point(975, 783);
-            this.lblBR.MaximumSize = new System.Drawing.Size(200, 60);
-            this.lblBR.Name = "lblBR";
-            this.lblBR.Size = new System.Drawing.Size(200, 47);
-            this.lblBR.TabIndex = 27;
-            this.lblBR.Text = "Fill";
-            this.lblBR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(2807, 1119);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(25, 17);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "Fill";
-            // 
-            // lblBL
-            // 
-            this.lblBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBL.Location = new System.Drawing.Point(107, 783);
-            this.lblBL.MaximumSize = new System.Drawing.Size(200, 60);
-            this.lblBL.Name = "lblBL";
-            this.lblBL.Size = new System.Drawing.Size(200, 47);
-            this.lblBL.TabIndex = 27;
-            this.lblBL.Text = "Fill";
-            this.lblBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1109, 135);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 17);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "A Little";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1176, 135);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 17);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "A Lot";
-            // 
             // Interview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -642,7 +631,6 @@
         private System.Windows.Forms.PictureBox picBackground;
         private System.Windows.Forms.PictureBox picInstruction;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTL;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;

@@ -220,6 +220,7 @@
             this.Controls.Add(this.tbFname);
             this.Controls.Add(this.tbEmail);
             this.Name = "NewAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
