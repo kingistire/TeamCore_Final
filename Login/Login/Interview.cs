@@ -113,7 +113,6 @@ namespace Login {
             }
         }
 
-
         /// <summary>
         /// Draw a circle
         /// </summary>
@@ -186,7 +185,6 @@ namespace Login {
         //////////////////////////////////////// BUTTON CLICKS FOR A LITT AND A LOT ////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         private void topLeftPBALittleBtn_Click(object sender, EventArgs e) {
-            //changeBoolALittle(sender);
             //This will refresh the picture box
             topLeftPB.Invalidate();
             page1Selections[0] = 1;
@@ -195,7 +193,6 @@ namespace Login {
         }
 
         private void topLeftPBALotBtn_Click(object sender, EventArgs e) {
-            //changeBoolALot(sender);
             //This will refresh the picture box
             topLeftPB.Invalidate();
             page1Selections[0] = 2;
@@ -203,7 +200,6 @@ namespace Login {
         }
 
         private void topMidALittleBtn_Click(object sender, EventArgs e) {
-            //changeBoolALittle(sender);
             //This will refresh the picture box
             topMidPB.Invalidate();
             page1Selections[1] = 1;
@@ -211,7 +207,6 @@ namespace Login {
         }
 
         private void topMidALotBtn_Click(object sender, EventArgs e) {
-            //changeBoolALot(sender);
             //This will refresh the picture box
             topMidPB.Invalidate();
             page1Selections[1] = 2;
@@ -219,7 +214,6 @@ namespace Login {
         }
 
         private void topRightALittleBtn_Click(object sender, EventArgs e) {
-            //changeBoolALittle(sender);
             //This will refresh the picture box
             topRightPB.Invalidate();
             page1Selections[2] = 1;
@@ -227,7 +221,6 @@ namespace Login {
         }
 
         private void topRightPBALotBtn_Click(object sender, EventArgs e) {
-            //changeBoolALot(sender);
             //This will refresh the picturebox
             topRightPB.Invalidate();
             page1Selections[2] = 2;
@@ -235,7 +228,6 @@ namespace Login {
         }
 
         private void bottomLeftALittleBtn_Click(object sender, EventArgs e) {
-            //changeBoolALittle(sender);
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
             page1Selections[3] = 1;
@@ -243,7 +235,6 @@ namespace Login {
         }
 
         private void bottomLeftALotBtn_Click(object sender, EventArgs e) {
-            //changeBoolALot(sender);
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
             page1Selections[3] = 2;
@@ -251,7 +242,6 @@ namespace Login {
         }
 
         private void bottomMidALittleBtn_Click(object sender, EventArgs e) {
-            //changeBoolALittle(sender);
             //This will refresh the picture box
             bottomMidPB.Invalidate();
             page1Selections[4] = 1;
@@ -259,7 +249,6 @@ namespace Login {
         }
 
         private void bottomMidALotBtn_Click(object sender, EventArgs e) {
-            //changeBoolALot(sender);
             //This will refresh the picture box
             bottomMidPB.Invalidate();
             page1Selections[4] = 2;
@@ -267,7 +256,6 @@ namespace Login {
         }
 
         private void bottomRightALittleBtn_Click(object sender, EventArgs e) {
-            //changeBoolALittle(sender);
             //This will refresh the picture box
             bottomRightPB.Invalidate();
             page1Selections[5] = 1;
@@ -275,7 +263,6 @@ namespace Login {
         }
 
         private void bottomRightALotBtn_Click(object sender, EventArgs e) {
-            //changeBoolALot(sender);
             //This will refresh the picture box
             bottomRightPB.Invalidate();
             page1Selections[5] = 2;
