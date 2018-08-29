@@ -12,10 +12,10 @@ using System.Data.SqlClient;
 namespace Login {
     
     public partial class MDIParent1 : Form {
-        
 
         public MDIParent1() {
             InitializeComponent();
+            
         }
 
         //this code is supposed to check if form exists when you try to open it
@@ -34,10 +34,16 @@ namespace Login {
             //label1.Text = ((Form)this.MdiParent).Controls.["label1"]
         }
 
-        private void addNewUserToolStripMenuItem_Click(object sender, EventArgs e) {
-            AddUser newUser = new AddUser();
-            newUser.MdiParent = this;
-            newUser.Show();
+        private void addNewUserToolStripMenuItem_Click(object sender, EventArgs e) {                      
+            if (Globals.addUserExists == false) {
+                AddUser newUser = new AddUser();
+                newUser.MdiParent = this;
+                newUser.Show();
+                Globals.addUserExists = true;
+            }
+            else {
+                AddUser.staticVar.BringToFront();
+            }
         }
 
         private void viewUserProfilesToolStripMenuItem_Click(object sender, EventArgs e) {

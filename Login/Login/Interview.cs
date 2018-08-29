@@ -24,6 +24,12 @@ namespace Login {
             createCirclePB(topRightPB);
             createCirclePB(topMidPB);
 
+            if (Globals.interview_page >= 2) {
+                previousInterviewSlideBtn.Visible = true;
+            }
+            else {
+                previousInterviewSlideBtn.Visible = false;
+            }
             //determines which page to display when the interview form is loaded
             //resets to one when the user starts a new interview
             if (Globals.interview_page == 1) {
@@ -32,7 +38,13 @@ namespace Login {
             else if (Globals.interview_page == 2) {
                 interviewPage2();
             }
+            else if (Globals.interview_page == 3) {
+                interviewPage3();
+            }
         }
+
+        public static Interview pg1State = null;
+        public static Interview pg2State = null;
 
         //Pen variables to draw
         private Pen aLittle = new Pen(Color.Blue, 5);
@@ -268,14 +280,47 @@ namespace Login {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnNext1_Click_1(object sender, EventArgs e) {
-            //Make interview button visible.
             //appends label to file on a new line
             File.AppendAllText(@"c:\test\test.txt", label1.Text + Environment.NewLine);
             Globals.interview_page++;
-            Interview interviewForm2 = new Interview();
-            interviewForm2.Location = new Point(0, 0);
-            interviewForm2.Show();
-            this.Close();
+            if (Globals.interview_page == 2) {
+                if (m_InstanceRef2 != null) {
+                    InstanceRef2.Show();
+                }
+                else {
+                    this.Hide();
+                    Interview interviewForm2 = new Interview();
+                    interviewForm2.InstanceRef = this;
+                    interviewForm2.Location = new Point(0, 0);
+                    interviewForm2.Show();
+                }
+            }
+            else if (Globals.interview_page == 3) {
+                this.Hide();
+                Interview interviewForm3 = new Interview();
+                interviewForm3.InstanceRef2 = this;
+                interviewForm3.Location = new Point(0, 0);
+                interviewForm3.Show();
+            }
+
+        }
+
+        private Form m_InstanceRef = null;
+        public Form InstanceRef {
+            get {return m_InstanceRef;}
+            set {m_InstanceRef = value;}
+        }
+
+        private Form m_InstanceRef2 = null;
+        public Form InstanceRef2 {
+            get { return m_InstanceRef2; }
+            set { m_InstanceRef2 = value; }
+        }
+
+        private Form m_InstanceRef3 = null;
+        public Form InstanceRef3 {
+            get { return m_InstanceRef3; }
+            set { m_InstanceRef3 = value; }
         }
 
         /// <summary>
@@ -284,9 +329,19 @@ namespace Login {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void previousInterviewSlideBtn_Click(object sender, EventArgs e) {
-            List<PictureBox> pbList = new List<PictureBox>();
-            nextCounter--;
-            //Depending on nextCounter, change picturebox image
+            Globals.interview_page--;
+            if (Globals.interview_page == 1) {
+                this.Hide();
+                InstanceRef.Show();
+            }
+            else if (Globals.interview_page == 2) {
+                this.Hide();
+                InstanceRef2.Show();
+            }
+            else if (Globals.interview_page == 3) {
+                this.Hide();
+                InstanceRef3.Show();
+            }
         }
 
         /// <summary>
@@ -307,12 +362,9 @@ namespace Login {
             lblBR.Text = "Bathroom appliances (e.g., hand dryers, hair dryers)";
         }
 
-        /// <summary>
-        /// Initial Images when user clicks on back button on second interview slide (when nextCounter === 0)
-        /// </summary>
         private void interviewPage2() {
             lblQuestion.Text = "Are there times when it is hard for you to listen?";
-            //topLeftPB.Image = new Bitmap(@"../../resources/");
+            topLeftPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\1. Hearing\2. Are there times when it is hard for you to listen\pg2img1.PNG");
             //topMidPB.Image = new Bitmap(@"");
             //topRightPB.Image = new Bitmap(@"");
             //bottomLeftPB.Image = new Bitmap(@"../../resources/");
@@ -322,6 +374,22 @@ namespace Login {
             lblTM.Text = "I find it hard to listen to the teacher in noisy classrooms";
             lblTR.Text = "I find it hard to listen to someone talking to me when I'm in a group";
             lblBL.Text = "Other times when it is hard for you to listen?";
+            lblBM.Text = "";
+            lblBR.Text = "";
+        }
+
+        private void interviewPage3() {
+            lblQuestion.Text = "Are there some sounds that make it hard for you to concentrate?";
+            topLeftPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\Radio on.jpg");
+            topMidPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\clock ticking.PNG");
+            //topRightPB.Image = new Bitmap(@"");
+            //bottomLeftPB.Image = new Bitmap(@"../../resources/");
+            //bottomMidPB.Image = new Bitmap(@"../../resources/");
+            //bottomRightPB.Image = new Bitmap(@"../../resources/");
+            lblTL.Text = "Radio on";
+            lblTM.Text = "Clock ticking";
+            lblTR.Text = "People talking";
+            lblBL.Text = "Other sounds that make it hard to concentrate??";
             lblBM.Text = "";
             lblBR.Text = "";
         }

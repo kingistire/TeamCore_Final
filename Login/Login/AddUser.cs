@@ -16,9 +16,18 @@ namespace Login {
         SqlConnection con;
         SqlDataAdapter da;
 
+        public static AddUser staticVar = null;
+
         public AddUser() {
             InitializeComponent();
             this.Location = new Point(0,0);
+            staticVar = this;
+        }
+
+        void AddUser_FormClosing(object sender, FormClosingEventArgs e) {
+            if (e.CloseReason == CloseReason.UserClosing) {
+                Globals.addUserExists = false;
+            }
         }
 
         private void AddUser_Resize(object sender, EventArgs e) {
