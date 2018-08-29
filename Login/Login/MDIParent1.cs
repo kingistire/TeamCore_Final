@@ -10,7 +10,9 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 
 namespace Login {
+    
     public partial class MDIParent1 : Form {
+        
 
         public MDIParent1() {
             InitializeComponent();

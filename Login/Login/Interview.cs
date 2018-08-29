@@ -15,6 +15,7 @@ namespace Login {
         public Interview() {
             InitializeComponent();
             this.Location = new Point(0, 0);
+            label2.Text = Globals.interview_page.ToString();
             //Dynamically create the circular picture boxes
             createCirclePB(bottomLeftPB);
             createCirclePB(bottomRightPB);
@@ -22,10 +23,16 @@ namespace Login {
             createCirclePB(topLeftPB);
             createCirclePB(topRightPB);
             createCirclePB(topMidPB);
-            //Assign images to pictureboxes
-            originalImages();
-            lblQuestion.BackColor = picBackground.BackColor;
+
+            //determines which page to display when the interview form is loaded
+            //resets to one when the user starts a new interview
+            if (Globals.interview_page == 1) {
+                interviewPage1();
             }
+            else if (Globals.interview_page == 2) {
+                interviewPage2();
+            }
+        }
 
         //Pen variables to draw
         private Pen aLittle = new Pen(Color.Blue, 5);
@@ -73,20 +80,6 @@ namespace Login {
                     nextInterviewSlideBTN.Enabled = false;
                 }
             }
-            */
-        }
-
-        /// <summary>
-        /// Initial Images when user clicks on back button on second interview slide (when nextCounter === 0)
-        /// </summary>
-        private void originalImages() {
-            /*
-            topLeftPB.Image = new Bitmap(@"../../resources/");
-            topMidPB.Image = new Bitmap(@"../../resources/");
-            topRightPB.Image = new Bitmap(@"../../resources/");
-            bottomLeftPB.Image = new Bitmap(@"../../resources/");
-            bottomMidPB.Image = new Bitmap(@"../../resources/");
-            bottomRightPB.Image = new Bitmap(@"../../resources/");
             */
         }
 
@@ -270,6 +263,22 @@ namespace Login {
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         /// <summary>
+        /// When user clicks on the initial next button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnNext1_Click_1(object sender, EventArgs e) {
+            //Make interview button visible.
+            //appends label to file on a new line
+            File.AppendAllText(@"c:\test\test.txt", label1.Text + Environment.NewLine);
+            Globals.interview_page++;
+            Interview interviewForm2 = new Interview();
+            interviewForm2.Location = new Point(0, 0);
+            interviewForm2.Show();
+            this.Close();
+        }
+
+        /// <summary>
         /// Previous button functionality
         /// </summary>
         /// <param name="sender"></param>
@@ -278,12 +287,43 @@ namespace Login {
             List<PictureBox> pbList = new List<PictureBox>();
             nextCounter--;
             //Depending on nextCounter, change picturebox image
-            if(nextCounter == 0) {
-                this.previousInterviewSlideBtn.Visible = false;
-                originalImages();
-            } else if (nextCounter == 1) {
-            }
+        }
 
+        /// <summary>
+        /// Initial Images when user clicks on back button on second interview slide (when nextCounter === 0)
+        /// </summary>
+        private void interviewPage1() {
+            //topLeftPB.Image = new Bitmap(@"../../resources/");
+            topMidPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\1. Hearing\1. Are there some sounds that you don't like_\fireworks.jpg");
+            topRightPB.Image = new Bitmap(@"C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\resources\1. Hearing\1. Are there some sounds that you don't like_\loud_voices.PNG");
+            //bottomLeftPB.Image = new Bitmap(@"../../resources/");
+            //bottomMidPB.Image = new Bitmap(@"../../resources/");
+            //bottomRightPB.Image = new Bitmap(@"../../resources/");
+            lblTL.Text = "Other people talking";
+            lblTM.Text = "Fireworks";
+            lblTR.Text = "Loud voices";
+            lblBL.Text = "Household appliances (e.g., blenders, vacuum)";
+            lblBM.Text = "Vehicles (e.g.,trucks, motorbikes)";
+            lblBR.Text = "Bathroom appliances (e.g., hand dryers, hair dryers)";
+        }
+
+        /// <summary>
+        /// Initial Images when user clicks on back button on second interview slide (when nextCounter === 0)
+        /// </summary>
+        private void interviewPage2() {
+            lblQuestion.Text = "Are there times when it is hard for you to listen?";
+            //topLeftPB.Image = new Bitmap(@"../../resources/");
+            //topMidPB.Image = new Bitmap(@"");
+            //topRightPB.Image = new Bitmap(@"");
+            //bottomLeftPB.Image = new Bitmap(@"../../resources/");
+            //bottomMidPB.Image = new Bitmap(@"../../resources/");
+            //bottomRightPB.Image = new Bitmap(@"../../resources/");
+            lblTL.Text = "If I am concentrating on something, I don't notice people talking to me";
+            lblTM.Text = "I find it hard to listen to the teacher in noisy classrooms";
+            lblTR.Text = "I find it hard to listen to someone talking to me when I'm in a group";
+            lblBL.Text = "Other times when it is hard for you to listen?";
+            lblBM.Text = "";
+            lblBR.Text = "";
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -334,27 +374,23 @@ namespace Login {
             hideButtons();
             displayButtons(bottomRightALittleBtn, bottomRightALotBtn);
         }
-
-        private void panel2_Load(object sender, PaintEventArgs e) {
-        }
-
-        /// <summary>
-        /// When user clicks on the initial next button
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnNext1_Click_1(object sender, EventArgs e) {
-            //Make interview button visible.
-            //appends label to file on a new line
-            File.AppendAllText(@"c:\test\test.txt", label1.Text + Environment.NewLine);
-            if (nextCounter == 0) {
-                nextCounter++;
-                Interview panel2 = new Interview();
-                panel2.MdiParent = MdiParent;
-                panel2.Location = new Point(0, 0);
-                panel2.Show();
-                this.Close();
-            }       
-        }
     }
 }
+/*
+Empty template to set images and labels
+private void setImagesAndLabels() {
+    lblQuestion.Text = "";
+    topLeftPB.Image = new Bitmap(@"../../resources/");
+    topMidPB.Image = new Bitmap(@"../../resources/");
+    topRightPB.Image = new Bitmap(@"../../resources/");
+    bottomLeftPB.Image = new Bitmap(@"../../resources/");
+    bottomMidPB.Image = new Bitmap(@"../../resources/");
+    bottomRightPB.Image = new Bitmap(@"../../resources/");
+    lblTL.Text = "";
+    lblTM.Text = "";
+    lblTR.Text = "";
+    lblBL.Text = "";
+    lblBM.Text = "";
+    lblBR.Text = "";
+}
+*/

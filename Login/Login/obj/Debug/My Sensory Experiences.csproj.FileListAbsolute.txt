@@ -20,8 +20,6 @@ C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\My
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.NewAccount.resources
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.AddUser.resources
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.Interview.resources
-C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.Login.resources
-C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.MDIParent1.resources
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.Properties.Resources.resources
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.ViewUsers.resources
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.GenerateResource.cache
@@ -32,3 +30,5 @@ C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Lo
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.EditUser2.resources
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.EditUser1.resources
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.InterviewCover.resources
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.MDIParent1.resources
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.Login.resources

@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using System.IO;
 
 namespace Login {
+
     public partial class Login : Form {
 
         public Login() {
