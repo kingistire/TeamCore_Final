@@ -43,9 +43,10 @@ namespace Login {
             }*/
     
             private void btnSave_Click_1(object sender, EventArgs e) {
-                con = new SqlConnection("Data Source=DESKTOP-G8RH1E3\\SQLEXPRESS;Initial Catalog=CapstoneDB;Integrated Security=True");
+                con = new SqlConnection(@"Data Source =(LocalDB)\MSSQLLocalDB;" + 
+                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True");
                 con.Open();
-                cmd = new SqlCommand("INSERT INTO testUser (firstName, lastName, gender, age, phone, email) VALUES (@firstName, @lastName, @gender, @age, @phone, @email)", con);
+                cmd = new SqlCommand("INSERT INTO UserInformation (firstName, lastName, gender, age, phone, email) VALUES (@firstName, @lastName, @gender, @age, @phone, @email)", con);
                 cmd.Parameters.AddWithValue("@firstName", tbEmail.Text);
                 cmd.Parameters.AddWithValue("@lastName", tbFname.Text);
                 cmd.Parameters.AddWithValue("@age", tbPass1.Text);

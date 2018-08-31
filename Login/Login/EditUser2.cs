@@ -33,10 +33,10 @@ namespace Login {
             //    cmd.Parameters.AddWithValue("@firstName", tbFname.Text);
             //    cmd.Parameters.AddWithValue("@lastName", tbLname.Text);
             //}
-            string conString = "Data Source=DESKTOP-G8RH1E3\\SQLEXPRESS;Initial Catalog=CapstoneDB;Integrated Security=True";
+            string conString = @"Data Source =(LocalDB)\MSSQLLocalDB;" + @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
             using (SqlConnection conn = new SqlConnection(conString)) {
                 conn.Open();
-                using (SqlCommand cmd = new SqlCommand("UPDATE testUser SET firstName=@NewFirstName, lastName=@NewLastName, gender=@NewGender, age=@NewAge, phone=@NewPhone, email=@NewEmail" +
+                using (SqlCommand cmd = new SqlCommand("UPDATE UserInformation SET firstName=@NewFirstName, lastName=@NewLastName, gender=@NewGender, age=@NewAge, phone=@NewPhone, email=@NewEmail" +
                         " WHERE Id=@Id", conn)) {
                     cmd.Parameters.AddWithValue("@Id", label9.Text);
                     cmd.Parameters.AddWithValue("@NewFirstName", tbFname.Text);
@@ -57,9 +57,9 @@ namespace Login {
         }
 
         private void EditUser2_Load_1(object sender, EventArgs e) {
-            string constring = "Data Source=DESKTOP-G8RH1E3\\SQLEXPRESS;Initial Catalog=CapstoneDB;Integrated Security=True";
+            string constring = "Data Source=.\\SQLEXPRESS;Initial Catalog=CapstoneDB;Integrated Security=True";
             SqlConnection conDatabase = new SqlConnection(constring);
-            SqlCommand cmdDatabase = new SqlCommand(" select * from testUser where Id='" + label9.Text + "';", conDatabase);
+            SqlCommand cmdDatabase = new SqlCommand(" select * from UserInformation where Id='" + label9.Text + "';", conDatabase);
             try {
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmdDatabase;

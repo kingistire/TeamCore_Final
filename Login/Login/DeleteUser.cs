@@ -22,8 +22,9 @@ namespace Login {
         }
 
         private void btnSave_Click_1(object sender, EventArgs e) {
-            con = new SqlConnection("Data Source=DESKTOP-G8RH1E3\\SQLEXPRESS;Initial Catalog=CapstoneDB;Integrated Security=True");
-            string query = "DELETE FROM testUser WHERE Id='" + tbID.Text + "';";
+            con = new SqlConnection(@"Data Source =(LocalDB)\MSSQLLocalDB;" + 
+                @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True");
+            string query = "DELETE FROM UserInformation WHERE Id='" + tbID.Text + "';";
             cmd = new SqlCommand(query, con);
             SqlDataReader myReader;
             try {
