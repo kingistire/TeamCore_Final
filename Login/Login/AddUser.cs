@@ -44,7 +44,8 @@ namespace Login {
             string genderSelection = "";
             //if gender is not chosen, program crashes
             genderSelection = cbGender.Items[cbGender.SelectedIndex].ToString().Trim();
-            con = new SqlConnection("Data Source=DESKTOP-G8RH1E3\\SQLEXPRESS;Initial Catalog=CapstoneDB;Integrated Security=True");
+            con = new SqlConnection(@"Data Source =(LocalDB)\MSSQLLocalDB;" + 
+                @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True");
             con.Open();
             cmd = new SqlCommand("INSERT INTO testUser (firstName, lastName, gender, age, phone, email) VALUES (@firstName, @lastName, @gender, @age, @phone, @email)", con);
             cmd.Parameters.AddWithValue("@firstName", tbFname.Text.Trim());

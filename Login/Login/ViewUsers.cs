@@ -17,9 +17,10 @@ namespace Login {
         }
 
         private void ViewUsers_Load(object sender, EventArgs e) {
-            string constring = "Data Source=DESKTOP-G8RH1E3\\SQLEXPRESS;Initial Catalog=CapstoneDB;Integrated Security=True";
+            string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" + 
+                @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
             SqlConnection conDatabase = new SqlConnection(constring);
-            SqlCommand cmdDatabase = new SqlCommand(" select * from testUser ;", conDatabase);
+            SqlCommand cmdDatabase = new SqlCommand(" select * from UserInformation ;", conDatabase);
             try {
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmdDatabase;

@@ -29,7 +29,9 @@ namespace Login {
         }
 
         private void btnLogin_Click(object sender, EventArgs e) {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-G8RH1E3\\SQLEXPRESS;Initial Catalog=CapstoneDB;Integrated Security=True");
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = @"Data Source =(LocalDB)\MSSQLLocalDB;" + @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            con.Open();
             SqlDataAdapter sda = new SqlDataAdapter("Select Role from Login Where Username='" + tbUsername.Text + "' and Password='" + tbPassword.Text + "'",con);
             DataTable dt = new System.Data.DataTable();
             sda.Fill(dt);
