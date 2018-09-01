@@ -322,6 +322,15 @@ namespace Login {
             }
         }
 
+        private void updateLabelText(string TL, string TM, string TR, string BL, string BM, string BR) {
+            lblTL.Text = TL;
+            lblTM.Text = TM;
+            lblTR.Text = TR;
+            lblBL.Text = BL;
+            lblBM.Text = BM;
+            lblBR.Text = BR;
+        }
+
         /// <summary>
         /// Initial Images when user clicks on back button on second interview slide (when nextCounter === 0)
         /// </summary>
@@ -332,12 +341,9 @@ namespace Login {
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\household_ appliances.PNG");
             bottomMidPB.Image = new Bitmap(@"..\..\resources\11169409_10207513025963219_4499665096783750703_n.jpg");
             bottomRightPB.Image = new Bitmap(@"..\..\resources\11169409_10207513025963219_4499665096783750703_n.jpg");
-            lblTL.Text = "Other people talking";
-            lblTM.Text = "Fireworks";
-            lblTR.Text = "Loud voices";
-            lblBL.Text = "Household appliances (e.g., blenders, vacuum)";
-            lblBM.Text = "Vehicles (e.g.,trucks, motorbikes)";
-            lblBR.Text = "Bathroom appliances (e.g., hand dryers, hair dryers)";
+            updateLabelText("Other People Talking", " Fireworks", "Loud Voices",
+                "Household Appliances (e.g. blenders, vacuum)", "Vehicles (e.g. trucks, motorbikes)",
+                "Bathroom Appliances (e.g. hair dryers, hand dryers");
         }
 
         private void interviewPage2() {
@@ -348,12 +354,12 @@ namespace Login {
             //bottomLeftPB.Image = new Bitmap(@"../../resources/");
             //bottomMidPB.Image = new Bitmap(@"../../resources/");
             //bottomRightPB.Image = new Bitmap(@"../../resources/");
-            lblTL.Text = "If I am concentrating on something, I don't notice people talking to me";
-            lblTM.Text = "I find it hard to listen to the teacher in noisy classrooms";
-            lblTR.Text = "I find it hard to listen to someone talking to me when I'm in a group";
-            lblBL.Text = "";
-            lblBM.Text = "";
-            lblBR.Text = "";
+            updateLabelText("If I am concentrating on something, I don't notice people talking to me",
+                "I find it hard to listen to the teacher in noisy classrooms",
+                "I find it hard to listen to someone talking to me when I'm in a group", 
+                "", 
+                "", 
+                "");
         }
 
         private void interviewPage3() {
@@ -364,12 +370,7 @@ namespace Login {
             //bottomLeftPB.Image = new Bitmap(@"../../resources/");
             //bottomMidPB.Image = new Bitmap(@"../../resources/");
             //bottomRightPB.Image = new Bitmap(@"../../resources/");
-            lblTL.Text = "Radio on";
-            lblTM.Text = "Clock ticking";
-            lblTR.Text = "People talking";
-            lblBL.Text = "";
-            lblBM.Text = "";
-            lblBR.Text = "";
+            updateLabelText("Radio On", "Clock Ticking", "People Talking", "", "", "");
         }
 
         private void interviewPage4() {
@@ -380,12 +381,7 @@ namespace Login {
             //bottomLeftPB.Image = new Bitmap(@"../../resources/");
             bottomMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\Rhythms.jpg");
             //bottomRightPB.Image = new Bitmap(@"../../resources/");
-            lblTL.Text = "Computer sounds";
-            lblTM.Text = "Live music";
-            lblTR.Text = "Fans";
-            lblBL.Text = "Music through my phone";
-            lblBM.Text = "Rhythms";
-            lblBR.Text = "";
+            updateLabelText("Computer Sounds", "Live Music", "Fans", "Music Through My Phone", "Rhythms", "");
         }
 
         private void interviewPage5() {
@@ -396,12 +392,8 @@ namespace Login {
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\clicking_pen.PNG");
             //bottomMidPB.Image = new Bitmap(@"");
             //bottomRightPB.Image = new Bitmap(@"../../resources/");
-            lblTL.Text = "Humming or whistling to myself";
-            lblTM.Text = "Tapping feet";
-            lblTR.Text = "Tapping fingers";
-            lblBL.Text = "Clicking pen";
-            lblBM.Text = "";
-            lblBR.Text = "";
+            updateLabelText("Humming of Whistling to Myself","Tapping Feet", "Tapping Fingers", "Clicken Pen",
+                "", "");
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
