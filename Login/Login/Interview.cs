@@ -59,9 +59,6 @@ namespace Login {
         private Pen aLittle = new Pen(Color.Blue, 5);
         private Pen aLot = new Pen(Color.Red, 10);
 
-        //Bool array to draw circles
-        private bool[] boolArrayForSelectionInterview1 = new bool[12]; //Set to false by default. Bool array goes a little, a lot, a little a lot starting from top left to top right, then bottom left to bottom right
-
         //Extra variables
         private int nextCounter = 0;
 
@@ -73,30 +70,6 @@ namespace Login {
             System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
             path.AddEllipse(0, 0, pictureBox.Width, pictureBox.Height);
             pictureBox.Region = new Region(path);
-        }
-
-        /// <summary>
-        /// Draws the circle border on selected picturebox. DO NOT USE. TWAS FOR PREVIOUS BUTTON FUNCTIONALITY
-        /// USE determineDrawing() instead
-        /// </summary>
-        /// <param name="pictureBoxName">Picturebox name</param>
-        /// <param name="e"></param>
-        private void DeterminePenSizeDrawing(Object sender, PictureBox pictureBoxName, PaintEventArgs e) {
-            int index = 0;
-            //Determine if position is even or not
-            for (int i = 0; i < boolArrayForSelectionInterview1.Length; i++) {
-                if (boolArrayForSelectionInterview1[i]) {
-                    //Get index value of the array where true
-                    index = Array.IndexOf(boolArrayForSelectionInterview1, true);
-                    if (index % 2 == 0 || index == 0) {
-                        DrawCircle(aLittle, e, 0, 0, pictureBoxName.Size.Width, pictureBoxName.Size.Height);
-                        boolArrayForSelectionInterview1[i] = false;
-                    } else {
-                        DrawCircle(aLot, e, 0, 0, pictureBoxName.Size.Width, pictureBoxName.Size.Height);
-                        boolArrayForSelectionInterview1[i] = false;
-                    }
-                }
-            }
         }
 
         /// <summary>
@@ -321,6 +294,7 @@ namespace Login {
                 sightInterview3.Show();
             }
 
+
         }
 
         /// <summary>
@@ -355,6 +329,18 @@ namespace Login {
             } else if (Globals.interview_page == 7) {
                 this.Hide();
                 InstanceRef7.Show();
+            } else if (Globals.interview_page == 8) {
+                this.Hide();
+                InstanceRef8.Show();
+            } else if (Globals.interview_page == 9) {
+                this.Hide();
+                InstanceRef9.Show();
+            } else if (Globals.interview_page == 10) {
+                this.Hide();
+                InstanceRef10.Show();
+            } else if (Globals.interview_page == 11) {
+                this.Hide();
+                InstanceRef11.Show();
             }
         }
 
@@ -468,6 +454,11 @@ namespace Login {
                 "Spinning Objects", "");
         }
 
+        //Touch Panels
+
+
+
+
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// Panel Clicking ////////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -563,6 +554,30 @@ namespace Login {
         public Form InstanceRef7 {
             get { return m_InstanceRef7; }
             set { m_InstanceRef7 = value; }
+        }
+
+        private Form m_InstanceRef8 = null;
+        public Form InstanceRef8 {
+            get { return m_InstanceRef8; }
+            set { m_InstanceRef8 = value; }
+        }
+
+        private Form m_InstanceRef9 = null;
+        public Form InstanceRef9 {
+            get { return m_InstanceRef9; }
+            set { m_InstanceRef9 = value; }
+        }
+
+        private Form m_InstanceRef10 = null;
+        public Form InstanceRef10 {
+            get { return m_InstanceRef10; }
+            set { m_InstanceRef10 = value; }
+        }
+
+        private Form m_InstanceRef11 = null;
+        public Form InstanceRef11 {
+            get { return m_InstanceRef11; }
+            set { m_InstanceRef11 = value; }
         }
     }
 }
