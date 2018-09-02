@@ -46,6 +46,12 @@ namespace Login {
             }
             else if (Globals.interview_page == 5) {
                 interviewPage5();
+            } else if (Globals.interview_page == 6) {
+                sightInterviewPage1();
+            } else if (Globals.interview_page == 7) {
+                sightInterviewPage2();
+            } else if (Globals.interview_page == 8) {
+                sightInterviewPage3();
             }
         }
 
@@ -289,6 +295,30 @@ namespace Login {
                 interviewForm5.InstanceRef4 = this;
                 interviewForm5.Location = new Point(0, 0);
                 interviewForm5.Show();
+            } else if (Globals.interview_page == 6) {
+                this.Hide();
+                Interview sightInterview1 = new Interview();
+                sightInterview1.InstanceRef5 = this;
+                sightInterview1.Location = new Point(0, 0);
+                sightInterview1.picBackground.BackColor = Color.Tomato;
+                sightInterview1.panel1.BackColor = Color.LightSalmon;
+                sightInterview1.Show();
+            } else if (Globals.interview_page == 7) {
+                this.Hide();
+                Interview sightInterview2 = new Interview();
+                sightInterview2.InstanceRef6 = this;
+                sightInterview2.Location = new Point(0, 0);
+                sightInterview2.picBackground.BackColor = Color.Tomato;
+                sightInterview2.picBackground.BackColor = Color.LightSalmon;
+                sightInterview2.Show();
+            } else if (Globals.interview_page == 8) {
+                this.Hide();
+                Interview sightInterview3 = new Interview();
+                sightInterview3.InstanceRef7 = this;
+                sightInterview3.Location = new Point(0, 0);
+                sightInterview3.picBackground.BackColor = Color.Tomato;
+                sightInterview3.picBackground.BackColor = Color.LightSalmon;
+                sightInterview3.Show();
             }
 
         }
@@ -319,6 +349,12 @@ namespace Login {
             else if (Globals.interview_page == 5) {
                 this.Hide();
                 InstanceRef5.Show();
+            } else if (Globals.interview_page == 6) {
+                this.Hide();
+                InstanceRef6.Show();
+            } else if (Globals.interview_page == 7) {
+                this.Hide();
+                InstanceRef7.Show();
             }
         }
 
@@ -335,12 +371,12 @@ namespace Login {
         /// Initial Images when user clicks on back button on second interview slide (when nextCounter === 0)
         /// </summary>
         private void interviewPage1() {
-            topLeftPB.Image = new Bitmap(@"..\..\resources\11169409_10207513025963219_4499665096783750703_n.jpg");
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\");
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\fireworks.jpg");
             topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\loud_voices.PNG");
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\household_ appliances.PNG");
-            bottomMidPB.Image = new Bitmap(@"..\..\resources\11169409_10207513025963219_4499665096783750703_n.jpg");
-            bottomRightPB.Image = new Bitmap(@"..\..\resources\11169409_10207513025963219_4499665096783750703_n.jpg");
+           // bottomMidPB.Image = new Bitmap(@"..\..\resources\");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\");
             updateLabelText("Other People Talking", " Fireworks", "Loud Voices",
                 "Household Appliances (e.g. blenders, vacuum)", "Vehicles (e.g. trucks, motorbikes)",
                 "Bathroom Appliances (e.g. hair dryers, hand dryers");
@@ -394,6 +430,42 @@ namespace Login {
             //bottomRightPB.Image = new Bitmap(@"../../resources/");
             updateLabelText("Humming of Whistling to Myself","Tapping Feet", "Tapping Fingers", "Clicken Pen",
                 "", "");
+        }
+
+        private void sightInterviewPage1() {
+            lblQuestion.Text = "Are there some things that you don't like to look at?";
+            topLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\Sunlight.jpg");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
+            topRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\Light and Shadow.jpg");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\Busy Patterns.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
+            updateLabelText("Sunlight", "Fluorescent Light", "Light and Shadow", "Busy Patters",
+                "Classroom Light", "");
+        }
+
+        private void sightInterviewPage2() {
+            lblQuestion.Text = "Are there some things you see that make it hard to concentrate?";
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
+           // topRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
+           // bottomLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
+            updateLabelText("Lots of things in a messy drawer", "People running around me", "Lots of things hanging up in the classroom", "",
+                "", "");
+        }
+
+        private void sightInterviewPage3() {
+            lblQuestion.Text = "Are there some things that you like to look at?";
+            topLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you like to look at_\Moving lights.jpg");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you don't like to look at_\");
+            topRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you like to look at_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you don't like to look at_\.jpg");
+            bottomMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you like to look at_\Spinning objects.jpg");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you don't like to look at_\");
+            updateLabelText("Moving Lights", "Things that sparkle", "Geometric Patterns", "Spinning Fans",
+                "Spinning Objects", "");
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -479,6 +551,18 @@ namespace Login {
         public Form InstanceRef5 {
             get { return m_InstanceRef5; }
             set { m_InstanceRef5 = value; }
+        }
+
+        private Form m_InstanceRef6 = null;
+        public Form InstanceRef6 {
+            get { return m_InstanceRef6; }
+            set { m_InstanceRef6 = value; }
+        }
+
+        private Form m_InstanceRef7 = null;
+        public Form InstanceRef7 {
+            get { return m_InstanceRef7; }
+            set { m_InstanceRef7 = value; }
         }
     }
 }
