@@ -60,6 +60,14 @@ namespace Login {
                 touchInterviewPage2();
             } else if (Globals.interview_page == 12) {
                 touchInterviewPage3();
+            } else if (Globals.interview_page == 13) {
+                smellInterviewPage1();
+            } else if (Globals.interview_page == 14) {
+                smellInterviewPage2();
+            } else if (Globals.interview_page == 15) {
+                tasteInterviewPage1();
+            } else if (Globals.interview_page == 16) {
+                tasteInterviewPage1p2();
             }
         }
 
@@ -332,6 +340,38 @@ namespace Login {
                 touchInterview3.picBackground.BackColor = Color.Yellow;
                 touchInterview3.panel1.BackColor = Color.LightYellow;
                 touchInterview3.Show();
+            } else if (Globals.interview_page == 13) {
+                this.Hide();
+                Interview smellInterview1 = new Interview();
+                smellInterview1.InstanceRef12 = this;
+                smellInterview1.Location = new Point(0, 0);
+                smellInterview1.picBackground.BackColor = Color.OliveDrab;
+                smellInterview1.panel1.BackColor = Color.PaleGreen;
+                smellInterview1.Show();
+            } else if (Globals.interview_page == 14) {
+                this.Hide();
+                Interview smellInterview2 = new Interview();
+                smellInterview2.InstanceRef13 = this;
+                smellInterview2.Location = new Point(0, 0);
+                smellInterview2.picBackground.BackColor = Color.OliveDrab;
+                smellInterview2.panel1.BackColor = Color.PaleGreen;
+                smellInterview2.Show();
+            } else if (Globals.interview_page == 15) {
+                this.Hide();
+                Interview tasteInterview1 = new Interview();
+                tasteInterview1.InstanceRef14 = this;
+                tasteInterview1.Location = new Point(0, 0);
+                tasteInterview1.picBackground.BackColor = Color.OliveDrab;
+                tasteInterview1.panel1.BackColor = Color.PaleGreen;
+                tasteInterview1.Show();
+            } else if (Globals.interview_page == 16) {
+                this.Hide();
+                Interview tasteInterview2 = new Interview();
+                tasteInterview2.InstanceRef15 = this;
+                tasteInterview2.Location = new Point(0, 0);
+                tasteInterview2.picBackground.BackColor = Color.OliveDrab;
+                tasteInterview2.panel1.BackColor = Color.PaleGreen;
+                tasteInterview2.Show();
             }
 
 
@@ -545,7 +585,7 @@ namespace Login {
             //topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\Geometric patterns.jpg");
             //bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\.jpg");
             //bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\Spinning objects.jpg");
-            bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there some ways that people touch you that you don't like_\Having a haircut.jpg");
+            bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\Having a haircut.jpg");
             updateLabelText("Being hugged or kissed", "Being crowded", "Being tapped on the shoulder", "Having sunscreen put on",
                 "Being bumped", "Having a haircut");
         }
@@ -567,7 +607,7 @@ namespace Login {
             //topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like to look at_\Moving lights.jpg");
             //topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you don't like to look at_\");
             //topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like to look at_\Geometric patterns.jpg");
-            bottomLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you like the feeling of_\Hugging people.jpg");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\Hugging people.jpg");
             //bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like to look at_\Spinning objects.jpg");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you don't like to look at_\");
             updateLabelText("Soft", "Rubbery", "Furry", "Hugging People",
@@ -575,9 +615,51 @@ namespace Login {
         }
 
         //TODO - Smells
+        private void smellInterviewPage1() {
+            lblQuestion.Text = "Are there some smells that you don't like?";
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\Moving lights.jpg");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some that you don't like_\Geometric patterns.jpg");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\Toilet smells.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\Spinning objects.jpg");
+            bottomRightPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\Body smells.jpg");
+            updateLabelText("Cooking smells", "Food smells", "Cleaning products",
+                "Toilet smells", "Perfumes", "Body Smells");
+        }
 
+        private void smellInterviewPage2() {
+            lblQuestion.Text = "Are there things that you like the smell?";
+            topLeftPB.Image = new Bitmap(@"..\..\resources\4. Smells\2. Are there some things that you like to smell_\Smelling foods.jpg");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some that you don't like_\");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some that you don't like_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some that you don't like_\Toilet Smells.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some that you don't like_\Spinning objects.jpg");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some that you don't like_\Body smells.jpg");
+            updateLabelText("Smelling foods", "Smelling plants", "Smelling perfume",
+                "Smelling soap", "Smelling people", "Body Smells");
+        }
         //TODO - Taste
+        private void tasteInterviewPage1() {
+            lblQuestion.Text = "Are there some food groups that you don't like eating?";
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Smelling foods.jpg");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Geometric patterns.jpg");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
+            bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
+            updateLabelText("Vegetables", "Fruit", "Meat", "Fish", "Eggs", "Dairy");
+        }
 
+        private void tasteInterviewPage1p2() {
+            lblQuestion.Text = "Are there some food groups that you don't like eating?";
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Smelling foods.jpg");
+            topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Pasta.jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
+            updateLabelText("Bread", "Pasta", "", "", "", "");
+        }
 
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
