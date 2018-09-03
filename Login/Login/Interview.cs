@@ -57,7 +57,9 @@ namespace Login {
             } else if (Globals.interview_page == 10) {
                 touchInterviewPage1p2();
             } else if (Globals.interview_page == 11) {
-                touchInterviewPage1p2();
+                touchInterviewPage2();
+            } else if (Globals.interview_page == 12) {
+                touchInterviewPage3();
             }
         }
 
@@ -322,6 +324,14 @@ namespace Login {
                 touchInterview2.picBackground.BackColor = Color.Yellow;
                 touchInterview2.panel1.BackColor = Color.LightYellow;
                 touchInterview2.Show();
+            } else if (Globals.interview_page == 12) {
+                this.Hide();
+                Interview touchInterview3 = new Interview();
+                touchInterview3.InstanceRef11 = this;
+                touchInterview3.Location = new Point(0, 0);
+                touchInterview3.picBackground.BackColor = Color.Yellow;
+                touchInterview3.panel1.BackColor = Color.LightYellow;
+                touchInterview3.Show();
             }
 
 
@@ -373,6 +383,21 @@ namespace Login {
             } else if (Globals.interview_page == 11) {
                 this.Hide();
                 InstanceRef11.Show();
+            } else if (Globals.interview_page == 12) {
+                this.Hide();
+                InstanceRef12.Show();
+            } else if (Globals.interview_page == 13) {
+                this.Hide();
+                InstanceRef13.Show();
+            } else if (Globals.interview_page == 14) {
+                this.Hide();
+                InstanceRef14.Show();
+            } else if (Globals.interview_page == 15) {
+                this.Hide();
+                InstanceRef15.Show();
+            } else if (Globals.interview_page == 16) {
+                this.Hide();
+                InstanceRef16.Show();
             }
         }
 
@@ -515,11 +540,11 @@ namespace Login {
 
         private void touchInterviewPage2() {
             lblQuestion.Text = "Are there some ways that people touch you that you don't like?";
-            //topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there some ways that people touch you that you don't like_\Moving lights.jpg");
-            topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there some ways that people touch you that you don't like_\Being crowded.jpg");
-            //topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there some ways that people touch you that you don't like_\Geometric patterns.jpg");
-            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there some ways that people touch you that you don't like_\.jpg");
-            //bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there some ways that people touch you that you don't like_\Spinning objects.jpg");
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\Moving lights.jpg");
+            topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\Being crowded.jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\Spinning objects.jpg");
             bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there some ways that people touch you that you don't like_\Having a haircut.jpg");
             updateLabelText("Being hugged or kissed", "Being crowded", "Being tapped on the shoulder", "Having sunscreen put on",
                 "Being bumped", "Having a haircut");
@@ -527,28 +552,31 @@ namespace Login {
 
         private void touchInterviewPage2p2() {
             lblQuestion.Text = "Are there some ways that people touch you that you don't like?";
-            //topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Doctor touching me.jpg");
-            //topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Dentist touching me.jpg");
-            //topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Geometric patterns.jpg");
-            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\.jpg");
-            //bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Spinning objects.jpg");
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\");
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there things that you don't like the feeling of_\Doctor touching me.jpg");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there things that you don't like the feeling of_\Dentist touching me.jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there things that you don't like the feeling of_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there things that you don't like the feeling of_\.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there things that you don't like the feeling of_\Spinning objects.jpg");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there things that you don't like the feeling of_\");
             updateLabelText("Doctor touching me", "Dentist touch me", "", "",
                 "", "");
         }
 
-        //TODO
         private void touchInterviewPage3() {
             lblQuestion.Text = "Are there some things that you like the feeling of?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like to look at_\Moving lights.jpg");
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like to look at_\Moving lights.jpg");
             //topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you don't like to look at_\");
-            topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like to look at_\Geometric patterns.jpg");
-            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you don't like to look at_\.jpg");
-            bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like to look at_\Spinning objects.jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like to look at_\Geometric patterns.jpg");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you like the feeling of_\Hugging people.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like to look at_\Spinning objects.jpg");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you don't like to look at_\");
-            updateLabelText("Moving Lights", "Things that sparkle", "Geometric Patterns", "Spinning Fans",
-                "Spinning Objects", "");
+            updateLabelText("Soft", "Rubbery", "Furry", "Hugging People",
+                "Touching people", "Being squashed with a pillow");
         }
+
+        //TODO - Smells
+
+        //TODO - Taste
 
 
 
@@ -671,6 +699,36 @@ namespace Login {
         public Form InstanceRef11 {
             get { return m_InstanceRef11; }
             set { m_InstanceRef11 = value; }
+        }
+
+        private Form m_InstanceRef12 = null;
+        public Form InstanceRef12 {
+            get { return m_InstanceRef12; }
+            set { m_InstanceRef12 = value; }
+        }
+
+        private Form m_InstanceRef13 = null;
+        public Form InstanceRef13 {
+            get { return m_InstanceRef13; }
+            set { m_InstanceRef13 = value; }
+        }
+
+        private Form m_InstanceRef14 = null;
+        public Form InstanceRef14 {
+            get { return m_InstanceRef14; }
+            set { m_InstanceRef14 = value; }
+        }
+
+        private Form m_InstanceRef15 = null;
+        public Form InstanceRef15 {
+            get { return m_InstanceRef15; }
+            set { m_InstanceRef15 = value; }
+        }
+
+        private Form m_InstanceRef16 = null;
+        public Form InstanceRef16 {
+            get { return m_InstanceRef16; }
+            set { m_InstanceRef16 = value; }
         }
     }
 }
