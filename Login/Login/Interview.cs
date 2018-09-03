@@ -52,6 +52,12 @@ namespace Login {
                 sightInterviewPage2();
             } else if (Globals.interview_page == 8) {
                 sightInterviewPage3();
+            } else if (Globals.interview_page == 9) {
+                touchInterviewPage1();
+            } else if (Globals.interview_page == 10) {
+                touchInterviewPage1p2();
+            } else if (Globals.interview_page == 11) {
+                touchInterviewPage1p2();
             }
         }
 
@@ -282,7 +288,7 @@ namespace Login {
                 sightInterview2.InstanceRef6 = this;
                 sightInterview2.Location = new Point(0, 0);
                 sightInterview2.picBackground.BackColor = Color.Tomato;
-                sightInterview2.picBackground.BackColor = Color.LightSalmon;
+                sightInterview2.panel1.BackColor = Color.LightSalmon;
                 sightInterview2.Show();
             } else if (Globals.interview_page == 8) {
                 this.Hide();
@@ -290,9 +296,35 @@ namespace Login {
                 sightInterview3.InstanceRef7 = this;
                 sightInterview3.Location = new Point(0, 0);
                 sightInterview3.picBackground.BackColor = Color.Tomato;
-                sightInterview3.picBackground.BackColor = Color.LightSalmon;
+                sightInterview3.panel1.BackColor = Color.LightSalmon;
                 sightInterview3.Show();
+            } else if (Globals.interview_page == 9) {
+                this.Hide();
+                Interview touchInterview1 = new Interview();
+                touchInterview1.InstanceRef8 = this;
+                touchInterview1.Location = new Point(0, 0);
+                touchInterview1.picBackground.BackColor = Color.Yellow;
+                touchInterview1.panel1.BackColor = Color.LightYellow;
+                touchInterview1.Show();
+            } else if (Globals.interview_page == 10) {
+                this.Hide();
+                Interview touchInterview1p2 = new Interview();
+                touchInterview1p2.InstanceRef9 = this;
+                touchInterview1p2.Location = new Point(0, 0);
+                touchInterview1p2.picBackground.BackColor = Color.Yellow;
+                touchInterview1p2.panel1.BackColor = Color.LightYellow;
+                touchInterview1p2.Show();
+            } else if (Globals.interview_page == 11) {
+                this.Hide();
+                Interview touchInterview2 = new Interview();
+                touchInterview2.InstanceRef10 = this;
+                touchInterview2.Location = new Point(0, 0);
+                touchInterview2.picBackground.BackColor = Color.Yellow;
+                touchInterview2.panel1.BackColor = Color.LightYellow;
+                touchInterview2.Show();
             }
+
+
 
 
         }
@@ -418,6 +450,8 @@ namespace Login {
                 "", "");
         }
 
+        //Sight Panels
+
         private void sightInterviewPage1() {
             lblQuestion.Text = "Are there some things that you don't like to look at?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\Sunlight.jpg");
@@ -434,8 +468,8 @@ namespace Login {
             lblQuestion.Text = "Are there some things you see that make it hard to concentrate?";
             //topLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
             //topMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
-           // topRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
-           // bottomLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
+            // topRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
+            // bottomLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
             //bottomMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
             updateLabelText("Lots of things in a messy drawer", "People running around me", "Lots of things hanging up in the classroom", "",
@@ -455,7 +489,66 @@ namespace Login {
         }
 
         //Touch Panels
+        private void touchInterviewPage1() {
+            lblQuestion.Text = "Are there some things that you don't like the feeling of?";
+            topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Sandy.jpg");
+            topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Sticky.jpg");
+            topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Grassy.jpg");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Wool clothes.jpg");
+            bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Tight clothes.jpg");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\");
+            updateLabelText("Sandy", "Sticky", "Grassy", "Wool Clothes",
+                "Tight Clothes", "Stiff Clothes");
+        }
 
+        private void touchInterviewPage1p2() {
+            lblQuestion.Text = "Are there some things that you don't like the feeling of?";
+            topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Shoes.jpg");
+            topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Splashing Water.jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Spinning objects.jpg");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\");
+            updateLabelText("Shoes", "Splashing Water e.g. rain, shower, pool", "", "",
+                "", "");
+        }
+
+        private void touchInterviewPage2() {
+            lblQuestion.Text = "Are there some ways that people touch you that you don't like?";
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there some ways that people touch you that you don't like_\Moving lights.jpg");
+            topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there some ways that people touch you that you don't like_\Being crowded.jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there some ways that people touch you that you don't like_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there some ways that people touch you that you don't like_\.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there some ways that people touch you that you don't like_\Spinning objects.jpg");
+            bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there some ways that people touch you that you don't like_\Having a haircut.jpg");
+            updateLabelText("Being hugged or kissed", "Being crowded", "Being tapped on the shoulder", "Having sunscreen put on",
+                "Being bumped", "Having a haircut");
+        }
+
+        private void touchInterviewPage2p2() {
+            lblQuestion.Text = "Are there some ways that people touch you that you don't like?";
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Doctor touching me.jpg");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Dentist touching me.jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Spinning objects.jpg");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\");
+            updateLabelText("Doctor touching me", "Dentist touch me", "", "",
+                "", "");
+        }
+
+        //TODO
+        private void touchInterviewPage3() {
+            lblQuestion.Text = "Are there some things that you like the feeling of?";
+            topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like to look at_\Moving lights.jpg");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you don't like to look at_\");
+            topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like to look at_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you don't like to look at_\.jpg");
+            bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like to look at_\Spinning objects.jpg");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you don't like to look at_\");
+            updateLabelText("Moving Lights", "Things that sparkle", "Geometric Patterns", "Spinning Fans",
+                "Spinning Objects", "");
+        }
 
 
 
