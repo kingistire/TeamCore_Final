@@ -51,6 +51,7 @@ namespace Login {
                 cmd.Parameters.AddWithValue("@lastName", tbFname.Text);
                 cmd.Parameters.AddWithValue("@age", tbPass1.Text);
                 cmd.Parameters.AddWithValue("@email", tbEmail.Text);
+                //cmd.Parameters.AddWithValue("@gender", tbGender.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("New user has been added successfully.");
                 this.Close();

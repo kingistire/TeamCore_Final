@@ -47,7 +47,7 @@ namespace Login {
             con = new SqlConnection(@"Data Source =(LocalDB)\MSSQLLocalDB;" + 
                 @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True");
             con.Open();
-            cmd = new SqlCommand("INSERT INTO userInformation (firstName, lastName, gender, age, phone, email) VALUES (@firstName, @lastName, @gender, @age, @phone, @email)", con);
+            cmd = new SqlCommand("INSERT INTO UserInformation (firstName, lastName, gender, age, phone, email) VALUES (@firstName, @lastName, @gender, @age, @phone, @email)", con);
             cmd.Parameters.AddWithValue("@firstName", tbFname.Text.Trim());
             cmd.Parameters.AddWithValue("@lastName", tbLname.Text.Trim());
             cmd.Parameters.AddWithValue("@gender", genderSelection);
