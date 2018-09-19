@@ -57,6 +57,7 @@ namespace Login {
             cmd.ExecuteNonQuery();
             MessageBox.Show("New user has been added successfully.");
             this.Close();
+            con.Close();
         }
     }
     }

@@ -17,5 +17,14 @@ namespace Login {
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e) {
 
         }
+
+        public string LabelText {
+            get {
+                return this.testLabel.Text;
+            }
+            set {
+                this.testLabel.Text = value;
+            }
+        }
     }
 }
