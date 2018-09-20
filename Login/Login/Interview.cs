@@ -72,10 +72,10 @@ namespace Login {
         }
 
         //Pen variables to draw
-        private Pen aLittle = new Pen(Color.Blue, 5);
-        private Pen aLot = new Pen(Color.Red, 10);
-
-        //Extra variables
+        private Pen aLittle = new Pen(Color.Black, 15);
+        private Pen aLot = new Pen(Color.Black, 30);
+          //Extra variables
+          //Extra variables
         private int nextCounter = 0;
 
         /// <summary>
@@ -121,7 +121,7 @@ namespace Login {
         }
 
         //Code from here will update the pictureboxes when the user has clicked on a button
-/*        private void topLeftPB_Paint(object sender, PaintEventArgs e) {
+       private void topLeftPB_Paint(object sender, PaintEventArgs e) {
             //DeterminePenSizeDrawing(sender, topLeftPB, e);
             determineDrawing(e, 0, 0, topLeftPB.Width, topRightPB.Height, 0);
         }
@@ -144,7 +144,7 @@ namespace Login {
 
         private void bottomRightPB_Paint(object sender, PaintEventArgs e) {
             determineDrawing(e, 0, 0, bottomRightPB.Width, bottomRightPB.Height, 5);
-        } */
+        }
 
         //I would simply create an array of size 6, and when they select 'a little' for picture1 (top left)
         //change the first value in the array to 1, 'a lot' would be set to 2.
@@ -157,8 +157,7 @@ namespace Login {
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         private void topLeftPBALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            topLeftPB_Overlay.Image = new Bitmap("../../resources/ALittleCircle.png");
-            //topLeftPB.Invalidate();
+            topLeftPB.Invalidate();
             page1Selections[0] = 1;
             //this is just to show the array being updated -- can remove after testing
             label1.Text = string.Join(", ", page1Selections);
@@ -169,8 +168,7 @@ namespace Login {
 
         private void topLeftPBALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            topLeftPB_Overlay.Image = new Bitmap("../../resources/ALotCircle.png");
-            //topLeftPB.Invalidate();
+            topLeftPB.Invalidate();
             page1Selections[0] = 2;
             label1.Text = string.Join(", ", page1Selections);
             summary.LabelText = "Top Left A Lot";
@@ -178,80 +176,70 @@ namespace Login {
 
         private void topMidALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            topMidPB_Overlay.Image = new Bitmap("../../resources/ALittleCircle.png");
-            //topMidPB.Invalidate();
+            topMidPB.Invalidate();
             page1Selections[1] = 1;
             label1.Text = string.Join(", ", page1Selections);
         }
 
         private void topMidALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            topMidPB_Overlay.Image = new Bitmap("../../resources/ALotCircle.png");
-            //topMidPB.Invalidate();
+            topMidPB.Invalidate();
             page1Selections[1] = 2;
             label1.Text = string.Join(", ", page1Selections);
         }
 
         private void topRightALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            topRightPB_Overlay.Image = new Bitmap("../../resources/ALittleCircle.png");
-            //topRightPB.Invalidate();
+            topRightPB.Invalidate();
             page1Selections[2] = 1;
             label1.Text = string.Join(", ", page1Selections);
         }
 
         private void topRightPBALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picturebox
-            topRightPB_Overlay.Image = new Bitmap("../../resources/ALotCircle.png");
-            //topRightPB.Invalidate();
+            topRightPB.Invalidate();
             page1Selections[2] = 2;
             label1.Text = string.Join(", ", page1Selections);
         }
 
         private void bottomLeftALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            bottomLeftPB_Overlay.Image = new Bitmap("../../resources/ALittleCircle.png");
-            //bottomLeftPB.Invalidate();
+            bottomLeftPB.Invalidate();
             page1Selections[3] = 1;
             label1.Text = string.Join(", ", page1Selections);
         }
 
         private void bottomLeftALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            bottomLeftPB_Overlay.Image = new Bitmap("../../resources/ALotCircle.png");
-            //bottomLeftPB.Invalidate();
+            bottomLeftPB.Invalidate();
             page1Selections[3] = 2;
             label1.Text = string.Join(", ", page1Selections);
         }
 
         private void bottomMidALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            bottomMidPB_Overlay.Image = new Bitmap("../../resources/ALittleCircle.png");
-            //bottomMidPB.Invalidate();
+            bottomMidPB.Invalidate();
             page1Selections[4] = 1;
             label1.Text = string.Join(", ", page1Selections);
         }
 
         private void bottomMidALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            bottomMidPB_Overlay.Image = new Bitmap("../../resources/ALotCircle.png");
-            //bottomMidPB.Invalidate();
+            bottomMidPB.Invalidate();
             page1Selections[4] = 2;
             label1.Text = string.Join(", ", page1Selections);
         }
 
         private void bottomRightALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            bottomRightPB_Overlay.Image = new Bitmap("../../resources/ALittleCircle.png");
-            //bottomRightPB.Invalidate();
+            bottomRightPB.Invalidate();
             page1Selections[5] = 1;
             label1.Text = string.Join(", ", page1Selections);
         }
 
         private void bottomRightALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            bottomRightPB_Overlay.Image = new Bitmap("../../resources/ALotCircle.png");
-            //bottomRightPB.Invalidate();
+            bottomRightPB.Invalidate();
             page1Selections[5] = 2;
             label1.Text = string.Join(", ", page1Selections);
         }
@@ -828,35 +816,6 @@ namespace Login {
         public Form InstanceRef16 {
             get { return m_InstanceRef16; }
             set { m_InstanceRef16 = value; }
-        }
-
-        private void Interview_Load(object sender, EventArgs e) {
-            topLeftPB_Overlay.BackColor = Color.Transparent;
-            topLeftPB_Overlay.Controls.Add(topLeftPB);
-            //topLeftPB_Overlay.Location = new Point(0,0);
-
-            topRightPB_Overlay.BackColor = Color.Transparent;
-            topRightPB_Overlay.Parent = topRightPB;
-            //topRightPB_Overlay.Location = new Point(0, 0);
-
-            topMidPB_Overlay.BackColor = Color.Transparent;
-            topMidPB_Overlay.Parent = topMidPB;
-            //topMidPB_Overlay.Location = new Point(0, 0);
-
-
-            bottomLeftPB_Overlay.BackColor = Color.Transparent;
-            bottomLeftPB_Overlay.Parent = bottomLeftPB;
-            //bottomLeftPB_Overlay.Location = new Point(0, 0);
-
-
-            bottomRightPB_Overlay.BackColor = Color.Transparent;
-            bottomRightPB_Overlay.Parent = bottomRightPB;
-           // bottomRightPB_Overlay.Location = new Point(0, 0);
-
-
-            bottomMidPB_Overlay.BackColor = Color.Transparent;
-            bottomMidPB_Overlay.Controls.Add(bottomMidPB);
-            bottomLeftPB_Overlay.Location = new Point(bottomMidPB.Location.X, bottomMidPB.Location.Y);
         }
     }
 }
