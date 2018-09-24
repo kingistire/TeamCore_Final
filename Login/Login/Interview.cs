@@ -15,7 +15,6 @@ namespace Login {
         public Interview() {
             InitializeComponent();
             this.Location = new Point(0, 0);
-            //label2.Text = Globals.interview_page.ToString();
             //Dynamically create the circular picture boxes
             createCirclePB(bottomLeftPB);
             createCirclePB(bottomRightPB);
@@ -68,15 +67,35 @@ namespace Login {
                 tasteInterviewPage1();
             } else if (Globals.interview_page == 16) {
                 tasteInterviewPage1p2();
+            } else if (Globals.interview_page == 17) {
+                tasteInterviewPage2();
+            } else if (Globals.interview_page == 18) {
+                tasteInterviewPage3();
+            } else if (Globals.interview_page == 19) {
+                tasteInterviewPage4();
+            } else if (Globals.interview_page == 20) {
+                mvmtInterviewPage1();
+            }
+            else if (Globals.interview_page == 21) {
+                mvmtInterviewPage2();
+            }
+            else if (Globals.interview_page == 22) {
+                mvmtInterviewPage3();
+            }
+            else if (Globals.interview_page == 23) {
+                mvmtInterviewPage4();
+            }
+            else if (Globals.interview_page == 24) {
+                environmentInterviewPage1();
+            }
+            else if (Globals.interview_page == 25) {
+                otherInterviewPage1();
             }
         }
 
         //Pen variables to draw
         private Pen aLittle = new Pen(Color.Black, 15);
         private Pen aLot = new Pen(Color.Black, 30);
-          //Extra variables
-          //Extra variables
-        private int nextCounter = 0;
 
         /// <summary>
         /// Dynamically create circular pictureboxes
@@ -125,23 +144,18 @@ namespace Login {
             //DeterminePenSizeDrawing(sender, topLeftPB, e);
             determineDrawing(e, 0, 0, topLeftPB.Width, topRightPB.Height, 0);
         }
-
         private void topMidPB_Paint(object sender, PaintEventArgs e) {
             determineDrawing(e, 0, 0, topMidPB.Width, topMidPB.Height, 1);
         }
-
         private void topRightPB_Paint(object sender, PaintEventArgs e) {
             determineDrawing(e, 0, 0, topRightPB.Width, topRightPB.Height, 2);
         }
-
         private void bottomLeftPB_Paint(object sender, PaintEventArgs e) {
             determineDrawing(e, 0, 0, bottomLeftPB.Width, bottomLeftPB.Height, 3);
         }
-
         private void bottomMidPB_Paint(object sender, PaintEventArgs e) {
             determineDrawing(e, 0, 0, bottomMidPB.Width, bottomMidPB.Height, 4);
         }
-
         private void bottomRightPB_Paint(object sender, PaintEventArgs e) {
             determineDrawing(e, 0, 0, bottomRightPB.Width, bottomRightPB.Height, 5);
         }
@@ -151,7 +165,7 @@ namespace Login {
         //if they make no selection it remains as 0
         int[] page1Selections = new int[6] {0,0,0,0,0,0};
         //Instaniate new summary objects
-        Summary summary = new Summary();
+        //Summary summary = new Summary();
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// BUTTON CLICKS FOR A LITT AND A LOT ////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -162,81 +176,70 @@ namespace Login {
             //this is just to show the array being updated -- can remove after testing
             label1.Text = string.Join(", ", page1Selections);
             //Update label
-            summary.LabelText = "Top Left A Little";
-            summary.Show();
+            //summary.LabelText = "Top Left A Little";
+            //summary.Show();
         }
-
         private void topLeftPBALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topLeftPB.Invalidate();
             page1Selections[0] = 2;
             label1.Text = string.Join(", ", page1Selections);
-            summary.LabelText = "Top Left A Lot";
+            //summary.LabelText = "Top Left A Lot";
         }
-
         private void topMidALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topMidPB.Invalidate();
             page1Selections[1] = 1;
             label1.Text = string.Join(", ", page1Selections);
         }
-
         private void topMidALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topMidPB.Invalidate();
             page1Selections[1] = 2;
             label1.Text = string.Join(", ", page1Selections);
         }
-
         private void topRightALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topRightPB.Invalidate();
             page1Selections[2] = 1;
             label1.Text = string.Join(", ", page1Selections);
         }
-
         private void topRightPBALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picturebox
             topRightPB.Invalidate();
             page1Selections[2] = 2;
             label1.Text = string.Join(", ", page1Selections);
         }
-
         private void bottomLeftALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
             page1Selections[3] = 1;
             label1.Text = string.Join(", ", page1Selections);
         }
-
         private void bottomLeftALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
             page1Selections[3] = 2;
             label1.Text = string.Join(", ", page1Selections);
         }
-
         private void bottomMidALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomMidPB.Invalidate();
             page1Selections[4] = 1;
             label1.Text = string.Join(", ", page1Selections);
         }
-
         private void bottomMidALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomMidPB.Invalidate();
             page1Selections[4] = 2;
             label1.Text = string.Join(", ", page1Selections);
         }
-
         private void bottomRightALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomRightPB.Invalidate();
             page1Selections[5] = 1;
             label1.Text = string.Join(", ", page1Selections);
         }
-
         private void bottomRightALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomRightPB.Invalidate();
@@ -247,13 +250,14 @@ namespace Login {
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// CHANGING INTERVIEW PAGE FUNCATIONALITY ////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
         /// <summary>
         /// When user clicks on the initial next button
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnNext1_Click_1(object sender, EventArgs e) {
+            System.Drawing.Color tasteHeader = System.Drawing.ColorTranslator.FromHtml("#C2B4E2");
+            System.Drawing.Color tasteBg = System.Drawing.ColorTranslator.FromHtml("#E6E6FA");
             //appends label to file on a new line
             File.AppendAllText(@"c:\test\test.txt", label1.Text + Environment.NewLine);
             Globals.interview_page++;
@@ -269,6 +273,9 @@ namespace Login {
                     interviewForm2.Show();
                 }
             }
+            //-------------
+            //SOUND SECTION
+            //-------------
             else if (Globals.interview_page == 3) {
                 this.Hide();
                 Interview interviewForm3 = new Interview();
@@ -289,99 +296,260 @@ namespace Login {
                 interviewForm5.InstanceRef4 = this;
                 interviewForm5.Location = new Point(0, 0);
                 interviewForm5.Show();
-            } else if (Globals.interview_page == 6) {
+            }
+            //-------------
+            //SIGHT SECTION
+            //-------------
+            else if (Globals.interview_page == 6) {
                 this.Hide();
                 Interview sightInterview1 = new Interview();
                 sightInterview1.InstanceRef5 = this;
                 sightInterview1.Location = new Point(0, 0);
-                sightInterview1.picBackground.BackColor = Color.Tomato;
-                sightInterview1.panel1.BackColor = Color.LightSalmon;
+                sightInterview1.picBackground.BackColor = Color.SandyBrown;
+                sightInterview1.lblQuestion.BackColor = Color.SandyBrown;
+                sightInterview1.label3.BackColor = Color.SandyBrown;
+                sightInterview1.label5.BackColor = Color.SandyBrown;
+                sightInterview1.panel1.BackColor = Color.Bisque;      
                 sightInterview1.Show();
             } else if (Globals.interview_page == 7) {
                 this.Hide();
                 Interview sightInterview2 = new Interview();
                 sightInterview2.InstanceRef6 = this;
                 sightInterview2.Location = new Point(0, 0);
-                sightInterview2.picBackground.BackColor = Color.Tomato;
-                sightInterview2.panel1.BackColor = Color.LightSalmon;
+                sightInterview2.picBackground.BackColor = Color.SandyBrown;
+                sightInterview2.label3.BackColor = Color.SandyBrown;
+                sightInterview2.label5.BackColor = Color.SandyBrown;
+                sightInterview2.lblQuestion.BackColor = Color.SandyBrown;
+                sightInterview2.panel1.BackColor = Color.Bisque;
                 sightInterview2.Show();
             } else if (Globals.interview_page == 8) {
                 this.Hide();
                 Interview sightInterview3 = new Interview();
                 sightInterview3.InstanceRef7 = this;
                 sightInterview3.Location = new Point(0, 0);
-                sightInterview3.picBackground.BackColor = Color.Tomato;
-                sightInterview3.panel1.BackColor = Color.LightSalmon;
+                sightInterview3.picBackground.BackColor = Color.SandyBrown;
+                sightInterview3.lblQuestion.BackColor = Color.SandyBrown;
+                sightInterview3.label3.BackColor = Color.SandyBrown;
+                sightInterview3.label5.BackColor = Color.SandyBrown;
+                sightInterview3.panel1.BackColor = Color.Bisque;
                 sightInterview3.Show();
-            } else if (Globals.interview_page == 9) {
+            }
+            //-------------
+            //TOUCH SECTION
+            //-------------
+            else if (Globals.interview_page == 9) {
                 this.Hide();
                 Interview touchInterview1 = new Interview();
                 touchInterview1.InstanceRef8 = this;
                 touchInterview1.Location = new Point(0, 0);
-                touchInterview1.picBackground.BackColor = Color.Yellow;
+                touchInterview1.picBackground.BackColor = Color.FromArgb(255, 255, 128);
+                touchInterview1.lblQuestion.BackColor = Color.FromArgb(255, 255, 128);
+                touchInterview1.label3.BackColor = Color.FromArgb(255, 255, 128);
+                touchInterview1.label5.BackColor = Color.FromArgb(255, 255, 128);
                 touchInterview1.panel1.BackColor = Color.LightYellow;
                 touchInterview1.Show();
             } else if (Globals.interview_page == 10) {
                 this.Hide();
-                Interview touchInterview1p2 = new Interview();
-                touchInterview1p2.InstanceRef9 = this;
-                touchInterview1p2.Location = new Point(0, 0);
-                touchInterview1p2.picBackground.BackColor = Color.Yellow;
-                touchInterview1p2.panel1.BackColor = Color.LightYellow;
-                touchInterview1p2.Show();
-            } else if (Globals.interview_page == 11) {
-                this.Hide();
                 Interview touchInterview2 = new Interview();
-                touchInterview2.InstanceRef10 = this;
+                touchInterview2.InstanceRef9 = this;
                 touchInterview2.Location = new Point(0, 0);
-                touchInterview2.picBackground.BackColor = Color.Yellow;
+                touchInterview2.picBackground.BackColor = Color.FromArgb(255, 255, 128);
+                touchInterview2.lblQuestion.BackColor = Color.FromArgb(255, 255, 128);
+                touchInterview2.label3.BackColor = Color.FromArgb(255, 255, 128);
+                touchInterview2.label5.BackColor = Color.FromArgb(255, 255, 128);
                 touchInterview2.panel1.BackColor = Color.LightYellow;
                 touchInterview2.Show();
-            } else if (Globals.interview_page == 12) {
+            } else if (Globals.interview_page == 11) {
                 this.Hide();
                 Interview touchInterview3 = new Interview();
-                touchInterview3.InstanceRef11 = this;
+                touchInterview3.InstanceRef10 = this;
                 touchInterview3.Location = new Point(0, 0);
                 touchInterview3.picBackground.BackColor = Color.Yellow;
+                touchInterview3.picBackground.BackColor = Color.FromArgb(255, 255, 128);
+                touchInterview3.lblQuestion.BackColor = Color.FromArgb(255, 255, 128);
+                touchInterview3.label3.BackColor = Color.FromArgb(255, 255, 128);
+                touchInterview3.label5.BackColor = Color.FromArgb(255, 255, 128);
                 touchInterview3.panel1.BackColor = Color.LightYellow;
                 touchInterview3.Show();
-            } else if (Globals.interview_page == 13) {
+            } else if (Globals.interview_page == 12) {
+                this.Hide();
+                Interview touchInterview4 = new Interview();
+                touchInterview4.InstanceRef11 = this;
+                touchInterview4.Location = new Point(0, 0);
+                touchInterview4.picBackground.BackColor = Color.Yellow;
+                touchInterview4.picBackground.BackColor = Color.FromArgb(255, 255, 128);
+                touchInterview4.lblQuestion.BackColor = Color.FromArgb(255, 255, 128);
+                touchInterview4.label3.BackColor = Color.FromArgb(255, 255, 128);
+                touchInterview4.label5.BackColor = Color.FromArgb(255, 255, 128);
+                touchInterview4.panel1.BackColor = Color.LightYellow;
+                touchInterview4.Show();
+            }
+            //-------------
+            //SMELL SECTION
+            //-------------
+            else if (Globals.interview_page == 13) {
                 this.Hide();
                 Interview smellInterview1 = new Interview();
                 smellInterview1.InstanceRef12 = this;
                 smellInterview1.Location = new Point(0, 0);
-                smellInterview1.picBackground.BackColor = Color.OliveDrab;
-                smellInterview1.panel1.BackColor = Color.PaleGreen;
+                smellInterview1.picBackground.BackColor = Color.FromArgb(143, 188, 139);
+                smellInterview1.lblQuestion.BackColor = Color.FromArgb(143, 188, 139);
+                smellInterview1.label3.BackColor = Color.FromArgb(143, 188, 139);
+                smellInterview1.label5.BackColor = Color.FromArgb(143, 188, 139);
+                smellInterview1.panel1.BackColor = Color.Honeydew;
                 smellInterview1.Show();
             } else if (Globals.interview_page == 14) {
                 this.Hide();
                 Interview smellInterview2 = new Interview();
                 smellInterview2.InstanceRef13 = this;
                 smellInterview2.Location = new Point(0, 0);
-                smellInterview2.picBackground.BackColor = Color.OliveDrab;
-                smellInterview2.panel1.BackColor = Color.PaleGreen;
+                smellInterview2.picBackground.BackColor = Color.FromArgb(143, 188, 139);
+                smellInterview2.lblQuestion.BackColor = Color.FromArgb(143, 188, 139);
+                smellInterview2.label3.BackColor = Color.FromArgb(143, 188, 139);
+                smellInterview2.label5.BackColor = Color.FromArgb(143, 188, 139);
+                smellInterview2.panel1.BackColor = Color.Honeydew;
                 smellInterview2.Show();
-            } else if (Globals.interview_page == 15) {
+            }
+            //-------------
+            //TASTE SECTION
+            //-------------
+            else if (Globals.interview_page == 15) {               
                 this.Hide();
                 Interview tasteInterview1 = new Interview();
                 tasteInterview1.InstanceRef14 = this;
                 tasteInterview1.Location = new Point(0, 0);
-                tasteInterview1.picBackground.BackColor = Color.OliveDrab;
-                tasteInterview1.panel1.BackColor = Color.PaleGreen;
+                tasteInterview1.picBackground.BackColor = tasteHeader;
+                tasteInterview1.panel1.BackColor = tasteBg;
+                tasteInterview1.lblQuestion.BackColor = tasteHeader;
+                tasteInterview1.label3.BackColor = tasteHeader;
+                tasteInterview1.label5.BackColor = tasteHeader;
                 tasteInterview1.Show();
             } else if (Globals.interview_page == 16) {
                 this.Hide();
-                Interview tasteInterview2 = new Interview();
-                tasteInterview2.InstanceRef15 = this;
-                tasteInterview2.Location = new Point(0, 0);
-                tasteInterview2.picBackground.BackColor = Color.OliveDrab;
-                tasteInterview2.panel1.BackColor = Color.PaleGreen;
-                tasteInterview2.Show();
+                Interview tasteInterview1p2 = new Interview();
+                tasteInterview1p2.InstanceRef15 = this;
+                tasteInterview1p2.Location = new Point(0, 0);
+                tasteInterview1p2.picBackground.BackColor = tasteHeader;
+                tasteInterview1p2.panel1.BackColor = tasteBg;
+                tasteInterview1p2.lblQuestion.BackColor = tasteHeader;
+                tasteInterview1p2.label3.BackColor = tasteHeader;
+                tasteInterview1p2.label5.BackColor = tasteHeader;
+                tasteInterview1p2.Show();
             }
-
-
-
-
+            else if (Globals.interview_page == 17) {
+                    this.Hide();
+                    Interview tasteInterview2 = new Interview();
+                    tasteInterview2.InstanceRef17 = this;
+                    tasteInterview2.Location = new Point(0, 0);
+                    tasteInterview2.picBackground.BackColor = tasteHeader;
+                    tasteInterview2.panel1.BackColor = tasteBg;
+                    tasteInterview2.lblQuestion.BackColor = tasteHeader;
+                    tasteInterview2.label3.BackColor = tasteHeader;
+                    tasteInterview2.label5.BackColor = tasteHeader;
+                    tasteInterview2.Show();
+            }
+            else if (Globals.interview_page == 18) {
+                this.Hide();
+                Interview tasteInterview3 = new Interview();
+                tasteInterview3.InstanceRef18 = this;
+                tasteInterview3.Location = new Point(0, 0);
+                tasteInterview3.picBackground.BackColor = tasteHeader;
+                tasteInterview3.panel1.BackColor = tasteBg;
+                tasteInterview3.lblQuestion.BackColor = tasteHeader;
+                tasteInterview3.label3.BackColor = tasteHeader;
+                tasteInterview3.label5.BackColor = tasteHeader;
+                tasteInterview3.Show();
+            }
+            else if (Globals.interview_page == 19) {
+                this.Hide();
+                Interview tasteInterview4 = new Interview();
+                tasteInterview4.InstanceRef19 = this;
+                tasteInterview4.Location = new Point(0, 0);
+                tasteInterview4.picBackground.BackColor = tasteHeader;
+                tasteInterview4.panel1.BackColor = tasteBg;
+                tasteInterview4.lblQuestion.BackColor = tasteHeader;
+                tasteInterview4.label3.BackColor = tasteHeader;
+                tasteInterview4.label5.BackColor = tasteHeader;
+                tasteInterview4.Show();
+            }
+            else if (Globals.interview_page == 20) {
+                this.Hide();
+                Interview mvmtInterview1 = new Interview();
+                mvmtInterview1.InstanceRef20 = this;
+                mvmtInterview1.Location = new Point(0, 0);
+                mvmtInterview1.picBackground.BackColor = Color.PaleVioletRed;
+                mvmtInterview1.panel1.BackColor = Color.Pink;
+                mvmtInterview1.lblQuestion.BackColor = Color.PaleVioletRed;
+                mvmtInterview1.label3.BackColor = Color.PaleVioletRed;
+                mvmtInterview1.label5.BackColor = Color.PaleVioletRed;
+                mvmtInterview1.Show();
+            }
+            else if (Globals.interview_page == 21) {
+                this.Hide();
+                Interview mvmtInterview2 = new Interview();
+                mvmtInterview2.InstanceRef21 = this;
+                mvmtInterview2.Location = new Point(0, 0);
+                mvmtInterview2.picBackground.BackColor = Color.PaleVioletRed;
+                mvmtInterview2.panel1.BackColor = Color.Pink;
+                mvmtInterview2.lblQuestion.BackColor = Color.PaleVioletRed;
+                mvmtInterview2.label3.BackColor = Color.PaleVioletRed;
+                mvmtInterview2.label5.BackColor = Color.PaleVioletRed;
+                mvmtInterview2.Show();
+            }
+            else if (Globals.interview_page == 22) {
+                this.Hide();
+                Interview mvmtInterview3 = new Interview();
+                mvmtInterview3.InstanceRef22 = this;
+                mvmtInterview3.Location = new Point(0, 0);
+                mvmtInterview3.picBackground.BackColor = Color.PaleVioletRed;
+                mvmtInterview3.panel1.BackColor = Color.Pink;
+                mvmtInterview3.lblQuestion.BackColor = Color.PaleVioletRed;
+                mvmtInterview3.label3.BackColor = Color.PaleVioletRed;
+                mvmtInterview3.label5.BackColor = Color.PaleVioletRed;
+                mvmtInterview3.Show();
+            }
+            else if (Globals.interview_page == 23) {
+                this.Hide();
+                Interview mvmtInterview4 = new Interview();
+                mvmtInterview4.InstanceRef23 = this;
+                mvmtInterview4.Location = new Point(0, 0);
+                mvmtInterview4.picBackground.BackColor = Color.PaleVioletRed;
+                mvmtInterview4.panel1.BackColor = Color.Pink;
+                mvmtInterview4.lblQuestion.BackColor = Color.PaleVioletRed;
+                mvmtInterview4.label3.BackColor = Color.PaleVioletRed;
+                mvmtInterview4.label5.BackColor = Color.PaleVioletRed;
+                mvmtInterview4.Show();
+            }
+            //-------------------
+            //ENVIRONMENT SECTION
+            //-------------------
+            else if (Globals.interview_page == 24) {
+                this.Hide();
+                Interview environmentInterview1 = new Interview();
+                environmentInterview1.InstanceRef23 = this;
+                environmentInterview1.Location = new Point(0, 0);
+                environmentInterview1.picBackground.BackColor = Color.LightBlue;
+                environmentInterview1.panel1.BackColor = Color.AliceBlue;
+                environmentInterview1.lblQuestion.BackColor = Color.LightBlue;
+                environmentInterview1.label3.BackColor = Color.LightBlue;
+                environmentInterview1.label5.BackColor = Color.LightBlue;
+                environmentInterview1.Show();
+            }
+            //-------------
+            //OTHER SECTION
+            //-------------
+            else if (Globals.interview_page == 25) {
+                this.Hide();
+                Interview otherInterview1 = new Interview();
+                otherInterview1.InstanceRef23 = this;
+                otherInterview1.Location = new Point(0, 0);
+                otherInterview1.picBackground.BackColor = Color.Tan;
+                otherInterview1.panel1.BackColor = Color.AntiqueWhite;
+                otherInterview1.lblQuestion.BackColor = Color.Tan;
+                otherInterview1.label3.BackColor = Color.Tan;
+                otherInterview1.label5.BackColor = Color.Tan;
+                otherInterview1.Show();
+            }
         }
 
         /// <summary>
@@ -394,20 +562,16 @@ namespace Login {
             if (Globals.interview_page == 1) {
                 this.Hide();
                 InstanceRef.Show();
-            }
-            else if (Globals.interview_page == 2) {
+            } else if (Globals.interview_page == 2) {
                 this.Hide();
                 InstanceRef2.Show();
-            }
-            else if (Globals.interview_page == 3) {
+            } else if (Globals.interview_page == 3) {
                 this.Hide();
                 InstanceRef3.Show();
-            }
-            else if (Globals.interview_page == 4) {
+            } else if (Globals.interview_page == 4) {
                 this.Hide();
                 InstanceRef4.Show();
-            }
-            else if (Globals.interview_page == 5) {
+            } else if (Globals.interview_page == 5) {
                 this.Hide();
                 InstanceRef5.Show();
             } else if (Globals.interview_page == 6) {
@@ -443,6 +607,33 @@ namespace Login {
             } else if (Globals.interview_page == 16) {
                 this.Hide();
                 InstanceRef16.Show();
+            } else if (Globals.interview_page == 17) {
+                this.Hide();
+                InstanceRef17.Show();
+            } else if (Globals.interview_page == 18) {
+                this.Hide();
+                InstanceRef18.Show();
+            } else if (Globals.interview_page == 19) {
+                this.Hide();
+                InstanceRef19.Show();
+            } else if (Globals.interview_page == 20) {
+                this.Hide();
+                InstanceRef20.Show();
+            } else if (Globals.interview_page == 21) {
+                this.Hide();
+                InstanceRef21.Show();
+            } else if (Globals.interview_page == 22) {
+                this.Hide();
+                InstanceRef22.Show();
+            } else if (Globals.interview_page == 23) {
+                this.Hide();
+                InstanceRef23.Show();
+            } else if (Globals.interview_page == 24) {
+                this.Hide();
+                InstanceRef24.Show();
+            } else if (Globals.interview_page == 25) {
+                this.Hide();
+                InstanceRef25.Show();
             }
         }
 
@@ -665,6 +856,106 @@ namespace Login {
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
             updateLabelText("Bread", "Pasta", "", "", "", "");
         }
+        private void tasteInterviewPage2() {
+            lblQuestion.Text = "Are there some ways that food tastes or feels in your mouth that you don't like?";
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\lumpy.jpg");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Pasta.jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
+            updateLabelText("Lumpy", "Chewy", "Runny/Slippery", "Mixed", "Sweet", "Sour");
+        }
+        private void tasteInterviewPage2p2() {
+            lblQuestion.Text = "Are there some ways that food tastes or feels in your mouth that you don't like?";
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\lumpy.jpg");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Pasta.jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
+            updateLabelText("Salty", "Spicy", "", "", "", "");
+        }
+        private void tasteInterviewPage3() {
+            lblQuestion.Text = "Are there some things that you really like to eat?";
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\lumpy.jpg");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Pasta.jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
+            updateLabelText("This form is structurered", "different to other forms", "", "", "", "");
+        }
+        private void tasteInterviewPage4() {
+            lblQuestion.Text = "Are there some things that you put in your mouth a lot?";
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\lumpy.jpg");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Pasta.jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
+            updateLabelText("Shirt", "Hair", "Objects", "", "", "");
+        }
+        private void mvmtInterviewPage1() {
+            lblQuestion.Text = "Are there some ways of moving that you don't like?";
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\lumpy.jpg");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Pasta.jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
+            updateLabelText("Being jumped on/tackled", "Moving when I can't see where I am going", "Balancing", "Being upside down", "Climbing up high", "");
+        }
+        private void mvmtInterviewPage2() {
+            lblQuestion.Text = "Are there times when it is hard for you to stay still?";
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\lumpy.jpg");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Pasta.jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
+            updateLabelText("", "Standing still", "", "", "Sitting still", "");
+        }
+        private void mvmtInterviewPage3() {
+            lblQuestion.Text = "Are there some ways of moving that you like?";
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\lumpy.jpg");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Pasta.jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
+            updateLabelText("Moving in water", "Swinging", "Spinning", "Jumping on the trampoline", "Running", "");
+        }
+        private void mvmtInterviewPage4() {
+            lblQuestion.Text = "Are there some ways that you move over and over again?";
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\lumpy.jpg");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Pasta.jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
+            updateLabelText("Rocking", "Moving hands", "Clapping", "Pacing", "", "");
+        }
+        private void environmentInterviewPage1() {
+            lblQuestion.Text = "Are there some places with lots of things happening at once that you don't like?";
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\lumpy.jpg");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Pasta.jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
+            updateLabelText("Supermarket", "Party", "Food hall", "Show", "Shopping mall", "");
+        }
+        private void otherInterviewPage1() {
+            lblQuestion.Text = "Are there any other sensations that you feel strongly about?";
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\lumpy.jpg");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Pasta.jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Geometric patterns.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
+            updateLabelText("Sounds", "Smells", "Sights", "Tastes", "Feelings", "Movements");
+        }
 
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -816,6 +1107,51 @@ namespace Login {
         public Form InstanceRef16 {
             get { return m_InstanceRef16; }
             set { m_InstanceRef16 = value; }
+        }
+        private Form m_InstanceRef17 = null;
+        public Form InstanceRef17 {
+            get { return m_InstanceRef17; }
+            set { m_InstanceRef17 = value; }
+        }
+        private Form m_InstanceRef18 = null;
+        public Form InstanceRef18 {
+            get { return m_InstanceRef18; }
+            set { m_InstanceRef18 = value; }
+        }
+        private Form m_InstanceRef19 = null;
+        public Form InstanceRef19 {
+            get { return m_InstanceRef19; }
+            set { m_InstanceRef19 = value; }
+        }
+        private Form m_InstanceRef20 = null;
+        public Form InstanceRef20 {
+            get { return m_InstanceRef20; }
+            set { m_InstanceRef20 = value; }
+        }
+        private Form m_InstanceRef21 = null;
+        public Form InstanceRef21 {
+            get { return m_InstanceRef21; }
+            set { m_InstanceRef21 = value; }
+        }
+        private Form m_InstanceRef22 = null;
+        public Form InstanceRef22 {
+            get { return m_InstanceRef22; }
+            set { m_InstanceRef22 = value; }
+        }
+        private Form m_InstanceRef23 = null;
+        public Form InstanceRef23 {
+            get { return m_InstanceRef23; }
+            set { m_InstanceRef23 = value; }
+        }
+        private Form m_InstanceRef24 = null;
+        public Form InstanceRef24 {
+            get { return m_InstanceRef24; }
+            set { m_InstanceRef24 = value; }
+        }
+        private Form m_InstanceRef25 = null;
+        public Form InstanceRef25 {
+            get { return m_InstanceRef25; }
+            set { m_InstanceRef25 = value; }
         }
     }
 }
