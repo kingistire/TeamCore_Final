@@ -46,7 +46,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(248, 28);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 73);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -60,15 +60,15 @@
             this.btnCreateAcc.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnCreateAcc.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnCreateAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreateAcc.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateAcc.ForeColor = System.Drawing.Color.Navy;
             this.btnCreateAcc.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateAcc.Image")));
             this.btnCreateAcc.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCreateAcc.Location = new System.Drawing.Point(135, 349);
-            this.btnCreateAcc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreateAcc.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateAcc.Name = "btnCreateAcc";
             this.btnCreateAcc.Size = new System.Drawing.Size(187, 43);
-            this.btnCreateAcc.TabIndex = 29;
+            this.btnCreateAcc.TabIndex = 5;
             this.btnCreateAcc.Text = "Create account";
             this.btnCreateAcc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCreateAcc.UseVisualStyleBackColor = false;
@@ -151,34 +151,34 @@
             // tbPass1
             // 
             this.tbPass1.Location = new System.Drawing.Point(211, 272);
-            this.tbPass1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPass1.Margin = new System.Windows.Forms.Padding(2);
             this.tbPass1.Name = "tbPass1";
             this.tbPass1.Size = new System.Drawing.Size(112, 20);
-            this.tbPass1.TabIndex = 15;
+            this.tbPass1.TabIndex = 3;
             // 
             // tbFname
             // 
             this.tbFname.Location = new System.Drawing.Point(211, 207);
-            this.tbFname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbFname.Margin = new System.Windows.Forms.Padding(2);
             this.tbFname.Name = "tbFname";
             this.tbFname.Size = new System.Drawing.Size(112, 20);
-            this.tbFname.TabIndex = 18;
+            this.tbFname.TabIndex = 1;
             // 
             // tbEmail
             // 
             this.tbEmail.Location = new System.Drawing.Point(211, 175);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(112, 20);
-            this.tbEmail.TabIndex = 14;
+            this.tbEmail.TabIndex = 0;
             // 
             // tbPass2
             // 
             this.tbPass2.Location = new System.Drawing.Point(211, 305);
-            this.tbPass2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPass2.Margin = new System.Windows.Forms.Padding(2);
             this.tbPass2.Name = "tbPass2";
             this.tbPass2.Size = new System.Drawing.Size(112, 20);
-            this.tbPass2.TabIndex = 14;
+            this.tbPass2.TabIndex = 4;
             // 
             // label1
             // 
@@ -209,10 +209,10 @@
             // tbLname
             // 
             this.tbLname.Location = new System.Drawing.Point(211, 240);
-            this.tbLname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLname.Margin = new System.Windows.Forms.Padding(2);
             this.tbLname.Name = "tbLname";
             this.tbLname.Size = new System.Drawing.Size(112, 20);
-            this.tbLname.TabIndex = 18;
+            this.tbLname.TabIndex = 2;
             // 
             // NewAccount
             // 
@@ -235,7 +235,7 @@
             this.Controls.Add(this.tbLname);
             this.Controls.Add(this.tbFname);
             this.Controls.Add(this.tbEmail);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NewAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

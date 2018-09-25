@@ -16,10 +16,7 @@ namespace Login {
 
         public Login() {
             InitializeComponent();
-            //clear the textfile
-            StreamWriter strm = File.CreateText(@"c:\test\test.txt");
-            strm.Flush();
-            strm.Close();
+            
         }
 
         private void btnNewAcc_Click(object sender, EventArgs e) {
@@ -52,6 +49,11 @@ namespace Login {
             this.Hide();
             NewAccount newAcc = new NewAccount();
             newAcc.Show();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
