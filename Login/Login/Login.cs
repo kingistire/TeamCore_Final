@@ -50,5 +50,10 @@ namespace Login {
             NewAccount newAcc = new NewAccount();
             newAcc.Show();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
