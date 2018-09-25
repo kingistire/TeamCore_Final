@@ -276,32 +276,31 @@ namespace Login {
             //-------------
             //SOUND SECTION
             //-------------
-            else if (Globals.interview_page == 3) {
-                this.Hide();
+            else if (Globals.interview_page == 3) {            
                 Interview interviewForm3 = new Interview();
                 interviewForm3.InstanceRef2 = this;
                 interviewForm3.Location = new Point(0, 0);
                 interviewForm3.Show();
-            }
-            else if (Globals.interview_page == 4) {
                 this.Hide();
+            }
+            else if (Globals.interview_page == 4) {                
                 Interview interviewForm4 = new Interview();
                 interviewForm4.InstanceRef3 = this;
                 interviewForm4.Location = new Point(0, 0);
                 interviewForm4.Show();
+                this.Hide();
             }
             else if (Globals.interview_page == 5) {
-                this.Hide();
                 Interview interviewForm5 = new Interview();
                 interviewForm5.InstanceRef4 = this;
                 interviewForm5.Location = new Point(0, 0);
                 interviewForm5.Show();
+                this.Hide();
             }
             //-------------
             //SIGHT SECTION
             //-------------
             else if (Globals.interview_page == 6) {
-                this.Hide();
                 Interview sightInterview1 = new Interview();
                 sightInterview1.InstanceRef5 = this;
                 sightInterview1.Location = new Point(0, 0);
@@ -311,8 +310,8 @@ namespace Login {
                 sightInterview1.label5.BackColor = Color.SandyBrown;
                 sightInterview1.panel1.BackColor = Color.Bisque;      
                 sightInterview1.Show();
-            } else if (Globals.interview_page == 7) {
                 this.Hide();
+            } else if (Globals.interview_page == 7) {
                 Interview sightInterview2 = new Interview();
                 sightInterview2.InstanceRef6 = this;
                 sightInterview2.Location = new Point(0, 0);
@@ -322,8 +321,8 @@ namespace Login {
                 sightInterview2.lblQuestion.BackColor = Color.SandyBrown;
                 sightInterview2.panel1.BackColor = Color.Bisque;
                 sightInterview2.Show();
-            } else if (Globals.interview_page == 8) {
                 this.Hide();
+            } else if (Globals.interview_page == 8) {
                 Interview sightInterview3 = new Interview();
                 sightInterview3.InstanceRef7 = this;
                 sightInterview3.Location = new Point(0, 0);
@@ -333,12 +332,12 @@ namespace Login {
                 sightInterview3.label5.BackColor = Color.SandyBrown;
                 sightInterview3.panel1.BackColor = Color.Bisque;
                 sightInterview3.Show();
+                this.Hide();
             }
             //-------------
             //TOUCH SECTION
             //-------------
             else if (Globals.interview_page == 9) {
-                this.Hide();
                 Interview touchInterview1 = new Interview();
                 touchInterview1.InstanceRef8 = this;
                 touchInterview1.Location = new Point(0, 0);
@@ -348,8 +347,8 @@ namespace Login {
                 touchInterview1.label5.BackColor = Color.FromArgb(255, 255, 128);
                 touchInterview1.panel1.BackColor = Color.LightYellow;
                 touchInterview1.Show();
-            } else if (Globals.interview_page == 10) {
                 this.Hide();
+            } else if (Globals.interview_page == 10) {
                 Interview touchInterview2 = new Interview();
                 touchInterview2.InstanceRef9 = this;
                 touchInterview2.Location = new Point(0, 0);
@@ -359,8 +358,8 @@ namespace Login {
                 touchInterview2.label5.BackColor = Color.FromArgb(255, 255, 128);
                 touchInterview2.panel1.BackColor = Color.LightYellow;
                 touchInterview2.Show();
-            } else if (Globals.interview_page == 11) {
                 this.Hide();
+            } else if (Globals.interview_page == 11) {
                 Interview touchInterview3 = new Interview();
                 touchInterview3.InstanceRef10 = this;
                 touchInterview3.Location = new Point(0, 0);
@@ -371,8 +370,8 @@ namespace Login {
                 touchInterview3.label5.BackColor = Color.FromArgb(255, 255, 128);
                 touchInterview3.panel1.BackColor = Color.LightYellow;
                 touchInterview3.Show();
-            } else if (Globals.interview_page == 12) {
                 this.Hide();
+            } else if (Globals.interview_page == 12) {
                 Interview touchInterview4 = new Interview();
                 touchInterview4.InstanceRef11 = this;
                 touchInterview4.Location = new Point(0, 0);
@@ -383,12 +382,12 @@ namespace Login {
                 touchInterview4.label5.BackColor = Color.FromArgb(255, 255, 128);
                 touchInterview4.panel1.BackColor = Color.LightYellow;
                 touchInterview4.Show();
+                this.Hide();
             }
             //-------------
             //SMELL SECTION
             //-------------
             else if (Globals.interview_page == 13) {
-                this.Hide();
                 Interview smellInterview1 = new Interview();
                 smellInterview1.InstanceRef12 = this;
                 smellInterview1.Location = new Point(0, 0);
@@ -398,8 +397,8 @@ namespace Login {
                 smellInterview1.label5.BackColor = Color.FromArgb(143, 188, 139);
                 smellInterview1.panel1.BackColor = Color.Honeydew;
                 smellInterview1.Show();
-            } else if (Globals.interview_page == 14) {
                 this.Hide();
+            } else if (Globals.interview_page == 14) {
                 Interview smellInterview2 = new Interview();
                 smellInterview2.InstanceRef13 = this;
                 smellInterview2.Location = new Point(0, 0);
@@ -409,12 +408,12 @@ namespace Login {
                 smellInterview2.label5.BackColor = Color.FromArgb(143, 188, 139);
                 smellInterview2.panel1.BackColor = Color.Honeydew;
                 smellInterview2.Show();
+                this.Hide();
             }
             //-------------
             //TASTE SECTION
             //-------------
             else if (Globals.interview_page == 15) {               
-                this.Hide();
                 Interview tasteInterview1 = new Interview();
                 tasteInterview1.InstanceRef14 = this;
                 tasteInterview1.Location = new Point(0, 0);
@@ -424,8 +423,8 @@ namespace Login {
                 tasteInterview1.label3.BackColor = tasteHeader;
                 tasteInterview1.label5.BackColor = tasteHeader;
                 tasteInterview1.Show();
-            } else if (Globals.interview_page == 16) {
                 this.Hide();
+            } else if (Globals.interview_page == 16) {
                 Interview tasteInterview1p2 = new Interview();
                 tasteInterview1p2.InstanceRef15 = this;
                 tasteInterview1p2.Location = new Point(0, 0);
@@ -435,21 +434,21 @@ namespace Login {
                 tasteInterview1p2.label3.BackColor = tasteHeader;
                 tasteInterview1p2.label5.BackColor = tasteHeader;
                 tasteInterview1p2.Show();
+                this.Hide();
             }
             else if (Globals.interview_page == 17) {
-                    this.Hide();
-                    Interview tasteInterview2 = new Interview();
-                    tasteInterview2.InstanceRef17 = this;
-                    tasteInterview2.Location = new Point(0, 0);
-                    tasteInterview2.picBackground.BackColor = tasteHeader;
-                    tasteInterview2.panel1.BackColor = tasteBg;
-                    tasteInterview2.lblQuestion.BackColor = tasteHeader;
-                    tasteInterview2.label3.BackColor = tasteHeader;
-                    tasteInterview2.label5.BackColor = tasteHeader;
-                    tasteInterview2.Show();
+                Interview tasteInterview2 = new Interview();
+                tasteInterview2.InstanceRef17 = this;
+                tasteInterview2.Location = new Point(0, 0);
+                tasteInterview2.picBackground.BackColor = tasteHeader;
+                tasteInterview2.panel1.BackColor = tasteBg;
+                tasteInterview2.lblQuestion.BackColor = tasteHeader;
+                tasteInterview2.label3.BackColor = tasteHeader;
+                tasteInterview2.label5.BackColor = tasteHeader;
+                tasteInterview2.Show();
+                this.Hide();
             }
             else if (Globals.interview_page == 18) {
-                this.Hide();
                 Interview tasteInterview3 = new Interview();
                 tasteInterview3.InstanceRef18 = this;
                 tasteInterview3.Location = new Point(0, 0);
@@ -459,9 +458,9 @@ namespace Login {
                 tasteInterview3.label3.BackColor = tasteHeader;
                 tasteInterview3.label5.BackColor = tasteHeader;
                 tasteInterview3.Show();
+                this.Hide();
             }
             else if (Globals.interview_page == 19) {
-                this.Hide();
                 Interview tasteInterview4 = new Interview();
                 tasteInterview4.InstanceRef19 = this;
                 tasteInterview4.Location = new Point(0, 0);
@@ -471,9 +470,9 @@ namespace Login {
                 tasteInterview4.label3.BackColor = tasteHeader;
                 tasteInterview4.label5.BackColor = tasteHeader;
                 tasteInterview4.Show();
+                this.Hide();
             }
             else if (Globals.interview_page == 20) {
-                this.Hide();
                 Interview mvmtInterview1 = new Interview();
                 mvmtInterview1.InstanceRef20 = this;
                 mvmtInterview1.Location = new Point(0, 0);
@@ -483,9 +482,9 @@ namespace Login {
                 mvmtInterview1.label3.BackColor = Color.PaleVioletRed;
                 mvmtInterview1.label5.BackColor = Color.PaleVioletRed;
                 mvmtInterview1.Show();
+                this.Hide();
             }
             else if (Globals.interview_page == 21) {
-                this.Hide();
                 Interview mvmtInterview2 = new Interview();
                 mvmtInterview2.InstanceRef21 = this;
                 mvmtInterview2.Location = new Point(0, 0);
@@ -495,6 +494,7 @@ namespace Login {
                 mvmtInterview2.label3.BackColor = Color.PaleVioletRed;
                 mvmtInterview2.label5.BackColor = Color.PaleVioletRed;
                 mvmtInterview2.Show();
+                this.Hide();
             }
             else if (Globals.interview_page == 22) {
                 this.Hide();
@@ -509,7 +509,6 @@ namespace Login {
                 mvmtInterview3.Show();
             }
             else if (Globals.interview_page == 23) {
-                this.Hide();
                 Interview mvmtInterview4 = new Interview();
                 mvmtInterview4.InstanceRef23 = this;
                 mvmtInterview4.Location = new Point(0, 0);
@@ -519,12 +518,12 @@ namespace Login {
                 mvmtInterview4.label3.BackColor = Color.PaleVioletRed;
                 mvmtInterview4.label5.BackColor = Color.PaleVioletRed;
                 mvmtInterview4.Show();
+                this.Hide();
             }
             //-------------------
             //ENVIRONMENT SECTION
             //-------------------
             else if (Globals.interview_page == 24) {
-                this.Hide();
                 Interview environmentInterview1 = new Interview();
                 environmentInterview1.InstanceRef23 = this;
                 environmentInterview1.Location = new Point(0, 0);
@@ -534,12 +533,12 @@ namespace Login {
                 environmentInterview1.label3.BackColor = Color.LightBlue;
                 environmentInterview1.label5.BackColor = Color.LightBlue;
                 environmentInterview1.Show();
+                this.Hide();
             }
             //-------------
             //OTHER SECTION
             //-------------
             else if (Globals.interview_page == 25) {
-                this.Hide();
                 Interview otherInterview1 = new Interview();
                 otherInterview1.InstanceRef23 = this;
                 otherInterview1.Location = new Point(0, 0);
@@ -549,6 +548,7 @@ namespace Login {
                 otherInterview1.label3.BackColor = Color.Tan;
                 otherInterview1.label5.BackColor = Color.Tan;
                 otherInterview1.Show();
+                this.Hide();
             }
         }
 
@@ -654,11 +654,12 @@ namespace Login {
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\fireworks.jpg");
             topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\loud_voices.PNG");
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\household_ appliances.PNG");
-           // bottomMidPB.Image = new Bitmap(@"..\..\resources\");
+            // bottomMidPB.Image = new Bitmap(@"..\..\resources\");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\");
-            updateLabelText("Other People Talking", " Fireworks", "Loud Voices",
-                "Household Appliances (e.g. blenders, vacuum)", "Vehicles (e.g. trucks, motorbikes)",
-                "Bathroom Appliances (e.g. hair dryers, hand dryers");
+            lblBR.Size = new Size(200, 60);
+            updateLabelText("Other people talking", " Fireworks", "Loud voices",
+                "Household appliances (e.g. blenders, vacuum)", "Vehicles (e.g. trucks, motorbikes)",
+                "Bathroom appliances (e.g. hair dryers, hand dryers)");
         }
 
         private void interviewPage2() {
@@ -669,6 +670,9 @@ namespace Login {
             //bottomLeftPB.Image = new Bitmap(@"../../resources/");
             //bottomMidPB.Image = new Bitmap(@"../../resources/");
             //bottomRightPB.Image = new Bitmap(@"../../resources/");
+            lblTL.Size = new Size(200, 60);
+            lblTM.Size = new Size(200, 60);
+            lblTR.Size = new Size(200, 60);
             updateLabelText("If I am concentrating on something, I don't notice people talking to me",
                 "I find it hard to listen to the teacher in noisy classrooms",
                 "I find it hard to listen to someone talking to me when I'm in a group", 
@@ -685,7 +689,7 @@ namespace Login {
             //bottomLeftPB.Image = new Bitmap(@"../../resources/");
             //bottomMidPB.Image = new Bitmap(@"../../resources/");
             //bottomRightPB.Image = new Bitmap(@"../../resources/");
-            updateLabelText("Radio On", "Clock Ticking", "People Talking", "", "", "");
+            updateLabelText("Radio on", "Clock ticking", "People talking", "", "", "");
         }
 
         private void interviewPage4() {
@@ -696,7 +700,7 @@ namespace Login {
             //bottomLeftPB.Image = new Bitmap(@"../../resources/");
             bottomMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\Rhythms.jpg");
             //bottomRightPB.Image = new Bitmap(@"../../resources/");
-            updateLabelText("Computer Sounds", "Live Music", "Fans", "Music Through My Phone", "Rhythms", "");
+            updateLabelText("Computer sounds", "Live music", "Fans", "Music through my phone", "Rhythms", "");
         }
 
         private void interviewPage5() {
@@ -707,7 +711,7 @@ namespace Login {
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\clicking_pen.PNG");
             //bottomMidPB.Image = new Bitmap(@"");
             //bottomRightPB.Image = new Bitmap(@"../../resources/");
-            updateLabelText("Humming of Whistling to Myself","Tapping Feet", "Tapping Fingers", "Clicken Pen",
+            updateLabelText("Humming or whistling to myself","Tapping feet", "Tapping fingers", "Clicking pen",
                 "", "");
         }
 
@@ -721,7 +725,7 @@ namespace Login {
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\Busy Patterns.jpg");
             //bottomMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
-            updateLabelText("Sunlight", "Fluorescent Light", "Light and Shadow", "Busy Patters",
+            updateLabelText("Sunlight", "Fluorescent light", "Light and shadow", "Busy patterns",
                 "Classroom Light", "");
         }
 
@@ -745,8 +749,8 @@ namespace Login {
             //bottomLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you don't like to look at_\.jpg");
             bottomMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you like to look at_\Spinning objects.jpg");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you don't like to look at_\");
-            updateLabelText("Moving Lights", "Things that sparkle", "Geometric Patterns", "Spinning Fans",
-                "Spinning Objects", "");
+            updateLabelText("Moving lights", "Things that sparkle", "Geometric patterns", "Spinning fans",
+                "Spinning objects", "");
         }
 
         //Touch Panels
@@ -758,8 +762,8 @@ namespace Login {
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Wool clothes.jpg");
             bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Tight clothes.jpg");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\");
-            updateLabelText("Sandy", "Sticky", "Grassy", "Wool Clothes",
-                "Tight Clothes", "Stiff Clothes");
+            updateLabelText("Sandy", "Sticky", "Grassy", "Wool clothes",
+                "Tight clothes", "Stiff clothes");
         }
 
         private void touchInterviewPage1p2() {
@@ -770,7 +774,7 @@ namespace Login {
             //bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\.jpg");
             //bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Spinning objects.jpg");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\");
-            updateLabelText("Shoes", "Splashing Water e.g. rain, shower, pool", "", "",
+            updateLabelText("Shoes", "Splashing water (e.g. rain, shower, pool)", "", "",
                 "", "");
         }
 
@@ -806,7 +810,7 @@ namespace Login {
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\Hugging people.jpg");
             //bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like to look at_\Spinning objects.jpg");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you don't like to look at_\");
-            updateLabelText("Soft", "Rubbery", "Furry", "Hugging People",
+            updateLabelText("Soft", "Rubbery", "Furry", "Hugging people",
                 "Touching people", "Being squashed with a pillow");
         }
 
@@ -820,11 +824,11 @@ namespace Login {
             //bottomMidPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\Spinning objects.jpg");
             bottomRightPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\Body smells.jpg");
             updateLabelText("Cooking smells", "Food smells", "Cleaning products",
-                "Toilet smells", "Perfumes", "Body Smells");
+                "Toilet smells", "Perfumes", "Body smells");
         }
 
         private void smellInterviewPage2() {
-            lblQuestion.Text = "Are there things that you like the smell?";
+            lblQuestion.Text = "Are there some things that you like to smell?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\4. Smells\2. Are there some things that you like to smell_\Smelling foods.jpg");
             //topMidPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some that you don't like_\");
             //topRightPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some that you don't like_\Geometric patterns.jpg");
@@ -832,7 +836,7 @@ namespace Login {
             //bottomMidPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some that you don't like_\Spinning objects.jpg");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some that you don't like_\Body smells.jpg");
             updateLabelText("Smelling foods", "Smelling plants", "Smelling perfume",
-                "Smelling soap", "Smelling people", "Body Smells");
+                "Smelling soap", "Smelling people", "Body smells");
         }
         //TODO - Taste
         private void tasteInterviewPage1() {
@@ -884,7 +888,7 @@ namespace Login {
             //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
             //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
-            updateLabelText("This form is structurered", "different to other forms", "", "", "", "");
+            updateLabelText("This form is structured", "different to other forms", "", "", "", "");
         }
         private void tasteInterviewPage4() {
             lblQuestion.Text = "Are there some things that you put in your mouth a lot?";
@@ -963,7 +967,7 @@ namespace Login {
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         private void hideButtons() {
-            /*topLeftPBALittleBtn.Visible = false;
+            topLeftPBALittleBtn.Visible = false;
             topLeftPBALotBtn.Visible = false;
             topMidALittleBtn.Visible = false;
             topMidALotBtn.Visible = false;
@@ -974,11 +978,11 @@ namespace Login {
             bottomMidALittleBtn.Visible = false;
             bottomMidALotBtn.Visible = false;
             bottomRightALittleBtn.Visible = false;
-            bottomRightALotBtn.Visible = false;*/
+            bottomRightALotBtn.Visible = false;
 
-            foreach(var pb in this.Controls.OfType<Button>()) {
+            /*foreach(var pb in this.Controls.OfType<Button>()) {
                 pb.Visible = false;
-            }
+            }*/
             btnNext1.Visible = true;
             
         }
