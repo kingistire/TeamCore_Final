@@ -56,10 +56,15 @@ namespace Login
                 Globals.addUserExists = true;
             }
             else
-            {
+            { 
                 AddUser.staticVar.BringToFront();
             }
 
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            editProfileBtn.Enabled = true;
         }
     }
 }

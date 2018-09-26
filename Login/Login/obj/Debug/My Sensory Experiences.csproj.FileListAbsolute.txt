@@ -39,7 +39,6 @@ C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.EditUs
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.EditUser1.resources
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.DeleteUser.resources
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.InterviewCover.resources
-C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.NewAccount.resources
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.AddUser.resources
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.Interview.resources
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.Login.resources
@@ -57,3 +56,4 @@ C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\bin\Debug\Login.exe
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\bin\Debug\Login.pdb
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.Summary.resources
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.UserManagment.resources
+C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.NewOTAccount.resources

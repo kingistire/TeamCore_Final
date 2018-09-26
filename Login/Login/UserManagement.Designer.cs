@@ -103,14 +103,14 @@
             this.editProfileBtn.Name = "editProfileBtn";
             this.editProfileBtn.Size = new System.Drawing.Size(124, 46);
             this.editProfileBtn.TabIndex = 28;
-            this.editProfileBtn.Text = "Edit Selected Profile";
+            this.editProfileBtn.Text = "Edit Profile";
             this.editProfileBtn.UseVisualStyleBackColor = true;
             // 
             // UserManagment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 542);
+            this.ClientSize = new System.Drawing.Size(716, 462);
             this.Controls.Add(this.editProfileBtn);
             this.Controls.Add(this.createProfileBtn);
             this.Controls.Add(this.dataGridView1);

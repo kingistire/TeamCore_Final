@@ -21,7 +21,7 @@ namespace Login {
 
         private void btnNewAcc_Click(object sender, EventArgs e) {
             this.Hide();
-            NewAccount newAcc = new NewAccount();
+            NewOTAccount newAcc = new NewOTAccount();
             newAcc.Show();
         }
 
@@ -47,7 +47,7 @@ namespace Login {
 
         private void button1_Click(object sender, EventArgs e) {
             this.Hide();
-            NewAccount newAcc = new NewAccount();
+            NewOTAccount newAcc = new NewOTAccount();
             newAcc.Show();
         }
 
