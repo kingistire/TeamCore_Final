@@ -101,6 +101,12 @@
     <Compile Include="Summary.Designer.cs">
       <DependentUpon>Summary.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </Compile>
     <EmbeddedResource Include="Summary.resx">
       <DependentUpon>Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewUsers.resx">
       <DependentUpon>ViewUsers.cs</DependentUpon>

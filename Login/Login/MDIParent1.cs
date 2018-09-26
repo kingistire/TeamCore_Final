@@ -48,8 +48,11 @@ namespace Login {
 
         private void viewUserProfilesToolStripMenuItem_Click(object sender, EventArgs e) {
             ViewUsers viewUserProfiles = new ViewUsers();
+            Form1 viewUserManagment = new Form1();
             viewUserProfiles.MdiParent = this;
             viewUserProfiles.Show();
+            viewUserManagment.MdiParent = this;
+            viewUserManagment.Show();
         }
 
         private void deleteUserToolStripMenuItem1_Click(object sender, EventArgs e) {

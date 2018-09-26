@@ -57,3 +57,4 @@ C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\bin\Debug\Login.exe.co
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\bin\Debug\Login.exe
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\bin\Debug\Login.pdb
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.Summary.resources
+C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.Form1.resources
