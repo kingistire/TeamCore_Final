@@ -101,6 +101,18 @@
     <Compile Include="Summary.Designer.cs">
       <DependentUpon>Summary.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewResults.Designer.cs">
+      <DependentUpon>ViewResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewResultsTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewResultsTable.Designer.cs">
+      <DependentUpon>ViewResultsTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +189,12 @@
     </Compile>
     <EmbeddedResource Include="Summary.resx">
       <DependentUpon>Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewResults.resx">
+      <DependentUpon>ViewResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewResultsTable.resx">
+      <DependentUpon>ViewResultsTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewUsers.resx">
       <DependentUpon>ViewUsers.cs</DependentUpon>

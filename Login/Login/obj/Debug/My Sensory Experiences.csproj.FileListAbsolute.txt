@@ -57,3 +57,27 @@ C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\bin\Debug\Login.exe.co
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\bin\Debug\Login.exe
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\bin\Debug\Login.pdb
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.Summary.resources
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\bin\Debug\CapstoneDB\CapstoneDB.mdf
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\bin\Debug\CapstoneDB\CapstoneDB_log.ldf
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\bin\Debug\Login.exe.config
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\bin\Debug\Login.exe
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\bin\Debug\Login.pdb
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\My Sensory Experiences.csprojAssemblyReference.cache
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.EditUser2.resources
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.EditUser1.resources
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.DeleteUser.resources
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.InterviewCover.resources
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.NewAccount.resources
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.AddUser.resources
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.Interview.resources
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.Login.resources
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.MDIParent1.resources
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.Summary.resources
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.ViewUsers.resources
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\My Sensory Experiences.csproj.GenerateResource.cache
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\My Sensory Experiences.csproj.CoreCompileInputs.cache
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.exe
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.pdb
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.ViewResults.resources
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.ViewResultsTable.resources
