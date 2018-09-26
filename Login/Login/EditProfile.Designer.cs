@@ -1,5 +1,5 @@
 ﻿namespace Login {
-    partial class EditUser2 {
+    partial class EditProfile {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,7 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditUser2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditProfile));
             this.tbFname = new System.Windows.Forms.TextBox();
             this.tbLname = new System.Windows.Forms.TextBox();
             this.tbAge = new System.Windows.Forms.TextBox();
@@ -42,9 +42,8 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.nameTitle = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -52,23 +51,28 @@
             // tbFname
             // 
             this.tbFname.Location = new System.Drawing.Point(212, 144);
-            this.tbFname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbFname.Margin = new System.Windows.Forms.Padding(2);
             this.tbFname.Name = "tbFname";
+            this.tbFname.ReadOnly = true;
             this.tbFname.Size = new System.Drawing.Size(112, 20);
             this.tbFname.TabIndex = 2;
+            this.tbFname.Click += new System.EventHandler(this.tbFname_Click);
+            this.tbFname.Leave += new System.EventHandler(this.tbFname_Leave);
             // 
             // tbLname
             // 
+            this.tbLname.Enabled = false;
             this.tbLname.Location = new System.Drawing.Point(212, 176);
-            this.tbLname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLname.Margin = new System.Windows.Forms.Padding(2);
             this.tbLname.Name = "tbLname";
             this.tbLname.Size = new System.Drawing.Size(112, 20);
             this.tbLname.TabIndex = 2;
             // 
             // tbAge
             // 
+            this.tbAge.Enabled = false;
             this.tbAge.Location = new System.Drawing.Point(212, 241);
-            this.tbAge.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbAge.Margin = new System.Windows.Forms.Padding(2);
             this.tbAge.Name = "tbAge";
             this.tbAge.Size = new System.Drawing.Size(112, 20);
             this.tbAge.TabIndex = 2;
@@ -125,16 +129,18 @@
             // 
             // tbPhone
             // 
+            this.tbPhone.Enabled = false;
             this.tbPhone.Location = new System.Drawing.Point(212, 322);
-            this.tbPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPhone.Margin = new System.Windows.Forms.Padding(2);
             this.tbPhone.Name = "tbPhone";
             this.tbPhone.Size = new System.Drawing.Size(112, 20);
             this.tbPhone.TabIndex = 2;
             // 
             // tbEmail
             // 
+            this.tbEmail.Enabled = false;
             this.tbEmail.Location = new System.Drawing.Point(212, 354);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(112, 20);
             this.tbEmail.TabIndex = 2;
@@ -165,13 +171,14 @@
             // 
             // cbGender
             // 
+            this.cbGender.Enabled = false;
             this.cbGender.FormattingEnabled = true;
             this.cbGender.Items.AddRange(new object[] {
             "Male",
             "Female",
             "Other"});
             this.cbGender.Location = new System.Drawing.Point(212, 209);
-            this.cbGender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbGender.Margin = new System.Windows.Forms.Padding(2);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(112, 21);
             this.cbGender.TabIndex = 9;
@@ -223,8 +230,8 @@
             this.btnSave.ForeColor = System.Drawing.Color.Navy;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.Location = new System.Drawing.Point(166, 392);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Location = new System.Drawing.Point(212, 412);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(157, 43);
             this.btnSave.TabIndex = 12;
@@ -237,7 +244,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(248, 28);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 73);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -253,49 +260,38 @@
             this.label9.Size = new System.Drawing.Size(0, 13);
             this.label9.TabIndex = 14;
             // 
-            // button1
+            // nameTitle
             // 
-            this.button1.Location = new System.Drawing.Point(248, 1);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 19);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "TEST";
-            this.button1.UseVisualStyleBackColor = true;
+            this.nameTitle.AutoSize = true;
+            this.nameTitle.BackColor = System.Drawing.Color.Transparent;
+            this.nameTitle.Font = new System.Drawing.Font("Calibri", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTitle.ForeColor = System.Drawing.Color.DarkBlue;
+            this.nameTitle.Location = new System.Drawing.Point(27, 66);
+            this.nameTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nameTitle.Name = "nameTitle";
+            this.nameTitle.Size = new System.Drawing.Size(159, 23);
+            this.nameTitle.TabIndex = 18;
+            this.nameTitle.Text = "ENTER NAME HERE";
+            this.nameTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 392);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(19, 439);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(340, 54);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.Visible = false;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Calibri", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label10.Location = new System.Drawing.Point(27, 66);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(159, 23);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "ENTER NAME HERE";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // EditUser2
+            // EditProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(370, 455);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.nameTitle);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox1);
@@ -316,11 +312,11 @@
             this.Controls.Add(this.tbLname);
             this.Controls.Add(this.tbFname);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "EditUser2";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "EditProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Add User";
-            this.Load += new System.EventHandler(this.EditUser2_Load_1);
+            this.Load += new System.EventHandler(this.editProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -347,8 +343,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label nameTitle;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label10;
     }
 }

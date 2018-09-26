@@ -35,7 +35,6 @@ C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Lo
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB.mdf
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB_log.ldf
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csprojAssemblyReference.cache
-C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.EditUser2.resources
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.EditUser1.resources
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.DeleteUser.resources
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.InterviewCover.resources
@@ -57,3 +56,4 @@ C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\bin\Debug\Login.pdb
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.Summary.resources
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.UserManagment.resources
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.NewOTAccount.resources
+C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.EditProfile.resources

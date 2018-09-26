@@ -11,17 +11,25 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 
 namespace Login {
-    public partial class EditUser2 : Form {
+    public partial class EditProfile : Form {
         SqlCommand cmd;
         SqlConnection con;
         SqlDataAdapter da;
 
-        public EditUser2(string idValue) {
+        public EditProfile(DataGridViewRow dataValue) {
             InitializeComponent();
-            label9.Text = idValue;
+            nameTitle.Text = dataValue.Cells[2].Value.ToString() + ' ' + dataValue.Cells[3].Value.ToString();
+            tbFname.Text = dataValue.Cells[2].Value.ToString();
+            tbLname.Text = dataValue.Cells[3].Value.ToString();
+            cbGender.Text = dataValue.Cells[4].Value.ToString();
+            tbAge.Text = dataValue.Cells[5].Value.ToString();
+            tbPhone.Text = dataValue.Cells[6].Value.ToString();
+            tbEmail.Text = dataValue.Cells[7].Value.ToString();
             this.Location = new Point(0, 0);
         }
 
+
+        
         private void btnSave_Click_1(object sender, EventArgs e) {
             string genderSelection = "";
             //if gender is not chosen, program crashes
@@ -80,6 +88,30 @@ namespace Login {
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void editProfile_Load(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.tbFname.Enabled = true;
+        }
+
+        private void tbFname_Leave(object sender, EventArgs e)
+        {
+            TextBox clicked = (TextBox)sender;
+            clicked.ReadOnly = true;
+        }
+
+        private void tbFname_Click(object sender, EventArgs e)
+        {
+            TextBox clicked = (TextBox)sender;
+            clicked.ReadOnly = false;
         }
     }
 }

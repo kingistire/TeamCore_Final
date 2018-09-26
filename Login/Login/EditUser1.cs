@@ -23,9 +23,9 @@ namespace Login {
 
         private void btnSave_Click_1(object sender, EventArgs e) {
             string idValue = tbID.Text;
-            EditUser2 editUserProfile2 = new EditUser2(idValue);
-            editUserProfile2.MdiParent = MDIParent1.ActiveForm;
-            editUserProfile2.Show();     
+            //EditProfile editUserProfile2 = new EditProfile(idValue);
+            //editUserProfile2.MdiParent = MDIParent1.ActiveForm;
+            //editUserProfile2.Show();     
         }
     }
 }

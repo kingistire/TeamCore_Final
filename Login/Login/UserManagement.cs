@@ -19,6 +19,7 @@ namespace Login
             InitializeComponent();
         }
 
+
         private void Form1_Load(object sender, EventArgs e)
         {
             string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
@@ -53,7 +54,7 @@ namespace Login
                 AddUser newUser = new AddUser();
                 newUser.MdiParent = this.MdiParent;
                 newUser.Show();
-                Globals.addUserExists = true;
+                //Globals.addUserExists = true;
             //}
             //    else
             //    { 
@@ -68,7 +69,15 @@ namespace Login
             if (e.RowIndex >= 0 && e.ColumnIndex == 0)
             {
                 //MessageBox.Show(this, e.ToString() + " Clicked!");
-                MessageBox.Show(this, userProfileManagmentGrid[2, e.RowIndex].Value.ToString() + " Clicked!");
+                //EditProfile editProfile = new EditProfile(userProfileManagmentGrid[1, e.RowIndex].Value.ToString());
+                
+                DataGridViewRow selectedProfile = userProfileManagmentGrid.Rows[e.RowIndex];
+
+
+                EditProfile editprofile = new EditProfile(selectedProfile);
+                editprofile.MdiParent = this.MdiParent;
+                editprofile.Show();
+
                 //...
             }
         }
