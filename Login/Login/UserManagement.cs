@@ -33,7 +33,7 @@ namespace Login
                 sda.Fill(dbdataset);
                 BindingSource bSource = new BindingSource();
                 bSource.DataSource = dbdataset;
-                dataGridView1.DataSource = bSource;
+                userProfileManagmentGrid.DataSource = bSource;
                 sda.Update(dbdataset);
                 //need to write a for loop to iteratively set the column width for each column
                 //DataGridViewColumn column = dataGridView.Columns[0];
@@ -63,6 +63,14 @@ namespace Login
             //
         }
 
-        
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == 0)
+            {
+                //MessageBox.Show(this, e.ToString() + " Clicked!");
+                MessageBox.Show(this, userProfileManagmentGrid[2, e.RowIndex].Value.ToString() + " Clicked!");
+                //...
+            }
+        }
     }
 }

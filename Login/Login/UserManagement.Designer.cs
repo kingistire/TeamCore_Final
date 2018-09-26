@@ -32,10 +32,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.userProfileManagmentGrid = new System.Windows.Forms.DataGridView();
+            this.editProfileBtnCol = new System.Windows.Forms.DataGridViewButtonColumn();
             this.createProfileBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userProfileManagmentGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -77,13 +78,23 @@
             this.label2.Text = "View user profiles";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
+            // userProfileManagmentGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 156);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(654, 272);
-            this.dataGridView1.TabIndex = 26;
+            this.userProfileManagmentGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.userProfileManagmentGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.editProfileBtnCol});
+            this.userProfileManagmentGrid.Location = new System.Drawing.Point(30, 156);
+            this.userProfileManagmentGrid.Name = "userProfileManagmentGrid";
+            this.userProfileManagmentGrid.Size = new System.Drawing.Size(654, 272);
+            this.userProfileManagmentGrid.TabIndex = 26;
+            this.userProfileManagmentGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // editProfileBtnCol
+            // 
+            this.editProfileBtnCol.HeaderText = "Edit";
+            this.editProfileBtnCol.Name = "editProfileBtnCol";
+            this.editProfileBtnCol.Text = "Edit";
+            this.editProfileBtnCol.UseColumnTextForButtonValue = true;
             // 
             // createProfileBtn
             // 
@@ -101,7 +112,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 462);
             this.Controls.Add(this.createProfileBtn);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.userProfileManagmentGrid);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
@@ -111,7 +122,7 @@
             this.Text = "Create Profile";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userProfileManagmentGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,7 +133,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView userProfileManagmentGrid;
         private System.Windows.Forms.Button createProfileBtn;
+        private System.Windows.Forms.DataGridViewButtonColumn editProfileBtnCol;
     }
 }
