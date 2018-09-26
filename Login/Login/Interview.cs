@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.SqlClient;
 
 namespace Login {
     public partial class Interview : Form {
@@ -25,25 +26,20 @@ namespace Login {
 
             if (Globals.interview_page >= 2) {
                 previousInterviewSlideBtn.Visible = true;
-            }
-            else {
+            } else {
                 previousInterviewSlideBtn.Visible = false;
             }
             //determines which page to display when the interview form is loaded
             //resets to one when the user starts a new interview
             if (Globals.interview_page == 1) {
                 interviewPage1();
-            }
-            else if (Globals.interview_page == 2) {
+            } else if (Globals.interview_page == 2) {
                 interviewPage2();
-            }
-            else if (Globals.interview_page == 3) {
+            } else if (Globals.interview_page == 3) {
                 interviewPage3();
-            }
-            else if (Globals.interview_page == 4) {
+            } else if (Globals.interview_page == 4) {
                 interviewPage4();
-            }
-            else if (Globals.interview_page == 5) {
+            } else if (Globals.interview_page == 5) {
                 interviewPage5();
             } else if (Globals.interview_page == 6) {
                 sightInterviewPage1();
@@ -75,20 +71,15 @@ namespace Login {
                 tasteInterviewPage4();
             } else if (Globals.interview_page == 20) {
                 mvmtInterviewPage1();
-            }
-            else if (Globals.interview_page == 21) {
+            } else if (Globals.interview_page == 21) {
                 mvmtInterviewPage2();
-            }
-            else if (Globals.interview_page == 22) {
+            } else if (Globals.interview_page == 22) {
                 mvmtInterviewPage3();
-            }
-            else if (Globals.interview_page == 23) {
+            } else if (Globals.interview_page == 23) {
                 mvmtInterviewPage4();
-            }
-            else if (Globals.interview_page == 24) {
+            } else if (Globals.interview_page == 24) {
                 environmentInterviewPage1();
-            }
-            else if (Globals.interview_page == 25) {
+            } else if (Globals.interview_page == 25) {
                 otherInterviewPage1();
             }
         }
@@ -132,15 +123,15 @@ namespace Login {
         /// <param name="height">picturebox.Height</param>
         /// <param name="index">index of array</param>
         private void determineDrawing(PaintEventArgs e, int x, int y, int width, int height, int index) {
-            if (page1Selections[index] == 1) {
+            if (page1Selections[index] == "A Little") {
                 DrawCircle(aLittle, e, x, y, width, height);
-            } else if (page1Selections[index] == 2) {
+            } else if (page1Selections[index] == "A Lot") {
                 DrawCircle(aLot, e, x, y, width, height);
             }
         }
 
         //Code from here will update the pictureboxes when the user has clicked on a button
-       private void topLeftPB_Paint(object sender, PaintEventArgs e) {
+        private void topLeftPB_Paint(object sender, PaintEventArgs e) {
             //DeterminePenSizeDrawing(sender, topLeftPB, e);
             determineDrawing(e, 0, 0, topLeftPB.Width, topRightPB.Height, 0);
         }
@@ -163,16 +154,54 @@ namespace Login {
         //I would simply create an array of size 6, and when they select 'a little' for picture1 (top left)
         //change the first value in the array to 1, 'a lot' would be set to 2.
         //if they make no selection it remains as 0
-        int[] page1Selections = new int[6] {0,0,0,0,0,0};
-        //Instaniate new summary objects
-        //Summary summary = new Summary();
+        string[] page1Selections = new string[6] { "", "", "", "", "", "" };
+
+        //string[] imageLabelArray = new string[6] { "", "", "", "", "", "" };
+
+        private void writeToDB(string[] array, string TLImageName, string TMImageName, string TRImageName, string BLImageName, string BMImageName, string BRImageName) {
+
+            string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+
+            /* SqlCommand cmdDatabase;
+            conDatabase.Open();
+            string query = "INSERT INTO dbo.Summary (otherPeopleTalking) VALUES (@tl)";
+            cmdDatabase = new SqlCommand(query, conDatabase);
+
+            cmdDatabase.Parameters.AddWithValue("@tl", "ALittle");
+            cmdDatabase.ExecuteNonQuery();
+            conDatabase.Close(); */
+
+            SqlCommand cmdDatabase;
+            //Determine if a little or a lot
+            try {
+                conDatabase.Open();
+                string query = "INSERT INTO dbo.Summary (" + TLImageName + "," + TMImageName + "," +
+                     TRImageName + "," +
+                      BLImageName + "," +
+                       BMImageName + "," + BRImageName + ") VALUES (@tl, @tm, @tr, @bl, @bm, @br)";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
+                cmdDatabase.Parameters.AddWithValue("@bl", page1Selections[3]);
+                cmdDatabase.Parameters.AddWithValue("@bm", page1Selections[4]);
+                cmdDatabase.Parameters.AddWithValue("@br", page1Selections[5]);
+                cmdDatabase.ExecuteNonQuery();
+                conDatabase.Close();
+            } catch (Exception err) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);
+            }
+        }
+
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// BUTTON CLICKS FOR A LITT AND A LOT ////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         private void topLeftPBALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topLeftPB.Invalidate();
-            page1Selections[0] = 1;
+            page1Selections[0] = "A Little";
             //this is just to show the array being updated -- can remove after testing
             label1.Text = string.Join(", ", page1Selections);
             //Update label
@@ -182,68 +211,68 @@ namespace Login {
         private void topLeftPBALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topLeftPB.Invalidate();
-            page1Selections[0] = 2;
+            page1Selections[0] = "A Lot";
             label1.Text = string.Join(", ", page1Selections);
             //summary.LabelText = "Top Left A Lot";
         }
         private void topMidALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topMidPB.Invalidate();
-            page1Selections[1] = 1;
+            page1Selections[1] = "A Little";
             label1.Text = string.Join(", ", page1Selections);
         }
         private void topMidALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topMidPB.Invalidate();
-            page1Selections[1] = 2;
+            page1Selections[1] = "A Lot";
             label1.Text = string.Join(", ", page1Selections);
         }
         private void topRightALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topRightPB.Invalidate();
-            page1Selections[2] = 1;
+            page1Selections[2] = "A Little";
             label1.Text = string.Join(", ", page1Selections);
         }
         private void topRightPBALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picturebox
             topRightPB.Invalidate();
-            page1Selections[2] = 2;
+            page1Selections[2] = "A Lot";
             label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomLeftALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
-            page1Selections[3] = 1;
+            page1Selections[3] = "A Little";
             label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomLeftALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
-            page1Selections[3] = 2;
+            page1Selections[3] = "A Lot";
             label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomMidALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomMidPB.Invalidate();
-            page1Selections[4] = 1;
+            page1Selections[4] = "A Little";
             label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomMidALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomMidPB.Invalidate();
-            page1Selections[4] = 2;
+            page1Selections[4] = "A Lot";
             label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomRightALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomRightPB.Invalidate();
-            page1Selections[5] = 1;
+            page1Selections[5] = "A Little";
             label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomRightALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomRightPB.Invalidate();
-            page1Selections[5] = 2;
+            page1Selections[5] = "A Lot";
             label1.Text = string.Join(", ", page1Selections);
         }
 
@@ -259,9 +288,10 @@ namespace Login {
             System.Drawing.Color tasteHeader = System.Drawing.ColorTranslator.FromHtml("#C2B4E2");
             System.Drawing.Color tasteBg = System.Drawing.ColorTranslator.FromHtml("#E6E6FA");
             //appends label to file on a new line
-            File.AppendAllText(@"c:\test\test.txt", label1.Text + Environment.NewLine);
             Globals.interview_page++;
             if (Globals.interview_page == 2) {
+                writeToDB(page1Selections, "otherPeopleTalking", "fireworks", "loudVoices",
+"householdAppliances", "vehicles", "bathroomAppliances");
                 if (m_InstanceRef2 != null) {
                     InstanceRef2.Show();
                 }
