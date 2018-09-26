@@ -1,6 +1,6 @@
 ﻿namespace Login
 {
-    partial class Form1
+    partial class UserManagment
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserManagment));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -94,6 +94,7 @@
             this.createProfileBtn.TabIndex = 27;
             this.createProfileBtn.Text = "Create Profile";
             this.createProfileBtn.UseVisualStyleBackColor = true;
+            this.createProfileBtn.Click += new System.EventHandler(this.createProfileBtn_Click);
             // 
             // editProfileBtn
             // 
@@ -105,7 +106,7 @@
             this.editProfileBtn.Text = "Edit Selected Profile";
             this.editProfileBtn.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // UserManagment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -116,7 +117,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
-            this.Name = "Form1";
+            this.Name = "UserManagment";
             this.Text = "Create Profile";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -12,9 +12,9 @@ using System.Data.SqlClient;
 
 namespace Login
 {
-    public partial class Form1 : Form
+    public partial class UserManagment : Form
     {
-        public Form1()
+        public UserManagment()
         {
             InitializeComponent();
         }
@@ -45,6 +45,21 @@ namespace Login
             }
         }
 
-        
+        private void createProfileBtn_Click(object sender, EventArgs e)
+        {
+
+            if (Globals.addUserExists == false)
+            {
+                AddUser newUser = new AddUser();
+                newUser.MdiParent = this.MdiParent;
+                newUser.Show();
+                Globals.addUserExists = true;
+            }
+            else
+            {
+                AddUser.staticVar.BringToFront();
+            }
+
+        }
     }
 }

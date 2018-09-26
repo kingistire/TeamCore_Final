@@ -107,12 +107,6 @@
     <Compile Include="UserManagement.Designer.cs">
       <DependentUpon>UserManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewUsers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewUsers.Designer.cs">
-      <DependentUpon>ViewUsers.cs</DependentUpon>
-    </Compile>
     <Compile Include="NewAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,9 +180,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserManagement.resx">
       <DependentUpon>UserManagement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewUsers.resx">
-      <DependentUpon>ViewUsers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="CapstoneDB\CapstoneDB.xsc">
       <DependentUpon>CapstoneDB.xsd</DependentUpon>

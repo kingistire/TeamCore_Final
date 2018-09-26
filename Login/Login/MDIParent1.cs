@@ -34,23 +34,9 @@ namespace Login {
             //label1.Text = ((Form)this.MdiParent).Controls.["label1"]
         }
 
-        private void addNewUserToolStripMenuItem_Click(object sender, EventArgs e) {                      
-            if (Globals.addUserExists == false) {
-                AddUser newUser = new AddUser();
-                newUser.MdiParent = this;
-                newUser.Show();
-                Globals.addUserExists = true;
-            }
-            else {
-                AddUser.staticVar.BringToFront();
-            }
-        }
 
-        private void viewUserProfilesToolStripMenuItem_Click(object sender, EventArgs e) {
-            ViewUsers viewUserProfiles = new ViewUsers();
-            Form1 viewUserManagment = new Form1();
-            viewUserProfiles.MdiParent = this;
-            viewUserProfiles.Show();
+        private void viewUserProfilesToolStripMenuItem_Click(object sender, EventArgs e) {           
+            UserManagment viewUserManagment = new UserManagment();
             viewUserManagment.MdiParent = this;
             viewUserManagment.Show();
         }
