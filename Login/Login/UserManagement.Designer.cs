@@ -34,7 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.createProfileBtn = new System.Windows.Forms.Button();
-            this.editProfileBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -96,27 +95,18 @@
             this.createProfileBtn.UseVisualStyleBackColor = true;
             this.createProfileBtn.Click += new System.EventHandler(this.createProfileBtn_Click);
             // 
-            // editProfileBtn
-            // 
-            this.editProfileBtn.Enabled = false;
-            this.editProfileBtn.Location = new System.Drawing.Point(170, 95);
-            this.editProfileBtn.Name = "editProfileBtn";
-            this.editProfileBtn.Size = new System.Drawing.Size(124, 46);
-            this.editProfileBtn.TabIndex = 28;
-            this.editProfileBtn.Text = "Edit Profile";
-            this.editProfileBtn.UseVisualStyleBackColor = true;
-            // 
             // UserManagment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 462);
-            this.Controls.Add(this.editProfileBtn);
             this.Controls.Add(this.createProfileBtn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "UserManagment";
             this.Text = "Create Profile";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -134,6 +124,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button createProfileBtn;
-        private System.Windows.Forms.Button editProfileBtn;
     }
 }

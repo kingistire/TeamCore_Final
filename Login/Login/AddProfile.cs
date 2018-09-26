@@ -56,7 +56,6 @@ namespace Login {
             cmd.Parameters.AddWithValue("@email", tbEmail.Text.Trim());
             cmd.ExecuteNonQuery();
             MessageBox.Show("New user has been added successfully.");
-            Globals.addUserExists = false;
             this.Close();
             con.Close();
         }

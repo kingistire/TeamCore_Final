@@ -23,7 +23,6 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddUser));
             this.tbFname = new System.Windows.Forms.TextBox();
             this.tbLname = new System.Windows.Forms.TextBox();
             this.tbAge = new System.Windows.Forms.TextBox();
@@ -47,7 +46,7 @@
             // tbFname
             // 
             this.tbFname.Location = new System.Drawing.Point(212, 144);
-            this.tbFname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbFname.Margin = new System.Windows.Forms.Padding(2);
             this.tbFname.Name = "tbFname";
             this.tbFname.Size = new System.Drawing.Size(112, 20);
             this.tbFname.TabIndex = 0;
@@ -55,7 +54,7 @@
             // tbLname
             // 
             this.tbLname.Location = new System.Drawing.Point(212, 176);
-            this.tbLname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLname.Margin = new System.Windows.Forms.Padding(2);
             this.tbLname.Name = "tbLname";
             this.tbLname.Size = new System.Drawing.Size(112, 20);
             this.tbLname.TabIndex = 1;
@@ -63,7 +62,7 @@
             // tbAge
             // 
             this.tbAge.Location = new System.Drawing.Point(212, 241);
-            this.tbAge.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbAge.Margin = new System.Windows.Forms.Padding(2);
             this.tbAge.Name = "tbAge";
             this.tbAge.Size = new System.Drawing.Size(112, 20);
             this.tbAge.TabIndex = 4;
@@ -121,7 +120,7 @@
             // tbPhone
             // 
             this.tbPhone.Location = new System.Drawing.Point(212, 322);
-            this.tbPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPhone.Margin = new System.Windows.Forms.Padding(2);
             this.tbPhone.Name = "tbPhone";
             this.tbPhone.Size = new System.Drawing.Size(112, 20);
             this.tbPhone.TabIndex = 5;
@@ -129,7 +128,7 @@
             // tbEmail
             // 
             this.tbEmail.Location = new System.Drawing.Point(212, 354);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(112, 20);
             this.tbEmail.TabIndex = 6;
@@ -166,7 +165,7 @@
             "Female",
             "Other"});
             this.cbGender.Location = new System.Drawing.Point(212, 209);
-            this.cbGender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbGender.Margin = new System.Windows.Forms.Padding(2);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(112, 21);
             this.cbGender.TabIndex = 3;
@@ -216,10 +215,9 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Navy;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.Location = new System.Drawing.Point(190, 392);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(132, 43);
             this.btnSave.TabIndex = 7;
@@ -230,9 +228,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(248, 28);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 73);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -264,7 +261,9 @@
             this.Controls.Add(this.tbLname);
             this.Controls.Add(this.tbFname);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Add User";

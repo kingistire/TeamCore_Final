@@ -139,6 +139,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddProfile.resx">
+      <DependentUpon>AddProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditUser2.resx">
       <DependentUpon>EditUser2.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewOTAccount.resx">
       <DependentUpon>NewOTAccount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddUser.resx">
-      <DependentUpon>AddProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interview.resx">
       <DependentUpon>Interview.cs</DependentUpon>

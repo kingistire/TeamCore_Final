@@ -48,23 +48,21 @@ namespace Login
         private void createProfileBtn_Click(object sender, EventArgs e)
         {
 
-            if (Globals.addUserExists == false)
-            {
+            //if (Globals.addUserExists == false)
+            //{
                 AddUser newUser = new AddUser();
                 newUser.MdiParent = this.MdiParent;
                 newUser.Show();
                 Globals.addUserExists = true;
-            }
-            else
-            { 
-                AddUser.staticVar.BringToFront();
-            }
+            //}
+            //    else
+            //    { 
+            //    AddUser.staticVar.BringToFront();
+            //    }
 
+            //
         }
 
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
-        {
-            editProfileBtn.Enabled = true;
-        }
+        
     }
 }
