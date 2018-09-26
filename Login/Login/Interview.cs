@@ -23,6 +23,9 @@ namespace Login {
             createCirclePB(topLeftPB);
             createCirclePB(topRightPB);
             createCirclePB(topMidPB);
+            
+
+            
 
             if (Globals.interview_page >= 2) {
                 previousInterviewSlideBtn.Visible = true;
@@ -156,31 +159,30 @@ namespace Login {
         //if they make no selection it remains as 0
         string[] page1Selections = new string[6] { "", "", "", "", "", "" };
 
-        //string[] imageLabelArray = new string[6] { "", "", "", "", "", "" };
-
+            /// <summary>
+            /// Insert to database if 6 images are there
+            /// </summary>
+            /// <param name="array"></param>
+            /// <param name="TLImageName"></param>
+            /// <param name="TMImageName"></param>
+            /// <param name="TRImageName"></param>
+            /// <param name="BLImageName"></param>
+            /// <param name="BMImageName"></param>
+            /// <param name="BRImageName"></param>
         private void writeToDB(string[] array, string TLImageName, string TMImageName, string TRImageName, string BLImageName, string BMImageName, string BRImageName) {
 
-            string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
-                @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlCommand cmdDatabase;
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
             SqlConnection conDatabase = new SqlConnection(constring);
 
-            /* SqlCommand cmdDatabase;
-            conDatabase.Open();
-            string query = "INSERT INTO dbo.Summary (otherPeopleTalking) VALUES (@tl)";
-            cmdDatabase = new SqlCommand(query, conDatabase);
-
-            cmdDatabase.Parameters.AddWithValue("@tl", "ALittle");
-            cmdDatabase.ExecuteNonQuery();
-            conDatabase.Close(); */
-
-            SqlCommand cmdDatabase;
             //Determine if a little or a lot
             try {
                 conDatabase.Open();
                 string query = "INSERT INTO dbo.Summary (" + TLImageName + "," + TMImageName + "," +
                      TRImageName + "," +
                       BLImageName + "," +
-                       BMImageName + "," + BRImageName + ") VALUES (@tl, @tm, @tr, @bl, @bm, @br)";
+                       BMImageName + "," + BRImageName + ") VALUES (@tl, @tm, @tr, @bl, @bm, @br);";
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
@@ -189,7 +191,27 @@ namespace Login {
                 cmdDatabase.Parameters.AddWithValue("@bm", page1Selections[4]);
                 cmdDatabase.Parameters.AddWithValue("@br", page1Selections[5]);
                 cmdDatabase.ExecuteNonQuery();
-                conDatabase.Close();
+            } catch (Exception err) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);
+            }
+        }
+
+        private void writeToDBTop3(string[] array, string TLImageName, string TMImageName, string TRImageName) {
+
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+
+            SqlCommand cmdDatabase;
+            //Determine if a little or a lot
+            try {
+                conDatabase.Open();
+                string query = "UPDATE dbo.Summary SET " + TLImageName + "=@tl," + TMImageName +"=@tm," + TRImageName + "=@tr;";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
+                cmdDatabase.ExecuteNonQuery();
             } catch (Exception err) {
                 MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);
             }
@@ -291,7 +313,7 @@ namespace Login {
             Globals.interview_page++;
             if (Globals.interview_page == 2) {
                 writeToDB(page1Selections, "otherPeopleTalking", "fireworks", "loudVoices",
-"householdAppliances", "vehicles", "bathroomAppliances");
+                                            "householdAppliances", "vehicles", "bathroomAppliances");
                 if (m_InstanceRef2 != null) {
                     InstanceRef2.Show();
                 }
@@ -306,7 +328,8 @@ namespace Login {
             //-------------
             //SOUND SECTION
             //-------------
-            else if (Globals.interview_page == 3) {            
+            else if (Globals.interview_page == 3) {
+                writeToDBTop3(page1Selections, "concentrating", "hardToListenInClassroom", "hardToListenInGroup");
                 Interview interviewForm3 = new Interview();
                 interviewForm3.InstanceRef2 = this;
                 interviewForm3.Location = new Point(0, 0);
