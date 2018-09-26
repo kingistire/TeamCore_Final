@@ -175,14 +175,21 @@ namespace Login {
             const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                                     @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
             SqlConnection conDatabase = new SqlConnection(constring);
-
+            string query;
             //Determine if a little or a lot
             try {
                 conDatabase.Open();
-                string query = "INSERT INTO dbo.Summary (" + TLImageName + "," + TMImageName + "," +
-                     TRImageName + "," +
-                      BLImageName + "," +
-                       BMImageName + "," + BRImageName + ") VALUES (@tl, @tm, @tr, @bl, @bm, @br);";
+                if(Globals.interview_page == 2) {
+                    query = "INSERT INTO dbo.Summary (" + TLImageName + "," + TMImageName + "," +
+                         TRImageName + "," +
+                          BLImageName + "," +
+                           BMImageName + "," + BRImageName + ") VALUES (@tl, @tm, @tr, @bl, @bm, @br);";
+                } else {
+                    query = "UPDATE dbo.Summary set " + TLImageName + "=@tl," + TMImageName + "=@tm," +
+                        TRImageName + "=@tr," +
+                        BLImageName + "=@bl," +
+                        BMImageName + "=@bm," + BRImageName + "=@br;";
+                }
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
