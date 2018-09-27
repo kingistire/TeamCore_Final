@@ -24,7 +24,6 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditProfile));
-            this.tbFname = new System.Windows.Forms.TextBox();
             this.tbLname = new System.Windows.Forms.TextBox();
             this.tbAge = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,20 +43,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.nameTitle = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tbFname = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tbFname
-            // 
-            this.tbFname.Location = new System.Drawing.Point(212, 144);
-            this.tbFname.Margin = new System.Windows.Forms.Padding(2);
-            this.tbFname.Name = "tbFname";
-            this.tbFname.ReadOnly = true;
-            this.tbFname.Size = new System.Drawing.Size(112, 20);
-            this.tbFname.TabIndex = 2;
-            this.tbFname.Click += new System.EventHandler(this.tbFname_Click);
-            this.tbFname.Leave += new System.EventHandler(this.tbFname_Leave);
             // 
             // tbLname
             // 
@@ -285,12 +274,22 @@
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.Visible = false;
             // 
+            // tbFname
+            // 
+            this.tbFname.Enabled = false;
+            this.tbFname.Location = new System.Drawing.Point(211, 141);
+            this.tbFname.Margin = new System.Windows.Forms.Padding(2);
+            this.tbFname.Name = "tbFname";
+            this.tbFname.Size = new System.Drawing.Size(112, 20);
+            this.tbFname.TabIndex = 19;
+            // 
             // EditProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(370, 455);
+            this.Controls.Add(this.tbFname);
             this.Controls.Add(this.nameTitle);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label9);
@@ -310,7 +309,6 @@
             this.Controls.Add(this.tbPhone);
             this.Controls.Add(this.tbAge);
             this.Controls.Add(this.tbLname);
-            this.Controls.Add(this.tbFname);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditProfile";
@@ -325,7 +323,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox tbFname;
         private System.Windows.Forms.TextBox tbLname;
         private System.Windows.Forms.TextBox tbAge;
         private System.Windows.Forms.Label label2;
@@ -345,5 +342,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label nameTitle;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox tbFname;
     }
 }
