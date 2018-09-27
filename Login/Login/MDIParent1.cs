@@ -57,5 +57,11 @@ namespace Login {
             InterviewCover newInterview = new InterviewCover();
             newInterview.Show();
         }
+
+        private void viewUserSummaryToolStripMenuItem_Click(object sender, EventArgs e) {
+            ViewResultsTable vrt = new ViewResultsTable();
+            vrt.Show();
+
+        }
     }
 }
