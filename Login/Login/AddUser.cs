@@ -33,6 +33,7 @@ namespace Login {
             else {
                 Globals.addUserExists = false;
             }
+
 }
         private void AddUser_Resize(object sender, EventArgs e) {
             //RestoreBounds Property contains the original shape
@@ -56,6 +57,7 @@ namespace Login {
             cmd.Parameters.AddWithValue("@email", tbEmail.Text.Trim());
             cmd.ExecuteNonQuery();
             MessageBox.Show("New user has been added successfully.");
+            Globals.addUserExists = false;
             this.Close();
             con.Close();
         }

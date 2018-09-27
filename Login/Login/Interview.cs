@@ -179,6 +179,7 @@ namespace Login {
             //Determine if a little or a lot
             try {
                 conDatabase.Open();
+                //Change interview_page to see if previous button has been clicked
                 if(Globals.interview_page == 2) {
                     query = "INSERT INTO dbo.Summary (" + TLImageName + "," + TMImageName + "," +
                          TRImageName + "," +
@@ -218,6 +219,92 @@ namespace Login {
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
                 cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception err) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);
+            }
+        }
+
+        private void writeToDBTop2(string[] array, string TLImageName, string TMImageName) {
+
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+
+            SqlCommand cmdDatabase;
+            //Determine if a little or a lot
+            try {
+                conDatabase.Open();
+                string query = "UPDATE dbo.Summary SET " + TLImageName + "=@tl," + TMImageName + "=@tm;";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception err) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);
+            }
+        }
+
+        /// <summary>
+        /// Write to DB for 5 picture boxes
+        /// </summary>
+        /// <param name="array"></param>
+        /// <param name="TLImageName"></param>
+        /// <param name="TMImageName"></param>
+        /// <param name="TRImageName"></param>
+        /// <param name="BLImageName"></param>
+        /// <param name="BMImageName"></param>
+        private void writeToDB5(string[] array, string TLImageName, string TMImageName, string TRImageName, string BLImageName, string BMImageName) {
+
+            SqlCommand cmdDatabase;
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            string query;
+            //Determine if a little or a lot
+            try {
+                conDatabase.Open();
+                query = "UPDATE dbo.Summary SET " + TLImageName + "=@tl," + TMImageName + "=@tm," + TRImageName + "=@tr," + BLImageName + "=@bl," + BMImageName + "=@bm;";
+                
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
+                cmdDatabase.Parameters.AddWithValue("@bl", page1Selections[3]);
+                cmdDatabase.Parameters.AddWithValue("@bm", page1Selections[4]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception err) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);
+            }
+        }
+
+
+        /// <summary>
+        /// For 4 images
+        /// </summary>
+        /// <param name="array"></param>
+        /// <param name="TLImageName"></param>
+        /// <param name="TMImageName"></param>
+        /// <param name="TRImageName"></param>
+        /// <param name="BLImageName"></param>
+        /// <param name="BMImageName"></param>
+        private void writeToDB4(string[] array, string TLImageName, string TMImageName, string TRImageName, string BLImageName) {
+
+            SqlCommand cmdDatabase;
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            string query;
+            //Determine if a little or a lot
+            try {
+                conDatabase.Open();
+                query = "UPDATE dbo.Summary SET " + TLImageName + "=@tl," + TMImageName + "=@tm," + TRImageName + "=@tr," + BLImageName + "=@bl;";
+
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
+                cmdDatabase.Parameters.AddWithValue("@bl", page1Selections[3]);
                 cmdDatabase.ExecuteNonQuery();
             } catch (Exception err) {
                 MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);
@@ -343,7 +430,8 @@ namespace Login {
                 interviewForm3.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 4) {                
+            else if (Globals.interview_page == 4) {
+                writeToDBTop3(page1Selections, "radioOn", "clockTicking", "peopleTalking");
                 Interview interviewForm4 = new Interview();
                 interviewForm4.InstanceRef3 = this;
                 interviewForm4.Location = new Point(0, 0);
@@ -351,6 +439,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 5) {
+                writeToDB5(page1Selections, "computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms");
                 Interview interviewForm5 = new Interview();
                 interviewForm5.InstanceRef4 = this;
                 interviewForm5.Location = new Point(0, 0);
@@ -361,6 +450,7 @@ namespace Login {
             //SIGHT SECTION
             //-------------
             else if (Globals.interview_page == 6) {
+                writeToDB4(page1Selections, "hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen");
                 Interview sightInterview1 = new Interview();
                 sightInterview1.InstanceRef5 = this;
                 sightInterview1.Location = new Point(0, 0);
@@ -372,6 +462,7 @@ namespace Login {
                 sightInterview1.Show();
                 this.Hide();
             } else if (Globals.interview_page == 7) {
+                writeToDB5(page1Selections, "sunlight", "fluroescentLight", "lightAndShadow", "busyPatterns", "classroomLight");
                 Interview sightInterview2 = new Interview();
                 sightInterview2.InstanceRef6 = this;
                 sightInterview2.Location = new Point(0, 0);
@@ -383,6 +474,7 @@ namespace Login {
                 sightInterview2.Show();
                 this.Hide();
             } else if (Globals.interview_page == 8) {
+                writeToDBTop3(page1Selections, "lotsOfThingsInMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom");
                 Interview sightInterview3 = new Interview();
                 sightInterview3.InstanceRef7 = this;
                 sightInterview3.Location = new Point(0, 0);
@@ -398,6 +490,7 @@ namespace Login {
             //TOUCH SECTION
             //-------------
             else if (Globals.interview_page == 9) {
+                writeToDB5(page1Selections, "movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects");
                 Interview touchInterview1 = new Interview();
                 touchInterview1.InstanceRef8 = this;
                 touchInterview1.Location = new Point(0, 0);
@@ -409,6 +502,7 @@ namespace Login {
                 touchInterview1.Show();
                 this.Hide();
             } else if (Globals.interview_page == 10) {
+                writeToDB(page1Selections, "sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes");
                 Interview touchInterview2 = new Interview();
                 touchInterview2.InstanceRef9 = this;
                 touchInterview2.Location = new Point(0, 0);
@@ -420,6 +514,7 @@ namespace Login {
                 touchInterview2.Show();
                 this.Hide();
             } else if (Globals.interview_page == 11) {
+                writeToDBTop2(page1Selections, "shoes", "splashingWater");
                 Interview touchInterview3 = new Interview();
                 touchInterview3.InstanceRef10 = this;
                 touchInterview3.Location = new Point(0, 0);
@@ -432,6 +527,8 @@ namespace Login {
                 touchInterview3.Show();
                 this.Hide();
             } else if (Globals.interview_page == 12) {
+                writeToDB(page1Selections, "beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut");
+
                 Interview touchInterview4 = new Interview();
                 touchInterview4.InstanceRef11 = this;
                 touchInterview4.Location = new Point(0, 0);
@@ -448,6 +545,7 @@ namespace Login {
             //SMELL SECTION
             //-------------
             else if (Globals.interview_page == 13) {
+                writeToDBTop2(page1Selections, "doctorTouchingMe", "dentistTouchingMe");
                 Interview smellInterview1 = new Interview();
                 smellInterview1.InstanceRef12 = this;
                 smellInterview1.Location = new Point(0, 0);
@@ -459,6 +557,7 @@ namespace Login {
                 smellInterview1.Show();
                 this.Hide();
             } else if (Globals.interview_page == 14) {
+                writeToDB(page1Selections, "soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow");
                 Interview smellInterview2 = new Interview();
                 smellInterview2.InstanceRef13 = this;
                 smellInterview2.Location = new Point(0, 0);
@@ -473,7 +572,8 @@ namespace Login {
             //-------------
             //TASTE SECTION
             //-------------
-            else if (Globals.interview_page == 15) {               
+            else if (Globals.interview_page == 15) {
+                writeToDB5(page1Selections, "smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople");
                 Interview tasteInterview1 = new Interview();
                 tasteInterview1.InstanceRef14 = this;
                 tasteInterview1.Location = new Point(0, 0);
@@ -485,6 +585,8 @@ namespace Login {
                 tasteInterview1.Show();
                 this.Hide();
             } else if (Globals.interview_page == 16) {
+                writeToDB(page1Selections, "vegetables", "fruit", "meat", "fish", "eggs", "dairy");
+
                 Interview tasteInterview1p2 = new Interview();
                 tasteInterview1p2.InstanceRef15 = this;
                 tasteInterview1p2.Location = new Point(0, 0);
@@ -497,6 +599,8 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 17) {
+                writeToDBTop2(page1Selections, "bread", "pasta");
+
                 Interview tasteInterview2 = new Interview();
                 tasteInterview2.InstanceRef17 = this;
                 tasteInterview2.Location = new Point(0, 0);
@@ -509,6 +613,8 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 18) {
+                writeToDB(page1Selections, "lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour");
+
                 Interview tasteInterview3 = new Interview();
                 tasteInterview3.InstanceRef18 = this;
                 tasteInterview3.Location = new Point(0, 0);
@@ -521,6 +627,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 19) {
+
                 Interview tasteInterview4 = new Interview();
                 tasteInterview4.InstanceRef19 = this;
                 tasteInterview4.Location = new Point(0, 0);
@@ -533,6 +640,8 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 20) {
+                writeToDBTop3(page1Selections, "shirt", "hair", "objects");
+
                 Interview mvmtInterview1 = new Interview();
                 mvmtInterview1.InstanceRef20 = this;
                 mvmtInterview1.Location = new Point(0, 0);
@@ -545,6 +654,8 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 21) {
+                writeToDB5(page1Selections, "beingJumpedOnOrTackled", "movingWhenICantSeeWhereImGoing", "balancing", "beingUpsideDown", "climbingUpHigh");
+
                 Interview mvmtInterview2 = new Interview();
                 mvmtInterview2.InstanceRef21 = this;
                 mvmtInterview2.Location = new Point(0, 0);
@@ -557,6 +668,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 22) {
+                writeToDBTop2(page1Selections, "standingStill", "sittingStill");
                 this.Hide();
                 Interview mvmtInterview3 = new Interview();
                 mvmtInterview3.InstanceRef22 = this;
@@ -569,6 +681,7 @@ namespace Login {
                 mvmtInterview3.Show();
             }
             else if (Globals.interview_page == 23) {
+                writeToDB5(page1Selections, "movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running");
                 Interview mvmtInterview4 = new Interview();
                 mvmtInterview4.InstanceRef23 = this;
                 mvmtInterview4.Location = new Point(0, 0);
@@ -584,6 +697,7 @@ namespace Login {
             //ENVIRONMENT SECTION
             //-------------------
             else if (Globals.interview_page == 24) {
+                writeToDB4(page1Selections, "rocking", "movingHands", "clapping", "pacing");
                 Interview environmentInterview1 = new Interview();
                 environmentInterview1.InstanceRef23 = this;
                 environmentInterview1.Location = new Point(0, 0);
@@ -599,6 +713,7 @@ namespace Login {
             //OTHER SECTION
             //-------------
             else if (Globals.interview_page == 25) {
+                writeToDB5(page1Selections, "supermarket", "party", "foodHall", "show", "shoppingMall");
                 Interview otherInterview1 = new Interview();
                 otherInterview1.InstanceRef23 = this;
                 otherInterview1.Location = new Point(0, 0);
@@ -609,6 +724,10 @@ namespace Login {
                 otherInterview1.label5.BackColor = Color.Tan;
                 otherInterview1.Show();
                 this.Hide();
+            } else if (Globals.interview_page == 26) {
+                writeToDB(page1Selections, "sounds", "smells", "sights", "tastes", "feelings", "movements");
+                Summary sum = new Summary();
+                sum.Show();
             }
         }
 
