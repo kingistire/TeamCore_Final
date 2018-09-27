@@ -121,6 +121,7 @@
             this.Name = "UserManagment";
             this.Text = "Create Profile";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Enter += new System.EventHandler(this.UserManagment_GotFocus);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userProfileManagmentGrid)).EndInit();
             this.ResumeLayout(false);

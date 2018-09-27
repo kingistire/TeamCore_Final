@@ -19,8 +19,7 @@ namespace Login
             InitializeComponent();
         }
 
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void load_data()
         {
             string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                 @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
@@ -45,7 +44,16 @@ namespace Login
                 MessageBox.Show(ex.Message);
             }
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            load_data();
+        }
 
+        private void UserManagment_GotFocus(Object sender, EventArgs e)
+        {
+            load_data();
+
+        }
         private void createProfileBtn_Click(object sender, EventArgs e)
         {
 
