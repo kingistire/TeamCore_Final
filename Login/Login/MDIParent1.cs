@@ -59,8 +59,10 @@ namespace Login {
         }
 
         private void viewUserSummaryToolStripMenuItem_Click(object sender, EventArgs e) {
-            ViewResultsTable vrt = new ViewResultsTable();
-            vrt.Show();
+            //ViewResultsTable vrt = new ViewResultsTable();
+            //vrt.Show();
+            Summary sum = new Summary();
+            sum.Show();
 
         }
 
