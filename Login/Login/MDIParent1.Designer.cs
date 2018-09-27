@@ -33,6 +33,7 @@
             this.viewUserProfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteUserToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editExistingUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewUserSummaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
@@ -77,7 +78,8 @@
             this.manageUsersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewUserProfilesToolStripMenuItem,
             this.deleteUserToolStripMenuItem1,
-            this.editExistingUserToolStripMenuItem});
+            this.editExistingUserToolStripMenuItem,
+            this.viewUserSummaryToolStripMenuItem});
             this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
             this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.manageUsersToolStripMenuItem.Text = "Manage users";
@@ -102,6 +104,13 @@
             this.editExistingUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editExistingUserToolStripMenuItem.Text = "Edit existing user";
             this.editExistingUserToolStripMenuItem.Click += new System.EventHandler(this.editExistingUserToolStripMenuItem_Click);
+            // 
+            // viewUserSummaryToolStripMenuItem
+            // 
+            this.viewUserSummaryToolStripMenuItem.Name = "viewUserSummaryToolStripMenuItem";
+            this.viewUserSummaryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewUserSummaryToolStripMenuItem.Text = "View User Summary";
+            this.viewUserSummaryToolStripMenuItem.Click += new System.EventHandler(this.viewUserSummaryToolStripMenuItem_Click);
             // 
             // menuStrip
             // 
@@ -147,6 +156,7 @@
         private System.Windows.Forms.ToolStripMenuItem viewUserProfilesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteUserToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editExistingUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewUserSummaryToolStripMenuItem;
     }
 }
 
