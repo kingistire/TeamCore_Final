@@ -50,7 +50,6 @@
             // 
             // tbLname
             // 
-            this.tbLname.Enabled = false;
             this.tbLname.Location = new System.Drawing.Point(212, 176);
             this.tbLname.Margin = new System.Windows.Forms.Padding(2);
             this.tbLname.Name = "tbLname";
@@ -59,7 +58,6 @@
             // 
             // tbAge
             // 
-            this.tbAge.Enabled = false;
             this.tbAge.Location = new System.Drawing.Point(212, 241);
             this.tbAge.Margin = new System.Windows.Forms.Padding(2);
             this.tbAge.Name = "tbAge";
@@ -118,7 +116,6 @@
             // 
             // tbPhone
             // 
-            this.tbPhone.Enabled = false;
             this.tbPhone.Location = new System.Drawing.Point(212, 322);
             this.tbPhone.Margin = new System.Windows.Forms.Padding(2);
             this.tbPhone.Name = "tbPhone";
@@ -127,7 +124,6 @@
             // 
             // tbEmail
             // 
-            this.tbEmail.Enabled = false;
             this.tbEmail.Location = new System.Drawing.Point(212, 354);
             this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
@@ -160,7 +156,6 @@
             // 
             // cbGender
             // 
-            this.cbGender.Enabled = false;
             this.cbGender.FormattingEnabled = true;
             this.cbGender.Items.AddRange(new object[] {
             "Male",
@@ -227,7 +222,8 @@
             this.btnSave.Text = "Update User";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
+            //this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
+            
             // 
             // pictureBox1
             // 
@@ -276,7 +272,6 @@
             // 
             // tbFname
             // 
-            this.tbFname.Enabled = false;
             this.tbFname.Location = new System.Drawing.Point(211, 141);
             this.tbFname.Margin = new System.Windows.Forms.Padding(2);
             this.tbFname.Name = "tbFname";

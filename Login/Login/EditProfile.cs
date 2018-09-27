@@ -26,14 +26,20 @@ namespace Login {
             tbPhone.Text = dataValue.Cells[6].Value.ToString();
             tbEmail.Text = dataValue.Cells[7].Value.ToString();
             this.Location = new Point(0, 0);
+
+            this.btnSave.Click += ((sender, e) => btnSave_Click_1(sender, e, dataValue));
+
         }
 
 
         
-        private void btnSave_Click_1(object sender, EventArgs e) {
+        private void btnSave_Click_1(object sender, EventArgs e, DataGridViewRow dataValue) {
             string genderSelection = "";
+            // set the combo box so it doesnt break
+            cbGender.SelectedIndex = cbGender.FindStringExact(dataValue.Cells[4].Value.ToString());
             //if gender is not chosen, program crashes
-            genderSelection = cbGender.Items[cbGender.SelectedIndex].ToString();
+
+            genderSelection = cbGender.Items[cbGender.SelectedIndex].ToString().Trim();
             //con = new SqlConnection("Data Source=DESKTOP-G8RH1E3\\SQLEXPRESS;Initial Catalog=CapstoneDB;Integrated Security=True");
             //string query = "UPDATE testUser SET Id='" + this.label9.Text + "',firstName='" + this.tbFname.Text + "',lastName='" + this.tbLname.Text + "',gender='" + this.cbGender.Text + "',age='" + this.tbAge.Text + "',phone='" + this.tbPhone.Text + "',email='" + this.tbEmail.Text + "' WHERE Id='" + this.label9.Text + "'; ";
             //string query = "update testUser set name'" + tbFname.Text + "' where Id='" + label9.Text + "'";
@@ -46,7 +52,7 @@ namespace Login {
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand("UPDATE UserInformation SET firstName=@NewFirstName, lastName=@NewLastName, gender=@NewGender, age=@NewAge, phone=@NewPhone, email=@NewEmail" +
                         " WHERE Id=@Id", conn)) {
-                    cmd.Parameters.AddWithValue("@Id", label9.Text);
+                    cmd.Parameters.AddWithValue("@Id", dataValue.Cells[1].Value.ToString());
                     cmd.Parameters.AddWithValue("@NewFirstName", tbFname.Text);
                     cmd.Parameters.AddWithValue("@NewLastName", tbLname.Text);
                     cmd.Parameters.AddWithValue("@NewGender", genderSelection);

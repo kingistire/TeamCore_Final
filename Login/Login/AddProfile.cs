@@ -43,6 +43,9 @@ namespace Login {
         private void btnSave_Click_1(object sender, EventArgs e) {
             string genderSelection = "";
             //if gender is not chosen, program crashes
+            cbGender.SelectedIndex = cbGender.FindStringExact(cbGender.Text); // allows people to type in Male/female
+
+
             genderSelection = cbGender.Items[cbGender.SelectedIndex].ToString().Trim();
             con = new SqlConnection(@"Data Source =(LocalDB)\MSSQLLocalDB;" + 
                 @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True");
