@@ -14,16 +14,14 @@ namespace Login {
     public partial class NewOTAccount : Form {
         SqlCommand cmd;
         SqlConnection con;
-        SqlDataAdapter da;
 
-        public event System.Windows.Forms.FormClosingEventHandler FormClosing;
+        //public event System.Windows.Forms.FormClosingEventHandler FormClosing;
 
         public NewOTAccount() {
             InitializeComponent();
             this.Location = new Point(0, 0);
             tbPass1.PasswordChar = '*';
             tbPass2.PasswordChar = '*';
-
         }
 
         private void NewAccount_FormClosing(Object sender, FormClosingEventArgs e) {

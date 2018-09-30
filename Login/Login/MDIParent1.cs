@@ -54,8 +54,8 @@ namespace Login {
         }
 
         private void fileToolStripMenuItem_Click(object sender, EventArgs e) {
-            InterviewCover newInterview = new InterviewCover();
-            newInterview.Show();
+            SelectInterview selectInterview = new SelectInterview();
+            selectInterview.Show();
         }
 
         private void viewUserSummaryToolStripMenuItem_Click(object sender, EventArgs e) {

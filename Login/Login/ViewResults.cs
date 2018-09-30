@@ -15,10 +15,6 @@ namespace Login {
             InitializeComponent();
         }
 
-        SqlCommand cmd;
-        SqlConnection con;
-        SqlDataAdapter da;
-
         private void btnSave_Click_1(object sender, EventArgs e) {
             string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                 @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
@@ -30,7 +26,7 @@ namespace Login {
                 Console.WriteLine("Success");
                 sum.Show();
             } catch (Exception ex) {
-                MessageBox.Show("An error has occurred");
+                MessageBox.Show("An error has occurred: " + ex);
             }
 
         }

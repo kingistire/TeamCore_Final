@@ -14,7 +14,6 @@ namespace Login {
     public partial class DeleteUser : Form {
         SqlCommand cmd;
         SqlConnection con;
-        SqlDataAdapter da;
 
         public DeleteUser() {
             InitializeComponent();
@@ -34,6 +33,7 @@ namespace Login {
                 this.Close();
                 while (myReader.Read()){ }
             } catch (Exception ex) {
+                MessageBox.Show("An error has occurred: " + ex);
             }
             }
         }

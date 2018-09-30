@@ -12,9 +12,6 @@ using System.Data.SqlClient;
 
 namespace Login {
     public partial class EditUser1 : Form {
-        SqlCommand cmd;
-        SqlConnection con;
-        SqlDataAdapter da;
 
         public EditUser1() {
             InitializeComponent();

@@ -14,7 +14,6 @@ namespace Login {
     public partial class AddUser : Form {
         SqlCommand cmd;
         SqlConnection con;
-        SqlDataAdapter da;
 
         public static AddUser staticVar = null;
 

@@ -222,7 +222,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label testLabel;
         private System.Windows.Forms.BindingSource capstoneDBDataSetBindingSource;
         private System.Windows.Forms.DataGridView summaryDataGrid;
     }

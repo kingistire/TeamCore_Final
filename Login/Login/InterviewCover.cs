@@ -17,7 +17,7 @@ namespace Login {
 
         private void button2_Click(object sender, EventArgs e) {
             
-            Interview interviewForm1 = new Interview();
+            GuidedInterview interviewForm1 = new GuidedInterview();
             interviewForm1.MdiParent = MdiParent;
             interviewForm1.Show();
             this.Close();

@@ -86,11 +86,23 @@
     <Compile Include="DeleteUser.Designer.cs">
       <DependentUpon>DeleteUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="IndependentInterview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IndependentInterview.Designer.cs">
+      <DependentUpon>IndependentInterview.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterviewCover.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InterviewCover.Designer.cs">
       <DependentUpon>InterviewCover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectInterview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectInterview.Designer.cs">
+      <DependentUpon>SelectInterview.cs</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
@@ -119,11 +131,11 @@
     <Compile Include="AddUser.Designer.cs">
       <DependentUpon>AddProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interview.cs">
+    <Compile Include="GuidedInterview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interview.Designer.cs">
-      <DependentUpon>Interview.cs</DependentUpon>
+    <Compile Include="GuidedInterview.Designer.cs">
+      <DependentUpon>GuidedInterview.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -163,14 +175,20 @@
     <EmbeddedResource Include="DeleteUser.resx">
       <DependentUpon>DeleteUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IndependentInterview.resx">
+      <DependentUpon>IndependentInterview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterviewCover.resx">
       <DependentUpon>InterviewCover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectInterview.resx">
+      <DependentUpon>SelectInterview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewOTAccount.resx">
       <DependentUpon>NewOTAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interview.resx">
-      <DependentUpon>Interview.cs</DependentUpon>
+    <EmbeddedResource Include="GuidedInterview.resx">
+      <DependentUpon>GuidedInterview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

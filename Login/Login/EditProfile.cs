@@ -12,9 +12,6 @@ using System.Data.SqlClient;
 
 namespace Login {
     public partial class EditProfile : Form {
-        SqlCommand cmd;
-        SqlConnection con;
-        SqlDataAdapter da;
 
         public EditProfile(DataGridViewRow dataValue) {
             InitializeComponent();
@@ -59,7 +56,9 @@ namespace Login {
                         MessageBox.Show("User has been updated successfully.");
                         this.Close();
                     }
-                    catch (Exception ex) { }
+                    catch (Exception ex) {
+                        MessageBox.Show("An error has occurred: " + ex);
+                    }
                 }
             }
         }
