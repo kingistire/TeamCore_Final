@@ -12,9 +12,13 @@ using System.Data.SqlClient;
 
 namespace Login {
     public partial class EditProfile : Form {
+        DataGridViewRow profileDataRow;
 
         public EditProfile(DataGridViewRow dataValue) {
             InitializeComponent();
+            profileDataRow = dataValue;
+
+
             nameTitle.Text = dataValue.Cells[3].Value.ToString() + ' ' + dataValue.Cells[4].Value.ToString();
             tbFname.Text = dataValue.Cells[3].Value.ToString();
             tbLname.Text = dataValue.Cells[4].Value.ToString();
@@ -24,7 +28,6 @@ namespace Login {
             tbEmail.Text = dataValue.Cells[8].Value.ToString();
             this.Location = new Point(0, 0);
         }
-
 
         
         private void btnSave_Click_1(object sender, EventArgs e) {
@@ -43,7 +46,7 @@ namespace Login {
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand("UPDATE UserInformation SET firstName=@NewFirstName, lastName=@NewLastName, gender=@NewGender, age=@NewAge, phone=@NewPhone, email=@NewEmail" +
                         " WHERE Id=@Id", conn)) {
-                    cmd.Parameters.AddWithValue("@Id", label9.Text);
+                    cmd.Parameters.AddWithValue("@Id", profileDataRow.Cells[2].Value.ToString());
                     cmd.Parameters.AddWithValue("@NewFirstName", tbFname.Text);
                     cmd.Parameters.AddWithValue("@NewLastName", tbLname.Text);
                     cmd.Parameters.AddWithValue("@NewGender", genderSelection);

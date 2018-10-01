@@ -70,5 +70,12 @@ namespace Login
         {
             load_data();
         }
+
+        private void deleteUserBtn_Click(object sender, EventArgs e)
+        {
+            DeleteUser deleteUserProfile = new DeleteUser(thisUser.Cells[2].Value.ToString().Trim());
+            deleteUserProfile.MdiParent = this.MdiParent;
+            deleteUserProfile.Show();
+        }
     }
 }

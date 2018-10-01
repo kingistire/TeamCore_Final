@@ -39,6 +39,7 @@
             this.resultsHeader = new System.Windows.Forms.Label();
             this.btnViewFamilyObservations = new System.Windows.Forms.Button();
             this.editUserDataBtn = new System.Windows.Forms.Button();
+            this.deleteUserBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.interviewDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,7 +158,7 @@
             this.btnViewFamilyObservations.ForeColor = System.Drawing.Color.Navy;
             this.btnViewFamilyObservations.Image = ((System.Drawing.Image)(resources.GetObject("btnViewFamilyObservations.Image")));
             this.btnViewFamilyObservations.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnViewFamilyObservations.Location = new System.Drawing.Point(11, 272);
+            this.btnViewFamilyObservations.Location = new System.Drawing.Point(11, 286);
             this.btnViewFamilyObservations.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewFamilyObservations.Name = "btnViewFamilyObservations";
             this.btnViewFamilyObservations.Size = new System.Drawing.Size(164, 60);
@@ -187,11 +188,33 @@
             this.editUserDataBtn.UseVisualStyleBackColor = false;
             this.editUserDataBtn.Click += new System.EventHandler(this.editUserDataBtn_Click);
             // 
+            // deleteUserBtn
+            // 
+            this.deleteUserBtn.BackColor = System.Drawing.Color.White;
+            this.deleteUserBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.deleteUserBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.deleteUserBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.deleteUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteUserBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteUserBtn.ForeColor = System.Drawing.Color.Navy;
+            this.deleteUserBtn.Image = ((System.Drawing.Image)(resources.GetObject("deleteUserBtn.Image")));
+            this.deleteUserBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.deleteUserBtn.Location = new System.Drawing.Point(11, 365);
+            this.deleteUserBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.deleteUserBtn.Name = "deleteUserBtn";
+            this.deleteUserBtn.Size = new System.Drawing.Size(164, 60);
+            this.deleteUserBtn.TabIndex = 35;
+            this.deleteUserBtn.Text = "Delete Profile";
+            this.deleteUserBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deleteUserBtn.UseVisualStyleBackColor = false;
+            this.deleteUserBtn.Click += new System.EventHandler(this.deleteUserBtn_Click);
+            // 
             // ProfilePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.deleteUserBtn);
             this.Controls.Add(this.editUserDataBtn);
             this.Controls.Add(this.btnViewFamilyObservations);
             this.Controls.Add(this.resultsHeader);
@@ -222,5 +245,6 @@
         private System.Windows.Forms.Button btnViewFamilyObservations;
         private System.Windows.Forms.DataGridViewButtonColumn viewResultsBtnColumn;
         private System.Windows.Forms.Button editUserDataBtn;
+        private System.Windows.Forms.Button deleteUserBtn;
     }
 }

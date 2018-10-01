@@ -31,7 +31,6 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewUserProfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteUserToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.viewUserSummaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.statusStrip.SuspendLayout();
@@ -76,7 +75,6 @@
             // 
             this.manageUsersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewUserProfilesToolStripMenuItem,
-            this.deleteUserToolStripMenuItem1,
             this.viewUserSummaryToolStripMenuItem});
             this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
             this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
@@ -88,13 +86,6 @@
             this.viewUserProfilesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewUserProfilesToolStripMenuItem.Text = "View user profiles";
             this.viewUserProfilesToolStripMenuItem.Click += new System.EventHandler(this.viewUserProfilesToolStripMenuItem_Click);
-            // 
-            // deleteUserToolStripMenuItem1
-            // 
-            this.deleteUserToolStripMenuItem1.Name = "deleteUserToolStripMenuItem1";
-            this.deleteUserToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.deleteUserToolStripMenuItem1.Text = "Delete user";
-            this.deleteUserToolStripMenuItem1.Click += new System.EventHandler(this.deleteUserToolStripMenuItem1_Click);
             // 
             // viewUserSummaryToolStripMenuItem
             // 
@@ -145,7 +136,6 @@
         private System.Windows.Forms.ToolStripMenuItem manageUsersToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem viewUserProfilesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteUserToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem viewUserSummaryToolStripMenuItem;
     }
 }

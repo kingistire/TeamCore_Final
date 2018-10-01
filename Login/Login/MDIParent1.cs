@@ -41,11 +41,11 @@ namespace Login {
             viewUserManagment.Show();
         }
 
-        private void deleteUserToolStripMenuItem1_Click(object sender, EventArgs e) {
-            DeleteUser deleteUserProfile = new DeleteUser();
-            deleteUserProfile.MdiParent = this;
-            deleteUserProfile.Show();
-        }
+        //private void deleteUserToolStripMenuItem1_Click(object sender, EventArgs e) {
+          //  DeleteUser deleteUserProfile = new DeleteUser();
+           // deleteUserProfile.MdiParent = this;
+           // deleteUserProfile.Show();
+        //}//
 
         private void editExistingUserToolStripMenuItem_Click(object sender, EventArgs e) {
             EditUser1 editUserProfile1 = new EditUser1();
