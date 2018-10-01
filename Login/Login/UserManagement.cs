@@ -74,17 +74,24 @@ namespace Login
 
         private void userProfileManagmentGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var senderGrid = (DataGridView)sender;
-
-            if (e.ColumnIndex == 0 &&
-                e.RowIndex >= 0)
+            DataGridViewRow selectedProfile = userProfileManagmentGrid.Rows[e.RowIndex];
+            if (e.RowIndex >= 0 && e.ColumnIndex == 0) // IF EDIT
             {
-                //TODO - Button Clicked - Execute Code Here
-                AddUser newUser = new AddUser();
-                newUser.MdiParent = this.MdiParent;
-                newUser.Show();
+                
+                EditProfile editprofile = new EditProfile(selectedProfile);
+                editprofile.MdiParent = this.MdiParent;
+                editprofile.Show();
 
-            } 
+                //...
+            } else if (e.RowIndex >= 0 && e.ColumnIndex == 1)
+            {
+                
+
+
+                ProfilePage profilePage = new ProfilePage(selectedProfile);
+                profilePage.MdiParent = this.MdiParent;
+                profilePage.Show();
+            }
         }
     }
 }

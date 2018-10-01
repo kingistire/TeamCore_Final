@@ -62,9 +62,9 @@ namespace Login {
             //ViewResultsTable vrt = new ViewResultsTable();
             //vrt.Show();
             Summary sum = new Summary();
+            sum.MdiParent = this;
             sum.Show();
 
         }
-
     }
 }

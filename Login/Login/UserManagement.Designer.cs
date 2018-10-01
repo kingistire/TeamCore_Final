@@ -81,12 +81,15 @@
             // 
             // userProfileManagmentGrid
             // 
+            this.userProfileManagmentGrid.AllowUserToAddRows = false;
+            this.userProfileManagmentGrid.AllowUserToDeleteRows = false;
             this.userProfileManagmentGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.userProfileManagmentGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.editProfileBtnCol,
             this.viewProfileBtnCol});
             this.userProfileManagmentGrid.Location = new System.Drawing.Point(30, 164);
             this.userProfileManagmentGrid.Name = "userProfileManagmentGrid";
+            this.userProfileManagmentGrid.ReadOnly = true;
             this.userProfileManagmentGrid.Size = new System.Drawing.Size(654, 272);
             this.userProfileManagmentGrid.TabIndex = 26;
             this.userProfileManagmentGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.userProfileManagmentGrid_CellContentClick);
@@ -95,6 +98,7 @@
             // 
             this.editProfileBtnCol.HeaderText = "Edit";
             this.editProfileBtnCol.Name = "editProfileBtnCol";
+            this.editProfileBtnCol.ReadOnly = true;
             this.editProfileBtnCol.Text = "Edit";
             this.editProfileBtnCol.UseColumnTextForButtonValue = true;
             // 
@@ -102,6 +106,7 @@
             // 
             this.viewProfileBtnCol.HeaderText = "ViewProfile";
             this.viewProfileBtnCol.Name = "viewProfileBtnCol";
+            this.viewProfileBtnCol.ReadOnly = true;
             this.viewProfileBtnCol.Text = "View";
             this.viewProfileBtnCol.UseColumnTextForButtonValue = true;
             // 

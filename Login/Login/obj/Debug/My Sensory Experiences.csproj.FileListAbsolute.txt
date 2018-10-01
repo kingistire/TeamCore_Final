@@ -89,3 +89,4 @@ C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.Select
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInterview.resources
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.ViewResults.resources
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.ViewResultsTable.resources
+C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.ProfilePage.resources

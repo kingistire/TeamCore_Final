@@ -32,7 +32,6 @@
             this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewUserProfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteUserToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.editExistingUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewUserSummaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.statusStrip.SuspendLayout();
@@ -42,16 +41,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 38);
+            this.label1.Location = new System.Drawing.Point(9, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 4;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // toolStripStatusLabel
             // 
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(49, 20);
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
             // 
             // statusStrip
@@ -59,17 +59,16 @@
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 857);
+            this.statusStrip.Location = new System.Drawing.Point(0, 695);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip.Size = new System.Drawing.Size(1321, 25);
+            this.statusStrip.Size = new System.Drawing.Size(991, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(147, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
             this.fileToolStripMenuItem.Text = "Start new interview";
             this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
@@ -78,37 +77,29 @@
             this.manageUsersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewUserProfilesToolStripMenuItem,
             this.deleteUserToolStripMenuItem1,
-            this.editExistingUserToolStripMenuItem,
             this.viewUserSummaryToolStripMenuItem});
             this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
-            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
+            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.manageUsersToolStripMenuItem.Text = "Manage users";
             // 
             // viewUserProfilesToolStripMenuItem
             // 
             this.viewUserProfilesToolStripMenuItem.Name = "viewUserProfilesToolStripMenuItem";
-            this.viewUserProfilesToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
+            this.viewUserProfilesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewUserProfilesToolStripMenuItem.Text = "View user profiles";
             this.viewUserProfilesToolStripMenuItem.Click += new System.EventHandler(this.viewUserProfilesToolStripMenuItem_Click);
             // 
             // deleteUserToolStripMenuItem1
             // 
             this.deleteUserToolStripMenuItem1.Name = "deleteUserToolStripMenuItem1";
-            this.deleteUserToolStripMenuItem1.Size = new System.Drawing.Size(215, 26);
+            this.deleteUserToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.deleteUserToolStripMenuItem1.Text = "Delete user";
             this.deleteUserToolStripMenuItem1.Click += new System.EventHandler(this.deleteUserToolStripMenuItem1_Click);
-            // 
-            // editExistingUserToolStripMenuItem
-            // 
-            this.editExistingUserToolStripMenuItem.Name = "editExistingUserToolStripMenuItem";
-            this.editExistingUserToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
-            this.editExistingUserToolStripMenuItem.Text = "Edit existing user";
-            this.editExistingUserToolStripMenuItem.Click += new System.EventHandler(this.editExistingUserToolStripMenuItem_Click);
             // 
             // viewUserSummaryToolStripMenuItem
             // 
             this.viewUserSummaryToolStripMenuItem.Name = "viewUserSummaryToolStripMenuItem";
-            this.viewUserSummaryToolStripMenuItem.Size = new System.Drawing.Size(215, 26);
+            this.viewUserSummaryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewUserSummaryToolStripMenuItem.Text = "View User Summary";
             this.viewUserSummaryToolStripMenuItem.Click += new System.EventHandler(this.viewUserSummaryToolStripMenuItem_Click);
             // 
@@ -120,22 +111,20 @@
             this.manageUsersToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(1321, 28);
+            this.menuStrip.Size = new System.Drawing.Size(991, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
             // MDIParent1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1321, 882);
+            this.ClientSize = new System.Drawing.Size(991, 717);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MDIParent1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MDIParent1";
@@ -157,7 +146,6 @@
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem viewUserProfilesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteUserToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem editExistingUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewUserSummaryToolStripMenuItem;
     }
 }

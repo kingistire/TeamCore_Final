@@ -98,6 +98,12 @@
     <Compile Include="InterviewCover.Designer.cs">
       <DependentUpon>InterviewCover.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProfilePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfilePage.Designer.cs">
+      <DependentUpon>ProfilePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelectInterview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterviewCover.resx">
       <DependentUpon>InterviewCover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfilePage.resx">
+      <DependentUpon>ProfilePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectInterview.resx">
       <DependentUpon>SelectInterview.cs</DependentUpon>

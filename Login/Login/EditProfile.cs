@@ -15,13 +15,13 @@ namespace Login {
 
         public EditProfile(DataGridViewRow dataValue) {
             InitializeComponent();
-            nameTitle.Text = dataValue.Cells[2].Value.ToString() + ' ' + dataValue.Cells[3].Value.ToString();
-            tbFname.Text = dataValue.Cells[2].Value.ToString();
-            tbLname.Text = dataValue.Cells[3].Value.ToString();
-            cbGender.Text = dataValue.Cells[4].Value.ToString();
-            tbAge.Text = dataValue.Cells[5].Value.ToString();
-            tbPhone.Text = dataValue.Cells[6].Value.ToString();
-            tbEmail.Text = dataValue.Cells[7].Value.ToString();
+            nameTitle.Text = dataValue.Cells[3].Value.ToString() + ' ' + dataValue.Cells[4].Value.ToString();
+            tbFname.Text = dataValue.Cells[3].Value.ToString();
+            tbLname.Text = dataValue.Cells[4].Value.ToString();
+            cbGender.Text = dataValue.Cells[5].Value.ToString();
+            tbAge.Text = dataValue.Cells[6].Value.ToString();
+            tbPhone.Text = dataValue.Cells[7].Value.ToString();
+            tbEmail.Text = dataValue.Cells[8].Value.ToString();
             this.Location = new Point(0, 0);
         }
 
