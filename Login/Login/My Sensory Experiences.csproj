@@ -262,7 +262,6 @@
       <DependentUpon>CapstoneDB.mdf</DependentUpon>
     </Content>
     <Content Include="resources\11169409_10207513025963219_4499665096783750703_n.jpg" />
-    <Content Include="resources\6. Movement\1. Are there some ways of moving that you don’t like_\Being jumped on_tackled.jpg" />
     <Content Include="resources\8. Other\Movements.jpg" />
     <Content Include="resources\8. Other\Sights.jpg" />
     <Content Include="resources\8. Other\Smells.jpg" />
@@ -281,6 +280,7 @@
     <Folder Include="resources\4. Smells\1. Are there some smells that you don%27t like_\" />
     <Folder Include="resources\4. Smells\2. Are there some things that you like to smell_\" />
     <Folder Include="resources\5. Taste\1. Are there some food groups that you don%27t like eating_\" />
+    <Folder Include="resources\6. Movement\1. Are there some ways of moving that you don’t like_\" />
     <Folder Include="resources\6. Movement\3. Are there ways of moving that you like_\" />
     <Folder Include="resources\6. Movement\4. Are there some ways that you move over and over again_\" />
     <Folder Include="resources\7. Environment\" />

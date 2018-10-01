@@ -1093,7 +1093,7 @@ namespace Login {
             //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
             bottomMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\2. Are there times when it is hard for you to stay still_\2 Standing still (guided).jpg");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
-            updateLabelText("", "Standing still", "", "", "Sitting still", "");
+            updateLabelText("", "Sitting Still", "", "", "Standing still", "");
         }
         private void mvmtInterviewPage3() {
             lblQuestion.Text = "Are there some ways of moving that you like?";
