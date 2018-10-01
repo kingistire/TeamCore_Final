@@ -336,6 +336,9 @@ namespace Login {
                 questionPanel.BringToFront();
                 OtherColours();
             }
+            else if (Globals.interview_page == 70) {
+                additionalNotesPanel.BringToFront();
+            }
         }
         
         /// <summary>
@@ -1849,9 +1852,14 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 70) {
-                Summary sum = new Summary();
-                sum.Show();
+                IndependentInterview additionalNotes = new IndependentInterview();
+                additionalNotesPanel.BringToFront();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e) {
+            Summary sum = new Summary();
+            sum.Show();
         }
 
         /// <summary>
@@ -2388,29 +2396,7 @@ namespace Login {
             interviewForm2.Show();
         }
 
-        private void picturePanel_Paint(object sender, PaintEventArgs e) {
 
-        }
-
-        private void lblTL_Click(object sender, EventArgs e) {
-
-        }
-
-        private void lblTR_Click(object sender, EventArgs e) {
-
-        }
-
-        private void lblBR_Click(object sender, EventArgs e) {
-
-        }
-
-        private void lblBM_Click(object sender, EventArgs e) {
-
-        }
-
-        private void lblBL_Click(object sender, EventArgs e) {
-
-        }
     }
 }
 

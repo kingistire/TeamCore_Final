@@ -256,10 +256,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CapstoneDB\CapstoneDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="CapstoneDB\CapstoneDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>CapstoneDB.mdf</DependentUpon>
     </Content>
     <Content Include="resources\1. Hearing\1. Are there some sounds that you don%27t like_\fireworks.jpg" />
