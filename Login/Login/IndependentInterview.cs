@@ -343,13 +343,12 @@ namespace Login {
         /// </summary>
         private void interviewPage1() {
             lblQuestion.Text = "Are there some sounds that you don't like?";
-            //topLeftPB.Image = new Bitmap(@"..\..\resources\");
-            topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\fireworks.jpg");
-            topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\loud_voices.PNG");
-            bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\household_ appliances.PNG");
-            // bottomMidPB.Image = new Bitmap(@"..\..\resources\");
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\");
-            lblBR.Size = new Size(200, 60);
+            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1 Other People Talking (cropped).png");
+            topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\2 Fireworks.jpg");
+            topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\3 Loud voices.PNG");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\4 Household appliances (e.g., blenders, vacuum).png");
+            bottomMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\5 Vehicles (e.g., trucks, motorbikes) (cropped).jpg");
+            bottomRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\6 Bathroom appliances (e.g., hand dryers, hair dryers) (photoshopped).jpg");
             updateLabelText("Other people talking", " Fireworks", "Loud voices",
                 "Household appliances (e.g. blenders, vacuum)", "Vehicles (e.g. trucks, motorbikes)",
                 "Bathroom appliances (e.g. hair dryers, hand dryers)");
@@ -363,7 +362,7 @@ namespace Login {
             //bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\household_ appliances.PNG");
             // bottomMidPB.Image = new Bitmap(@"..\..\resources\");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\");
-            updateLabelText("Sirens or alarms", "Sudden loud noises (e.g., balloons popping)", "", "", "", "");
+            updateLabelText("Sirens, alarms, school bells", "Sudden loud noises (e.g., balloons popping)", "", "", "", "");
         }
 
         private void interviewPage1p3() {
