@@ -22,7 +22,7 @@ namespace Login {
             nameTitle.Text = dataValue.Cells[3].Value.ToString() + ' ' + dataValue.Cells[4].Value.ToString();
             tbFname.Text = dataValue.Cells[3].Value.ToString();
             tbLname.Text = dataValue.Cells[4].Value.ToString();
-            cbGender.Text = dataValue.Cells[5].Value.ToString();
+            cbGender.SelectedItem = dataValue.Cells[5].Value.ToString().Trim();
             tbAge.Text = dataValue.Cells[6].Value.ToString();
             tbPhone.Text = dataValue.Cells[7].Value.ToString();
             tbEmail.Text = dataValue.Cells[8].Value.ToString();

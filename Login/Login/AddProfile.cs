@@ -49,7 +49,7 @@ namespace Login {
             cmd = new SqlCommand("INSERT INTO UserInformation (firstName, lastName, gender, age, phone, email) VALUES (@firstName, @lastName, @gender, @age, @phone, @email)", con);
             cmd.Parameters.AddWithValue("@firstName", tbFname.Text.Trim());
             cmd.Parameters.AddWithValue("@lastName", tbLname.Text.Trim());
-            cmd.Parameters.AddWithValue("@gender", genderSelection);
+            cmd.Parameters.AddWithValue("@gender", genderSelection.Trim());
             cmd.Parameters.AddWithValue("@age", tbAge.Text.Trim());
             cmd.Parameters.AddWithValue("@phone", tbPhone.Text.Trim());
             cmd.Parameters.AddWithValue("@email", tbEmail.Text.Trim());
@@ -58,5 +58,6 @@ namespace Login {
             this.Close();
             con.Close();
         }
+
     }
     }

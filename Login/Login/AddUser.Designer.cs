@@ -159,7 +159,7 @@
             // 
             // cbGender
             // 
-            this.cbGender.FormattingEnabled = true;
+            this.cbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGender.Items.AddRange(new object[] {
             "Male",
             "Female",
@@ -285,11 +285,11 @@
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cbGender;
     }
 }
