@@ -1366,5 +1366,10 @@ namespace Login {
             get { return m_InstanceRef25; }
             set { m_InstanceRef25 = value; }
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
