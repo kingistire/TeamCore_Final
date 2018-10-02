@@ -104,6 +104,12 @@
     <Compile Include="GuidedInterviewCover.Designer.cs">
       <DependentUpon>GuidedInterviewCover.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProfilePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfilePage.Designer.cs">
+      <DependentUpon>ProfilePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelectInterview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     <EmbeddedResource Include="GuidedInterviewCover.resx">
       <DependentUpon>GuidedInterviewCover.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProfilePage.resx">
+      <DependentUpon>ProfilePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelectInterview.resx">
       <DependentUpon>SelectInterview.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,7 +255,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="resources\Untitled document.gdoc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -271,75 +279,29 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>CapstoneDB.mdf</DependentUpon>
     </Content>
-    <Content Include="resources\1. Hearing\1. Are there some sounds that you don%27t like_\fireworks.jpg" />
-    <Content Include="resources\1. Hearing\1. Are there some sounds that you don%27t like_\household_ appliances.PNG" />
-    <Content Include="resources\1. Hearing\1. Are there some sounds that you don%27t like_\loud_voices.PNG" />
-    <Content Include="resources\1. Hearing\2. Are there times when it is hard for you to listen\pg2img1.PNG" />
-    <Content Include="resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\clock ticking.PNG" />
-    <Content Include="resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\people_talking.PNG" />
-    <Content Include="resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\Radio on.jpg" />
-    <Content Include="resources\1. Hearing\4. Are there sounds that you like to listen to_\Computer sounds.jpg" />
-    <Content Include="resources\1. Hearing\4. Are there sounds that you like to listen to_\fans.PNG" />
-    <Content Include="resources\1. Hearing\4. Are there sounds that you like to listen to_\Rhythms.jpg" />
-    <Content Include="resources\1. Hearing\5. Are there some sounds that you make a lot_\clicking_pen.PNG" />
-    <Content Include="resources\1. Hearing\5. Are there some sounds that you make a lot_\Tapping fingers.jpg" />
-    <Content Include="resources\1. Hearing\5. Are there some sounds that you make a lot_\tapping_feet.PNG" />
-    <Content Include="resources\1. Hearing\adult-black-and-white-business-1181415.jpg" />
-    <Content Include="resources\1. Hearing\app-apple-business-38295.jpg" />
-    <Content Include="resources\1. Hearing\applause-audience-band-196652.jpg" />
-    <Content Include="resources\1. Hearing\background-blur-business-583843.jpg" />
-    <Content Include="resources\1. Hearing\cabinet-discussing-facial-expression-1181398.jpg" />
-    <Content Include="resources\1. Hearing\close-up-fashion-female-373945.jpg" />
-    <Content Include="resources\1. Hearing\conference-room-digital-nomad-discussing-1181408.jpg" />
-    <Content Include="resources\1. Hearing\music-notations-musical-notes-notation-104084.jpg" />
     <Content Include="resources\11169409_10207513025963219_4499665096783750703_n.jpg" />
-    <Content Include="resources\2. Sight\1. Are there some things that you don%27t like to look at_\Busy Patterns.jpg" />
-    <Content Include="resources\2. Sight\1. Are there some things that you don%27t like to look at_\Light and Shadow.jpg" />
-    <Content Include="resources\2. Sight\1. Are there some things that you don%27t like to look at_\Sunlight.jpg" />
-    <Content Include="resources\2. Sight\3. Are there some things that you like to look at_\Geometric patterns.jpg" />
-    <Content Include="resources\2. Sight\3. Are there some things that you like to look at_\Geometric patterns1.jpg" />
-    <Content Include="resources\2. Sight\3. Are there some things that you like to look at_\Moving lights.jpg" />
-    <Content Include="resources\2. Sight\3. Are there some things that you like to look at_\Moving lights1.jpg" />
-    <Content Include="resources\2. Sight\3. Are there some things that you like to look at_\Spinning objects.jpg" />
-    <Content Include="resources\2. Sight\3. Are there some things that you like to look at_\Spinning objects1.jpg" />
-    <Content Include="resources\2. Sight\3. Are there some things that you like to look at_\Spinning objects2.jpg" />
-    <Content Include="resources\3. Touch\1. Are there some things that you don%27t like the feeling of_\Grassy.jpg" />
-    <Content Include="resources\3. Touch\1. Are there some things that you don%27t like the feeling of_\Sandy.jpg" />
-    <Content Include="resources\3. Touch\1. Are there some things that you don%27t like the feeling of_\Shoes.jpg" />
-    <Content Include="resources\3. Touch\1. Are there some things that you don%27t like the feeling of_\Splashing water.jpg" />
-    <Content Include="resources\3. Touch\1. Are there some things that you don%27t like the feeling of_\Sticky.jpg" />
-    <Content Include="resources\3. Touch\1. Are there some things that you don%27t like the feeling of_\Tight clothes.jpg" />
-    <Content Include="resources\3. Touch\1. Are there some things that you don%27t like the feeling of_\Wool clothes.jpg" />
-    <Content Include="resources\3. Touch\2. Are there ways that people touch you that you don%27t like_\Being crowded.jpg" />
-    <Content Include="resources\3. Touch\2. Are there ways that people touch you that you don%27t like_\Having a haircut.jpg" />
-    <Content Include="resources\3. Touch\3. Are there some things that you like the feeling of_\Hugging people.jpg" />
-    <Content Include="resources\3. Touch\adult-alternative-medicine-care-356053.jpg" />
-    <Content Include="resources\3. Touch\arms-care-check-905874.jpg" />
-    <Content Include="resources\3. Touch\boy-check-up-dental-care-52527.jpg" />
-    <Content Include="resources\4. Smells\1. Are there some smells that you don%27t like_\Body smells.jpg" />
-    <Content Include="resources\4. Smells\1. Are there some smells that you don%27t like_\Toilet smells.jpg" />
-    <Content Include="resources\4. Smells\2. Are there some things that you like to smell_\Smelling foods.jpg" />
-    <Content Include="resources\4. Smells\chef-cooker-cooking-8717.jpg" />
-    <Content Include="resources\4. Smells\chef-cooking-dinner-66639.jpg" />
-    <Content Include="resources\5. Taste\1. Are there some food groups that you don%27t like eating_\Dairy.jpg" />
-    <Content Include="resources\5. Taste\1. Are there some food groups that you don%27t like eating_\Fish.jpg" />
-    <Content Include="resources\5. Taste\1. Are there some food groups that you don%27t like eating_\Pasta.jpg" />
-    <Content Include="resources\5. Taste\apple-keyboard-breakfast-creamy-322339.jpg" />
-    <Content Include="resources\5. Taste\beads-blur-bright-136745.jpg" />
-    <Content Include="resources\5. Taste\blur-buns-burger-161519.jpg" />
-    <Content Include="resources\5. Taste\bread-breakfast-close-up-793785.jpg" />
-    <Content Include="resources\5. Taste\breakfast-cooking-eggs-236812.jpg" />
-    <Content Include="resources\5. Taste\close-up-cooking-dinner-46239.jpg" />
-    <Content Include="resources\6. Movement\1. Are there some ways of moving that you don’t like_\Being jumped on_tackled.jpg" />
-    <Content Include="resources\6. Movement\3. Are there ways of moving that you like_\Running.jpg" />
-    <Content Include="resources\6. Movement\3. Are there ways of moving that you like_\Swinging.jpg" />
-    <Content Include="resources\6. Movement\4. Are there some ways that you move over and over again_\Pacing.jpg" />
-    <Content Include="resources\6. Movement\carnival-chains-chairs-721996%281%29.jpg" />
-    <Content Include="resources\7. Environment\adult-beautiful-beauty-1249654.jpg" />
     <Content Include="resources\8. Other\Movements.jpg" />
     <Content Include="resources\8. Other\Sights.jpg" />
     <Content Include="resources\8. Other\Smells.jpg" />
     <Content Include="resources\8. Other\Sounds.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="resources\1. Hearing\1. Are there some sounds that you don%27t like_\" />
+    <Folder Include="resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\" />
+    <Folder Include="resources\1. Hearing\4. Are there sounds that you like to listen to_\" />
+    <Folder Include="resources\1. Hearing\5. Are there some sounds that you make a lot_\" />
+    <Folder Include="resources\2. Sight\1. Are there some things that you don%27t like to look at_\" />
+    <Folder Include="resources\2. Sight\3. Are there some things that you like to look at_\" />
+    <Folder Include="resources\3. Touch\1. Are there some things that you don%27t like the feeling of_\" />
+    <Folder Include="resources\3. Touch\2. Are there ways that people touch you that you don%27t like_\" />
+    <Folder Include="resources\3. Touch\3. Are there some things that you like the feeling of_\" />
+    <Folder Include="resources\4. Smells\1. Are there some smells that you don%27t like_\" />
+    <Folder Include="resources\4. Smells\2. Are there some things that you like to smell_\" />
+    <Folder Include="resources\5. Taste\1. Are there some food groups that you don%27t like eating_\" />
+    <Folder Include="resources\6. Movement\1. Are there some ways of moving that you don’t like_\" />
+    <Folder Include="resources\6. Movement\3. Are there ways of moving that you like_\" />
+    <Folder Include="resources\6. Movement\4. Are there some ways that you move over and over again_\" />
+    <Folder Include="resources\7. Environment\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
