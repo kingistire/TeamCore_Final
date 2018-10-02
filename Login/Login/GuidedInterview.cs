@@ -16,6 +16,7 @@ namespace Login {
         public GuidedInterview() {
             InitializeComponent();
             this.Hide();
+            panel1.BringToFront();
             this.Location = new Point(0, 0);
             //Dynamically create the circular picture boxes
             createCirclePB(bottomLeftPB);
@@ -24,7 +25,6 @@ namespace Login {
             createCirclePB(topLeftPB);
             createCirclePB(topRightPB);
             createCirclePB(topMidPB);
-                   
             if (Globals.interview_page >= 2) {
                 previousInterviewSlideBtn.Visible = true;
             } else {
@@ -32,8 +32,10 @@ namespace Login {
             }
             //determines which page to display when the interview form is loaded
             //resets to one when the user starts a new interview
-            if (Globals.interview_page == 1) {
+            if (Globals.interview_page == 0) {
                 interviewPage1();
+            } else if (Globals.interview_page == 1) {
+                interviewPage1p2();
             } else if (Globals.interview_page == 2) {
                 interviewPage2();
             } else if (Globals.interview_page == 3) {
@@ -82,6 +84,12 @@ namespace Login {
                 environmentInterviewPage1();
             } else if (Globals.interview_page == 25) {
                 otherInterviewPage1();
+            }
+        }
+
+        private void tbAnswer1_TextChanged(object sender, EventArgs e) {
+            if (tbAnswer1.Text.Trim().Length > 0) {
+                button1.Enabled = true;
             }
         }
 
@@ -403,7 +411,7 @@ namespace Login {
             System.Drawing.Color tasteBg = System.Drawing.ColorTranslator.FromHtml("#E6E6FA");
             //appends label to file on a new line
             Globals.interview_page++;
-            if (Globals.interview_page == 2) {
+            if (Globals.interview_page == 1) {
                 writeToDB(page1Selections, "otherPeopleTalking", "fireworks", "loudVoices",
                                             "householdAppliances", "vehicles", "bathroomAppliances");
                 if (m_InstanceRef2 != null) {
@@ -416,6 +424,13 @@ namespace Login {
                     interviewForm2.Location = new Point(0, 0);
                     interviewForm2.Show();
                 }
+            }
+            else if (Globals.interview_page == 2) {
+                writeToDBTop3(page1Selections, "sirensOrAlarms", "suddenLoudNoises", "");
+                GuidedInterview soundPage1p2 = new GuidedInterview();
+                soundPage1p2.InstanceRef2 = this;
+                soundPage1p2.Show();
+                this.Hide();
             }
             //-------------
             //SOUND SECTION
@@ -725,9 +740,17 @@ namespace Login {
                 this.Hide();
             } else if (Globals.interview_page == 26) {
                 writeToDB(page1Selections, "sounds", "smells", "sights", "tastes", "feelings", "movements");
-                Summary sum = new Summary();
-                sum.Show();
+                //Summary sum = new Summary();
+                //sum.Show();
+                GuidedInterview additionalNotes = new GuidedInterview();
+                panel2.BringToFront();
             }
+        }
+        
+        //panel2 view summary button
+        private void button1_Click_1(object sender, EventArgs e) {
+            Summary sum = new Summary();
+            sum.Show();
         }
 
         /// <summary>
@@ -838,6 +861,17 @@ namespace Login {
             updateLabelText("Other people talking", " Fireworks", "Loud voices",
                 "Household appliances (e.g. blenders, vacuum)", "Vehicles (e.g. trucks, motorbikes)",
                 "Bathroom appliances (e.g. hair dryers, hand dryers)");
+        }
+
+        private void interviewPage1p2() {
+            lblQuestion.Text = "Are there some sounds that you don't like?";
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\");
+            //topMidPB.Image = new Bitmap(@"..\..\esources\1. Hearing\1. Are there some sounds that you don't like_\fireworks.jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\loud_voices.PNG");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\household_ appliances.PNG");
+            // bottomMidPB.Image = new Bitmap(@"..\..\resources\");
+            //bottomRightPB.Image = new Bitmap(@"..\..\resources\");
+            updateLabelText("Sirens or alarms", "Sudden loud noises (e.g., balloons popping)", "", "", "", "");
         }
 
         private void interviewPage2() {

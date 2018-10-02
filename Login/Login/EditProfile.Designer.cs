@@ -53,7 +53,6 @@
             this.tbFname.Location = new System.Drawing.Point(212, 144);
             this.tbFname.Margin = new System.Windows.Forms.Padding(2);
             this.tbFname.Name = "tbFname";
-            this.tbFname.ReadOnly = true;
             this.tbFname.Size = new System.Drawing.Size(112, 20);
             this.tbFname.TabIndex = 2;
             this.tbFname.Click += new System.EventHandler(this.tbFname_Click);
@@ -61,7 +60,6 @@
             // 
             // tbLname
             // 
-            this.tbLname.Enabled = false;
             this.tbLname.Location = new System.Drawing.Point(212, 176);
             this.tbLname.Margin = new System.Windows.Forms.Padding(2);
             this.tbLname.Name = "tbLname";
@@ -70,7 +68,6 @@
             // 
             // tbAge
             // 
-            this.tbAge.Enabled = false;
             this.tbAge.Location = new System.Drawing.Point(212, 241);
             this.tbAge.Margin = new System.Windows.Forms.Padding(2);
             this.tbAge.Name = "tbAge";
@@ -129,7 +126,6 @@
             // 
             // tbPhone
             // 
-            this.tbPhone.Enabled = false;
             this.tbPhone.Location = new System.Drawing.Point(212, 322);
             this.tbPhone.Margin = new System.Windows.Forms.Padding(2);
             this.tbPhone.Name = "tbPhone";
@@ -138,7 +134,6 @@
             // 
             // tbEmail
             // 
-            this.tbEmail.Enabled = false;
             this.tbEmail.Location = new System.Drawing.Point(212, 354);
             this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
@@ -171,7 +166,6 @@
             // 
             // cbGender
             // 
-            this.cbGender.Enabled = false;
             this.cbGender.FormattingEnabled = true;
             this.cbGender.Items.AddRange(new object[] {
             "Male",

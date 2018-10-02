@@ -182,19 +182,21 @@
             this.summaryDataGrid.AllowUserToAddRows = false;
             this.summaryDataGrid.AllowUserToDeleteRows = false;
             this.summaryDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.summaryDataGrid.Location = new System.Drawing.Point(330, 144);
+            this.summaryDataGrid.Location = new System.Drawing.Point(346, 39);
             this.summaryDataGrid.Name = "summaryDataGrid";
             this.summaryDataGrid.ReadOnly = true;
-            this.summaryDataGrid.Size = new System.Drawing.Size(857, 295);
+            this.summaryDataGrid.Size = new System.Drawing.Size(483, 295);
             this.summaryDataGrid.TabIndex = 1;
             // 
             // Summary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1199, 666);
+            this.ClientSize = new System.Drawing.Size(841, 411);
             this.Controls.Add(this.summaryDataGrid);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Summary";
             this.Text = "Summary";
             this.Load += new System.EventHandler(this.Summary_Load);

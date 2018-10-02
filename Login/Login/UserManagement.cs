@@ -72,21 +72,25 @@ namespace Login
             //
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void userProfileManagmentGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex == 0)
+            DataGridViewRow selectedProfile = userProfileManagmentGrid.Rows[e.RowIndex];
+            if (e.RowIndex >= 0 && e.ColumnIndex == 0) // IF EDIT
             {
-                //MessageBox.Show(this, e.ToString() + " Clicked!");
-                //EditProfile editProfile = new EditProfile(userProfileManagmentGrid[1, e.RowIndex].Value.ToString());
                 
-                DataGridViewRow selectedProfile = userProfileManagmentGrid.Rows[e.RowIndex];
-
-
                 EditProfile editprofile = new EditProfile(selectedProfile);
                 editprofile.MdiParent = this.MdiParent;
                 editprofile.Show();
 
                 //...
+            } else if (e.RowIndex >= 0 && e.ColumnIndex == 1)
+            {
+                
+
+
+                ProfilePage profilePage = new ProfilePage(selectedProfile);
+                profilePage.MdiParent = this.MdiParent;
+                profilePage.Show();
             }
         }
     }

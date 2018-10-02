@@ -80,6 +80,22 @@
             this.lblQuestion2 = new System.Windows.Forms.Label();
             this.tbAnswer1 = new System.Windows.Forms.TextBox();
             this.lblQuestion1 = new System.Windows.Forms.Label();
+            this.additionalNotesPanel = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.picturePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picInstruction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSense)).BeginInit();
@@ -94,6 +110,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.questionPanel.SuspendLayout();
+            this.additionalNotesPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // picturePanel
@@ -142,7 +162,6 @@
             this.picturePanel.Name = "picturePanel";
             this.picturePanel.Size = new System.Drawing.Size(1317, 878);
             this.picturePanel.TabIndex = 0;
-            this.picturePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.picturePanel_Paint);
             // 
             // label5
             // 
@@ -211,7 +230,6 @@
             this.lblBR.Size = new System.Drawing.Size(200, 75);
             this.lblBR.TabIndex = 27;
             this.lblBR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblBR.Click += new System.EventHandler(this.lblBR_Click);
             // 
             // lblTR
             // 
@@ -222,7 +240,6 @@
             this.lblTR.Size = new System.Drawing.Size(200, 75);
             this.lblTR.TabIndex = 27;
             this.lblTR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTR.Click += new System.EventHandler(this.lblTR_Click);
             // 
             // lblBL
             // 
@@ -233,7 +250,6 @@
             this.lblBL.Size = new System.Drawing.Size(200, 75);
             this.lblBL.TabIndex = 27;
             this.lblBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblBL.Click += new System.EventHandler(this.lblBL_Click);
             // 
             // lblBM
             // 
@@ -244,7 +260,6 @@
             this.lblBM.Size = new System.Drawing.Size(200, 75);
             this.lblBM.TabIndex = 27;
             this.lblBM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblBM.Click += new System.EventHandler(this.lblBM_Click);
             // 
             // lblTM
             // 
@@ -265,7 +280,6 @@
             this.lblTL.Size = new System.Drawing.Size(200, 75);
             this.lblTL.TabIndex = 27;
             this.lblTL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTL.Click += new System.EventHandler(this.lblTL_Click);
             // 
             // label1
             // 
@@ -801,14 +815,197 @@
             this.lblQuestion1.Text = "Fill";
             this.lblQuestion1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // additionalNotesPanel
+            // 
+            this.additionalNotesPanel.BackColor = System.Drawing.Color.AliceBlue;
+            this.additionalNotesPanel.Controls.Add(this.textBox1);
+            this.additionalNotesPanel.Controls.Add(this.label2);
+            this.additionalNotesPanel.Controls.Add(this.label16);
+            this.additionalNotesPanel.Controls.Add(this.label17);
+            this.additionalNotesPanel.Controls.Add(this.label18);
+            this.additionalNotesPanel.Controls.Add(this.label19);
+            this.additionalNotesPanel.Controls.Add(this.label20);
+            this.additionalNotesPanel.Controls.Add(this.label22);
+            this.additionalNotesPanel.Controls.Add(this.label23);
+            this.additionalNotesPanel.Controls.Add(this.label24);
+            this.additionalNotesPanel.Controls.Add(this.pictureBox4);
+            this.additionalNotesPanel.Controls.Add(this.label25);
+            this.additionalNotesPanel.Controls.Add(this.pictureBox5);
+            this.additionalNotesPanel.Controls.Add(this.pictureBox6);
+            this.additionalNotesPanel.Controls.Add(this.button2);
+            this.additionalNotesPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.additionalNotesPanel.Location = new System.Drawing.Point(0, 0);
+            this.additionalNotesPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.additionalNotesPanel.Name = "additionalNotesPanel";
+            this.additionalNotesPanel.Size = new System.Drawing.Size(1317, 878);
+            this.additionalNotesPanel.TabIndex = 30;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(313, 497);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(693, 306);
+            this.textBox1.TabIndex = 32;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(335, 196);
+            this.label2.MaximumSize = new System.Drawing.Size(700, 140);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(650, 85);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "This is for the INTERVIEWER to fill out";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(335, 310);
+            this.label16.MaximumSize = new System.Drawing.Size(700, 175);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(650, 175);
+            this.label16.TabIndex = 31;
+            this.label16.Text = "Is there anything that you noticed during the interview that you wanted to make a" +
+    " note of? Your response will be saved alongside the interview summary.";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(1176, 135);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(46, 17);
+            this.label17.TabIndex = 28;
+            this.label17.Text = "A Lot";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(1109, 135);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(59, 17);
+            this.label18.TabIndex = 28;
+            this.label18.Text = "A Little";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(2807, 1119);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(25, 17);
+            this.label19.TabIndex = 27;
+            this.label19.Text = "Fill";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(2361, 1120);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(25, 17);
+            this.label20.TabIndex = 27;
+            this.label20.Text = "Fill";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(1937, 791);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(25, 17);
+            this.label22.TabIndex = 27;
+            this.label22.Text = "Fill";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(1487, 791);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(25, 17);
+            this.label23.TabIndex = 27;
+            this.label23.Text = "Fill";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(566, 129);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(0, 17);
+            this.label24.TabIndex = 25;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(1104, 20);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(125, 113);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 24;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label25
+            // 
+            this.label25.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(370, 20);
+            this.label25.MaximumSize = new System.Drawing.Size(500, 150);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(500, 150);
+            this.label25.TabIndex = 23;
+            this.label25.Text = "You have completed the interview! \r\nPlease let the Interviewer fill out this page" +
+    ".";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(87, 20);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(125, 126);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 22;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox6.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(1315, 180);
+            this.pictureBox6.TabIndex = 21;
+            this.pictureBox6.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(1206, 478);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.MaximumSize = new System.Drawing.Size(233, 62);
+            this.button2.MinimumSize = new System.Drawing.Size(100, 28);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 44);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "View Summary";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // IndependentInterview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1317, 878);
-            this.Controls.Add(this.picturePanel);
+            this.Controls.Add(this.additionalNotesPanel);
             this.Controls.Add(this.questionPanel);
+            this.Controls.Add(this.picturePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(1339, 929);
@@ -831,6 +1028,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.questionPanel.ResumeLayout(false);
             this.questionPanel.PerformLayout();
+            this.additionalNotesPanel.ResumeLayout(false);
+            this.additionalNotesPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -893,5 +1095,21 @@
         private System.Windows.Forms.Label lblQuestion2;
         private System.Windows.Forms.TextBox tbAnswer1;
         private System.Windows.Forms.Label lblQuestion1;
+        private System.Windows.Forms.Panel additionalNotesPanel;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button button2;
     }
 }

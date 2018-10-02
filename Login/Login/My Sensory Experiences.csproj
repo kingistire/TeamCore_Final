@@ -98,6 +98,12 @@
     <Compile Include="InterviewCover.Designer.cs">
       <DependentUpon>InterviewCover.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProfilePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfilePage.Designer.cs">
+      <DependentUpon>ProfilePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelectInterview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     <EmbeddedResource Include="InterviewCover.resx">
       <DependentUpon>InterviewCover.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProfilePage.resx">
+      <DependentUpon>ProfilePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelectInterview.resx">
       <DependentUpon>SelectInterview.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,10 +264,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CapstoneDB\CapstoneDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="CapstoneDB\CapstoneDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>CapstoneDB.mdf</DependentUpon>
     </Content>
     <Content Include="resources\11169409_10207513025963219_4499665096783750703_n.jpg" />

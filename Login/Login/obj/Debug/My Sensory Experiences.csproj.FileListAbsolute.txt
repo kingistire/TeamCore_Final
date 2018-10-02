@@ -35,7 +35,6 @@ C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.EditUs
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.DeleteUser.resources
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.InterviewCover.resources
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.AddUser.resources
-C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.Interview.resources
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.Login.resources
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.MDIParent1.resources
 C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.Properties.Resources.resources
@@ -85,29 +84,9 @@ C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Lo
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.SelectInterview.resources
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInterview.resources
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.IndependentInterview.resources
-C:\Users\Philip\TeamCore_Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB.mdf
-C:\Users\Philip\TeamCore_Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB_log.ldf
-C:\Users\Philip\TeamCore_Final\Login\Login\bin\Debug\Login.exe.config
-C:\Users\Philip\TeamCore_Final\Login\Login\bin\Debug\Login.exe
-C:\Users\Philip\TeamCore_Final\Login\Login\bin\Debug\Login.pdb
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csprojResolveAssemblyReference.cache
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\Login.AddUser.resources
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\Login.EditProfile.resources
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\Login.EditUser1.resources
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\Login.DeleteUser.resources
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\Login.IndependentInterview.resources
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\Login.InterviewCover.resources
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\Login.SelectInterview.resources
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\Login.NewOTAccount.resources
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInterview.resources
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\Login.Login.resources
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\Login.MDIParent1.resources
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\Login.Properties.Resources.resources
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\Login.Summary.resources
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\Login.UserManagment.resources
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\Login.ViewResults.resources
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\Login.ViewResultsTable.resources
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.GenerateResource.cache
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.CoreCompileInputs.cache
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\Login.exe
-C:\Users\Philip\TeamCore_Final\Login\Login\obj\Debug\Login.pdb
+C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.IndependentInterview.resources
+C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.SelectInterview.resources
+C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInterview.resources
+C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.ViewResults.resources
+C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.ViewResultsTable.resources
+C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.ProfilePage.resources
