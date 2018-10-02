@@ -37,11 +37,8 @@
             this.lblBM = new System.Windows.Forms.Label();
             this.lblTM = new System.Windows.Forms.Label();
             this.lblTL = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.picInstruction = new System.Windows.Forms.PictureBox();
-            this.lblQuestion = new System.Windows.Forms.Label();
             this.picSense = new System.Windows.Forms.PictureBox();
-            this.picBackground = new System.Windows.Forms.PictureBox();
             this.btnNext1 = new System.Windows.Forms.Button();
             this.previousInterviewSlideBtn = new System.Windows.Forms.Button();
             this.bottomRightALotBtn = new System.Windows.Forms.Button();
@@ -78,10 +75,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblQuestion = new System.Windows.Forms.Label();
+            this.picBackground = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picInstruction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSense)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomMidPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomLeftPB)).BeginInit();
@@ -92,6 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -109,7 +108,6 @@
             this.panel1.Controls.Add(this.lblBM);
             this.panel1.Controls.Add(this.lblTM);
             this.panel1.Controls.Add(this.lblTL);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.picInstruction);
             this.panel1.Controls.Add(this.lblQuestion);
             this.panel1.Controls.Add(this.picSense);
@@ -138,7 +136,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1315, 860);
+            this.panel1.Size = new System.Drawing.Size(1317, 878);
             this.panel1.TabIndex = 0;
             // 
             // label5
@@ -201,77 +199,69 @@
             // 
             // lblBR
             // 
-            this.lblBR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBR.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBR.Location = new System.Drawing.Point(975, 783);
-            this.lblBR.MaximumSize = new System.Drawing.Size(200, 60);
+            this.lblBR.MaximumSize = new System.Drawing.Size(200, 75);
             this.lblBR.Name = "lblBR";
-            this.lblBR.Size = new System.Drawing.Size(200, 47);
+            this.lblBR.Size = new System.Drawing.Size(200, 75);
             this.lblBR.TabIndex = 27;
             this.lblBR.Text = "Fill";
             this.lblBR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTR
             // 
-            this.lblTR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTR.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTR.Location = new System.Drawing.Point(975, 454);
-            this.lblTR.MaximumSize = new System.Drawing.Size(200, 60);
+            this.lblTR.MaximumSize = new System.Drawing.Size(200, 75);
             this.lblTR.Name = "lblTR";
-            this.lblTR.Size = new System.Drawing.Size(200, 40);
+            this.lblTR.Size = new System.Drawing.Size(200, 75);
             this.lblTR.TabIndex = 27;
             this.lblTR.Text = "Fill";
             this.lblTR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblBL
             // 
-            this.lblBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBL.Location = new System.Drawing.Point(107, 783);
-            this.lblBL.MaximumSize = new System.Drawing.Size(200, 60);
+            this.lblBL.MaximumSize = new System.Drawing.Size(200, 75);
             this.lblBL.Name = "lblBL";
-            this.lblBL.Size = new System.Drawing.Size(200, 47);
+            this.lblBL.Size = new System.Drawing.Size(200, 75);
             this.lblBL.TabIndex = 27;
             this.lblBL.Text = "Fill";
             this.lblBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblBM
             // 
-            this.lblBM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBM.Location = new System.Drawing.Point(530, 783);
-            this.lblBM.MaximumSize = new System.Drawing.Size(200, 60);
+            this.lblBM.MaximumSize = new System.Drawing.Size(200, 75);
             this.lblBM.Name = "lblBM";
-            this.lblBM.Size = new System.Drawing.Size(200, 47);
+            this.lblBM.Size = new System.Drawing.Size(200, 75);
             this.lblBM.TabIndex = 27;
             this.lblBM.Text = "Fill";
             this.lblBM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTM
             // 
-            this.lblTM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTM.Location = new System.Drawing.Point(530, 454);
-            this.lblTM.MaximumSize = new System.Drawing.Size(200, 60);
+            this.lblTM.MaximumSize = new System.Drawing.Size(200, 75);
             this.lblTM.Name = "lblTM";
-            this.lblTM.Size = new System.Drawing.Size(200, 40);
+            this.lblTM.Size = new System.Drawing.Size(200, 75);
             this.lblTM.TabIndex = 27;
             this.lblTM.Text = "Fill";
             this.lblTM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTL
             // 
-            this.lblTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTL.Location = new System.Drawing.Point(107, 454);
-            this.lblTL.MaximumSize = new System.Drawing.Size(200, 60);
+            this.lblTL.MaximumSize = new System.Drawing.Size(200, 75);
             this.lblTL.Name = "lblTL";
-            this.lblTL.Size = new System.Drawing.Size(200, 40);
+            this.lblTL.Size = new System.Drawing.Size(200, 75);
             this.lblTL.TabIndex = 27;
             this.lblTL.Text = "Fill";
             this.lblTL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(566, 129);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 17);
-            this.label1.TabIndex = 25;
             // 
             // picInstruction
             // 
@@ -284,18 +274,6 @@
             this.picInstruction.TabIndex = 24;
             this.picInstruction.TabStop = false;
             // 
-            // lblQuestion
-            // 
-            this.lblQuestion.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestion.Location = new System.Drawing.Point(370, 20);
-            this.lblQuestion.MaximumSize = new System.Drawing.Size(500, 150);
-            this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(500, 150);
-            this.lblQuestion.TabIndex = 23;
-            this.lblQuestion.Text = "Are there some sounds that you make a lot?";
-            this.lblQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // picSense
             // 
             this.picSense.Image = ((System.Drawing.Image)(resources.GetObject("picSense.Image")));
@@ -306,16 +284,6 @@
             this.picSense.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSense.TabIndex = 22;
             this.picSense.TabStop = false;
-            // 
-            // picBackground
-            // 
-            this.picBackground.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.picBackground.Location = new System.Drawing.Point(0, 0);
-            this.picBackground.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picBackground.Name = "picBackground";
-            this.picBackground.Size = new System.Drawing.Size(1315, 180);
-            this.picBackground.TabIndex = 21;
-            this.picBackground.TabStop = false;
             // 
             // btnNext1
             // 
@@ -618,7 +586,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1315, 860);
+            this.panel2.Size = new System.Drawing.Size(1317, 878);
             this.panel2.TabIndex = 29;
             // 
             // tbAnswer1
@@ -778,16 +746,38 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // lblQuestion
+            // 
+            this.lblQuestion.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion.Location = new System.Drawing.Point(370, 20);
+            this.lblQuestion.MaximumSize = new System.Drawing.Size(500, 150);
+            this.lblQuestion.Name = "lblQuestion";
+            this.lblQuestion.Size = new System.Drawing.Size(500, 150);
+            this.lblQuestion.TabIndex = 23;
+            this.lblQuestion.Text = "Are there some sounds that you make a lot?";
+            this.lblQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // picBackground
+            // 
+            this.picBackground.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.picBackground.Location = new System.Drawing.Point(0, 0);
+            this.picBackground.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picBackground.Name = "picBackground";
+            this.picBackground.Size = new System.Drawing.Size(1315, 180);
+            this.picBackground.TabIndex = 21;
+            this.picBackground.TabStop = false;
+            // 
             // GuidedInterview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1315, 860);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1317, 878);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(1339, 929);
             this.Name = "GuidedInterview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Guided Interview";
@@ -795,7 +785,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picInstruction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSense)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomMidPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomLeftPB)).EndInit();
@@ -807,6 +796,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBackground)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -834,11 +824,8 @@
         private System.Windows.Forms.Button topMidALittleBtn;
         private System.Windows.Forms.Button previousInterviewSlideBtn;
         private System.Windows.Forms.Button btnNext1;
-        private System.Windows.Forms.Label lblQuestion;
         private System.Windows.Forms.PictureBox picSense;
-        private System.Windows.Forms.PictureBox picBackground;
         private System.Windows.Forms.PictureBox picInstruction;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTL;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
@@ -867,5 +854,7 @@
         private System.Windows.Forms.TextBox tbAnswer1;
         private System.Windows.Forms.Label lblQuestion1;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblQuestion;
+        private System.Windows.Forms.PictureBox picBackground;
     }
 }

@@ -25,7 +25,6 @@ C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Lo
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.pdb
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.DeleteUser.resources
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.EditUser1.resources
-C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.InterviewCover.resources
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.MDIParent1.resources
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.Login.resources
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB.mdf
@@ -85,3 +84,5 @@ C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Lo
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.SelectInterview.resources
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInterview.resources
 C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.IndependentInterview.resources
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.IndependentCover.resources
+C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInterviewCover.resources

@@ -15,18 +15,17 @@ namespace Login {
     public partial class SelectInterview : Form {
 
         public SelectInterview() {
-            InitializeComponent();
-            
+            InitializeComponent();         
         }
 
         private void btnStart_Click(object sender, EventArgs e) {
             if (radioGuided.Checked==true) {
-                GuidedInterview newGuidedInt = new GuidedInterview();
+                GuidedInterviewCover newGuidedInt = new GuidedInterviewCover();
                 newGuidedInt.Show();
                 this.Hide();
             }
             else if (radioIndependent.Checked==true) {
-                IndependentInterview newIndependentInt = new IndependentInterview();
+                IndependentCover newIndependentInt = new IndependentCover();
                 newIndependentInt.Show();
                 this.Hide();
             }

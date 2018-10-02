@@ -37,7 +37,6 @@
             this.lblBM = new System.Windows.Forms.Label();
             this.lblTM = new System.Windows.Forms.Label();
             this.lblTL = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.picInstruction = new System.Windows.Forms.PictureBox();
             this.lblQuestion = new System.Windows.Forms.Label();
             this.picSense = new System.Windows.Forms.PictureBox();
@@ -131,7 +130,6 @@
             this.picturePanel.Controls.Add(this.lblBM);
             this.picturePanel.Controls.Add(this.lblTM);
             this.picturePanel.Controls.Add(this.lblTL);
-            this.picturePanel.Controls.Add(this.label1);
             this.picturePanel.Controls.Add(this.picInstruction);
             this.picturePanel.Controls.Add(this.lblQuestion);
             this.picturePanel.Controls.Add(this.picSense);
@@ -280,14 +278,6 @@
             this.lblTL.Size = new System.Drawing.Size(200, 75);
             this.lblTL.TabIndex = 27;
             this.lblTL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(566, 129);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 17);
-            this.label1.TabIndex = 25;
             // 
             // picInstruction
             // 
@@ -1003,9 +993,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1317, 878);
-            this.Controls.Add(this.additionalNotesPanel);
-            this.Controls.Add(this.questionPanel);
             this.Controls.Add(this.picturePanel);
+            this.Controls.Add(this.questionPanel);
+            this.Controls.Add(this.additionalNotesPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(1339, 929);
@@ -1046,7 +1036,6 @@
         private System.Windows.Forms.PictureBox picSense;
         private System.Windows.Forms.PictureBox picBackground;
         private System.Windows.Forms.PictureBox picInstruction;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;

@@ -16,7 +16,7 @@ namespace Login {
         public IndependentInterview() {
             InitializeComponent();          
             this.Location = new Point(0, 0);
-            
+            btnPreviousInterview.Click += previousInterviewSlideBtn_Click;
             //Dynamically create the circular picture boxes
             createCirclePB(bottomLeftPB);
             createCirclePB(bottomRightPB);
@@ -1183,7 +1183,6 @@ namespace Login {
             topLeftPB.Invalidate();
             page1Selections[0] = "A Little";
             //this is just to show the array being updated -- can remove after testing
-            label1.Text = string.Join(", ", page1Selections);
             //Update label
             //summary.LabelText = "Top Left A Little";
             //summary.Show();
@@ -1192,68 +1191,57 @@ namespace Login {
             //This will refresh the picture box
             topLeftPB.Invalidate();
             page1Selections[0] = "A Lot";
-            label1.Text = string.Join(", ", page1Selections);
             //summary.LabelText = "Top Left A Lot";
         }
         private void topMidALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topMidPB.Invalidate();
             page1Selections[1] = "A Little";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void topMidALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topMidPB.Invalidate();
             page1Selections[1] = "A Lot";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void topRightALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topRightPB.Invalidate();
             page1Selections[2] = "A Little";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void topRightPBALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picturebox
             topRightPB.Invalidate();
             page1Selections[2] = "A Lot";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomLeftALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
             page1Selections[3] = "A Little";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomLeftALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
             page1Selections[3] = "A Lot";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomMidALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomMidPB.Invalidate();
             page1Selections[4] = "A Little";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomMidALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomMidPB.Invalidate();
             page1Selections[4] = "A Lot";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomRightALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomRightPB.Invalidate();
             page1Selections[5] = "A Little";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomRightALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomRightPB.Invalidate();
             page1Selections[5] = "A Lot";
-            label1.Text = string.Join(", ", page1Selections);
         }
 
         private void SightColours() {
@@ -1382,8 +1370,8 @@ namespace Login {
             if (Globals.interview_page == 1) {
                 writeToDB(page1Selections, "otherPeopleTalking", "fireworks", "loudVoices",
                                             "householdAppliances", "vehicles", "bathroomAppliances");
-                if (m_InstanceRef2 != null) {
-                    InstanceRef2.Show();
+                if (m_InstanceRef != null) {
+                    InstanceRef.Show();
                 }
                 else {
                     this.Hide();
@@ -1861,13 +1849,20 @@ namespace Login {
             Summary sum = new Summary();
             sum.Show();
         }
-
+         
         /// <summary>
         /// Previous button functionality
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void previousInterviewSlideBtn_Click(object sender, EventArgs e) {
+            if (MessageBox.Show("Your answers for this page will not be saved. Are you sure you want to go back?", "Go to previous page",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes) {
+            }
+            else {
+                return;
+            }
             Globals.interview_page--;
             if (Globals.interview_page == 1) {
                 this.Hide();

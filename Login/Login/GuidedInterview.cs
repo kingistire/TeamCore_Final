@@ -15,9 +15,7 @@ namespace Login {
     public partial class GuidedInterview : Form {
         public GuidedInterview() {
             InitializeComponent();
-            this.Hide();
             panel1.BringToFront();
-            this.Location = new Point(0, 0);
             //Dynamically create the circular picture boxes
             createCirclePB(bottomLeftPB);
             createCirclePB(bottomRightPB);
@@ -32,57 +30,57 @@ namespace Login {
             }
             //determines which page to display when the interview form is loaded
             //resets to one when the user starts a new interview
-            if (Globals.interview_page == 0) {
+            if (Globals.interview_page == 1) {
                 interviewPage1();
-            } else if (Globals.interview_page == 1) {
-                interviewPage1p2();
             } else if (Globals.interview_page == 2) {
-                interviewPage2();
+                interviewPage1p2();
             } else if (Globals.interview_page == 3) {
-                interviewPage3();
+                interviewPage2();
             } else if (Globals.interview_page == 4) {
-                interviewPage4();
+                interviewPage3();
             } else if (Globals.interview_page == 5) {
-                interviewPage5();
+                interviewPage4();
             } else if (Globals.interview_page == 6) {
-                sightInterviewPage1();
+                interviewPage5();
             } else if (Globals.interview_page == 7) {
-                sightInterviewPage2();
+                sightInterviewPage1();
             } else if (Globals.interview_page == 8) {
-                sightInterviewPage3();
+                sightInterviewPage2();
             } else if (Globals.interview_page == 9) {
-                touchInterviewPage1();
+                sightInterviewPage3();
             } else if (Globals.interview_page == 10) {
-                touchInterviewPage1p2();
+                touchInterviewPage1();
             } else if (Globals.interview_page == 11) {
-                touchInterviewPage2();
+                touchInterviewPage1p2();
             } else if (Globals.interview_page == 12) {
-                touchInterviewPage3();
+                touchInterviewPage2();
             } else if (Globals.interview_page == 13) {
-                smellInterviewPage1();
+                touchInterviewPage3();
             } else if (Globals.interview_page == 14) {
-                smellInterviewPage2();
+                smellInterviewPage1();
             } else if (Globals.interview_page == 15) {
-                tasteInterviewPage1();
+                smellInterviewPage2();
             } else if (Globals.interview_page == 16) {
-                tasteInterviewPage1p2();
+                tasteInterviewPage1();
             } else if (Globals.interview_page == 17) {
-                tasteInterviewPage2();
+                tasteInterviewPage1p2();
             } else if (Globals.interview_page == 18) {
-                tasteInterviewPage3();
+                tasteInterviewPage2();
             } else if (Globals.interview_page == 19) {
-                tasteInterviewPage4();
+                tasteInterviewPage3();
             } else if (Globals.interview_page == 20) {
-                mvmtInterviewPage1();
+                tasteInterviewPage4();
             } else if (Globals.interview_page == 21) {
-                mvmtInterviewPage2();
+                mvmtInterviewPage1();
             } else if (Globals.interview_page == 22) {
-                mvmtInterviewPage3();
+                mvmtInterviewPage2();
             } else if (Globals.interview_page == 23) {
-                mvmtInterviewPage4();
+                mvmtInterviewPage3();
             } else if (Globals.interview_page == 24) {
-                environmentInterviewPage1();
+                mvmtInterviewPage4();
             } else if (Globals.interview_page == 25) {
+                environmentInterviewPage1();
+            } else if (Globals.interview_page == 26) {
                 otherInterviewPage1();
             }
         }
@@ -325,7 +323,6 @@ namespace Login {
             topLeftPB.Invalidate();
             page1Selections[0] = "A Little";
             //this is just to show the array being updated -- can remove after testing
-            label1.Text = string.Join(", ", page1Selections);
             //Update label
             //summary.LabelText = "Top Left A Little";
             //summary.Show();
@@ -334,68 +331,57 @@ namespace Login {
             //This will refresh the picture box
             topLeftPB.Invalidate();
             page1Selections[0] = "A Lot";
-            label1.Text = string.Join(", ", page1Selections);
             //summary.LabelText = "Top Left A Lot";
         }
         private void topMidALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topMidPB.Invalidate();
             page1Selections[1] = "A Little";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void topMidALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topMidPB.Invalidate();
             page1Selections[1] = "A Lot";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void topRightALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topRightPB.Invalidate();
             page1Selections[2] = "A Little";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void topRightPBALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picturebox
             topRightPB.Invalidate();
             page1Selections[2] = "A Lot";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomLeftALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
             page1Selections[3] = "A Little";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomLeftALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
             page1Selections[3] = "A Lot";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomMidALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomMidPB.Invalidate();
             page1Selections[4] = "A Little";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomMidALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomMidPB.Invalidate();
             page1Selections[4] = "A Lot";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomRightALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomRightPB.Invalidate();
             page1Selections[5] = "A Little";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomRightALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomRightPB.Invalidate();
             page1Selections[5] = "A Lot";
-            label1.Text = string.Join(", ", page1Selections);
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -409,11 +395,11 @@ namespace Login {
         private void btnNext1_Click_1(object sender, EventArgs e) {
             System.Drawing.Color tasteHeader = System.Drawing.ColorTranslator.FromHtml("#C2B4E2");
             System.Drawing.Color tasteBg = System.Drawing.ColorTranslator.FromHtml("#E6E6FA");
+
             //appends label to file on a new line
             Globals.interview_page++;
-            if (Globals.interview_page == 1) {
-                writeToDB(page1Selections, "otherPeopleTalking", "fireworks", "loudVoices",
-                                            "householdAppliances", "vehicles", "bathroomAppliances");
+
+            if (Globals.interview_page == 2) {
                 if (m_InstanceRef2 != null) {
                     InstanceRef2.Show();
                 }
@@ -425,7 +411,8 @@ namespace Login {
                     interviewForm2.Show();
                 }
             }
-            else if (Globals.interview_page == 2) {
+
+            else if (Globals.interview_page == 3) {
                 writeToDBTop3(page1Selections, "sirensOrAlarms", "suddenLoudNoises", "");
                 GuidedInterview soundPage1p2 = new GuidedInterview();
                 soundPage1p2.InstanceRef2 = this;
@@ -435,26 +422,26 @@ namespace Login {
             //-------------
             //SOUND SECTION
             //-------------
-            else if (Globals.interview_page == 3) {
+            else if (Globals.interview_page == 4) {
                 writeToDBTop3(page1Selections, "concentrating", "hardToListenInClassroom", "hardToListenInGroup");
                 GuidedInterview interviewForm3 = new GuidedInterview();
-                interviewForm3.InstanceRef2 = this;
+                interviewForm3.InstanceRef3 = this;
                 interviewForm3.Location = new Point(0, 0);
                 interviewForm3.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 4) {
+            else if (Globals.interview_page == 5) {
                 writeToDBTop3(page1Selections, "radioOn", "clockTicking", "peopleTalking");
                 GuidedInterview interviewForm4 = new GuidedInterview();
-                interviewForm4.InstanceRef3 = this;
+                interviewForm4.InstanceRef4 = this;
                 interviewForm4.Location = new Point(0, 0);
                 interviewForm4.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 5) {
+            else if (Globals.interview_page == 6) {
                 writeToDB5(page1Selections, "computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms");
                 GuidedInterview interviewForm5 = new GuidedInterview();
-                interviewForm5.InstanceRef4 = this;
+                interviewForm5.InstanceRef5 = this;
                 interviewForm5.Location = new Point(0, 0);
                 interviewForm5.Show();
                 this.Hide();
@@ -462,10 +449,10 @@ namespace Login {
             //-------------
             //SIGHT SECTION
             //-------------
-            else if (Globals.interview_page == 6) {
+            else if (Globals.interview_page == 7) {
                 writeToDB4(page1Selections, "hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen");
                 GuidedInterview sightInterview1 = new GuidedInterview();
-                sightInterview1.InstanceRef5 = this;
+                sightInterview1.InstanceRef6 = this;
                 sightInterview1.Location = new Point(0, 0);
                 sightInterview1.picBackground.BackColor = Color.SandyBrown;
                 sightInterview1.lblQuestion.BackColor = Color.SandyBrown;
@@ -474,10 +461,10 @@ namespace Login {
                 sightInterview1.panel1.BackColor = Color.Bisque;      
                 sightInterview1.Show();
                 this.Hide();
-            } else if (Globals.interview_page == 7) {
+            } else if (Globals.interview_page == 8) {
                 writeToDB5(page1Selections, "sunlight", "fluroescentLight", "lightAndShadow", "busyPatterns", "classroomLight");
                 GuidedInterview sightInterview2 = new GuidedInterview();
-                sightInterview2.InstanceRef6 = this;
+                sightInterview2.InstanceRef7 = this;
                 sightInterview2.Location = new Point(0, 0);
                 sightInterview2.picBackground.BackColor = Color.SandyBrown;
                 sightInterview2.label3.BackColor = Color.SandyBrown;
@@ -486,10 +473,10 @@ namespace Login {
                 sightInterview2.panel1.BackColor = Color.Bisque;
                 sightInterview2.Show();
                 this.Hide();
-            } else if (Globals.interview_page == 8) {
+            } else if (Globals.interview_page == 9) {
                 writeToDBTop3(page1Selections, "lotsOfThingsInMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom");
                 GuidedInterview sightInterview3 = new GuidedInterview();
-                sightInterview3.InstanceRef7 = this;
+                sightInterview3.InstanceRef8 = this;
                 sightInterview3.Location = new Point(0, 0);
                 sightInterview3.picBackground.BackColor = Color.SandyBrown;
                 sightInterview3.lblQuestion.BackColor = Color.SandyBrown;
@@ -499,10 +486,10 @@ namespace Login {
                 sightInterview3.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 9) {
+            else if (Globals.interview_page == 10) {
                 writeToDB5(page1Selections, "movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects");
                 GuidedInterview sightInterview4 = new GuidedInterview();
-                sightInterview4.InstanceRef8 = this;
+                sightInterview4.InstanceRef9 = this;
                 sightInterview4.Location = new Point(0, 0);
                 sightInterview4.picBackground.BackColor = Color.FromArgb(255, 255, 128);
                 sightInterview4.lblQuestion.BackColor = Color.FromArgb(255, 255, 128);
@@ -515,10 +502,10 @@ namespace Login {
             //-------------
             //TOUCH SECTION
             //-------------
-            else if (Globals.interview_page == 10) {
+            else if (Globals.interview_page == 11) {
                 writeToDB(page1Selections, "sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes");
                 GuidedInterview touchInterview2 = new GuidedInterview();
-                touchInterview2.InstanceRef9 = this;
+                touchInterview2.InstanceRef10 = this;
                 touchInterview2.Location = new Point(0, 0);
                 touchInterview2.picBackground.BackColor = Color.FromArgb(255, 255, 128);
                 touchInterview2.lblQuestion.BackColor = Color.FromArgb(255, 255, 128);
@@ -527,10 +514,10 @@ namespace Login {
                 touchInterview2.panel1.BackColor = Color.LightYellow;
                 touchInterview2.Show();
                 this.Hide();
-            } else if (Globals.interview_page == 11) {
+            } else if (Globals.interview_page == 12) {
                 writeToDBTop2(page1Selections, "shoes", "splashingWater");
                 GuidedInterview touchInterview3 = new GuidedInterview();
-                touchInterview3.InstanceRef10 = this;
+                touchInterview3.InstanceRef11 = this;
                 touchInterview3.Location = new Point(0, 0);
                 touchInterview3.picBackground.BackColor = Color.Yellow;
                 touchInterview3.picBackground.BackColor = Color.FromArgb(255, 255, 128);
@@ -540,11 +527,11 @@ namespace Login {
                 touchInterview3.panel1.BackColor = Color.LightYellow;
                 touchInterview3.Show();
                 this.Hide();
-            } else if (Globals.interview_page == 12) {
+            } else if (Globals.interview_page == 13) {
                 writeToDB(page1Selections, "beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut");
 
                 GuidedInterview touchInterview4 = new GuidedInterview();
-                touchInterview4.InstanceRef11 = this;
+                touchInterview4.InstanceRef12 = this;
                 touchInterview4.Location = new Point(0, 0);
                 touchInterview4.picBackground.BackColor = Color.Yellow;
                 touchInterview4.picBackground.BackColor = Color.FromArgb(255, 255, 128);
@@ -558,10 +545,10 @@ namespace Login {
             //-------------
             //SMELL SECTION
             //-------------
-            else if (Globals.interview_page == 13) {
+            else if (Globals.interview_page == 14) {
                 writeToDBTop2(page1Selections, "doctorTouchingMe", "dentistTouchingMe");
                 GuidedInterview smellInterview1 = new GuidedInterview();
-                smellInterview1.InstanceRef12 = this;
+                smellInterview1.InstanceRef13 = this;
                 smellInterview1.Location = new Point(0, 0);
                 smellInterview1.picBackground.BackColor = Color.FromArgb(143, 188, 139);
                 smellInterview1.lblQuestion.BackColor = Color.FromArgb(143, 188, 139);
@@ -570,10 +557,10 @@ namespace Login {
                 smellInterview1.panel1.BackColor = Color.Honeydew;
                 smellInterview1.Show();
                 this.Hide();
-            } else if (Globals.interview_page == 14) {
+            } else if (Globals.interview_page == 15) {
                 writeToDB(page1Selections, "soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow");
                 GuidedInterview smellInterview2 = new GuidedInterview();
-                smellInterview2.InstanceRef13 = this;
+                smellInterview2.InstanceRef14 = this;
                 smellInterview2.Location = new Point(0, 0);
                 smellInterview2.picBackground.BackColor = Color.FromArgb(143, 188, 139);
                 smellInterview2.lblQuestion.BackColor = Color.FromArgb(143, 188, 139);
@@ -586,10 +573,10 @@ namespace Login {
             //-------------
             //TASTE SECTION
             //-------------
-            else if (Globals.interview_page == 15) {
+            else if (Globals.interview_page == 16) {
                 writeToDB5(page1Selections, "smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople");
                 GuidedInterview tasteInterview1 = new GuidedInterview();
-                tasteInterview1.InstanceRef14 = this;
+                tasteInterview1.InstanceRef15 = this;
                 tasteInterview1.Location = new Point(0, 0);
                 tasteInterview1.picBackground.BackColor = tasteHeader;
                 tasteInterview1.panel1.BackColor = tasteBg;
@@ -598,11 +585,11 @@ namespace Login {
                 tasteInterview1.label5.BackColor = tasteHeader;
                 tasteInterview1.Show();
                 this.Hide();
-            } else if (Globals.interview_page == 16) {
+            } else if (Globals.interview_page == 17) {
                 writeToDB(page1Selections, "vegetables", "fruit", "meat", "fish", "eggs", "dairy");
 
                 GuidedInterview tasteInterview1p2 = new GuidedInterview();
-                tasteInterview1p2.InstanceRef15 = this;
+                tasteInterview1p2.InstanceRef16 = this;
                 tasteInterview1p2.Location = new Point(0, 0);
                 tasteInterview1p2.picBackground.BackColor = tasteHeader;
                 tasteInterview1p2.panel1.BackColor = tasteBg;
@@ -612,7 +599,7 @@ namespace Login {
                 tasteInterview1p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 17) {
+            else if (Globals.interview_page == 18) {
                 writeToDBTop2(page1Selections, "bread", "pasta");
 
                 GuidedInterview tasteInterview2 = new GuidedInterview();
@@ -626,7 +613,7 @@ namespace Login {
                 tasteInterview2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 18) {
+            else if (Globals.interview_page == 19) {
                 writeToDB(page1Selections, "lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour");
 
                 GuidedInterview tasteInterview3 = new GuidedInterview();
@@ -640,7 +627,7 @@ namespace Login {
                 tasteInterview3.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 19) {
+            else if (Globals.interview_page == 20) {
 
                 GuidedInterview tasteInterview4 = new GuidedInterview();
                 tasteInterview4.InstanceRef19 = this;
@@ -653,7 +640,7 @@ namespace Login {
                 tasteInterview4.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 20) {
+            else if (Globals.interview_page == 21) {
                 writeToDBTop3(page1Selections, "shirt", "hair", "objects");
 
                 GuidedInterview mvmtInterview1 = new GuidedInterview();
@@ -667,7 +654,7 @@ namespace Login {
                 mvmtInterview1.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 21) {
+            else if (Globals.interview_page == 22) {
                 writeToDB5(page1Selections, "beingJumpedOnOrTackled", "movingWhenICantSeeWhereImGoing", "balancing", "beingUpsideDown", "climbingUpHigh");
 
                 GuidedInterview mvmtInterview2 = new GuidedInterview();
@@ -681,7 +668,7 @@ namespace Login {
                 mvmtInterview2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 22) {
+            else if (Globals.interview_page == 23) {
                 writeToDBTop2(page1Selections, "standingStill", "sittingStill");
                 this.Hide();
                 GuidedInterview mvmtInterview3 = new GuidedInterview();
@@ -694,7 +681,7 @@ namespace Login {
                 mvmtInterview3.label5.BackColor = Color.PaleVioletRed;
                 mvmtInterview3.Show();
             }
-            else if (Globals.interview_page == 23) {
+            else if (Globals.interview_page == 24) {
                 writeToDB5(page1Selections, "movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running");
                 GuidedInterview mvmtInterview4 = new GuidedInterview();
                 mvmtInterview4.InstanceRef23 = this;
@@ -710,10 +697,10 @@ namespace Login {
             //-------------------
             //ENVIRONMENT SECTION
             //-------------------
-            else if (Globals.interview_page == 24) {
+            else if (Globals.interview_page == 25) {
                 writeToDB4(page1Selections, "rocking", "movingHands", "clapping", "pacing");
                 GuidedInterview environmentInterview1 = new GuidedInterview();
-                environmentInterview1.InstanceRef23 = this;
+                environmentInterview1.InstanceRef24 = this;
                 environmentInterview1.Location = new Point(0, 0);
                 environmentInterview1.picBackground.BackColor = Color.LightBlue;
                 environmentInterview1.panel1.BackColor = Color.AliceBlue;
@@ -726,10 +713,10 @@ namespace Login {
             //-------------
             //OTHER SECTION
             //-------------
-            else if (Globals.interview_page == 25) {
+            else if (Globals.interview_page == 26) {
                 writeToDB5(page1Selections, "supermarket", "party", "foodHall", "show", "shoppingMall");
                 GuidedInterview otherInterview1 = new GuidedInterview();
-                otherInterview1.InstanceRef23 = this;
+                otherInterview1.InstanceRef25 = this;
                 otherInterview1.Location = new Point(0, 0);
                 otherInterview1.picBackground.BackColor = Color.Tan;
                 otherInterview1.panel1.BackColor = Color.AntiqueWhite;
@@ -738,7 +725,7 @@ namespace Login {
                 otherInterview1.label5.BackColor = Color.Tan;
                 otherInterview1.Show();
                 this.Hide();
-            } else if (Globals.interview_page == 26) {
+            } else if (Globals.interview_page == 27) {
                 writeToDB(page1Selections, "sounds", "smells", "sights", "tastes", "feelings", "movements");
                 //Summary sum = new Summary();
                 //sum.Show();
@@ -759,6 +746,12 @@ namespace Login {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void previousInterviewSlideBtn_Click(object sender, EventArgs e) {
+            if (MessageBox.Show("Your answers for this page will not be saved. Are you sure you want to go back?", "Go to previous page",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+            MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes) {
+            } else {
+                return;
+            }
             Globals.interview_page--;
             if (Globals.interview_page == 1) {
                 this.Hide();
