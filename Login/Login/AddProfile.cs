@@ -21,6 +21,7 @@ namespace Login {
             InitializeComponent();
             this.Location = new Point(0,0);
             staticVar = this;
+            cbGender.SelectedIndex = 2; // make default selection so it won't crash
         }
 
         //doesnt work

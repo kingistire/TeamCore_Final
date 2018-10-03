@@ -37,9 +37,10 @@
             this.interviewDataGrid = new System.Windows.Forms.DataGridView();
             this.viewResultsBtnColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.resultsHeader = new System.Windows.Forms.Label();
-            this.btnViewFamilyObservations = new System.Windows.Forms.Button();
+            this.viewFamilyObservationBtn = new System.Windows.Forms.Button();
             this.editUserDataBtn = new System.Windows.Forms.Button();
             this.deleteUserBtn = new System.Windows.Forms.Button();
+            this.exportProfileBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.interviewDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,10 +120,10 @@
             this.interviewDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.interviewDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.viewResultsBtnColumn});
-            this.interviewDataGrid.Location = new System.Drawing.Point(188, 194);
+            this.interviewDataGrid.Location = new System.Drawing.Point(188, 166);
             this.interviewDataGrid.Name = "interviewDataGrid";
             this.interviewDataGrid.ReadOnly = true;
-            this.interviewDataGrid.Size = new System.Drawing.Size(581, 231);
+            this.interviewDataGrid.Size = new System.Drawing.Size(698, 190);
             this.interviewDataGrid.TabIndex = 31;
             // 
             // viewResultsBtnColumn
@@ -139,7 +140,7 @@
             this.resultsHeader.BackColor = System.Drawing.Color.Transparent;
             this.resultsHeader.Font = new System.Drawing.Font("Calibri", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultsHeader.ForeColor = System.Drawing.Color.DarkBlue;
-            this.resultsHeader.Location = new System.Drawing.Point(183, 162);
+            this.resultsHeader.Location = new System.Drawing.Point(183, 125);
             this.resultsHeader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.resultsHeader.Name = "resultsHeader";
             this.resultsHeader.Size = new System.Drawing.Size(182, 29);
@@ -147,25 +148,26 @@
             this.resultsHeader.Text = "Interview History";
             this.resultsHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnViewFamilyObservations
+            // viewFamilyObservationBtn
             // 
-            this.btnViewFamilyObservations.BackColor = System.Drawing.Color.White;
-            this.btnViewFamilyObservations.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnViewFamilyObservations.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnViewFamilyObservations.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnViewFamilyObservations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewFamilyObservations.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewFamilyObservations.ForeColor = System.Drawing.Color.Navy;
-            this.btnViewFamilyObservations.Image = ((System.Drawing.Image)(resources.GetObject("btnViewFamilyObservations.Image")));
-            this.btnViewFamilyObservations.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnViewFamilyObservations.Location = new System.Drawing.Point(11, 286);
-            this.btnViewFamilyObservations.Margin = new System.Windows.Forms.Padding(2);
-            this.btnViewFamilyObservations.Name = "btnViewFamilyObservations";
-            this.btnViewFamilyObservations.Size = new System.Drawing.Size(164, 60);
-            this.btnViewFamilyObservations.TabIndex = 33;
-            this.btnViewFamilyObservations.Text = "View Family Observations";
-            this.btnViewFamilyObservations.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewFamilyObservations.UseVisualStyleBackColor = false;
+            this.viewFamilyObservationBtn.BackColor = System.Drawing.Color.White;
+            this.viewFamilyObservationBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.viewFamilyObservationBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.viewFamilyObservationBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.viewFamilyObservationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewFamilyObservationBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewFamilyObservationBtn.ForeColor = System.Drawing.Color.Navy;
+            this.viewFamilyObservationBtn.Image = ((System.Drawing.Image)(resources.GetObject("viewFamilyObservationBtn.Image")));
+            this.viewFamilyObservationBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.viewFamilyObservationBtn.Location = new System.Drawing.Point(356, 42);
+            this.viewFamilyObservationBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.viewFamilyObservationBtn.Name = "viewFamilyObservationBtn";
+            this.viewFamilyObservationBtn.Size = new System.Drawing.Size(164, 60);
+            this.viewFamilyObservationBtn.TabIndex = 33;
+            this.viewFamilyObservationBtn.Text = "[View Family Observations]";
+            this.viewFamilyObservationBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.viewFamilyObservationBtn.UseVisualStyleBackColor = false;
+            this.viewFamilyObservationBtn.Click += new System.EventHandler(this.viewFamilyObservationBtn_Click);
             // 
             // editUserDataBtn
             // 
@@ -178,7 +180,7 @@
             this.editUserDataBtn.ForeColor = System.Drawing.Color.Navy;
             this.editUserDataBtn.Image = ((System.Drawing.Image)(resources.GetObject("editUserDataBtn.Image")));
             this.editUserDataBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.editUserDataBtn.Location = new System.Drawing.Point(11, 208);
+            this.editUserDataBtn.Location = new System.Drawing.Point(188, 42);
             this.editUserDataBtn.Margin = new System.Windows.Forms.Padding(2);
             this.editUserDataBtn.Name = "editUserDataBtn";
             this.editUserDataBtn.Size = new System.Drawing.Size(164, 60);
@@ -199,7 +201,7 @@
             this.deleteUserBtn.ForeColor = System.Drawing.Color.Navy;
             this.deleteUserBtn.Image = ((System.Drawing.Image)(resources.GetObject("deleteUserBtn.Image")));
             this.deleteUserBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.deleteUserBtn.Location = new System.Drawing.Point(11, 365);
+            this.deleteUserBtn.Location = new System.Drawing.Point(702, 42);
             this.deleteUserBtn.Margin = new System.Windows.Forms.Padding(2);
             this.deleteUserBtn.Name = "deleteUserBtn";
             this.deleteUserBtn.Size = new System.Drawing.Size(164, 60);
@@ -209,14 +211,36 @@
             this.deleteUserBtn.UseVisualStyleBackColor = false;
             this.deleteUserBtn.Click += new System.EventHandler(this.deleteUserBtn_Click);
             // 
+            // exportProfileBtn
+            // 
+            this.exportProfileBtn.BackColor = System.Drawing.Color.White;
+            this.exportProfileBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.exportProfileBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.exportProfileBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.exportProfileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exportProfileBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exportProfileBtn.ForeColor = System.Drawing.Color.Navy;
+            this.exportProfileBtn.Image = ((System.Drawing.Image)(resources.GetObject("exportProfileBtn.Image")));
+            this.exportProfileBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.exportProfileBtn.Location = new System.Drawing.Point(524, 42);
+            this.exportProfileBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.exportProfileBtn.Name = "exportProfileBtn";
+            this.exportProfileBtn.Size = new System.Drawing.Size(174, 60);
+            this.exportProfileBtn.TabIndex = 36;
+            this.exportProfileBtn.Text = "[Export Profile]";
+            this.exportProfileBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.exportProfileBtn.UseVisualStyleBackColor = false;
+            this.exportProfileBtn.Click += new System.EventHandler(this.exportProfileBtn_Click);
+            // 
             // ProfilePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(911, 399);
+            this.Controls.Add(this.exportProfileBtn);
             this.Controls.Add(this.deleteUserBtn);
             this.Controls.Add(this.editUserDataBtn);
-            this.Controls.Add(this.btnViewFamilyObservations);
+            this.Controls.Add(this.viewFamilyObservationBtn);
             this.Controls.Add(this.resultsHeader);
             this.Controls.Add(this.interviewDataGrid);
             this.Controls.Add(this.mailLabel);
@@ -242,9 +266,10 @@
         private System.Windows.Forms.Label mailLabel;
         private System.Windows.Forms.DataGridView interviewDataGrid;
         private System.Windows.Forms.Label resultsHeader;
-        private System.Windows.Forms.Button btnViewFamilyObservations;
+        private System.Windows.Forms.Button viewFamilyObservationBtn;
         private System.Windows.Forms.DataGridViewButtonColumn viewResultsBtnColumn;
         private System.Windows.Forms.Button editUserDataBtn;
         private System.Windows.Forms.Button deleteUserBtn;
+        private System.Windows.Forms.Button exportProfileBtn;
     }
 }

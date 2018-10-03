@@ -35,7 +35,9 @@
             this.userProfileManagmentGrid = new System.Windows.Forms.DataGridView();
             this.editProfileBtnCol = new System.Windows.Forms.DataGridViewButtonColumn();
             this.viewProfileBtnCol = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.createProfileBtn = new System.Windows.Forms.Button();
+            this.importProfilesBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.exportAllProfilesBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userProfileManagmentGrid)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +45,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(399, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(586, 21);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 73);
@@ -110,22 +112,74 @@
             this.viewProfileBtnCol.Text = "View";
             this.viewProfileBtnCol.UseColumnTextForButtonValue = true;
             // 
-            // createProfileBtn
+            // importProfilesBtn
             // 
-            this.createProfileBtn.Location = new System.Drawing.Point(30, 95);
-            this.createProfileBtn.Name = "createProfileBtn";
-            this.createProfileBtn.Size = new System.Drawing.Size(124, 46);
-            this.createProfileBtn.TabIndex = 27;
-            this.createProfileBtn.Text = "Create Profile";
-            this.createProfileBtn.UseVisualStyleBackColor = true;
-            this.createProfileBtn.Click += new System.EventHandler(this.createProfileBtn_Click);
+            this.importProfilesBtn.BackColor = System.Drawing.Color.White;
+            this.importProfilesBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.importProfilesBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.importProfilesBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.importProfilesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.importProfilesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.importProfilesBtn.ForeColor = System.Drawing.Color.Navy;
+            this.importProfilesBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.importProfilesBtn.Location = new System.Drawing.Point(149, 95);
+            this.importProfilesBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.importProfilesBtn.Name = "importProfilesBtn";
+            this.importProfilesBtn.Size = new System.Drawing.Size(128, 46);
+            this.importProfilesBtn.TabIndex = 35;
+            this.importProfilesBtn.Text = "[Import Profiles]";
+            this.importProfilesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.importProfilesBtn.UseVisualStyleBackColor = false;
+            this.importProfilesBtn.Click += new System.EventHandler(this.importProfilesBtn_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Navy;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(30, 95);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 46);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "Create Profile";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.createProfileBtn_Click);
+            // 
+            // exportAllProfilesBtn
+            // 
+            this.exportAllProfilesBtn.BackColor = System.Drawing.Color.White;
+            this.exportAllProfilesBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.exportAllProfilesBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.exportAllProfilesBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.exportAllProfilesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exportAllProfilesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exportAllProfilesBtn.ForeColor = System.Drawing.Color.Navy;
+            this.exportAllProfilesBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.exportAllProfilesBtn.Location = new System.Drawing.Point(281, 95);
+            this.exportAllProfilesBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.exportAllProfilesBtn.Name = "exportAllProfilesBtn";
+            this.exportAllProfilesBtn.Size = new System.Drawing.Size(153, 46);
+            this.exportAllProfilesBtn.TabIndex = 37;
+            this.exportAllProfilesBtn.Text = "[Export All Profiles]";
+            this.exportAllProfilesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.exportAllProfilesBtn.UseVisualStyleBackColor = false;
+            this.exportAllProfilesBtn.Click += new System.EventHandler(this.exportAllProfilesBtn_Click);
             // 
             // UserManagment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 462);
-            this.Controls.Add(this.createProfileBtn);
+            this.Controls.Add(this.exportAllProfilesBtn);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.importProfilesBtn);
             this.Controls.Add(this.userProfileManagmentGrid);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
@@ -149,8 +203,10 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView userProfileManagmentGrid;
-        private System.Windows.Forms.Button createProfileBtn;
         private System.Windows.Forms.DataGridViewButtonColumn editProfileBtnCol;
         private System.Windows.Forms.DataGridViewButtonColumn viewProfileBtnCol;
+        private System.Windows.Forms.Button importProfilesBtn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button exportAllProfilesBtn;
     }
 }

@@ -93,5 +93,15 @@ namespace Login
                 profilePage.Show();
             }
         }
+
+        private void importProfilesBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This feature has not been developed yet!");
+        }
+
+        private void exportAllProfilesBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This feature has not been developed yet!");
+        }
     }
 }

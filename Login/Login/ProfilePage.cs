@@ -77,5 +77,15 @@ namespace Login
             deleteUserProfile.MdiParent = this.MdiParent;
             deleteUserProfile.Show();
         }
+
+        private void viewFamilyObservationBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This feature has not been developed yet!");
+        }
+
+        private void exportProfileBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This feature has not been developed yet!");
+        }
     }
 }
