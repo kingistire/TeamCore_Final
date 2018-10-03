@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tbLname = new System.Windows.Forms.TextBox();
+            this.requiredFieldsWarningLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +65,7 @@
             this.btnCreateAcc.ForeColor = System.Drawing.Color.Navy;
             this.btnCreateAcc.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateAcc.Image")));
             this.btnCreateAcc.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCreateAcc.Location = new System.Drawing.Point(135, 349);
+            this.btnCreateAcc.Location = new System.Drawing.Point(136, 375);
             this.btnCreateAcc.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateAcc.Name = "btnCreateAcc";
             this.btnCreateAcc.Size = new System.Drawing.Size(187, 43);
@@ -94,9 +95,9 @@
             this.label6.Location = new System.Drawing.Point(79, 240);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 16);
+            this.label6.Size = new System.Drawing.Size(84, 16);
             this.label6.TabIndex = 25;
-            this.label6.Text = "Last Name:";
+            this.label6.Text = "*Last Name:";
             // 
             // label5
             // 
@@ -106,9 +107,9 @@
             this.label5.Location = new System.Drawing.Point(83, 273);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 16);
+            this.label5.Size = new System.Drawing.Size(78, 16);
             this.label5.TabIndex = 22;
-            this.label5.Text = "Password:";
+            this.label5.Text = "*Password:";
             // 
             // label4
             // 
@@ -118,9 +119,9 @@
             this.label4.Location = new System.Drawing.Point(77, 207);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 16);
+            this.label4.Size = new System.Drawing.Size(85, 16);
             this.label4.TabIndex = 21;
-            this.label4.Text = "First Name:";
+            this.label4.Text = "*First Name:";
             // 
             // lblUsername
             // 
@@ -130,9 +131,9 @@
             this.lblUsername.Location = new System.Drawing.Point(58, 176);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(101, 16);
+            this.lblUsername.Size = new System.Drawing.Size(106, 16);
             this.lblUsername.TabIndex = 20;
-            this.lblUsername.Text = "Email Address:";
+            this.lblUsername.Text = "*Email Address:";
             // 
             // label2
             // 
@@ -188,9 +189,9 @@
             this.label1.Location = new System.Drawing.Point(36, 306);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 16);
+            this.label1.Size = new System.Drawing.Size(131, 16);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Confirm Password:";
+            this.label1.Text = "*Confirm Password:";
             // 
             // label8
             // 
@@ -214,12 +215,27 @@
             this.tbLname.Size = new System.Drawing.Size(112, 20);
             this.tbLname.TabIndex = 2;
             // 
-            // NewAccount
+            // requiredFieldsWarningLabel
+            // 
+            this.requiredFieldsWarningLabel.AutoSize = true;
+            this.requiredFieldsWarningLabel.BackColor = System.Drawing.Color.Transparent;
+            this.requiredFieldsWarningLabel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.requiredFieldsWarningLabel.ForeColor = System.Drawing.Color.Red;
+            this.requiredFieldsWarningLabel.Location = new System.Drawing.Point(151, 345);
+            this.requiredFieldsWarningLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.requiredFieldsWarningLabel.Name = "requiredFieldsWarningLabel";
+            this.requiredFieldsWarningLabel.Size = new System.Drawing.Size(172, 17);
+            this.requiredFieldsWarningLabel.TabIndex = 31;
+            this.requiredFieldsWarningLabel.Text = "*Warning Message Here*";
+            this.requiredFieldsWarningLabel.Visible = false;
+            // 
+            // NewOTAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(370, 414);
+            this.ClientSize = new System.Drawing.Size(380, 441);
+            this.Controls.Add(this.requiredFieldsWarningLabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCreateAcc);
             this.Controls.Add(this.label7);
@@ -236,9 +252,10 @@
             this.Controls.Add(this.tbFname);
             this.Controls.Add(this.tbEmail);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "NewAccount";
+            this.Name = "NewOTAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewOTAccount_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -262,5 +279,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbLname;
+        private System.Windows.Forms.Label requiredFieldsWarningLabel;
     }
 }

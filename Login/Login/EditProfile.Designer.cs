@@ -24,15 +24,12 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditProfile));
-            this.tbFname = new System.Windows.Forms.TextBox();
             this.tbLname = new System.Windows.Forms.TextBox();
             this.tbAge = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.tbPhone = new System.Windows.Forms.TextBox();
-            this.tbEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbGender = new System.Windows.Forms.ComboBox();
@@ -43,20 +40,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.nameTitle = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.requiredFieldsWarningLabel = new System.Windows.Forms.Label();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.tbPhone = new System.Windows.Forms.TextBox();
+            this.tbFname = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tbFname
-            // 
-            this.tbFname.Location = new System.Drawing.Point(212, 144);
-            this.tbFname.Margin = new System.Windows.Forms.Padding(2);
-            this.tbFname.Name = "tbFname";
-            this.tbFname.Size = new System.Drawing.Size(112, 20);
-            this.tbFname.TabIndex = 2;
-            this.tbFname.Click += new System.EventHandler(this.tbFname_Click);
-            this.tbFname.Leave += new System.EventHandler(this.tbFname_Leave);
             // 
             // tbLname
             // 
@@ -72,7 +62,7 @@
             this.tbAge.Margin = new System.Windows.Forms.Padding(2);
             this.tbAge.Name = "tbAge";
             this.tbAge.Size = new System.Drawing.Size(112, 20);
-            this.tbAge.TabIndex = 2;
+            this.tbAge.TabIndex = 4;
             // 
             // label2
             // 
@@ -96,9 +86,9 @@
             this.lblUsername.Location = new System.Drawing.Point(82, 145);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(80, 16);
+            this.lblUsername.Size = new System.Drawing.Size(85, 16);
             this.lblUsername.TabIndex = 8;
-            this.lblUsername.Text = "First Name:";
+            this.lblUsername.Text = "*First Name:";
             // 
             // label4
             // 
@@ -108,44 +98,28 @@
             this.label4.Location = new System.Drawing.Point(84, 177);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 16);
+            this.label4.Size = new System.Drawing.Size(84, 16);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Last Name:";
+            this.label4.Text = "*Last Name:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(120, 242);
+            this.label5.Location = new System.Drawing.Point(68, 241);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 16);
+            this.label5.Size = new System.Drawing.Size(95, 16);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Age:";
-            // 
-            // tbPhone
-            // 
-            this.tbPhone.Location = new System.Drawing.Point(212, 322);
-            this.tbPhone.Margin = new System.Windows.Forms.Padding(2);
-            this.tbPhone.Name = "tbPhone";
-            this.tbPhone.Size = new System.Drawing.Size(112, 20);
-            this.tbPhone.TabIndex = 2;
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.Location = new System.Drawing.Point(212, 354);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(112, 20);
-            this.tbEmail.TabIndex = 2;
+            this.label5.Text = "*Date Of Birth";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(95, 323);
+            this.label1.Location = new System.Drawing.Point(95, 337);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 16);
@@ -157,7 +131,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(111, 355);
+            this.label3.Location = new System.Drawing.Point(111, 370);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 16);
@@ -176,7 +150,7 @@
             this.cbGender.Margin = new System.Windows.Forms.Padding(2);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(112, 21);
-            this.cbGender.TabIndex = 9;
+            this.cbGender.TabIndex = 3;
             // 
             // label6
             // 
@@ -186,9 +160,9 @@
             this.label6.Location = new System.Drawing.Point(100, 210);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 16);
+            this.label6.Size = new System.Drawing.Size(65, 16);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Gender:";
+            this.label6.Text = "*Gender:";
             // 
             // label7
             // 
@@ -207,7 +181,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label8.Location = new System.Drawing.Point(66, 283);
+            this.label8.Location = new System.Drawing.Point(67, 301);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(110, 19);
@@ -225,11 +199,11 @@
             this.btnSave.ForeColor = System.Drawing.Color.Navy;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.Location = new System.Drawing.Point(212, 412);
+            this.btnSave.Location = new System.Drawing.Point(167, 412);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(157, 43);
-            this.btnSave.TabIndex = 12;
+            this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Update User";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.UseVisualStyleBackColor = false;
@@ -269,25 +243,65 @@
             this.nameTitle.Text = "ENTER NAME HERE";
             this.nameTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
+            // requiredFieldsWarningLabel
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 439);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(340, 54);
-            this.dataGridView1.TabIndex = 16;
-            this.dataGridView1.Visible = false;
+            this.requiredFieldsWarningLabel.AutoSize = true;
+            this.requiredFieldsWarningLabel.BackColor = System.Drawing.Color.Transparent;
+            this.requiredFieldsWarningLabel.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.requiredFieldsWarningLabel.ForeColor = System.Drawing.Color.Red;
+            this.requiredFieldsWarningLabel.Location = new System.Drawing.Point(100, 273);
+            this.requiredFieldsWarningLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.requiredFieldsWarningLabel.Name = "requiredFieldsWarningLabel";
+            this.requiredFieldsWarningLabel.Size = new System.Drawing.Size(172, 17);
+            this.requiredFieldsWarningLabel.TabIndex = 19;
+            this.requiredFieldsWarningLabel.Text = "*Warning Message Here*";
+            this.requiredFieldsWarningLabel.Visible = false;
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.Location = new System.Drawing.Point(211, 369);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(112, 20);
+            this.tbEmail.TabIndex = 6;
+            // 
+            // tbPhone
+            // 
+            this.tbPhone.Location = new System.Drawing.Point(212, 337);
+            this.tbPhone.Margin = new System.Windows.Forms.Padding(2);
+            this.tbPhone.Name = "tbPhone";
+            this.tbPhone.Size = new System.Drawing.Size(112, 20);
+            this.tbPhone.TabIndex = 5;
+            // 
+            // tbFname
+            // 
+            this.tbFname.Location = new System.Drawing.Point(211, 141);
+            this.tbFname.Margin = new System.Windows.Forms.Padding(2);
+            this.tbFname.Name = "tbFname";
+            this.tbFname.Size = new System.Drawing.Size(112, 20);
+            this.tbFname.TabIndex = 1;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(212, 241);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(112, 20);
+            this.dateTimePicker1.TabIndex = 4;
             // 
             // EditProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(370, 455);
+            this.ClientSize = new System.Drawing.Size(371, 474);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.tbFname);
+            this.Controls.Add(this.tbPhone);
+            this.Controls.Add(this.tbEmail);
+            this.Controls.Add(this.requiredFieldsWarningLabel);
             this.Controls.Add(this.nameTitle);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSave);
@@ -301,34 +315,29 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbEmail);
-            this.Controls.Add(this.tbPhone);
             this.Controls.Add(this.tbAge);
             this.Controls.Add(this.tbLname);
-            this.Controls.Add(this.tbFname);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "EditProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Add User";
+            this.Text = "Edit User";
             this.Load += new System.EventHandler(this.editProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox tbFname;
         private System.Windows.Forms.TextBox tbLname;
         private System.Windows.Forms.TextBox tbAge;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tbPhone;
-        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbGender;
@@ -339,6 +348,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label nameTitle;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label requiredFieldsWarningLabel;
+        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.TextBox tbPhone;
+        private System.Windows.Forms.TextBox tbFname;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

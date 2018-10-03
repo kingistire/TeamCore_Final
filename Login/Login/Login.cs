@@ -48,7 +48,9 @@ namespace Login {
         private void button1_Click(object sender, EventArgs e) {
             this.Hide();
             NewOTAccount newAcc = new NewOTAccount();
+            
             newAcc.Show();
+            
         }
 
         private void Login_Load(object sender, EventArgs e)

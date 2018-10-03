@@ -24,6 +24,17 @@ namespace Login {
             tbPass2.PasswordChar = '*';
         }
 
+        private bool AreRequiredFieldsIncomplete()
+        {
+            if (tbFname.Text.Trim().Length == 0 || tbLname.Text.Trim().Length == 0
+                || tbEmail.Text.Trim().Length == 0 || tbPass2.Text.Trim().Length == 0 || 
+                tbPass1.Text.Trim().Length == 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
         private void NewAccount_FormClosing(Object sender, FormClosingEventArgs e) {
             System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
             messageBoxCS.AppendFormat("{0} = {1}", "CloseReason", e.CloseReason);
@@ -41,7 +52,15 @@ namespace Login {
             }*/
     
             private void btnSave_Click_1(object sender, EventArgs e) {
-                con = new SqlConnection(@"Data Source =(LocalDB)\MSSQLLocalDB;" + 
+            if (AreRequiredFieldsIncomplete())
+            {
+                requiredFieldsWarningLabel.Visible = true;
+                requiredFieldsWarningLabel.Text = "Please fill out the *Required* fields";
+
+            }
+            else
+            {
+                con = new SqlConnection(@"Data Source =(LocalDB)\MSSQLLocalDB;" +
                     @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True");
                 con.Open();
                 cmd = new SqlCommand("INSERT INTO UserInformation (firstName, lastName, gender, age, phone, email) VALUES (@firstName, @lastName, @gender, @age, @phone, @email)", con);
@@ -52,8 +71,20 @@ namespace Login {
                 //cmd.Parameters.AddWithValue("@gender", tbGender.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("New user has been added successfully.");
-                
+
                 this.Close();
             }
+
+
+            
+            }
+
+        private void NewOTAccount_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Login newLogin = new Login();
+            newLogin.Show(); // *check
+
+
         }
+    }
     }

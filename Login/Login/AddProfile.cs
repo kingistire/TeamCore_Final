@@ -24,6 +24,16 @@ namespace Login {
             cbGender.SelectedIndex = 2; // make default selection so it won't crash
         }
 
+        private bool AreRequiredFieldsIncomplete()
+        {
+            if (tbFname.Text.Trim().Length == 0 || tbLname.Text.Trim().Length == 0
+                || cbGender.SelectedIndex == -1)
+            {
+                return true;
+            }
+            return false;
+        }
+
         //doesnt work
         private void Form1_FormClosing(object sender, FormClosingEventArgs e) {
             if (string.Equals((sender as Button).Name, @"CloseButton")) {
@@ -40,25 +50,37 @@ namespace Login {
             this.Refresh();
         }
 
+    
         private void btnSave_Click_1(object sender, EventArgs e) {
             string genderSelection = "";
-            //if gender is not chosen, program crashes
-            genderSelection = cbGender.Items[cbGender.SelectedIndex].ToString().Trim();
-            con = new SqlConnection(@"Data Source =(LocalDB)\MSSQLLocalDB;" + 
-                @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True");
-            con.Open();
-            cmd = new SqlCommand("INSERT INTO UserInformation (firstName, lastName, gender, age, phone, email) VALUES (@firstName, @lastName, @gender, @age, @phone, @email)", con);
-            cmd.Parameters.AddWithValue("@firstName", tbFname.Text.Trim());
-            cmd.Parameters.AddWithValue("@lastName", tbLname.Text.Trim());
-            cmd.Parameters.AddWithValue("@gender", genderSelection.Trim());
-            cmd.Parameters.AddWithValue("@age", tbAge.Text.Trim());
-            cmd.Parameters.AddWithValue("@phone", tbPhone.Text.Trim());
-            cmd.Parameters.AddWithValue("@email", tbEmail.Text.Trim());
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("New user has been added successfully.");
-            this.Close();
-            con.Close();
-        }
 
+            if (AreRequiredFieldsIncomplete())
+            {
+                requiredFieldsWarningLabel.Visible = true;
+                requiredFieldsWarningLabel.Text = "Please fill out the *Required* fields";
+
+            } else
+            {
+                genderSelection = cbGender.Items[cbGender.SelectedIndex].ToString().Trim();
+
+
+                con = new SqlConnection(@"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True");
+                con.Open();
+                cmd = new SqlCommand("INSERT INTO UserInformation (firstName, lastName, dob, gender, phone, email) VALUES (@firstName, @lastName, @dob, @gender, @phone, @email)", con);
+                cmd.Parameters.AddWithValue("@firstName", tbFname.Text.Trim());
+                cmd.Parameters.AddWithValue("@lastName", tbLname.Text.Trim());
+                cmd.Parameters.AddWithValue("@gender", genderSelection.Trim());
+                
+                cmd.Parameters.AddWithValue("@phone", tbPhone.Text.Trim());
+                cmd.Parameters.AddWithValue("@email", tbEmail.Text.Trim());
+                cmd.Parameters.AddWithValue("@dob", dateTimePicker1.Value);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("New user has been added successfully.");
+                this.Close();
+                con.Close();
+            }
+            
+        }
     }
     }

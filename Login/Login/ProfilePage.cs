@@ -47,8 +47,8 @@ namespace Login
                 //column.Width = 60;
 
                 nameLabel.Text = thisUser.Cells[3].Value.ToString().Trim() + ' ' + thisUser.Cells[4].Value.ToString().Trim();
-                genderLabel.Text = thisUser.Cells[5].Value.ToString().Trim();
-                dobLabel.Text = thisUser.Cells[6].Value.ToString().Trim();
+                genderLabel.Text = thisUser.Cells[6].Value.ToString().Trim();
+                dobLabel.Text = thisUser.Cells[5].Value.ToString().Substring(0, 10);
                 phLabel.Text = thisUser.Cells[7].Value.ToString().Trim();
                 mailLabel.Text = thisUser.Cells[8].Value.ToString().Trim();
 
