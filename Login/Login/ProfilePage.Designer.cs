@@ -34,14 +34,14 @@
             this.genderLabel = new System.Windows.Forms.Label();
             this.phLabel = new System.Windows.Forms.Label();
             this.mailLabel = new System.Windows.Forms.Label();
-            this.interviewDataGrid = new System.Windows.Forms.DataGridView();
-            this.viewResultsBtnColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.resultsHeader = new System.Windows.Forms.Label();
             this.viewFamilyObservationBtn = new System.Windows.Forms.Button();
             this.editUserDataBtn = new System.Windows.Forms.Button();
             this.deleteUserBtn = new System.Windows.Forms.Button();
             this.exportProfileBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.interviewDataGrid)).BeginInit();
+            this.InterviewHistoryDataGrid = new System.Windows.Forms.DataGridView();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.InterviewHistoryDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // nameLabel
@@ -113,26 +113,6 @@
             this.mailLabel.TabIndex = 30;
             this.mailLabel.Text = "FILL EMAIL";
             this.mailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // interviewDataGrid
-            // 
-            this.interviewDataGrid.AllowUserToDeleteRows = false;
-            this.interviewDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.interviewDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.viewResultsBtnColumn});
-            this.interviewDataGrid.Location = new System.Drawing.Point(188, 166);
-            this.interviewDataGrid.Name = "interviewDataGrid";
-            this.interviewDataGrid.ReadOnly = true;
-            this.interviewDataGrid.Size = new System.Drawing.Size(698, 190);
-            this.interviewDataGrid.TabIndex = 31;
-            // 
-            // viewResultsBtnColumn
-            // 
-            this.viewResultsBtnColumn.HeaderText = "View";
-            this.viewResultsBtnColumn.Name = "viewResultsBtnColumn";
-            this.viewResultsBtnColumn.ReadOnly = true;
-            this.viewResultsBtnColumn.Text = "Edit";
-            this.viewResultsBtnColumn.UseColumnTextForButtonValue = true;
             // 
             // resultsHeader
             // 
@@ -227,22 +207,30 @@
             this.exportProfileBtn.Name = "exportProfileBtn";
             this.exportProfileBtn.Size = new System.Drawing.Size(174, 60);
             this.exportProfileBtn.TabIndex = 36;
-            this.exportProfileBtn.Text = "[Export Profile]";
+            this.exportProfileBtn.Text = "Export Profile";
             this.exportProfileBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.exportProfileBtn.UseVisualStyleBackColor = false;
             this.exportProfileBtn.Click += new System.EventHandler(this.exportProfileBtn_Click);
+            // 
+            // InterviewHistoryDataGrid
+            // 
+            this.InterviewHistoryDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.InterviewHistoryDataGrid.Location = new System.Drawing.Point(188, 169);
+            this.InterviewHistoryDataGrid.Name = "InterviewHistoryDataGrid";
+            this.InterviewHistoryDataGrid.Size = new System.Drawing.Size(678, 218);
+            this.InterviewHistoryDataGrid.TabIndex = 37;
             // 
             // ProfilePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(911, 399);
+            this.Controls.Add(this.InterviewHistoryDataGrid);
             this.Controls.Add(this.exportProfileBtn);
             this.Controls.Add(this.deleteUserBtn);
             this.Controls.Add(this.editUserDataBtn);
             this.Controls.Add(this.viewFamilyObservationBtn);
             this.Controls.Add(this.resultsHeader);
-            this.Controls.Add(this.interviewDataGrid);
             this.Controls.Add(this.mailLabel);
             this.Controls.Add(this.phLabel);
             this.Controls.Add(this.genderLabel);
@@ -251,7 +239,7 @@
             this.Name = "ProfilePage";
             this.Text = "ProfilePage";
             this.Enter += new System.EventHandler(this.ProfilePage_Enter);
-            ((System.ComponentModel.ISupportInitialize)(this.interviewDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InterviewHistoryDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,12 +252,12 @@
         private System.Windows.Forms.Label genderLabel;
         private System.Windows.Forms.Label phLabel;
         private System.Windows.Forms.Label mailLabel;
-        private System.Windows.Forms.DataGridView interviewDataGrid;
         private System.Windows.Forms.Label resultsHeader;
         private System.Windows.Forms.Button viewFamilyObservationBtn;
-        private System.Windows.Forms.DataGridViewButtonColumn viewResultsBtnColumn;
         private System.Windows.Forms.Button editUserDataBtn;
         private System.Windows.Forms.Button deleteUserBtn;
         private System.Windows.Forms.Button exportProfileBtn;
+        private System.Windows.Forms.DataGridView InterviewHistoryDataGrid;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }

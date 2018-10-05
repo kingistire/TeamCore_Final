@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
+
 
 namespace Login
 {
     public partial class UserManagment : Form
     {
+        SqlCommand cmd;
+        SqlConnection con;
         public UserManagment()
         {
             InitializeComponent();
@@ -74,10 +78,10 @@ namespace Login
 
         private void userProfileManagmentGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow selectedProfile = userProfileManagmentGrid.Rows[e.RowIndex];
+            
             if (e.RowIndex >= 0 && e.ColumnIndex == 0) // IF EDIT
             {
-                
+                DataGridViewRow selectedProfile = userProfileManagmentGrid.Rows[e.RowIndex];
                 EditProfile editprofile = new EditProfile(selectedProfile);
                 editprofile.MdiParent = this.MdiParent;
                 editprofile.Show();
@@ -85,8 +89,8 @@ namespace Login
                 //...
             } else if (e.RowIndex >= 0 && e.ColumnIndex == 1)
             {
-                
 
+                DataGridViewRow selectedProfile = userProfileManagmentGrid.Rows[e.RowIndex];
 
                 ProfilePage profilePage = new ProfilePage(selectedProfile);
                 profilePage.MdiParent = this.MdiParent;
@@ -96,7 +100,44 @@ namespace Login
 
         private void importProfilesBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature has not been developed yet!");
+            MessageBox.Show("This feature has not been bug tested yet!");
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+
+                using (System.IO.StreamReader reader = new System.IO.StreamReader(openFileDialog1.FileName))
+                {
+                    string line;
+
+
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        
+                        //Define pattern
+                        Regex CSVParser = new Regex(",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
+
+                        //Separating columns to array
+                        string[] userData = CSVParser.Split(line);
+
+                        /* Do something with X */
+                        con = new SqlConnection(@"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True");
+                        con.Open();
+                        cmd = new SqlCommand("INSERT INTO UserInformation (firstName, lastName, dob, gender, phone, email) VALUES (@firstName, @lastName, @dob, @gender, @phone, @email)", con);
+                        cmd.Parameters.AddWithValue("@firstName", userData[1]);
+                        cmd.Parameters.AddWithValue("@lastName", userData[2]);
+                        cmd.Parameters.AddWithValue("@gender", userData[4]);
+
+                        cmd.Parameters.AddWithValue("@phone", userData[5]);
+                        cmd.Parameters.AddWithValue("@email", userData[6]);
+                        cmd.Parameters.AddWithValue("@dob", Convert.ToDateTime(userData[3]));
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("New user has been added successfully.");
+                        
+                        con.Close();
+                    }
+                }
+                    
+            }
         }
 
         private void exportAllProfilesBtn_Click(object sender, EventArgs e)

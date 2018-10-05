@@ -38,6 +38,7 @@
             this.importProfilesBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.exportAllProfilesBtn = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userProfileManagmentGrid)).BeginInit();
             this.SuspendLayout();
@@ -127,7 +128,7 @@
             this.importProfilesBtn.Name = "importProfilesBtn";
             this.importProfilesBtn.Size = new System.Drawing.Size(128, 46);
             this.importProfilesBtn.TabIndex = 35;
-            this.importProfilesBtn.Text = "[Import Profiles]";
+            this.importProfilesBtn.Text = "Import Profiles";
             this.importProfilesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.importProfilesBtn.UseVisualStyleBackColor = false;
             this.importProfilesBtn.Click += new System.EventHandler(this.importProfilesBtn_Click);
@@ -172,6 +173,10 @@
             this.exportAllProfilesBtn.UseVisualStyleBackColor = false;
             this.exportAllProfilesBtn.Click += new System.EventHandler(this.exportAllProfilesBtn_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // UserManagment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,5 +213,6 @@
         private System.Windows.Forms.Button importProfilesBtn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button exportAllProfilesBtn;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
