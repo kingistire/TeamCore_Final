@@ -39,6 +39,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.exportAllProfilesBtn = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userProfileManagmentGrid)).BeginInit();
             this.SuspendLayout();
@@ -214,5 +215,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button exportAllProfilesBtn;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }

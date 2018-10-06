@@ -9,15 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Data.SqlClient;
-using System.Text.RegularExpressions;
+
+
 
 
 namespace Login
 {
     public partial class UserManagment : Form
     {
+        private ProfileManagementFunctions profileManagementFunctionsClassObject = new ProfileManagementFunctions();
         SqlCommand cmd;
         SqlConnection con;
+        private DataTable dbdataset = new DataTable();
+        
+        
         public UserManagment()
         {
             InitializeComponent();
@@ -31,9 +36,9 @@ namespace Login
             SqlCommand cmdDatabase = new SqlCommand(" select * from UserInformation ;", conDatabase);
             try
             {
-                SqlDataAdapter sda = new SqlDataAdapter();
+               SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmdDatabase;
-                DataTable dbdataset = new DataTable();
+                dbdataset.Clear();
                 sda.Fill(dbdataset);
                 BindingSource bSource = new BindingSource();
                 bSource.DataSource = dbdataset;
@@ -100,49 +105,32 @@ namespace Login
 
         private void importProfilesBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature has not been bug tested yet!");
-            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-
-                using (System.IO.StreamReader reader = new System.IO.StreamReader(openFileDialog1.FileName))
-                {
-                    string line;
-
-
-                    while ((line = reader.ReadLine()) != null)
-                    {
-                        
-                        //Define pattern
-                        Regex CSVParser = new Regex(",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
-
-                        //Separating columns to array
-                        string[] userData = CSVParser.Split(line);
-
-                        /* Do something with X */
-                        con = new SqlConnection(@"Data Source =(LocalDB)\MSSQLLocalDB;" +
-                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True");
-                        con.Open();
-                        cmd = new SqlCommand("INSERT INTO UserInformation (firstName, lastName, dob, gender, phone, email) VALUES (@firstName, @lastName, @dob, @gender, @phone, @email)", con);
-                        cmd.Parameters.AddWithValue("@firstName", userData[1]);
-                        cmd.Parameters.AddWithValue("@lastName", userData[2]);
-                        cmd.Parameters.AddWithValue("@gender", userData[4]);
-
-                        cmd.Parameters.AddWithValue("@phone", userData[5]);
-                        cmd.Parameters.AddWithValue("@email", userData[6]);
-                        cmd.Parameters.AddWithValue("@dob", Convert.ToDateTime(userData[3]));
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("New user has been added successfully.");
-                        
-                        con.Close();
-                    }
-                }
-                    
-            }
+            ProfileManagementFunctions classObject = new ProfileManagementFunctions();
+            classObject.ImportProfiles(openFileDialog1);
+            load_data();
         }
 
         private void exportAllProfilesBtn_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This feature has not been developed yet!");
+
+            // get all data
+            List<ProfileData> toExport = new List<ProfileData>();
+            foreach(DataRow profile in dbdataset.Rows)
+            {
+                ProfileData thisProfile = new ProfileData();
+                thisProfile.FirstName = profile[1].ToString();
+                thisProfile.LastName = profile[2].ToString();
+                thisProfile.Dob = Convert.ToDateTime(profile[3]);
+                thisProfile.Gender = profile[4].ToString();
+                thisProfile.PhNumber = profile[5].ToString();
+                thisProfile.EmailAddress = profile[6].ToString();
+
+                toExport.Add(thisProfile);
+            }
+            // run export with list
+            int randomInt = 4;
+            profileManagementFunctionsClassObject.ExportProfileData(folderBrowserDialog1, toExport, randomInt);
         }
     }
 }

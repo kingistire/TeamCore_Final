@@ -104,6 +104,8 @@
     <Compile Include="GuidedInterviewCover.Designer.cs">
       <DependentUpon>GuidedInterviewCover.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProfileData.cs" />
+    <Compile Include="ProfileManagementFunctions.cs" />
     <Compile Include="ProfilePage.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -14,19 +14,19 @@ namespace Login {
     public partial class DeleteUser : Form {
         SqlCommand cmd;
         SqlConnection con;
-        String profileId;
+        int profileId;
 
-        public DeleteUser(String toDeleteId) {
+        public DeleteUser(int toDeleteId) {
             profileId = toDeleteId;
             InitializeComponent();
             this.Location = new Point(0, 0);
-            tbID.Text = toDeleteId;
+            tbID.Text = toDeleteId.ToString();
         }
 
         private void btnSave_Click_1(object sender, EventArgs e) {
             con = new SqlConnection(@"Data Source =(LocalDB)\MSSQLLocalDB;" + 
                 @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True");
-            string query = "DELETE FROM UserInformation WHERE Id='" + profileId + "';";
+            string query = "DELETE FROM UserInformation WHERE Id='" + profileId.ToString().Trim() + "';";
             cmd = new SqlCommand(query, con);
             SqlDataReader myReader;
             try {
