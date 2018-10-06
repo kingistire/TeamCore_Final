@@ -11,9 +11,22 @@ using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
 
+using WMPLib; 
+
 namespace Login {
     public partial class IndependentInterview : Form {
+
+        private System.Media.SoundPlayer topLeftPBPlayer = new System.Media.SoundPlayer();
+        private string topLeftReadOutLoudPath;
+        private string topMiddleReadOutLoudPath;
+        private string topRightReadOutLoudPath;
+        private string bottomLeftReadOutLoudPath;
+        private string bottomMiddleReadOutLoudPath;
+        private string bottomrightReadOutLoudPath;
+
         public IndependentInterview() {
+
+
             InitializeComponent();          
             this.Location = new Point(0, 0);
             btnPreviousInterview.Click += previousInterviewSlideBtn_Click;
@@ -24,6 +37,12 @@ namespace Login {
             createCirclePB(topLeftPB);
             createCirclePB(topRightPB);
             createCirclePB(topMidPB);
+
+            
+
+
+
+
             picturePanel.BringToFront();
             if (Globals.interview_page >= 2) {
                 previousInterviewSlideBtn.Visible = true;
@@ -345,13 +364,26 @@ namespace Login {
         /// Sound
         /// </summary>
         private void interviewPage1() {
+            //axWindowsMediaPlayer1.URL = @"..\..\resources\0testsound.mp3";
             lblQuestion.Text = "Are there some sounds that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1 Other People Talking (cropped).png");
+            topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.1OtherPeopleTalking.wav";
+
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\2 Fireworks.jpg");
+            topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.2Fireworks.wav";
+
             topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\3 Loud voices.PNG");
+            topRightReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.3LoudVoices.wav";
+
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\4 Household appliances (e.g., blenders, vacuum).png");
+            bottomLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.4HouseholdAppliances.wav";
+
             bottomMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\5 Vehicles (e.g., trucks, motorbikes) (cropped).jpg");
+            bottomMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.5Vehicles.wav";
+
             bottomRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\6 Bathroom appliances (e.g., hand dryers, hair dryers) (photoshopped).jpg");
+            bottomrightReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.6BathroomAppliances.wav";
+
             updateLabelText("Other people talking", " Fireworks", "Loud voices",
                 "Household appliances (e.g. blenders, vacuum)", "Vehicles (e.g. trucks, motorbikes)",
                 "Bathroom appliances (e.g. hair dryers, hand dryers)");
@@ -360,7 +392,11 @@ namespace Login {
         private void interviewPage1p2() {
             lblQuestion.Text = "Are there some sounds that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\7 Sirens, alarms, school bells.jpg");
+            topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.7Sirens.Wav";
+
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\8 Sudden loud noises (e.g., balloons popping).jpg");
+            topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.8SuddenLoudNoises.wav";
+
             //topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\loud_voices.PNG");
             //bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\household_ appliances.PNG");
             // bottomMidPB.Image = new Bitmap(@"..\..\resources\");
@@ -1172,7 +1208,7 @@ namespace Login {
                 MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);
             }
         }
-
+        
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// BUTTON CLICKS FOR A LITT AND A LOT ////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1318,7 +1354,8 @@ namespace Login {
             label7.BackColor = Color.PaleVioletRed;
             questionPanel.BackColor = Color.Pink;
         }
-
+        
+        
         private void EnvironmentColours() {
             //picturePanel
             picBackground.BackColor = Color.LightBlue;
@@ -1940,6 +1977,8 @@ namespace Login {
             }
         }
 
+
+
         private void updateLabelText(string TL, string TM, string TR, string BL, string BM, string BR) {
             lblTL.Text = TL;
             lblTM.Text = TM;
@@ -1960,10 +1999,13 @@ namespace Login {
         /// <summary>
         /// Initial Images when user clicks on back button on second interview slide (when nextCounter === 0)
         /// </summary>
-        
+
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// Panel Clicking ////////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        
+
 
         private void hideButtons() {
             topLeftPBALittleBtn.Visible = false;
@@ -1992,26 +2034,41 @@ namespace Login {
         }
 
         private void topLeftPB_Click(object sender, EventArgs e) {
+
+            topLeftPBPlayer.SoundLocation = topLeftReadOutLoudPath;
+            topLeftPBPlayer.Play();
+
             hideButtons();
             displayButtons(topLeftPBALittleBtn, topLeftPBALotBtn);
         }
         private void topMidPB_Click(object sender, EventArgs e) {
+            topLeftPBPlayer.SoundLocation = topMiddleReadOutLoudPath;
+            topLeftPBPlayer.Play();
             hideButtons();
             displayButtons(topMidALittleBtn, topMidALotBtn);
         }
         private void topRightPB_Click(object sender, EventArgs e) {
+            topLeftPBPlayer.SoundLocation = topRightReadOutLoudPath;
+            topLeftPBPlayer.Play();
             hideButtons();
             displayButtons(topRightALittleBtn, topRightALotBtn);
         }
         private void bottomLeftPB_Click(object sender, EventArgs e) {
+            topLeftPBPlayer.SoundLocation = bottomLeftReadOutLoudPath;
+            topLeftPBPlayer.Play();
             hideButtons();
             displayButtons(bottomLeftALittleBtn, bottomLeftALotBtn);
         }
         private void bottomMidPB_Click(object sender, EventArgs e) {
+            topLeftPBPlayer.SoundLocation = bottomMiddleReadOutLoudPath;
+            topLeftPBPlayer.Play();
             hideButtons();
             displayButtons(bottomMidALittleBtn, bottomMidALotBtn);
         }
         private void bottomRightPB_Click(object sender, EventArgs e) {
+            topLeftPBPlayer.SoundLocation = bottomrightReadOutLoudPath;
+            topLeftPBPlayer.Play();
+
             hideButtons();
             displayButtons(bottomRightALittleBtn, bottomRightALotBtn);
         }
