@@ -112,7 +112,7 @@ namespace Login
 
         private void exportAllProfilesBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature has not been developed yet!");
+            MessageBox.Show("This feature has not been BUG TESTED yet!");
 
             // get all data
             List<ProfileData> toExport = new List<ProfileData>();

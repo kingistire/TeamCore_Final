@@ -169,7 +169,7 @@
             this.exportAllProfilesBtn.Name = "exportAllProfilesBtn";
             this.exportAllProfilesBtn.Size = new System.Drawing.Size(153, 46);
             this.exportAllProfilesBtn.TabIndex = 37;
-            this.exportAllProfilesBtn.Text = "[Export All Profiles]";
+            this.exportAllProfilesBtn.Text = "Export All Profiles";
             this.exportAllProfilesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.exportAllProfilesBtn.UseVisualStyleBackColor = false;
             this.exportAllProfilesBtn.Click += new System.EventHandler(this.exportAllProfilesBtn_Click);
