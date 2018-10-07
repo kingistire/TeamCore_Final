@@ -19,7 +19,7 @@ namespace Login {
             string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
             @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
             SqlConnection conDatabase = new SqlConnection(constring);
-            SqlCommand cmdDatabase = new SqlCommand(" select * from Summary ;", conDatabase);
+            SqlCommand cmdDatabase = new SqlCommand(" select * from dislikeSounds ;", conDatabase);
             try {
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmdDatabase;
