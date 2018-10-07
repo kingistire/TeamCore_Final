@@ -155,22 +155,22 @@ namespace Login {
         //Code from here will update the pictureboxes when the user has clicked on a button
         private void topLeftPB_Paint(object sender, PaintEventArgs e) {
             //DeterminePenSizeDrawing(sender, topLeftPB, e);
-            determineDrawing(e, 0, 0, topLeftPB.Width, topRightPB.Height, 0);
+            determineDrawing(e, 0, 0, topLeftPB2.Width, topRightPB2.Height, 0);
         }
         private void topMidPB_Paint(object sender, PaintEventArgs e) {
-            determineDrawing(e, 0, 0, topMidPB.Width, topMidPB.Height, 1);
+            determineDrawing(e, 0, 0, topMidPB2.Width, topMidPB2.Height, 1);
         }
         private void topRightPB_Paint(object sender, PaintEventArgs e) {
-            determineDrawing(e, 0, 0, topRightPB.Width, topRightPB.Height, 2);
+            determineDrawing(e, 0, 0, topRightPB2.Width, topRightPB2.Height, 2);
         }
         private void bottomLeftPB_Paint(object sender, PaintEventArgs e) {
-            determineDrawing(e, 0, 0, bottomLeftPB.Width, bottomLeftPB.Height, 3);
+            determineDrawing(e, 0, 0, bottomLeftPB2.Width, bottomLeftPB2.Height, 3);
         }
         private void bottomMidPB_Paint(object sender, PaintEventArgs e) {
-            determineDrawing(e, 0, 0, bottomMidPB.Width, bottomMidPB.Height, 4);
+            determineDrawing(e, 0, 0, bottomMidPB2.Width, bottomMidPB2.Height, 4);
         }
         private void bottomRightPB_Paint(object sender, PaintEventArgs e) {
-            determineDrawing(e, 0, 0, bottomRightPB.Width, bottomRightPB.Height, 5);
+            determineDrawing(e, 0, 0, bottomRightPB2.Width, bottomRightPB2.Height, 5);
         }
 
         //I would simply create an array of size 6, and when they select 'a little' for picture1 (top left)
@@ -335,7 +335,7 @@ namespace Login {
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         private void topLeftPBALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            topLeftPB.Invalidate();
+            topLeftPB2.Invalidate();
             page1Selections[0] = "A Little";
             //this is just to show the array being updated -- can remove after testing
             //Update label
@@ -344,58 +344,58 @@ namespace Login {
         }
         private void topLeftPBALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            topLeftPB.Invalidate();
+            topLeftPB2.Invalidate();
             page1Selections[0] = "A Lot";
             //summary.LabelText = "Top Left A Lot";
         }
         private void topMidALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            topMidPB.Invalidate();
+            topMidPB2.Invalidate();
             page1Selections[1] = "A Little";
         }
         private void topMidALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            topMidPB.Invalidate();
+            topMidPB2.Invalidate();
             page1Selections[1] = "A Lot";
         }
         private void topRightALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            topRightPB.Invalidate();
+            topRightPB2.Invalidate();
             page1Selections[2] = "A Little";
         }
         private void topRightPBALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picturebox
-            topRightPB.Invalidate();
+            topRightPB2.Invalidate();
             page1Selections[2] = "A Lot";
         }
         private void bottomLeftALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            bottomLeftPB.Invalidate();
+            bottomLeftPB2.Invalidate();
             page1Selections[3] = "A Little";
         }
         private void bottomLeftALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            bottomLeftPB.Invalidate();
+            bottomLeftPB2.Invalidate();
             page1Selections[3] = "A Lot";
         }
         private void bottomMidALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            bottomMidPB.Invalidate();
+            bottomMidPB2.Invalidate();
             page1Selections[4] = "A Little";
         }
         private void bottomMidALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            bottomMidPB.Invalidate();
+            bottomMidPB2.Invalidate();
             page1Selections[4] = "A Lot";
         }
         private void bottomRightALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            bottomRightPB.Invalidate();
+            bottomRightPB2.Invalidate();
             page1Selections[5] = "A Little";
         }
         private void bottomRightALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            bottomRightPB.Invalidate();
+            bottomRightPB2.Invalidate();
             page1Selections[5] = "A Lot";
         }
 
@@ -860,12 +860,24 @@ namespace Login {
         /// </summary>
         private void interviewPage1() {
             lblQuestion.Text = "Are there some sounds that you don't like?";
-            //topLeftPB.Image = new Bitmap(@"..\..\resources\");
-            topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\fireworks.jpg");
-            topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\loud_voices.PNG");
-            bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\household_ appliances.PNG");
-            // bottomMidPB.Image = new Bitmap(@"..\..\resources\");
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1 Other People Talking (cropped).png");
+            topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.1OtherPeopleTalking.wav";
+
+            topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\2 Fireworks.jpg");
+            topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.2Fireworks.wav";
+
+            topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\3 Loud voices.PNG");
+            topRightReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.3LoudVoices.wav";
+
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\4 Household appliances (e.g., blenders, vacuum).png");
+            bottomLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.4HouseholdAppliances.wav";
+
+            bottomMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\5 Vehicles (e.g., trucks, motorbikes) (cropped).jpg");
+            bottomMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.5Vehicles.wav";
+
+            bottomRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\6 Bathroom appliances (e.g., hand dryers, hair dryers) (photoshopped).jpg");
+            bottomrightReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.6BathroomAppliances.wav";
+
             updateLabelText("Other people talking", " Fireworks", "Loud voices",
                 "Household appliances (e.g. blenders, vacuum)", "Vehicles (e.g. trucks, motorbikes)",
                 "Bathroom appliances (e.g. hair dryers, hand dryers)");
@@ -873,36 +885,43 @@ namespace Login {
 
         private void interviewPage1p2() {
             lblQuestion.Text = "Are there some sounds that you don't like?";
-            //topLeftPB.Image = new Bitmap(@"..\..\resources\");
-            //topMidPB.Image = new Bitmap(@"..\..\esources\1. Hearing\1. Are there some sounds that you don't like_\fireworks.jpg");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\7 Sirens, alarms, school bells.jpg");
+            topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.7Sirens.Wav";
+
+            topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\8 Sudden loud noises (e.g., balloons popping).jpg");
+            topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.8SuddenLoudNoises.wav";
+
             //topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\loud_voices.PNG");
             //bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\household_ appliances.PNG");
             // bottomMidPB.Image = new Bitmap(@"..\..\resources\");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\");
-            updateLabelText("Sirens or alarms", "Sudden loud noises (e.g., balloons popping)", "", "", "", "");
+            updateLabelText("Sirens, alarms, school bells", "Sudden loud noises (e.g., balloons popping)", "", "", "", "");
         }
 
         private void interviewPage2() {
             lblQuestion.Text = "Are there times when it is hard for you to listen?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard for you to listen\pg2img1.PNG");
-            //topMidPB.Image = new Bitmap(@"");
-            //topRightPB.Image = new Bitmap(@"");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1 If I am concentrating on something, I don't notice people talking to me.png");
+            topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\2 I find it hard to listen in noisy classrooms (self-report version).jpg");
+            topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\3 I find it hard to listen to someone talking to me when I'm in a group.jpg");
             //bottomLeftPB.Image = new Bitmap(@"../../resources/");
             //bottomMidPB.Image = new Bitmap(@"../../resources/");
             //bottomRightPB.Image = new Bitmap(@"../../resources/");
+            lblTL.Size = new Size(200, 60);
+            lblTM.Size = new Size(200, 60);
+            lblTR.Size = new Size(200, 60);
             updateLabelText("If I am concentrating on something, I don't notice people talking to me",
                 "I find it hard to listen to the teacher in noisy classrooms",
-                "I find it hard to listen to someone talking to me when I'm in a group", 
-                "", 
-                "", 
+                "I find it hard to listen to someone talking to me when I'm in a group",
+                "",
+                "",
                 "");
         }
 
         private void interviewPage3() {
             lblQuestion.Text = "Are there some sounds that make it hard for you to concentrate?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\Radio on.jpg");
-            topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\clock ticking.PNG");
-            topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\people_talking.PNG");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1 Radio on.jpg");
+            topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\2 Clock ticking.jpg");
+            topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\3 People talking.png");
             //bottomLeftPB.Image = new Bitmap(@"../../resources/");
             //bottomMidPB.Image = new Bitmap(@"../../resources/");
             //bottomRightPB.Image = new Bitmap(@"../../resources/");
@@ -911,11 +930,11 @@ namespace Login {
 
         private void interviewPage4() {
             lblQuestion.Text = "Are there some sounds that you like to listen to?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\Computer sounds.jpg");
-            //topMidPB.Image = new Bitmap(@"");
-            topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\fans.PNG");
-            //bottomLeftPB.Image = new Bitmap(@"../../resources/");
-            bottomMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\Rhythms.jpg");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1 Computer sounds.jpg");
+            topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\2 Live Music.jpg");
+            topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\3 Fans.PNG");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\4 Music through my phone (cropped).jpg");
+            bottomMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\5 Rhythms.jpg");
             //bottomRightPB.Image = new Bitmap(@"../../resources/");
             updateLabelText("Computer sounds", "Live music", "Fans", "Music through my phone", "Rhythms", "");
         }
@@ -923,12 +942,12 @@ namespace Login {
         private void interviewPage5() {
             lblQuestion.Text = "Are there some sounds that you make a lot?";
             //topLeftPB.Image = new Bitmap(@"");
-            topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\tapping_feet.PNG");
-            topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\Tapping fingers.jpg");
-            bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\clicking_pen.PNG");
+            topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\2 Tapping feet.PNG");
+            topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\3 Tapping fingers.jpg");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\4 Clicking pen.jpg");
             //bottomMidPB.Image = new Bitmap(@"");
             //bottomRightPB.Image = new Bitmap(@"../../resources/");
-            updateLabelText("Humming or whistling to myself","Tapping feet", "Tapping fingers", "Clicking pen",
+            updateLabelText("Humming or whistling to myself", "Tapping feet", "Tapping fingers", "Clicking pen",
                 "", "");
         }
 
@@ -936,26 +955,24 @@ namespace Login {
 
         private void sightInterviewPage1() {
             lblQuestion.Text = "Are there some things that you don't like to look at?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\Sunlight.jpg");
-            //topMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
-            topRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\Light and Shadow.jpg");
-            bottomLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\Busy Patterns.jpg");
-            //bottomMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\1 Sunlight.jpg");
+            topMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\2 Fluorescent light.png");
+            topRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\3 Light and Shadow.jpg");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\4 Busy Patterns.jpg");
+            bottomMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\5 Lecture room light (self version) (cropped).jpg");
             updateLabelText("Sunlight", "Fluorescent light", "Light and shadow", "Busy patterns",
-                "Classroom Light", "");
+                "Lecture room light", "");
         }
 
         private void sightInterviewPage2() {
             lblQuestion.Text = "Are there some things you see that make it hard to concentrate?";
-            //topLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
-            //topMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
-            // topRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\1 Lots of things in a messy drawer.jpg");
+            topMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\2 People running around me.jpg");
+            topRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\3 Lots of clutter in an office space (self report).jpg");
             // bottomLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
             //bottomMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
-            updateLabelText("Lots of things in a messy drawer", "People running around me", "Lots of things hanging up in the classroom", "",
-                "", "");
+            updateLabelText("Lots of things in a messy drawer", "People running around me", "Lots of clutter in an office or work space", "", "", "");
         }
 
         private void sightInterviewPage3() {
@@ -1210,26 +1227,40 @@ namespace Login {
         }
 
         private void topLeftPB_Click(object sender, EventArgs e) {
+            topLeftPBPlayer.SoundLocation = topLeftReadOutLoudPath;
+            topLeftPBPlayer.Play();
             hideButtons();
             displayButtons(topLeftPBALittleBtn, topLeftPBALotBtn);
         }
         private void topMidPB_Click(object sender, EventArgs e) {
+            topLeftPBPlayer.SoundLocation = topMiddleReadOutLoudPath;
+            topLeftPBPlayer.Play();
             hideButtons();
             displayButtons(topMidALittleBtn, topMidALotBtn);
         }
         private void topRightPB_Click(object sender, EventArgs e) {
+            topLeftPBPlayer.SoundLocation = topRightReadOutLoudPath;
+            topLeftPBPlayer.Play();
             hideButtons();
             displayButtons(topRightALittleBtn, topRightALotBtn);
         }
         private void bottomLeftPB_Click(object sender, EventArgs e) {
+            topLeftPBPlayer.SoundLocation = bottomLeftReadOutLoudPath;
+            topLeftPBPlayer.Play();
+
             hideButtons();
             displayButtons(bottomLeftALittleBtn, bottomLeftALotBtn);
         }
         private void bottomMidPB_Click(object sender, EventArgs e) {
+            topLeftPBPlayer.SoundLocation = bottomMiddleReadOutLoudPath;
+            topLeftPBPlayer.Play();
             hideButtons();
             displayButtons(bottomMidALittleBtn, bottomMidALotBtn);
         }
         private void bottomRightPB_Click(object sender, EventArgs e) {
+            topLeftPBPlayer.SoundLocation = bottomrightReadOutLoudPath;
+            topLeftPBPlayer.Play();
+
             hideButtons();
             displayButtons(bottomRightALittleBtn, bottomRightALotBtn);
         }
