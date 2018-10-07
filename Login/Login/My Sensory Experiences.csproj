@@ -67,6 +67,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CapstoneDB.xsd</DependentUpon>
     </Compile>
+    <Compile Include="colDBResults.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="EditProfile.cs">
       <SubType>Form</SubType>

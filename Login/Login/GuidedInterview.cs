@@ -24,6 +24,7 @@ namespace Login {
             createCirclePB(topLeftPB);
             createCirclePB(topRightPB);
             createCirclePB(topMidPB);
+
                    
             if (Globals.interview_page >= 2) {
                 previousInterviewSlideBtn.Visible = true;
@@ -156,39 +157,39 @@ namespace Login {
         //change the first value in the array to 1, 'a lot' would be set to 2.
         //if they make no selection it remains as 0
         string[] page1Selections = new string[6] { "", "", "", "", "", "" };
-
-            /// <summary>
-            /// Insert to database if 6 images are there
-            /// </summary>
-            /// <param name="array"></param>
-            /// <param name="TLImageName"></param>
-            /// <param name="TMImageName"></param>
-            /// <param name="TRImageName"></param>
-            /// <param name="BLImageName"></param>
-            /// <param name="BMImageName"></param>
-            /// <param name="BRImageName"></param>
-        private void writeToDB(string[] array, string TLImageName, string TMImageName, string TRImageName, string BLImageName, string BMImageName, string BRImageName) {
+        bool updateDBBool = false;
+        /// <summary>
+        /// Insert to database if 6 images are there
+        /// </summary>
+        /// <param name="array"></param>
+        /// <param name="TLImageName"></param>
+        /// <param name="TMImageName"></param>
+        /// <param name="TRImageName"></param>
+        /// <param name="BLImageName"></param>
+        /// <param name="BMImageName"></param>
+        /// <param name="BRImageName"></param>
+        private void writeToDB(string[] array, string TLImageName, string TMImageName, string TRImageName, string BLImageName, string BMImageName, string BRImageName, string tableDBName) {
 
             SqlCommand cmdDatabase;
             const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                                     @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
             SqlConnection conDatabase = new SqlConnection(constring);
-            string query;
             //Determine if a little or a lot
             try {
+                string query;
                 conDatabase.Open();
                 //Change interview_page to see if previous button has been clicked
-                if(Globals.interview_page == 2) {
-                    query = "INSERT INTO dbo.Summary (" + TLImageName + "," + TMImageName + "," +
+                    query = "INSERT INTO dbo." + tableDBName + "(" + TLImageName + "," + TMImageName + "," +
                          TRImageName + "," +
                           BLImageName + "," +
                            BMImageName + "," + BRImageName + ") VALUES (@tl, @tm, @tr, @bl, @bm, @br);";
-                } else {
+ /*               if (updateDBBool == true) {
                     query = "UPDATE dbo.Summary set " + TLImageName + "=@tl," + TMImageName + "=@tm," +
                         TRImageName + "=@tr," +
                         BLImageName + "=@bl," +
                         BMImageName + "=@bm," + BRImageName + "=@br;";
-                }
+                } */
+
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
@@ -202,7 +203,7 @@ namespace Login {
             }
         }
 
-        private void writeToDBTop3(string[] array, string TLImageName, string TMImageName, string TRImageName) {
+        private void writeToDBTop3(string[] array, string TLImageName, string TMImageName, string TRImageName, string dbTableName) {
 
             const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                         @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
@@ -212,7 +213,10 @@ namespace Login {
             //Determine if a little or a lot
             try {
                 conDatabase.Open();
-                string query = "UPDATE dbo.Summary SET " + TLImageName + "=@tl," + TMImageName +"=@tm," + TRImageName + "=@tr;";
+                string query = "INSERT INTO dbo." + dbTableName + "(" + TLImageName + "," + TMImageName + "," +
+                         TRImageName + ") VALUES (@tl, @tm, @tr);";
+
+                //"UPDATE dbo" + dbTableName + "SET " + TLImageName + "=@tl," + TMImageName +"=@tm," + TRImageName + "=@tr;";
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
@@ -223,7 +227,7 @@ namespace Login {
             }
         }
 
-        private void writeToDBTop2(string[] array, string TLImageName, string TMImageName) {
+        private void writeToDBTop2(string[] array, string TLImageName, string TMImageName, string dbTableName) {
 
             const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                         @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
@@ -233,7 +237,7 @@ namespace Login {
             //Determine if a little or a lot
             try {
                 conDatabase.Open();
-                string query = "UPDATE dbo.Summary SET " + TLImageName + "=@tl," + TMImageName + "=@tm;";
+                string query = "INSERT INTO dbo." + dbTableName + "(" + TLImageName + "," + TMImageName + ") VALUES (@tl, @tm);";
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
@@ -252,7 +256,7 @@ namespace Login {
         /// <param name="TRImageName"></param>
         /// <param name="BLImageName"></param>
         /// <param name="BMImageName"></param>
-        private void writeToDB5(string[] array, string TLImageName, string TMImageName, string TRImageName, string BLImageName, string BMImageName) {
+        private void writeToDB5(string[] array, string TLImageName, string TMImageName, string TRImageName, string BLImageName, string BMImageName, string dbTableName) {
 
             SqlCommand cmdDatabase;
             const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
@@ -262,8 +266,11 @@ namespace Login {
             //Determine if a little or a lot
             try {
                 conDatabase.Open();
-                query = "UPDATE dbo.Summary SET " + TLImageName + "=@tl," + TMImageName + "=@tm," + TRImageName + "=@tr," + BLImageName + "=@bl," + BMImageName + "=@bm;";
-                
+                query = "INSERT INTO dbo." + dbTableName + "(" + TLImageName + "," + TMImageName + "," +
+                         TRImageName + "," +
+                          BLImageName + "," +
+                           BMImageName + ") VALUES (@tl, @tm, @tr, @bl, @bm);";
+
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
@@ -286,7 +293,7 @@ namespace Login {
         /// <param name="TRImageName"></param>
         /// <param name="BLImageName"></param>
         /// <param name="BMImageName"></param>
-        private void writeToDB4(string[] array, string TLImageName, string TMImageName, string TRImageName, string BLImageName) {
+        private void writeToDB4(string[] array, string TLImageName, string TMImageName, string TRImageName, string BLImageName, string dbTableName) {
 
             SqlCommand cmdDatabase;
             const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
@@ -296,7 +303,9 @@ namespace Login {
             //Determine if a little or a lot
             try {
                 conDatabase.Open();
-                query = "UPDATE dbo.Summary SET " + TLImageName + "=@tl," + TMImageName + "=@tm," + TRImageName + "=@tr," + BLImageName + "=@bl;";
+                query = "INSERT INTO dbo." + dbTableName + "(" + TLImageName + "," + TMImageName + "," +
+                         TRImageName + "," +
+                          BLImageName + ") VALUES (@tl, @tm, @tr, @bl);";
 
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
@@ -405,7 +414,7 @@ namespace Login {
             Globals.interview_page++;
             if (Globals.interview_page == 2) {
                 writeToDB(page1Selections, "otherPeopleTalking", "fireworks", "loudVoices",
-                                            "householdAppliances", "vehicles", "bathroomAppliances");
+                                            "householdAppliances", "vehicles", "bathroomAppliances", "dislikeSounds");
                 if (m_InstanceRef2 != null) {
                     InstanceRef2.Show();
                 }
@@ -421,7 +430,7 @@ namespace Login {
             //SOUND SECTION
             //-------------
             else if (Globals.interview_page == 3) {
-                writeToDBTop3(page1Selections, "concentrating", "hardToListenInClassroom", "hardToListenInGroup");
+                writeToDBTop3(page1Selections, "concentrating", "hardToListenInClassroom", "hardToListenInGroup", "hardToListen");
                 GuidedInterview interviewForm3 = new GuidedInterview();
                 interviewForm3.InstanceRef2 = this;
                 interviewForm3.Location = new Point(0, 0);
@@ -429,7 +438,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 4) {
-                writeToDBTop3(page1Selections, "radioOn", "clockTicking", "peopleTalking");
+                writeToDBTop3(page1Selections, "radioOn", "clockTicking", "peopleTalking", "hardToConcentrate");
                 GuidedInterview interviewForm4 = new GuidedInterview();
                 interviewForm4.InstanceRef3 = this;
                 interviewForm4.Location = new Point(0, 0);
@@ -437,7 +446,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 5) {
-                writeToDB5(page1Selections, "computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms");
+                writeToDB5(page1Selections, "computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms", "likeSounds");
                 GuidedInterview interviewForm5 = new GuidedInterview();
                 interviewForm5.InstanceRef4 = this;
                 interviewForm5.Location = new Point(0, 0);
@@ -448,7 +457,7 @@ namespace Login {
             //SIGHT SECTION
             //-------------
             else if (Globals.interview_page == 6) {
-                writeToDB4(page1Selections, "hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen");
+                writeToDB4(page1Selections, "hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen", "makeALotSounds");
                 GuidedInterview sightInterview1 = new GuidedInterview();
                 sightInterview1.InstanceRef5 = this;
                 sightInterview1.Location = new Point(0, 0);
@@ -460,7 +469,7 @@ namespace Login {
                 sightInterview1.Show();
                 this.Hide();
             } else if (Globals.interview_page == 7) {
-                writeToDB5(page1Selections, "sunlight", "fluroescentLight", "lightAndShadow", "busyPatterns", "classroomLight");
+                writeToDB5(page1Selections, "sunlight", "fluorescentLight", "lightAndShadow", "busyPatterns", "classroomLight", "dontLikeToLookAt");
                 GuidedInterview sightInterview2 = new GuidedInterview();
                 sightInterview2.InstanceRef6 = this;
                 sightInterview2.Location = new Point(0, 0);
@@ -472,7 +481,7 @@ namespace Login {
                 sightInterview2.Show();
                 this.Hide();
             } else if (Globals.interview_page == 8) {
-                writeToDBTop3(page1Selections, "lotsOfThingsInMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom");
+                writeToDBTop3(page1Selections, "lotsOfThingsInAMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom", "sightHardToConcentrate");
                 GuidedInterview sightInterview3 = new GuidedInterview();
                 sightInterview3.InstanceRef7 = this;
                 sightInterview3.Location = new Point(0, 0);
@@ -485,7 +494,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 9) {
-                writeToDB5(page1Selections, "movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects");
+                writeToDB5(page1Selections, "movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects", "likeToLookAt");
                 GuidedInterview sightInterview4 = new GuidedInterview();
                 sightInterview4.InstanceRef8 = this;
                 sightInterview4.Location = new Point(0, 0);
@@ -501,7 +510,7 @@ namespace Login {
             //TOUCH SECTION
             //-------------
             else if (Globals.interview_page == 10) {
-                writeToDB(page1Selections, "sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes");
+                writeToDB(page1Selections, "sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes", "dontLikeFeelingOf");
                 GuidedInterview touchInterview2 = new GuidedInterview();
                 touchInterview2.InstanceRef9 = this;
                 touchInterview2.Location = new Point(0, 0);
@@ -513,7 +522,7 @@ namespace Login {
                 touchInterview2.Show();
                 this.Hide();
             } else if (Globals.interview_page == 11) {
-                writeToDBTop2(page1Selections, "shoes", "splashingWater");
+                writeToDBTop2(page1Selections, "shoes", "splashingWater", "dontLikeFeelingOf");
                 GuidedInterview touchInterview3 = new GuidedInterview();
                 touchInterview3.InstanceRef10 = this;
                 touchInterview3.Location = new Point(0, 0);
@@ -526,7 +535,7 @@ namespace Login {
                 touchInterview3.Show();
                 this.Hide();
             } else if (Globals.interview_page == 12) {
-                writeToDB(page1Selections, "beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut");
+                writeToDB(page1Selections, "beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut", "peopleTouchDontLike");
 
                 GuidedInterview touchInterview4 = new GuidedInterview();
                 touchInterview4.InstanceRef11 = this;
@@ -544,7 +553,7 @@ namespace Login {
             //SMELL SECTION
             //-------------
             else if (Globals.interview_page == 13) {
-                writeToDBTop2(page1Selections, "doctorTouchingMe", "dentistTouchingMe");
+                writeToDBTop2(page1Selections, "doctorTouchingMe", "dentistTouchingMe", "peopleTouchDontLike");
                 GuidedInterview smellInterview1 = new GuidedInterview();
                 smellInterview1.InstanceRef12 = this;
                 smellInterview1.Location = new Point(0, 0);
@@ -556,7 +565,7 @@ namespace Login {
                 smellInterview1.Show();
                 this.Hide();
             } else if (Globals.interview_page == 14) {
-                writeToDB(page1Selections, "soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow");
+                writeToDB(page1Selections, "soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow", "likeTheFeelingOf");
                 GuidedInterview smellInterview2 = new GuidedInterview();
                 smellInterview2.InstanceRef13 = this;
                 smellInterview2.Location = new Point(0, 0);
@@ -572,7 +581,7 @@ namespace Login {
             //TASTE SECTION
             //-------------
             else if (Globals.interview_page == 15) {
-                writeToDB5(page1Selections, "smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople");
+                writeToDB5(page1Selections, "smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople", "likeToSmell");
                 GuidedInterview tasteInterview1 = new GuidedInterview();
                 tasteInterview1.InstanceRef14 = this;
                 tasteInterview1.Location = new Point(0, 0);
@@ -584,7 +593,7 @@ namespace Login {
                 tasteInterview1.Show();
                 this.Hide();
             } else if (Globals.interview_page == 16) {
-                writeToDB(page1Selections, "vegetables", "fruit", "meat", "fish", "eggs", "dairy");
+                writeToDB(page1Selections, "vegetables", "fruit", "meat", "fish", "eggs", "dairy", "foodGroupsDontLike");
 
                 GuidedInterview tasteInterview1p2 = new GuidedInterview();
                 tasteInterview1p2.InstanceRef15 = this;
@@ -598,7 +607,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 17) {
-                writeToDBTop2(page1Selections, "bread", "pasta");
+                writeToDBTop2(page1Selections, "bread", "pasta", "foodGroupsDontLike");
 
                 GuidedInterview tasteInterview2 = new GuidedInterview();
                 tasteInterview2.InstanceRef17 = this;
@@ -612,7 +621,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 18) {
-                writeToDB(page1Selections, "lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour");
+                writeToDB(page1Selections, "lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour", "tastesOrFeelsInMouthDontLike");
 
                 GuidedInterview tasteInterview3 = new GuidedInterview();
                 tasteInterview3.InstanceRef18 = this;
@@ -639,7 +648,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 20) {
-                writeToDBTop3(page1Selections, "shirt", "hair", "objects");
+                writeToDBTop3(page1Selections, "shirt", "hair", "objects", "thingsPutInMouthALot");
 
                 GuidedInterview mvmtInterview1 = new GuidedInterview();
                 mvmtInterview1.InstanceRef20 = this;
@@ -653,7 +662,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 21) {
-                writeToDB5(page1Selections, "beingJumpedOnOrTackled", "movingWhenICantSeeWhereImGoing", "balancing", "beingUpsideDown", "climbingUpHigh");
+                writeToDB5(page1Selections, "beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
 
                 GuidedInterview mvmtInterview2 = new GuidedInterview();
                 mvmtInterview2.InstanceRef21 = this;
@@ -667,7 +676,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 22) {
-                writeToDBTop2(page1Selections, "standingStill", "sittingStill");
+                writeToDBTop2(page1Selections, "standingStill", "sittingStill", "hardToStayStill");
                 this.Hide();
                 GuidedInterview mvmtInterview3 = new GuidedInterview();
                 mvmtInterview3.InstanceRef22 = this;
@@ -680,7 +689,7 @@ namespace Login {
                 mvmtInterview3.Show();
             }
             else if (Globals.interview_page == 23) {
-                writeToDB5(page1Selections, "movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running");
+                writeToDB5(page1Selections, "movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running", "movingThatYouLike");
                 GuidedInterview mvmtInterview4 = new GuidedInterview();
                 mvmtInterview4.InstanceRef23 = this;
                 mvmtInterview4.Location = new Point(0, 0);
@@ -696,7 +705,7 @@ namespace Login {
             //ENVIRONMENT SECTION
             //-------------------
             else if (Globals.interview_page == 24) {
-                writeToDB4(page1Selections, "rocking", "movingHands", "clapping", "pacing");
+                writeToDB4(page1Selections, "rocking", "movingHands", "clapping", "pacing", "moveOverAndOverAgain");
                 GuidedInterview environmentInterview1 = new GuidedInterview();
                 environmentInterview1.InstanceRef23 = this;
                 environmentInterview1.Location = new Point(0, 0);
@@ -712,7 +721,7 @@ namespace Login {
             //OTHER SECTION
             //-------------
             else if (Globals.interview_page == 25) {
-                writeToDB5(page1Selections, "supermarket", "party", "foodHall", "show", "shoppingMall");
+                writeToDB5(page1Selections, "supermarket", "party", "foodHall", "show", "shoppingMall", "other");
                 GuidedInterview otherInterview1 = new GuidedInterview();
                 otherInterview1.InstanceRef23 = this;
                 otherInterview1.Location = new Point(0, 0);
@@ -724,7 +733,7 @@ namespace Login {
                 otherInterview1.Show();
                 this.Hide();
             } else if (Globals.interview_page == 26) {
-                writeToDB(page1Selections, "sounds", "smells", "sights", "tastes", "feelings", "movements");
+                writeToDB(page1Selections, "sounds", "smells", "sights", "tastes", "feelings", "movements", "other");
                 Summary sum = new Summary();
                 sum.Show();
             }

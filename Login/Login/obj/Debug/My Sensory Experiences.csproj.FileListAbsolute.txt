@@ -87,3 +87,29 @@ C:\Users\bryce\Documents\capstoneProject\TeamCore_Final\Login\Login\obj\Debug\Lo
 C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.IndependentInterview.resources
 C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.SelectInterview.resources
 C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.GuidedInterview.resources
+D:\Jason Tam\Capstone\summaryPage\Login\Login\bin\Debug\CapstoneDB\CapstoneDB.mdf
+D:\Jason Tam\Capstone\summaryPage\Login\Login\bin\Debug\CapstoneDB\CapstoneDB_log.ldf
+D:\Jason Tam\Capstone\summaryPage\Login\Login\bin\Debug\Login.exe.config
+D:\Jason Tam\Capstone\summaryPage\Login\Login\bin\Debug\Login.exe
+D:\Jason Tam\Capstone\summaryPage\Login\Login\bin\Debug\Login.pdb
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\My Sensory Experiences.csprojAssemblyReference.cache
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\Login.AddUser.resources
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\Login.EditProfile.resources
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\Login.EditUser1.resources
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\Login.DeleteUser.resources
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\Login.IndependentInterview.resources
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\Login.InterviewCover.resources
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\Login.SelectInterview.resources
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\Login.NewOTAccount.resources
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\Login.GuidedInterview.resources
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\Login.Login.resources
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\Login.MDIParent1.resources
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\Login.Properties.Resources.resources
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\Login.Summary.resources
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\Login.UserManagment.resources
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\Login.ViewResults.resources
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\Login.ViewResultsTable.resources
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\My Sensory Experiences.csproj.GenerateResource.cache
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\My Sensory Experiences.csproj.CoreCompileInputs.cache
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\Login.exe
+D:\Jason Tam\Capstone\summaryPage\Login\Login\obj\Debug\Login.pdb

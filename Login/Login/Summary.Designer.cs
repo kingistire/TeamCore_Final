@@ -51,25 +51,41 @@
             this.topic1Results8 = new System.Windows.Forms.Label();
             this.topic1Label = new System.Windows.Forms.Label();
             this.topic3ResultPanel = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.topic3Table = new System.Windows.Forms.TableLayoutPanel();
+            this.topic3Results6 = new System.Windows.Forms.Label();
+            this.topic3Image6 = new System.Windows.Forms.Label();
+            this.topic3Results5 = new System.Windows.Forms.Label();
+            this.topic3Image5 = new System.Windows.Forms.Label();
+            this.topic3Results4 = new System.Windows.Forms.Label();
             this.topic3Image1 = new System.Windows.Forms.Label();
             this.topic3Image2 = new System.Windows.Forms.Label();
             this.topic3Image3 = new System.Windows.Forms.Label();
             this.topic3Results1 = new System.Windows.Forms.Label();
             this.topic3Results2 = new System.Windows.Forms.Label();
             this.topic3Results3 = new System.Windows.Forms.Label();
+            this.topic3Image4 = new System.Windows.Forms.Label();
             this.topic3Label = new System.Windows.Forms.Label();
             this.topic2ResultPanel = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.topic2Table = new System.Windows.Forms.TableLayoutPanel();
+            this.topic2Results8 = new System.Windows.Forms.Label();
+            this.topic2Image8 = new System.Windows.Forms.Label();
+            this.topic2Results7 = new System.Windows.Forms.Label();
+            this.topic2Image7 = new System.Windows.Forms.Label();
+            this.topic2Results6 = new System.Windows.Forms.Label();
+            this.topic2Image6 = new System.Windows.Forms.Label();
+            this.topic2Results5 = new System.Windows.Forms.Label();
+            this.topic2Results4 = new System.Windows.Forms.Label();
             this.topic2Image1 = new System.Windows.Forms.Label();
+            this.topic2Image2 = new System.Windows.Forms.Label();
             this.topic2Image3 = new System.Windows.Forms.Label();
-            this.topic2Image4 = new System.Windows.Forms.Label();
             this.topic2Results1 = new System.Windows.Forms.Label();
             this.topic2Results2 = new System.Windows.Forms.Label();
             this.topic2Results3 = new System.Windows.Forms.Label();
+            this.topic2Image4 = new System.Windows.Forms.Label();
+            this.topic2Image5 = new System.Windows.Forms.Label();
             this.topic2Label = new System.Windows.Forms.Label();
             this.topic4ResultPanel = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.topic4Table = new System.Windows.Forms.TableLayoutPanel();
             this.topic4Image1 = new System.Windows.Forms.Label();
             this.topic4Image2 = new System.Windows.Forms.Label();
             this.topic4Image3 = new System.Windows.Forms.Label();
@@ -82,7 +98,7 @@
             this.topic4Results5 = new System.Windows.Forms.Label();
             this.topic4Label = new System.Windows.Forms.Label();
             this.topic5ResultPanel = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.topic5Table = new System.Windows.Forms.TableLayoutPanel();
             this.topic5Image1 = new System.Windows.Forms.Label();
             this.topic5Image2 = new System.Windows.Forms.Label();
             this.topic5Image3 = new System.Windows.Forms.Label();
@@ -97,13 +113,13 @@
             this.topic1ResultPanel.SuspendLayout();
             this.resultsTable.SuspendLayout();
             this.topic3ResultPanel.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.topic3Table.SuspendLayout();
             this.topic2ResultPanel.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.topic2Table.SuspendLayout();
             this.topic4ResultPanel.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.topic4Table.SuspendLayout();
             this.topic5ResultPanel.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
+            this.topic5Table.SuspendLayout();
             this.SuspendLayout();
             // 
             // soundBtn
@@ -371,7 +387,7 @@
             // 
             // topic3ResultPanel
             // 
-            this.topic3ResultPanel.Controls.Add(this.tableLayoutPanel2);
+            this.topic3ResultPanel.Controls.Add(this.topic3Table);
             this.topic3ResultPanel.Controls.Add(this.topic3Label);
             this.topic3ResultPanel.Location = new System.Drawing.Point(206, 276);
             this.topic3ResultPanel.Name = "topic3ResultPanel";
@@ -379,52 +395,111 @@
             this.topic3ResultPanel.TabIndex = 34;
             this.topic3ResultPanel.Visible = false;
             // 
-            // tableLayoutPanel2
+            // topic3Table
             // 
-            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.15232F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.84768F));
-            this.tableLayoutPanel2.Controls.Add(this.topic3Image1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.topic3Image2, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.topic3Image3, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.topic3Results1, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.topic3Results2, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.topic3Results3, 1, 2);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 41);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.Padding = new System.Windows.Forms.Padding(3);
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(309, 213);
-            this.tableLayoutPanel2.TabIndex = 31;
+            this.topic3Table.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.topic3Table.ColumnCount = 2;
+            this.topic3Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.15232F));
+            this.topic3Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.84768F));
+            this.topic3Table.Controls.Add(this.topic3Results6, 1, 5);
+            this.topic3Table.Controls.Add(this.topic3Image6, 0, 5);
+            this.topic3Table.Controls.Add(this.topic3Results5, 1, 4);
+            this.topic3Table.Controls.Add(this.topic3Image5, 0, 4);
+            this.topic3Table.Controls.Add(this.topic3Results4, 1, 3);
+            this.topic3Table.Controls.Add(this.topic3Image1, 0, 0);
+            this.topic3Table.Controls.Add(this.topic3Image2, 0, 1);
+            this.topic3Table.Controls.Add(this.topic3Image3, 0, 2);
+            this.topic3Table.Controls.Add(this.topic3Results1, 1, 0);
+            this.topic3Table.Controls.Add(this.topic3Results2, 1, 1);
+            this.topic3Table.Controls.Add(this.topic3Results3, 1, 2);
+            this.topic3Table.Controls.Add(this.topic3Image4, 0, 3);
+            this.topic3Table.Location = new System.Drawing.Point(12, 41);
+            this.topic3Table.Name = "topic3Table";
+            this.topic3Table.Padding = new System.Windows.Forms.Padding(3);
+            this.topic3Table.RowCount = 6;
+            this.topic3Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.topic3Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.topic3Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.topic3Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.topic3Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.topic3Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.topic3Table.Size = new System.Drawing.Size(309, 213);
+            this.topic3Table.TabIndex = 31;
+            // 
+            // topic3Results6
+            // 
+            this.topic3Results6.AutoSize = true;
+            this.topic3Results6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topic3Results6.Location = new System.Drawing.Point(239, 187);
+            this.topic3Results6.Name = "topic3Results6";
+            this.topic3Results6.Size = new System.Drawing.Size(63, 22);
+            this.topic3Results6.TabIndex = 16;
+            this.topic3Results6.Text = "label11";
+            // 
+            // topic3Image6
+            // 
+            this.topic3Image6.AutoSize = true;
+            this.topic3Image6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topic3Image6.Location = new System.Drawing.Point(7, 187);
+            this.topic3Image6.Name = "topic3Image6";
+            this.topic3Image6.Size = new System.Drawing.Size(225, 22);
+            this.topic3Image6.TabIndex = 15;
+            this.topic3Image6.Text = "label9";
+            // 
+            // topic3Results5
+            // 
+            this.topic3Results5.AutoSize = true;
+            this.topic3Results5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topic3Results5.Location = new System.Drawing.Point(239, 166);
+            this.topic3Results5.Name = "topic3Results5";
+            this.topic3Results5.Size = new System.Drawing.Size(63, 20);
+            this.topic3Results5.TabIndex = 14;
+            this.topic3Results5.Text = "label7";
+            // 
+            // topic3Image5
+            // 
+            this.topic3Image5.AutoSize = true;
+            this.topic3Image5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topic3Image5.Location = new System.Drawing.Point(7, 166);
+            this.topic3Image5.Name = "topic3Image5";
+            this.topic3Image5.Size = new System.Drawing.Size(225, 20);
+            this.topic3Image5.TabIndex = 13;
+            this.topic3Image5.Text = "label5";
+            // 
+            // topic3Results4
+            // 
+            this.topic3Results4.AutoSize = true;
+            this.topic3Results4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topic3Results4.Location = new System.Drawing.Point(239, 145);
+            this.topic3Results4.Name = "topic3Results4";
+            this.topic3Results4.Size = new System.Drawing.Size(63, 20);
+            this.topic3Results4.TabIndex = 12;
+            this.topic3Results4.Text = "label2";
             // 
             // topic3Image1
             // 
             this.topic3Image1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.topic3Image1.Location = new System.Drawing.Point(7, 4);
             this.topic3Image1.Name = "topic3Image1";
-            this.topic3Image1.Size = new System.Drawing.Size(225, 67);
+            this.topic3Image1.Size = new System.Drawing.Size(225, 46);
             this.topic3Image1.TabIndex = 0;
             this.topic3Image1.Text = "Radio On";
             // 
             // topic3Image2
             // 
             this.topic3Image2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.topic3Image2.Location = new System.Drawing.Point(7, 72);
+            this.topic3Image2.Location = new System.Drawing.Point(7, 51);
             this.topic3Image2.Name = "topic3Image2";
-            this.topic3Image2.Size = new System.Drawing.Size(225, 67);
+            this.topic3Image2.Size = new System.Drawing.Size(225, 46);
             this.topic3Image2.TabIndex = 1;
             this.topic3Image2.Text = "Clock Ticking";
             // 
             // topic3Image3
             // 
             this.topic3Image3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.topic3Image3.Location = new System.Drawing.Point(7, 140);
+            this.topic3Image3.Location = new System.Drawing.Point(7, 98);
             this.topic3Image3.Name = "topic3Image3";
-            this.topic3Image3.Size = new System.Drawing.Size(225, 69);
+            this.topic3Image3.Size = new System.Drawing.Size(225, 46);
             this.topic3Image3.TabIndex = 2;
             this.topic3Image3.Text = "People Talking";
             // 
@@ -440,7 +515,7 @@
             // topic3Results2
             // 
             this.topic3Results2.AutoSize = true;
-            this.topic3Results2.Location = new System.Drawing.Point(239, 72);
+            this.topic3Results2.Location = new System.Drawing.Point(239, 51);
             this.topic3Results2.Name = "topic3Results2";
             this.topic3Results2.Size = new System.Drawing.Size(41, 13);
             this.topic3Results2.TabIndex = 9;
@@ -449,11 +524,21 @@
             // topic3Results3
             // 
             this.topic3Results3.AutoSize = true;
-            this.topic3Results3.Location = new System.Drawing.Point(239, 140);
+            this.topic3Results3.Location = new System.Drawing.Point(239, 98);
             this.topic3Results3.Name = "topic3Results3";
             this.topic3Results3.Size = new System.Drawing.Size(41, 13);
             this.topic3Results3.TabIndex = 10;
             this.topic3Results3.Text = "label29";
+            // 
+            // topic3Image4
+            // 
+            this.topic3Image4.AutoSize = true;
+            this.topic3Image4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topic3Image4.Location = new System.Drawing.Point(7, 145);
+            this.topic3Image4.Name = "topic3Image4";
+            this.topic3Image4.Size = new System.Drawing.Size(225, 20);
+            this.topic3Image4.TabIndex = 11;
+            this.topic3Image4.Text = "topic3Image4";
             // 
             // topic3Label
             // 
@@ -468,7 +553,7 @@
             // 
             // topic2ResultPanel
             // 
-            this.topic2ResultPanel.Controls.Add(this.tableLayoutPanel1);
+            this.topic2ResultPanel.Controls.Add(this.topic2Table);
             this.topic2ResultPanel.Controls.Add(this.topic2Label);
             this.topic2ResultPanel.Location = new System.Drawing.Point(578, 12);
             this.topic2ResultPanel.Name = "topic2ResultPanel";
@@ -476,54 +561,149 @@
             this.topic2ResultPanel.TabIndex = 35;
             this.topic2ResultPanel.Visible = false;
             // 
-            // tableLayoutPanel1
+            // topic2Table
             // 
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.15232F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.84768F));
-            this.tableLayoutPanel1.Controls.Add(this.topic2Image1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.topic2Image3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.topic2Image4, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.topic2Results1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.topic2Results2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.topic2Results3, 1, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(18, 33);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(3);
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(309, 213);
-            this.tableLayoutPanel1.TabIndex = 29;
+            this.topic2Table.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.topic2Table.ColumnCount = 2;
+            this.topic2Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.15232F));
+            this.topic2Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.84768F));
+            this.topic2Table.Controls.Add(this.topic2Results8, 1, 7);
+            this.topic2Table.Controls.Add(this.topic2Image8, 0, 7);
+            this.topic2Table.Controls.Add(this.topic2Results7, 1, 6);
+            this.topic2Table.Controls.Add(this.topic2Image7, 0, 6);
+            this.topic2Table.Controls.Add(this.topic2Results6, 1, 5);
+            this.topic2Table.Controls.Add(this.topic2Image6, 0, 5);
+            this.topic2Table.Controls.Add(this.topic2Results5, 1, 4);
+            this.topic2Table.Controls.Add(this.topic2Results4, 1, 3);
+            this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
+            this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
+            this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
+            this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
+            this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
+            this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
+            this.topic2Table.Controls.Add(this.topic2Image4, 0, 3);
+            this.topic2Table.Controls.Add(this.topic2Image5, 0, 4);
+            this.topic2Table.Location = new System.Drawing.Point(18, 33);
+            this.topic2Table.Name = "topic2Table";
+            this.topic2Table.Padding = new System.Windows.Forms.Padding(3);
+            this.topic2Table.RowCount = 8;
+            this.topic2Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.topic2Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.topic2Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.topic2Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.topic2Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.topic2Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.topic2Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.topic2Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.topic2Table.Size = new System.Drawing.Size(309, 213);
+            this.topic2Table.TabIndex = 29;
+            // 
+            // topic2Results8
+            // 
+            this.topic2Results8.AutoSize = true;
+            this.topic2Results8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topic2Results8.Location = new System.Drawing.Point(239, 187);
+            this.topic2Results8.Name = "topic2Results8";
+            this.topic2Results8.Size = new System.Drawing.Size(63, 22);
+            this.topic2Results8.TabIndex = 20;
+            this.topic2Results8.Text = "label10";
+            // 
+            // topic2Image8
+            // 
+            this.topic2Image8.AutoSize = true;
+            this.topic2Image8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topic2Image8.Location = new System.Drawing.Point(7, 187);
+            this.topic2Image8.Name = "topic2Image8";
+            this.topic2Image8.Size = new System.Drawing.Size(225, 22);
+            this.topic2Image8.TabIndex = 19;
+            this.topic2Image8.Text = "label9";
+            // 
+            // topic2Results7
+            // 
+            this.topic2Results7.AutoSize = true;
+            this.topic2Results7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topic2Results7.Location = new System.Drawing.Point(239, 166);
+            this.topic2Results7.Name = "topic2Results7";
+            this.topic2Results7.Size = new System.Drawing.Size(63, 20);
+            this.topic2Results7.TabIndex = 18;
+            this.topic2Results7.Text = "label8";
+            // 
+            // topic2Image7
+            // 
+            this.topic2Image7.AutoSize = true;
+            this.topic2Image7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topic2Image7.Location = new System.Drawing.Point(7, 166);
+            this.topic2Image7.Name = "topic2Image7";
+            this.topic2Image7.Size = new System.Drawing.Size(225, 20);
+            this.topic2Image7.TabIndex = 17;
+            this.topic2Image7.Text = "label7";
+            // 
+            // topic2Results6
+            // 
+            this.topic2Results6.AutoSize = true;
+            this.topic2Results6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topic2Results6.Location = new System.Drawing.Point(239, 145);
+            this.topic2Results6.Name = "topic2Results6";
+            this.topic2Results6.Size = new System.Drawing.Size(63, 20);
+            this.topic2Results6.TabIndex = 16;
+            this.topic2Results6.Text = "label6";
+            // 
+            // topic2Image6
+            // 
+            this.topic2Image6.AutoSize = true;
+            this.topic2Image6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topic2Image6.Location = new System.Drawing.Point(7, 145);
+            this.topic2Image6.Name = "topic2Image6";
+            this.topic2Image6.Size = new System.Drawing.Size(225, 20);
+            this.topic2Image6.TabIndex = 15;
+            this.topic2Image6.Text = "label5";
+            // 
+            // topic2Results5
+            // 
+            this.topic2Results5.AutoSize = true;
+            this.topic2Results5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topic2Results5.Location = new System.Drawing.Point(239, 124);
+            this.topic2Results5.Name = "topic2Results5";
+            this.topic2Results5.Size = new System.Drawing.Size(63, 20);
+            this.topic2Results5.TabIndex = 14;
+            this.topic2Results5.Text = "label4";
+            // 
+            // topic2Results4
+            // 
+            this.topic2Results4.AutoSize = true;
+            this.topic2Results4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topic2Results4.Location = new System.Drawing.Point(239, 103);
+            this.topic2Results4.Name = "topic2Results4";
+            this.topic2Results4.Size = new System.Drawing.Size(63, 20);
+            this.topic2Results4.TabIndex = 13;
+            this.topic2Results4.Text = "label3";
             // 
             // topic2Image1
             // 
             this.topic2Image1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.topic2Image1.Location = new System.Drawing.Point(7, 4);
             this.topic2Image1.Name = "topic2Image1";
-            this.topic2Image1.Size = new System.Drawing.Size(225, 67);
+            this.topic2Image1.Size = new System.Drawing.Size(225, 32);
             this.topic2Image1.TabIndex = 0;
             this.topic2Image1.Text = "If I am concentrating on something, \r\nI don\'t notice people talking to me";
+            // 
+            // topic2Image2
+            // 
+            this.topic2Image2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topic2Image2.Location = new System.Drawing.Point(7, 37);
+            this.topic2Image2.Name = "topic2Image2";
+            this.topic2Image2.Size = new System.Drawing.Size(225, 32);
+            this.topic2Image2.TabIndex = 1;
+            this.topic2Image2.Text = "I find it hard to listen to the \r\nteacher in noisy classrooms";
             // 
             // topic2Image3
             // 
             this.topic2Image3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.topic2Image3.Location = new System.Drawing.Point(7, 72);
+            this.topic2Image3.Location = new System.Drawing.Point(7, 70);
             this.topic2Image3.Name = "topic2Image3";
-            this.topic2Image3.Size = new System.Drawing.Size(225, 67);
-            this.topic2Image3.TabIndex = 1;
-            this.topic2Image3.Text = "I find it hard to listen to the \r\nteacher in noisy classrooms";
-            // 
-            // topic2Image4
-            // 
-            this.topic2Image4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.topic2Image4.Location = new System.Drawing.Point(7, 140);
-            this.topic2Image4.Name = "topic2Image4";
-            this.topic2Image4.Size = new System.Drawing.Size(225, 69);
-            this.topic2Image4.TabIndex = 2;
-            this.topic2Image4.Text = "I find it hard to listen to someone\r\ntalking to me when I\'m in a group";
+            this.topic2Image3.Size = new System.Drawing.Size(225, 32);
+            this.topic2Image3.TabIndex = 2;
+            this.topic2Image3.Text = "I find it hard to listen to someone\r\ntalking to me when I\'m in a group";
             // 
             // topic2Results1
             // 
@@ -537,7 +717,7 @@
             // topic2Results2
             // 
             this.topic2Results2.AutoSize = true;
-            this.topic2Results2.Location = new System.Drawing.Point(239, 72);
+            this.topic2Results2.Location = new System.Drawing.Point(239, 37);
             this.topic2Results2.Name = "topic2Results2";
             this.topic2Results2.Size = new System.Drawing.Size(41, 13);
             this.topic2Results2.TabIndex = 9;
@@ -546,11 +726,31 @@
             // topic2Results3
             // 
             this.topic2Results3.AutoSize = true;
-            this.topic2Results3.Location = new System.Drawing.Point(239, 140);
+            this.topic2Results3.Location = new System.Drawing.Point(239, 70);
             this.topic2Results3.Name = "topic2Results3";
             this.topic2Results3.Size = new System.Drawing.Size(41, 13);
             this.topic2Results3.TabIndex = 10;
             this.topic2Results3.Text = "label28";
+            // 
+            // topic2Image4
+            // 
+            this.topic2Image4.AutoSize = true;
+            this.topic2Image4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topic2Image4.Location = new System.Drawing.Point(7, 103);
+            this.topic2Image4.Name = "topic2Image4";
+            this.topic2Image4.Size = new System.Drawing.Size(225, 20);
+            this.topic2Image4.TabIndex = 11;
+            this.topic2Image4.Text = "label1";
+            // 
+            // topic2Image5
+            // 
+            this.topic2Image5.AutoSize = true;
+            this.topic2Image5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topic2Image5.Location = new System.Drawing.Point(7, 124);
+            this.topic2Image5.Name = "topic2Image5";
+            this.topic2Image5.Size = new System.Drawing.Size(225, 20);
+            this.topic2Image5.TabIndex = 12;
+            this.topic2Image5.Text = "label2";
             // 
             // topic2Label
             // 
@@ -565,7 +765,7 @@
             // 
             // topic4ResultPanel
             // 
-            this.topic4ResultPanel.Controls.Add(this.tableLayoutPanel3);
+            this.topic4ResultPanel.Controls.Add(this.topic4Table);
             this.topic4ResultPanel.Controls.Add(this.topic4Label);
             this.topic4ResultPanel.Location = new System.Drawing.Point(578, 276);
             this.topic4ResultPanel.Name = "topic4ResultPanel";
@@ -573,33 +773,33 @@
             this.topic4ResultPanel.TabIndex = 36;
             this.topic4ResultPanel.Visible = false;
             // 
-            // tableLayoutPanel3
+            // topic4Table
             // 
-            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.15232F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.84768F));
-            this.tableLayoutPanel3.Controls.Add(this.topic4Image1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.topic4Image2, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.topic4Image3, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.topic4Results1, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.topic4Results2, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.topic4Results3, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.topic4Image4, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.topic4Results4, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.topic4Image5, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.topic4Results5, 1, 4);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(18, 40);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.Padding = new System.Windows.Forms.Padding(3);
-            this.tableLayoutPanel3.RowCount = 5;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(309, 213);
-            this.tableLayoutPanel3.TabIndex = 33;
+            this.topic4Table.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.topic4Table.ColumnCount = 2;
+            this.topic4Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.15232F));
+            this.topic4Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.84768F));
+            this.topic4Table.Controls.Add(this.topic4Image1, 0, 0);
+            this.topic4Table.Controls.Add(this.topic4Image2, 0, 1);
+            this.topic4Table.Controls.Add(this.topic4Image3, 0, 2);
+            this.topic4Table.Controls.Add(this.topic4Results1, 1, 0);
+            this.topic4Table.Controls.Add(this.topic4Results2, 1, 1);
+            this.topic4Table.Controls.Add(this.topic4Results3, 1, 2);
+            this.topic4Table.Controls.Add(this.topic4Image4, 0, 3);
+            this.topic4Table.Controls.Add(this.topic4Results4, 1, 3);
+            this.topic4Table.Controls.Add(this.topic4Image5, 0, 4);
+            this.topic4Table.Controls.Add(this.topic4Results5, 1, 4);
+            this.topic4Table.Location = new System.Drawing.Point(18, 40);
+            this.topic4Table.Name = "topic4Table";
+            this.topic4Table.Padding = new System.Windows.Forms.Padding(3);
+            this.topic4Table.RowCount = 5;
+            this.topic4Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.topic4Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.topic4Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.topic4Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.topic4Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.topic4Table.Size = new System.Drawing.Size(309, 213);
+            this.topic4Table.TabIndex = 33;
             // 
             // topic4Image1
             // 
@@ -708,7 +908,7 @@
             // 
             // topic5ResultPanel
             // 
-            this.topic5ResultPanel.Controls.Add(this.tableLayoutPanel4);
+            this.topic5ResultPanel.Controls.Add(this.topic5Table);
             this.topic5ResultPanel.Controls.Add(this.topic5Label);
             this.topic5ResultPanel.Location = new System.Drawing.Point(955, 136);
             this.topic5ResultPanel.Name = "topic5ResultPanel";
@@ -716,30 +916,30 @@
             this.topic5ResultPanel.TabIndex = 37;
             this.topic5ResultPanel.Visible = false;
             // 
-            // tableLayoutPanel4
+            // topic5Table
             // 
-            this.tableLayoutPanel4.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.15232F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.84768F));
-            this.tableLayoutPanel4.Controls.Add(this.topic5Image1, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.topic5Image2, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.topic5Image3, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.topic5Results1, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.topic5Results2, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.topic5Results3, 1, 2);
-            this.tableLayoutPanel4.Controls.Add(this.topic5Image4, 0, 3);
-            this.tableLayoutPanel4.Controls.Add(this.topic5Results4, 1, 3);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(15, 45);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.Padding = new System.Windows.Forms.Padding(3);
-            this.tableLayoutPanel4.RowCount = 4;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(309, 213);
-            this.tableLayoutPanel4.TabIndex = 35;
+            this.topic5Table.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.topic5Table.ColumnCount = 2;
+            this.topic5Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.15232F));
+            this.topic5Table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.84768F));
+            this.topic5Table.Controls.Add(this.topic5Image1, 0, 0);
+            this.topic5Table.Controls.Add(this.topic5Image2, 0, 1);
+            this.topic5Table.Controls.Add(this.topic5Image3, 0, 2);
+            this.topic5Table.Controls.Add(this.topic5Results1, 1, 0);
+            this.topic5Table.Controls.Add(this.topic5Results2, 1, 1);
+            this.topic5Table.Controls.Add(this.topic5Results3, 1, 2);
+            this.topic5Table.Controls.Add(this.topic5Image4, 0, 3);
+            this.topic5Table.Controls.Add(this.topic5Results4, 1, 3);
+            this.topic5Table.Location = new System.Drawing.Point(15, 45);
+            this.topic5Table.Name = "topic5Table";
+            this.topic5Table.Padding = new System.Windows.Forms.Padding(3);
+            this.topic5Table.RowCount = 4;
+            this.topic5Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.topic5Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.topic5Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.topic5Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.topic5Table.Size = new System.Drawing.Size(309, 213);
+            this.topic5Table.TabIndex = 35;
             // 
             // topic5Image1
             // 
@@ -862,20 +1062,20 @@
             this.resultsTable.PerformLayout();
             this.topic3ResultPanel.ResumeLayout(false);
             this.topic3ResultPanel.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.topic3Table.ResumeLayout(false);
+            this.topic3Table.PerformLayout();
             this.topic2ResultPanel.ResumeLayout(false);
             this.topic2ResultPanel.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.topic2Table.ResumeLayout(false);
+            this.topic2Table.PerformLayout();
             this.topic4ResultPanel.ResumeLayout(false);
             this.topic4ResultPanel.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
+            this.topic4Table.ResumeLayout(false);
+            this.topic4Table.PerformLayout();
             this.topic5ResultPanel.ResumeLayout(false);
             this.topic5ResultPanel.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
+            this.topic5Table.ResumeLayout(false);
+            this.topic5Table.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -908,7 +1108,7 @@
         private System.Windows.Forms.Label topic1Results8;
         private System.Windows.Forms.Label topic1Label;
         private System.Windows.Forms.Panel topic3ResultPanel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel topic3Table;
         private System.Windows.Forms.Label topic3Image1;
         private System.Windows.Forms.Label topic3Image2;
         private System.Windows.Forms.Label topic3Image3;
@@ -917,16 +1117,16 @@
         private System.Windows.Forms.Label topic3Results3;
         private System.Windows.Forms.Label topic3Label;
         private System.Windows.Forms.Panel topic2ResultPanel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel topic2Table;
         private System.Windows.Forms.Label topic2Image1;
+        private System.Windows.Forms.Label topic2Image2;
         private System.Windows.Forms.Label topic2Image3;
-        private System.Windows.Forms.Label topic2Image4;
         private System.Windows.Forms.Label topic2Results1;
         private System.Windows.Forms.Label topic2Results2;
         private System.Windows.Forms.Label topic2Results3;
         private System.Windows.Forms.Label topic2Label;
         private System.Windows.Forms.Panel topic4ResultPanel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel topic4Table;
         private System.Windows.Forms.Label topic4Image1;
         private System.Windows.Forms.Label topic4Image2;
         private System.Windows.Forms.Label topic4Image3;
@@ -939,7 +1139,7 @@
         private System.Windows.Forms.Label topic4Results5;
         private System.Windows.Forms.Label topic4Label;
         private System.Windows.Forms.Panel topic5ResultPanel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel topic5Table;
         private System.Windows.Forms.Label topic5Image1;
         private System.Windows.Forms.Label topic5Image2;
         private System.Windows.Forms.Label topic5Image3;
@@ -950,5 +1150,21 @@
         private System.Windows.Forms.Label topic5Results4;
         private System.Windows.Forms.Label topic5Label;
         private System.Windows.Forms.Button tasteBtn;
+        private System.Windows.Forms.Label topic2Results8;
+        private System.Windows.Forms.Label topic2Image8;
+        private System.Windows.Forms.Label topic2Results7;
+        private System.Windows.Forms.Label topic2Image7;
+        private System.Windows.Forms.Label topic2Results6;
+        private System.Windows.Forms.Label topic2Image6;
+        private System.Windows.Forms.Label topic2Results5;
+        private System.Windows.Forms.Label topic2Results4;
+        private System.Windows.Forms.Label topic2Image4;
+        private System.Windows.Forms.Label topic2Image5;
+        private System.Windows.Forms.Label topic3Results6;
+        private System.Windows.Forms.Label topic3Image6;
+        private System.Windows.Forms.Label topic3Results5;
+        private System.Windows.Forms.Label topic3Image5;
+        private System.Windows.Forms.Label topic3Results4;
+        private System.Windows.Forms.Label topic3Image4;
     }
 }
