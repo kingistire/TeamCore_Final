@@ -325,78 +325,62 @@ namespace Login {
             //This will refresh the picture box
             topLeftPB.Invalidate();
             page1Selections[0] = "A Little";
-            //this is just to show the array being updated -- can remove after testing
-            label1.Text = string.Join(", ", page1Selections);
-            //Update label
-            //summary.LabelText = "Top Left A Little";
-            //summary.Show();
+
         }
         private void topLeftPBALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topLeftPB.Invalidate();
             page1Selections[0] = "A Lot";
-            label1.Text = string.Join(", ", page1Selections);
-            //summary.LabelText = "Top Left A Lot";
         }
         private void topMidALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topMidPB.Invalidate();
             page1Selections[1] = "A Little";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void topMidALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topMidPB.Invalidate();
             page1Selections[1] = "A Lot";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void topRightALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             topRightPB.Invalidate();
             page1Selections[2] = "A Little";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void topRightPBALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picturebox
             topRightPB.Invalidate();
             page1Selections[2] = "A Lot";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomLeftALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
             page1Selections[3] = "A Little";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomLeftALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomLeftPB.Invalidate();
             page1Selections[3] = "A Lot";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomMidALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomMidPB.Invalidate();
             page1Selections[4] = "A Little";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomMidALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomMidPB.Invalidate();
             page1Selections[4] = "A Lot";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomRightALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomRightPB.Invalidate();
             page1Selections[5] = "A Little";
-            label1.Text = string.Join(", ", page1Selections);
         }
         private void bottomRightALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
             bottomRightPB.Invalidate();
             page1Selections[5] = "A Lot";
-            label1.Text = string.Join(", ", page1Selections);
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -20,28 +20,6 @@ namespace Login {
         private const int MAXTABLECOLUMNS = 2;
         private const int MAXROWS = 8;
 
-       /* private void Summary_Load(object sender, EventArgs e) {
-            string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
-                @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
-            SqlConnection conDatabase = new SqlConnection(constring);
-            SqlCommand cmdDatabase = new SqlCommand("SELECT * FROM Summary;", conDatabase);
-            try {
-                SqlDataAdapter sda = new SqlDataAdapter();
-                sda.SelectCommand = cmdDatabase;
-                DataTable dbdataset = new DataTable();
-                sda.Fill(dbdataset);
-                BindingSource bSource = new BindingSource();
-                bSource.DataSource = dbdataset;
-                summaryDataGrid.DataSource = bSource;
-                sda.Update(dbdataset);
-                //need to write a for loop to iteratively set the column width for each column
-                //DataGridViewColumn column = dataGridView.Columns[0];
-                //column.Width = 60;
-            } catch (Exception ex) {
-                MessageBox.Show(ex.Message);
-            }
-        } */
-
         /// <summary>
         /// Call when not all 5 panels will be displayed
         /// </summary>
