@@ -13,6 +13,15 @@ using System.Data.SqlClient;
 
 namespace Login {
     public partial class GuidedInterview : Form {
+
+        private System.Media.SoundPlayer topLeftPBPlayer = new System.Media.SoundPlayer();
+        private string topLeftReadOutLoudPath;
+        private string topMiddleReadOutLoudPath;
+        private string topRightReadOutLoudPath;
+        private string bottomLeftReadOutLoudPath;
+        private string bottomMiddleReadOutLoudPath;
+        private string bottomrightReadOutLoudPath;
+
         public GuidedInterview() {
             InitializeComponent();
             panel1.BringToFront();
@@ -23,6 +32,12 @@ namespace Login {
             createCirclePB(topLeftPB);
             createCirclePB(topRightPB);
             createCirclePB(topMidPB);
+            createCirclePB(bottomLeftPB2);
+            createCirclePB(bottomRightPB2);
+            createCirclePB(bottomMidPB2);
+            createCirclePB(topLeftPB2);
+            createCirclePB(topRightPB2);
+            createCirclePB(topMidPB2);
             if (Globals.interview_page >= 2) {
                 previousInterviewSlideBtn.Visible = true;
             } else {
