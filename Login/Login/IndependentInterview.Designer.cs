@@ -250,7 +250,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(904, 388);
+            this.button1.Location = new System.Drawing.Point(904, 418);
             this.button1.MaximumSize = new System.Drawing.Size(175, 50);
             this.button1.MinimumSize = new System.Drawing.Size(75, 23);
             this.button1.Name = "button1";
@@ -262,7 +262,7 @@
             // 
             // btnPreviousInterview
             // 
-            this.btnPreviousInterview.Location = new System.Drawing.Point(3, 396);
+            this.btnPreviousInterview.Location = new System.Drawing.Point(3, 418);
             this.btnPreviousInterview.MaximumSize = new System.Drawing.Size(175, 50);
             this.btnPreviousInterview.MinimumSize = new System.Drawing.Size(75, 23);
             this.btnPreviousInterview.Name = "btnPreviousInterview";
