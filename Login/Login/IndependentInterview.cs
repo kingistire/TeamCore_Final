@@ -24,6 +24,19 @@ namespace Login {
         private string bottomMiddleReadOutLoudPath;
         private string bottomrightReadOutLoudPath;
 
+        private void openQuestionPanel()
+        {
+            questionPanel.BringToFront();
+            readOutLoudPanel.BringToFront();
+        }
+
+        private void openPicturePanel()
+        {
+            picturePanel.BringToFront();
+            readOutLoudPanel.BringToFront();
+        }
+
+
         public IndependentInterview() {
 
 
@@ -54,7 +67,10 @@ namespace Login {
 
 
 
-            picturePanel.BringToFront();
+            openPicturePanel();
+
+
+
             if (Globals.interview_page >= 2) {
                 previousInterviewSlideBtn.Visible = true;
                 btnPreviousInterview.Visible = true;
@@ -72,51 +88,51 @@ namespace Login {
             }
             else if (Globals.interview_page == 3) {
                 interviewPage1p3();
-                questionPanel.BringToFront();
+                openQuestionPanel();
             }
             else if (Globals.interview_page == 4) {
                 interviewPage2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
             }
             else if (Globals.interview_page == 5) {
                 interviewPage3();
             }
             else if (Globals.interview_page == 6) {
                 interviewPage3p2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
             }
             else if (Globals.interview_page == 7) {
                 interviewPage4();
             }
             else if (Globals.interview_page == 8) {
                 interviewPage4p2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
             }
             else if (Globals.interview_page == 9) {
                 interviewPage5and6();
-                questionPanel.BringToFront();
+                openQuestionPanel();
             }
             else if (Globals.interview_page == 10) {
                 interviewPage7();
             }
             else if (Globals.interview_page == 11) {
                 interviewPage7p2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
             }
             else if (Globals.interview_page == 12) {
                 interviewPage8();
-                questionPanel.BringToFront();
+                openQuestionPanel();
             }
             else if (Globals.interview_page == 13) {
                 interviewPage9();
             }
             else if (Globals.interview_page == 14) {
                 interviewPage9p2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
             }
             else if (Globals.interview_page == 15) {
                 interviewPage10();
-                questionPanel.BringToFront();
+                openQuestionPanel();
             }
             else if (Globals.interview_page == 16) {
                 sightInterviewPage1();
@@ -124,12 +140,12 @@ namespace Login {
             }
             else if (Globals.interview_page == 17) {
                 sightInterviewPage1p2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 SightColours();
             }
             else if (Globals.interview_page == 18) {
                 sightInterviewPage2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 SightColours();
             }
             else if (Globals.interview_page == 19) {
@@ -138,7 +154,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 20) {
                 sightInterviewPage3p2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 SightColours();
             }
             else if (Globals.interview_page == 21) {
@@ -147,12 +163,12 @@ namespace Login {
             }
             else if (Globals.interview_page == 22) {
                 sightInterviewPage4p2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 SightColours();
             }
             else if (Globals.interview_page == 23) {
                 sightInterviewPage5();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 SightColours();
             }
             else if (Globals.interview_page == 24) {
@@ -165,12 +181,12 @@ namespace Login {
             }
             else if (Globals.interview_page == 26) {
                 touchInterviewPage1p3();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 TouchColours();
             }
             else if (Globals.interview_page == 27) {
                 touchInterviewPage2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 TouchColours();
             }
             else if (Globals.interview_page == 28) {
@@ -183,12 +199,12 @@ namespace Login {
             }
             else if (Globals.interview_page == 30) {
                 touchInterviewPage3p3();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 TouchColours();
             }
             else if (Globals.interview_page == 31) {
                 touchInterviewPage4();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 TouchColours();
             }
             else if (Globals.interview_page == 32) {
@@ -197,12 +213,12 @@ namespace Login {
             }
             else if (Globals.interview_page == 33) {
                 touchInterviewPage5p2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 TouchColours();
             }
             else if (Globals.interview_page == 34) {
                 touchInterviewPage6();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 TouchColours();
             }
             else if (Globals.interview_page == 35) {
@@ -211,12 +227,12 @@ namespace Login {
             }
             else if (Globals.interview_page == 36) {
                 smellInterviewPage1p2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 SmellColours();
             }
             else if (Globals.interview_page == 37) {
                 smellInterviewPage2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 SmellColours();
             }
             else if (Globals.interview_page == 38) {
@@ -225,12 +241,12 @@ namespace Login {
             }
             else if (Globals.interview_page == 39) {
                 smellInterviewPage3p2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 SmellColours();
             }
             else if (Globals.interview_page == 40) {
                 smellInterviewPage4();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 SmellColours();
             }
             else if (Globals.interview_page == 41) {
@@ -243,7 +259,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 43) {
                 tasteInterviewPage1p3();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 TasteColours();
             }
             else if (Globals.interview_page == 44) {
@@ -256,12 +272,12 @@ namespace Login {
             }
             else if (Globals.interview_page == 46) {
                 tasteInterviewPage2p3();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 TasteColours();
             }
             else if (Globals.interview_page == 47) {
                 tasteInterviewPage3();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 TasteColours();
             }
             else if (Globals.interview_page == 48) {
@@ -270,12 +286,12 @@ namespace Login {
             }
             else if (Globals.interview_page == 49) {
                 tasteInterviewPage4p2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 TasteColours();
             }
             else if (Globals.interview_page == 50) {
                 tasteInterviewPage5();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 TasteColours();
             }
             else if (Globals.interview_page == 51) {
@@ -284,12 +300,12 @@ namespace Login {
             }
             else if (Globals.interview_page == 52) {
                 tasteInterviewPage6p2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 TasteColours();
             }
             else if (Globals.interview_page == 53) {
                 tasteInterviewPage7();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 TasteColours();
             }
             else if (Globals.interview_page == 54) {
@@ -298,12 +314,12 @@ namespace Login {
             }
             else if (Globals.interview_page == 55) {
                 mvmtInterviewPage1p2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 MovementColours();
             }
             else if (Globals.interview_page == 56) {
                 mvmtInterviewPage2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 MovementColours();
             }
             else if (Globals.interview_page == 57) {
@@ -312,7 +328,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 58) {
                 mvmtInterviewPage3p2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 MovementColours();
             }
             else if (Globals.interview_page == 59) {
@@ -321,7 +337,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 60) {
                 mvmtInterviewPage4p2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 MovementColours();
             }
             else if (Globals.interview_page == 61) {
@@ -330,12 +346,12 @@ namespace Login {
             }
             else if (Globals.interview_page == 62) {
                 mvmtInterviewPage5p2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 MovementColours();
             }
             else if (Globals.interview_page == 63) {
                 mvmtInterviewPage6();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 MovementColours();
             }
             else if (Globals.interview_page == 64) {
@@ -344,12 +360,12 @@ namespace Login {
             }
             else if (Globals.interview_page == 65) {
                 environmentPage1p2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 EnvironmentColours();
             }
             else if (Globals.interview_page == 66) {
                 environmentPage2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 EnvironmentColours();
             }
             else if (Globals.interview_page == 67) {
@@ -358,12 +374,12 @@ namespace Login {
             }
             else if (Globals.interview_page == 68) {
                 otherInterviewPage1p2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 OtherColours();
             }
             else if (Globals.interview_page == 69) {
                 otherInterviewPage2();
-                questionPanel.BringToFront();
+                openQuestionPanel();
                 OtherColours();
             }
             else if (Globals.interview_page == 70) {
@@ -2053,38 +2069,38 @@ namespace Login {
         private void topLeftPB_Click(object sender, EventArgs e) {
 
             topLeftPBPlayer.SoundLocation = topLeftReadOutLoudPath;
-            topLeftPBPlayer.Play();
+            playReadOutLoud();
 
             hideButtons();
             displayButtons(topLeftPBALittleBtn, topLeftPBALotBtn);
         }
         private void topMidPB_Click(object sender, EventArgs e) {
             topLeftPBPlayer.SoundLocation = topMiddleReadOutLoudPath;
-            topLeftPBPlayer.Play();
+            playReadOutLoud();
             hideButtons();
             displayButtons(topMidALittleBtn, topMidALotBtn);
         }
         private void topRightPB_Click(object sender, EventArgs e) {
             topLeftPBPlayer.SoundLocation = topRightReadOutLoudPath;
-            topLeftPBPlayer.Play();
+            playReadOutLoud();
             hideButtons();
             displayButtons(topRightALittleBtn, topRightALotBtn);
         }
         private void bottomLeftPB_Click(object sender, EventArgs e) {
             topLeftPBPlayer.SoundLocation = bottomLeftReadOutLoudPath;
-            topLeftPBPlayer.Play();
+            playReadOutLoud();
             hideButtons();
             displayButtons(bottomLeftALittleBtn, bottomLeftALotBtn);
         }
         private void bottomMidPB_Click(object sender, EventArgs e) {
             topLeftPBPlayer.SoundLocation = bottomMiddleReadOutLoudPath;
-            topLeftPBPlayer.Play();
+            playReadOutLoud();
             hideButtons();
             displayButtons(bottomMidALittleBtn, bottomMidALotBtn);
         }
         private void bottomRightPB_Click(object sender, EventArgs e) {
             topLeftPBPlayer.SoundLocation = bottomrightReadOutLoudPath;
-            topLeftPBPlayer.Play();
+            playReadOutLoud();
 
             hideButtons();
             displayButtons(bottomRightALittleBtn, bottomRightALotBtn);
@@ -2471,6 +2487,41 @@ namespace Login {
         private void picturePanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+
+        /// <summary>
+        /// Read Out Loud toggles 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
+
+        private bool toggleReadOutLoad = false; 
+
+        private void loadReadOutLoudToggleBtn()
+        {
+            if (toggleReadOutLoad)
+            {
+                readOutLoudToggleBtn.Text = "ReadOutLoud: ON";
+            } else
+            {
+                readOutLoudToggleBtn.Text = "ReadOutLoud: OFF";
+            }
+        }
+
+        private void playReadOutLoud()
+        {
+            if (toggleReadOutLoad)
+            {
+                topLeftPBPlayer.Play();
+            } 
+        }
+
+        private void readOutLoudToggleBtn_Click(object sender, EventArgs e)
+        {
+            toggleReadOutLoad = !toggleReadOutLoad;
+            loadReadOutLoudToggleBtn();
         }
     }
 }

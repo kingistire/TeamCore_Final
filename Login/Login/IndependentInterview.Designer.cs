@@ -91,16 +91,18 @@
             this.bottomLeftALotBtn = new System.Windows.Forms.Button();
             this.bottomLeftPB = new System.Windows.Forms.PictureBox();
             this.picturePanel = new System.Windows.Forms.Panel();
-            this.bottomMidPB = new System.Windows.Forms.PictureBox();
-            this.bottomMidALotBtn = new System.Windows.Forms.Button();
-            this.bottomMidALittleBtn = new System.Windows.Forms.Button();
-            this.bottomMidPB2 = new System.Windows.Forms.PictureBox();
-            this.lblBM = new System.Windows.Forms.Label();
             this.bottomRightPB = new System.Windows.Forms.PictureBox();
             this.bottomRightALotBtn = new System.Windows.Forms.Button();
             this.bottomRightALittleBtn = new System.Windows.Forms.Button();
             this.bottomRightPB2 = new System.Windows.Forms.PictureBox();
             this.lblBR = new System.Windows.Forms.Label();
+            this.bottomMidPB = new System.Windows.Forms.PictureBox();
+            this.bottomMidALotBtn = new System.Windows.Forms.Button();
+            this.bottomMidALittleBtn = new System.Windows.Forms.Button();
+            this.bottomMidPB2 = new System.Windows.Forms.PictureBox();
+            this.lblBM = new System.Windows.Forms.Label();
+            this.readOutLoudToggleBtn = new System.Windows.Forms.Button();
+            this.readOutLoudPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -121,10 +123,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.bottomLeftPB2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomLeftPB)).BeginInit();
             this.picturePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bottomMidPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bottomMidPB2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightPB2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bottomMidPB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bottomMidPB2)).BeginInit();
+            this.readOutLoudPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label7
@@ -132,7 +135,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(882, 110);
+            this.label7.Location = new System.Drawing.Point(807, 110);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 13);
@@ -144,7 +147,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(832, 110);
+            this.label9.Location = new System.Drawing.Point(757, 110);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(47, 13);
@@ -203,7 +206,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(828, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(753, 16);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(94, 92);
@@ -241,7 +244,7 @@
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(986, 146);
+            this.pictureBox3.Size = new System.Drawing.Size(1001, 146);
             this.pictureBox3.TabIndex = 21;
             this.pictureBox3.TabStop = false;
             // 
@@ -642,7 +645,7 @@
             // picInstruction
             // 
             this.picInstruction.Image = ((System.Drawing.Image)(resources.GetObject("picInstruction.Image")));
-            this.picInstruction.Location = new System.Drawing.Point(828, 16);
+            this.picInstruction.Location = new System.Drawing.Point(753, 16);
             this.picInstruction.Margin = new System.Windows.Forms.Padding(2);
             this.picInstruction.Name = "picInstruction";
             this.picInstruction.Size = new System.Drawing.Size(94, 92);
@@ -695,7 +698,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(832, 110);
+            this.label3.Location = new System.Drawing.Point(757, 110);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
@@ -707,7 +710,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(882, 110);
+            this.label5.Location = new System.Drawing.Point(807, 110);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
@@ -964,6 +967,68 @@
             this.picturePanel.TabIndex = 0;
             this.picturePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.picturePanel_Paint);
             // 
+            // bottomRightPB
+            // 
+            this.bottomRightPB.Location = new System.Drawing.Point(717, 516);
+            this.bottomRightPB.MaximumSize = new System.Drawing.Size(361, 351);
+            this.bottomRightPB.MinimumSize = new System.Drawing.Size(161, 151);
+            this.bottomRightPB.Name = "bottomRightPB";
+            this.bottomRightPB.Size = new System.Drawing.Size(161, 151);
+            this.bottomRightPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bottomRightPB.TabIndex = 50;
+            this.bottomRightPB.TabStop = false;
+            this.bottomRightPB.Click += new System.EventHandler(this.bottomRightPB_Click);
+            // 
+            // bottomRightALotBtn
+            // 
+            this.bottomRightALotBtn.Location = new System.Drawing.Point(803, 700);
+            this.bottomRightALotBtn.MaximumSize = new System.Drawing.Size(175, 50);
+            this.bottomRightALotBtn.MinimumSize = new System.Drawing.Size(75, 23);
+            this.bottomRightALotBtn.Name = "bottomRightALotBtn";
+            this.bottomRightALotBtn.Size = new System.Drawing.Size(75, 23);
+            this.bottomRightALotBtn.TabIndex = 52;
+            this.bottomRightALotBtn.Text = "A Lot";
+            this.bottomRightALotBtn.UseVisualStyleBackColor = true;
+            this.bottomRightALotBtn.Visible = false;
+            this.bottomRightALotBtn.Click += new System.EventHandler(this.bottomRightALotBtn_Click);
+            // 
+            // bottomRightALittleBtn
+            // 
+            this.bottomRightALittleBtn.Location = new System.Drawing.Point(717, 700);
+            this.bottomRightALittleBtn.MaximumSize = new System.Drawing.Size(175, 50);
+            this.bottomRightALittleBtn.MinimumSize = new System.Drawing.Size(75, 23);
+            this.bottomRightALittleBtn.Name = "bottomRightALittleBtn";
+            this.bottomRightALittleBtn.Size = new System.Drawing.Size(75, 23);
+            this.bottomRightALittleBtn.TabIndex = 51;
+            this.bottomRightALittleBtn.Text = "A Little";
+            this.bottomRightALittleBtn.UseVisualStyleBackColor = true;
+            this.bottomRightALittleBtn.Visible = false;
+            this.bottomRightALittleBtn.Click += new System.EventHandler(this.bottomRightALittleBtn_Click);
+            // 
+            // bottomRightPB2
+            // 
+            this.bottomRightPB2.BackColor = System.Drawing.Color.AliceBlue;
+            this.bottomRightPB2.Location = new System.Drawing.Point(692, 491);
+            this.bottomRightPB2.MaximumSize = new System.Drawing.Size(361, 351);
+            this.bottomRightPB2.MinimumSize = new System.Drawing.Size(161, 151);
+            this.bottomRightPB2.Name = "bottomRightPB2";
+            this.bottomRightPB2.Size = new System.Drawing.Size(211, 201);
+            this.bottomRightPB2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bottomRightPB2.TabIndex = 54;
+            this.bottomRightPB2.TabStop = false;
+            this.bottomRightPB2.Paint += new System.Windows.Forms.PaintEventHandler(this.bottomRightPB_Paint);
+            // 
+            // lblBR
+            // 
+            this.lblBR.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBR.Location = new System.Drawing.Point(719, 723);
+            this.lblBR.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBR.MaximumSize = new System.Drawing.Size(150, 61);
+            this.lblBR.Name = "lblBR";
+            this.lblBR.Size = new System.Drawing.Size(150, 61);
+            this.lblBR.TabIndex = 53;
+            this.lblBR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // bottomMidPB
             // 
             this.bottomMidPB.Location = new System.Drawing.Point(402, 516);
@@ -1027,67 +1092,34 @@
             this.lblBM.TabIndex = 48;
             this.lblBM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bottomRightPB
+            // readOutLoudToggleBtn
             // 
-            this.bottomRightPB.Location = new System.Drawing.Point(717, 516);
-            this.bottomRightPB.MaximumSize = new System.Drawing.Size(361, 351);
-            this.bottomRightPB.MinimumSize = new System.Drawing.Size(161, 151);
-            this.bottomRightPB.Name = "bottomRightPB";
-            this.bottomRightPB.Size = new System.Drawing.Size(161, 151);
-            this.bottomRightPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bottomRightPB.TabIndex = 50;
-            this.bottomRightPB.TabStop = false;
-            this.bottomRightPB.Click += new System.EventHandler(this.bottomRightPB_Click);
+            this.readOutLoudToggleBtn.BackColor = System.Drawing.Color.Transparent;
+            this.readOutLoudToggleBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.readOutLoudToggleBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.readOutLoudToggleBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.readOutLoudToggleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.readOutLoudToggleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.readOutLoudToggleBtn.ForeColor = System.Drawing.Color.Navy;
+            this.readOutLoudToggleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.readOutLoudToggleBtn.Location = new System.Drawing.Point(1, 0);
+            this.readOutLoudToggleBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.readOutLoudToggleBtn.Name = "readOutLoudToggleBtn";
+            this.readOutLoudToggleBtn.Size = new System.Drawing.Size(128, 46);
+            this.readOutLoudToggleBtn.TabIndex = 55;
+            this.readOutLoudToggleBtn.Text = "ReadOutLoud: Off";
+            this.readOutLoudToggleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.readOutLoudToggleBtn.UseVisualStyleBackColor = false;
+            this.readOutLoudToggleBtn.Click += new System.EventHandler(this.readOutLoudToggleBtn_Click);
             // 
-            // bottomRightALotBtn
+            // readOutLoudPanel
             // 
-            this.bottomRightALotBtn.Location = new System.Drawing.Point(803, 700);
-            this.bottomRightALotBtn.MaximumSize = new System.Drawing.Size(175, 50);
-            this.bottomRightALotBtn.MinimumSize = new System.Drawing.Size(75, 23);
-            this.bottomRightALotBtn.Name = "bottomRightALotBtn";
-            this.bottomRightALotBtn.Size = new System.Drawing.Size(75, 23);
-            this.bottomRightALotBtn.TabIndex = 52;
-            this.bottomRightALotBtn.Text = "A Lot";
-            this.bottomRightALotBtn.UseVisualStyleBackColor = true;
-            this.bottomRightALotBtn.Visible = false;
-            this.bottomRightALotBtn.Click += new System.EventHandler(this.bottomRightALotBtn_Click);
-            // 
-            // bottomRightALittleBtn
-            // 
-            this.bottomRightALittleBtn.Location = new System.Drawing.Point(717, 700);
-            this.bottomRightALittleBtn.MaximumSize = new System.Drawing.Size(175, 50);
-            this.bottomRightALittleBtn.MinimumSize = new System.Drawing.Size(75, 23);
-            this.bottomRightALittleBtn.Name = "bottomRightALittleBtn";
-            this.bottomRightALittleBtn.Size = new System.Drawing.Size(75, 23);
-            this.bottomRightALittleBtn.TabIndex = 51;
-            this.bottomRightALittleBtn.Text = "A Little";
-            this.bottomRightALittleBtn.UseVisualStyleBackColor = true;
-            this.bottomRightALittleBtn.Visible = false;
-            this.bottomRightALittleBtn.Click += new System.EventHandler(this.bottomRightALittleBtn_Click);
-            // 
-            // bottomRightPB2
-            // 
-            this.bottomRightPB2.BackColor = System.Drawing.Color.AliceBlue;
-            this.bottomRightPB2.Location = new System.Drawing.Point(692, 491);
-            this.bottomRightPB2.MaximumSize = new System.Drawing.Size(361, 351);
-            this.bottomRightPB2.MinimumSize = new System.Drawing.Size(161, 151);
-            this.bottomRightPB2.Name = "bottomRightPB2";
-            this.bottomRightPB2.Size = new System.Drawing.Size(211, 201);
-            this.bottomRightPB2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bottomRightPB2.TabIndex = 54;
-            this.bottomRightPB2.TabStop = false;
-            this.bottomRightPB2.Paint += new System.Windows.Forms.PaintEventHandler(this.bottomRightPB_Paint);
-            // 
-            // lblBR
-            // 
-            this.lblBR.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBR.Location = new System.Drawing.Point(719, 723);
-            this.lblBR.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblBR.MaximumSize = new System.Drawing.Size(150, 61);
-            this.lblBR.Name = "lblBR";
-            this.lblBR.Size = new System.Drawing.Size(150, 61);
-            this.lblBR.TabIndex = 53;
-            this.lblBR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.readOutLoudPanel.BackColor = System.Drawing.Color.White;
+            this.readOutLoudPanel.Controls.Add(this.readOutLoudToggleBtn);
+            this.readOutLoudPanel.Location = new System.Drawing.Point(857, 16);
+            this.readOutLoudPanel.Name = "readOutLoudPanel";
+            this.readOutLoudPanel.Size = new System.Drawing.Size(129, 48);
+            this.readOutLoudPanel.TabIndex = 56;
             // 
             // IndependentInterview
             // 
@@ -1095,6 +1127,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1001, 793);
+            this.Controls.Add(this.readOutLoudPanel);
             this.Controls.Add(this.picturePanel);
             this.Controls.Add(this.questionPanel);
             this.Controls.Add(this.additionalNotesPanel);
@@ -1127,10 +1160,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.bottomLeftPB)).EndInit();
             this.picturePanel.ResumeLayout(false);
             this.picturePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bottomMidPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bottomMidPB2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightPB2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bottomMidPB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bottomMidPB2)).EndInit();
+            this.readOutLoudPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1213,5 +1247,7 @@
         private System.Windows.Forms.Button bottomRightALittleBtn;
         private System.Windows.Forms.PictureBox bottomRightPB2;
         private System.Windows.Forms.Label lblBR;
+        private System.Windows.Forms.Button readOutLoudToggleBtn;
+        private System.Windows.Forms.Panel readOutLoudPanel;
     }
 }

@@ -121,8 +121,8 @@ namespace Login
                 ProfileData thisProfile = new ProfileData();
                 thisProfile.FirstName = profile[1].ToString();
                 thisProfile.LastName = profile[2].ToString();
-                thisProfile.Dob = Convert.ToDateTime(profile[3]);
-                thisProfile.Gender = profile[4].ToString();
+                thisProfile.Dob = Convert.ToDateTime(profile[4]);
+                thisProfile.Gender = profile[3].ToString();
                 thisProfile.PhNumber = profile[5].ToString();
                 thisProfile.EmailAddress = profile[6].ToString();
 
