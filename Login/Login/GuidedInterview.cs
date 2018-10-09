@@ -76,58 +76,66 @@ namespace Login {
                 TouchColours();
             }
             else if (Globals.interview_page == 13) {
-                touchInterviewPage3();
+                touchInterviewPage2p2();
                 TouchColours();
             }
             else if (Globals.interview_page == 14) {
+                touchInterviewPage3();
+                TouchColours();
+            }
+            else if (Globals.interview_page == 15) {
                 smellInterviewPage1();
                 SmellColours();
             }
-            else if (Globals.interview_page == 15) {
+            else if (Globals.interview_page == 16) {
                 smellInterviewPage2();
                 SmellColours();
             }
-            else if (Globals.interview_page == 16) {
+            else if (Globals.interview_page == 17) {
                 tasteInterviewPage1();
                 TasteColours();
             }
-            else if (Globals.interview_page == 17) {
+            else if (Globals.interview_page == 18) {
                 tasteInterviewPage1p2();
                 TasteColours();
             }
-            else if (Globals.interview_page == 18) {
+            else if (Globals.interview_page == 19) {
                 tasteInterviewPage2();
                 TasteColours();
-            }
-            else if (Globals.interview_page == 19) {
-                tasteInterviewPage3();
-                TasteColours();
-            }
+             }
             else if (Globals.interview_page == 20) {
-                tasteInterviewPage4();
+                tasteInterviewPage2p2();
                 TasteColours();
             }
             else if (Globals.interview_page == 21) {
+                tasteInterviewPage3();
+                TasteColours();
+            }
+            else if (Globals.interview_page == 22) {
+                tasteInterviewPage4();
+                TasteColours();
+            }
+            else if (Globals.interview_page == 23) {
                 mvmtInterviewPage1();
                 MovementColours();
             }
-            else if (Globals.interview_page == 22) {
+            else if (Globals.interview_page == 24) {
                 mvmtInterviewPage2();
                 MovementColours();
             }
-            else if (Globals.interview_page == 23) {
+            else if (Globals.interview_page == 25) {
                 mvmtInterviewPage3();
                 MovementColours();
             }
-            else if (Globals.interview_page == 24) {
+            else if (Globals.interview_page == 26) {
                 mvmtInterviewPage4();
                 MovementColours();
             }
-            else if (Globals.interview_page == 25) {
+            else if (Globals.interview_page == 27) {
                 environmentInterviewPage1();
                 EnvironmentColours();
             }
-            else if (Globals.interview_page == 26) {
+            else if (Globals.interview_page == 28) {
                 otherInterviewPage1();
                 OtherColours();
             }
@@ -914,7 +922,7 @@ namespace Login {
 
         private void interviewPage5() {
             lblQuestion.Text = "Are there some sounds that you make a lot?";
-            //topLeftPB.Image = new Bitmap(@""); NEEDS IMAGE
+            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\1 Humming or Whistling to myself.jpg"); 
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\2 Tapping feet.PNG");
             topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\3 Tapping fingers.jpg");
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\4 Clicking pen.jpg");
@@ -1001,7 +1009,7 @@ namespace Login {
 
         private void touchInterviewPage2p2() {
             lblQuestion.Text = "Are there some ways that people touch you that you don't like?";
-            topLeftPB.Image = new Bitmap(@"..\..resources\3. Touch\2. Are there ways that people touch you that you don't like_\7 Doctor touching me.jpg");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\7 Doctor touching me.jpg");
             topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\8 Dentist touching me (cropped).jpg");
             //topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there things that you don't like the feeling of_\Geometric patterns.jpg");
             //bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there things that you don't like the feeling of_\.jpg");
@@ -1152,11 +1160,11 @@ namespace Login {
         private void environmentInterviewPage1() {
             lblQuestion.Text = "Are there some places with lots of things happening at once that you don't like?";
             //----------File path too long-----------
-            //topLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\1 Supermarket.png");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there\1 Supermarket.png");
             //topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Pasta.jpg");
-            //topRightPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\3 Food Hall.jpg");
-            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\4 Show (cropped).jpg");
-            //bottomMidPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\5 Shopping mall.png");
+            topRightPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there\3 Food Hall.jpg");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there\4 Show (cropped).jpg");
+            bottomMidPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there\5 Shopping mall.png");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
             updateLabelText("Supermarket", "Party", "Food hall", "Show", "Shopping mall", "");
         }

@@ -97,3 +97,41 @@ C:\Users\bryce\Documents\capstoneProject\FuckingBullshit\TeamCore_Final\Login\Lo
 C:\Users\bryce\Documents\capstoneProject\FuckingBullshit\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyObservations.resources
 C:\Users\bryce\Documents\capstoneProject\FuckingBullshit\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyInterviewCover.resources
 C:\Users\bryce\Documents\capstoneProject\FuckingBullshit\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyInstructions.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB.mdf
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB_log.ldf
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\bin\Debug\Login.exe.config
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\bin\Debug\Login.exe
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\bin\Debug\Login.pdb
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\bin\Debug\Interop.WMPLib.dll
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csprojResolveAssemblyReference.cache
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Interop.WMPLib.dll
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.ResolveComReference.cache
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.AddUser.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.EditProfile.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.EditUser1.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.DeleteUser.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyObservations.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInstructions.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyInterviewCover.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyInstructions.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.IndependentInstructions.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.IndependentInterview.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.IndependentCover.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInterviewCover.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.ProfilePage.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.SelectInterview.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.NewOTAccount.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInterview.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.Login.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.MDIParent1.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.Summary.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.UserManagment.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.ViewResults.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.ViewResultsTable.resources
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.GenerateResource.cache
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.CoreCompileInputs.cache
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.exe
+C:\Users\Philip\Desktop\Git\TeamCore_Final\Login\Login\obj\Debug\Login.pdb

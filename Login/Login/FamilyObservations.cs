@@ -379,7 +379,7 @@ namespace Login {
 
         private void interviewPage9() {
             lblQuestion.Text = "Are there some sounds that s/he makes a lot?";
-            //topLeftPB.Image = new Bitmap(@"");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\1 Humming or Whistling to myself.jpg");
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\2 Tapping feet.PNG");
             topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\3 Tapping fingers.jpg");
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\4 Clicking pen.jpg");
@@ -751,7 +751,7 @@ namespace Login {
             lblQuestion.Text = "Are there some ways of moving that s/he likes?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\1 Moving in Water.jpg");
             topMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\2 Swinging (cropped).jpg");
-            topRightPB.Image = new Bitmap(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\3 Spinning (guided).jpg");
+            topRightPB.Image = new Bitmap(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\3 Spinning (self report) (uncropped).jpeg");
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\4 Jumping on the Trampoline (guided and self report) (cropped).jpg");
             bottomMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\5 Running (self-report) (cropped).jpg");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
@@ -787,11 +787,11 @@ namespace Login {
         /// </summary>
         private void environmentPage1() {
             lblQuestion.Text = "Are there some places with lots of things happening at once that s/he doesn't like?";
-            //topLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\1 Supermarket.png");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there\1 Supermarket.png");
             //topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Pasta.jpg");
-            //topRightPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\3 Food Hall.jpg");
-            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\4 Show (cropped).jpg");
-            //bottomMidPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\5 Shopping mall.png");
+            topRightPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there\3 Food Hall.jpg");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there\4 Show (cropped).jpg");
+            bottomMidPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there\5 Shopping mall.png");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
             updateLabelText("Supermarket", "Party", "Food hall", "Show", "Shopping mall", "");
         }
@@ -807,12 +807,12 @@ namespace Login {
         /// </summary>
         private void otherInterviewPage1() {
             lblQuestion.Text = "Are there any other sensations that s/he feels strongly about?";
-            //topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\lumpy.jpg");
-            //topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Pasta.jpg");
-            //topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Geometric patterns.jpg");
-            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
-            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\8. Other\1 Sounds.png");
+            topMidPB.Image = new Bitmap(@"..\..\resources\8. Other\2 Smells.PNG");
+            topRightPB.Image = new Bitmap(@"..\..\resources\8. Other\3 Sights.png");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\8. Other\4 Tastes.png");
+            bottomMidPB.Image = new Bitmap(@"..\..\resources\8. Other\5 Feelings.jpg");
+            bottomRightPB.Image = new Bitmap(@"..\..\resources\8. Other\6 Movements (cropped).jpg");
             updateLabelText("Sounds", "Smells", "Sights", "Tastes", "Feelings", "Movements");
         }
 
