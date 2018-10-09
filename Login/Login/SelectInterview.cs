@@ -31,6 +31,24 @@ namespace Login {
             }
         }
 
+        private void SelectInterview_Load(object sender, EventArgs e) {
+            string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase = new SqlCommand(" select * from UserInformation ;", conDatabase);
+            try {
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmdDatabase;
+                DataTable profileNames = new DataTable();
+                sda.Fill(profileNames);
+                foreach (DataRow dr in profileNames.Rows) {
+                    comboBox1.Items.Add(dr["firstName"].ToString());
+                }
+            } catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         //won't work until the database is configured properly
         /*private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) {
             string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
