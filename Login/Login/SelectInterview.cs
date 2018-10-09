@@ -15,7 +15,8 @@ namespace Login {
     public partial class SelectInterview : Form {
 
         public SelectInterview() {
-            InitializeComponent();         
+            InitializeComponent();
+            SelectInterview_Load();
         }
 
         private void btnStart_Click(object sender, EventArgs e) {
@@ -29,26 +30,38 @@ namespace Login {
                 newIndependentInt.Show();
                 this.Hide();
             }
+            else if (radioFamily.Checked == true) {
+                FamilyInterviewCover newFamilyInt = new FamilyInterviewCover();
+                newFamilyInt.Show();
+                this.Hide();
+            }
         }
-
-        //won't work until the database is configured properly
-        /*private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) {
-            string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
-                @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
-            SqlConnection conDatabase = new SqlConnection(constring);
-            SqlCommand cmdDatabase = new SqlCommand(" select * from UserInformation ;", conDatabase);
+        private void SelectInterview_Load() {
             try {
-                SqlDataAdapter sda = new SqlDataAdapter();
-                sda.SelectCommand = cmdDatabase;
-                DataTable profileNames = new DataTable();
-                sda.Fill(profileNames);
-                foreach (DataRow dr in profileNames.Rows) {
-                    comboBox1.Items.Add(dr["firstName"].ToString());
-                }
+                SqlConnection conn = new SqlConnection(@"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True");
+                conn.Open();
+                SqlCommand sc = new SqlCommand("select Id,firstName from dbo.UserInformation", conn);
+                SqlDataReader reader;
+                reader = sc.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("firstName", typeof(string));
+                dt.Load(reader);
+                comboBox1.ValueMember = "Id";
+                comboBox1.DisplayMember = "firstName";
+                comboBox1.DataSource = dt;
+
+                conn.Close();
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);
             }
-        }*/
+        }
+
+        private DataTable dbdataset = new DataTable();
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) {
+            string ID = comboBox1.SelectedValue.ToString();
+        }
     }
 }

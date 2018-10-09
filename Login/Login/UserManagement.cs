@@ -44,9 +44,6 @@ namespace Login
                 bSource.DataSource = dbdataset;
                 userProfileManagmentGrid.DataSource = bSource;
                 sda.Update(dbdataset);
-                //need to write a for loop to iteratively set the column width for each column
-                //DataGridViewColumn column = dataGridView.Columns[0];
-                //column.Width = 60;
             }
             catch (Exception ex)
             {

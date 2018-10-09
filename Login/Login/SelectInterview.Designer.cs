@@ -34,6 +34,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.radioGuided = new System.Windows.Forms.RadioButton();
             this.radioIndependent = new System.Windows.Forms.RadioButton();
+            this.radioFamily = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             this.btnStart.ForeColor = System.Drawing.Color.Navy;
             this.btnStart.Image = ((System.Drawing.Image)(resources.GetObject("btnStart.Image")));
             this.btnStart.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnStart.Location = new System.Drawing.Point(229, 468);
+            this.btnStart.Location = new System.Drawing.Point(229, 512);
             this.btnStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(235, 53);
@@ -63,7 +64,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(78, 409);
+            this.lblUsername.Location = new System.Drawing.Point(78, 395);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(154, 24);
             this.lblUsername.TabIndex = 2;
@@ -126,13 +127,24 @@
             // radioIndependent
             // 
             this.radioIndependent.AutoSize = true;
-            this.radioIndependent.Location = new System.Drawing.Point(278, 433);
+            this.radioIndependent.Location = new System.Drawing.Point(278, 435);
             this.radioIndependent.Name = "radioIndependent";
             this.radioIndependent.Size = new System.Drawing.Size(167, 21);
             this.radioIndependent.TabIndex = 8;
             this.radioIndependent.TabStop = true;
             this.radioIndependent.Text = "Independent Interview";
             this.radioIndependent.UseVisualStyleBackColor = true;
+            // 
+            // radioFamily
+            // 
+            this.radioFamily.AutoSize = true;
+            this.radioFamily.Location = new System.Drawing.Point(278, 475);
+            this.radioFamily.Name = "radioFamily";
+            this.radioFamily.Size = new System.Drawing.Size(157, 21);
+            this.radioFamily.TabIndex = 8;
+            this.radioFamily.TabStop = true;
+            this.radioFamily.Text = "Family Observations";
+            this.radioFamily.UseVisualStyleBackColor = true;
             // 
             // SelectInterview
             // 
@@ -141,7 +153,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(548, 576);
+            this.ClientSize = new System.Drawing.Size(542, 576);
+            this.Controls.Add(this.radioFamily);
             this.Controls.Add(this.radioIndependent);
             this.Controls.Add(this.radioGuided);
             this.Controls.Add(this.comboBox1);
@@ -170,6 +183,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.RadioButton radioGuided;
         private System.Windows.Forms.RadioButton radioIndependent;
+        private System.Windows.Forms.RadioButton radioFamily;
     }
 }
 

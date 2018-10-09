@@ -25,11 +25,10 @@ namespace Login {
         private string bottomrightReadOutLoudPath;
 
         public IndependentInterview() {
-
-
-            InitializeComponent();          
-            this.Location = new Point(0, 0);
+            InitializeComponent();
+            picturePanel.BringToFront();
             btnPreviousInterview.Click += previousInterviewSlideBtn_Click;
+            button1.Click += btnNext1_Click_1;
             //Dynamically create the circular picture boxes
             createCirclePB(bottomLeftPB);
             createCirclePB(bottomLeftPB2);
@@ -49,12 +48,6 @@ namespace Login {
             createCirclePB(topMidPB);
             createCirclePB(topMidPB2);
 
-
-
-
-
-
-            picturePanel.BringToFront();
             if (Globals.interview_page >= 2) {
                 previousInterviewSlideBtn.Visible = true;
                 btnPreviousInterview.Visible = true;
@@ -949,11 +942,11 @@ namespace Login {
         /// </summary>
         private void environmentPage1() {
             lblQuestion.Text = "Are there some places with lots of things happening at once that you don't like?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\1 Supermarket.png");
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\1 Supermarket.png");
             //topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Pasta.jpg");
-            topRightPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\3 Food Hall.jpg");
-            bottomLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\4 Show (cropped).jpg");
-            bottomMidPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\5 Shopping mall.png");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\3 Food Hall.jpg");
+            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\4 Show (cropped).jpg");
+            //bottomMidPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\5 Shopping mall.png");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
             updateLabelText("Supermarket", "Party", "Food hall", "Show", "Shopping mall", "");
         }
@@ -1296,79 +1289,69 @@ namespace Login {
         }
 
         private void SightColours() {
+            picSense.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\sight.PNG");
+            pictureBox2.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\sight.PNG");
             //picturePanel
             picBackground.BackColor = Color.SandyBrown;
             lblQuestion.BackColor = Color.SandyBrown;            
-            label3.BackColor = Color.SandyBrown;
-            label5.BackColor = Color.SandyBrown;
             picturePanel.BackColor = Color.Bisque;
             //questionPanel
             pictureBox3.BackColor = Color.SandyBrown;
             panel2lblQuestion.BackColor = Color.SandyBrown;
-            label9.BackColor = Color.SandyBrown;
-            label7.BackColor = Color.SandyBrown;
             questionPanel.BackColor = Color.Bisque;
         }
 
         private void TouchColours() {
+            picSense.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\touch.PNG");
+            pictureBox2.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\touch.PNG");
             //picturePanel
             picBackground.BackColor = Color.FromArgb(255, 255, 128);
             lblQuestion.BackColor = Color.FromArgb(255, 255, 128);
-            label3.BackColor = Color.FromArgb(255, 255, 128);
-            label5.BackColor = Color.FromArgb(255, 255, 128);
             picturePanel.BackColor = Color.LightYellow;
             //questionPanel
             pictureBox3.BackColor = Color.FromArgb(255, 255, 128);
             panel2lblQuestion.BackColor = Color.FromArgb(255, 255, 128);
-            label9.BackColor = Color.FromArgb(255, 255, 128);
-            label7.BackColor = Color.FromArgb(255, 255, 128);
             questionPanel.BackColor = Color.LightYellow;
         }
 
         private void SmellColours() {
+            picSense.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\smell.PNG");
+            pictureBox2.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\smell.PNG");
             //picturePanel
             picBackground.BackColor = Color.FromArgb(143, 188, 139);
             lblQuestion.BackColor = Color.FromArgb(143, 188, 139);
-            label3.BackColor = Color.FromArgb(143, 188, 139);
-            label5.BackColor = Color.FromArgb(143, 188, 139);
             picturePanel.BackColor = Color.Honeydew;
             //questionPanel
             pictureBox3.BackColor = Color.FromArgb(143, 188, 139);
             panel2lblQuestion.BackColor = Color.FromArgb(143, 188, 139);
-            label9.BackColor = Color.FromArgb(143, 188, 139);
-            label7.BackColor = Color.FromArgb(143, 188, 139);
             questionPanel.BackColor = Color.Honeydew;
         }
 
         private void TasteColours() {
+            picSense.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\taste.PNG");
+            pictureBox2.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\taste.PNG");
             System.Drawing.Color tasteHeader = System.Drawing.ColorTranslator.FromHtml("#C2B4E2");
             System.Drawing.Color tasteBg = System.Drawing.ColorTranslator.FromHtml("#E6E6FA");
             //picturePanel
             picBackground.BackColor = tasteHeader;
             lblQuestion.BackColor = tasteHeader;
-            label3.BackColor = tasteHeader;
-            label5.BackColor = tasteHeader;
             picturePanel.BackColor = tasteBg;
             //questionPanel
             pictureBox3.BackColor = tasteHeader;
             panel2lblQuestion.BackColor = tasteHeader;
-            label9.BackColor = tasteHeader;
-            label7.BackColor = tasteHeader;
             questionPanel.BackColor = tasteBg;
         }
 
         private void MovementColours() {
+            picSense.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\movement.PNG");
+            pictureBox2.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\movement.PNG");
             //picturePanel
             picBackground.BackColor = Color.PaleVioletRed;
             lblQuestion.BackColor = Color.PaleVioletRed;
-            label3.BackColor = Color.PaleVioletRed;
-            label5.BackColor = Color.PaleVioletRed;
             picturePanel.BackColor = Color.Pink;
             //questionPanel
             pictureBox3.BackColor = Color.PaleVioletRed;
             panel2lblQuestion.BackColor = Color.PaleVioletRed;
-            label9.BackColor = Color.PaleVioletRed;
-            label7.BackColor = Color.PaleVioletRed;
             questionPanel.BackColor = Color.Pink;
         }
         
@@ -1377,14 +1360,10 @@ namespace Login {
             //picturePanel
             picBackground.BackColor = Color.LightBlue;
             lblQuestion.BackColor = Color.LightBlue;
-            label3.BackColor = Color.LightBlue;
-            label5.BackColor = Color.LightBlue;
             picturePanel.BackColor = Color.AliceBlue;
             //questionPanel
             pictureBox3.BackColor = Color.LightBlue;
             panel2lblQuestion.BackColor = Color.LightBlue;
-            label9.BackColor = Color.LightBlue;
-            label7.BackColor = Color.LightBlue;
             questionPanel.BackColor = Color.AliceBlue;
         }
 
@@ -1392,14 +1371,10 @@ namespace Login {
             //picturePanel
             picBackground.BackColor = Color.Tan;
             lblQuestion.BackColor = Color.Tan;
-            label3.BackColor = Color.Tan;
-            label5.BackColor = Color.Tan;
             picturePanel.BackColor = Color.AntiqueWhite;
             //questionPanel
             pictureBox3.BackColor = Color.Tan;
             panel2lblQuestion.BackColor = Color.Tan;
-            label9.BackColor = Color.Tan;
-            label7.BackColor = Color.Tan;
             questionPanel.BackColor = Color.AntiqueWhite;
         }
 
@@ -1419,11 +1394,11 @@ namespace Login {
             //-------------
             //SOUND SECTION
             //-------------
-            if (Globals.interview_page == 1) {
+            if (Globals.interview_page == 2) {
                 writeToDB(page1Selections, "otherPeopleTalking", "fireworks", "loudVoices",
                                             "householdAppliances", "vehicles", "bathroomAppliances");
-                if (m_InstanceRef != null) {
-                    InstanceRef.Show();
+                if (m_InstanceRef2 != null) {
+                    InstanceRef2.Show();
                 }
                 else {
                     this.Hide();
@@ -1433,27 +1408,27 @@ namespace Login {
                     soundPage1.Show();
                 }
             }
-            else if (Globals.interview_page == 2) {
-                writeToDBTop3(page1Selections, "sirensOrAlarms", "suddenLoudNoises", "");
+            else if (Globals.interview_page == 3) {
+                //writeToDBTop3(page1Selections, "sirensOrAlarms", "suddenLoudNoises", "");
                 IndependentInterview soundPage1p2 = new IndependentInterview();
                 soundPage1p2.InstanceRef2 = this;
                 soundPage1p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 3) {
+            else if (Globals.interview_page == 4) {
                 IndependentInterview soundPage1p3 = new IndependentInterview();
                 soundPage1p3.InstanceRef3 = this;
                 soundPage1p3.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 4) {
+            else if (Globals.interview_page == 5) {
                 IndependentInterview soundPage2 = new IndependentInterview();
                 soundPage2.InstanceRef4 = this;
                 soundPage2.Location = new Point(0, 0);
                 soundPage2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 5) {
+            else if (Globals.interview_page == 6) {
                 writeToDBTop3(page1Selections, "concentrating", "hardToListenInClassroom", "hardToListenInGroup");
                 IndependentInterview soundPage3 = new IndependentInterview();
                 soundPage3.InstanceRef5 = this;
@@ -1461,64 +1436,64 @@ namespace Login {
                 soundPage3.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 6) {
+            else if (Globals.interview_page == 7) {
                 IndependentInterview soundPage3p2 = new IndependentInterview();
                 soundPage3p2.InstanceRef6 = this;
                 soundPage3p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 7) {
+            else if (Globals.interview_page == 8) {
                 IndependentInterview soundPage4 = new IndependentInterview();
                 soundPage4.InstanceRef7 = this;
                 soundPage4.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 8) {
+            else if (Globals.interview_page == 9) {
                 writeToDBTop3(page1Selections, "radioOn", "clockTicking", "peopleTalking");
                 IndependentInterview soundPage4p2 = new IndependentInterview();
                 soundPage4p2.InstanceRef8 = this;
                 soundPage4p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 9) {
+            else if (Globals.interview_page == 10) {
                 IndependentInterview soundPage5and6 = new IndependentInterview();
                 soundPage5and6.InstanceRef9 = this;
                 soundPage5and6.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 10) {
+            else if (Globals.interview_page == 11) {
                 writeToDB5(page1Selections, "computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms");
                 IndependentInterview soundPage7 = new IndependentInterview();
                 soundPage7.InstanceRef10 = this;
                 soundPage7.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 11) {
+            else if (Globals.interview_page == 12) {
                 IndependentInterview soundPage7p2 = new IndependentInterview();
                 soundPage7p2.InstanceRef11 = this;
                 soundPage7p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 12) {
+            else if (Globals.interview_page == 13) {
                 IndependentInterview soundPage8 = new IndependentInterview();
                 soundPage8.InstanceRef12 = this;
                 soundPage8.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 13) {
+            else if (Globals.interview_page == 14) {
                 writeToDB4(page1Selections, "hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen");
                 IndependentInterview soundPage9 = new IndependentInterview();
                 soundPage9.InstanceRef13 = this;
                 soundPage9.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 14) {
+            else if (Globals.interview_page == 15) {
                 IndependentInterview soundPage9p2 = new IndependentInterview();
                 soundPage9p2.InstanceRef14 = this;
                 soundPage9p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 15) {
+            else if (Globals.interview_page == 16) {
                 IndependentInterview soundPage10 = new IndependentInterview();
                 soundPage10.InstanceRef15 = this;
                 soundPage10.Show();
@@ -1527,52 +1502,52 @@ namespace Login {
             //-------------
             //SIGHT SECTION
             //-------------
-            else if (Globals.interview_page == 16) {
+            else if (Globals.interview_page == 17) {
                 writeToDB5(page1Selections, "sunlight", "fluroescentLight", "lightAndShadow", "busyPatterns", "classroomLight");
                 IndependentInterview sightPage1 = new IndependentInterview();
                 sightPage1.InstanceRef16 = this;
                 sightPage1.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 17) {
+            else if (Globals.interview_page == 18) {
                 IndependentInterview sightPage1p2 = new IndependentInterview();
                 sightPage1p2.InstanceRef17 = this;
                 sightPage1p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 18) {
+            else if (Globals.interview_page == 19) {
                 IndependentInterview sightPage2 = new IndependentInterview();
                 sightPage2.InstanceRef18 = this;
                 sightPage2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 19) {
+            else if (Globals.interview_page == 20) {
                 writeToDBTop3(page1Selections, "lotsOfThingsInMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom");
                 IndependentInterview sightPage3 = new IndependentInterview();
                 sightPage3.InstanceRef19 = this;
                 sightPage3.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 20) {
+            else if (Globals.interview_page == 21) {
                 IndependentInterview sightPage3p2 = new IndependentInterview();
                 sightPage3p2.InstanceRef20 = this;
                 sightPage3p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 21) {
+            else if (Globals.interview_page == 22) {
                 writeToDB5(page1Selections, "movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects");
                 IndependentInterview sightPage4 = new IndependentInterview();
                 sightPage4.InstanceRef21 = this;
                 sightPage4.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 22) {
+            else if (Globals.interview_page == 23) {
                 IndependentInterview sightPage4p2 = new IndependentInterview();
                 sightPage4p2.InstanceRef22 = this;
                 sightPage4p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 23) {
+            else if (Globals.interview_page == 24) {
                 IndependentInterview sightPage5 = new IndependentInterview();
                 sightPage5.InstanceRef23 = this;
                 sightPage5.Show();
@@ -1581,72 +1556,72 @@ namespace Login {
             //-------------
             //TOUCH SECTION
             //-------------
-            else if (Globals.interview_page == 24) {
+            else if (Globals.interview_page == 25) {
                 writeToDB(page1Selections, "sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes");
                 IndependentInterview touchPage1 = new IndependentInterview();
                 touchPage1.InstanceRef24 = this;
                 touchPage1.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 25) {
+            else if (Globals.interview_page == 26) {
                 writeToDBTop2(page1Selections, "shoes", "splashingWater");
                 IndependentInterview touchPage1p2 = new IndependentInterview();
                 touchPage1p2.InstanceRef25 = this;
                 touchPage1p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 26) {
+            else if (Globals.interview_page == 27) {
                 IndependentInterview touchPage1p3 = new IndependentInterview();
                 touchPage1p3.InstanceRef26 = this;
                 touchPage1p3.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 27) {
+            else if (Globals.interview_page == 28) {
                 IndependentInterview touchPage2 = new IndependentInterview();
                 touchPage2.InstanceRef27 = this;
                 touchPage2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 28) {
+            else if (Globals.interview_page == 29) {
                 writeToDB(page1Selections, "beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut");
                 IndependentInterview touchPage3 = new IndependentInterview();
                 touchPage3.InstanceRef28 = this;
                 touchPage3.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 29) {
+            else if (Globals.interview_page == 30) {
                 writeToDBTop2(page1Selections, "doctorTouchingMe", "dentistTouchingMe");
                 IndependentInterview touchPage3p2 = new IndependentInterview();
                 touchPage3p2.InstanceRef29 = this;
                 touchPage3p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 30) {
+            else if (Globals.interview_page == 31) {
                 IndependentInterview touchPage3p3 = new IndependentInterview();
                 touchPage3p3.InstanceRef30 = this;
                 touchPage3p3.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 31) {
+            else if (Globals.interview_page == 32) {
                 IndependentInterview touchPage4 = new IndependentInterview();
                 touchPage4.InstanceRef31 = this;
                 touchPage4.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 32) {
+            else if (Globals.interview_page == 33) {
                 writeToDB(page1Selections, "soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow");
                 IndependentInterview touchPage5 = new IndependentInterview();
                 touchPage5.InstanceRef32 = this;
                 touchPage5.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 33) {
+            else if (Globals.interview_page == 34) {
                 IndependentInterview touchPage5p2 = new IndependentInterview();
                 touchPage5p2.InstanceRef33 = this;
                 touchPage5p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 34) {
+            else if (Globals.interview_page == 35) {
                 IndependentInterview touchPage6 = new IndependentInterview();
                 touchPage6.InstanceRef34 = this;
                 touchPage6.Show();
@@ -1655,39 +1630,39 @@ namespace Login {
             //-------------
             //SMELL SECTION
             //-------------
-            else if (Globals.interview_page == 35) {
+            else if (Globals.interview_page == 36) {
                 writeToDB(page1Selections, "cookingSmells", "foodSmells", "cleaningProducts", "toiletSmells", "perfumes", "bodySmells");
                 IndependentInterview smellPage1 = new IndependentInterview();
                 smellPage1.InstanceRef35 = this;
                 smellPage1.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 36) {
+            else if (Globals.interview_page == 37) {
                 IndependentInterview smellPage1p2 = new IndependentInterview();
                 smellPage1p2.InstanceRef36 = this;
                 smellPage1p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 37) {
+            else if (Globals.interview_page == 38) {
                 IndependentInterview smellPage2 = new IndependentInterview();
                 smellPage2.InstanceRef37 = this;
                 smellPage2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 38) {
+            else if (Globals.interview_page == 39) {
                 writeToDB5(page1Selections, "smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople");
                 IndependentInterview smellPage3 = new IndependentInterview();
                 smellPage3.InstanceRef38 = this;
                 smellPage3.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 39) {
+            else if (Globals.interview_page == 40) {
                 IndependentInterview smellPage3p2 = new IndependentInterview();
                 smellPage3p2.InstanceRef39 = this;
                 smellPage3p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 40) {
+            else if (Globals.interview_page == 41) {
                 IndependentInterview smellPage4 = new IndependentInterview();
                 smellPage4.InstanceRef40 = this;
                 smellPage4.Show();
@@ -1696,85 +1671,85 @@ namespace Login {
             //-------------
             //TASTE SECTION
             //-------------
-            else if (Globals.interview_page == 41) {
+            else if (Globals.interview_page == 42) {
                 writeToDB(page1Selections, "vegetables", "fruit", "meat", "fish", "eggs", "dairy");
                 IndependentInterview tastePage1 = new IndependentInterview();
                 tastePage1.InstanceRef41 = this;
                 tastePage1.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 42) {
+            else if (Globals.interview_page == 43) {
                 writeToDBTop2(page1Selections, "bread", "pasta");
                 IndependentInterview tastePage1p2 = new IndependentInterview();
                 tastePage1p2.InstanceRef42 = this;
                 tastePage1p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 43) {
+            else if (Globals.interview_page == 44) {
                 IndependentInterview tastePage1p3 = new IndependentInterview();
                 tastePage1p3.InstanceRef43 = this;
                 tastePage1p3.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 44) {
+            else if (Globals.interview_page == 45) {
                 writeToDB(page1Selections, "lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour");
                 IndependentInterview tastePage2 = new IndependentInterview();
                 tastePage2.InstanceRef44 = this;
                 tastePage2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 45) {
+            else if (Globals.interview_page == 46) {
                 writeToDBTop2(page1Selections, "salty", "spicy");
                 IndependentInterview tastePage2p2 = new IndependentInterview();
                 tastePage2p2.InstanceRef45 = this;
                 tastePage2p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 46) {
+            else if (Globals.interview_page == 47) {
                 IndependentInterview tastePage2p3 = new IndependentInterview();
                 tastePage2p3.InstanceRef46 = this;
                 tastePage2p3.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 47) {
+            else if (Globals.interview_page == 48) {
                 IndependentInterview tastePage3 = new IndependentInterview();
                 tastePage3.InstanceRef47 = this;
                 tastePage3.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 48) {
+            else if (Globals.interview_page == 49) {
                 writeToDBTop2(page1Selections, "familiarFoods", "unfamiliarFoods");
                 IndependentInterview tastePage4 = new IndependentInterview();
                 tastePage4.InstanceRef48 = this;
                 tastePage4.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 49) {
+            else if (Globals.interview_page == 50) {
                 IndependentInterview tastePage4p2 = new IndependentInterview();
                 tastePage4p2.InstanceRef49 = this;
                 tastePage4p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 50) {
+            else if (Globals.interview_page == 51) {
                 IndependentInterview tastePage5 = new IndependentInterview();
                 tastePage5.InstanceRef50 = this;
                 tastePage5.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 51) {
+            else if (Globals.interview_page == 52) {
                 writeToDBTop3(page1Selections, "shirt", "hair", "objects");
                 IndependentInterview tastePage6 = new IndependentInterview();
                 tastePage6.InstanceRef51 = this;
                 tastePage6.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 52) {
+            else if (Globals.interview_page == 53) {
                 IndependentInterview tastePage6p2 = new IndependentInterview();
                 tastePage6p2.InstanceRef52 = this;
                 tastePage6p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 53) {
+            else if (Globals.interview_page == 54) {
                 IndependentInterview tastePage7 = new IndependentInterview();
                 tastePage7.InstanceRef53 = this;
                 tastePage7.Show();
@@ -1783,65 +1758,65 @@ namespace Login {
             //----------------
             //Movement SECTION
             //----------------
-            else if (Globals.interview_page == 54) {
+            else if (Globals.interview_page == 55) {
                 writeToDB5(page1Selections, "beingJumpedOnOrTackled", "movingWhenICantSeeWhereImGoing", "balancing", "beingUpsideDown", "climbingUpHigh");
                 this.Hide();
                 IndependentInterview mvmtPage1 = new IndependentInterview();
                 mvmtPage1.InstanceRef54 = this;
                 mvmtPage1.Show();
             }
-            else if (Globals.interview_page == 55) {
+            else if (Globals.interview_page == 56) {
                 this.Hide();
                 IndependentInterview mvmtPage1p2 = new IndependentInterview();
                 mvmtPage1p2.InstanceRef55 = this;
                 mvmtPage1p2.Show();
             }
-            else if (Globals.interview_page == 56) {
+            else if (Globals.interview_page == 57) {
                 this.Hide();
                 IndependentInterview mvmtPage2 = new IndependentInterview();
                 mvmtPage2.InstanceRef56 = this;
                 mvmtPage2.Show();
             }
-            else if (Globals.interview_page == 57) {
+            else if (Globals.interview_page == 58) {
                 writeToDBTop2(page1Selections, "standingStill", "sittingStill");
                 this.Hide();
                 IndependentInterview mvmtPage3 = new IndependentInterview();
                 mvmtPage3.InstanceRef57 = this;
                 mvmtPage3.Show();
             }
-            else if (Globals.interview_page == 58) {
+            else if (Globals.interview_page == 59) {
                 this.Hide();
                 IndependentInterview mvmtPage3p2 = new IndependentInterview();
                 mvmtPage3p2.InstanceRef58 = this;
                 mvmtPage3p2.Show();
             }
-            else if (Globals.interview_page == 59) {
+            else if (Globals.interview_page == 60) {
                 writeToDB5(page1Selections, "movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running");
                 IndependentInterview mvmtPage4 = new IndependentInterview();
                 mvmtPage4.InstanceRef59 = this;
                 mvmtPage4.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 60) {
+            else if (Globals.interview_page == 61) {
                 this.Hide();
                 IndependentInterview mvmtPage4p2 = new IndependentInterview();
                 mvmtPage4p2.InstanceRef60 = this;
                 mvmtPage4p2.Show();
             }
-            else if (Globals.interview_page == 61) {
+            else if (Globals.interview_page == 62) {
                 writeToDB4(page1Selections, "rocking", "movingHands", "clapping", "pacing");
                 IndependentInterview mvmtPage5 = new IndependentInterview();
                 mvmtPage5.InstanceRef61 = this;
                 mvmtPage5.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 62) {
+            else if (Globals.interview_page == 63) {
                 this.Hide();
                 IndependentInterview mvmtPage5p2 = new IndependentInterview();
                 mvmtPage5p2.InstanceRef62 = this;
                 mvmtPage5p2.Show();
             }
-            else if (Globals.interview_page == 63) {
+            else if (Globals.interview_page == 64) {
                 this.Hide();
                 IndependentInterview mvmtPage6 = new IndependentInterview();
                 mvmtPage6.InstanceRef63 = this;
@@ -1850,20 +1825,20 @@ namespace Login {
             //-------------------
             //ENVIRONMENT SECTION
             //-------------------
-            else if (Globals.interview_page == 64) {
+            else if (Globals.interview_page == 65) {
                 writeToDB5(page1Selections, "supermarket", "party", "foodHall", "show", "shoppingMall");
                 IndependentInterview environmentPage1 = new IndependentInterview();
                 environmentPage1.InstanceRef64 = this;
                 environmentPage1.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 65) {
+            else if (Globals.interview_page == 66) {
                 IndependentInterview environmentPage1p2 = new IndependentInterview();
                 environmentPage1p2.InstanceRef65 = this;
                 environmentPage1p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 66) {
+            else if (Globals.interview_page == 67) {
                 IndependentInterview environmentPage2 = new IndependentInterview();
                 environmentPage2.InstanceRef66 = this;
                 environmentPage2.Show();
@@ -1872,26 +1847,26 @@ namespace Login {
             //-------------
             //OTHER SECTION
             //-------------
-            else if (Globals.interview_page == 67) {
+            else if (Globals.interview_page == 68) {
                 writeToDB(page1Selections, "sounds", "smells", "sights", "tastes", "feelings", "movements");
                 IndependentInterview otherPage1 = new IndependentInterview();
                 otherPage1.InstanceRef67 = this;
                 otherPage1.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 68) {
+            else if (Globals.interview_page == 69) {
                 IndependentInterview otherPage1p2 = new IndependentInterview();
                 otherPage1p2.InstanceRef68 = this;
                 otherPage1p2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 69) {
+            else if (Globals.interview_page == 70) {
                 IndependentInterview otherPage2 = new IndependentInterview();
                 otherPage2.InstanceRef69 = this;
                 otherPage2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 70) {
+            else if (Globals.interview_page == 71) {
                 IndependentInterview additionalNotes = new IndependentInterview();
                 additionalNotesPanel.BringToFront();
             }
@@ -1916,6 +1891,7 @@ namespace Login {
                 return;
             }
             Globals.interview_page--;
+
             if (Globals.interview_page == 1) {
                 this.Hide();
                 InstanceRef.Show();
@@ -1991,6 +1967,182 @@ namespace Login {
             } else if (Globals.interview_page == 25) {
                 this.Hide();
                 InstanceRef25.Show();
+            }
+            else if (Globals.interview_page == 26) {
+                this.Hide();
+                InstanceRef26.Show();
+            }
+            else if (Globals.interview_page == 27) {
+                this.Hide();
+                InstanceRef27.Show();
+            }
+            else if (Globals.interview_page == 28) {
+                this.Hide();
+                InstanceRef28.Show();
+            }
+            else if (Globals.interview_page == 29) {
+                this.Hide();
+                InstanceRef29.Show();
+            }
+            else if (Globals.interview_page == 30) {
+                this.Hide();
+                InstanceRef30.Show();
+            }
+            else if (Globals.interview_page == 31) {
+                this.Hide();
+                InstanceRef31.Show();
+            }
+            else if (Globals.interview_page == 32) {
+                this.Hide();
+                InstanceRef32.Show();
+            }
+            else if (Globals.interview_page == 33) {
+                this.Hide();
+                InstanceRef33.Show();
+            }
+            else if (Globals.interview_page == 34) {
+                this.Hide();
+                InstanceRef34.Show();
+            }
+            else if (Globals.interview_page == 35) {
+                this.Hide();
+                InstanceRef35.Show();
+            }
+            else if (Globals.interview_page == 36) {
+                this.Hide();
+                InstanceRef36.Show();
+            }
+            else if (Globals.interview_page == 37) {
+                this.Hide();
+                InstanceRef37.Show();
+            }
+            else if (Globals.interview_page == 38) {
+                this.Hide();
+                InstanceRef38.Show();
+            }
+            else if (Globals.interview_page == 39) {
+                this.Hide();
+                InstanceRef39.Show();
+            }
+            else if (Globals.interview_page == 40) {
+                this.Hide();
+                InstanceRef40.Show();
+            }
+            else if (Globals.interview_page == 41) {
+                this.Hide();
+                InstanceRef41.Show();
+            }
+            else if (Globals.interview_page == 42) {
+                this.Hide();
+                InstanceRef42.Show();
+            }
+            else if (Globals.interview_page == 43) {
+                this.Hide();
+                InstanceRef43.Show();
+            }
+            else if (Globals.interview_page == 44) {
+                this.Hide();
+                InstanceRef44.Show();
+            }
+            else if (Globals.interview_page == 45) {
+                this.Hide();
+                InstanceRef45.Show();
+            }
+            else if (Globals.interview_page == 46) {
+                this.Hide();
+                InstanceRef46.Show();
+            }
+            else if (Globals.interview_page == 47) {
+                this.Hide();
+                InstanceRef47.Show();
+            }
+            else if (Globals.interview_page == 48) {
+                this.Hide();
+                InstanceRef48.Show();
+            }
+            else if (Globals.interview_page == 49) {
+                this.Hide();
+                InstanceRef49.Show();
+            }
+            else if (Globals.interview_page == 50) {
+                this.Hide();
+                InstanceRef50.Show();
+            }
+            else if (Globals.interview_page == 51) {
+                this.Hide();
+                InstanceRef51.Show();
+            }
+            else if (Globals.interview_page == 52) {
+                this.Hide();
+                InstanceRef52.Show();
+            }
+            else if (Globals.interview_page == 53) {
+                this.Hide();
+                InstanceRef53.Show();
+            }
+            else if (Globals.interview_page == 54) {
+                this.Hide();
+                InstanceRef54.Show();
+            }
+            else if (Globals.interview_page == 55) {
+                this.Hide();
+                InstanceRef55.Show();
+            }
+            else if (Globals.interview_page == 56) {
+                this.Hide();
+                InstanceRef56.Show();
+            }
+            else if (Globals.interview_page == 57) {
+                this.Hide();
+                InstanceRef57.Show();
+            }
+            else if (Globals.interview_page == 58) {
+                this.Hide();
+                InstanceRef58.Show();
+            }
+            else if (Globals.interview_page == 59) {
+                this.Hide();
+                InstanceRef59.Show();
+            }
+            else if (Globals.interview_page == 60) {
+                this.Hide();
+                InstanceRef60.Show();
+            }
+            else if (Globals.interview_page == 61) {
+                this.Hide();
+                InstanceRef61.Show();
+            }
+            else if (Globals.interview_page == 62) {
+                this.Hide();
+                InstanceRef62.Show();
+            }
+            else if (Globals.interview_page == 63) {
+                this.Hide();
+                InstanceRef63.Show();
+            }
+            else if (Globals.interview_page == 64) {
+                this.Hide();
+                InstanceRef64.Show();
+            }
+            else if (Globals.interview_page == 65) {
+                this.Hide();
+                InstanceRef65.Show();
+            }
+            else if (Globals.interview_page == 66) {
+                this.Hide();
+                InstanceRef66.Show();
+            }
+            else if (Globals.interview_page == 67) {
+                this.Hide();
+                InstanceRef67.Show();
+            }
+            else if (Globals.interview_page == 68) {
+                this.Hide();
+                InstanceRef68.Show();
+            }
+            else if (Globals.interview_page == 69) {
+                this.Hide();
+                InstanceRef69.Show();
             }
         }
 
@@ -2452,25 +2604,6 @@ namespace Login {
         public Form InstanceRef69 {
             get { return m_InstanceRef69; }
             set { m_InstanceRef69 = value; }
-        }
-
-        private void button1_Click(object sender, EventArgs e) {
-            Globals.interview_page++;
-            this.Hide();
-            IndependentInterview interviewForm2 = new IndependentInterview();
-            interviewForm2.InstanceRef = this;
-            interviewForm2.Location = new Point(0, 0);
-            interviewForm2.Show();
-        }
-
-        private void bottomMidPB2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picturePanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

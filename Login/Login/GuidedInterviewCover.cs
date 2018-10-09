@@ -16,7 +16,7 @@ namespace Login {
         }
 
         private void button2_Click(object sender, EventArgs e) {
-            GuidedInterview guidedInt = new GuidedInterview();
+            GuidedInstructions guidedInt = new GuidedInstructions();
             guidedInt.Show();
             this.Close();
             

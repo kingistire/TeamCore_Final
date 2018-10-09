@@ -76,7 +76,7 @@ namespace Login {
                 cmd.Parameters.AddWithValue("@email", tbEmail.Text.Trim());
                 cmd.Parameters.AddWithValue("@dob", dateTimePicker1.Value);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("New user has been added successfully.");
+                MessageBox.Show(tbFname.Text.Trim() + " " + tbLname.Text.Trim() + " has been added successfully.");
                 this.Close();
                 con.Close();
             }

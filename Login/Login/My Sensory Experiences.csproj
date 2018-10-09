@@ -68,6 +68,12 @@
       <DependentUpon>CapstoneDB.xsd</DependentUpon>
     </Compile>
     <Compile Include="colDBResults.cs" />
+    <Compile Include="FamilyObservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FamilyObservations.Designer.cs">
+      <DependentUpon>FamilyObservations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Globals.cs" />
     <Compile Include="EditProfile.cs">
       <SubType>Form</SubType>
@@ -86,6 +92,30 @@
     </Compile>
     <Compile Include="DeleteUser.Designer.cs">
       <DependentUpon>DeleteUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuidedInstructions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuidedInstructions.Designer.cs">
+      <DependentUpon>GuidedInstructions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FamilyInterviewCover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FamilyInterviewCover.Designer.cs">
+      <DependentUpon>FamilyInterviewCover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FamilyInstructions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FamilyInstructions.Designer.cs">
+      <DependentUpon>FamilyInstructions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IndependentInstructions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IndependentInstructions.Designer.cs">
+      <DependentUpon>IndependentInstructions.cs</DependentUpon>
     </Compile>
     <Compile Include="IndependentInterview.cs">
       <SubType>Form</SubType>
@@ -190,6 +220,21 @@
     <EmbeddedResource Include="DeleteUser.resx">
       <DependentUpon>DeleteUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FamilyObservations.resx">
+      <DependentUpon>FamilyObservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuidedInstructions.resx">
+      <DependentUpon>GuidedInstructions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FamilyInterviewCover.resx">
+      <DependentUpon>FamilyInterviewCover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FamilyInstructions.resx">
+      <DependentUpon>FamilyInstructions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IndependentInstructions.resx">
+      <DependentUpon>IndependentInstructions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IndependentInterview.resx">
       <DependentUpon>IndependentInterview.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +270,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Summary.resx">
       <DependentUpon>Summary.cs</DependentUpon>
@@ -297,6 +343,13 @@
     <Content Include="resources\8. Other\Sights.jpg" />
     <Content Include="resources\8. Other\Smells.jpg" />
     <Content Include="resources\8. Other\Sounds.jpg" />
+    <None Include="resources\aLotaLittle.png" />
+    <None Include="resources\FamilyCoverImg.PNG" />
+    <Content Include="resources\TopLeftInterviewImage%28sense%29\movement.PNG" />
+    <Content Include="resources\TopLeftInterviewImage%28sense%29\sight.PNG" />
+    <Content Include="resources\TopLeftInterviewImage%28sense%29\smell.PNG" />
+    <Content Include="resources\TopLeftInterviewImage%28sense%29\taste.PNG" />
+    <Content Include="resources\TopLeftInterviewImage%28sense%29\touch.PNG" />
     <Content Include="resources\untitled.wav" />
   </ItemGroup>
   <ItemGroup>
