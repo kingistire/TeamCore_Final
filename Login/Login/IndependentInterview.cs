@@ -1395,6 +1395,7 @@ namespace Login {
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
                 cmdDatabase.ExecuteNonQuery();
+                conDatabase.Close();
             }catch(Exception ex) {
                 MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
             }
@@ -1484,7 +1485,7 @@ namespace Login {
                     +TRImageName + "=@tr, "
                     +BLImageName + "=@bl, "
                     +BMImageName + "=@bm, "
-                    +BRImageName + "=@br, WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.other);";
+                    +BRImageName + "=@br WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.other);";
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
@@ -1570,6 +1571,21 @@ namespace Login {
                 MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);
             }
         }
+
+        private void saveWrittenAnswerToDB(string tableName, string columnName, string comment) {
+            SqlCommand cmdDatabase;
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            //Determine if a little or a lot
+                conDatabase.Open();
+                cmdDatabase = new SqlCommand("UPDATE dislikeSounds SET" + columnName + "=@text WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM "+columnName+");", conDatabase);
+                //cmdDatabase = new SqlCommand("INSERT INTO dbo." + tableName + "(" + columnName + ") VALUES(@text);" , conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@text", comment);
+                cmdDatabase.ExecuteNonQuery();
+            
+        }
+        
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// BUTTON CLICKS FOR A LITT AND A LOT ////////////////////////////////////////////////////////
@@ -1778,6 +1794,9 @@ namespace Login {
             bottomRightPB2.BackColor = Color.AntiqueWhite;
         }
 
+        string textboxAnswer1;
+        string textboxAnswer2;
+
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// CHANGING INTERVIEW PAGE FUNCATIONALITY ////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1815,7 +1834,6 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 3) {
-                picInstruction.Visible = false;
                 updateDB("sirens", "suddenLoudNoises", "dislikeSounds");
                 IndependentInterview soundPage1p3 = new IndependentInterview();
                 soundPage1p3.InstanceRef3 = this;
@@ -1823,6 +1841,10 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 4) {
+                string textboxAnswer1 = tbAnswer1.Text;
+                string textboxAnswer2 = tbAnswer2.Text;
+                saveWrittenAnswerToDB("dislikeSounds", "comment1", textboxAnswer1);
+                saveWrittenAnswerToDB("dislikeSounds", "comment2", textboxAnswer2);
                 IndependentInterview soundPage2 = new IndependentInterview();
                 soundPage2.InstanceRef4 = this;
                 soundPage2.Location = new Point(0, 0);
@@ -1830,6 +1852,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 5) {
+                saveWrittenAnswerToDB("dislikeSounds", "comment3", tbAnswer1.Text.ToString());
                 IndependentInterview soundPage3 = new IndependentInterview();
                 soundPage3.InstanceRef5 = this;
                 soundPage3.Location = new Point(0, 0);
