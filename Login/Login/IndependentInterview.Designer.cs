@@ -255,7 +255,7 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "Next";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnNext1_Click_1);
             // 
             // btnPreviousInterview
             // 
@@ -1098,8 +1098,8 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1001, 793);
             this.Controls.Add(this.readOutLoudPanel);
-            this.Controls.Add(this.picturePanel);
             this.Controls.Add(this.questionPanel);
+            this.Controls.Add(this.picturePanel);
             this.Controls.Add(this.additionalNotesPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(2);

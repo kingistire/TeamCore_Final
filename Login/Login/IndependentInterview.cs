@@ -1572,20 +1572,27 @@ namespace Login {
             }
         }
 
+        //Copy to updateDB
         private void saveWrittenAnswerToDB(string tableName, string columnName, string comment) {
             SqlCommand cmdDatabase;
             const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                                     @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
             SqlConnection conDatabase = new SqlConnection(constring);
+            string query;
             //Determine if a little or a lot
+            try {
+                query = string.Format("UPDATE dbo.{0} SET " + columnName + " = @additionalCommentText WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.{0}) ;", tableName);
                 conDatabase.Open();
-                cmdDatabase = new SqlCommand("UPDATE dislikeSounds SET" + columnName + "=@text WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM "+columnName+");", conDatabase);
+                cmdDatabase = new SqlCommand(query, conDatabase);
                 //cmdDatabase = new SqlCommand("INSERT INTO dbo." + tableName + "(" + columnName + ") VALUES(@text);" , conDatabase);
-                cmdDatabase.Parameters.AddWithValue("@text", comment);
+                cmdDatabase.Parameters.AddWithValue("@additionalCommentText", comment);
                 cmdDatabase.ExecuteNonQuery();
+                conDatabase.Close();
+            } catch (Exception ex) {
+                MessageBox.Show("An error has occurred: " + ex.Message);
+            }
             
         }
-        
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// BUTTON CLICKS FOR A LITT AND A LOT ////////////////////////////////////////////////////////
@@ -1841,8 +1848,8 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 4) {
-                string textboxAnswer1 = tbAnswer1.Text;
-                string textboxAnswer2 = tbAnswer2.Text;
+                string textboxAnswer1 = this.tbAnswer1.Text;
+                string textboxAnswer2 = this.tbAnswer2.Text;
                 saveWrittenAnswerToDB("dislikeSounds", "comment1", textboxAnswer1);
                 saveWrittenAnswerToDB("dislikeSounds", "comment2", textboxAnswer2);
                 IndependentInterview soundPage2 = new IndependentInterview();
@@ -2854,7 +2861,7 @@ namespace Login {
         }
 
         private void button1_Click(object sender, EventArgs e) {
-            Globals.interview_page++;
+            Globals.interview_page += 1;
             this.Hide();
             IndependentInterview interviewForm2 = new IndependentInterview();
             interviewForm2.InstanceRef = this;

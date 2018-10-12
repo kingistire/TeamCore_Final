@@ -30,7 +30,26 @@ namespace Login {
             topic4ResultPanel.Visible = false;
             topic5ResultPanel.Visible = false;
         }
-        //TODO -> Store each sense into different table. Get results from topic table and store into array
+        
+        /// <summary>
+        /// Get the additional comments from the database
+        /// </summary>
+        private void getAdditionalCommentAnswer(string tableNameParam) {
+            string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            //Replace summary in string with variable for db table name
+            SqlCommand command = new SqlCommand("SELECT comment1, comment2, comment3 FROM " + tableNameParam + " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ");", conDatabase);
+            conDatabase.Open();
+            SqlDataReader dr = command.ExecuteReader();
+            List<string> list = new List<string>();
+            while (dr.Read()) {
+                //Iterate through loop and add to list
+                for (int i = 0; i < 3; i++) {
+                    list.Add(dr[i].ToString());
+                }
+            }
+        }
 
         /// <summary>
         /// Get data from data base and store into list
@@ -55,7 +74,7 @@ namespace Login {
                 @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
             SqlConnection conDatabase = new SqlConnection(constring);
             //Replace summary in string with variable for db table name
-            SqlCommand command = new SqlCommand("SELECT * FROM " + tableNameParam + " WHERE interviewNumber = (" + tableNameParam + ");", conDatabase);
+            SqlCommand command = new SqlCommand("SELECT * FROM " + tableNameParam + " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ");", conDatabase);
             conDatabase.Open();
             SqlDataReader dr = command.ExecuteReader();
             List<string> list = new List<string>();
