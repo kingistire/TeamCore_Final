@@ -68,6 +68,24 @@
       <DependentUpon>CapstoneDB.xsd</DependentUpon>
     </Compile>
     <Compile Include="colDBResults.cs" />
+    <Compile Include="FamilyInstructions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FamilyInstructions.Designer.cs">
+      <DependentUpon>FamilyInstructions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FamilyInterviewCover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FamilyInterviewCover.Designer.cs">
+      <DependentUpon>FamilyInterviewCover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FamilyObservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FamilyObservations.Designer.cs">
+      <DependentUpon>FamilyObservations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Globals.cs" />
     <Compile Include="EditProfile.cs">
       <SubType>Form</SubType>
@@ -86,6 +104,18 @@
     </Compile>
     <Compile Include="DeleteUser.Designer.cs">
       <DependentUpon>DeleteUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuidedInstructions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuidedInstructions.Designer.cs">
+      <DependentUpon>GuidedInstructions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IndependentInstructions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IndependentInstructions.Designer.cs">
+      <DependentUpon>IndependentInstructions.cs</DependentUpon>
     </Compile>
     <Compile Include="IndependentInterview.cs">
       <SubType>Form</SubType>
@@ -190,6 +220,21 @@
     <EmbeddedResource Include="DeleteUser.resx">
       <DependentUpon>DeleteUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FamilyInstructions.resx">
+      <DependentUpon>FamilyInstructions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FamilyInterviewCover.resx">
+      <DependentUpon>FamilyInterviewCover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FamilyObservations.resx">
+      <DependentUpon>FamilyObservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuidedInstructions.resx">
+      <DependentUpon>GuidedInstructions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IndependentInstructions.resx">
+      <DependentUpon>IndependentInstructions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IndependentInterview.resx">
       <DependentUpon>IndependentInterview.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +283,7 @@
     <EmbeddedResource Include="ViewResultsTable.resx">
       <DependentUpon>ViewResultsTable.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\Login.exe.config" />
     <None Include="CapstoneDB\CapstoneDB.xsc">
       <DependentUpon>CapstoneDB.xsd</DependentUpon>
     </None>
@@ -281,6 +327,17 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\AxInterop.WMPLib.dll" />
+    <Content Include="bin\Debug\CapstoneDB\CapstoneDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\CapstoneDB\CapstoneDB_log.ldf">
+      <DependentUpon>CapstoneDB.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\Interop.WMPLib.dll" />
+    <Content Include="bin\Debug\Login.exe" />
+    <Content Include="bin\Debug\Login.pdb" />
     <Content Include="CapstoneDB\CapstoneDB.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -438,7 +495,9 @@
     <Content Include="resources\8. Other\Sounds.jpg" />
     <Content Include="resources\untitled.wav" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
   <ItemGroup>
     <COMReference Include="AxWMPLib">
       <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
