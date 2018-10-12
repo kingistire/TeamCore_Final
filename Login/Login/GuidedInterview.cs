@@ -24,6 +24,7 @@ namespace Login {
             createCirclePB(topLeftPB);
             createCirclePB(topRightPB);
             createCirclePB(topMidPB);
+            Globals.independentInterview = false;
 
                    
             if (Globals.interview_page >= 2) {
@@ -823,9 +824,9 @@ namespace Login {
         private void interviewPage1() {
             lblQuestion.Text = "Are there some sounds that you don't like?";
             //topLeftPB.Image = new Bitmap(@"..\..\resources\");
-            topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\fireworks.jpg");
-            topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\loud_voices.PNG");
-            bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\household_ appliances.PNG");
+            //topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\fireworks.jpg");
+           // topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\loud_voices.PNG");
+           // bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\household_ appliances.PNG");
             // bottomMidPB.Image = new Bitmap(@"..\..\resources\");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\");
             updateLabelText("Other people talking", " Fireworks", "Loud voices",
@@ -835,7 +836,7 @@ namespace Login {
 
         private void interviewPage2() {
             lblQuestion.Text = "Are there times when it is hard for you to listen?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard for you to listen\pg2img1.PNG");
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard for you to listen\pg2img1.PNG");
             //topMidPB.Image = new Bitmap(@"");
             //topRightPB.Image = new Bitmap(@"");
             //bottomLeftPB.Image = new Bitmap(@"../../resources/");
@@ -851,9 +852,9 @@ namespace Login {
 
         private void interviewPage3() {
             lblQuestion.Text = "Are there some sounds that make it hard for you to concentrate?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\Radio on.jpg");
-            topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\clock ticking.PNG");
-            topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\people_talking.PNG");
+           // topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\Radio on.jpg");
+           // topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\clock ticking.PNG");
+           // topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\people_talking.PNG");
             //bottomLeftPB.Image = new Bitmap(@"../../resources/");
             //bottomMidPB.Image = new Bitmap(@"../../resources/");
             //bottomRightPB.Image = new Bitmap(@"../../resources/");

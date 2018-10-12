@@ -79,5 +79,38 @@ namespace Login
             profileManagementFunctionsClassObject.ExportProfileData(folderBrowserDialog1, toExport, thisProfileId);
             
         }
+
+        private void InterviewHistoryDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+            if (e.RowIndex >= 0 && e.ColumnIndex == 0){ // IF EDIT
+                Summary sum = new Summary();
+                sum.Show();
+            }
+        }
+
+        private void ProfilePage_Load(object sender, EventArgs e) {
+            string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase = new SqlCommand(" select * from dislikeSounds ;", conDatabase);
+            try {
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmdDatabase;
+                DataTable dbdataset = new DataTable();
+                //For each row, add row to data table
+
+
+                sda.Fill(dbdataset);
+                BindingSource bSource = new BindingSource();
+                bSource.DataSource = dbdataset;
+                InterviewHistoryDataGrid.DataSource = bSource;
+                sda.Update(dbdataset);
+                //need to write a for loop to iteratively set the column width for each column
+                //DataGridViewColumn column = dataGridView.Columns[0];
+                //column.Width = 60;
+            } catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

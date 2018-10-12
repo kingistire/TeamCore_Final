@@ -41,6 +41,8 @@
             this.exportProfileBtn = new System.Windows.Forms.Button();
             this.InterviewHistoryDataGrid = new System.Windows.Forms.DataGridView();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.selectInterview = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.interviewType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.InterviewHistoryDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -215,10 +217,28 @@
             // InterviewHistoryDataGrid
             // 
             this.InterviewHistoryDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.InterviewHistoryDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.selectInterview,
+            this.interviewType});
             this.InterviewHistoryDataGrid.Location = new System.Drawing.Point(188, 169);
             this.InterviewHistoryDataGrid.Name = "InterviewHistoryDataGrid";
             this.InterviewHistoryDataGrid.Size = new System.Drawing.Size(678, 218);
             this.InterviewHistoryDataGrid.TabIndex = 37;
+            this.InterviewHistoryDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.InterviewHistoryDataGrid_CellContentClick);
+            // 
+            // selectInterview
+            // 
+            this.selectInterview.HeaderText = "Select Interview";
+            this.selectInterview.Name = "selectInterview";
+            this.selectInterview.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.selectInterview.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.selectInterview.Text = "View Interview";
+            this.selectInterview.UseColumnTextForButtonValue = true;
+            // 
+            // interviewType
+            // 
+            this.interviewType.HeaderText = "Interview Type";
+            this.interviewType.Name = "interviewType";
             // 
             // ProfilePage
             // 
@@ -238,6 +258,7 @@
             this.Controls.Add(this.nameLabel);
             this.Name = "ProfilePage";
             this.Text = "ProfilePage";
+            this.Load += new System.EventHandler(this.ProfilePage_Load);
             this.Enter += new System.EventHandler(this.ProfilePage_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.InterviewHistoryDataGrid)).EndInit();
             this.ResumeLayout(false);
@@ -259,5 +280,7 @@
         private System.Windows.Forms.Button exportProfileBtn;
         private System.Windows.Forms.DataGridView InterviewHistoryDataGrid;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.DataGridViewButtonColumn selectInterview;
+        private System.Windows.Forms.DataGridViewTextBoxColumn interviewType;
     }
 }

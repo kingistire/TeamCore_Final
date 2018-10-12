@@ -47,6 +47,9 @@ namespace Login {
         /// <param name="labelResultName8">Label name of result to be displayed</param>
         private void getDBAnser(string tableNameParam, int totalImages, Label labelResultName1, Label labelResultName2, Label labelResultName3, Label labelResultName4, Label labelResultName5,
             Label labelResultName6, Label labelResultName7, Label labelResultName8) {
+
+            //Strings
+            //List<string> array = new List<string>();
             DataTable dt = new DataTable();
             string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                 @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
@@ -55,14 +58,14 @@ namespace Login {
             SqlCommand command = new SqlCommand("SELECT * FROM " + tableNameParam + ";", conDatabase);
             conDatabase.Open();
             SqlDataReader dr = command.ExecuteReader();
-            List<String> list = new List<string>();
+            List<string> list = new List<string>();
             while (dr.Read()) {
                 //Iterate through loop and add to list
                 for(int i = 0; i < totalImages; i++) {
                     list.Add(dr[i].ToString());
                 }
-                
             }
+
             //Update label text according to list index
             switch (totalImages) {
                 case 2:
@@ -375,7 +378,7 @@ string text3, string text4, string text5, string text6) {
             updateTopic2ResultLabel(3, "If I am concentrating on something, \n I don't notice people talking to me",
                 "I find it hard to listen to the teacher \n in noisy classrooms",
                 "I find it hard to listen to someone \n talking to me when I'm in a group", "", "", "", "", "");
-            updateTopic3ResultLabel(3, "Radio On", "Clock Ticking", "People Talking", "", "", "");
+                updateTopic3ResultLabel(3, "Radio On", "Clock Ticking", "People Talking", "", "", "");
             updateTopic5ResultLabel(4, "Humming or whistling to myself", "Tapping Feet", "Tapping Fingers", "Clicking Pen", "", "");
             updateTopic4ResultLabel(5, "Computer Sounds", "Live Music", "Fans", "Music Through My Phone", "Rhythsm", "");
 
@@ -444,53 +447,57 @@ string text3, string text4, string text5, string text6) {
         }
 
         private void button2_Click(object sender, EventArgs e) {
-            clearTable(resultsTable, 5);
-            clearTable(topic2Table, 3);
-            clearTable(topic3Table, 5);
-            hidePanels();
-            updateTopicLabel("Are there some things that you don't \n like to look at?",
-                "Are there some things you see that make it \n hard to concentrate?",
-                "Are there some things that you like \n to look at?",
-                "", "");
-            topic1ResultPanel.Visible = true;
-            topic2ResultPanel.Visible = true;
-            topic3ResultPanel.Visible = true;
-            updateTopic1ResultLabel(5, "Sunlight", "Fluorescent Light", "Light and Shadow", 
-                "Busy Patterns", "Classroom Light", "", "", "");
-            updateTopic2ResultLabel(3, "Lots of Things in a Messy Drawer", "People Running Around Me", "Lots of Things Hanging up in \n the classroom", "", "", "", "", "");
-            updateTopic3ResultLabel(5, "Moving Lights", "Things That Sparkle", "Geometric Patterns", "Spinning Fans", "Spinning Objects", "");
+            try {
+                clearTable(resultsTable, 5);
+                clearTable(topic2Table, 3);
+                clearTable(topic3Table, 5);
+                hidePanels();
+                updateTopicLabel("Are there some things that you don't \n like to look at?",
+                    "Are there some things you see that make it \n hard to concentrate?",
+                    "Are there some things that you like \n to look at?",
+                    "", "");
+                topic1ResultPanel.Visible = true;
+                topic2ResultPanel.Visible = true;
+                topic3ResultPanel.Visible = true;
+                updateTopic1ResultLabel(5, "Sunlight", "Fluorescent Light", "Light and Shadow", 
+                    "Busy Patterns", "Classroom Light", "", "", "");
+                updateTopic2ResultLabel(3, "Lots of Things in a Messy Drawer", "People Running Around Me", "Lots of Things Hanging up in \n the classroom", "", "", "", "", "");
+                updateTopic3ResultLabel(5, "Moving Lights", "Things That Sparkle", "Geometric Patterns", "Spinning Fans", "Spinning Objects", "");
 
-            getDBAnser("dontLikeToLookAt", 5, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, null, null, null);
-            getDBAnser("sightHardToConcentrate", 3, topic2Results1, topic2Results2, topic2Results3, null, null, null, null, null);
-            getDBAnser("likeToLookAt", 5, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, null, null, null);
+                getDBAnser("dontLikeToLookAt", 5, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, null, null, null);
+                getDBAnser("sightHardToConcentrate", 3, topic2Results1, topic2Results2, topic2Results3, null, null, null, null, null);
+                getDBAnser("likeToLookAt", 5, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, null, null, null);
 
-            //Re-Add labels
-            this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
-            this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
-            this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
-            this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
-            this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
-            this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
-            this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
-            this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
-            this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
-            this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
-            this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
-            this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
-            this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
-            this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
-            this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
-            this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
-            this.topic3Table.Controls.Add(this.topic3Image1, 0, 0);
-            this.topic3Table.Controls.Add(this.topic3Image2, 0, 1);
-            this.topic3Table.Controls.Add(this.topic3Image3, 0, 2);
-            this.topic3Table.Controls.Add(this.topic3Image4, 0, 3);
-            this.topic3Table.Controls.Add(this.topic3Image5, 0, 4);
-            this.topic3Table.Controls.Add(this.topic3Results1, 1, 0);
-            this.topic3Table.Controls.Add(this.topic3Results2, 1, 1);
-            this.topic3Table.Controls.Add(this.topic3Results3, 1, 2);
-            this.topic3Table.Controls.Add(this.topic3Results4, 1, 3);
-            this.topic3Table.Controls.Add(this.topic3Results5, 1, 4);
+                //Re-Add labels
+                this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
+                this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
+                this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
+                this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
+                this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
+                this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
+                this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
+                this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
+                this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
+                this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
+                this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
+                this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
+                this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
+                this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
+                this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
+                this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
+                this.topic3Table.Controls.Add(this.topic3Image1, 0, 0);
+                this.topic3Table.Controls.Add(this.topic3Image2, 0, 1);
+                this.topic3Table.Controls.Add(this.topic3Image3, 0, 2);
+                this.topic3Table.Controls.Add(this.topic3Image4, 0, 3);
+                this.topic3Table.Controls.Add(this.topic3Image5, 0, 4);
+                this.topic3Table.Controls.Add(this.topic3Results1, 1, 0);
+                this.topic3Table.Controls.Add(this.topic3Results2, 1, 1);
+                this.topic3Table.Controls.Add(this.topic3Results3, 1, 2);
+                this.topic3Table.Controls.Add(this.topic3Results4, 1, 3);
+                this.topic3Table.Controls.Add(this.topic3Results5, 1, 4);
+            } catch (Exception error) {
+                MessageBox.Show("An interview has not been completed!");
+            }
         }
         
         //This is for movement
