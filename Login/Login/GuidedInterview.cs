@@ -861,21 +861,12 @@ namespace Login {
         /// </summary>
         private void interviewPage1() {
             lblQuestion.Text = "Are there some sounds that you don't like?";
-<<<<<<< HEAD
-            //topLeftPB.Image = new Bitmap(@"..\..\resources\");
-            //topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\fireworks.jpg");
-           // topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\loud_voices.PNG");
-           // bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\household_ appliances.PNG");
-            // bottomMidPB.Image = new Bitmap(@"..\..\resources\");
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\");
-=======
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1 Other People Talking (cropped).png");
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\2 Fireworks.jpg");
             topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\3 Loud voices.PNG");
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\4 Household appliances (e.g., blenders, vacuum).png");
             bottomMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\5 Vehicles (e.g., trucks, motorbikes) (cropped).jpg");
             bottomRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\6 Bathroom appliances (e.g., hand dryers, hair dryers) (photoshopped).jpg");
->>>>>>> origin/AlmostDone
             updateLabelText("Other people talking", " Fireworks", "Loud voices",
                 "Household appliances (e.g. blenders, vacuum)", "Vehicles (e.g. trucks, motorbikes)",
                 "Bathroom appliances (e.g. hair dryers, hand dryers)");
@@ -894,21 +885,12 @@ namespace Login {
 
         private void interviewPage2() {
             lblQuestion.Text = "Are there times when it is hard for you to listen?";
-<<<<<<< HEAD
-            //topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard for you to listen\pg2img1.PNG");
-            //topMidPB.Image = new Bitmap(@"");
-            //topRightPB.Image = new Bitmap(@"");
-            //bottomLeftPB.Image = new Bitmap(@"../../resources/");
-            //bottomMidPB.Image = new Bitmap(@"../../resources/");
-            //bottomRightPB.Image = new Bitmap(@"../../resources/");
-=======
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1 If I am concentrating on something, I don't notice people talking to me.png");
             //topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\2 I find it hard to listen in noisy classrooms (self-report version).jpg"); need guided version
             topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\3 I find it hard to listen to someone talking to me when I'm in a group.jpg");
             //bottomLeftPB.Image = new Bitmap(@"..\..\resources\");
             //bottomMidPB.Image = new Bitmap(@"..\..\resources\");
             //bottomRightPB.Image = new Bitmap(@..\..\resources\");
->>>>>>> origin/AlmostDone
             updateLabelText("If I am concentrating on something, I don't notice people talking to me",
                 "I find it hard to listen to the teacher in noisy classrooms",
                 "I find it hard to listen to someone talking to me when I'm in a group",
@@ -919,15 +901,9 @@ namespace Login {
 
         private void interviewPage3() {
             lblQuestion.Text = "Are there some sounds that make it hard for you to concentrate?";
-<<<<<<< HEAD
-           // topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\Radio on.jpg");
-           // topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\clock ticking.PNG");
-           // topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\people_talking.PNG");
-=======
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1 Radio on.jpg");
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\2 Clock ticking.jpg");
             topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\3 People talking.png");
->>>>>>> origin/AlmostDone
             //bottomLeftPB.Image = new Bitmap(@"../../resources/");
             //bottomMidPB.Image = new Bitmap(@"../../resources/");
             //bottomRightPB.Image = new Bitmap(@"../../resources/");
