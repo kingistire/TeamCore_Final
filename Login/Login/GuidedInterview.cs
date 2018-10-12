@@ -380,7 +380,127 @@ namespace Login {
             }
         }
 
+        /// <summary>
+        /// Updates database if the question has more than 6 images, but max 8
+        /// </summary>
+        /// <param name="TLImageName"></param>
+        /// <param name="TMImageName"></param>
+        /// <param name="dbTableName"></param>
+        private void updateDB(string TLImageName, string TMImageName, string dbTableName) {
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase;
+            try {
+                conDatabase.Open();
+                string query = @"UPDATE dbo.dislikeSounds SET " + TLImageName + "=@tl, "
+                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.dislikeSounds);";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception ex) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
+            }
+        }
 
+        private void updateDBdontLikeFeelingOf(string TLImageName, string TMImageName, string dbTableName) {
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase;
+            try {
+                conDatabase.Open();
+                string query = @"UPDATE dbo.dontLikeFeelingOf SET " + TLImageName + "=@tl, "
+                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.dontLikeFeelingOf);";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception ex) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
+            }
+        }
+
+        private void updateDBpeopleTouchDontLike(string TLImageName, string TMImageName, string dbTableName) {
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase;
+            try {
+                conDatabase.Open();
+                string query = @"UPDATE dbo.peopleTouchDontLike SET " + TLImageName + "=@tl, "
+                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.peopleTouchDontLike);";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception ex) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
+            }
+        }
+
+        private void updateDBfoodGroupsDontLike(string TLImageName, string TMImageName, string dbTableName) {
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase;
+            try {
+                conDatabase.Open();
+                string query = @"UPDATE dbo.foodGroupsDontLike SET " + TLImageName + "=@tl, "
+                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.foodGroupsDontLike);";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception ex) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
+            }
+        }
+
+        private void updateDBtastesOrFeelsInMouthDontLike(string TLImageName, string TMImageName, string dbTableName) {
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase;
+            try {
+                conDatabase.Open();
+                string query = @"UPDATE dbo.tastesOrFeelsInMouthDontLike SET " + TLImageName + "=@tl, "
+                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.tastesOrFeelsInMouthDontLike);";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception ex) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
+            }
+        }
+
+        private void updateDBother(string TLImageName, string TMImageName, string TRImageName, string BLImageName, string BMImageName, string BRImageName, string dbTableName) {
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase;
+            try {
+                conDatabase.Open();
+                string query = @"UPDATE dbo.other SET " + TLImageName + "=@tl, "
+                    + TMImageName + "=@tm, "
+                    + TRImageName + "=@tr, "
+                    + BLImageName + "=@bl, "
+                    + BMImageName + "=@bm, "
+                    + BRImageName + "=@br, WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.other);";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
+                cmdDatabase.Parameters.AddWithValue("@bl", page1Selections[3]);
+                cmdDatabase.Parameters.AddWithValue("@bm", page1Selections[4]);
+                cmdDatabase.Parameters.AddWithValue("@br", page1Selections[5]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception ex) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
+            }
+        }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// BUTTON CLICKS FOR A LITT AND A LOT ////////////////////////////////////////////////////////
@@ -539,7 +659,7 @@ namespace Login {
             //SOUND SECTION
             //-------------
             else if (Globals.interview_page == 3) {
-                //writeToDBTop2(page1Selections, "sirens", "suddenLoudNoises");
+                updateDB( "sirens", "suddenLoudNoises", "dislikeSounds");
                 GuidedInterview interviewForm2p2 = new GuidedInterview();
                 interviewForm2p2.InstanceRef2 = this;
                 interviewForm2p2.Show();
@@ -608,7 +728,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 12) {
-                writeToDBTop2(page1Selections, "shoes", "splashingWater", "dontLikeFeelingOf");
+                updateDBdontLikeFeelingOf("shoes", "splashingWater", "dontLikeFeelingOf");
                 GuidedInterview touchInterview3 = new GuidedInterview();
                 touchInterview3.InstanceRef11 = this;
                 touchInterview3.Show();
@@ -625,7 +745,7 @@ namespace Login {
             //SMELL SECTION
             //-------------
             else if (Globals.interview_page == 14) {
-                writeToDBTop2(page1Selections, "doctorTouchingMe", "dentistTouchingMe", "peopleTouchDontLike");
+                updateDBpeopleTouchDontLike("doctorTouchingMe", "dentistTouchingMe", "peopleTouchDontLike");
                 GuidedInterview smellInterview1 = new GuidedInterview();
                 smellInterview1.InstanceRef13 = this;
                 smellInterview1.Show();
@@ -656,7 +776,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 18) {
-                writeToDBTop2(page1Selections, "bread", "pasta", "foodGroupsDontLike");
+                updateDBfoodGroupsDontLike("bread", "pasta", "foodGroupsDontLike");
                 GuidedInterview tasteInterview2 = new GuidedInterview();
                 tasteInterview2.InstanceRef17 = this;
                 tasteInterview2.Show();
@@ -670,7 +790,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 20) {
-
+                updateDBtastesOrFeelsInMouthDontLike("salty", "spicy", "tastesOrFeelsInMouthDontLike");
                 GuidedInterview tasteInterview4 = new GuidedInterview();
                 tasteInterview4.InstanceRef19 = this;
                 tasteInterview4.Show();
@@ -727,7 +847,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 27) {
-                writeToDB(page1Selections, "sounds", "smells", "sights", "tastes", "feelings", "movements", "other");
+                updateDBother("sounds", "smells", "sights", "tastes", "feelings", "movements", "other");
                 Summary sum = new Summary();
                 sum.Show();
             }
