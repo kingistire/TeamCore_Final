@@ -28,6 +28,10 @@ namespace Login {
                 IndependentCover newIndependentInt = new IndependentCover();
                 newIndependentInt.Show();
                 this.Hide();
+            } else if (radioFamily.Checked) {
+                FamilyInterviewCover famCover = new FamilyInterviewCover();
+                famCover.Show();
+                this.Hide();
             }
         }
 
