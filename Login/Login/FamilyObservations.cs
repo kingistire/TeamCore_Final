@@ -893,39 +893,32 @@ namespace Login {
         //change the first value in the array to 1, 'a lot' would be set to 2.
         //if they make no selection it remains as 0
         string[] page1Selections = new string[6] { "", "", "", "", "", "" };
-
-            /// <summary>
-            /// Insert to database if 6 images are there
-            /// </summary>
-            /// <param name="array"></param>
-            /// <param name="TLImageName"></param>
-            /// <param name="TMImageName"></param>
-            /// <param name="TRImageName"></param>
-            /// <param name="BLImageName"></param>
-            /// <param name="BMImageName"></param>
-            /// <param name="BRImageName"></param>
-        private void writeToDB(string[] array, string TLImageName, string TMImageName, string TRImageName, string BLImageName, string BMImageName, string BRImageName) {
+        /// <summary>
+        /// Insert to database if 6 images are there
+        /// </summary>
+        /// <param name="array"></param>
+        /// <param name="TLImageName"></param>
+        /// <param name="TMImageName"></param>
+        /// <param name="TRImageName"></param>
+        /// <param name="BLImageName"></param>
+        /// <param name="BMImageName"></param>
+        /// <param name="BRImageName"></param>
+        private void writeToDB(string TLImageName, string TMImageName, string TRImageName, string BLImageName, string BMImageName, string BRImageName, string tableDBName) {
 
             SqlCommand cmdDatabase;
             const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                                     @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
             SqlConnection conDatabase = new SqlConnection(constring);
-            string query;
             //Determine if a little or a lot
             try {
+                string query;
                 conDatabase.Open();
                 //Change interview_page to see if previous button has been clicked
-                if(Globals.interview_page == 1) {
-                    query = "INSERT INTO dbo.Summary (" + TLImageName + "," + TMImageName + "," +
-                         TRImageName + "," +
-                          BLImageName + "," +
-                           BMImageName + "," + BRImageName + ") VALUES (@tl, @tm, @tr, @bl, @bm, @br);";
-                } else {
-                    query = "UPDATE dbo.Summary set " + TLImageName + "=@tl," + TMImageName + "=@tm," +
-                        TRImageName + "=@tr," +
-                        BLImageName + "=@bl," +
-                        BMImageName + "=@bm," + BRImageName + "=@br;";
-                }
+                query = "INSERT INTO dbo." + tableDBName + "(" + TLImageName + "," + TMImageName + "," +
+                     TRImageName + "," +
+                      BLImageName + "," +
+                       BMImageName + "," + BRImageName + ") VALUES (@tl, @tm, @tr, @bl, @bm, @br);";
+
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
@@ -937,9 +930,10 @@ namespace Login {
             } catch (Exception err) {
                 MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);
             }
+
         }
 
-        private void writeToDBTop3(string[] array, string TLImageName, string TMImageName, string TRImageName) {
+        private void writeToDBTop3(string TLImageName, string TMImageName, string TRImageName, string dbTableName) {
 
             const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                         @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
@@ -949,7 +943,10 @@ namespace Login {
             //Determine if a little or a lot
             try {
                 conDatabase.Open();
-                string query = "UPDATE dbo.Summary SET " + TLImageName + "=@tl," + TMImageName +"=@tm," + TRImageName + "=@tr;";
+                string query = "INSERT INTO dbo." + dbTableName + "(" + TLImageName + "," + TMImageName + "," +
+                         TRImageName + ") VALUES (@tl, @tm, @tr);";
+
+                //"UPDATE dbo" + dbTableName + "SET " + TLImageName + "=@tl," + TMImageName +"=@tm," + TRImageName + "=@tr;";
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
@@ -960,7 +957,7 @@ namespace Login {
             }
         }
 
-        private void writeToDBTop2(string[] array, string TLImageName, string TMImageName) {
+        private void writeToDBTop2(string TLImageName, string TMImageName, string dbTableName) {
 
             const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                         @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
@@ -970,15 +967,140 @@ namespace Login {
             //Determine if a little or a lot
             try {
                 conDatabase.Open();
-                string query = "UPDATE dbo.Summary SET " + TLImageName + "=@tl," + TMImageName + "=@tm;";
+                string query = "INSERT INTO dbo." + dbTableName + "(" + TLImageName + "," + TMImageName + ") VALUES (@tl, @tm);";
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
                 cmdDatabase.ExecuteNonQuery();
             } catch (Exception err) {
                 MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);
+
             }
         }
+
+        /// <summary>
+        /// Updates database if the question has more than 6 images, but max 8
+        /// </summary>
+        /// <param name="TLImageName"></param>
+        /// <param name="TMImageName"></param>
+        /// <param name="dbTableName"></param>
+        private void updateDB(string TLImageName, string TMImageName, string dbTableName) {
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase;
+            try {
+                conDatabase.Open();
+                string query = @"UPDATE dbo.dislikeSounds SET " + TLImageName + "=@tl, "
+                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.dislikeSounds);";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception ex) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
+            }
+        }
+
+        private void updateDBdontLikeFeelingOf(string TLImageName, string TMImageName, string dbTableName) {
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase;
+            try {
+                conDatabase.Open();
+                string query = @"UPDATE dbo.dontLikeFeelingOf SET " + TLImageName + "=@tl, "
+                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.dontLikeFeelingOf);";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception ex) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
+            }
+        }
+
+        private void updateDBpeopleTouchDontLike(string TLImageName, string TMImageName, string dbTableName) {
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase;
+            try {
+                conDatabase.Open();
+                string query = @"UPDATE dbo.peopleTouchDontLike SET " + TLImageName + "=@tl, "
+                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.peopleTouchDontLike);";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception ex) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
+            }
+        }
+
+        private void updateDBfoodGroupsDontLike(string TLImageName, string TMImageName, string dbTableName) {
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase;
+            try {
+                conDatabase.Open();
+                string query = @"UPDATE dbo.foodGroupsDontLike SET " + TLImageName + "=@tl, "
+                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.foodGroupsDontLike);";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception ex) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
+            }
+        }
+
+        private void updateDBtastesOrFeelsInMouthDontLike(string TLImageName, string TMImageName, string dbTableName) {
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase;
+            try {
+                conDatabase.Open();
+                string query = @"UPDATE dbo.tastesOrFeelsInMouthDontLike SET " + TLImageName + "=@tl, "
+                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.tastesOrFeelsInMouthDontLike);";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception ex) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
+            }
+        }
+
+        private void updateDBother(string TLImageName, string TMImageName, string TRImageName, string BLImageName, string BMImageName, string BRImageName, string dbTableName) {
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase;
+            try {
+                conDatabase.Open();
+                string query = @"UPDATE dbo.other SET " + TLImageName + "=@tl, "
+                    + TMImageName + "=@tm, "
+                    + TRImageName + "=@tr, "
+                    + BLImageName + "=@bl, "
+                    + BMImageName + "=@bm, "
+                    + BRImageName + "=@br, WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.other);";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
+                cmdDatabase.Parameters.AddWithValue("@bl", page1Selections[3]);
+                cmdDatabase.Parameters.AddWithValue("@bm", page1Selections[4]);
+                cmdDatabase.Parameters.AddWithValue("@br", page1Selections[5]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception ex) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
+            }
+        }
+
+        // WHERE interviewNumber = (SELECT TOP 1 * FROM dbo.dislikeSounds ORDER BY interviewNumber DESC)
 
         /// <summary>
         /// Write to DB for 5 picture boxes
@@ -989,7 +1111,7 @@ namespace Login {
         /// <param name="TRImageName"></param>
         /// <param name="BLImageName"></param>
         /// <param name="BMImageName"></param>
-        private void writeToDB5(string[] array, string TLImageName, string TMImageName, string TRImageName, string BLImageName, string BMImageName) {
+        private void writeToDB5(string TLImageName, string TMImageName, string TRImageName, string BLImageName, string BMImageName, string dbTableName) {
 
             SqlCommand cmdDatabase;
             const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
@@ -999,8 +1121,11 @@ namespace Login {
             //Determine if a little or a lot
             try {
                 conDatabase.Open();
-                query = "UPDATE dbo.Summary SET " + TLImageName + "=@tl," + TMImageName + "=@tm," + TRImageName + "=@tr," + BLImageName + "=@bl," + BMImageName + "=@bm;";
-                
+                query = "INSERT INTO dbo." + dbTableName + "(" + TLImageName + "," + TMImageName + "," +
+                         TRImageName + "," +
+                          BLImageName + "," +
+                           BMImageName + ") VALUES (@tl, @tm, @tr, @bl, @bm);";
+
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
@@ -1023,7 +1148,7 @@ namespace Login {
         /// <param name="TRImageName"></param>
         /// <param name="BLImageName"></param>
         /// <param name="BMImageName"></param>
-        private void writeToDB4(string[] array, string TLImageName, string TMImageName, string TRImageName, string BLImageName) {
+        private void writeToDB4(string TLImageName, string TMImageName, string TRImageName, string BLImageName, string dbTableName) {
 
             SqlCommand cmdDatabase;
             const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
@@ -1033,7 +1158,9 @@ namespace Login {
             //Determine if a little or a lot
             try {
                 conDatabase.Open();
-                query = "UPDATE dbo.Summary SET " + TLImageName + "=@tl," + TMImageName + "=@tm," + TRImageName + "=@tr," + BLImageName + "=@bl;";
+                query = "INSERT INTO dbo." + dbTableName + "(" + TLImageName + "," + TMImageName + "," +
+                         TRImageName + "," +
+                          BLImageName + ") VALUES (@tl, @tm, @tr, @bl);";
 
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
@@ -1045,7 +1172,7 @@ namespace Login {
                 MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);
             }
         }
-        
+
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// BUTTON CLICKS FOR A LITT AND A LOT ////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1222,8 +1349,8 @@ namespace Login {
             //SOUND SECTION
             //-------------
             if (Globals.interview_page == 2) {
-                writeToDB(page1Selections, "otherPeopleTalking", "fireworks", "loudVoices",
-                                            "householdAppliances", "vehicles", "bathroomAppliances");
+                writeToDB("otherPeopleTalking", "fireworks", "loudVoices",
+                                            "householdAppliances", "vehicles", "bathroomAppliances", "dislikeSounds");
                 if (m_InstanceRef2 != null) {
                     InstanceRef2.Show();
                 }
@@ -1235,7 +1362,7 @@ namespace Login {
                 }
             }
             else if (Globals.interview_page == 3) {
-                //writeToDBTop3(page1Selections, "sirensOrAlarms", "suddenLoudNoises", "");
+                updateDB("sirens", "suddenLoudNoises", "dislikeSounds");
                 FamilyObservations soundPage1p2 = new FamilyObservations();
                 soundPage1p2.InstanceRef2 = this;
                 soundPage1p2.Show();
@@ -1248,7 +1375,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 5) {
-                writeToDBTop3(page1Selections, "concentrating", "hardToListenInClassroom", "hardToListenInGroup");
+                writeToDBTop3("concentrating", "hardToListenInClassroom", "hardToListenInGroup", "hardToListen");
                 FamilyObservations soundPage3 = new FamilyObservations();
                 soundPage3.InstanceRef4 = this;
                 soundPage3.Show();
@@ -1261,7 +1388,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 7) {
-                writeToDBTop3(page1Selections, "radioOn", "clockTicking", "peopleTalking");
+                writeToDBTop3("radioOn", "clockTicking", "peopleTalking", "hardToConcentrate");
                 FamilyObservations soundPage5 = new FamilyObservations();
                 soundPage5.InstanceRef6 = this;
                 soundPage5.Show();
@@ -1274,7 +1401,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 9) {
-                writeToDB5(page1Selections, "computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms");
+                writeToDB5("computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms", "likeSounds");
                 FamilyObservations soundPage7 = new FamilyObservations();
                 soundPage7.InstanceRef8 = this;
                 soundPage7.Show();
@@ -1287,7 +1414,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 11) {
-                writeToDB4(page1Selections, "hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen");
+                writeToDB4("hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen", "makeALotSounds");
                 FamilyObservations soundPage9 = new FamilyObservations();
                 soundPage9.InstanceRef10 = this;
                 soundPage9.Show();
@@ -1303,7 +1430,7 @@ namespace Login {
             //SIGHT SECTION
             //-------------
             else if (Globals.interview_page == 13) {
-                writeToDB5(page1Selections, "sunlight", "fluroescentLight", "lightAndShadow", "busyPatterns", "classroomLight");
+                writeToDB5("sunlight", "fluorescentLight", "lightAndShadow", "busyPatterns", "classroomLight", "dontLikeToLookAt");
                 FamilyObservations sightPage1 = new FamilyObservations();
                 sightPage1.InstanceRef12 = this;
                 sightPage1.Show();
@@ -1316,7 +1443,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 15) {
-                writeToDBTop3(page1Selections, "lotsOfThingsInMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom");
+                writeToDBTop3("lotsOfThingsInAMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom", "sightHardToConcentrate");
                 FamilyObservations sightPage3 = new FamilyObservations();
                 sightPage3.InstanceRef14 = this;
                 sightPage3.Show();
@@ -1329,7 +1456,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 17) {
-                writeToDB5(page1Selections, "movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects");
+                writeToDB5("movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects", "likeToLookAt");
                 FamilyObservations sightPage5 = new FamilyObservations();
                 sightPage5.InstanceRef16 = this;
                 sightPage5.Show();
@@ -1345,14 +1472,14 @@ namespace Login {
             //TOUCH SECTION
             //-------------
             else if (Globals.interview_page == 19) {
-                writeToDB(page1Selections, "sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes");
+                writeToDB("sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes", "dontLikeFeelingOf");
                 FamilyObservations touchPage1 = new FamilyObservations();
                 touchPage1.InstanceRef18 = this;
                 touchPage1.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 20) {
-                writeToDBTop2(page1Selections, "shoes", "splashingWater");
+                updateDBdontLikeFeelingOf("shoes", "splashingWater", "dontLikeFeelingOf");
                 FamilyObservations touchPage1p2 = new FamilyObservations();
                 touchPage1p2.InstanceRef19 = this;
                 touchPage1p2.Show();
@@ -1365,14 +1492,14 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 22) {
-                writeToDB(page1Selections, "beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut");
+                writeToDB("beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut", "peopleTouchDontLike");
                 FamilyObservations touchPage3 = new FamilyObservations();
                 touchPage3.InstanceRef21 = this;
                 touchPage3.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 23) {
-                writeToDBTop2(page1Selections, "doctorTouchingMe", "dentistTouchingMe");
+                updateDBpeopleTouchDontLike("doctorTouchingMe", "dentistTouchingMe", "peopleTouchDontLike");
                 FamilyObservations touchPage3p2 = new FamilyObservations();
                 touchPage3p2.InstanceRef21 = this;
                 touchPage3p2.Show();
@@ -1385,7 +1512,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 25) {
-                writeToDB(page1Selections, "soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow");
+                writeToDB("soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow", "likeTheFeelingOf");
                 FamilyObservations touchPage5 = new FamilyObservations();
                 touchPage5.InstanceRef24 = this;
                 touchPage5.Show();
@@ -1401,7 +1528,7 @@ namespace Login {
             //SMELL SECTION
             //-------------
             else if (Globals.interview_page == 27) {
-                writeToDB(page1Selections, "cookingSmells", "foodSmells", "cleaningProducts", "toiletSmells", "perfumes", "bodySmells");
+                writeToDB("cookingSmells", "foodSmells", "cleaningProducts", "toiletSmells", "perfumes", "bodySmells", "smellDontLike");
                 FamilyObservations smellPage1 = new FamilyObservations();
                 smellPage1.InstanceRef26 = this;
                 smellPage1.Show();
@@ -1414,7 +1541,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 29) {
-                writeToDB5(page1Selections, "smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople");
+                writeToDB5("smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople", "likeToSmell");
                 FamilyObservations smellPage3 = new FamilyObservations();
                 smellPage3.InstanceRef28 = this;
                 smellPage3.Show();
@@ -1430,14 +1557,14 @@ namespace Login {
             //TASTE SECTION
             //-------------
             else if (Globals.interview_page == 31) {
-                writeToDB(page1Selections, "vegetables", "fruit", "meat", "fish", "eggs", "dairy");
+                writeToDB("vegetables", "fruit", "meat", "fish", "eggs", "dairy", "foodGroupsDontLike");
                 FamilyObservations tastePage1 = new FamilyObservations();
                 tastePage1.InstanceRef30 = this;
                 tastePage1.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 32) {
-                writeToDBTop2(page1Selections, "bread", "pasta");
+                updateDBfoodGroupsDontLike("bread", "pasta", "foodGroupsDontLike");
                 FamilyObservations tastePage1p2 = new FamilyObservations();
                 tastePage1p2.InstanceRef31 = this;
                 tastePage1p2.Show();
@@ -1450,14 +1577,14 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 34) {
-                writeToDB(page1Selections, "lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour");
+                writeToDB("lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour", "tastesOrFeelsInMouthDontLike");
                 FamilyObservations tastePage3 = new FamilyObservations();
                 tastePage3.InstanceRef33 = this;
                 tastePage3.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 35) {
-                writeToDBTop2(page1Selections, "salty", "spicy");
+                updateDBtastesOrFeelsInMouthDontLike("salty", "spicy", "tastesOrFeelsInMouthDontLike");
                 FamilyObservations tastePage3p2 = new FamilyObservations();
                 tastePage3p2.InstanceRef34 = this;
                 tastePage3p2.Show();
@@ -1470,7 +1597,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 37) {
-                writeToDBTop2(page1Selections, "familiarFoods", "unfamiliarFoods");
+                writeToDBTop2("familiarFoods", "unfamiliarFoods", "foodReallyLikeToEat");
                 FamilyObservations tastePage5 = new FamilyObservations();
                 tastePage5.InstanceRef36 = this;
                 tastePage5.Show();
@@ -1483,7 +1610,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 39) {
-                writeToDBTop3(page1Selections, "shirt", "hair", "objects");
+                writeToDBTop3("shirt", "hair", "objects", "thingsPutInMouthALot");
                 FamilyObservations tastePage7 = new FamilyObservations();
                 tastePage7.InstanceRef38 = this;
                 tastePage7.Show();
@@ -1499,7 +1626,7 @@ namespace Login {
             //Movement SECTION
             //----------------
             else if (Globals.interview_page == 41) {
-                writeToDB5(page1Selections, "beingJumpedOnOrTackled", "movingWhenICantSeeWhereImGoing", "balancing", "beingUpsideDown", "climbingUpHigh");
+                writeToDB5("beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
                 this.Hide();
                 FamilyObservations mvmtPage1 = new FamilyObservations();
                 mvmtPage1.InstanceRef40 = this;
@@ -1512,7 +1639,7 @@ namespace Login {
                 mvmtPage2.Show();
             }
             else if (Globals.interview_page == 43) {
-                writeToDBTop2(page1Selections, "standingStill", "sittingStill");
+                writeToDBTop2("standingStill", "sittingStill", "hardToStayStill");
                 this.Hide();
                 FamilyObservations mvmtPage3 = new FamilyObservations();
                 mvmtPage3.InstanceRef42 = this; 
@@ -1525,7 +1652,7 @@ namespace Login {
                 mvmtPage4.Show();
             }
             else if (Globals.interview_page == 45) {
-                writeToDB5(page1Selections, "movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running");
+                writeToDB5("movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running", "movingThatYouLike");
                 FamilyObservations mvmtPage5 = new FamilyObservations();
                 mvmtPage5.InstanceRef44 = this;
                 mvmtPage5.Show();
@@ -1538,7 +1665,7 @@ namespace Login {
                 mvmtPage6.Show();
             }
             else if (Globals.interview_page == 47) {
-                writeToDB4(page1Selections, "rocking", "movingHands", "clapping", "pacing");
+                writeToDB4("rocking", "movingHands", "clapping", "pacing", "moveOverAndOverAgain");
                 FamilyObservations mvmtPage7 = new FamilyObservations();
                 mvmtPage7.InstanceRef46 = this;
                 mvmtPage7.Show();
@@ -1554,7 +1681,7 @@ namespace Login {
             //ENVIRONMENT SECTION
             //-------------------
             else if (Globals.interview_page == 49) {
-                writeToDB5(page1Selections, "supermarket", "party", "foodHall", "show", "shoppingMall");
+                writeToDB5("supermarket", "party", "foodHall", "show", "shoppingMall", "other");
                 FamilyObservations environmentPage1 = new FamilyObservations();
                 environmentPage1.InstanceRef48 = this;
                 environmentPage1.Show();
@@ -1570,7 +1697,7 @@ namespace Login {
             //OTHER SECTION
             //-------------
             else if (Globals.interview_page == 51) {
-                writeToDB(page1Selections, "sounds", "smells", "sights", "tastes", "feelings", "movements");
+                updateDBother("sounds", "smells", "sights", "tastes", "feelings", "movements", "other");
                 FamilyObservations otherPage1 = new FamilyObservations();
                 otherPage1.InstanceRef50 = this;
                 otherPage1.Show();

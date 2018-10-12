@@ -1816,7 +1816,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 3) {
                 picInstruction.Visible = false;
-                updateDB("sirens", "suddenLoudNoises", "dislikeSounds"); //FIX Adds new line instead of updating
+                updateDB("sirens", "suddenLoudNoises", "dislikeSounds");
                 IndependentInterview soundPage1p3 = new IndependentInterview();
                 soundPage1p3.InstanceRef3 = this;
                 soundPage1p3.Show();
