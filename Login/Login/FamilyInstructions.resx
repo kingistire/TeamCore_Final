@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>This program is designed to be completed by family members (e.g., parents or partners) of people with sensory challenges, or friends who know the person well.  
+
+The purpose of this questionnaire is to help gain a better understanding of the way your family member feels when s/he experiences different sensations, including sounds, sights, touch, smells, tastes, and body movements.  
+
+Think about your family member’s reactions to sounds, sights, touch, smells, tastes, and body movement sensations. Please record what you have observed when your family member reacts to these different sensations.
+
+On some pages, you will need to circle sensations that s/he does not like, such as things that bother or distract him/her. On other pages, you will need to circle sensations that s/he particularly likes. In order to circle sensations, a you will need to click on the sensation.
+
+When you circle a sensation, you can indicate that your family member reacts strongly to that sensation by heavily circling the item (i.e., clicking twice). A reminder of this instruction is provided on each page, and looks like this:</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>When you circle sensations, please give specific examples by making comments on the page. You can also give examples of other sensations that your family member reacts to, which have not been mentioned.
+
+There are open-ended questions on each double-page, which aim to gain a deeper understanding of your family member’s sensory experiences.</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        igAAAABJRU5ErkJggg==
+</value>
+  </data>
+</root>

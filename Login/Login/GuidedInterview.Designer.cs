@@ -57,8 +57,6 @@
             this.topLeftPBALittleBtn = new System.Windows.Forms.Button();
             this.topLeftPB2 = new System.Windows.Forms.PictureBox();
             this.lblTL = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -71,8 +69,6 @@
             this.tbAnswer1 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.lblQuestion1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -140,8 +136,6 @@
             this.panel1.Controls.Add(this.topLeftPBALittleBtn);
             this.panel1.Controls.Add(this.topLeftPB2);
             this.panel1.Controls.Add(this.lblTL);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label6);
@@ -152,8 +146,9 @@
             this.panel1.Controls.Add(this.picBackground);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.MinimumSize = new System.Drawing.Size(987, 854);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1001, 793);
+            this.panel1.Size = new System.Drawing.Size(988, 854);
             this.panel1.TabIndex = 0;
             // 
             // bottomRightPB
@@ -480,7 +475,7 @@
             // 
             // btnNext1
             // 
-            this.btnNext1.Location = new System.Drawing.Point(915, 427);
+            this.btnNext1.Location = new System.Drawing.Point(909, 430);
             this.btnNext1.MaximumSize = new System.Drawing.Size(175, 50);
             this.btnNext1.MinimumSize = new System.Drawing.Size(75, 23);
             this.btnNext1.Name = "btnNext1";
@@ -492,7 +487,7 @@
             // 
             // previousInterviewSlideBtn
             // 
-            this.previousInterviewSlideBtn.Location = new System.Drawing.Point(14, 433);
+            this.previousInterviewSlideBtn.Location = new System.Drawing.Point(10, 430);
             this.previousInterviewSlideBtn.MaximumSize = new System.Drawing.Size(175, 50);
             this.previousInterviewSlideBtn.MinimumSize = new System.Drawing.Size(75, 23);
             this.previousInterviewSlideBtn.Name = "previousInterviewSlideBtn";
@@ -553,30 +548,6 @@
             this.lblTL.TabIndex = 60;
             this.lblTL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(882, 110);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "A Lot";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(832, 110);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "A Little";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -619,11 +590,11 @@
             // 
             // picInstruction
             // 
-            this.picInstruction.Image = ((System.Drawing.Image)(resources.GetObject("picInstruction.Image")));
-            this.picInstruction.Location = new System.Drawing.Point(828, 16);
+            this.picInstruction.Image = global::Login.Properties.Resources.aLotaLittle;
+            this.picInstruction.Location = new System.Drawing.Point(812, 27);
             this.picInstruction.Margin = new System.Windows.Forms.Padding(2);
             this.picInstruction.Name = "picInstruction";
-            this.picInstruction.Size = new System.Drawing.Size(94, 92);
+            this.picInstruction.Size = new System.Drawing.Size(116, 92);
             this.picInstruction.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picInstruction.TabIndex = 24;
             this.picInstruction.TabStop = false;
@@ -644,7 +615,7 @@
             // picSense
             // 
             this.picSense.Image = ((System.Drawing.Image)(resources.GetObject("picSense.Image")));
-            this.picSense.Location = new System.Drawing.Point(65, 16);
+            this.picSense.Location = new System.Drawing.Point(65, 21);
             this.picSense.Margin = new System.Windows.Forms.Padding(2);
             this.picSense.Name = "picSense";
             this.picSense.Size = new System.Drawing.Size(94, 102);
@@ -668,8 +639,6 @@
             this.panel2.Controls.Add(this.tbAnswer1);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.lblQuestion1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label12);
@@ -683,7 +652,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1001, 793);
+            this.panel2.Size = new System.Drawing.Size(988, 800);
             this.panel2.TabIndex = 29;
             // 
             // tbAnswer1
@@ -721,30 +690,6 @@
             this.lblQuestion1.Text = "Is there anything that you noticed during the interview that you wanted to make a" +
     " note of? Your response will be saved alongside the interview summary.";
             this.lblQuestion1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(882, 110);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "A Lot";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(832, 110);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 13);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "A Little";
             // 
             // label9
             // 
@@ -797,11 +742,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(828, 16);
+            this.pictureBox1.Image = global::Login.Properties.Resources.aLotaLittle;
+            this.pictureBox1.Location = new System.Drawing.Point(812, 27);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(94, 92);
+            this.pictureBox1.Size = new System.Drawing.Size(116, 92);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
@@ -823,7 +768,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(65, 16);
+            this.pictureBox2.Location = new System.Drawing.Point(65, 21);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(94, 102);
@@ -851,18 +796,17 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "View Summary";
             this.button1.UseVisualStyleBackColor = true;
-            //this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // GuidedInterview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 793);
+            this.ClientSize = new System.Drawing.Size(988, 800);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(1009, 763);
+            this.MinimumSize = new System.Drawing.Size(1008, 843);
             this.Name = "GuidedInterview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Guided Interview";
@@ -901,11 +845,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;

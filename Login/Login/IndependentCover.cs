@@ -16,7 +16,7 @@ namespace Login {
         }
 
         private void button2_Click(object sender, EventArgs e) {
-            IndependentInterview independentInt = new IndependentInterview();
+            IndependentInstructions independentInt = new IndependentInstructions();
             independentInt.Show();
             this.Close();          
         }
