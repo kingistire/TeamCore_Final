@@ -1390,7 +1390,7 @@ namespace Login {
             try {
                 conDatabase.Open();
                 string query = @"UPDATE dbo.dislikeSounds SET " + TLImageName + "=@tl, " 
-                    + TMImageName + "=@tm;";
+                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.dislikeSounds);";
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
