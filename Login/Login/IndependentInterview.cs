@@ -1400,6 +1400,104 @@ namespace Login {
             }
         }
 
+        private void updateDBdontLikeFeelingOf(string TLImageName, string TMImageName, string dbTableName) {
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase;
+            try {
+                conDatabase.Open();
+                string query = @"UPDATE dbo.dontLikeFeelingOf SET " + TLImageName + "=@tl, "
+                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.dontLikeFeelingOf);";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception ex) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
+            }
+        }
+
+        private void updateDBpeopleTouchDontLike(string TLImageName, string TMImageName, string dbTableName) {
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase;
+            try {
+                conDatabase.Open();
+                string query = @"UPDATE dbo.peopleTouchDontLike SET " + TLImageName + "=@tl, "
+                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.peopleTouchDontLike);";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception ex) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
+            }
+        }
+
+        private void updateDBfoodGroupsDontLike(string TLImageName, string TMImageName, string dbTableName) {
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase;
+            try {
+                conDatabase.Open();
+                string query = @"UPDATE dbo.foodGroupsDontLike SET " + TLImageName + "=@tl, "
+                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.foodGroupsDontLike);";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception ex) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
+            }
+        }
+
+        private void updateDBtastesOrFeelsInMouthDontLike(string TLImageName, string TMImageName, string dbTableName) {
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase;
+            try {
+                conDatabase.Open();
+                string query = @"UPDATE dbo.tastesOrFeelsInMouthDontLike SET " + TLImageName + "=@tl, "
+                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.tastesOrFeelsInMouthDontLike);";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception ex) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
+            }
+        }
+
+        private void updateDBother(string TLImageName, string TMImageName, string TRImageName, string BLImageName, string BMImageName, string BRImageName, string dbTableName) {
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                        @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            SqlCommand cmdDatabase;
+            try {
+                conDatabase.Open();
+                string query = @"UPDATE dbo.other SET " + TLImageName + "=@tl, "
+                    + TMImageName + "=@tm, "
+                    +TRImageName + "=@tr, "
+                    +BLImageName + "=@bl, "
+                    +BMImageName + "=@bm, "
+                    +BRImageName + "=@br, WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.other);";
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
+                cmdDatabase.Parameters.AddWithValue("@bl", page1Selections[3]);
+                cmdDatabase.Parameters.AddWithValue("@bm", page1Selections[4]);
+                cmdDatabase.Parameters.AddWithValue("@br", page1Selections[5]);
+                cmdDatabase.ExecuteNonQuery();
+            } catch (Exception ex) {
+                MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
+            }
+        }
+
         // WHERE interviewNumber = (SELECT TOP 1 * FROM dbo.dislikeSounds ORDER BY interviewNumber DESC)
 
         /// <summary>
@@ -1546,8 +1644,6 @@ namespace Login {
             //picturePanel
             picBackground.BackColor = Color.SandyBrown;
             lblQuestion.BackColor = Color.SandyBrown;            
-            label3.BackColor = Color.SandyBrown;
-            label5.BackColor = Color.SandyBrown;
             picturePanel.BackColor = Color.Bisque;
             //questionPanel
             pictureBox3.BackColor = Color.SandyBrown;
@@ -1568,8 +1664,6 @@ namespace Login {
             //picturePanel
             picBackground.BackColor = Color.FromArgb(255, 255, 128);
             lblQuestion.BackColor = Color.FromArgb(255, 255, 128);
-            label3.BackColor = Color.FromArgb(255, 255, 128);
-            label5.BackColor = Color.FromArgb(255, 255, 128);
             picturePanel.BackColor = Color.LightYellow;
             //questionPanel
             pictureBox3.BackColor = Color.FromArgb(255, 255, 128);
@@ -1590,8 +1684,6 @@ namespace Login {
             //picturePanel
             picBackground.BackColor = Color.FromArgb(143, 188, 139);
             lblQuestion.BackColor = Color.FromArgb(143, 188, 139);
-            label3.BackColor = Color.FromArgb(143, 188, 139);
-            label5.BackColor = Color.FromArgb(143, 188, 139);
             picturePanel.BackColor = Color.Honeydew;
             //questionPanel
             pictureBox3.BackColor = Color.FromArgb(143, 188, 139);
@@ -1613,8 +1705,6 @@ namespace Login {
             //picturePanel
             picBackground.BackColor = tasteHeader;
             lblQuestion.BackColor = tasteHeader;
-            label3.BackColor = tasteHeader;
-            label5.BackColor = tasteHeader;
             picturePanel.BackColor = tasteBg;
             //questionPanel
             pictureBox3.BackColor = tasteHeader;
@@ -1634,8 +1724,6 @@ namespace Login {
             //picturePanel
             picBackground.BackColor = Color.PaleVioletRed;
             lblQuestion.BackColor = Color.PaleVioletRed;
-            label3.BackColor = Color.PaleVioletRed;
-            label5.BackColor = Color.PaleVioletRed;
             picturePanel.BackColor = Color.Pink;
             //questionPanel
             pictureBox3.BackColor = Color.PaleVioletRed;
@@ -1656,8 +1744,6 @@ namespace Login {
             //picturePanel
             picBackground.BackColor = Color.LightBlue;
             lblQuestion.BackColor = Color.LightBlue;
-            label3.BackColor = Color.LightBlue;
-            label5.BackColor = Color.LightBlue;
             picturePanel.BackColor = Color.AliceBlue;
             //questionPanel
             pictureBox3.BackColor = Color.LightBlue;
@@ -1677,8 +1763,6 @@ namespace Login {
             //picturePanel
             picBackground.BackColor = Color.Tan;
             lblQuestion.BackColor = Color.Tan;
-            label3.BackColor = Color.Tan;
-            label5.BackColor = Color.Tan;
             picturePanel.BackColor = Color.AntiqueWhite;
             //questionPanel
             pictureBox3.BackColor = Color.Tan;
@@ -1731,6 +1815,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 3) {
+                picInstruction.Visible = false;
                 updateDB("sirens", "suddenLoudNoises", "dislikeSounds"); //FIX Adds new line instead of updating
                 IndependentInterview soundPage1p3 = new IndependentInterview();
                 soundPage1p3.InstanceRef3 = this;
@@ -1886,7 +1971,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 26) {
-                writeToDBTop2( "shoes", "splashingWater", "dontLikeFeelingOf");
+                updateDBdontLikeFeelingOf( "shoes", "splashingWater", "dontLikeFeelingOf");
                 IndependentInterview touchPage1p3 = new IndependentInterview();
                 touchPage1p3.InstanceRef26 = this;
                 touchPage1p3.Show();
@@ -1912,7 +1997,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 30) {
-                writeToDBTop2("doctorTouchingMe", "dentistTouchingMe", "peopleTouchDontLike");
+                updateDBpeopleTouchDontLike("doctorTouchingMe", "dentistTouchingMe", "peopleTouchDontLike");
                 IndependentInterview touchPage3p3 = new IndependentInterview();
                 touchPage3p3.InstanceRef30 = this;
                 touchPage3p3.Show();
@@ -2001,7 +2086,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 43) {
-                writeToDBTop2("bread", "pasta", "foodGroupsDontLike");
+                updateDBfoodGroupsDontLike("bread", "pasta", "foodGroupsDontLike");
                 IndependentInterview tastePage1p3 = new IndependentInterview();
                 tastePage1p3.InstanceRef43 = this;
                 tastePage1p3.Show();
@@ -2021,7 +2106,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 46) {
-                writeToDBTop2("salty", "spicy", "tastesOrFeelsInMouthDontLike" );
+                updateDBtastesOrFeelsInMouthDontLike("salty", "spicy", "tastesOrFeelsInMouthDontLike" );
                 IndependentInterview tastePage2p3 = new IndependentInterview();
                 tastePage2p3.InstanceRef46 = this;
                 tastePage2p3.Show();
@@ -2170,7 +2255,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 68) {
-                writeToDB("sounds", "smells", "sights", "tastes", "feelings", "movements", "other");
+                updateDBother("sounds", "smells", "sights", "tastes", "feelings", "movements", "other");
                 IndependentInterview otherPage1p2 = new IndependentInterview();
                 otherPage1p2.InstanceRef68 = this;
                 otherPage1p2.Show();

@@ -72,8 +72,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.topLeftPB = new System.Windows.Forms.PictureBox();
             this.lblTM = new System.Windows.Forms.Label();
             this.topMidPB2 = new System.Windows.Forms.PictureBox();
@@ -205,7 +203,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(753, 16);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -477,7 +474,6 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(828, 16);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
@@ -644,11 +640,11 @@
             // 
             // picInstruction
             // 
-            this.picInstruction.Image = ((System.Drawing.Image)(resources.GetObject("picInstruction.Image")));
-            this.picInstruction.Location = new System.Drawing.Point(753, 16);
+            this.picInstruction.Image = global::Login.Properties.Resources.aLotaLittle;
+            this.picInstruction.Location = new System.Drawing.Point(739, 16);
             this.picInstruction.Margin = new System.Windows.Forms.Padding(2);
             this.picInstruction.Name = "picInstruction";
-            this.picInstruction.Size = new System.Drawing.Size(94, 92);
+            this.picInstruction.Size = new System.Drawing.Size(108, 92);
             this.picInstruction.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picInstruction.TabIndex = 24;
             this.picInstruction.TabStop = false;
@@ -692,30 +688,6 @@
             this.label10.Size = new System.Drawing.Size(19, 13);
             this.label10.TabIndex = 27;
             this.label10.Text = "Fill";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(757, 110);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "A Little";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(807, 110);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "A Lot";
             // 
             // topLeftPB
             // 
@@ -944,8 +916,6 @@
             this.picturePanel.Controls.Add(this.topMidPB2);
             this.picturePanel.Controls.Add(this.lblTM);
             this.picturePanel.Controls.Add(this.topLeftPB);
-            this.picturePanel.Controls.Add(this.label5);
-            this.picturePanel.Controls.Add(this.label3);
             this.picturePanel.Controls.Add(this.label10);
             this.picturePanel.Controls.Add(this.label8);
             this.picturePanel.Controls.Add(this.label6);
@@ -1218,8 +1188,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox topLeftPB;
         private System.Windows.Forms.Label lblTM;
         private System.Windows.Forms.PictureBox topMidPB2;

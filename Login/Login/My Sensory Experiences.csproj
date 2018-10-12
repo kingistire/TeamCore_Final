@@ -493,6 +493,13 @@
     <Content Include="resources\8. Other\Sights.jpg" />
     <Content Include="resources\8. Other\Smells.jpg" />
     <Content Include="resources\8. Other\Sounds.jpg" />
+    <Content Include="resources\aLotaLittle.png" />
+    <Content Include="resources\FamilyCoverImg.PNG" />
+    <Content Include="resources\TopLeftInterviewImage%28sense%29\movement.PNG" />
+    <Content Include="resources\TopLeftInterviewImage%28sense%29\sight.PNG" />
+    <Content Include="resources\TopLeftInterviewImage%28sense%29\smell.PNG" />
+    <Content Include="resources\TopLeftInterviewImage%28sense%29\taste.PNG" />
+    <Content Include="resources\TopLeftInterviewImage%28sense%29\touch.PNG" />
     <Content Include="resources\untitled.wav" />
   </ItemGroup>
   <ItemGroup>

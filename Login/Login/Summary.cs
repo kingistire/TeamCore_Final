@@ -55,7 +55,7 @@ namespace Login {
                 @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
             SqlConnection conDatabase = new SqlConnection(constring);
             //Replace summary in string with variable for db table name
-            SqlCommand command = new SqlCommand("SELECT * FROM " + tableNameParam + ";", conDatabase);
+            SqlCommand command = new SqlCommand("SELECT * FROM " + tableNameParam + " WHERE interviewNumber = (" + tableNameParam + ");", conDatabase);
             conDatabase.Open();
             SqlDataReader dr = command.ExecuteReader();
             List<string> list = new List<string>();
