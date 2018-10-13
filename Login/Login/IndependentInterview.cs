@@ -1874,6 +1874,7 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 7) {
+                saveWrittenAnswerToDB("hardToListen", "comment3", tbAnswer1.Text.ToString());
                 IndependentInterview soundPage4 = new IndependentInterview();
                 soundPage4.InstanceRef7 = this;
                 soundPage4.Show();
