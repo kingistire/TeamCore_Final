@@ -40,7 +40,6 @@ namespace Login {
             InitializeComponent();          
             this.Location = new Point(0, 0);
             btnPreviousInterview.Click += previousInterviewSlideBtn_Click;
-            button1.Click += btnNext1_Click_1;
             //Dynamically create the circular picture boxes
             createCirclePB(bottomLeftPB);
             createCirclePB(bottomLeftPB2);
@@ -3044,15 +3043,6 @@ namespace Login {
         public Form InstanceRef69 {
             get { return m_InstanceRef69; }
             set { m_InstanceRef69 = value; }
-        }
-
-        private void button1_Click(object sender, EventArgs e) {
-            Globals.interview_page += 1;
-            this.Hide();
-            IndependentInterview interviewForm2 = new IndependentInterview();
-            interviewForm2.InstanceRef = this;
-            interviewForm2.Location = new Point(0, 0);
-            interviewForm2.Show();
         }
 
         private void bottomMidPB2_Click(object sender, EventArgs e)
