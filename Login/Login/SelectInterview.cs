@@ -22,6 +22,7 @@ namespace Login {
 
         private void btnStart_Click(object sender, EventArgs e) {
             //InterviewType
+            Globals.interview_page = 1;
             string InterviewType="0";
             if (radioGuided.Checked == true) {
                 InterviewType = "1";
@@ -59,7 +60,7 @@ namespace Login {
                 MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);
             }
 
-            /*if (radioGuided.Checked == true) {
+            if (radioGuided.Checked == true) {
                 GuidedInterviewCover newGuidedInt = new GuidedInterviewCover();
                 newGuidedInt.Show();
                 this.Hide();
@@ -73,7 +74,7 @@ namespace Login {
                 FamilyInterviewCover famCover = new FamilyInterviewCover();
                 famCover.Show();
                 this.Hide();
-            }*/
+            }
         }
 
         private void SelectInterview_Load(object sender, EventArgs e) {
