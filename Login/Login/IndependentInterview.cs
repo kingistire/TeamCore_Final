@@ -1857,7 +1857,9 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 7) {
-                saveWrittenAnswerToDB("hardToListen", "comment3", tbAnswer1.Text.ToString());
+
+                saveWrittenAnswerToDB("hardToListen", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("hardToListen", "comment2", tbAnswer1.Text.ToString());
                 IndependentInterview soundPage4 = new IndependentInterview();
                 soundPage4.InstanceRef6 = this;
                 soundPage4.Show();
@@ -1871,12 +1873,16 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 9) {
+                saveWrittenAnswerToDB("hardToConcentrate", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("hardToConcentrate", "comment2", tbAnswer1.Text.ToString());
                 IndependentInterview soundPage5and6 = new IndependentInterview();
                 soundPage5and6.InstanceRef8 = this;
                 soundPage5and6.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 10) {
+                saveWrittenAnswerToDB("hardToConcentrate", "comment3", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("hardToConcentrate", "comment4", tbAnswer1.Text.ToString());
                 IndependentInterview soundPage7 = new IndependentInterview();
                 soundPage7.InstanceRef9 = this;
                 soundPage7.Show();
@@ -1890,12 +1896,15 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 12) {
+                saveWrittenAnswerToDB("likeSounds", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("likeSounds", "comment2", tbAnswer1.Text.ToString());
                 IndependentInterview soundPage8 = new IndependentInterview();
                 soundPage8.InstanceRef11 = this;
                 soundPage8.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 13) {
+                saveWrittenAnswerToDB("likeSounds", "comment3", tbAnswer1.Text.ToString());
                 IndependentInterview soundPage9 = new IndependentInterview();
                 soundPage9.InstanceRef12 = this;
                 soundPage9.Show();
@@ -1909,6 +1918,8 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 15) {
+                saveWrittenAnswerToDB("makeALotSounds", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("makeALotSounds", "comment2", tbAnswer1.Text.ToString());
                 IndependentInterview soundPage10 = new IndependentInterview();
                 soundPage10.InstanceRef14 = this;
                 soundPage10.Show();
@@ -1918,6 +1929,8 @@ namespace Login {
             //SIGHT SECTION
             //-------------
             else if (Globals.interview_page == 16) {
+                saveWrittenAnswerToDB("makeALotSounds", "comment3", tbAnswer1.Text.ToString());
+
                 IndependentInterview sightPage1 = new IndependentInterview();
                 sightPage1.InstanceRef15 = this;
                 sightPage1.Show();
@@ -1931,12 +1944,15 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 18) {
+                saveWrittenAnswerToDB("dontLikeToLookAt", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("dontLikeToLookAt", "comment2", tbAnswer1.Text.ToString());
                 IndependentInterview sightPage2 = new IndependentInterview();
                 sightPage2.InstanceRef17 = this;
                 sightPage2.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 19) {
+                saveWrittenAnswerToDB("dontLikeToLookAt", "comment3", tbAnswer1.Text.ToString());
                 IndependentInterview sightPage3 = new IndependentInterview();
                 sightPage3.InstanceRef18 = this;
                 sightPage3.Show();
@@ -1950,6 +1966,8 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 21) {
+                saveWrittenAnswerToDB("sightHardToConcentrate", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("sightHardToConcentrate", "comment2", tbAnswer1.Text.ToString());
                 IndependentInterview sightPage4 = new IndependentInterview();
                 sightPage4.InstanceRef20 = this;
                 sightPage4.Show();
@@ -1963,6 +1981,8 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 23) {
+                saveWrittenAnswerToDB("likeToLookAt", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("likeToLookAt", "comment2", tbAnswer1.Text.ToString());
                 IndependentInterview sightPage5 = new IndependentInterview();
                 sightPage5.InstanceRef22 = this;
                 sightPage5.Show();
@@ -1972,6 +1992,7 @@ namespace Login {
             //TOUCH SECTION
             //-------------
             else if (Globals.interview_page == 24) {
+                saveWrittenAnswerToDB("likeToLookAt", "comment3", tbAnswer1.Text.ToString());
                 IndependentInterview touchPage1 = new IndependentInterview();
                 touchPage1.InstanceRef23 = this;
                 touchPage1.Show();
@@ -1992,12 +2013,17 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 27) {
+                saveWrittenAnswerToDB("dontLikeFeelingOf", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("dontLikeFeelingOf", "comment2", tbAnswer1.Text.ToString());
                 IndependentInterview touchPage2 = new IndependentInterview();
                 touchPage2.InstanceRef26 = this;
                 touchPage2.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 28) {
+
+                saveWrittenAnswerToDB("dontLikeFeelingOf", "comment3", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("dontLikeFeelingOf", "comment4", tbAnswer1.Text.ToString());
                 IndependentInterview touchPage3 = new IndependentInterview();
                 touchPage3.InstanceRef27 = this;
                 touchPage3.Show();
@@ -2018,12 +2044,16 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 31) {
+                saveWrittenAnswerToDB("peopleTouchDontLike", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("peopleTouchDontLike", "comment2", tbAnswer1.Text.ToString());
                 IndependentInterview touchPage4 = new IndependentInterview();
                 touchPage4.InstanceRef30 = this;
                 touchPage4.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 32) {
+                saveWrittenAnswerToDB("peopleTouchDontLike", "comment3", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("peopleTouchDontLike", "comment4", tbAnswer1.Text.ToString());
                 IndependentInterview touchPage5 = new IndependentInterview();
                 touchPage5.InstanceRef31 = this;
                 touchPage5.Show();
@@ -2037,6 +2067,8 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 34) {
+                saveWrittenAnswerToDB("likeTheFeelingOf", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("likeTheFeelingOf", "comment2", tbAnswer1.Text.ToString());
                 IndependentInterview touchPage6 = new IndependentInterview();
                 touchPage6.InstanceRef33 = this;
                 touchPage6.Show();
@@ -2046,6 +2078,7 @@ namespace Login {
             //SMELL SECTION
             //-------------
             else if (Globals.interview_page == 35) {
+                saveWrittenAnswerToDB("likeTheFeelingOf", "comment3", tbAnswer1.Text.ToString());
                 IndependentInterview smellPage1 = new IndependentInterview();
                 smellPage1.InstanceRef34 = this;
                 smellPage1.Show();
@@ -2059,12 +2092,15 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 37) {
+                saveWrittenAnswerToDB("smellDontLike", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("smellDontLike", "comment2", tbAnswer1.Text.ToString());
                 IndependentInterview smellPage2 = new IndependentInterview();
                 smellPage2.InstanceRef36 = this;
                 smellPage2.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 38) {
+                saveWrittenAnswerToDB("smellDontLike", "comment3", tbAnswer1.Text.ToString());
                 IndependentInterview smellPage3 = new IndependentInterview();
                 smellPage3.InstanceRef37 = this;
                 smellPage3.Show();
@@ -2078,6 +2114,8 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 40) {
+                saveWrittenAnswerToDB("likeToSmell", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("likeToSmell", "comment2", tbAnswer1.Text.ToString());
                 IndependentInterview smellPage4 = new IndependentInterview();
                 smellPage4.InstanceRef39 = this;
                 smellPage4.Show();
@@ -2087,6 +2125,7 @@ namespace Login {
             //TASTE SECTION
             //-------------
             else if (Globals.interview_page == 41) {
+                saveWrittenAnswerToDB("likeToSmell", "comment3", tbAnswer1.Text.ToString());
                 IndependentInterview tastePage1 = new IndependentInterview();
                 tastePage1.InstanceRef40 = this;
                 tastePage1.Show();
@@ -2107,6 +2146,9 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 44) {
+                saveWrittenAnswerToDB("foodGroupsDontLike", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("foodGroupsDontLike", "comment2", tbAnswer1.Text.ToString());
+
                 IndependentInterview tastePage2 = new IndependentInterview();
                 tastePage2.InstanceRef43 = this;
                 tastePage2.Show();
@@ -2127,12 +2169,15 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 47) {
+                saveWrittenAnswerToDB("tastesOrFeelsInMouthDontLike", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("tastesOrFeelsInMouthDontLike", "comment2", tbAnswer1.Text.ToString());
                 IndependentInterview tastePage3 = new IndependentInterview();
                 tastePage3.InstanceRef46 = this;
                 tastePage3.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 48) {
+                saveWrittenAnswerToDB("tastesOrFeelsInMouthDontLike", "comment3", tbAnswer1.Text.ToString());
                 IndependentInterview tastePage4 = new IndependentInterview();
                 tastePage4.InstanceRef47 = this;
                 tastePage4.Show();
@@ -2146,12 +2191,15 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 50) {
+                saveWrittenAnswerToDB("foodReallyLikeToEat", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("foodReallyLikeToEat", "comment2", tbAnswer1.Text.ToString());
                 IndependentInterview tastePage5 = new IndependentInterview();
                 tastePage5.InstanceRef49 = this;
                 tastePage5.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 51) {
+                saveWrittenAnswerToDB("foodReallyLikeToEat", "comment3", tbAnswer1.Text.ToString());
                 IndependentInterview tastePage6 = new IndependentInterview();
                 tastePage6.InstanceRef50 = this;
                 tastePage6.Show();
@@ -2165,6 +2213,8 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 53) {
+                saveWrittenAnswerToDB("thingsPutInMouthALot", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("thingsPutInMouthALot", "comment2", tbAnswer1.Text.ToString());
                 IndependentInterview tastePage7 = new IndependentInterview();
                 tastePage7.InstanceRef52 = this;
                 tastePage7.Show();
@@ -2174,6 +2224,7 @@ namespace Login {
             //Movement SECTION
             //----------------
             else if (Globals.interview_page == 54) {
+                saveWrittenAnswerToDB("thingsPutInMouthALot", "comment3", tbAnswer1.Text.ToString());
                 this.Hide();
                 IndependentInterview mvmtPage1 = new IndependentInterview();
                 mvmtPage1.InstanceRef53 = this;
@@ -2187,12 +2238,17 @@ namespace Login {
                 mvmtPage1p2.Show();
             }
             else if (Globals.interview_page == 56) {
+                saveWrittenAnswerToDB("movingDontLike", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("movingDontLike", "comment2", tbAnswer1.Text.ToString());
                 this.Hide();
                 IndependentInterview mvmtPage2 = new IndependentInterview();
                 mvmtPage2.InstanceRef55 = this;
                 mvmtPage2.Show();
             }
             else if (Globals.interview_page == 57) {
+
+                saveWrittenAnswerToDB("movingDontLike", "comment3", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("movingDontLike", "comment4", tbAnswer1.Text.ToString());
                 this.Hide();
                 IndependentInterview mvmtPage3 = new IndependentInterview();
                 mvmtPage3.InstanceRef56 = this;
@@ -2206,6 +2262,8 @@ namespace Login {
                 mvmtPage3p2.Show();
             }
             else if (Globals.interview_page == 59) {
+
+                saveWrittenAnswerToDB("hardToStayStill", "comment1", tbAnswer1.Text.ToString());
                 IndependentInterview mvmtPage4 = new IndependentInterview();
                 mvmtPage4.InstanceRef58 = this;
                 mvmtPage4.Show();
@@ -2219,6 +2277,8 @@ namespace Login {
                 mvmtPage4p2.Show();
             }
             else if (Globals.interview_page == 61) {
+                saveWrittenAnswerToDB("movingThatYouLike", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("movingThatYouLike", "comment2", tbAnswer1.Text.ToString());
                 IndependentInterview mvmtPage5 = new IndependentInterview();
                 mvmtPage5.InstanceRef60 = this;
                 mvmtPage5.Show();
@@ -2232,6 +2292,8 @@ namespace Login {
                 mvmtPage5p2.Show();
             }
             else if (Globals.interview_page == 63) {
+                saveWrittenAnswerToDB("moveOverAndOverAgain", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("moveOverAndOverAgain", "comment2", tbAnswer1.Text.ToString());
                 this.Hide();
                 IndependentInterview mvmtPage6 = new IndependentInterview();
                 mvmtPage6.InstanceRef62 = this;
@@ -2241,6 +2303,8 @@ namespace Login {
             //ENVIRONMENT SECTION
             //-------------------
             else if (Globals.interview_page == 64) {
+                saveWrittenAnswerToDB("moveOverAndOverAgain", "comment3", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("moveOverAndOverAgain", "comment4", tbAnswer1.Text.ToString());
                 IndependentInterview environmentPage1 = new IndependentInterview();
                 environmentPage1.InstanceRef63 = this;
                 environmentPage1.Show();
@@ -2254,6 +2318,8 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 66) {
+                saveWrittenAnswerToDB("other", "comment1", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("other", "comment2", tbAnswer1.Text.ToString());
                 IndependentInterview environmentPage2 = new IndependentInterview();
                 environmentPage2.InstanceRef65 = this;
                 environmentPage2.Show();
@@ -2263,6 +2329,8 @@ namespace Login {
             //OTHER SECTION
             //-------------
             else if (Globals.interview_page == 67) {
+                saveWrittenAnswerToDB("other", "comment3", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("other", "comment4", tbAnswer1.Text.ToString());
                 IndependentInterview otherPage1 = new IndependentInterview();
                 otherPage1.InstanceRef66 = this;
                 otherPage1.Show();
@@ -2276,18 +2344,23 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 69) {
+                saveWrittenAnswerToDB("other", "comment5", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("other", "comment6", tbAnswer1.Text.ToString());
                 IndependentInterview otherPage2 = new IndependentInterview();
                 otherPage2.InstanceRef68 = this;
                 otherPage2.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 70) {
+                saveWrittenAnswerToDB("other", "comment7", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("other", "comment8", tbAnswer1.Text.ToString());
                 IndependentInterview additionalNotes = new IndependentInterview();
                 additionalNotesPanel.BringToFront();
             }
         }
 
         private void button2_Click(object sender, EventArgs e) {
+            saveWrittenAnswerToDB("otComments", "OTComments", tbAnswer1.Text.ToString());
             Summary sum = new Summary();
             sum.Show();
         }
