@@ -30,6 +30,16 @@ namespace Login {
             topic4ResultPanel.Visible = false;
             topic5ResultPanel.Visible = false;
         }
+
+        private void shortResponseButton() {
+            if (Globals.shortResponse) {
+                changeSummaryPanelType.Visible = true;
+                changeSummaryPanelType.Enabled = true;
+            } else {
+                changeSummaryPanelType.Visible = false;
+                changeSummaryPanelType.Enabled = false;
+            }
+        }
         
         /// <summary>
         /// Get the additional comments from the database
@@ -742,79 +752,108 @@ string text3, string text4, string text5, string text6) {
         }
 
         private void tasteBtn_Click(object sender, EventArgs e) {
-            clearTable(resultsTable, 8);
-            clearTable(topic2Table, 8);
-            clearTable(topic3Table, 2);
-            clearTable(topic4Table, 3);
-            updateTopicLabel("Are there some food groups that you don't like eating?",
+            if (!displayShortResponse) {
+                clearTable(resultsTable, 8);
+                clearTable(topic2Table, 8);
+                clearTable(topic3Table, 2);
+                clearTable(topic4Table, 3);
+                updateTopicLabel("Are there some food groups that you don't like eating?",
+                    "Are there some ways that food tastes or feels \n in your mouth that you don't like?",
+                    "Are there some things you really like to eat?",
+                    "Are there some things that you put in \n your mouth a lot?",
+                    "");
+                updateTopic1ResultLabel(8, "Vegetables", "Fruit", "Meat", "Fish", "Eggs",
+                    "Dairy", "Bread", "Pasta");
+                updateTopic2ResultLabel(8, "Lumpy", "Chewy", "Runny/Slippery", "Mixed", "Sweet", "Sour", "Salty", "Spicy");
+                updateTopic3ResultLabel(2, "Familiar Foods, only a few types of foods \n i.e. I Don't Like Trying New Foods",
+                    "Unfamiliar Foods, lots of different types of foods \n i.e. I Like Trying New Foods", "", "", "", "");
+                updateTopic4ResultLabel(3, "Shirt", "Hair", "Objects", "", "", "");
+
+                getDBAnser("foodGroupsDontLike", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
+                getDBAnser("tastesOrFeelsInMouthDontLike", 8, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, topic2Results7, topic2Results8);
+                getDBAnser("foodReallyLikeToEat", 2, topic3Results1, topic3Results2, null, null, null, null, null, null);
+                getDBAnser("thingsPutInMouthALot", 3, topic4Results1, topic4Results2, topic4Results3, null, null, null, null, null);
+
+                hidePanels();
+                topic1ResultPanel.Visible = true;
+                topic2ResultPanel.Visible = true;
+                topic3ResultPanel.Visible = true;
+                topic4ResultPanel.Visible = true;
+
+                //Re-Add the labels
+                this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
+                this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
+                this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
+                this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
+                this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
+                this.resultsTable.Controls.Add(this.topic1Image6, 0, 5);
+                this.resultsTable.Controls.Add(this.topic1Image7, 0, 6);
+                this.resultsTable.Controls.Add(this.topic1Image8, 0, 7);
+                this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
+                this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
+                this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
+                this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
+                this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
+                this.resultsTable.Controls.Add(this.topic1Results6, 1, 5);
+                this.resultsTable.Controls.Add(this.topic1Results7, 1, 6);
+                this.resultsTable.Controls.Add(this.topic1Results8, 1, 7);
+
+                this.topic2Table.Controls.Add(this.topic2Results8, 1, 7);
+                this.topic2Table.Controls.Add(this.topic2Image8, 0, 7);
+                this.topic2Table.Controls.Add(this.topic2Results7, 1, 6);
+                this.topic2Table.Controls.Add(this.topic2Image7, 0, 6);
+                this.topic2Table.Controls.Add(this.topic2Results6, 1, 5);
+                this.topic2Table.Controls.Add(this.topic2Image6, 0, 5);
+                this.topic2Table.Controls.Add(this.topic2Results5, 1, 4);
+                this.topic2Table.Controls.Add(this.topic2Results4, 1, 3);
+                this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
+                this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
+                this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
+                this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
+                this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
+                this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
+                this.topic2Table.Controls.Add(this.topic2Image4, 0, 3);
+                this.topic2Table.Controls.Add(this.topic2Image5, 0, 4);
+
+                this.topic3Table.Controls.Add(this.topic3Image1, 0, 0);
+                this.topic3Table.Controls.Add(this.topic3Image2, 0, 1);
+                this.topic3Table.Controls.Add(this.topic3Results1, 1, 0);
+                this.topic3Table.Controls.Add(this.topic3Results2, 1, 1);
+
+                this.topic4Table.Controls.Add(this.topic4Image1, 0, 0);
+                this.topic4Table.Controls.Add(this.topic4Image2, 0, 1);
+                this.topic4Table.Controls.Add(this.topic4Image3, 0, 2);
+                this.topic4Table.Controls.Add(this.topic4Results1, 1, 0);
+                this.topic4Table.Controls.Add(this.topic4Results2, 1, 1);
+                this.topic4Table.Controls.Add(this.topic4Results3, 1, 2);
+            } else {
+                clearTable(resultsTable, 8);
+                clearTable(topic2Table, 8);
+                clearTable(topic3Table, 2);
+                clearTable(topic4Table, 3);
+                updateTopicLabel("Are there some food groups that you don't like eating?",
                 "Are there some ways that food tastes or feels \n in your mouth that you don't like?",
                 "Are there some things you really like to eat?",
                 "Are there some things that you put in \n your mouth a lot?",
                 "");
-            updateTopic1ResultLabel(8, "Vegetables", "Fruit", "Meat", "Fish", "Eggs",
-                "Dairy", "Bread", "Pasta");
-            updateTopic2ResultLabel(8, "Lumpy", "Chewy", "Runny/Slippery", "Mixed", "Sweet", "Sour", "Salty", "Spicy");
-            updateTopic3ResultLabel(2, "Familiar Foods, only a few types of foods \n i.e. I Don't Like Trying New Foods",
-                "Unfamiliar Foods, lots of different types of foods \n i.e. I Like Trying New Foods", "", "", "", "");
-            updateTopic4ResultLabel(3, "Shirt", "Hair", "Objects", "", "", "");
+                updateTopic1ResultLabel(8, "Vegetables", "Fruit", "Meat", "Fish", "Eggs",
+                    "Dairy", "Bread", "Pasta");
+                updateTopic2ResultLabel(8, "Lumpy", "Chewy", "Runny/Slippery", "Mixed", "Sweet", "Sour", "Salty", "Spicy");
+                updateTopic3ResultLabel(2, "Familiar Foods, only a few types of foods \n i.e. I Don't Like Trying New Foods",
+                    "Unfamiliar Foods, lots of different types of foods \n i.e. I Like Trying New Foods", "", "", "", "");
+                updateTopic4ResultLabel(3, "Shirt", "Hair", "Objects", "", "", "");
+            }
+        }
 
-            getDBAnser("foodGroupsDontLike", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
-            getDBAnser("tastesOrFeelsInMouthDontLike", 8, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, topic2Results7, topic2Results8);
-            getDBAnser("foodReallyLikeToEat", 2, topic3Results1, topic3Results2, null, null, null, null, null, null);
-            getDBAnser("thingsPutInMouthALot", 3, topic4Results1, topic4Results2, topic4Results3, null, null, null, null, null);
+        private void Summary_Load(object sender, EventArgs e) {
+            shortResponseButton();
+        }
 
+        bool displayShortResponse = false;
+
+        private void changeSummaryPanelType_Click(object sender, EventArgs e) {
             hidePanels();
-            topic1ResultPanel.Visible = true;
-            topic2ResultPanel.Visible = true;
-            topic3ResultPanel.Visible = true;
-            topic4ResultPanel.Visible = true;
-
-            //Re-Add the labels
-            this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
-            this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
-            this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
-            this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
-            this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
-            this.resultsTable.Controls.Add(this.topic1Image6, 0, 5);
-            this.resultsTable.Controls.Add(this.topic1Image7, 0, 6);
-            this.resultsTable.Controls.Add(this.topic1Image8, 0, 7);
-            this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
-            this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
-            this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
-            this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
-            this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
-            this.resultsTable.Controls.Add(this.topic1Results6, 1, 5);
-            this.resultsTable.Controls.Add(this.topic1Results7, 1, 6);
-            this.resultsTable.Controls.Add(this.topic1Results8, 1, 7);
-
-            this.topic2Table.Controls.Add(this.topic2Results8, 1, 7);
-            this.topic2Table.Controls.Add(this.topic2Image8, 0, 7);
-            this.topic2Table.Controls.Add(this.topic2Results7, 1, 6);
-            this.topic2Table.Controls.Add(this.topic2Image7, 0, 6);
-            this.topic2Table.Controls.Add(this.topic2Results6, 1, 5);
-            this.topic2Table.Controls.Add(this.topic2Image6, 0, 5);
-            this.topic2Table.Controls.Add(this.topic2Results5, 1, 4);
-            this.topic2Table.Controls.Add(this.topic2Results4, 1, 3);
-            this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
-            this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
-            this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
-            this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
-            this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
-            this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
-            this.topic2Table.Controls.Add(this.topic2Image4, 0, 3);
-            this.topic2Table.Controls.Add(this.topic2Image5, 0, 4);
-
-            this.topic3Table.Controls.Add(this.topic3Image1, 0, 0);
-            this.topic3Table.Controls.Add(this.topic3Image2, 0, 1);
-            this.topic3Table.Controls.Add(this.topic3Results1, 1, 0);
-            this.topic3Table.Controls.Add(this.topic3Results2, 1, 1);
-
-            this.topic4Table.Controls.Add(this.topic4Image1, 0, 0);
-            this.topic4Table.Controls.Add(this.topic4Image2, 0, 1);
-            this.topic4Table.Controls.Add(this.topic4Image3, 0, 2);
-            this.topic4Table.Controls.Add(this.topic4Results1, 1, 0);
-            this.topic4Table.Controls.Add(this.topic4Results2, 1, 1);
-            this.topic4Table.Controls.Add(this.topic4Results3, 1, 2);
+            displayShortResponse = true;
         }
     }
 }

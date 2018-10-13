@@ -14,6 +14,7 @@ using System.Data.SqlClient;
 namespace Login {
     public partial class GuidedInterview : Form {
         public GuidedInterview() {
+
             InitializeComponent();
             this.Hide();
             panel1.BringToFront();
@@ -24,7 +25,7 @@ namespace Login {
             createCirclePB(topLeftPB);
             createCirclePB(topRightPB);
             createCirclePB(topMidPB);
-            Globals.independentInterview = false;
+            Globals.shortResponse = false;
 
             if (Globals.interview_page >= 2) {
                 previousInterviewSlideBtn.Visible = true;
@@ -1498,5 +1499,39 @@ namespace Login {
             get { return m_InstanceRef25; }
             set { m_InstanceRef25 = value; }
         }
+
+        private void button1_Click(object sender, EventArgs e) {
+            saveWrittenAnswerToDB(tbAnswer1.Text.ToString());
+            Summary sum = new Summary();
+            sum.Show();
+        }
+
+        /// <summary>
+        /// Saves OT Comments to Database
+        /// </summary>
+        /// <param name="tableName"></param>
+        /// <param name="columnName"></param>
+        /// <param name="comment"></param>
+        private void saveWrittenAnswerToDB(string comment) {
+            SqlCommand cmdDatabase;
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            string query;
+            //Determine if a little or a lot
+            try {
+                query = query = "INSERT INTO dbo.otComments (OTComments) VALUES (@additionalCommentText);";
+                conDatabase.Open();
+                cmdDatabase = new SqlCommand(query, conDatabase);
+                //cmdDatabase = new SqlCommand("INSERT INTO dbo." + tableName + "(" + columnName + ") VALUES(@text);" , conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@additionalCommentText", comment);
+                cmdDatabase.ExecuteNonQuery();
+                conDatabase.Close();
+            } catch (Exception ex) {
+                MessageBox.Show("An error has occurred: " + ex.Message);
+            }
+
+        }
+
     }
 }
