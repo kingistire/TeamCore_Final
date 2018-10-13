@@ -37,7 +37,8 @@ namespace Login {
 
         public IndependentInterview() {
             
-            InitializeComponent();          
+            InitializeComponent();
+            Globals.shortResponse = true;
             this.Location = new Point(0, 0);
             btnPreviousInterview.Click += previousInterviewSlideBtn_Click;
             //Dynamically create the circular picture boxes

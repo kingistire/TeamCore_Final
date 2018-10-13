@@ -14,6 +14,7 @@ using System.Data.SqlClient;
 namespace Login {
     public partial class GuidedInterview : Form {
         public GuidedInterview() {
+
             InitializeComponent();
             this.Hide();
             panel1.BringToFront();
@@ -24,7 +25,7 @@ namespace Login {
             createCirclePB(topLeftPB);
             createCirclePB(topRightPB);
             createCirclePB(topMidPB);
-            Globals.independentInterview = false;
+            Globals.shortResponse = false;
 
             if (Globals.interview_page >= 2) {
                 previousInterviewSlideBtn.Visible = true;

@@ -25,6 +25,7 @@ namespace Login {
         private string bottomrightReadOutLoudPath;
 
         public FamilyObservations() {
+            Globals.shortResponse = true;
             InitializeComponent();
             picturePanel.BringToFront();
             btnPreviousInterview.Click += previousInterviewSlideBtn_Click;
@@ -1353,80 +1354,69 @@ namespace Login {
                                             "householdAppliances", "vehicles", "bathroomAppliances", "dislikeSounds");
                 if (m_InstanceRef2 != null) {
                     InstanceRef2.Show();
-                }
-                else {
+                } else {
                     this.Hide();
                     FamilyObservations soundPage1 = new FamilyObservations();
                     soundPage1.InstanceRef = this;
                     soundPage1.Show();
                 }
-            }
-            else if (Globals.interview_page == 3) {
+            } else if (Globals.interview_page == 3) {
                 updateDB("sirens", "suddenLoudNoises", "dislikeSounds");
                 FamilyObservations soundPage1p2 = new FamilyObservations();
                 soundPage1p2.InstanceRef2 = this;
                 soundPage1p2.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 4) {
+            } else if (Globals.interview_page == 4) {
                 saveWrittenAnswerToDB("dislikeSounds", "comment1", tbAnswer1.Text.ToString());
                 saveWrittenAnswerToDB("dislikeSounds", "comment2", tbAnswer2.Text.ToString());
                 FamilyObservations soundPage2 = new FamilyObservations();
                 soundPage2.InstanceRef3 = this;
                 soundPage2.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 5) {
+            } else if (Globals.interview_page == 5) {
                 writeToDBTop3("concentrating", "hardToListenInClassroom", "hardToListenInGroup", "hardToListen");
                 FamilyObservations soundPage3 = new FamilyObservations();
                 soundPage3.InstanceRef4 = this;
                 soundPage3.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 6) {
+            } else if (Globals.interview_page == 6) {
                 saveWrittenAnswerToDB("hardToListen", "comment1", tbAnswer1.Text.ToString());
                 FamilyObservations soundPage4 = new FamilyObservations();
                 soundPage4.InstanceRef5 = this;
                 soundPage4.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 7) {
+            } else if (Globals.interview_page == 7) {
                 writeToDBTop3("radioOn", "clockTicking", "peopleTalking", "hardToConcentrate");
                 FamilyObservations soundPage5 = new FamilyObservations();
                 soundPage5.InstanceRef6 = this;
                 soundPage5.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 8) {
+            } else if (Globals.interview_page == 8) {
                 saveWrittenAnswerToDB("hardToConcentrate", "comment1", tbAnswer1.Text.ToString());
                 saveWrittenAnswerToDB("hardToConcentrate", "comment2", tbAnswer2.Text.ToString());
                 FamilyObservations soundPage6 = new FamilyObservations();
                 soundPage6.InstanceRef7 = this;
                 soundPage6.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 9) {
+            } else if (Globals.interview_page == 9) {
                 writeToDB5("computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms", "likeSounds");
                 FamilyObservations soundPage7 = new FamilyObservations();
                 soundPage7.InstanceRef8 = this;
                 soundPage7.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 10) {
+            } else if (Globals.interview_page == 10) {
                 saveWrittenAnswerToDB("likeSounds", "comment1", tbAnswer1.Text.ToString());
                 FamilyObservations soundPage8 = new FamilyObservations();
                 soundPage8.InstanceRef9 = this;
                 soundPage8.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 11) {
+            } else if (Globals.interview_page == 11) {
                 writeToDB4("hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen", "makeALotSounds");
                 FamilyObservations soundPage9 = new FamilyObservations();
                 soundPage9.InstanceRef10 = this;
                 soundPage9.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 12) {
+            } else if (Globals.interview_page == 12) {
                 saveWrittenAnswerToDB("makeALotSounds", "comment1", tbAnswer1.Text.ToString());
                 saveWrittenAnswerToDB("makeALotSounds", "comment2", tbAnswer2.Text.ToString());
                 FamilyObservations soundPage10 = new FamilyObservations();
@@ -1434,46 +1424,41 @@ namespace Login {
                 soundPage10.Show();
                 this.Hide();
             }
-            //-------------
-            //SIGHT SECTION
-            //-------------
-            else if (Globals.interview_page == 13) {
+              //-------------
+              //SIGHT SECTION
+              //-------------
+              else if (Globals.interview_page == 13) {
                 writeToDB5("sunlight", "fluorescentLight", "lightAndShadow", "busyPatterns", "classroomLight", "dontLikeToLookAt");
                 FamilyObservations sightPage1 = new FamilyObservations();
                 sightPage1.InstanceRef12 = this;
                 sightPage1.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 14) {
+            } else if (Globals.interview_page == 14) {
                 saveWrittenAnswerToDB("dontLikeToLookAt", "comment1", tbAnswer1.Text.ToString());
                 saveWrittenAnswerToDB("dontLikeToLookAt", "comment2", tbAnswer2.Text.ToString());
                 FamilyObservations sightPage2 = new FamilyObservations();
                 sightPage2.InstanceRef13 = this;
                 sightPage2.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 15) {
+            } else if (Globals.interview_page == 15) {
                 writeToDBTop3("lotsOfThingsInAMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom", "sightHardToConcentrate");
                 FamilyObservations sightPage3 = new FamilyObservations();
                 sightPage3.InstanceRef14 = this;
                 sightPage3.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 16) {
+            } else if (Globals.interview_page == 16) {
                 saveWrittenAnswerToDB("sightHardToConcentrate", "comment1", tbAnswer1.Text.ToString());
                 FamilyObservations sightPage4 = new FamilyObservations();
                 sightPage4.InstanceRef15 = this;
                 sightPage4.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 17) {
+            } else if (Globals.interview_page == 17) {
                 writeToDB5("movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects", "likeToLookAt");
                 FamilyObservations sightPage5 = new FamilyObservations();
                 sightPage5.InstanceRef16 = this;
                 sightPage5.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 18) {
+            } else if (Globals.interview_page == 18) {
                 saveWrittenAnswerToDB("likeToLookAt", "comment1", tbAnswer1.Text.ToString());
 
                 FamilyObservations sightPage6 = new FamilyObservations();
@@ -1481,46 +1466,47 @@ namespace Login {
                 sightPage6.Show();
                 this.Hide();
             }
-            //-------------
-            //TOUCH SECTION
-            //-------------
-            else if (Globals.interview_page == 19) {
+              //-------------
+              //TOUCH SECTION
+              //-------------
+              else if (Globals.interview_page == 19) {
                 writeToDB("sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes", "dontLikeFeelingOf");
                 FamilyObservations touchPage1 = new FamilyObservations();
                 touchPage1.InstanceRef18 = this;
                 touchPage1.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 20) {
+            } else if (Globals.interview_page == 20) {
                 updateDBdontLikeFeelingOf("shoes", "splashingWater", "dontLikeFeelingOf");
                 FamilyObservations touchPage1p2 = new FamilyObservations();
                 touchPage1p2.InstanceRef19 = this;
                 touchPage1p2.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 21) {
+            } else if (Globals.interview_page == 21) {
                 saveWrittenAnswerToDB("dontLikeToLookAt", "comment1", tbAnswer1.Text.ToString());
                 saveWrittenAnswerToDB("dontLikeToLookAt", "comment2", tbAnswer2.Text.ToString());
                 FamilyObservations touchPage2 = new FamilyObservations();
                 touchPage2.InstanceRef20 = this;
                 touchPage2.Show();
                 this.Hide();
-            } //Add missing question here
+            } /*else if (Globals.interview_page == 22) {
+                FamilyObservations touchPageQuestion3 = new FamilyObservations();
+                touchPageQuestion3.InstanceRef21 = this;
+                touchPageQuestion3.Show();
+                this.Hide();
+            } *///Add missing question here
             else if (Globals.interview_page == 22) {
                 writeToDB("beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut", "peopleTouchDontLike");
                 FamilyObservations touchPage3 = new FamilyObservations();
                 touchPage3.InstanceRef21 = this;
                 touchPage3.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 23) {
+            } else if (Globals.interview_page == 23) {
                 updateDBpeopleTouchDontLike("doctorTouchingMe", "dentistTouchingMe", "peopleTouchDontLike");
                 FamilyObservations touchPage3p2 = new FamilyObservations();
                 touchPage3p2.InstanceRef21 = this;
                 touchPage3p2.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 24) {
+            } else if (Globals.interview_page == 24) {
                 saveWrittenAnswerToDB("peopleTouchDontLike", "comment1", tbAnswer1.Text.ToString());
                 saveWrittenAnswerToDB("peopleTouchDontLike", "comment2", tbAnswer2.Text.ToString());
                 FamilyObservations touchPage4 = new FamilyObservations();
@@ -1528,14 +1514,13 @@ namespace Login {
                 touchPage4.Show();
                 this.Hide();
             } //Add missing question here
-            else if (Globals.interview_page == 25) {
+              else if (Globals.interview_page == 25) {
                 writeToDB("soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow", "likeTheFeelingOf");
                 FamilyObservations touchPage5 = new FamilyObservations();
                 touchPage5.InstanceRef24 = this;
                 touchPage5.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 26) {
+            } else if (Globals.interview_page == 26) {
                 saveWrittenAnswerToDB("likeTheFeelingOf", "comment1", tbAnswer1.Text.ToString());
 
                 FamilyObservations touchPage6 = new FamilyObservations();
@@ -1543,32 +1528,29 @@ namespace Login {
                 touchPage6.Show();
                 this.Hide();
             }
-            //-------------
-            //SMELL SECTION
-            //-------------
-            else if (Globals.interview_page == 27) {
+              //-------------
+              //SMELL SECTION
+              //-------------
+              else if (Globals.interview_page == 27) {
                 writeToDB("cookingSmells", "foodSmells", "cleaningProducts", "toiletSmells", "perfumes", "bodySmells", "smellDontLike");
                 FamilyObservations smellPage1 = new FamilyObservations();
                 smellPage1.InstanceRef26 = this;
                 smellPage1.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 28) {
+            } else if (Globals.interview_page == 28) {
                 saveWrittenAnswerToDB("smellDontLike", "comment1", tbAnswer1.Text.ToString());
                 saveWrittenAnswerToDB("smellDontLike", "comment2", tbAnswer2.Text.ToString());
                 FamilyObservations smellPage2 = new FamilyObservations();
                 smellPage2.InstanceRef27 = this;
                 smellPage2.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 29) {
+            } else if (Globals.interview_page == 29) {
                 writeToDB5("smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople", "likeToSmell");
                 FamilyObservations smellPage3 = new FamilyObservations();
                 smellPage3.InstanceRef28 = this;
                 smellPage3.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 30) {
+            } else if (Globals.interview_page == 30) {
 
                 saveWrittenAnswerToDB("likeToSmell", "comment1", tbAnswer1.Text.ToString());
                 FamilyObservations smellPage4 = new FamilyObservations();
@@ -1576,47 +1558,42 @@ namespace Login {
                 smellPage4.Show();
                 this.Hide();
             }
-            //-------------
-            //TASTE SECTION
-            //-------------
-            else if (Globals.interview_page == 31) {
+              //-------------
+              //TASTE SECTION
+              //-------------
+              else if (Globals.interview_page == 31) {
 
                 writeToDB("vegetables", "fruit", "meat", "fish", "eggs", "dairy", "foodGroupsDontLike");
                 FamilyObservations tastePage1 = new FamilyObservations();
                 tastePage1.InstanceRef30 = this;
                 tastePage1.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 32) {
+            } else if (Globals.interview_page == 32) {
                 updateDBfoodGroupsDontLike("bread", "pasta", "foodGroupsDontLike");
                 FamilyObservations tastePage1p2 = new FamilyObservations();
                 tastePage1p2.InstanceRef31 = this;
                 tastePage1p2.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 33) {
+            } else if (Globals.interview_page == 33) {
                 saveWrittenAnswerToDB("foodGroupsDontLike", "comment1", tbAnswer1.Text.ToString());
                 saveWrittenAnswerToDB("foodGroupsDontLike", "comment2", tbAnswer2.Text.ToString());
                 FamilyObservations tastePage2 = new FamilyObservations();
                 tastePage2.InstanceRef32 = this;
                 tastePage2.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 34) {
+            } else if (Globals.interview_page == 34) {
                 writeToDB("lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour", "tastesOrFeelsInMouthDontLike");
                 FamilyObservations tastePage3 = new FamilyObservations();
                 tastePage3.InstanceRef33 = this;
                 tastePage3.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 35) {
+            } else if (Globals.interview_page == 35) {
                 updateDBtastesOrFeelsInMouthDontLike("salty", "spicy", "tastesOrFeelsInMouthDontLike");
                 FamilyObservations tastePage3p2 = new FamilyObservations();
                 tastePage3p2.InstanceRef34 = this;
                 tastePage3p2.Show();
                 this.Hide();
-            } 
-            else if (Globals.interview_page == 36) {
+            } else if (Globals.interview_page == 36) {
                 saveWrittenAnswerToDB("tastesOrFeelsInMouthDontLike", "comment1", tbAnswer1.Text.ToString());
                 saveWrittenAnswerToDB("tastesOrFeelsInMouthDontLike", "comment2", tbAnswer2.Text.ToString());
                 FamilyObservations tastePage4 = new FamilyObservations();
@@ -1624,28 +1601,25 @@ namespace Login {
                 tastePage4.Show();
                 this.Hide();
             } //Add missing question here
-            else if (Globals.interview_page == 37) {
+              else if (Globals.interview_page == 37) {
                 writeToDBTop2("familiarFoods", "unfamiliarFoods", "foodReallyLikeToEat");
                 FamilyObservations tastePage5 = new FamilyObservations();
                 tastePage5.InstanceRef36 = this;
                 tastePage5.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 38) {
+            } else if (Globals.interview_page == 38) {
                 saveWrittenAnswerToDB("foodReallyLikeToEat", "comment1", tbAnswer1.Text.ToString());
                 FamilyObservations tastePage6 = new FamilyObservations();
                 tastePage6.InstanceRef37 = this;
                 tastePage6.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 39) {
+            } else if (Globals.interview_page == 39) {
                 writeToDBTop3("shirt", "hair", "objects", "thingsPutInMouthALot");
                 FamilyObservations tastePage7 = new FamilyObservations();
                 tastePage7.InstanceRef38 = this;
                 tastePage7.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 40) {
+            } else if (Globals.interview_page == 40) {
                 saveWrittenAnswerToDB("thingsPutInMouthALot", "comment1", tbAnswer1.Text.ToString());
                 saveWrittenAnswerToDB("thingsPutInMouthALot", "comment2", tbAnswer2.Text.ToString());
                 FamilyObservations tastePage8 = new FamilyObservations();
@@ -1653,60 +1627,53 @@ namespace Login {
                 tastePage8.Show();
                 this.Hide();
             }
-            //----------------
-            //Movement SECTION
-            //----------------
-            else if (Globals.interview_page == 41) {
+              //----------------
+              //Movement SECTION
+              //----------------
+              else if (Globals.interview_page == 41) {
                 writeToDB5("beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
                 this.Hide();
                 FamilyObservations mvmtPage1 = new FamilyObservations();
                 mvmtPage1.InstanceRef40 = this;
                 mvmtPage1.Show();
-            }
-            else if (Globals.interview_page == 42) {
+            } else if (Globals.interview_page == 42) {
                 saveWrittenAnswerToDB("movingDontLike", "comment1", tbAnswer1.Text.ToString());
                 saveWrittenAnswerToDB("movingDontLike", "comment2", tbAnswer2.Text.ToString());
                 this.Hide();
                 FamilyObservations mvmtPage2 = new FamilyObservations();
                 mvmtPage2.InstanceRef41 = this;
                 mvmtPage2.Show();
-            }
-            else if (Globals.interview_page == 43) {
+            } else if (Globals.interview_page == 43) {
                 writeToDBTop2("standingStill", "sittingStill", "hardToStayStill");
                 this.Hide();
                 FamilyObservations mvmtPage3 = new FamilyObservations();
-                mvmtPage3.InstanceRef42 = this; 
+                mvmtPage3.InstanceRef42 = this;
                 mvmtPage3.Show();
-            }
-            else if (Globals.interview_page == 44) {
+            } else if (Globals.interview_page == 44) {
                 saveWrittenAnswerToDB("hardToStayStill", "comment1", tbAnswer1.Text.ToString());
                 this.Hide();
                 FamilyObservations mvmtPage4 = new FamilyObservations();
                 mvmtPage4.InstanceRef43 = this;
                 mvmtPage4.Show();
-            }
-            else if (Globals.interview_page == 45) {
+            } else if (Globals.interview_page == 45) {
                 writeToDB5("movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running", "movingThatYouLike");
                 FamilyObservations mvmtPage5 = new FamilyObservations();
                 mvmtPage5.InstanceRef44 = this;
                 mvmtPage5.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 46) {
+            } else if (Globals.interview_page == 46) {
                 saveWrittenAnswerToDB("movingThatYouLike", "comment1", tbAnswer1.Text.ToString());
                 this.Hide();
                 FamilyObservations mvmtPage6 = new FamilyObservations();
                 mvmtPage6.InstanceRef45 = this;
                 mvmtPage6.Show();
-            }
-            else if (Globals.interview_page == 47) {
+            } else if (Globals.interview_page == 47) {
                 writeToDB4("rocking", "movingHands", "clapping", "pacing", "moveOverAndOverAgain");
                 FamilyObservations mvmtPage7 = new FamilyObservations();
                 mvmtPage7.InstanceRef46 = this;
                 mvmtPage7.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 48) {
+            } else if (Globals.interview_page == 48) {
                 saveWrittenAnswerToDB("moveOverAndOverAgain", "comment1", tbAnswer1.Text.ToString());
                 saveWrittenAnswerToDB("moveOverAndOverAgain", "comment2", tbAnswer2.Text.ToString());
                 this.Hide();
@@ -1714,17 +1681,16 @@ namespace Login {
                 mvmtPage8.InstanceRef47 = this;
                 mvmtPage8.Show();
             }
-            //-------------------
-            //ENVIRONMENT SECTION
-            //-------------------
-            else if (Globals.interview_page == 49) {
+              //-------------------
+              //ENVIRONMENT SECTION
+              //-------------------
+              else if (Globals.interview_page == 49) {
                 writeToDB5("supermarket", "party", "foodHall", "show", "shoppingMall", "other");
                 FamilyObservations environmentPage1 = new FamilyObservations();
                 environmentPage1.InstanceRef48 = this;
                 environmentPage1.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 50) {
+            } else if (Globals.interview_page == 50) {
                 saveWrittenAnswerToDB("other", "comment1", tbAnswer1.Text.ToString());
                 saveWrittenAnswerToDB("other", "comment2", tbAnswer2.Text.ToString());
                 FamilyObservations environmentPage2 = new FamilyObservations();
@@ -1732,25 +1698,23 @@ namespace Login {
                 environmentPage2.Show();
                 this.Hide();
             }
-            //-------------
-            //OTHER SECTION
-            //-------------
-            else if (Globals.interview_page == 51) {
+              //-------------
+              //OTHER SECTION
+              //-------------
+              else if (Globals.interview_page == 51) {
                 updateDBother("sounds", "smells", "sights", "tastes", "feelings", "movements", "other");
                 FamilyObservations otherPage1 = new FamilyObservations();
                 otherPage1.InstanceRef50 = this;
                 otherPage1.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 52) {
+            } else if (Globals.interview_page == 52) {
                 saveWrittenAnswerToDB("other", "comment3", tbAnswer1.Text.ToString());
                 saveWrittenAnswerToDB("other", "comment4", tbAnswer2.Text.ToString());
                 FamilyObservations otherPage2 = new FamilyObservations();
                 otherPage2.InstanceRef51 = this;
                 otherPage2.Show();
                 this.Hide();
-            }
-            else if (Globals.interview_page == 53) {
+            } else if (Globals.interview_page == 53) {
                 FamilyObservations additionalNotes = new FamilyObservations();
                 additionalNotesPanel.BringToFront();
             }

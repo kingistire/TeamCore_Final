@@ -8,6 +8,6 @@ namespace Login {
         public static class Globals {
         public static int interview_page = 1;
         public static bool addUserExists = false;
-        public static bool independentInterview = false;
+        public static bool shortResponse = false;
     }
     }

@@ -592,7 +592,7 @@
             // 
             this.picInstruction.Image = global::Login.Properties.Resources.aLotaLittle;
             this.picInstruction.Location = new System.Drawing.Point(812, 27);
-            this.picInstruction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picInstruction.Margin = new System.Windows.Forms.Padding(2);
             this.picInstruction.Name = "picInstruction";
             this.picInstruction.Size = new System.Drawing.Size(116, 92);
             this.picInstruction.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -616,7 +616,7 @@
             // 
             this.picSense.Image = ((System.Drawing.Image)(resources.GetObject("picSense.Image")));
             this.picSense.Location = new System.Drawing.Point(65, 21);
-            this.picSense.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picSense.Margin = new System.Windows.Forms.Padding(2);
             this.picSense.Name = "picSense";
             this.picSense.Size = new System.Drawing.Size(94, 102);
             this.picSense.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -627,7 +627,7 @@
             // 
             this.picBackground.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.picBackground.Location = new System.Drawing.Point(0, 0);
-            this.picBackground.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBackground.Margin = new System.Windows.Forms.Padding(2);
             this.picBackground.Name = "picBackground";
             this.picBackground.Size = new System.Drawing.Size(1001, 146);
             this.picBackground.TabIndex = 21;
@@ -659,7 +659,7 @@
             // 
             this.tbAnswer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAnswer1.Location = new System.Drawing.Point(235, 404);
-            this.tbAnswer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbAnswer1.Margin = new System.Windows.Forms.Padding(2);
             this.tbAnswer1.Multiline = true;
             this.tbAnswer1.Name = "tbAnswer1";
             this.tbAnswer1.Size = new System.Drawing.Size(521, 249);
@@ -744,7 +744,7 @@
             // 
             this.pictureBox1.Image = global::Login.Properties.Resources.aLotaLittle;
             this.pictureBox1.Location = new System.Drawing.Point(812, 27);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(116, 92);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -769,7 +769,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(65, 21);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(94, 102);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -780,7 +780,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(986, 146);
             this.pictureBox3.TabIndex = 21;
@@ -806,7 +806,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1008, 842);
             this.Name = "GuidedInterview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
