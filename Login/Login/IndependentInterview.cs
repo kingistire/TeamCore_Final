@@ -1563,7 +1563,6 @@ namespace Login {
             }
         }
 
-        //Copy to updateDB
         private void saveWrittenAnswerToDB(string tableName, string columnName, string comment) {
             SqlCommand cmdDatabase;
             const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
@@ -2360,7 +2359,7 @@ namespace Login {
         }
 
         private void button2_Click(object sender, EventArgs e) {
-            saveWrittenAnswerToDB("otComments", "OTComments", tbAnswer1.Text.ToString());
+            saveWrittenAnswerToDB("otComments", "OTComments", textBox1.Text.ToString());
             Summary sum = new Summary();
             sum.Show();
         }
