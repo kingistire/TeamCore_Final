@@ -175,43 +175,83 @@ C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.F
 C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.FamilyObservations.resources
 C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.GuidedInstructions.resources
 C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.IndependentInstructions.resources
-D:\Jason Tam\Capstone\Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB.mdf
-D:\Jason Tam\Capstone\Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB_log.ldf
-D:\Jason Tam\Capstone\Final\Login\Login\bin\Debug\bin\Debug\CapstoneDB\CapstoneDB.mdf
-D:\Jason Tam\Capstone\Final\Login\Login\bin\Debug\bin\Debug\CapstoneDB\CapstoneDB_log.ldf
-D:\Jason Tam\Capstone\Final\Login\Login\bin\Debug\Login.exe.config
-D:\Jason Tam\Capstone\Final\Login\Login\bin\Debug\Login.exe
-D:\Jason Tam\Capstone\Final\Login\Login\bin\Debug\Login.pdb
-D:\Jason Tam\Capstone\Final\Login\Login\bin\Debug\Interop.WMPLib.dll
-D:\Jason Tam\Capstone\Final\Login\Login\bin\Debug\AxInterop.WMPLib.dll
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\My Sensory Experiences.csprojAssemblyReference.cache
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Interop.WMPLib.dll
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\AxInterop.WMPLib.dll
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.ResolveComReference.cache
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.AddUser.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.EditProfile.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.EditUser1.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.DeleteUser.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.FamilyInstructions.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.FamilyInterviewCover.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.FamilyObservations.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.GuidedInstructions.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.IndependentInstructions.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.IndependentInterview.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.IndependentCover.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.GuidedInterviewCover.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.ProfilePage.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.SelectInterview.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.NewOTAccount.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.GuidedInterview.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.Login.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.MDIParent1.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.Properties.Resources.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.Summary.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.UserManagment.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.ViewResults.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.ViewResultsTable.resources
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.GenerateResource.cache
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.CoreCompileInputs.cache
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.exe
-D:\Jason Tam\Capstone\Final\Login\Login\obj\Debug\Login.pdb
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB_log.ldf
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Debug\Login.exe.config
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Debug\Login.exe
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Debug\Login.pdb
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Debug\Interop.WMPLib.dll
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csprojAssemblyReference.cache
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Interop.WMPLib.dll
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.ResolveComReference.cache
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.AddUser.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.EditProfile.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.EditUser1.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.DeleteUser.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyInstructions.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyInterviewCover.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyObservations.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInstructions.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.IndependentInstructions.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.IndependentInterview.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.IndependentCover.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInterviewCover.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.ProfilePage.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.SelectInterview.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.NewOTAccount.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInterview.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.Login.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.MDIParent1.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.Summary.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.UserManagment.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.ViewResults.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.ViewResultsTable.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.GenerateResource.cache
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.CoreCompileInputs.cache
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.exe
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.pdb
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB.mdf
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Debug\bin\Debug\CapstoneDB\CapstoneDB.mdf
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Debug\bin\Debug\CapstoneDB\CapstoneDB_log.ldf
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\bin\Debug\bin\Debug\CapstoneDB\CapstoneDB.mdf
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\bin\Debug\bin\Debug\CapstoneDB\CapstoneDB_log.ldf
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB.mdf
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB_log.ldf
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\bin\Debug\Login.exe.config
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\bin\Debug\Login.exe
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\bin\Debug\Login.pdb
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\bin\Debug\Interop.WMPLib.dll
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csprojAssemblyReference.cache
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Interop.WMPLib.dll
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.ResolveComReference.cache
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.AddUser.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.EditProfile.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.EditUser1.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.DeleteUser.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyInstructions.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyInterviewCover.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyObservations.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInstructions.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.IndependentInstructions.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.IndependentInterview.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.IndependentCover.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInterviewCover.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.ProfilePage.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.SelectInterview.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.NewOTAccount.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInterview.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.Login.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.MDIParent1.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.Summary.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.UserManagment.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.ViewResults.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.ViewResultsTable.resources
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.GenerateResource.cache
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.CoreCompileInputs.cache
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.exe
+C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\obj\Debug\Login.pdb

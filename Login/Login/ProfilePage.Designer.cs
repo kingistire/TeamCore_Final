@@ -40,9 +40,9 @@
             this.deleteUserBtn = new System.Windows.Forms.Button();
             this.exportProfileBtn = new System.Windows.Forms.Button();
             this.InterviewHistoryDataGrid = new System.Windows.Forms.DataGridView();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.selectInterview = new System.Windows.Forms.DataGridViewButtonColumn();
             this.interviewType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.InterviewHistoryDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,10 +52,9 @@
             this.nameLabel.BackColor = System.Drawing.Color.Transparent;
             this.nameLabel.Font = new System.Drawing.Font("Calibri", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel.ForeColor = System.Drawing.Color.DarkBlue;
-            this.nameLabel.Location = new System.Drawing.Point(11, 27);
-            this.nameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nameLabel.Location = new System.Drawing.Point(15, 33);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(119, 29);
+            this.nameLabel.Size = new System.Drawing.Size(151, 37);
             this.nameLabel.TabIndex = 26;
             this.nameLabel.Text = "FILL NAME";
             this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -66,10 +65,9 @@
             this.dobLabel.BackColor = System.Drawing.Color.Transparent;
             this.dobLabel.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dobLabel.ForeColor = System.Drawing.Color.DarkBlue;
-            this.dobLabel.Location = new System.Drawing.Point(12, 56);
-            this.dobLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dobLabel.Location = new System.Drawing.Point(16, 69);
             this.dobLabel.Name = "dobLabel";
-            this.dobLabel.Size = new System.Drawing.Size(80, 23);
+            this.dobLabel.Size = new System.Drawing.Size(99, 29);
             this.dobLabel.TabIndex = 27;
             this.dobLabel.Text = "FILL DOB";
             this.dobLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -80,10 +78,9 @@
             this.genderLabel.BackColor = System.Drawing.Color.Transparent;
             this.genderLabel.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genderLabel.ForeColor = System.Drawing.Color.DarkBlue;
-            this.genderLabel.Location = new System.Drawing.Point(12, 79);
-            this.genderLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.genderLabel.Location = new System.Drawing.Point(16, 97);
             this.genderLabel.Name = "genderLabel";
-            this.genderLabel.Size = new System.Drawing.Size(109, 23);
+            this.genderLabel.Size = new System.Drawing.Size(139, 29);
             this.genderLabel.TabIndex = 28;
             this.genderLabel.Text = "FILL GENDER";
             this.genderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,10 +91,9 @@
             this.phLabel.BackColor = System.Drawing.Color.Transparent;
             this.phLabel.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phLabel.ForeColor = System.Drawing.Color.DarkBlue;
-            this.phLabel.Location = new System.Drawing.Point(12, 102);
-            this.phLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.phLabel.Location = new System.Drawing.Point(16, 126);
             this.phLabel.Name = "phLabel";
-            this.phLabel.Size = new System.Drawing.Size(100, 23);
+            this.phLabel.Size = new System.Drawing.Size(127, 29);
             this.phLabel.TabIndex = 29;
             this.phLabel.Text = "FILL PHONE";
             this.phLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -108,10 +104,9 @@
             this.mailLabel.BackColor = System.Drawing.Color.Transparent;
             this.mailLabel.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mailLabel.ForeColor = System.Drawing.Color.DarkBlue;
-            this.mailLabel.Location = new System.Drawing.Point(12, 125);
-            this.mailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.mailLabel.Location = new System.Drawing.Point(16, 154);
             this.mailLabel.Name = "mailLabel";
-            this.mailLabel.Size = new System.Drawing.Size(95, 23);
+            this.mailLabel.Size = new System.Drawing.Size(119, 29);
             this.mailLabel.TabIndex = 30;
             this.mailLabel.Text = "FILL EMAIL";
             this.mailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -122,10 +117,9 @@
             this.resultsHeader.BackColor = System.Drawing.Color.Transparent;
             this.resultsHeader.Font = new System.Drawing.Font("Calibri", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultsHeader.ForeColor = System.Drawing.Color.DarkBlue;
-            this.resultsHeader.Location = new System.Drawing.Point(183, 125);
-            this.resultsHeader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.resultsHeader.Location = new System.Drawing.Point(244, 154);
             this.resultsHeader.Name = "resultsHeader";
-            this.resultsHeader.Size = new System.Drawing.Size(182, 29);
+            this.resultsHeader.Size = new System.Drawing.Size(231, 37);
             this.resultsHeader.TabIndex = 32;
             this.resultsHeader.Text = "Interview History";
             this.resultsHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -141,10 +135,10 @@
             this.viewFamilyObservationBtn.ForeColor = System.Drawing.Color.Navy;
             this.viewFamilyObservationBtn.Image = ((System.Drawing.Image)(resources.GetObject("viewFamilyObservationBtn.Image")));
             this.viewFamilyObservationBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.viewFamilyObservationBtn.Location = new System.Drawing.Point(356, 42);
-            this.viewFamilyObservationBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.viewFamilyObservationBtn.Location = new System.Drawing.Point(475, 52);
+            this.viewFamilyObservationBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.viewFamilyObservationBtn.Name = "viewFamilyObservationBtn";
-            this.viewFamilyObservationBtn.Size = new System.Drawing.Size(164, 60);
+            this.viewFamilyObservationBtn.Size = new System.Drawing.Size(219, 74);
             this.viewFamilyObservationBtn.TabIndex = 33;
             this.viewFamilyObservationBtn.Text = "[View Family Observations]";
             this.viewFamilyObservationBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,12 +156,12 @@
             this.editUserDataBtn.ForeColor = System.Drawing.Color.Navy;
             this.editUserDataBtn.Image = ((System.Drawing.Image)(resources.GetObject("editUserDataBtn.Image")));
             this.editUserDataBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.editUserDataBtn.Location = new System.Drawing.Point(188, 42);
-            this.editUserDataBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.editUserDataBtn.Location = new System.Drawing.Point(251, 52);
+            this.editUserDataBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editUserDataBtn.Name = "editUserDataBtn";
-            this.editUserDataBtn.Size = new System.Drawing.Size(164, 60);
+            this.editUserDataBtn.Size = new System.Drawing.Size(219, 74);
             this.editUserDataBtn.TabIndex = 34;
-            this.editUserDataBtn.Text = "Edit     Information";
+            this.editUserDataBtn.Text = "Edit Information";
             this.editUserDataBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.editUserDataBtn.UseVisualStyleBackColor = false;
             this.editUserDataBtn.Click += new System.EventHandler(this.editUserDataBtn_Click);
@@ -183,10 +177,10 @@
             this.deleteUserBtn.ForeColor = System.Drawing.Color.Navy;
             this.deleteUserBtn.Image = ((System.Drawing.Image)(resources.GetObject("deleteUserBtn.Image")));
             this.deleteUserBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.deleteUserBtn.Location = new System.Drawing.Point(702, 42);
-            this.deleteUserBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.deleteUserBtn.Location = new System.Drawing.Point(936, 52);
+            this.deleteUserBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteUserBtn.Name = "deleteUserBtn";
-            this.deleteUserBtn.Size = new System.Drawing.Size(164, 60);
+            this.deleteUserBtn.Size = new System.Drawing.Size(219, 74);
             this.deleteUserBtn.TabIndex = 35;
             this.deleteUserBtn.Text = "Delete Profile";
             this.deleteUserBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -204,10 +198,10 @@
             this.exportProfileBtn.ForeColor = System.Drawing.Color.Navy;
             this.exportProfileBtn.Image = ((System.Drawing.Image)(resources.GetObject("exportProfileBtn.Image")));
             this.exportProfileBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.exportProfileBtn.Location = new System.Drawing.Point(524, 42);
-            this.exportProfileBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.exportProfileBtn.Location = new System.Drawing.Point(699, 52);
+            this.exportProfileBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exportProfileBtn.Name = "exportProfileBtn";
-            this.exportProfileBtn.Size = new System.Drawing.Size(174, 60);
+            this.exportProfileBtn.Size = new System.Drawing.Size(232, 74);
             this.exportProfileBtn.TabIndex = 36;
             this.exportProfileBtn.Text = "Export Profile";
             this.exportProfileBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,9 +214,10 @@
             this.InterviewHistoryDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.selectInterview,
             this.interviewType});
-            this.InterviewHistoryDataGrid.Location = new System.Drawing.Point(188, 169);
+            this.InterviewHistoryDataGrid.Location = new System.Drawing.Point(251, 208);
+            this.InterviewHistoryDataGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.InterviewHistoryDataGrid.Name = "InterviewHistoryDataGrid";
-            this.InterviewHistoryDataGrid.Size = new System.Drawing.Size(678, 218);
+            this.InterviewHistoryDataGrid.Size = new System.Drawing.Size(904, 268);
             this.InterviewHistoryDataGrid.TabIndex = 37;
             this.InterviewHistoryDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.InterviewHistoryDataGrid_CellContentClick);
             // 
@@ -242,9 +237,9 @@
             // 
             // ProfilePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 399);
+            this.ClientSize = new System.Drawing.Size(1215, 491);
             this.Controls.Add(this.InterviewHistoryDataGrid);
             this.Controls.Add(this.exportProfileBtn);
             this.Controls.Add(this.deleteUserBtn);
@@ -256,6 +251,7 @@
             this.Controls.Add(this.genderLabel);
             this.Controls.Add(this.dobLabel);
             this.Controls.Add(this.nameLabel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ProfilePage";
             this.Text = "ProfilePage";
             this.Load += new System.EventHandler(this.ProfilePage_Load);

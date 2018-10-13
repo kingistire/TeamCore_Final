@@ -146,7 +146,7 @@
             this.panel1.Controls.Add(this.picBackground);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.MinimumSize = new System.Drawing.Size(1316, 1051);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1317, 1051);
@@ -155,7 +155,7 @@
             // bottomRightPB
             // 
             this.bottomRightPB.Location = new System.Drawing.Point(971, 635);
-            this.bottomRightPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomRightPB.Margin = new System.Windows.Forms.Padding(4);
             this.bottomRightPB.MaximumSize = new System.Drawing.Size(481, 432);
             this.bottomRightPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.bottomRightPB.Name = "bottomRightPB";
@@ -168,7 +168,7 @@
             // bottomRightALotBtn
             // 
             this.bottomRightALotBtn.Location = new System.Drawing.Point(1085, 862);
-            this.bottomRightALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomRightALotBtn.Margin = new System.Windows.Forms.Padding(4);
             this.bottomRightALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.bottomRightALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.bottomRightALotBtn.Name = "bottomRightALotBtn";
@@ -182,7 +182,7 @@
             // bottomRightALittleBtn
             // 
             this.bottomRightALittleBtn.Location = new System.Drawing.Point(971, 862);
-            this.bottomRightALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomRightALittleBtn.Margin = new System.Windows.Forms.Padding(4);
             this.bottomRightALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.bottomRightALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.bottomRightALittleBtn.Name = "bottomRightALittleBtn";
@@ -197,7 +197,7 @@
             // 
             this.bottomRightPB2.BackColor = System.Drawing.Color.AliceBlue;
             this.bottomRightPB2.Location = new System.Drawing.Point(937, 604);
-            this.bottomRightPB2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomRightPB2.Margin = new System.Windows.Forms.Padding(4);
             this.bottomRightPB2.MaximumSize = new System.Drawing.Size(481, 432);
             this.bottomRightPB2.MinimumSize = new System.Drawing.Size(215, 186);
             this.bottomRightPB2.Name = "bottomRightPB2";
@@ -220,7 +220,7 @@
             // bottomMidPB
             // 
             this.bottomMidPB.Location = new System.Drawing.Point(551, 635);
-            this.bottomMidPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomMidPB.Margin = new System.Windows.Forms.Padding(4);
             this.bottomMidPB.MaximumSize = new System.Drawing.Size(481, 432);
             this.bottomMidPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.bottomMidPB.Name = "bottomMidPB";
@@ -233,7 +233,7 @@
             // bottomMidALotBtn
             // 
             this.bottomMidALotBtn.Location = new System.Drawing.Point(665, 862);
-            this.bottomMidALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomMidALotBtn.Margin = new System.Windows.Forms.Padding(4);
             this.bottomMidALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.bottomMidALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.bottomMidALotBtn.Name = "bottomMidALotBtn";
@@ -247,7 +247,7 @@
             // bottomMidALittleBtn
             // 
             this.bottomMidALittleBtn.Location = new System.Drawing.Point(551, 862);
-            this.bottomMidALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomMidALittleBtn.Margin = new System.Windows.Forms.Padding(4);
             this.bottomMidALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.bottomMidALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.bottomMidALittleBtn.Name = "bottomMidALittleBtn";
@@ -262,7 +262,7 @@
             // 
             this.bottomMidPB2.BackColor = System.Drawing.Color.AliceBlue;
             this.bottomMidPB2.Location = new System.Drawing.Point(517, 604);
-            this.bottomMidPB2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomMidPB2.Margin = new System.Windows.Forms.Padding(4);
             this.bottomMidPB2.MaximumSize = new System.Drawing.Size(481, 432);
             this.bottomMidPB2.MinimumSize = new System.Drawing.Size(215, 186);
             this.bottomMidPB2.Name = "bottomMidPB2";
@@ -285,7 +285,7 @@
             // bottomLeftPB
             // 
             this.bottomLeftPB.Location = new System.Drawing.Point(135, 635);
-            this.bottomLeftPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomLeftPB.Margin = new System.Windows.Forms.Padding(4);
             this.bottomLeftPB.MaximumSize = new System.Drawing.Size(481, 432);
             this.bottomLeftPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.bottomLeftPB.Name = "bottomLeftPB";
@@ -298,7 +298,7 @@
             // bottomLeftALotBtn
             // 
             this.bottomLeftALotBtn.Location = new System.Drawing.Point(249, 862);
-            this.bottomLeftALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomLeftALotBtn.Margin = new System.Windows.Forms.Padding(4);
             this.bottomLeftALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.bottomLeftALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.bottomLeftALotBtn.Name = "bottomLeftALotBtn";
@@ -312,7 +312,7 @@
             // bottomLeftALittleBtn
             // 
             this.bottomLeftALittleBtn.Location = new System.Drawing.Point(135, 862);
-            this.bottomLeftALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomLeftALittleBtn.Margin = new System.Windows.Forms.Padding(4);
             this.bottomLeftALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.bottomLeftALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.bottomLeftALittleBtn.Name = "bottomLeftALittleBtn";
@@ -327,7 +327,7 @@
             // 
             this.bottomLeftPB2.BackColor = System.Drawing.Color.AliceBlue;
             this.bottomLeftPB2.Location = new System.Drawing.Point(101, 604);
-            this.bottomLeftPB2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomLeftPB2.Margin = new System.Windows.Forms.Padding(4);
             this.bottomLeftPB2.MaximumSize = new System.Drawing.Size(481, 432);
             this.bottomLeftPB2.MinimumSize = new System.Drawing.Size(215, 186);
             this.bottomLeftPB2.Name = "bottomLeftPB2";
@@ -350,7 +350,7 @@
             // topRightPB
             // 
             this.topRightPB.Location = new System.Drawing.Point(971, 246);
-            this.topRightPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topRightPB.Margin = new System.Windows.Forms.Padding(4);
             this.topRightPB.MaximumSize = new System.Drawing.Size(481, 432);
             this.topRightPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.topRightPB.Name = "topRightPB";
@@ -363,7 +363,7 @@
             // topRightALotBtn
             // 
             this.topRightALotBtn.Location = new System.Drawing.Point(1087, 473);
-            this.topRightALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topRightALotBtn.Margin = new System.Windows.Forms.Padding(4);
             this.topRightALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.topRightALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.topRightALotBtn.Name = "topRightALotBtn";
@@ -377,7 +377,7 @@
             // topRightALittleBtn
             // 
             this.topRightALittleBtn.Location = new System.Drawing.Point(972, 473);
-            this.topRightALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topRightALittleBtn.Margin = new System.Windows.Forms.Padding(4);
             this.topRightALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.topRightALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.topRightALittleBtn.Name = "topRightALittleBtn";
@@ -392,7 +392,7 @@
             // 
             this.topRightPB2.BackColor = System.Drawing.Color.AliceBlue;
             this.topRightPB2.Location = new System.Drawing.Point(939, 215);
-            this.topRightPB2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topRightPB2.Margin = new System.Windows.Forms.Padding(4);
             this.topRightPB2.MaximumSize = new System.Drawing.Size(481, 432);
             this.topRightPB2.MinimumSize = new System.Drawing.Size(215, 186);
             this.topRightPB2.Name = "topRightPB2";
@@ -415,7 +415,7 @@
             // topMidPB
             // 
             this.topMidPB.Location = new System.Drawing.Point(551, 246);
-            this.topMidPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topMidPB.Margin = new System.Windows.Forms.Padding(4);
             this.topMidPB.MaximumSize = new System.Drawing.Size(481, 432);
             this.topMidPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.topMidPB.Name = "topMidPB";
@@ -428,7 +428,7 @@
             // topMidALotBtn
             // 
             this.topMidALotBtn.Location = new System.Drawing.Point(665, 473);
-            this.topMidALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topMidALotBtn.Margin = new System.Windows.Forms.Padding(4);
             this.topMidALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.topMidALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.topMidALotBtn.Name = "topMidALotBtn";
@@ -442,7 +442,7 @@
             // topMidALittleBtn
             // 
             this.topMidALittleBtn.Location = new System.Drawing.Point(551, 473);
-            this.topMidALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topMidALittleBtn.Margin = new System.Windows.Forms.Padding(4);
             this.topMidALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.topMidALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.topMidALittleBtn.Name = "topMidALittleBtn";
@@ -457,7 +457,7 @@
             // 
             this.topMidPB2.BackColor = System.Drawing.Color.AliceBlue;
             this.topMidPB2.Location = new System.Drawing.Point(517, 215);
-            this.topMidPB2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topMidPB2.Margin = new System.Windows.Forms.Padding(4);
             this.topMidPB2.MaximumSize = new System.Drawing.Size(481, 432);
             this.topMidPB2.MinimumSize = new System.Drawing.Size(215, 186);
             this.topMidPB2.Name = "topMidPB2";
@@ -480,7 +480,7 @@
             // topLeftPB
             // 
             this.topLeftPB.Location = new System.Drawing.Point(135, 246);
-            this.topLeftPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topLeftPB.Margin = new System.Windows.Forms.Padding(4);
             this.topLeftPB.MaximumSize = new System.Drawing.Size(481, 432);
             this.topLeftPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.topLeftPB.Name = "topLeftPB";
@@ -493,7 +493,7 @@
             // btnNext1
             // 
             this.btnNext1.Location = new System.Drawing.Point(1212, 529);
-            this.btnNext1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNext1.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext1.MaximumSize = new System.Drawing.Size(233, 62);
             this.btnNext1.MinimumSize = new System.Drawing.Size(100, 28);
             this.btnNext1.Name = "btnNext1";
@@ -506,7 +506,7 @@
             // previousInterviewSlideBtn
             // 
             this.previousInterviewSlideBtn.Location = new System.Drawing.Point(13, 529);
-            this.previousInterviewSlideBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.previousInterviewSlideBtn.Margin = new System.Windows.Forms.Padding(4);
             this.previousInterviewSlideBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.previousInterviewSlideBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.previousInterviewSlideBtn.Name = "previousInterviewSlideBtn";
@@ -520,7 +520,7 @@
             // topLeftPBALotBtn
             // 
             this.topLeftPBALotBtn.Location = new System.Drawing.Point(249, 473);
-            this.topLeftPBALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topLeftPBALotBtn.Margin = new System.Windows.Forms.Padding(4);
             this.topLeftPBALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.topLeftPBALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.topLeftPBALotBtn.Name = "topLeftPBALotBtn";
@@ -534,7 +534,7 @@
             // topLeftPBALittleBtn
             // 
             this.topLeftPBALittleBtn.Location = new System.Drawing.Point(135, 473);
-            this.topLeftPBALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topLeftPBALittleBtn.Margin = new System.Windows.Forms.Padding(4);
             this.topLeftPBALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.topLeftPBALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.topLeftPBALittleBtn.Name = "topLeftPBALittleBtn";
@@ -549,7 +549,7 @@
             // 
             this.topLeftPB2.BackColor = System.Drawing.Color.AliceBlue;
             this.topLeftPB2.Location = new System.Drawing.Point(101, 215);
-            this.topLeftPB2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topLeftPB2.Margin = new System.Windows.Forms.Padding(4);
             this.topLeftPB2.MaximumSize = new System.Drawing.Size(481, 432);
             this.topLeftPB2.MinimumSize = new System.Drawing.Size(215, 186);
             this.topLeftPB2.Name = "topLeftPB2";
@@ -667,7 +667,7 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1317, 985);
             this.panel2.TabIndex = 29;
@@ -798,7 +798,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(1205, 478);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.MaximumSize = new System.Drawing.Size(233, 62);
             this.button1.MinimumSize = new System.Drawing.Size(100, 28);
             this.button1.Name = "button1";

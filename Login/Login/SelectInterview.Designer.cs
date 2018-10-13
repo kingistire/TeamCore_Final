@@ -35,6 +35,7 @@
             this.radioGuided = new System.Windows.Forms.RadioButton();
             this.radioIndependent = new System.Windows.Forms.RadioButton();
             this.radioFamily = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,10 +50,10 @@
             this.btnStart.ForeColor = System.Drawing.Color.Navy;
             this.btnStart.Image = ((System.Drawing.Image)(resources.GetObject("btnStart.Image")));
             this.btnStart.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnStart.Location = new System.Drawing.Point(172, 401);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStart.Location = new System.Drawing.Point(229, 497);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(176, 43);
+            this.btnStart.Size = new System.Drawing.Size(235, 53);
             this.btnStart.TabIndex = 3;
             this.btnStart.Text = "Start Interview";
             this.btnStart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -64,10 +65,9 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(58, 332);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsername.Location = new System.Drawing.Point(77, 381);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(125, 19);
+            this.lblUsername.Size = new System.Drawing.Size(154, 24);
             this.lblUsername.TabIndex = 2;
             this.lblUsername.Text = "Interview Type:";
             // 
@@ -76,10 +76,9 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(68, 258);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPassword.Location = new System.Drawing.Point(91, 318);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(115, 19);
+            this.lblPassword.Size = new System.Drawing.Size(142, 24);
             this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "Select Profile:";
             // 
@@ -87,10 +86,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(122, 23);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(163, 28);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(170, 154);
+            this.pictureBox1.Size = new System.Drawing.Size(227, 190);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -101,29 +100,29 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(74, 199);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(99, 245);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 23);
+            this.label1.Size = new System.Drawing.Size(349, 29);
             this.label1.TabIndex = 4;
             this.label1.Text = "My Sensory Experiences Interview";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(208, 258);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Location = new System.Drawing.Point(277, 318);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 21);
+            this.comboBox1.Size = new System.Drawing.Size(185, 24);
             this.comboBox1.TabIndex = 7;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // radioGuided
             // 
             this.radioGuided.AutoSize = true;
-            this.radioGuided.Location = new System.Drawing.Point(208, 342);
-            this.radioGuided.Margin = new System.Windows.Forms.Padding(2);
+            this.radioGuided.Location = new System.Drawing.Point(277, 382);
+            this.radioGuided.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioGuided.Name = "radioGuided";
-            this.radioGuided.Size = new System.Drawing.Size(105, 17);
+            this.radioGuided.Size = new System.Drawing.Size(134, 21);
             this.radioGuided.TabIndex = 8;
             this.radioGuided.TabStop = true;
             this.radioGuided.Text = "Guided Interview";
@@ -132,10 +131,10 @@
             // radioIndependent
             // 
             this.radioIndependent.AutoSize = true;
-            this.radioIndependent.Location = new System.Drawing.Point(208, 373);
-            this.radioIndependent.Margin = new System.Windows.Forms.Padding(2);
+            this.radioIndependent.Location = new System.Drawing.Point(277, 422);
+            this.radioIndependent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioIndependent.Name = "radioIndependent";
-            this.radioIndependent.Size = new System.Drawing.Size(131, 17);
+            this.radioIndependent.Size = new System.Drawing.Size(167, 21);
             this.radioIndependent.TabIndex = 8;
             this.radioIndependent.TabStop = true;
             this.radioIndependent.Text = "Independent Interview";
@@ -144,22 +143,33 @@
             // radioFamily
             // 
             this.radioFamily.AutoSize = true;
-            this.radioFamily.Location = new System.Drawing.Point(208, 310);
+            this.radioFamily.Location = new System.Drawing.Point(277, 462);
+            this.radioFamily.Margin = new System.Windows.Forms.Padding(4);
             this.radioFamily.Name = "radioFamily";
-            this.radioFamily.Size = new System.Drawing.Size(100, 17);
+            this.radioFamily.Size = new System.Drawing.Size(157, 21);
             this.radioFamily.TabIndex = 9;
             this.radioFamily.TabStop = true;
-            this.radioFamily.Text = "Family Interview";
+            this.radioFamily.Text = "Family Observations";
             this.radioFamily.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(648, 276);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "label2";
             // 
             // SelectInterview
             // 
             this.AcceptButton = this.btnStart;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(411, 468);
+            this.ClientSize = new System.Drawing.Size(529, 576);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.radioFamily);
             this.Controls.Add(this.radioIndependent);
             this.Controls.Add(this.radioGuided);
@@ -169,7 +179,7 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnStart);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SelectInterview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Interview";
@@ -191,6 +201,7 @@
         private System.Windows.Forms.RadioButton radioGuided;
         private System.Windows.Forms.RadioButton radioIndependent;
         private System.Windows.Forms.RadioButton radioFamily;
+        private System.Windows.Forms.Label label2;
     }
 }
 

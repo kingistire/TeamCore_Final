@@ -62,7 +62,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CapstoneDB\CapstoneDB.Designer.cs">
+    <Compile Include="CapstoneDB\CapstoneDB.Designer.cs" />
+    <Compile Include="CapstoneDB\CapstoneDB1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CapstoneDB.xsd</DependentUpon>
@@ -289,7 +290,7 @@
     </None>
     <None Include="CapstoneDB\CapstoneDB.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CapstoneDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>CapstoneDB1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="CapstoneDB\CapstoneDB.xss">
@@ -329,21 +330,21 @@
   <ItemGroup>
     <Content Include="bin\Debug\AxInterop.WMPLib.dll" />
     <Content Include="bin\Debug\CapstoneDB\CapstoneDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="bin\Debug\CapstoneDB\CapstoneDB_log.ldf">
       <DependentUpon>CapstoneDB.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="bin\Debug\Interop.WMPLib.dll" />
     <Content Include="bin\Debug\Login.exe" />
     <Content Include="bin\Debug\Login.pdb" />
     <Content Include="CapstoneDB\CapstoneDB.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="CapstoneDB\CapstoneDB_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>CapstoneDB.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\0testsound.mp3" />
     <Content Include="resources\1. Hearing\1. Are there some sounds that you don%27t like_\1.1.1OtherPeopleTalking.wav" />

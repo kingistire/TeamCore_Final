@@ -40,6 +40,7 @@ namespace Login {
             InitializeComponent();          
             this.Location = new Point(0, 0);
             btnPreviousInterview.Click += previousInterviewSlideBtn_Click;
+            button1.Click += btnNext1_Click_1;
             //Dynamically create the circular picture boxes
             createCirclePB(bottomLeftPB);
             createCirclePB(bottomLeftPB2);
@@ -1857,7 +1858,6 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 7) {
-                saveWrittenAnswerToDB("hardToListen", "comment3", tbAnswer1.Text.ToString());
                 IndependentInterview soundPage4 = new IndependentInterview();
                 soundPage4.InstanceRef6 = this;
                 soundPage4.Show();
