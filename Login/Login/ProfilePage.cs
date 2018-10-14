@@ -90,7 +90,7 @@ namespace Login
             string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                         @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
             SqlConnection conDatabase = new SqlConnection(constring);
-            SqlCommand cmdDatabase = new SqlCommand(" select * from likeSounds WHERE ID = @id;", conDatabase);
+            SqlCommand cmdDatabase = new SqlCommand(" select * from linkProfileInterview WHERE ProfileID = @id;", conDatabase);
             cmdDatabase.Parameters.AddWithValue("@id", thisProfileId);
             try {
                 SqlDataAdapter sda = new SqlDataAdapter();

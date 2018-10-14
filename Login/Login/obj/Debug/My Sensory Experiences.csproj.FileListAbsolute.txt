@@ -211,8 +211,6 @@ C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experie
 C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.exe
 C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.pdb
 C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB.mdf
-C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Debug\bin\Debug\CapstoneDB\CapstoneDB.mdf
-C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Debug\bin\Debug\CapstoneDB\CapstoneDB_log.ldf
 C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\bin\Debug\bin\Debug\CapstoneDB\CapstoneDB.mdf
 C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\bin\Debug\bin\Debug\CapstoneDB\CapstoneDB_log.ldf
 C:\Users\bryce\Desktop\TeamCore_Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB.mdf

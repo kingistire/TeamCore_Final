@@ -63,20 +63,15 @@ namespace Login {
                 con = new SqlConnection(@"Data Source =(LocalDB)\MSSQLLocalDB;" +
                     @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True");
                 con.Open();
-                cmd = new SqlCommand("INSERT INTO UserInformation (firstName, lastName, gender, age, phone, email) VALUES (@firstName, @lastName, @gender, @age, @phone, @email)", con);
-                cmd.Parameters.AddWithValue("@firstName", tbEmail.Text);
-                cmd.Parameters.AddWithValue("@lastName", tbFname.Text);
-                cmd.Parameters.AddWithValue("@age", tbPass1.Text);
+                cmd = new SqlCommand("INSERT INTO Login (Email, fName, lName, password) VALUES (@email, @firstName, @lastName, @password)", con);
                 cmd.Parameters.AddWithValue("@email", tbEmail.Text);
-                //cmd.Parameters.AddWithValue("@gender", tbGender.Text);
+                cmd.Parameters.AddWithValue("@firstName", tbFname.Text);
+                cmd.Parameters.AddWithValue("@lastName", tbLname.Text);
+                cmd.Parameters.AddWithValue("@password", tbPass1.Text);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("New user has been added successfully.");
-
+                MessageBox.Show("New administrator has been added successfully.");
                 this.Close();
-            }
-
-
-            
+            }       
             }
 
         private void NewOTAccount_FormClosing(object sender, FormClosingEventArgs e)

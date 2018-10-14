@@ -15,7 +15,11 @@ namespace Login {
 
         public MDIParent1() {
             InitializeComponent();
-            
+
+            UserManagment userMngment = new UserManagment();
+            userMngment.MdiParent = this;
+            userMngment.Show();
+
         }
 
         //this code is supposed to check if form exists when you try to open it
