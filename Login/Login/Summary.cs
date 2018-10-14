@@ -68,6 +68,10 @@ namespace Login {
                     }
                     //If statement for appropriate display of label and textbox
                     if(columnNumberInSummary == 1) {
+                        srAnswer1.Clear();
+                        srAnswer2.Clear();
+                        srAnswer3.Clear();
+                        srAnswer4.Clear();
                         srAnswer1.AppendText(list[0]);
                         srAnswer1.ReadOnly = true;
                         srAnswer2.Visible = false;
@@ -77,6 +81,10 @@ namespace Login {
                         srAnswer4.Visible = false;
                         srAnswer4.Enabled = false;
                     } else if (columnNumberInSummary == 2) {
+                        srAnswer5.Clear();
+                        srAnswer6.Clear();
+                        srAnswer7.Clear();
+                        srAnswer8.Clear();
                         srAnswer5.AppendText(list[0]);
                         srAnswer5.ReadOnly = true;
                         srAnswer6.Visible = false;
@@ -86,6 +94,10 @@ namespace Login {
                         srAnswer8.Visible = false;
                         srAnswer8.Enabled = false;
                     } else if (columnNumberInSummary == 3) {
+                        srAnswer9.Clear();
+                        srAnswer10.Clear();
+                        srAnswer11.Clear();
+                        srAnswer12.Clear();
                         srAnswer9.AppendText(list[0]);
                         srAnswer9.ReadOnly = true;
                         srAnswer10.Visible = false;
@@ -95,6 +107,10 @@ namespace Login {
                         srAnswer12.Visible = false;
                         srAnswer12.Enabled = false;
                     } else if (columnNumberInSummary == 4) {
+                        srAnswer13.Clear();
+                        srAnswer14.Clear();
+                        srAnswer15.Clear();
+                        srAnswer16.Clear();
                         srAnswer13.AppendText(list[0]);
                         srAnswer13.ReadOnly = true;
                         srAnswer14.Visible = false;
@@ -104,6 +120,10 @@ namespace Login {
                         srAnswer16.Visible = false;
                         srAnswer16.Enabled = false;
                     } else if (columnNumberInSummary == 5) {
+                        srAnswer17.Clear();
+                        srAnswer18.Clear();
+                        srAnswer19.Clear();
+                        srAnswer20.Clear();
                         srAnswer17.AppendText(list[0]);
                         srAnswer17.ReadOnly = true;
                         srAnswer18.Visible = false;
@@ -131,6 +151,10 @@ namespace Login {
                     }
                     //If statement for appropriate display of label and textbox
                     if (columnNumberInSummary == 1) {
+                        srAnswer1.Clear();
+                        srAnswer2.Clear();
+                        srAnswer3.Clear();
+                        srAnswer4.Clear();
                         srAnswer1.AppendText(list1[0]);
                         srAnswer1.ReadOnly = true;
                         srAnswer2.AppendText(list1[1]);
@@ -140,6 +164,10 @@ namespace Login {
                         srAnswer4.Visible = false;
                         srAnswer4.Enabled = false;
                     } else if (columnNumberInSummary == 2) {
+                        srAnswer5.Clear();
+                        srAnswer6.Clear();
+                        srAnswer7.Clear();
+                        srAnswer8.Clear();
                         srAnswer5.AppendText(list1[0]);
                         srAnswer5.ReadOnly = true;
                         srAnswer6.AppendText(list1[1]);
@@ -149,6 +177,10 @@ namespace Login {
                         srAnswer8.Visible = false;
                         srAnswer8.Enabled = false;
                     } else if (columnNumberInSummary == 3) {
+                        srAnswer9.Clear();
+                        srAnswer10.Clear();
+                        srAnswer11.Clear();
+                        srAnswer12.Clear();
                         srAnswer9.AppendText(list1[0]);
                         srAnswer9.ReadOnly = true;
                         srAnswer10.AppendText(list1[1]);
@@ -158,6 +190,10 @@ namespace Login {
                         srAnswer12.Visible = false;
                         srAnswer12.Enabled = false;
                     } else if (columnNumberInSummary == 4) {
+                        srAnswer13.Clear();
+                        srAnswer14.Clear();
+                        srAnswer15.Clear();
+                        srAnswer16.Clear();
                         srAnswer13.AppendText(list1[0]);
                         srAnswer13.ReadOnly = true;
                         srAnswer14.AppendText(list1[1]);
@@ -167,6 +203,10 @@ namespace Login {
                         srAnswer16.Visible = false;
                         srAnswer16.Enabled = false;
                     } else if (columnNumberInSummary == 5) {
+                        srAnswer17.Clear();
+                        srAnswer18.Clear();
+                        srAnswer19.Clear();
+                        srAnswer20.Clear();
                         srAnswer17.AppendText(list1[0]);
                         srAnswer17.ReadOnly = true;
                         srAnswer18.AppendText(list1[1]);
@@ -198,7 +238,11 @@ namespace Login {
                     }
                     //If statement for appropriate display of label and textbox
                         if (columnNumberInSummary == 1) {
-                            srAnswer1.AppendText(list2[0]);
+                        srAnswer1.Clear();
+                        srAnswer2.Clear();
+                        srAnswer3.Clear();
+                        srAnswer4.Clear();
+                        srAnswer1.AppendText(list2[0]);
                             srAnswer1.ReadOnly = true;
                             srAnswer2.AppendText(list2[1]);
                             srAnswer2.ReadOnly = true;
@@ -207,7 +251,11 @@ namespace Login {
                             srAnswer4.Visible = false;
                             srAnswer4.Enabled = false;
                         } else if (columnNumberInSummary == 2) {
-                            srAnswer5.AppendText(list2[0]);
+                        srAnswer5.Clear();
+                        srAnswer6.Clear();
+                        srAnswer7.Clear();
+                        srAnswer8.Clear();
+                        srAnswer5.AppendText(list2[0]);
                             srAnswer5.ReadOnly = true;
                             srAnswer6.AppendText(list2[1]);
                             srAnswer6.ReadOnly = true;
@@ -216,7 +264,11 @@ namespace Login {
                             srAnswer8.Visible = false;
                             srAnswer8.Enabled = false;
                         } else if (columnNumberInSummary == 3) {
-                            srAnswer9.AppendText(list2[0]);
+                        srAnswer9.Clear();
+                        srAnswer10.Clear();
+                        srAnswer11.Clear();
+                        srAnswer12.Clear();
+                        srAnswer9.AppendText(list2[0]);
                             srAnswer9.ReadOnly = true;
                             srAnswer10.AppendText(list2[1]);
                             srAnswer10.ReadOnly = true;
@@ -225,7 +277,11 @@ namespace Login {
                             srAnswer12.Visible = false;
                             srAnswer12.Enabled = false;
                         } else if (columnNumberInSummary == 4) {
-                            srAnswer13.AppendText(list2[0]);
+                        srAnswer13.Clear();
+                        srAnswer14.Clear();
+                        srAnswer15.Clear();
+                        srAnswer16.Clear();
+                        srAnswer13.AppendText(list2[0]);
                             srAnswer13.ReadOnly = true;
                             srAnswer14.AppendText(list2[1]);
                             srAnswer14.ReadOnly = true;
@@ -234,7 +290,11 @@ namespace Login {
                             srAnswer16.Visible = false;
                             srAnswer16.Enabled = false;
                         } else if (columnNumberInSummary == 5) {
-                            srAnswer17.AppendText(list2[0]);
+                        srAnswer17.Clear();
+                        srAnswer18.Clear();
+                        srAnswer19.Clear();
+                        srAnswer20.Clear();
+                        srAnswer17.AppendText(list2[0]);
                             srAnswer17.ReadOnly = true;
                             srAnswer18.AppendText(list2[1]);
                             srAnswer18.ReadOnly = true;
@@ -259,6 +319,10 @@ namespace Login {
                         }
                     }
                     if (columnNumberInSummary == 1) {
+                        srAnswer1.Clear();
+                        srAnswer2.Clear();
+                        srAnswer3.Clear();
+                        srAnswer4.Clear();
                         srAnswer1.AppendText(list3[0]);
                         srAnswer1.ReadOnly = true;
                         srAnswer2.AppendText(list3[1]);
@@ -268,6 +332,10 @@ namespace Login {
                         srAnswer4.AppendText(list3[3]);
                         srAnswer4.ReadOnly = true;
                     } else if (columnNumberInSummary == 2) {
+                        srAnswer5.Clear();
+                        srAnswer6.Clear();
+                        srAnswer7.Clear();
+                        srAnswer8.Clear();
                         srAnswer5.AppendText(list3[0]);
                         srAnswer5.ReadOnly = true;
                         srAnswer6.AppendText(list3[1]);
@@ -277,6 +345,10 @@ namespace Login {
                         srAnswer8.AppendText(list3[3]);
                         srAnswer8.ReadOnly = true;
                     } else if (columnNumberInSummary == 3) {
+                        srAnswer9.Clear();
+                        srAnswer10.Clear();
+                        srAnswer11.Clear();
+                        srAnswer12.Clear();
                         srAnswer9.AppendText(list3[0]);
                         srAnswer9.ReadOnly = true;
                         srAnswer10.AppendText(list3[1]);
@@ -286,6 +358,10 @@ namespace Login {
                         srAnswer12.AppendText(list3[3]);
                         srAnswer12.ReadOnly = true;
                     } else if (columnNumberInSummary == 4) {
+                        srAnswer13.Clear();
+                        srAnswer14.Clear();
+                        srAnswer15.Clear();
+                        srAnswer16.Clear();
                         srAnswer13.AppendText(list3[0]);
                         srAnswer13.ReadOnly = true;
                         srAnswer14.AppendText(list3[1]);
@@ -295,6 +371,10 @@ namespace Login {
                         srAnswer16.AppendText(list3[3]);
                         srAnswer16.ReadOnly = true;
                     } else if (columnNumberInSummary == 5) {
+                        srAnswer17.Clear();
+                        srAnswer18.Clear();
+                        srAnswer19.Clear();
+                        srAnswer20.Clear();
                         srAnswer17.AppendText(list3[0]);
                         srAnswer17.ReadOnly = true;
                         srAnswer18.AppendText(list3[1]);
@@ -647,96 +727,101 @@ string text3, string text4, string text5, string text6) {
         }
 
         private void button1_Click(object sender, EventArgs e) {
-            if (displayShortResponse) {
-                shortResponseContainerPanel.Visible = true;
-                shortResponseContainerPanel.Enabled = true;
-                getAdditionalCommentAnswer(3, "dislikeSounds", 1);
-                getAdditionalCommentAnswer(2, "hardToListen", 2);
-                getAdditionalCommentAnswer(4, "hardToConcentrate", 3);
-                getAdditionalCommentAnswer(3, "likeSounds", 4);
-                getAdditionalCommentAnswer(3, "makeALotSounds", 5);
-                updateSRTopicLabel("", "", "", "", "");
-            } else {
+                if (displayShortResponse) {
+                    shortResponseContainerPanel.Visible = true;
+                    shortResponseContainerPanel.Enabled = true;
+                    getAdditionalCommentAnswer(3, "dislikeSounds", 1);
+                    getAdditionalCommentAnswer(2, "hardToListen", 2);
+                    getAdditionalCommentAnswer(4, "hardToConcentrate", 3);
+                    getAdditionalCommentAnswer(3, "likeSounds", 4);
+                    getAdditionalCommentAnswer(3, "makeALotSounds", 5);
+                    updateSRTopicLabel("Are there some sounds that you don't like?",
+                        "Are there times when it is hard for you to listen?",
+                        "Are there some sounds that make it hard for you to concentrate?",
+                        "Are there some sounds that you like to listen to?",
+                        "Are there some sounds that you make a lot?");
+                } else {
 
-                hidePanels();
-                topic1ResultPanel.Visible = true;
-                topic2ResultPanel.Visible = true;
-                topic3ResultPanel.Visible = true;
-                topic4ResultPanel.Visible = true;
-                topic5ResultPanel.Visible = true;
-                clearTable(resultsTable, 8);
-                clearTable(topic2Table, 3);
-                clearTable(topic3Table, 3);
-                clearTable(topic4Table, 5);
-                clearTable(topic5Table, 4);
-                updateTopicLabel("Are there some sounds that you don't like?",
-                    "Are there times when it is hard for you to listen?",
-                    "Are there some sounds that make it hard for you to concentrate?",
-                    "Are there some sounds that you like to listen to?",
-                    "Are there some sounds that you make a lot?");
-                updateTopic1ResultLabel(8, "Other People Talking", "Fireworks", "Loud Voices", "Household Appliances", "Vehicles", 
-                    "Bathroom Appliances", "Sirens/Alarms/School Bells", "Sudden Loud Noises");
-                updateTopic2ResultLabel(3, "If I am concentrating on something, \n I don't notice people talking to me",
-                    "I find it hard to listen to the teacher \n in noisy classrooms",
-                    "I find it hard to listen to someone \n talking to me when I'm in a group", "", "", "", "", "");
+                    hidePanels();
+                    topic1ResultPanel.Visible = true;
+                    topic2ResultPanel.Visible = true;
+                    topic3ResultPanel.Visible = true;
+                    topic4ResultPanel.Visible = true;
+                    topic5ResultPanel.Visible = true;
+                    clearTable(resultsTable, 8);
+                    clearTable(topic2Table, 3);
+                    clearTable(topic3Table, 3);
+                    clearTable(topic4Table, 5);
+                    clearTable(topic5Table, 4);
+                    updateTopicLabel("Are there some sounds that you don't like?",
+                        "Are there times when it is hard for you to listen?",
+                        "Are there some sounds that make it hard for you to concentrate?",
+                        "Are there some sounds that you like to listen to?",
+                        "Are there some sounds that you make a lot?");
+                    updateTopic1ResultLabel(8, "Other People Talking", "Fireworks", "Loud Voices", "Household Appliances", "Vehicles",
+                        "Bathroom Appliances", "Sirens/Alarms/School Bells", "Sudden Loud Noises");
+                    updateTopic2ResultLabel(3, "If I am concentrating on something, \n I don't notice people talking to me",
+                        "I find it hard to listen to the teacher \n in noisy classrooms",
+                        "I find it hard to listen to someone \n talking to me when I'm in a group", "", "", "", "", "");
                     updateTopic3ResultLabel(3, "Radio On", "Clock Ticking", "People Talking", "", "", "");
-                updateTopic5ResultLabel(4, "Humming or whistling to myself", "Tapping Feet", "Tapping Fingers", "Clicking Pen", "", "");
-                updateTopic4ResultLabel(5, "Computer Sounds", "Live Music", "Fans", "Music Through My Phone", "Rhythsm", "");
+                    updateTopic5ResultLabel(4, "Humming or whistling to myself", "Tapping Feet", "Tapping Fingers", "Clicking Pen", "", "");
+                    updateTopic4ResultLabel(5, "Computer Sounds", "Live Music", "Fans", "Music Through My Phone", "Rhythsm", "");
 
-                getDBAnser("dislikeSounds", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
-                getDBAnser("hardToListen", 3, topic2Results1, topic2Results2, topic2Results3, null, null, null, null, null);
-                getDBAnser("hardToConcentrate", 3, topic3Results1, topic3Results2, topic3Results3, null, null, null, null, null);
-                getDBAnser("likeSounds", 5, topic4Results1, topic4Results2, topic4Results3, topic4Results4, topic4Results5, null, null, null);
-                getDBAnser("makeALotSounds", 4, topic5Results1, topic5Results2, topic5Results3, topic5Results4, null, null, null, null);
+                    getDBAnser("dislikeSounds", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
+                    getDBAnser("hardToListen", 3, topic2Results1, topic2Results2, topic2Results3, null, null, null, null, null);
+                    getDBAnser("hardToConcentrate", 3, topic3Results1, topic3Results2, topic3Results3, null, null, null, null, null);
+                    getDBAnser("likeSounds", 5, topic4Results1, topic4Results2, topic4Results3, topic4Results4, topic4Results5, null, null, null);
+                    getDBAnser("makeALotSounds", 4, topic5Results1, topic5Results2, topic5Results3, topic5Results4, null, null, null, null);
 
-                //Re-Add the labels
-                this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
-                this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
-                this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
-                this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
-                this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
-                this.resultsTable.Controls.Add(this.topic1Image6, 0, 5);
-                this.resultsTable.Controls.Add(this.topic1Image7, 0, 6);
-                this.resultsTable.Controls.Add(this.topic1Image8, 0, 7);
-                this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
-                this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
-                this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
-                this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
-                this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
-                this.resultsTable.Controls.Add(this.topic1Results6, 1, 5);
-                this.resultsTable.Controls.Add(this.topic1Results7, 1, 6);
-                this.resultsTable.Controls.Add(this.topic1Results8, 1, 7);
-                this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
-                this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
-                this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
-                this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
-                this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
-                this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
-                this.topic3Table.Controls.Add(this.topic3Image1, 0, 0);
-                this.topic3Table.Controls.Add(this.topic3Image2, 0, 1);
-                this.topic3Table.Controls.Add(this.topic3Image3, 0, 2);
-                this.topic3Table.Controls.Add(this.topic3Results1, 1, 0);
-                this.topic3Table.Controls.Add(this.topic3Results2, 1, 1);
-                this.topic3Table.Controls.Add(this.topic3Results3, 1, 2);
-                this.topic4Table.Controls.Add(this.topic4Image1, 0, 0);
-                this.topic4Table.Controls.Add(this.topic4Image2, 0, 1);
-                this.topic4Table.Controls.Add(this.topic4Image3, 0, 2);
-                this.topic4Table.Controls.Add(this.topic4Results1, 1, 0);
-                this.topic4Table.Controls.Add(this.topic4Results2, 1, 1);
-                this.topic4Table.Controls.Add(this.topic4Results3, 1, 2);
-                this.topic4Table.Controls.Add(this.topic4Image4, 0, 3);
-                this.topic4Table.Controls.Add(this.topic4Results4, 1, 3);
-                this.topic4Table.Controls.Add(this.topic4Image5, 0, 4);
-                this.topic4Table.Controls.Add(this.topic4Results5, 1, 4);
-                this.topic5Table.Controls.Add(this.topic5Image1, 0, 0);
-                this.topic5Table.Controls.Add(this.topic5Image2, 0, 1);
-                this.topic5Table.Controls.Add(this.topic5Image3, 0, 2);
-                this.topic5Table.Controls.Add(this.topic5Results1, 1, 0);
-                this.topic5Table.Controls.Add(this.topic5Results2, 1, 1);
-                this.topic5Table.Controls.Add(this.topic5Results3, 1, 2);
-                this.topic5Table.Controls.Add(this.topic5Image4, 0, 3);
-                this.topic5Table.Controls.Add(this.topic5Results4, 1, 3);
-            }
+                    //Re-Add the labels
+                    this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
+                    this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
+                    this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
+                    this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
+                    this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
+                    this.resultsTable.Controls.Add(this.topic1Image6, 0, 5);
+                    this.resultsTable.Controls.Add(this.topic1Image7, 0, 6);
+                    this.resultsTable.Controls.Add(this.topic1Image8, 0, 7);
+                    this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
+                    this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
+                    this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
+                    this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
+                    this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
+                    this.resultsTable.Controls.Add(this.topic1Results6, 1, 5);
+                    this.resultsTable.Controls.Add(this.topic1Results7, 1, 6);
+                    this.resultsTable.Controls.Add(this.topic1Results8, 1, 7);
+                    this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
+                    this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
+                    this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
+                    this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
+                    this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
+                    this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
+                    this.topic3Table.Controls.Add(this.topic3Image1, 0, 0);
+                    this.topic3Table.Controls.Add(this.topic3Image2, 0, 1);
+                    this.topic3Table.Controls.Add(this.topic3Image3, 0, 2);
+                    this.topic3Table.Controls.Add(this.topic3Results1, 1, 0);
+                    this.topic3Table.Controls.Add(this.topic3Results2, 1, 1);
+                    this.topic3Table.Controls.Add(this.topic3Results3, 1, 2);
+                    this.topic4Table.Controls.Add(this.topic4Image1, 0, 0);
+                    this.topic4Table.Controls.Add(this.topic4Image2, 0, 1);
+                    this.topic4Table.Controls.Add(this.topic4Image3, 0, 2);
+                    this.topic4Table.Controls.Add(this.topic4Results1, 1, 0);
+                    this.topic4Table.Controls.Add(this.topic4Results2, 1, 1);
+                    this.topic4Table.Controls.Add(this.topic4Results3, 1, 2);
+                    this.topic4Table.Controls.Add(this.topic4Image4, 0, 3);
+                    this.topic4Table.Controls.Add(this.topic4Results4, 1, 3);
+                    this.topic4Table.Controls.Add(this.topic4Image5, 0, 4);
+                    this.topic4Table.Controls.Add(this.topic4Results5, 1, 4);
+                    this.topic5Table.Controls.Add(this.topic5Image1, 0, 0);
+                    this.topic5Table.Controls.Add(this.topic5Image2, 0, 1);
+                    this.topic5Table.Controls.Add(this.topic5Image3, 0, 2);
+                    this.topic5Table.Controls.Add(this.topic5Results1, 1, 0);
+                    this.topic5Table.Controls.Add(this.topic5Results2, 1, 1);
+                    this.topic5Table.Controls.Add(this.topic5Results3, 1, 2);
+                    this.topic5Table.Controls.Add(this.topic5Image4, 0, 3);
+                    this.topic5Table.Controls.Add(this.topic5Results4, 1, 3);
+                }
+            
 
         }
 
@@ -806,7 +891,11 @@ string text3, string text4, string text5, string text6) {
                     shortResponseContainerPanel.Enabled = true;
                     getAdditionalCommentAnswer(3, "dontLikeToLookAt", 1);
                     getAdditionalCommentAnswer(2, "sightHardToConcentrate", 2);
-                    getAdditionalCommentAnswer(3, "likeTOLookAtt", 3);
+                    getAdditionalCommentAnswer(3, "likeToLookAt", 3);
+                    updateSRTopicLabel("Are there some things that you don't \n like to look at?",
+                    "Are there some things you see that make it \n hard to concentrate?",
+                    "Are there some things that you like \n to look at?",
+                    "", "");
                 }
                 updateTopicLabel("Are there some things that you don't \n like to look at?",
                     "Are there some things you see that make it \n hard to concentrate?",
@@ -881,6 +970,10 @@ string text3, string text4, string text5, string text6) {
                 hideIndividual(q4labelc2, srAnswer12);
                 hideIndividual(q3labelc3, srAnswer15);
                 hideIndividual(q4labelc3, srAnswer16);
+                updateSRTopicLabel("Are there some ways of moving \n that you don't like?",
+                "Are there times when it is hard for \n you to stay still?",
+                "Are there some ways of moving that \n you don't like?",
+                "Are there some ways that you move over \n and over again?", "");
 
             }
             clearTable(resultsTable, 5);
@@ -956,7 +1049,9 @@ string text3, string text4, string text5, string text6) {
                 getAdditionalCommentAnswer(3, "likeToSmell", 2);
                 hideIndividual(q4labelc1, srAnswer4);
                 hideIndividual(q4labelc2, srAnswer8);
-
+                updateSRTopicLabel("Are there some smells that you don't like?",
+                "Are there some things that you like to smell?",
+                "", "", "");
             }
             clearTable(resultsTable, 6);
             clearTable(topic2Table, 5);
@@ -1010,6 +1105,10 @@ string text3, string text4, string text5, string text6) {
                 getAdditionalCommentAnswer(4, "peopleTouchDontLike", 2);
                 getAdditionalCommentAnswer(3, "likeTheFeelingOf", 3);
                 hideIndividual(q4labelc3, srAnswer12);
+                updateSRTopicLabel("Are there some things that you don't \n like the feeling of?",
+                "Are there ways that people touch you that \n you don't like?",
+                "Are there some things that you \n like the feeling of?",
+                "", "");
             }
             clearTable(resultsTable, 8);
             clearTable(topic2Table, 8);
@@ -1089,7 +1188,9 @@ string text3, string text4, string text5, string text6) {
                 shortResponseContainerPanel.Enabled = true;
                 getAdditionalCommentAnswer(4, "other", 1);
                 getAdditionalCommentAnswer(4, "other", 2);
-
+                updateSRTopicLabel("Are there some places with lots of things \n happening at once that you don't like?",
+                "Are there other sensations that you \n feel strongly about?",
+                "", "", "");
             }
             clearTable(resultsTable, 5);
             clearTable(topic2Table, 6);
@@ -1319,7 +1420,7 @@ string text3, string text4, string text5, string text6) {
 
         private void Summary_Load(object sender, EventArgs e) {
             shortResponseButton();
-            getInterviewType();
+            //getInterviewType();
         }
 
         bool displayShortResponse = false;
