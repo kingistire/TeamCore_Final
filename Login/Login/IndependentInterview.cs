@@ -1525,7 +1525,7 @@ namespace Login {
                 query = "INSERT INTO dbo." + dbTableName + "(" + TLImageName + "," + TMImageName + "," +
                          TRImageName + "," +
                           BLImageName + "," +
-                           BMImageName + ") VALUES (@tl, @tm, @tr, @bl, @bm);";
+                           BMImageName + ", ID) VALUES (@tl, @tm, @tr, @bl, @bm, @userID);";
 
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
@@ -1533,6 +1533,8 @@ namespace Login {
                 cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
                 cmdDatabase.Parameters.AddWithValue("@bl", page1Selections[3]);
                 cmdDatabase.Parameters.AddWithValue("@bm", page1Selections[4]);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
+
                 cmdDatabase.ExecuteNonQuery();
             } catch (Exception err) {
                 MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);
@@ -1561,13 +1563,15 @@ namespace Login {
                 conDatabase.Open();
                 query = "INSERT INTO dbo." + dbTableName + "(" + TLImageName + "," + TMImageName + "," +
                          TRImageName + "," +
-                          BLImageName + ") VALUES (@tl, @tm, @tr, @bl);";
+                          BLImageName + ", ID) VALUES (@tl, @tm, @tr, @bl,@userID);";
 
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
                 cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
                 cmdDatabase.Parameters.AddWithValue("@bl", page1Selections[3]);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
+
                 cmdDatabase.ExecuteNonQuery();
             } catch (Exception err) {
                 MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);
@@ -1582,11 +1586,13 @@ namespace Login {
             string query;
             //Determine if a little or a lot
             try {
-                query = string.Format("UPDATE dbo.{0} SET " + columnName + " = @additionalCommentText WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.{0}) ;", tableName);
+                query = string.Format("UPDATE dbo.{0} SET " + columnName + " = @additionalCommentText, ID = @userID WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.{0}) ;", tableName);
                 conDatabase.Open();
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 //cmdDatabase = new SqlCommand("INSERT INTO dbo." + tableName + "(" + columnName + ") VALUES(@text);" , conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@additionalCommentText", comment);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
+
                 cmdDatabase.ExecuteNonQuery();
                 conDatabase.Close();
             } catch (Exception ex) {
@@ -1868,7 +1874,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 7) {
                 saveWrittenAnswerToDB("hardToListen", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("hardToListen", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("hardToListen", "comment2", tbAnswer2.Text.ToString());
                 IndependentInterview soundPage4 = new IndependentInterview();
                 soundPage4.InstanceRef6 = this;
                 soundPage4.Show();
@@ -1883,7 +1889,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 9) {
                 saveWrittenAnswerToDB("hardToConcentrate", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("hardToConcentrate", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("hardToConcentrate", "comment2", tbAnswer2.Text.ToString());
                 IndependentInterview soundPage5and6 = new IndependentInterview();
                 soundPage5and6.InstanceRef8 = this;
                 soundPage5and6.Show();
@@ -1891,7 +1897,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 10) {
                 saveWrittenAnswerToDB("hardToConcentrate", "comment3", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("hardToConcentrate", "comment4", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("hardToConcentrate", "comment4", tbAnswer2.Text.ToString());
                 IndependentInterview soundPage7 = new IndependentInterview();
                 soundPage7.InstanceRef9 = this;
                 soundPage7.Show();
@@ -1906,7 +1912,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 12) {
                 saveWrittenAnswerToDB("likeSounds", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("likeSounds", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("likeSounds", "comment2", tbAnswer2.Text.ToString());
                 IndependentInterview soundPage8 = new IndependentInterview();
                 soundPage8.InstanceRef11 = this;
                 soundPage8.Show();
@@ -1928,7 +1934,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 15) {
                 saveWrittenAnswerToDB("makeALotSounds", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("makeALotSounds", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("makeALotSounds", "comment2", tbAnswer2.Text.ToString());
                 IndependentInterview soundPage10 = new IndependentInterview();
                 soundPage10.InstanceRef14 = this;
                 soundPage10.Show();
@@ -1954,7 +1960,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 18) {
                 saveWrittenAnswerToDB("dontLikeToLookAt", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("dontLikeToLookAt", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("dontLikeToLookAt", "comment2", tbAnswer2.Text.ToString());
                 IndependentInterview sightPage2 = new IndependentInterview();
                 sightPage2.InstanceRef17 = this;
                 sightPage2.Show();
@@ -1976,7 +1982,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 21) {
                 saveWrittenAnswerToDB("sightHardToConcentrate", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("sightHardToConcentrate", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("sightHardToConcentrate", "comment2", tbAnswer2.Text.ToString());
                 IndependentInterview sightPage4 = new IndependentInterview();
                 sightPage4.InstanceRef20 = this;
                 sightPage4.Show();
@@ -1991,7 +1997,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 23) {
                 saveWrittenAnswerToDB("likeToLookAt", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("likeToLookAt", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("likeToLookAt", "comment2", tbAnswer2.Text.ToString());
                 IndependentInterview sightPage5 = new IndependentInterview();
                 sightPage5.InstanceRef22 = this;
                 sightPage5.Show();
@@ -2023,7 +2029,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 27) {
                 saveWrittenAnswerToDB("dontLikeFeelingOf", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("dontLikeFeelingOf", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("dontLikeFeelingOf", "comment2", tbAnswer2.Text.ToString());
                 IndependentInterview touchPage2 = new IndependentInterview();
                 touchPage2.InstanceRef26 = this;
                 touchPage2.Show();
@@ -2032,7 +2038,7 @@ namespace Login {
             else if (Globals.interview_page == 28) {
 
                 saveWrittenAnswerToDB("dontLikeFeelingOf", "comment3", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("dontLikeFeelingOf", "comment4", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("dontLikeFeelingOf", "comment4", tbAnswer2.Text.ToString());
                 IndependentInterview touchPage3 = new IndependentInterview();
                 touchPage3.InstanceRef27 = this;
                 touchPage3.Show();
@@ -2054,7 +2060,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 31) {
                 saveWrittenAnswerToDB("peopleTouchDontLike", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("peopleTouchDontLike", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("peopleTouchDontLike", "comment2", tbAnswer2.Text.ToString());
                 IndependentInterview touchPage4 = new IndependentInterview();
                 touchPage4.InstanceRef30 = this;
                 touchPage4.Show();
@@ -2062,7 +2068,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 32) {
                 saveWrittenAnswerToDB("peopleTouchDontLike", "comment3", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("peopleTouchDontLike", "comment4", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("peopleTouchDontLike", "comment4", tbAnswer2.Text.ToString());
                 IndependentInterview touchPage5 = new IndependentInterview();
                 touchPage5.InstanceRef31 = this;
                 touchPage5.Show();
@@ -2077,7 +2083,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 34) {
                 saveWrittenAnswerToDB("likeTheFeelingOf", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("likeTheFeelingOf", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("likeTheFeelingOf", "comment2", tbAnswer2.Text.ToString());
                 IndependentInterview touchPage6 = new IndependentInterview();
                 touchPage6.InstanceRef33 = this;
                 touchPage6.Show();
@@ -2102,7 +2108,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 37) {
                 saveWrittenAnswerToDB("smellDontLike", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("smellDontLike", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("smellDontLike", "comment2", tbAnswer2.Text.ToString());
                 IndependentInterview smellPage2 = new IndependentInterview();
                 smellPage2.InstanceRef36 = this;
                 smellPage2.Show();
@@ -2124,7 +2130,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 40) {
                 saveWrittenAnswerToDB("likeToSmell", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("likeToSmell", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("likeToSmell", "comment2", tbAnswer2.Text.ToString());
                 IndependentInterview smellPage4 = new IndependentInterview();
                 smellPage4.InstanceRef39 = this;
                 smellPage4.Show();
@@ -2156,7 +2162,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 44) {
                 saveWrittenAnswerToDB("foodGroupsDontLike", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("foodGroupsDontLike", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("foodGroupsDontLike", "comment2", tbAnswer2.Text.ToString());
 
                 IndependentInterview tastePage2 = new IndependentInterview();
                 tastePage2.InstanceRef43 = this;
@@ -2179,7 +2185,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 47) {
                 saveWrittenAnswerToDB("tastesOrFeelsInMouthDontLike", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("tastesOrFeelsInMouthDontLike", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("tastesOrFeelsInMouthDontLike", "comment2", tbAnswer2.Text.ToString());
                 IndependentInterview tastePage3 = new IndependentInterview();
                 tastePage3.InstanceRef46 = this;
                 tastePage3.Show();
@@ -2201,7 +2207,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 50) {
                 saveWrittenAnswerToDB("foodReallyLikeToEat", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("foodReallyLikeToEat", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("foodReallyLikeToEat", "comment2", tbAnswer2.Text.ToString());
                 IndependentInterview tastePage5 = new IndependentInterview();
                 tastePage5.InstanceRef49 = this;
                 tastePage5.Show();
@@ -2223,7 +2229,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 53) {
                 saveWrittenAnswerToDB("thingsPutInMouthALot", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("thingsPutInMouthALot", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("thingsPutInMouthALot", "comment2", tbAnswer2.Text.ToString());
                 IndependentInterview tastePage7 = new IndependentInterview();
                 tastePage7.InstanceRef52 = this;
                 tastePage7.Show();
@@ -2248,7 +2254,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 56) {
                 saveWrittenAnswerToDB("movingDontLike", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("movingDontLike", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("movingDontLike", "comment2", tbAnswer2.Text.ToString());
                 this.Hide();
                 IndependentInterview mvmtPage2 = new IndependentInterview();
                 mvmtPage2.InstanceRef55 = this;
@@ -2257,7 +2263,7 @@ namespace Login {
             else if (Globals.interview_page == 57) {
 
                 saveWrittenAnswerToDB("movingDontLike", "comment3", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("movingDontLike", "comment4", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("movingDontLike", "comment4", tbAnswer2.Text.ToString());
                 this.Hide();
                 IndependentInterview mvmtPage3 = new IndependentInterview();
                 mvmtPage3.InstanceRef56 = this;
@@ -2287,7 +2293,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 61) {
                 saveWrittenAnswerToDB("movingThatYouLike", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("movingThatYouLike", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("movingThatYouLike", "comment2", tbAnswer2.Text.ToString());
                 IndependentInterview mvmtPage5 = new IndependentInterview();
                 mvmtPage5.InstanceRef60 = this;
                 mvmtPage5.Show();
@@ -2302,7 +2308,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 63) {
                 saveWrittenAnswerToDB("moveOverAndOverAgain", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("moveOverAndOverAgain", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("moveOverAndOverAgain", "comment2", tbAnswer2.Text.ToString());
                 this.Hide();
                 IndependentInterview mvmtPage6 = new IndependentInterview();
                 mvmtPage6.InstanceRef62 = this;
@@ -2313,7 +2319,7 @@ namespace Login {
             //-------------------
             else if (Globals.interview_page == 64) {
                 saveWrittenAnswerToDB("moveOverAndOverAgain", "comment3", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("moveOverAndOverAgain", "comment4", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("moveOverAndOverAgain", "comment4", tbAnswer2.Text.ToString());
                 IndependentInterview environmentPage1 = new IndependentInterview();
                 environmentPage1.InstanceRef63 = this;
                 environmentPage1.Show();
@@ -2328,7 +2334,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 66) {
                 saveWrittenAnswerToDB("other", "comment1", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("other", "comment2", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("other", "comment2", tbAnswer2.Text.ToString());
                 IndependentInterview environmentPage2 = new IndependentInterview();
                 environmentPage2.InstanceRef65 = this;
                 environmentPage2.Show();
@@ -2339,7 +2345,7 @@ namespace Login {
             //-------------
             else if (Globals.interview_page == 67) {
                 saveWrittenAnswerToDB("other", "comment3", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("other", "comment4", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("other", "comment4", tbAnswer2.Text.ToString());
                 IndependentInterview otherPage1 = new IndependentInterview();
                 otherPage1.InstanceRef66 = this;
                 otherPage1.Show();
@@ -2354,7 +2360,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 69) {
                 saveWrittenAnswerToDB("other", "comment5", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("other", "comment6", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("other", "comment6", tbAnswer2.Text.ToString());
                 IndependentInterview otherPage2 = new IndependentInterview();
                 otherPage2.InstanceRef68 = this;
                 otherPage2.Show();
@@ -2362,7 +2368,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 70) {
                 saveWrittenAnswerToDB("other", "comment7", tbAnswer1.Text.ToString());
-                saveWrittenAnswerToDB("other", "comment8", tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB("other", "comment8", tbAnswer2.Text.ToString());
                 IndependentInterview additionalNotes = new IndependentInterview();
                 additionalNotesPanel.BringToFront();
             }

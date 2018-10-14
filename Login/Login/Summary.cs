@@ -40,24 +40,271 @@ namespace Login {
                 changeSummaryPanelType.Enabled = false;
             }
         }
-        
+        string id = Globals.userID;
+
         /// <summary>
         /// Get the additional comments from the database
         /// </summary>
-        private void getAdditionalCommentAnswer(string tableNameParam) {
+        private void getAdditionalCommentAnswer(int numOfSRQuestions, string tableNameParam, int columnNumberInSummary) {
             string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                                 @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
             SqlConnection conDatabase = new SqlConnection(constring);
-            //Replace summary in string with variable for db table name
-            SqlCommand command = new SqlCommand("SELECT comment1, comment2, comment3 FROM " + tableNameParam + " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ");", conDatabase);
-            conDatabase.Open();
-            SqlDataReader dr = command.ExecuteReader();
-            List<string> list = new List<string>();
-            while (dr.Read()) {
-                //Iterate through loop and add to list
-                for (int i = 0; i < 3; i++) {
-                    list.Add(dr[i].ToString());
-                }
+            string query;
+            //Switch to determine number of comment in Database
+            switch (numOfSRQuestions) {
+                case 1:
+                    query = "SELECT comment1 FROM " + tableNameParam +
+                " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ") AND ID = @id ;";
+                    SqlCommand command = new SqlCommand(query, conDatabase);
+                    command.Parameters.AddWithValue("@id", id);
+                    conDatabase.Open();
+                    SqlDataReader dr = command.ExecuteReader();
+                    List<string> list = new List<string>();
+                    while (dr.Read()) {
+                        //Iterate through loop and add to list
+                        for (int i = 0; i < 1; i++) {
+                            list.Add(dr[i].ToString());
+                        }
+                    }
+                    //If statement for appropriate display of label and textbox
+                    if(columnNumberInSummary == 1) {
+                        srAnswer1.AppendText(list[0]);
+                        srAnswer1.ReadOnly = true;
+                        srAnswer2.Visible = false;
+                        srAnswer2.Enabled = false;
+                        srAnswer3.Visible = false;
+                        srAnswer3.Enabled = false;
+                        srAnswer4.Visible = false;
+                        srAnswer4.Enabled = false;
+                    } else if (columnNumberInSummary == 2) {
+                        srAnswer5.AppendText(list[0]);
+                        srAnswer5.ReadOnly = true;
+                        srAnswer6.Visible = false;
+                        srAnswer6.Enabled = false;
+                        srAnswer7.Visible = false;
+                        srAnswer7.Enabled = false;
+                        srAnswer8.Visible = false;
+                        srAnswer8.Enabled = false;
+                    } else if (columnNumberInSummary == 3) {
+                        srAnswer9.AppendText(list[0]);
+                        srAnswer9.ReadOnly = true;
+                        srAnswer10.Visible = false;
+                        srAnswer10.Enabled = false;
+                        srAnswer11.Visible = false;
+                        srAnswer11.Enabled = false;
+                        srAnswer12.Visible = false;
+                        srAnswer12.Enabled = false;
+                    } else if (columnNumberInSummary == 4) {
+                        srAnswer13.AppendText(list[0]);
+                        srAnswer13.ReadOnly = true;
+                        srAnswer14.Visible = false;
+                        srAnswer14.Enabled = false;
+                        srAnswer15.Visible = false;
+                        srAnswer15.Enabled = false;
+                        srAnswer16.Visible = false;
+                        srAnswer16.Enabled = false;
+                    } else if (columnNumberInSummary == 5) {
+                        srAnswer17.AppendText(list[0]);
+                        srAnswer17.ReadOnly = true;
+                        srAnswer18.Visible = false;
+                        srAnswer18.Enabled = false;
+                        srAnswer19.Visible = false;
+                        srAnswer19.Enabled = false;
+                        srAnswer20.Visible = false;
+                        srAnswer20.Enabled = false;
+                    }
+                    
+                    break;
+                case 2:
+                    query = "SELECT comment1, comment2 FROM " + tableNameParam +
+                " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ") AND ID = @id ;";
+                    SqlCommand command1 = new SqlCommand(query, conDatabase);
+                    command1.Parameters.AddWithValue("@id", id);
+                    conDatabase.Open();
+                    SqlDataReader dr1 = command1.ExecuteReader();
+                    List<string> list1 = new List<string>();
+                    while (dr1.Read()) {
+                        //Iterate through loop and add to list
+                        for (int i = 0; i < 2; i++) {
+                            list1.Add(dr1[i].ToString());
+                        }
+                    }
+                    //If statement for appropriate display of label and textbox
+                    if (columnNumberInSummary == 1) {
+                        srAnswer1.AppendText(list1[0]);
+                        srAnswer1.ReadOnly = true;
+                        srAnswer2.AppendText(list1[1]);
+                        srAnswer2.ReadOnly = true;
+                        srAnswer3.Visible = false;
+                        srAnswer3.Enabled = false;
+                        srAnswer4.Visible = false;
+                        srAnswer4.Enabled = false;
+                    } else if (columnNumberInSummary == 2) {
+                        srAnswer5.AppendText(list1[0]);
+                        srAnswer5.ReadOnly = true;
+                        srAnswer6.AppendText(list1[1]);
+                        srAnswer6.ReadOnly = true;
+                        srAnswer7.Visible = false;
+                        srAnswer7.Enabled = false;
+                        srAnswer8.Visible = false;
+                        srAnswer8.Enabled = false;
+                    } else if (columnNumberInSummary == 3) {
+                        srAnswer9.AppendText(list1[0]);
+                        srAnswer9.ReadOnly = true;
+                        srAnswer10.AppendText(list1[1]);
+                        srAnswer10.ReadOnly = true;
+                        srAnswer11.Visible = false;
+                        srAnswer11.Enabled = false;
+                        srAnswer12.Visible = false;
+                        srAnswer12.Enabled = false;
+                    } else if (columnNumberInSummary == 4) {
+                        srAnswer13.AppendText(list1[0]);
+                        srAnswer13.ReadOnly = true;
+                        srAnswer14.AppendText(list1[1]);
+                        srAnswer14.ReadOnly = true;
+                        srAnswer15.Visible = false;
+                        srAnswer15.Enabled = false;
+                        srAnswer16.Visible = false;
+                        srAnswer16.Enabled = false;
+                    } else if (columnNumberInSummary == 5) {
+                        srAnswer17.AppendText(list1[0]);
+                        srAnswer17.ReadOnly = true;
+                        srAnswer18.AppendText(list1[1]);
+                        srAnswer18.ReadOnly = true;
+                        srAnswer19.Visible = false;
+                        srAnswer19.Enabled = false;
+                        srAnswer20.Visible = false;
+                        srAnswer20.Enabled = false;
+                    }
+                    break;
+                case 3:
+                    query = "SELECT comment1, comment2, comment3 FROM " + tableNameParam +
+                " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ") AND ID = @id ;";
+                    SqlCommand command2 = new SqlCommand(query, conDatabase);
+                    command2.Parameters.AddWithValue("@id", id);
+                    conDatabase.Open();
+                    SqlDataReader dr2 = command2.ExecuteReader();
+                    List<string> list2 = new List<string>();
+                    list2.Clear();
+                    try {
+                        while (dr2.Read()) {
+                            //Iterate through loop and add to list
+                            for (int i = 0; i < 3; i++) {
+                                list2.Add(dr2[i].ToString());
+                            }
+                        }
+                    } catch (Exception ex) {
+                        MessageBox.Show(ex.Message);
+                    }
+                    //If statement for appropriate display of label and textbox
+                        if (columnNumberInSummary == 1) {
+                            srAnswer1.AppendText(list2[0]);
+                            srAnswer1.ReadOnly = true;
+                            srAnswer2.AppendText(list2[1]);
+                            srAnswer2.ReadOnly = true;
+                            srAnswer3.AppendText(list2[2]);
+                            srAnswer3.ReadOnly = true;
+                            srAnswer4.Visible = false;
+                            srAnswer4.Enabled = false;
+                        } else if (columnNumberInSummary == 2) {
+                            srAnswer5.AppendText(list2[0]);
+                            srAnswer5.ReadOnly = true;
+                            srAnswer6.AppendText(list2[1]);
+                            srAnswer6.ReadOnly = true;
+                            srAnswer7.AppendText(list2[2]);
+                            srAnswer7.ReadOnly = true;
+                            srAnswer8.Visible = false;
+                            srAnswer8.Enabled = false;
+                        } else if (columnNumberInSummary == 3) {
+                            srAnswer9.AppendText(list2[0]);
+                            srAnswer9.ReadOnly = true;
+                            srAnswer10.AppendText(list2[1]);
+                            srAnswer10.ReadOnly = true;
+                            srAnswer11.AppendText(list2[2]);
+                            srAnswer11.ReadOnly = true;
+                            srAnswer12.Visible = false;
+                            srAnswer12.Enabled = false;
+                        } else if (columnNumberInSummary == 4) {
+                            srAnswer13.AppendText(list2[0]);
+                            srAnswer13.ReadOnly = true;
+                            srAnswer14.AppendText(list2[1]);
+                            srAnswer14.ReadOnly = true;
+                            srAnswer15.AppendText(list2[2]);
+                            srAnswer15.ReadOnly = true;
+                            srAnswer16.Visible = false;
+                            srAnswer16.Enabled = false;
+                        } else if (columnNumberInSummary == 5) {
+                            srAnswer17.AppendText(list2[0]);
+                            srAnswer17.ReadOnly = true;
+                            srAnswer18.AppendText(list2[1]);
+                            srAnswer18.ReadOnly = true;
+                            srAnswer19.AppendText(list2[2]);
+                            srAnswer19.ReadOnly = true;
+                            srAnswer20.Visible = false;
+                            srAnswer20.Enabled = false;
+                        }
+                    break;
+                case 4:
+                    query = "SELECT comment1, comment2, comment3, comment4 FROM " + tableNameParam +
+                " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ") AND ID = @id ;";
+                    SqlCommand command3 = new SqlCommand(query, conDatabase);
+                    command3.Parameters.AddWithValue("@id", id);
+                    conDatabase.Open();
+                    SqlDataReader dr3 = command3.ExecuteReader();
+                    List<string> list3 = new List<string>();
+                    while (dr3.Read()) {
+                        //Iterate through loop and add to list
+                        for (int i = 0; i < 4; i++) {
+                            list3.Add(dr3[i].ToString());
+                        }
+                    }
+                    if (columnNumberInSummary == 1) {
+                        srAnswer1.AppendText(list3[0]);
+                        srAnswer1.ReadOnly = true;
+                        srAnswer2.AppendText(list3[1]);
+                        srAnswer2.ReadOnly = true;
+                        srAnswer3.AppendText(list3[2]);
+                        srAnswer3.ReadOnly = true;
+                        srAnswer4.AppendText(list3[3]);
+                        srAnswer4.ReadOnly = true;
+                    } else if (columnNumberInSummary == 2) {
+                        srAnswer5.AppendText(list3[0]);
+                        srAnswer5.ReadOnly = true;
+                        srAnswer6.AppendText(list3[1]);
+                        srAnswer6.ReadOnly = true;
+                        srAnswer7.AppendText(list3[2]);
+                        srAnswer7.ReadOnly = true;
+                        srAnswer8.AppendText(list3[3]);
+                        srAnswer8.ReadOnly = true;
+                    } else if (columnNumberInSummary == 3) {
+                        srAnswer9.AppendText(list3[0]);
+                        srAnswer9.ReadOnly = true;
+                        srAnswer10.AppendText(list3[1]);
+                        srAnswer10.ReadOnly = true;
+                        srAnswer11.AppendText(list3[2]);
+                        srAnswer11.ReadOnly = true;
+                        srAnswer12.AppendText(list3[3]);
+                        srAnswer12.ReadOnly = true;
+                    } else if (columnNumberInSummary == 4) {
+                        srAnswer13.AppendText(list3[0]);
+                        srAnswer13.ReadOnly = true;
+                        srAnswer14.AppendText(list3[1]);
+                        srAnswer14.ReadOnly = true;
+                        srAnswer15.AppendText(list3[2]);
+                        srAnswer15.ReadOnly = true;
+                        srAnswer16.AppendText(list3[3]);
+                        srAnswer16.ReadOnly = true;
+                    } else if (columnNumberInSummary == 5) {
+                        srAnswer17.AppendText(list3[0]);
+                        srAnswer17.ReadOnly = true;
+                        srAnswer18.AppendText(list3[1]);
+                        srAnswer18.ReadOnly = true;
+                        srAnswer19.AppendText(list3[2]);
+                        srAnswer19.ReadOnly = true;
+                        srAnswer20.AppendText(list3[3]);
+                        srAnswer20.ReadOnly = true;
+                    }
+                    break;
             }
         }
 
@@ -384,86 +631,112 @@ string text3, string text4, string text5, string text6) {
             tablename.Controls.Clear();
             tablename.RowCount = rowCount;
         }
+        /// <summary>
+        /// Update short response topic labels. Use empty string if not shown
+        /// </summary>
+        /// <param name="topic1"></param>
+        /// <param name="topic2"></param>
+        /// <param name="topic3"></param>
+        /// <param name="topic4"></param>
+        private void updateSRTopicLabel(string topic1, string topic2,string topic3, string topic4,string topic5) {
+            srTopicLabel1.Text = topic1;
+            srTopic2.Text = topic2;
+            srTopic3.Text = topic3;
+            srTopic4.Text = topic4;
+            srTopic5.Text = topic5;
+        }
 
         private void button1_Click(object sender, EventArgs e) {
-            hidePanels();
-            topic1ResultPanel.Visible = true;
-            topic2ResultPanel.Visible = true;
-            topic3ResultPanel.Visible = true;
-            topic4ResultPanel.Visible = true;
-            topic5ResultPanel.Visible = true;
-            clearTable(resultsTable, 8);
-            clearTable(topic2Table, 3);
-            clearTable(topic3Table, 3);
-            clearTable(topic4Table, 5);
-            clearTable(topic5Table, 4);
-            updateTopicLabel("Are there some sounds that you don't like?",
-                "Are there times when it is hard for you to listen?",
-                "Are there some sounds that make it hard for you to concentrate?",
-                "Are there some sounds that you like to listen to?",
-                "Are there some sounds that you make a lot?");
-            updateTopic1ResultLabel(8, "Other People Talking", "Fireworks", "Loud Voices", "Household Appliances", "Vehicles", 
-                "Bathroom Appliances", "Sirens/Alarms/School Bells", "Sudden Loud Noises");
-            updateTopic2ResultLabel(3, "If I am concentrating on something, \n I don't notice people talking to me",
-                "I find it hard to listen to the teacher \n in noisy classrooms",
-                "I find it hard to listen to someone \n talking to me when I'm in a group", "", "", "", "", "");
-                updateTopic3ResultLabel(3, "Radio On", "Clock Ticking", "People Talking", "", "", "");
-            updateTopic5ResultLabel(4, "Humming or whistling to myself", "Tapping Feet", "Tapping Fingers", "Clicking Pen", "", "");
-            updateTopic4ResultLabel(5, "Computer Sounds", "Live Music", "Fans", "Music Through My Phone", "Rhythsm", "");
+            if (displayShortResponse) {
+                shortResponseContainerPanel.Visible = true;
+                shortResponseContainerPanel.Enabled = true;
+                getAdditionalCommentAnswer(3, "dislikeSounds", 1);
+                getAdditionalCommentAnswer(2, "hardToListen", 2);
+                getAdditionalCommentAnswer(4, "hardToConcentrate", 3);
+                getAdditionalCommentAnswer(3, "likeSounds", 4);
+                getAdditionalCommentAnswer(3, "makeALotSounds", 5);
+                updateSRTopicLabel("", "", "", "", "");
+            } else {
 
-            getDBAnser("dislikeSounds", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
-            getDBAnser("hardToListen", 3, topic2Results1, topic2Results2, topic2Results3, null, null, null, null, null);
-            getDBAnser("hardToConcentrate", 3, topic3Results1, topic3Results2, topic3Results3, null, null, null, null, null);
-            getDBAnser("likeSounds", 5, topic4Results1, topic4Results2, topic4Results3, topic4Results4, topic4Results5, null, null, null);
-            getDBAnser("makeALotSounds", 4, topic5Results1, topic5Results2, topic5Results3, topic5Results4, null, null, null, null);
+                hidePanels();
+                topic1ResultPanel.Visible = true;
+                topic2ResultPanel.Visible = true;
+                topic3ResultPanel.Visible = true;
+                topic4ResultPanel.Visible = true;
+                topic5ResultPanel.Visible = true;
+                clearTable(resultsTable, 8);
+                clearTable(topic2Table, 3);
+                clearTable(topic3Table, 3);
+                clearTable(topic4Table, 5);
+                clearTable(topic5Table, 4);
+                updateTopicLabel("Are there some sounds that you don't like?",
+                    "Are there times when it is hard for you to listen?",
+                    "Are there some sounds that make it hard for you to concentrate?",
+                    "Are there some sounds that you like to listen to?",
+                    "Are there some sounds that you make a lot?");
+                updateTopic1ResultLabel(8, "Other People Talking", "Fireworks", "Loud Voices", "Household Appliances", "Vehicles", 
+                    "Bathroom Appliances", "Sirens/Alarms/School Bells", "Sudden Loud Noises");
+                updateTopic2ResultLabel(3, "If I am concentrating on something, \n I don't notice people talking to me",
+                    "I find it hard to listen to the teacher \n in noisy classrooms",
+                    "I find it hard to listen to someone \n talking to me when I'm in a group", "", "", "", "", "");
+                    updateTopic3ResultLabel(3, "Radio On", "Clock Ticking", "People Talking", "", "", "");
+                updateTopic5ResultLabel(4, "Humming or whistling to myself", "Tapping Feet", "Tapping Fingers", "Clicking Pen", "", "");
+                updateTopic4ResultLabel(5, "Computer Sounds", "Live Music", "Fans", "Music Through My Phone", "Rhythsm", "");
 
-            //Re-Add the labels
-            this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
-            this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
-            this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
-            this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
-            this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
-            this.resultsTable.Controls.Add(this.topic1Image6, 0, 5);
-            this.resultsTable.Controls.Add(this.topic1Image7, 0, 6);
-            this.resultsTable.Controls.Add(this.topic1Image8, 0, 7);
-            this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
-            this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
-            this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
-            this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
-            this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
-            this.resultsTable.Controls.Add(this.topic1Results6, 1, 5);
-            this.resultsTable.Controls.Add(this.topic1Results7, 1, 6);
-            this.resultsTable.Controls.Add(this.topic1Results8, 1, 7);
-            this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
-            this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
-            this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
-            this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
-            this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
-            this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
-            this.topic3Table.Controls.Add(this.topic3Image1, 0, 0);
-            this.topic3Table.Controls.Add(this.topic3Image2, 0, 1);
-            this.topic3Table.Controls.Add(this.topic3Image3, 0, 2);
-            this.topic3Table.Controls.Add(this.topic3Results1, 1, 0);
-            this.topic3Table.Controls.Add(this.topic3Results2, 1, 1);
-            this.topic3Table.Controls.Add(this.topic3Results3, 1, 2);
-            this.topic4Table.Controls.Add(this.topic4Image1, 0, 0);
-            this.topic4Table.Controls.Add(this.topic4Image2, 0, 1);
-            this.topic4Table.Controls.Add(this.topic4Image3, 0, 2);
-            this.topic4Table.Controls.Add(this.topic4Results1, 1, 0);
-            this.topic4Table.Controls.Add(this.topic4Results2, 1, 1);
-            this.topic4Table.Controls.Add(this.topic4Results3, 1, 2);
-            this.topic4Table.Controls.Add(this.topic4Image4, 0, 3);
-            this.topic4Table.Controls.Add(this.topic4Results4, 1, 3);
-            this.topic4Table.Controls.Add(this.topic4Image5, 0, 4);
-            this.topic4Table.Controls.Add(this.topic4Results5, 1, 4);
-            this.topic5Table.Controls.Add(this.topic5Image1, 0, 0);
-            this.topic5Table.Controls.Add(this.topic5Image2, 0, 1);
-            this.topic5Table.Controls.Add(this.topic5Image3, 0, 2);
-            this.topic5Table.Controls.Add(this.topic5Results1, 1, 0);
-            this.topic5Table.Controls.Add(this.topic5Results2, 1, 1);
-            this.topic5Table.Controls.Add(this.topic5Results3, 1, 2);
-            this.topic5Table.Controls.Add(this.topic5Image4, 0, 3);
-            this.topic5Table.Controls.Add(this.topic5Results4, 1, 3);
+                getDBAnser("dislikeSounds", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
+                getDBAnser("hardToListen", 3, topic2Results1, topic2Results2, topic2Results3, null, null, null, null, null);
+                getDBAnser("hardToConcentrate", 3, topic3Results1, topic3Results2, topic3Results3, null, null, null, null, null);
+                getDBAnser("likeSounds", 5, topic4Results1, topic4Results2, topic4Results3, topic4Results4, topic4Results5, null, null, null);
+                getDBAnser("makeALotSounds", 4, topic5Results1, topic5Results2, topic5Results3, topic5Results4, null, null, null, null);
+
+                //Re-Add the labels
+                this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
+                this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
+                this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
+                this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
+                this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
+                this.resultsTable.Controls.Add(this.topic1Image6, 0, 5);
+                this.resultsTable.Controls.Add(this.topic1Image7, 0, 6);
+                this.resultsTable.Controls.Add(this.topic1Image8, 0, 7);
+                this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
+                this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
+                this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
+                this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
+                this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
+                this.resultsTable.Controls.Add(this.topic1Results6, 1, 5);
+                this.resultsTable.Controls.Add(this.topic1Results7, 1, 6);
+                this.resultsTable.Controls.Add(this.topic1Results8, 1, 7);
+                this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
+                this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
+                this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
+                this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
+                this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
+                this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
+                this.topic3Table.Controls.Add(this.topic3Image1, 0, 0);
+                this.topic3Table.Controls.Add(this.topic3Image2, 0, 1);
+                this.topic3Table.Controls.Add(this.topic3Image3, 0, 2);
+                this.topic3Table.Controls.Add(this.topic3Results1, 1, 0);
+                this.topic3Table.Controls.Add(this.topic3Results2, 1, 1);
+                this.topic3Table.Controls.Add(this.topic3Results3, 1, 2);
+                this.topic4Table.Controls.Add(this.topic4Image1, 0, 0);
+                this.topic4Table.Controls.Add(this.topic4Image2, 0, 1);
+                this.topic4Table.Controls.Add(this.topic4Image3, 0, 2);
+                this.topic4Table.Controls.Add(this.topic4Results1, 1, 0);
+                this.topic4Table.Controls.Add(this.topic4Results2, 1, 1);
+                this.topic4Table.Controls.Add(this.topic4Results3, 1, 2);
+                this.topic4Table.Controls.Add(this.topic4Image4, 0, 3);
+                this.topic4Table.Controls.Add(this.topic4Results4, 1, 3);
+                this.topic4Table.Controls.Add(this.topic4Image5, 0, 4);
+                this.topic4Table.Controls.Add(this.topic4Results5, 1, 4);
+                this.topic5Table.Controls.Add(this.topic5Image1, 0, 0);
+                this.topic5Table.Controls.Add(this.topic5Image2, 0, 1);
+                this.topic5Table.Controls.Add(this.topic5Image3, 0, 2);
+                this.topic5Table.Controls.Add(this.topic5Results1, 1, 0);
+                this.topic5Table.Controls.Add(this.topic5Results2, 1, 1);
+                this.topic5Table.Controls.Add(this.topic5Results3, 1, 2);
+                this.topic5Table.Controls.Add(this.topic5Image4, 0, 3);
+                this.topic5Table.Controls.Add(this.topic5Results4, 1, 3);
+            }
 
         }
 
@@ -475,12 +748,66 @@ string text3, string text4, string text5, string text6) {
             topic5Label.Text = topic5;
         }
 
+        /// <summary>
+        /// Call this to hide all columns from 3,4,5 for short response
+        /// </summary>
+        private void hideColumn3SR() {
+            srAnswer9.Visible = false;
+            srAnswer10.Visible = false;
+            srAnswer11.Visible = false;
+            srAnswer12.Visible = false;
+            q1labelc3.Visible = false;
+            q2labelc3.Visible = false;
+            q3labelc3.Visible = false;
+            q4labelc3.Visible = false;
+            hideColumn4SR();
+            hideColumn5SR();
+        }
+        /// <summary>
+        /// Call this to hide columns 4 and 5
+        /// </summary>
+        private void hideColumn4SR() {
+            srAnswer13.Visible = false;
+            srAnswer14.Visible = false;
+            srAnswer15.Visible = false;
+            srAnswer16.Visible = false;
+            q1labelc4.Visible = false;
+            q2labelc4.Visible = false;
+            q3labelc4.Visible = false;
+            q4labelc4.Visible = false;
+            hideColumn5SR();
+        }
+
+        /// <summary>
+        /// Call this to hide column 5
+        /// </summary>
+        private void hideColumn5SR() {
+            srAnswer17.Visible = false;
+            srAnswer18.Visible = false;
+            srAnswer19.Visible = false;
+            srAnswer20.Visible = false;
+            q1labelc5.Visible = false;
+            q2labelc5.Visible = false;
+            q3labelc5.Visible = false;
+            q4labelc5.Visible = false;
+        }
+
         private void button2_Click(object sender, EventArgs e) {
             try {
                 clearTable(resultsTable, 5);
                 clearTable(topic2Table, 3);
                 clearTable(topic3Table, 5);
                 hidePanels();
+                shortResponseContainerPanel.Visible = false;
+                shortResponseContainerPanel.Enabled = false;
+                if (displayShortResponse) {
+                    hideColumn4SR();
+                    shortResponseContainerPanel.Visible = true;
+                    shortResponseContainerPanel.Enabled = true;
+                    getAdditionalCommentAnswer(3, "dontLikeToLookAt", 1);
+                    getAdditionalCommentAnswer(2, "sightHardToConcentrate", 2);
+                    getAdditionalCommentAnswer(3, "likeTOLookAtt", 3);
+                }
                 updateTopicLabel("Are there some things that you don't \n like to look at?",
                     "Are there some things you see that make it \n hard to concentrate?",
                     "Are there some things that you like \n to look at?",
@@ -528,9 +855,34 @@ string text3, string text4, string text5, string text6) {
                 MessageBox.Show("An interview has not been completed!");
             }
         }
+
+        /// <summary>
+        /// Use to hide individual label and textbox
+        /// </summary>
+        private void hideIndividual(Label labelName, TextBox tbName) {
+            labelName.Visible = false;
+            tbName.Visible = false;
+            tbName.Enabled = false;
+        }
         
         //This is for movement
         private void hearingBtn_Click(object sender, EventArgs e) {
+
+            if (displayShortResponse) {
+                hideColumn5SR();
+                shortResponseContainerPanel.Visible = true;
+                shortResponseContainerPanel.Enabled = true;
+                getAdditionalCommentAnswer(4, "movingDontLike", 1);
+                getAdditionalCommentAnswer(1, "hardToStayStill", 2);
+                getAdditionalCommentAnswer(2, "movingThatYouLike", 3);
+                getAdditionalCommentAnswer(4, "moveOverAndOverAgain", 4);
+                hideIndividual(q2labelc2, srAnswer10);
+                hideIndividual(q3labelc2, srAnswer11);
+                hideIndividual(q4labelc2, srAnswer12);
+                hideIndividual(q3labelc3, srAnswer15);
+                hideIndividual(q4labelc3, srAnswer16);
+
+            }
             clearTable(resultsTable, 5);
             clearTable(topic2Table, 2);
             clearTable(topic3Table, 5);
@@ -595,6 +947,17 @@ string text3, string text4, string text5, string text6) {
 
         //This is for Smell
         private void smellBtn_Click(object sender, EventArgs e) {
+
+            if (displayShortResponse) {
+                hideColumn3SR();
+                shortResponseContainerPanel.Visible = true;
+                shortResponseContainerPanel.Enabled = true;
+                getAdditionalCommentAnswer(3, "smellDontLike", 1);
+                getAdditionalCommentAnswer(3, "likeToSmell", 2);
+                hideIndividual(q4labelc1, srAnswer4);
+                hideIndividual(q4labelc2, srAnswer8);
+
+            }
             clearTable(resultsTable, 6);
             clearTable(topic2Table, 5);
             updateTopicLabel("Are there some smells that you don't like?",
@@ -639,6 +1002,15 @@ string text3, string text4, string text5, string text6) {
         }
 
         private void touchBtn_Click(object sender, EventArgs e) {
+            if (displayShortResponse) {
+                hideColumn4SR();
+                shortResponseContainerPanel.Visible = true;
+                shortResponseContainerPanel.Enabled = true;
+                getAdditionalCommentAnswer(4, "dontLikeFeelingOf", 1);
+                getAdditionalCommentAnswer(4, "peopleTouchDontLike", 2);
+                getAdditionalCommentAnswer(3, "likeTheFeelingOf", 3);
+                hideIndividual(q4labelc3, srAnswer12);
+            }
             clearTable(resultsTable, 8);
             clearTable(topic2Table, 8);
             clearTable(topic3Table, 6);
@@ -711,6 +1083,14 @@ string text3, string text4, string text5, string text6) {
         }
 
         private void additionalCommentsBtn_Click(object sender, EventArgs e) {
+            if (displayShortResponse) {
+                hideColumn3SR();
+                shortResponseContainerPanel.Visible = true;
+                shortResponseContainerPanel.Enabled = true;
+                getAdditionalCommentAnswer(4, "other", 1);
+                getAdditionalCommentAnswer(4, "other", 2);
+
+            }
             clearTable(resultsTable, 5);
             clearTable(topic2Table, 6);
             updateTopicLabel("Are there some places with lots of things \n happening at once that you don't like?",
@@ -752,7 +1132,22 @@ string text3, string text4, string text5, string text6) {
         }
 
         private void tasteBtn_Click(object sender, EventArgs e) {
-            if (!displayShortResponse) {
+            if (displayShortResponse) {
+                hideColumn5SR();
+                shortResponseContainerPanel.Visible = true;
+                shortResponseContainerPanel.Enabled = true;
+                getAdditionalCommentAnswer(2, "foodGroupsDontLike", 1);
+                getAdditionalCommentAnswer(3, "tastesOrFeelsInMouthDontLike", 2);
+                getAdditionalCommentAnswer(2, "foodReallyLikeToEat", 3);
+                getAdditionalCommentAnswer(3, "thingsPutInMouthALot", 4);
+                hideIndividual(q3labelc1, srAnswer3);
+                hideIndividual(q4labelc1, srAnswer4);
+                hideIndividual(q4labelc2, srAnswer8);
+                hideIndividual(q3labelc3, srAnswer11);
+                hideIndividual(q4labelc3, srAnswer12);
+                hideIndividual(q4labelc4, srAnswer16);
+            }
+            if (!displayShortResponse) { //For Guided Interview
                 clearTable(resultsTable, 8);
                 clearTable(topic2Table, 8);
                 clearTable(topic3Table, 2);
@@ -828,7 +1223,79 @@ string text3, string text4, string text5, string text6) {
                 this.topic4Table.Controls.Add(this.topic4Results3, 1, 2);
             } else {
                 if (interviewType == "2") {
+                    clearTable(resultsTable, 8);
+                    clearTable(topic2Table, 8);
+                    clearTable(topic3Table, 2);
+                    clearTable(topic4Table, 3);
+                    updateTopicLabel("Are there some food groups that you don't like eating?",
+                        "Are there some ways that food tastes or feels \n in your mouth that you don't like?",
+                        "Are there some things you really like to eat?",
+                        "Are there some things that you put in \n your mouth a lot?",
+                        "");
+                    updateTopic1ResultLabel(8, "Vegetables", "Fruit", "Meat", "Fish", "Eggs",
+                        "Dairy", "Bread", "Pasta");
+                    updateTopic2ResultLabel(8, "Lumpy", "Chewy", "Runny/Slippery", "Mixed", "Sweet", "Sour", "Salty", "Spicy");
+                    updateTopic3ResultLabel(2, "Familiar Foods, only a few types of foods \n i.e. I Don't Like Trying New Foods",
+                        "Unfamiliar Foods, lots of different types of foods \n i.e. I Like Trying New Foods", "", "", "", "");
+                    updateTopic4ResultLabel(3, "Shirt", "Hair", "Objects", "", "", "");
 
+                    getDBAnser("foodGroupsDontLike", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
+                    getDBAnser("tastesOrFeelsInMouthDontLike", 8, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, topic2Results7, topic2Results8);
+                    getDBAnser("foodReallyLikeToEat", 2, topic3Results1, topic3Results2, null, null, null, null, null, null);
+                    getDBAnser("thingsPutInMouthALot", 3, topic4Results1, topic4Results2, topic4Results3, null, null, null, null, null);
+
+                    hidePanels();
+                    topic1ResultPanel.Visible = true;
+                    topic2ResultPanel.Visible = true;
+                    topic3ResultPanel.Visible = true;
+                    topic4ResultPanel.Visible = true;
+
+                    //Re-Add the labels
+                    this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
+                    this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
+                    this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
+                    this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
+                    this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
+                    this.resultsTable.Controls.Add(this.topic1Image6, 0, 5);
+                    this.resultsTable.Controls.Add(this.topic1Image7, 0, 6);
+                    this.resultsTable.Controls.Add(this.topic1Image8, 0, 7);
+                    this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
+                    this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
+                    this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
+                    this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
+                    this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
+                    this.resultsTable.Controls.Add(this.topic1Results6, 1, 5);
+                    this.resultsTable.Controls.Add(this.topic1Results7, 1, 6);
+                    this.resultsTable.Controls.Add(this.topic1Results8, 1, 7);
+
+                    this.topic2Table.Controls.Add(this.topic2Results8, 1, 7);
+                    this.topic2Table.Controls.Add(this.topic2Image8, 0, 7);
+                    this.topic2Table.Controls.Add(this.topic2Results7, 1, 6);
+                    this.topic2Table.Controls.Add(this.topic2Image7, 0, 6);
+                    this.topic2Table.Controls.Add(this.topic2Results6, 1, 5);
+                    this.topic2Table.Controls.Add(this.topic2Image6, 0, 5);
+                    this.topic2Table.Controls.Add(this.topic2Results5, 1, 4);
+                    this.topic2Table.Controls.Add(this.topic2Results4, 1, 3);
+                    this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
+                    this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
+                    this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
+                    this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
+                    this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
+                    this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
+                    this.topic2Table.Controls.Add(this.topic2Image4, 0, 3);
+                    this.topic2Table.Controls.Add(this.topic2Image5, 0, 4);
+
+                    this.topic3Table.Controls.Add(this.topic3Image1, 0, 0);
+                    this.topic3Table.Controls.Add(this.topic3Image2, 0, 1);
+                    this.topic3Table.Controls.Add(this.topic3Results1, 1, 0);
+                    this.topic3Table.Controls.Add(this.topic3Results2, 1, 1);
+
+                    this.topic4Table.Controls.Add(this.topic4Image1, 0, 0);
+                    this.topic4Table.Controls.Add(this.topic4Image2, 0, 1);
+                    this.topic4Table.Controls.Add(this.topic4Image3, 0, 2);
+                    this.topic4Table.Controls.Add(this.topic4Results1, 1, 0);
+                    this.topic4Table.Controls.Add(this.topic4Results2, 1, 1);
+                    this.topic4Table.Controls.Add(this.topic4Results3, 1, 2);
                 } else if (interviewType == "3") {
 
                 }
@@ -852,22 +1319,37 @@ string text3, string text4, string text5, string text6) {
 
         private void Summary_Load(object sender, EventArgs e) {
             shortResponseButton();
-            //getInterviewType();
+            getInterviewType();
         }
 
         bool displayShortResponse = false;
         string interviewType; //2 = Independent, 3 = family, 1 = guided
         private void changeSummaryPanelType_Click(object sender, EventArgs e) {
             hidePanels();
-            displayShortResponse = true;
+            shortResponseContainerPanel.Visible = false;
+            if (!displayShortResponse) { //Non SR Panel
+                shortResponseContainerPanel.Visible = false;
+                shortResponseContainerPanel.Enabled = false;
+                changeSummaryPanelType.Text = "View Image Answers";
+                Globals.shortResponse = true;
+                displayShortResponse = true;
+            } else if(displayShortResponse){ //Sr Panel
+                displayShortResponse = false;
+                Globals.shortResponse = false;
+                changeSummaryPanelType.Text = "View Short Response Answers";
+                hidePanels();
+            }
         }
 
+        /// <summary>
+        /// Call this when reaching the end of the interview. Not for viewing past interviews
+        /// </summary>
         private void getInterviewType() {
             string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                                 @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
             SqlConnection conDatabase = new SqlConnection(constring);
             //Replace summary in string with variable for db table name
-            SqlCommand command = new SqlCommand("SELECT InterviewType FROM linkProfileInterview WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.linkProfileInterview );", conDatabase);
+            SqlCommand command = new SqlCommand("SELECT InterviewType FROM linkProfileInterview WHERE InterviewID = (SELECT MAX(InterviewID) FROM dbo.linkProfileInterview );", conDatabase);
             conDatabase.Open();
             SqlDataReader dr = command.ExecuteReader();
             List<string> list = new List<string>();
@@ -876,10 +1358,5 @@ string text3, string text4, string text5, string text6) {
             }
             interviewType = list[0];
         }
-
-        private void getUserID() {
-
-        }
-
     }
 }

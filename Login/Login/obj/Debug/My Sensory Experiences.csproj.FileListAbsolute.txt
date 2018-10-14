@@ -163,8 +163,6 @@ C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.e
 C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\obj\Debug\Login.pdb
 C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\bin\Debug\CapstoneDB\CapstoneDB.mdf
 C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\bin\Debug\CapstoneDB\CapstoneDB_log.ldf
-C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\bin\Debug\bin\Debug\CapstoneDB\CapstoneDB.mdf
-C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\bin\Debug\bin\Debug\CapstoneDB\CapstoneDB_log.ldf
 C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\bin\Debug\Login.exe.config
 C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\bin\Debug\Login.exe
 C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\Login\bin\Debug\Login.pdb
