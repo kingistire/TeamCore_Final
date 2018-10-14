@@ -75,6 +75,7 @@ namespace Login {
                 famCover.Show();
                 this.Hide();
             }
+            Globals.userID = Convert.ToString(comboBox1.SelectedValue);
         }
 
         private void SelectInterview_Load(object sender, EventArgs e) {

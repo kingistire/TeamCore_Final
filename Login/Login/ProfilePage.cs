@@ -38,7 +38,6 @@ namespace Login
             editprofile.MdiParent = this.MdiParent;
             editprofile.Show();
         }
-
         private void ProfilePage_Enter(object sender, EventArgs e)
         {
             DataTable dataTable = new DataTable();
@@ -91,7 +90,8 @@ namespace Login
             string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                         @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
             SqlConnection conDatabase = new SqlConnection(constring);
-            SqlCommand cmdDatabase = new SqlCommand(" select * from dislikeSounds ;", conDatabase);
+            SqlCommand cmdDatabase = new SqlCommand(" select * from dislikeSounds WHERE ID = @id;", conDatabase);
+            cmdDatabase.Parameters.AddWithValue("@id", thisProfileId);
             try {
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmdDatabase;

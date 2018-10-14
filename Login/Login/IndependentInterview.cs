@@ -1283,6 +1283,7 @@ namespace Login {
         //change the first value in the array to 1, 'a lot' would be set to 2.
         //if they make no selection it remains as 0
         string[] page1Selections = new string[6] { "", "", "", "", "", "" };
+        string userID = Globals.userID;
         /// <summary>
         /// Insert to database if 6 images are there
         /// </summary>
@@ -1307,7 +1308,7 @@ namespace Login {
                     query = "INSERT INTO dbo." + tableDBName + "(" + TLImageName + "," + TMImageName + "," +
                          TRImageName + "," +
                           BLImageName + "," +
-                           BMImageName + "," + BRImageName + ") VALUES (@tl, @tm, @tr, @bl, @bm, @br);";
+                           BMImageName + "," + BRImageName + ", ID) VALUES (@tl, @tm, @tr, @bl, @bm, @br, @userID);";
 
                     cmdDatabase = new SqlCommand(query, conDatabase);
                     cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
@@ -1316,6 +1317,7 @@ namespace Login {
                     cmdDatabase.Parameters.AddWithValue("@bl", page1Selections[3]);
                     cmdDatabase.Parameters.AddWithValue("@bm", page1Selections[4]);
                     cmdDatabase.Parameters.AddWithValue("@br", page1Selections[5]);
+                    cmdDatabase.Parameters.AddWithValue("@userID", userID);
                     cmdDatabase.ExecuteNonQuery();
             } catch (Exception err) {
                 MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);

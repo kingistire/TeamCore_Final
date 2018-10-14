@@ -827,6 +827,11 @@ string text3, string text4, string text5, string text6) {
                 this.topic4Table.Controls.Add(this.topic4Results2, 1, 1);
                 this.topic4Table.Controls.Add(this.topic4Results3, 1, 2);
             } else {
+                if (interviewType == "2") {
+
+                } else if (interviewType == "3") {
+
+                }
                 clearTable(resultsTable, 8);
                 clearTable(topic2Table, 8);
                 clearTable(topic3Table, 2);
@@ -847,13 +852,34 @@ string text3, string text4, string text5, string text6) {
 
         private void Summary_Load(object sender, EventArgs e) {
             shortResponseButton();
+            //getInterviewType();
         }
 
         bool displayShortResponse = false;
-
+        string interviewType; //2 = Independent, 3 = family, 1 = guided
         private void changeSummaryPanelType_Click(object sender, EventArgs e) {
             hidePanels();
             displayShortResponse = true;
         }
+
+        private void getInterviewType() {
+            string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            //Replace summary in string with variable for db table name
+            SqlCommand command = new SqlCommand("SELECT InterviewType FROM linkProfileInterview WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.linkProfileInterview );", conDatabase);
+            conDatabase.Open();
+            SqlDataReader dr = command.ExecuteReader();
+            List<string> list = new List<string>();
+            while (dr.Read()) {
+                list.Add(dr["InterviewType"].ToString());
+            }
+            interviewType = list[0];
+        }
+
+        private void getUserID() {
+
+        }
+
     }
 }
