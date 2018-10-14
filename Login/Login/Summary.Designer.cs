@@ -110,6 +110,16 @@
             this.topic5Label = new System.Windows.Forms.Label();
             this.tasteBtn = new System.Windows.Forms.Button();
             this.changeSummaryPanelType = new System.Windows.Forms.Button();
+            this.shortResponseContainerPanel = new System.Windows.Forms.Panel();
+            this.srAnswer3 = new System.Windows.Forms.TextBox();
+            this.srAnswer2 = new System.Windows.Forms.TextBox();
+            this.srAnswer1 = new System.Windows.Forms.TextBox();
+            this.srTopicLabel1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.capstoneDBDataSetBindingSource)).BeginInit();
             this.topic1ResultPanel.SuspendLayout();
             this.resultsTable.SuspendLayout();
@@ -121,6 +131,7 @@
             this.topic4Table.SuspendLayout();
             this.topic5ResultPanel.SuspendLayout();
             this.topic5Table.SuspendLayout();
+            this.shortResponseContainerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // soundBtn
@@ -1047,11 +1058,127 @@
             this.changeSummaryPanelType.UseVisualStyleBackColor = true;
             this.changeSummaryPanelType.Click += new System.EventHandler(this.changeSummaryPanelType_Click);
             // 
+            // shortResponseContainerPanel
+            // 
+            this.shortResponseContainerPanel.Controls.Add(this.label4);
+            this.shortResponseContainerPanel.Controls.Add(this.label3);
+            this.shortResponseContainerPanel.Controls.Add(this.label2);
+            this.shortResponseContainerPanel.Controls.Add(this.label1);
+            this.shortResponseContainerPanel.Controls.Add(this.textBox1);
+            this.shortResponseContainerPanel.Controls.Add(this.srTopicLabel1);
+            this.shortResponseContainerPanel.Controls.Add(this.srAnswer1);
+            this.shortResponseContainerPanel.Controls.Add(this.srAnswer2);
+            this.shortResponseContainerPanel.Controls.Add(this.srAnswer3);
+            this.shortResponseContainerPanel.Location = new System.Drawing.Point(197, 11);
+            this.shortResponseContainerPanel.Name = "shortResponseContainerPanel";
+            this.shortResponseContainerPanel.Size = new System.Drawing.Size(988, 571);
+            this.shortResponseContainerPanel.TabIndex = 41;
+            // 
+            // srAnswer3
+            // 
+            this.srAnswer3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.srAnswer3.Location = new System.Drawing.Point(0, 92);
+            this.srAnswer3.Multiline = true;
+            this.srAnswer3.Name = "srAnswer3";
+            this.srAnswer3.ReadOnly = true;
+            this.srAnswer3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer3.Size = new System.Drawing.Size(193, 65);
+            this.srAnswer3.TabIndex = 42;
+            // 
+            // srAnswer2
+            // 
+            this.srAnswer2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.srAnswer2.Location = new System.Drawing.Point(3, 210);
+            this.srAnswer2.Multiline = true;
+            this.srAnswer2.Name = "srAnswer2";
+            this.srAnswer2.ReadOnly = true;
+            this.srAnswer2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer2.Size = new System.Drawing.Size(193, 65);
+            this.srAnswer2.TabIndex = 41;
+            // 
+            // srAnswer1
+            // 
+            this.srAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.srAnswer1.Location = new System.Drawing.Point(0, 338);
+            this.srAnswer1.Multiline = true;
+            this.srAnswer1.Name = "srAnswer1";
+            this.srAnswer1.ReadOnly = true;
+            this.srAnswer1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer1.Size = new System.Drawing.Size(193, 68);
+            this.srAnswer1.TabIndex = 40;
+            // 
+            // srTopicLabel1
+            // 
+            this.srTopicLabel1.AutoSize = true;
+            this.srTopicLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.srTopicLabel1.Location = new System.Drawing.Point(5, 1);
+            this.srTopicLabel1.Name = "srTopicLabel1";
+            this.srTopicLabel1.Size = new System.Drawing.Size(197, 40);
+            this.srTopicLabel1.TabIndex = 44;
+            this.srTopicLabel1.Text = "Are There Some Sounds \r\nThat You Don\'t Like?";
+            this.srTopicLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(0, 474);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(193, 65);
+            this.textBox1.TabIndex = 45;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(26, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 32);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "Other Sounds That You \r\nDon\'t Like?";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 183);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(170, 16);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "Examples In Your Daily Life";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 287);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(198, 48);
+            this.label3.TabIndex = 48;
+            this.label3.Text = "Do You Do Anything To Avoid\r\nThese Sonuds (e.g. Cover Your \r\nEars,Avoid Noise Pla" +
+    "ces)?";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 427);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "label4";
+            // 
             // Summary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1309, 594);
+            this.Controls.Add(this.shortResponseContainerPanel);
             this.Controls.Add(this.changeSummaryPanelType);
             this.Controls.Add(this.tasteBtn);
             this.Controls.Add(this.topic5ResultPanel);
@@ -1089,6 +1216,8 @@
             this.topic5ResultPanel.PerformLayout();
             this.topic5Table.ResumeLayout(false);
             this.topic5Table.PerformLayout();
+            this.shortResponseContainerPanel.ResumeLayout(false);
+            this.shortResponseContainerPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1180,5 +1309,15 @@
         private System.Windows.Forms.Label topic3Results4;
         private System.Windows.Forms.Label topic3Image4;
         private System.Windows.Forms.Button changeSummaryPanelType;
+        private System.Windows.Forms.Panel shortResponseContainerPanel;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label srTopicLabel1;
+        private System.Windows.Forms.TextBox srAnswer1;
+        private System.Windows.Forms.TextBox srAnswer2;
+        private System.Windows.Forms.TextBox srAnswer3;
     }
 }

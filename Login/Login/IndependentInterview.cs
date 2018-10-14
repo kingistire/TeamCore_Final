@@ -1336,13 +1336,14 @@ namespace Login {
             try {
                 conDatabase.Open();
                 string query = "INSERT INTO dbo." + dbTableName + "(" + TLImageName + "," + TMImageName + "," +
-                         TRImageName + ") VALUES (@tl, @tm, @tr);";
+                         TRImageName + ", ID) VALUES (@tl, @tm, @tr, @userID);";
 
                 //"UPDATE dbo" + dbTableName + "SET " + TLImageName + "=@tl," + TMImageName +"=@tm," + TRImageName + "=@tr;";
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
                 cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
                 cmdDatabase.ExecuteNonQuery();
             } catch (Exception err) {
                 MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);
@@ -1359,11 +1360,12 @@ namespace Login {
             //Determine if a little or a lot
             try {
                     conDatabase.Open();
-                    string query = "INSERT INTO dbo." + dbTableName + "(" + TLImageName + "," + TMImageName + ") VALUES (@tl, @tm);";
+                    string query = "INSERT INTO dbo." + dbTableName + "(" + TLImageName + "," + TMImageName + ", ID) VALUES (@tl, @tm, @userID);";
                     cmdDatabase = new SqlCommand(query, conDatabase);
                     cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                     cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
-                    cmdDatabase.ExecuteNonQuery();
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
+                cmdDatabase.ExecuteNonQuery();
             } catch (Exception err) {
                 MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);
 
@@ -1384,10 +1386,11 @@ namespace Login {
             try {
                 conDatabase.Open();
                 string query = @"UPDATE dbo.dislikeSounds SET " + TLImageName + "=@tl, " 
-                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.dislikeSounds);";
+                    + TMImageName + "=@tm, ID = @userID WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.dislikeSounds);";
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
                 cmdDatabase.ExecuteNonQuery();
                 conDatabase.Close();
             }catch(Exception ex) {
@@ -1403,10 +1406,11 @@ namespace Login {
             try {
                 conDatabase.Open();
                 string query = @"UPDATE dbo.dontLikeFeelingOf SET " + TLImageName + "=@tl, "
-                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.dontLikeFeelingOf);";
+                    + TMImageName + "=@tm, ID = @userID WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.dontLikeFeelingOf);";
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
                 cmdDatabase.ExecuteNonQuery();
             } catch (Exception ex) {
                 MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
@@ -1421,10 +1425,11 @@ namespace Login {
             try {
                 conDatabase.Open();
                 string query = @"UPDATE dbo.peopleTouchDontLike SET " + TLImageName + "=@tl, "
-                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.peopleTouchDontLike);";
+                    + TMImageName + "=@tm, ID = @userID WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.peopleTouchDontLike);";
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
                 cmdDatabase.ExecuteNonQuery();
             } catch (Exception ex) {
                 MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
@@ -1439,10 +1444,11 @@ namespace Login {
             try {
                 conDatabase.Open();
                 string query = @"UPDATE dbo.foodGroupsDontLike SET " + TLImageName + "=@tl, "
-                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.foodGroupsDontLike);";
+                    + TMImageName + "=@tm, ID = @userID WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.foodGroupsDontLike);";
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
                 cmdDatabase.ExecuteNonQuery();
             } catch (Exception ex) {
                 MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
@@ -1457,10 +1463,11 @@ namespace Login {
             try {
                 conDatabase.Open();
                 string query = @"UPDATE dbo.tastesOrFeelsInMouthDontLike SET " + TLImageName + "=@tl, "
-                    + TMImageName + "=@tm WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.tastesOrFeelsInMouthDontLike);";
+                    + TMImageName + "=@tm, ID = @userID WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.tastesOrFeelsInMouthDontLike);";
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
                 cmdDatabase.ExecuteNonQuery();
             } catch (Exception ex) {
                 MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
@@ -1479,7 +1486,7 @@ namespace Login {
                     +TRImageName + "=@tr, "
                     +BLImageName + "=@bl, "
                     +BMImageName + "=@bm, "
-                    +BRImageName + "=@br WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.other);";
+                    +BRImageName + "=@br, ID = @userID WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.other);";
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
                 cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
@@ -1487,6 +1494,7 @@ namespace Login {
                 cmdDatabase.Parameters.AddWithValue("@bl", page1Selections[3]);
                 cmdDatabase.Parameters.AddWithValue("@bm", page1Selections[4]);
                 cmdDatabase.Parameters.AddWithValue("@br", page1Selections[5]);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
                 cmdDatabase.ExecuteNonQuery();
             } catch (Exception ex) {
                 MessageBox.Show("An Error has occurred while writing to the database: " + ex.Message);
