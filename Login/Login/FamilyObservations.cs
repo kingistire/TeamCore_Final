@@ -1189,6 +1189,128 @@ namespace Login {
             }
         }
 
+        private void updateOnPreviousClicked(string TLImageName, string TMImageName, string TRImageName, string BLImageName, string BMImageName, string BRImageName, string tableDBName) {
+            SqlCommand cmdDatabase;
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            try {
+                string query1 = string.Format("UPDATE dbo.{0} SET " + TLImageName + "=@tl, " + TMImageName + "=@tm, " +
+                         TRImageName + "=@tr, " +
+                          BLImageName + "=@bl, " +
+                           BMImageName + "=@bm, " + BRImageName + " =@br, ID = @userID WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.{0});", tableDBName);
+                conDatabase.Open();
+                cmdDatabase = new SqlCommand(query1, conDatabase);
+                //cmdDatabase = new SqlCommand("INSERT INTO dbo." + tableName + "(" + columnName + ") VALUES(@text);" , conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
+                cmdDatabase.Parameters.AddWithValue("@bl", page1Selections[3]);
+                cmdDatabase.Parameters.AddWithValue("@bm", page1Selections[4]);
+                cmdDatabase.Parameters.AddWithValue("@br", page1Selections[5]);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
+
+                cmdDatabase.ExecuteNonQuery();
+                conDatabase.Close();
+            } catch (Exception ex) {
+                MessageBox.Show("An error has occurred: " + ex.Message);
+            }
+        }
+        private void previousUpdate3(string TLImageName, string TMImageName, string TRImageName, string dbTableName) {
+            SqlCommand cmdDatabase;
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            try {
+                string query1 = string.Format("UPDATE dbo.{0} SET " + TLImageName + "=@tl, " + TMImageName + "=@tm, " +
+                         TRImageName + "=@tr, ID = @userID WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.{0});", dbTableName);
+                conDatabase.Open();
+                cmdDatabase = new SqlCommand(query1, conDatabase);
+                //cmdDatabase = new SqlCommand("INSERT INTO dbo." + tableName + "(" + columnName + ") VALUES(@text);" , conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
+
+                cmdDatabase.ExecuteNonQuery();
+                conDatabase.Close();
+            } catch (Exception ex) {
+                MessageBox.Show("An error has occurred: " + ex.Message);
+            }
+        }
+        private void previousUpdate2(string TLImageName, string TMImageName, string dbTableName) {
+            SqlCommand cmdDatabase;
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            try {
+                string query1 = string.Format("UPDATE dbo.{0} SET " + TLImageName + "=@tl, " + TMImageName +
+                    "=@tm, ID = @userID WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.{0});", dbTableName);
+                conDatabase.Open();
+                cmdDatabase = new SqlCommand(query1, conDatabase);
+                //cmdDatabase = new SqlCommand("INSERT INTO dbo." + tableName + "(" + columnName + ") VALUES(@text);" , conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
+
+                cmdDatabase.ExecuteNonQuery();
+                conDatabase.Close();
+            } catch (Exception ex) {
+                MessageBox.Show("An error has occurred: " + ex.Message);
+            }
+        }
+        private void previousUpdate5(string TLImageName, string TMImageName, string TRImageName, string BLImageName, string BMImageName, string dbTableName) {
+            SqlCommand cmdDatabase;
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            try {
+                string query1 = string.Format("UPDATE dbo.{0} SET " + TLImageName + "=@tl, " + TMImageName + "=@tm, " +
+                         TRImageName + "=@tr, " +
+                          BLImageName + "=@bl, " +
+                           BMImageName + "=@bm, ID = @userID WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.{0});", dbTableName);
+                conDatabase.Open();
+                cmdDatabase = new SqlCommand(query1, conDatabase);
+                //cmdDatabase = new SqlCommand("INSERT INTO dbo." + tableName + "(" + columnName + ") VALUES(@text);" , conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
+                cmdDatabase.Parameters.AddWithValue("@bl", page1Selections[3]);
+                cmdDatabase.Parameters.AddWithValue("@bm", page1Selections[4]);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
+
+                cmdDatabase.ExecuteNonQuery();
+                conDatabase.Close();
+            } catch (Exception ex) {
+                MessageBox.Show("An error has occurred: " + ex.Message);
+            }
+        }
+        private void previousUpdate4(string TLImageName, string TMImageName, string TRImageName, string BLImageName, string dbTableName) {
+            SqlCommand cmdDatabase;
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            try {
+                string query1 = string.Format("UPDATE dbo.{0} SET " + TLImageName + "=@tl, " + TMImageName + "=@tm, " +
+                         TRImageName + "=@tr, " +
+                          BLImageName + "=@bl, ID = @userID WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.{0});", dbTableName);
+                conDatabase.Open();
+                cmdDatabase = new SqlCommand(query1, conDatabase);
+                //cmdDatabase = new SqlCommand("INSERT INTO dbo." + tableName + "(" + columnName + ") VALUES(@text);" , conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
+                cmdDatabase.Parameters.AddWithValue("@bl", page1Selections[3]);
+
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
+
+                cmdDatabase.ExecuteNonQuery();
+                conDatabase.Close();
+            } catch (Exception ex) {
+                MessageBox.Show("An error has occurred: " + ex.Message);
+            }
+        }
+
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// BUTTON CLICKS FOR A LITT AND A LOT ////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

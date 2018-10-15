@@ -510,6 +510,127 @@ namespace Login {
                 MessageBox.Show("An Error has occurred while writing to the database: " + err.Message);
             }
         }
+        private void updateOnPreviousClicked(string TLImageName, string TMImageName, string TRImageName, string BLImageName, string BMImageName, string BRImageName, string tableDBName) {
+            SqlCommand cmdDatabase;
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            try {
+                string query1 = string.Format("UPDATE dbo.{0} SET " + TLImageName + "=@tl, " + TMImageName + "=@tm, " +
+                         TRImageName + "=@tr, " +
+                          BLImageName + "=@bl, " +
+                           BMImageName + "=@bm, " + BRImageName + " =@br, ID = @userID WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.{0});", tableDBName);
+                conDatabase.Open();
+                cmdDatabase = new SqlCommand(query1, conDatabase);
+                //cmdDatabase = new SqlCommand("INSERT INTO dbo." + tableName + "(" + columnName + ") VALUES(@text);" , conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
+                cmdDatabase.Parameters.AddWithValue("@bl", page1Selections[3]);
+                cmdDatabase.Parameters.AddWithValue("@bm", page1Selections[4]);
+                cmdDatabase.Parameters.AddWithValue("@br", page1Selections[5]);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
+
+                cmdDatabase.ExecuteNonQuery();
+                conDatabase.Close();
+            } catch (Exception ex) {
+                MessageBox.Show("An error has occurred: " + ex.Message);
+            }
+        }
+        private void previousUpdate3(string TLImageName, string TMImageName, string TRImageName, string dbTableName) {
+            SqlCommand cmdDatabase;
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            try {
+                string query1 = string.Format("UPDATE dbo.{0} SET " + TLImageName + "=@tl, " + TMImageName + "=@tm, " +
+                         TRImageName + "=@tr, ID = @userID WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.{0});", dbTableName);
+                conDatabase.Open();
+                cmdDatabase = new SqlCommand(query1, conDatabase);
+                //cmdDatabase = new SqlCommand("INSERT INTO dbo." + tableName + "(" + columnName + ") VALUES(@text);" , conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
+
+                cmdDatabase.ExecuteNonQuery();
+                conDatabase.Close();
+            } catch (Exception ex) {
+                MessageBox.Show("An error has occurred: " + ex.Message);
+            }
+        }
+        private void previousUpdate2(string TLImageName, string TMImageName, string dbTableName) {
+            SqlCommand cmdDatabase;
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            try {
+                string query1 = string.Format("UPDATE dbo.{0} SET " + TLImageName + "=@tl, " + TMImageName +
+                    "=@tm, ID = @userID WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.{0});", dbTableName);
+                conDatabase.Open();
+                cmdDatabase = new SqlCommand(query1, conDatabase);
+                //cmdDatabase = new SqlCommand("INSERT INTO dbo." + tableName + "(" + columnName + ") VALUES(@text);" , conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
+
+                cmdDatabase.ExecuteNonQuery();
+                conDatabase.Close();
+            } catch (Exception ex) {
+                MessageBox.Show("An error has occurred: " + ex.Message);
+            }
+        }
+        private void previousUpdate5(string TLImageName, string TMImageName, string TRImageName, string BLImageName, string BMImageName, string dbTableName) {
+            SqlCommand cmdDatabase;
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            try {
+                string query1 = string.Format("UPDATE dbo.{0} SET " + TLImageName + "=@tl, " + TMImageName + "=@tm, " +
+                         TRImageName + "=@tr, " +
+                          BLImageName + "=@bl, " +
+                           BMImageName + "=@bm, ID = @userID WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.{0});", dbTableName);
+                conDatabase.Open();
+                cmdDatabase = new SqlCommand(query1, conDatabase);
+                //cmdDatabase = new SqlCommand("INSERT INTO dbo." + tableName + "(" + columnName + ") VALUES(@text);" , conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
+                cmdDatabase.Parameters.AddWithValue("@bl", page1Selections[3]);
+                cmdDatabase.Parameters.AddWithValue("@bm", page1Selections[4]);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
+
+                cmdDatabase.ExecuteNonQuery();
+                conDatabase.Close();
+            } catch (Exception ex) {
+                MessageBox.Show("An error has occurred: " + ex.Message);
+            }
+        }
+        private void previousUpdate4(string TLImageName, string TMImageName, string TRImageName, string BLImageName, string dbTableName) {
+            SqlCommand cmdDatabase;
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            try {
+                string query1 = string.Format("UPDATE dbo.{0} SET " + TLImageName + "=@tl, " + TMImageName + "=@tm, " +
+                         TRImageName + "=@tr, " +
+                          BLImageName + "=@bl, ID = @userID WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.{0});", dbTableName);
+                conDatabase.Open();
+                cmdDatabase = new SqlCommand(query1, conDatabase);
+                //cmdDatabase = new SqlCommand("INSERT INTO dbo." + tableName + "(" + columnName + ") VALUES(@text);" , conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@tl", page1Selections[0]);
+                cmdDatabase.Parameters.AddWithValue("@tm", page1Selections[1]);
+                cmdDatabase.Parameters.AddWithValue("@tr", page1Selections[2]);
+                cmdDatabase.Parameters.AddWithValue("@bl", page1Selections[3]);
+
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
+
+                cmdDatabase.ExecuteNonQuery();
+                conDatabase.Close();
+            } catch (Exception ex) {
+                MessageBox.Show("An error has occurred: " + ex.Message);
+            }
+        }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// BUTTON CLICKS FOR A LITT AND A LOT ////////////////////////////////////////////////////////
@@ -651,8 +772,15 @@ namespace Login {
             //appends label to file on a new line
             Globals.interview_page++;
             if (Globals.interview_page == 2) {
-                writeToDB("otherPeopleTalking", "fireworks", "loudVoices",
-                                            "householdAppliances", "vehicles", "bathroomAppliances", "dislikeSounds");
+                if (!Globals.previousClicked) {
+                    writeToDB("otherPeopleTalking", "fireworks", "loudVoices",
+                              "householdAppliances", "vehicles", "bathroomAppliances", "dislikeSounds");
+
+                } else {
+                    updateOnPreviousClicked("otherPeopleTalking", "fireworks", "loudVoices",
+                              "householdAppliances", "vehicles", "bathroomAppliances", "dislikeSounds");
+                    Globals.previousClicked = false;
+                }
                 if (m_InstanceRef2 != null) {
                     InstanceRef2.Show();
                 }
@@ -675,21 +803,36 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 4) {
-                writeToDBTop3( "concentrating", "hardToListenInClassroom", "hardToListenInGroup", "hardToListen");
+                if (!Globals.previousClicked) {
+                    previousUpdate3("concentrating", "hardToListenInClassroom", "hardToListenInGroup", "hardToListen");
+                } else {
+                    writeToDBTop3("concentrating", "hardToListenInClassroom", "hardToListenInGroup", "hardToListen");
+                    Globals.previousClicked = false;
+                }
                 GuidedInterview interviewForm3 = new GuidedInterview();
                 interviewForm3.InstanceRef3 = this;
                 interviewForm3.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 5) {
-                writeToDBTop3( "radioOn", "clockTicking", "peopleTalking", "hardToConcentrate");
+                if (!Globals.previousClicked) {
+                    previousUpdate3("radioOn", "clockTicking", "peopleTalking", "hardToConcentrate");
+                } else {
+                    writeToDBTop3("radioOn", "clockTicking", "peopleTalking", "hardToConcentrate");
+                    Globals.previousClicked = false;
+                }
                 GuidedInterview interviewForm4 = new GuidedInterview();
                 interviewForm4.InstanceRef4 = this;
                 interviewForm4.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 6) {
-                writeToDB5( "computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms", "likeSounds");
+                if (!Globals.previousClicked) {
+                    previousUpdate5("computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms", "likeSounds");
+                } else {
+                    writeToDB5("computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms", "likeSounds");
+                    Globals.previousClicked = false;
+                }
                 GuidedInterview interviewForm5 = new GuidedInterview();
                 interviewForm5.InstanceRef5 = this;
                 interviewForm5.Show();
@@ -699,28 +842,48 @@ namespace Login {
             //SIGHT SECTION
             //-------------
             else if (Globals.interview_page == 7) {
-                writeToDB4( "hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen", "makeALotSounds");
+                if (!Globals.previousClicked) {
+                    previousUpdate4("hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen", "makeALotSounds");
+                } else {
+                    writeToDB4("hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen", "makeALotSounds");
+                    Globals.previousClicked = false;
+                }
                 GuidedInterview sightInterview1 = new GuidedInterview();
                 sightInterview1.InstanceRef6 = this;
                 sightInterview1.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 8) {
-                writeToDB5( "sunlight", "fluorescentLight", "lightAndShadow", "busyPatterns", "classroomLight", "dontLikeToLookAt");
+                if (!Globals.previousClicked) {
+                    previousUpdate5("sunlight", "fluorescentLight", "lightAndShadow", "busyPatterns", "classroomLight", "dontLikeToLookAt");
+                } else {
+                    writeToDB5("sunlight", "fluorescentLight", "lightAndShadow", "busyPatterns", "classroomLight", "dontLikeToLookAt");
+                    Globals.previousClicked = false;
+                }
                 GuidedInterview sightInterview2 = new GuidedInterview();
                 sightInterview2.InstanceRef7 = this;
                 sightInterview2.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 9) {
-                writeToDBTop3( "lotsOfThingsInAMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom", "sightHardToConcentrate");
+                if (!Globals.previousClicked) {
+                    previousUpdate3("lotsOfThingsInAMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom", "sightHardToConcentrate");
+                } else {
+                    writeToDBTop3("lotsOfThingsInAMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom", "sightHardToConcentrate");
+                    Globals.previousClicked = false;
+                }
                 GuidedInterview sightInterview3 = new GuidedInterview();
                 sightInterview3.InstanceRef8 = this;
                 sightInterview3.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 10) {
-                writeToDB5( "movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects", "likeToLookAt");
+                if (!Globals.previousClicked) {
+                    previousUpdate5("movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects", "likeToLookAt");
+                } else {
+                    writeToDB5("movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects", "likeToLookAt");
+                    Globals.previousClicked = false;
+                }
                 GuidedInterview sightInterview4 = new GuidedInterview();
                 sightInterview4.InstanceRef9 = this;
                 sightInterview4.Show();
@@ -730,7 +893,12 @@ namespace Login {
             //TOUCH SECTION
             //-------------
             else if (Globals.interview_page == 11) {
-                writeToDB( "sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes", "dontLikeFeelingOf");
+                if (!Globals.previousClicked) {
+                    updateOnPreviousClicked("sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes", "dontLikeFeelingOf");
+                } else {
+                    writeToDB("sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes", "dontLikeFeelingOf");
+                    Globals.previousClicked = false;
+                }
                 GuidedInterview touchInterview2 = new GuidedInterview();
                 touchInterview2.InstanceRef10 = this;
                 touchInterview2.Show();
@@ -744,7 +912,12 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 13) {
-                writeToDB( "beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut", "peopleTouchDontLike");
+                if (!Globals.previousClicked) {
+                    updateOnPreviousClicked("beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut", "peopleTouchDontLike");
+                } else {
+                    writeToDB("beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut", "peopleTouchDontLike");
+                    Globals.previousClicked = false;
+                }
                 GuidedInterview touchInterview4 = new GuidedInterview();
                 touchInterview4.InstanceRef12 = this;
                 touchInterview4.Show();
@@ -761,8 +934,12 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 15) {
-                writeToDB( "soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow", "likeTheFeelingOf");
-                GuidedInterview smellInterview2 = new GuidedInterview();
+                if (!Globals.previousClicked) {
+                    updateOnPreviousClicked("soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow", "likeTheFeelingOf");
+                } else {
+                    writeToDB( "soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow", "likeTheFeelingOf");
+                    Globals.previousClicked = false;
+                }                GuidedInterview smellInterview2 = new GuidedInterview();
                 smellInterview2.InstanceRef14 = this;
                 smellInterview2.Show();
                 this.Hide();
@@ -771,14 +948,24 @@ namespace Login {
             //TASTE SECTION
             //-------------
             else if (Globals.interview_page == 16) {
-                writeToDB5( "smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople", "likeToSmell");
+                if (!Globals.previousClicked) {
+                    previousUpdate5("smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople", "likeToSmell");
+                } else {
+                    writeToDB5("smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople", "likeToSmell");
+                    Globals.previousClicked = false;
+                }
                 GuidedInterview tasteInterview1 = new GuidedInterview();
                 tasteInterview1.InstanceRef15 = this;
                 tasteInterview1.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 17) {
-                writeToDB( "vegetables", "fruit", "meat", "fish", "eggs", "dairy", "foodGroupsDontLike");
+                if (!Globals.previousClicked) {
+                    updateOnPreviousClicked("vegetables", "fruit", "meat", "fish", "eggs", "dairy", "foodGroupsDontLike");
+                } else {
+                    writeToDB("vegetables", "fruit", "meat", "fish", "eggs", "dairy", "foodGroupsDontLike");
+                    Globals.previousClicked = false;
+                }
                 GuidedInterview tasteInterview1p2 = new GuidedInterview();
                 tasteInterview1p2.InstanceRef16 = this;
                 tasteInterview1p2.Show();
@@ -792,7 +979,12 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 19) {
-                writeToDB( "lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour", "tastesOrFeelsInMouthDontLike");
+                if (!Globals.previousClicked) {
+                    updateOnPreviousClicked("lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour", "tastesOrFeelsInMouthDontLike");
+                } else {
+                    writeToDB("lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour", "tastesOrFeelsInMouthDontLike");
+                    Globals.previousClicked = false;
+                }
                 GuidedInterview tasteInterview3 = new GuidedInterview();
                 tasteInterview3.InstanceRef18 = this;
                 tasteInterview3.Show();
@@ -806,30 +998,48 @@ namespace Login {
                 this.Hide();
             }
             else if (Globals.interview_page == 21) {
-                writeToDBTop3("shirt", "hair", "objects", "thingsPutInMouthALot");
-
+                if (!Globals.previousClicked) {
+                    previousUpdate3("shirt", "hair", "objects", "thingsPutInMouthALot");
+                } else {
+                    writeToDBTop3("shirt", "hair", "objects", "thingsPutInMouthALot");
+                    Globals.previousClicked = false;
+                }
                 GuidedInterview mvmtInterview1 = new GuidedInterview();
                 mvmtInterview1.InstanceRef20 = this;
                 mvmtInterview1.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 22) {
-                writeToDB5( "beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
-
+                if (!Globals.previousClicked) {
+                    previousUpdate5("beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
+                } else {
+                    writeToDB5("beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
+                    Globals.previousClicked = false;
+                }
                 GuidedInterview mvmtInterview2 = new GuidedInterview();
                 mvmtInterview2.InstanceRef21 = this;
                 mvmtInterview2.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 23) {
-                writeToDBTop2( "standingStill", "sittingStill", "hardToStayStill");
+                if (!Globals.previousClicked) {
+                    previousUpdate2("standingStill", "sittingStill", "hardToStayStill");
+                } else {
+                    writeToDBTop2("standingStill", "sittingStill", "hardToStayStill");
+                    Globals.previousClicked = false;
+                }
                 this.Hide();
                 GuidedInterview mvmtInterview3 = new GuidedInterview();
                 mvmtInterview3.InstanceRef22 = this;
                 mvmtInterview3.Show();
             }
             else if (Globals.interview_page == 24) {
-                writeToDB5( "movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running", "movingThatYouLike");
+                if (!Globals.previousClicked) {
+                    previousUpdate5("movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running", "movingThatYouLike");
+                } else {
+                    writeToDB5("movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running", "movingThatYouLike");
+                    Globals.previousClicked = false;
+                }
                 GuidedInterview mvmtInterview4 = new GuidedInterview();
                 mvmtInterview4.InstanceRef23 = this;
                 mvmtInterview4.Show();
@@ -839,7 +1049,12 @@ namespace Login {
             //ENVIRONMENT SECTION
             //-------------------
             else if (Globals.interview_page == 25) {
-                writeToDB4( "rocking", "movingHands", "clapping", "pacing", "moveOverAndOverAgain");
+                if (!Globals.previousClicked) {
+                    previousUpdate4("rocking", "movingHands", "clapping", "pacing", "moveOverAndOverAgain");
+                } else {
+                    writeToDB4("rocking", "movingHands", "clapping", "pacing", "moveOverAndOverAgain");
+                    Globals.previousClicked = false;
+                }
                 GuidedInterview environmentInterview1 = new GuidedInterview();
                 environmentInterview1.InstanceRef24 = this;
                 environmentInterview1.Show();
@@ -849,7 +1064,12 @@ namespace Login {
             //OTHER SECTION
             //-------------
             else if (Globals.interview_page == 26) {
-                writeToDB5( "supermarket", "party", "foodHall", "show", "shoppingMall", "other");
+                if (!Globals.previousClicked) {
+                    previousUpdate5("supermarket", "party", "foodHall", "show", "shoppingMall", "other");
+                } else {
+                    writeToDB5("supermarket", "party", "foodHall", "show", "shoppingMall", "other");
+                    Globals.previousClicked = false;
+                }
                 GuidedInterview otherInterview1 = new GuidedInterview();
                 otherInterview1.InstanceRef25 = this;
                 otherInterview1.Show();

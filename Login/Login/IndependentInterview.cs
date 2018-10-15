@@ -2284,7 +2284,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 36) {
                 if (!Globals.previousClicked) {
-                    updateOnPreviousClicked("cookingSmells", "foodSmells", "cleaningProducts", "toiletSmells", "perfumes", "bodySmells", "smellDontLike"));
+                    updateOnPreviousClicked("cookingSmells", "foodSmells", "cleaningProducts", "toiletSmells", "perfumes", "bodySmells", "smellDontLike");
                 } else {
                     writeToDB("cookingSmells", "foodSmells", "cleaningProducts", "toiletSmells", "perfumes", "bodySmells", "smellDontLike");
                     Globals.previousClicked = false;
@@ -2461,7 +2461,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 55) {
                 if (!Globals.previousClicked) {
-                    previousUpdate5("beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike"):
+                    previousUpdate5("beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
                 } else {
                 writeToDB5("beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
                     Globals.previousClicked = false;
