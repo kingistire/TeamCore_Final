@@ -1487,8 +1487,15 @@ namespace Login {
             //SOUND SECTION
             //-------------
             if (Globals.interview_page == 2) {
-                writeToDB("otherPeopleTalking", "fireworks", "loudVoices",
-                                            "householdAppliances", "vehicles", "bathroomAppliances", "dislikeSounds");
+                if (!Globals.previousClicked) {
+                    writeToDB("otherPeopleTalking", "fireworks", "loudVoices",
+                              "householdAppliances", "vehicles", "bathroomAppliances", "dislikeSounds");
+
+                } else {
+                    updateOnPreviousClicked("otherPeopleTalking", "fireworks", "loudVoices",
+                              "householdAppliances", "vehicles", "bathroomAppliances", "dislikeSounds");
+                    Globals.previousClicked = false;
+                }
                 if (m_InstanceRef2 != null) {
                     InstanceRef2.Show();
                 } else {
@@ -1511,7 +1518,12 @@ namespace Login {
                 soundPage2.Show();
                 this.Hide();
             } else if (Globals.interview_page == 5) {
-                writeToDBTop3("concentrating", "hardToListenInClassroom", "hardToListenInGroup", "hardToListen");
+                if (!Globals.previousClicked) {
+                    previousUpdate3("concentrating", "hardToListenInClassroom", "hardToListenInGroup", "hardToListen");
+                } else {
+                    writeToDBTop3("concentrating", "hardToListenInClassroom", "hardToListenInGroup", "hardToListen");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations soundPage3 = new FamilyObservations();
                 soundPage3.InstanceRef4 = this;
                 soundPage3.Show();
@@ -1523,7 +1535,12 @@ namespace Login {
                 soundPage4.Show();
                 this.Hide();
             } else if (Globals.interview_page == 7) {
-                writeToDBTop3("radioOn", "clockTicking", "peopleTalking", "hardToConcentrate");
+                if (!Globals.previousClicked) {
+                    previousUpdate3("radioOn", "clockTicking", "peopleTalking", "hardToConcentrate");
+                } else {
+                    writeToDBTop3("radioOn", "clockTicking", "peopleTalking", "hardToConcentrate");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations soundPage5 = new FamilyObservations();
                 soundPage5.InstanceRef6 = this;
                 soundPage5.Show();
@@ -1536,7 +1553,12 @@ namespace Login {
                 soundPage6.Show();
                 this.Hide();
             } else if (Globals.interview_page == 9) {
-                writeToDB5("computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms", "likeSounds");
+                if (!Globals.previousClicked) {
+                    previousUpdate5("computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms", "likeSounds");
+                } else {
+                    writeToDB5("computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms", "likeSounds");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations soundPage7 = new FamilyObservations();
                 soundPage7.InstanceRef8 = this;
                 soundPage7.Show();
@@ -1548,7 +1570,12 @@ namespace Login {
                 soundPage8.Show();
                 this.Hide();
             } else if (Globals.interview_page == 11) {
-                writeToDB4("hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen", "makeALotSounds");
+                if (!Globals.previousClicked) {
+                    previousUpdate4("hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen", "makeALotSounds");
+                } else {
+                    writeToDB4("hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen", "makeALotSounds");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations soundPage9 = new FamilyObservations();
                 soundPage9.InstanceRef10 = this;
                 soundPage9.Show();
@@ -1565,7 +1592,12 @@ namespace Login {
               //SIGHT SECTION
               //-------------
               else if (Globals.interview_page == 13) {
-                writeToDB5("sunlight", "fluorescentLight", "lightAndShadow", "busyPatterns", "classroomLight", "dontLikeToLookAt");
+                if (!Globals.previousClicked) {
+                    previousUpdate5("sunlight", "fluorescentLight", "lightAndShadow", "busyPatterns", "classroomLight", "dontLikeToLookAt");
+                } else {
+                    writeToDB5("sunlight", "fluorescentLight", "lightAndShadow", "busyPatterns", "classroomLight", "dontLikeToLookAt");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations sightPage1 = new FamilyObservations();
                 sightPage1.InstanceRef12 = this;
                 sightPage1.Show();
@@ -1578,7 +1610,12 @@ namespace Login {
                 sightPage2.Show();
                 this.Hide();
             } else if (Globals.interview_page == 15) {
-                writeToDBTop3("lotsOfThingsInAMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom", "sightHardToConcentrate");
+                if (!Globals.previousClicked) {
+                    previousUpdate3("lotsOfThingsInAMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom", "sightHardToConcentrate");
+                } else {
+                    writeToDBTop3("lotsOfThingsInAMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom", "sightHardToConcentrate");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations sightPage3 = new FamilyObservations();
                 sightPage3.InstanceRef14 = this;
                 sightPage3.Show();
@@ -1590,7 +1627,12 @@ namespace Login {
                 sightPage4.Show();
                 this.Hide();
             } else if (Globals.interview_page == 17) {
-                writeToDB5("movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects", "likeToLookAt");
+                if (!Globals.previousClicked) {
+                    previousUpdate5("movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects", "likeToLookAt");
+                } else {
+                    writeToDB5("movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects", "likeToLookAt");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations sightPage5 = new FamilyObservations();
                 sightPage5.InstanceRef16 = this;
                 sightPage5.Show();
@@ -1607,7 +1649,12 @@ namespace Login {
               //TOUCH SECTION
               //-------------
               else if (Globals.interview_page == 19) {
-                writeToDB("sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes", "dontLikeFeelingOf");
+                if (!Globals.previousClicked) {
+                    updateOnPreviousClicked("sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes", "dontLikeFeelingOf");
+                } else {
+                    writeToDB("sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes", "dontLikeFeelingOf");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations touchPage1 = new FamilyObservations();
                 touchPage1.InstanceRef18 = this;
                 touchPage1.Show();
@@ -1632,7 +1679,12 @@ namespace Login {
                 this.Hide();
             } *///Add missing question here
             else if (Globals.interview_page == 22) {
-                writeToDB("beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut", "peopleTouchDontLike");
+                if (!Globals.previousClicked) {
+                    updateOnPreviousClicked("beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut", "peopleTouchDontLike");
+                } else {
+                    writeToDB("beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut", "peopleTouchDontLike");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations touchPage3 = new FamilyObservations();
                 touchPage3.InstanceRef21 = this;
                 touchPage3.Show();
@@ -1652,7 +1704,12 @@ namespace Login {
                 this.Hide();
             } //Add missing question here
               else if (Globals.interview_page == 25) {
-                writeToDB("soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow", "likeTheFeelingOf");
+                if (!Globals.previousClicked) {
+                    updateOnPreviousClicked("soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow", "likeTheFeelingOf");
+                } else {
+                    writeToDB("soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow", "likeTheFeelingOf");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations touchPage5 = new FamilyObservations();
                 touchPage5.InstanceRef24 = this;
                 touchPage5.Show();
@@ -1669,7 +1726,12 @@ namespace Login {
               //SMELL SECTION
               //-------------
               else if (Globals.interview_page == 27) {
-                writeToDB("cookingSmells", "foodSmells", "cleaningProducts", "toiletSmells", "perfumes", "bodySmells", "smellDontLike");
+                if (!Globals.previousClicked) {
+                    updateOnPreviousClicked("cookingSmells", "foodSmells", "cleaningProducts", "toiletSmells", "perfumes", "bodySmells", "smellDontLike");
+                } else {
+                    writeToDB("cookingSmells", "foodSmells", "cleaningProducts", "toiletSmells", "perfumes", "bodySmells", "smellDontLike");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations smellPage1 = new FamilyObservations();
                 smellPage1.InstanceRef26 = this;
                 smellPage1.Show();
@@ -1682,7 +1744,12 @@ namespace Login {
                 smellPage2.Show();
                 this.Hide();
             } else if (Globals.interview_page == 29) {
-                writeToDB5("smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople", "likeToSmell");
+                if (!Globals.previousClicked) {
+                    previousUpdate5("smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople", "likeToSmell");
+                } else {
+                    writeToDB5("smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople", "likeToSmell");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations smellPage3 = new FamilyObservations();
                 smellPage3.InstanceRef28 = this;
                 smellPage3.Show();
@@ -1700,7 +1767,12 @@ namespace Login {
               //-------------
               else if (Globals.interview_page == 31) {
 
-                writeToDB("vegetables", "fruit", "meat", "fish", "eggs", "dairy", "foodGroupsDontLike");
+                if (!Globals.previousClicked) {
+                    updateOnPreviousClicked("vegetables", "fruit", "meat", "fish", "eggs", "dairy", "foodGroupsDontLike");
+                } else {
+                    writeToDB("vegetables", "fruit", "meat", "fish", "eggs", "dairy", "foodGroupsDontLike");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations tastePage1 = new FamilyObservations();
                 tastePage1.InstanceRef30 = this;
                 tastePage1.Show();
@@ -1719,7 +1791,12 @@ namespace Login {
                 tastePage2.Show();
                 this.Hide();
             } else if (Globals.interview_page == 34) {
-                writeToDB("lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour", "tastesOrFeelsInMouthDontLike");
+                if (!Globals.previousClicked) {
+                    updateOnPreviousClicked("lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour", "tastesOrFeelsInMouthDontLike");
+                } else {
+                    writeToDB("lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour", "tastesOrFeelsInMouthDontLike");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations tastePage3 = new FamilyObservations();
                 tastePage3.InstanceRef33 = this;
                 tastePage3.Show();
@@ -1739,7 +1816,12 @@ namespace Login {
                 this.Hide();
             } //Add missing question here
               else if (Globals.interview_page == 37) {
-                writeToDBTop2("familiarFoods", "unfamiliarFoods", "foodReallyLikeToEat");
+                if (!Globals.previousClicked) {
+                    previousUpdate2("familiarFoods", "unfamiliarFoods", "foodReallyLikeToEat");
+                } else {
+                    writeToDBTop2("familiarFoods", "unfamiliarFoods", "foodReallyLikeToEat");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations tastePage5 = new FamilyObservations();
                 tastePage5.InstanceRef36 = this;
                 tastePage5.Show();
@@ -1751,7 +1833,12 @@ namespace Login {
                 tastePage6.Show();
                 this.Hide();
             } else if (Globals.interview_page == 39) {
-                writeToDBTop3("shirt", "hair", "objects", "thingsPutInMouthALot");
+                if (!Globals.previousClicked) {
+                    previousUpdate3("shirt", "hair", "objects", "thingsPutInMouthALot");
+                } else {
+                    writeToDBTop3("shirt", "hair", "objects", "thingsPutInMouthALot");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations tastePage7 = new FamilyObservations();
                 tastePage7.InstanceRef38 = this;
                 tastePage7.Show();
@@ -1768,7 +1855,12 @@ namespace Login {
               //Movement SECTION
               //----------------
               else if (Globals.interview_page == 41) {
-                writeToDB5("beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
+                if (!Globals.previousClicked) {
+                    previousUpdate5("beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
+                } else {
+                    writeToDB5("beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
+                    Globals.previousClicked = false;
+                }
                 this.Hide();
                 FamilyObservations mvmtPage1 = new FamilyObservations();
                 mvmtPage1.InstanceRef40 = this;
@@ -1781,7 +1873,12 @@ namespace Login {
                 mvmtPage2.InstanceRef41 = this;
                 mvmtPage2.Show();
             } else if (Globals.interview_page == 43) {
-                writeToDBTop2("standingStill", "sittingStill", "hardToStayStill");
+                if (!Globals.previousClicked) {
+                    previousUpdate2("standingStill", "sittingStill", "hardToStayStill");
+                } else {
+                    writeToDBTop2("standingStill", "sittingStill", "hardToStayStill");
+                    Globals.previousClicked = false;
+                }
                 this.Hide();
                 FamilyObservations mvmtPage3 = new FamilyObservations();
                 mvmtPage3.InstanceRef42 = this;
@@ -1793,7 +1890,12 @@ namespace Login {
                 mvmtPage4.InstanceRef43 = this;
                 mvmtPage4.Show();
             } else if (Globals.interview_page == 45) {
-                writeToDB5("movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running", "movingThatYouLike");
+                if (!Globals.previousClicked) {
+                    previousUpdate5("movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running", "movingThatYouLike");
+                } else {
+                    writeToDB5("movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running", "movingThatYouLike");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations mvmtPage5 = new FamilyObservations();
                 mvmtPage5.InstanceRef44 = this;
                 mvmtPage5.Show();
@@ -1805,7 +1907,12 @@ namespace Login {
                 mvmtPage6.InstanceRef45 = this;
                 mvmtPage6.Show();
             } else if (Globals.interview_page == 47) {
-                writeToDB4("rocking", "movingHands", "clapping", "pacing", "moveOverAndOverAgain");
+                if (!Globals.previousClicked) {
+                    previousUpdate4("rocking", "movingHands", "clapping", "pacing", "moveOverAndOverAgain");
+                } else {
+                    writeToDB4("rocking", "movingHands", "clapping", "pacing", "moveOverAndOverAgain");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations mvmtPage7 = new FamilyObservations();
                 mvmtPage7.InstanceRef46 = this;
                 mvmtPage7.Show();
@@ -1822,7 +1929,12 @@ namespace Login {
               //ENVIRONMENT SECTION
               //-------------------
               else if (Globals.interview_page == 49) {
-                writeToDB5("supermarket", "party", "foodHall", "show", "shoppingMall", "other");
+                if (!Globals.previousClicked) {
+                    previousUpdate5("supermarket", "party", "foodHall", "show", "shoppingMall", "other");
+                } else {
+                    writeToDB5("supermarket", "party", "foodHall", "show", "shoppingMall", "other");
+                    Globals.previousClicked = false;
+                }
                 FamilyObservations environmentPage1 = new FamilyObservations();
                 environmentPage1.InstanceRef48 = this;
                 environmentPage1.Show();
