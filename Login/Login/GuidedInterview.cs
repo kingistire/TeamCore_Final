@@ -577,6 +577,12 @@ namespace Login {
         }
 
         private void SightColours() {
+            topLeftPB2.BackColor = Color.Bisque;
+            topMidPB2.BackColor = Color.Bisque;
+            topRightPB2.BackColor = Color.Bisque;
+            bottomLeftPB2.BackColor = Color.Bisque;
+            bottomMidPB2.BackColor = Color.Bisque;
+            bottomRightPB2.BackColor = Color.Bisque;
             picBackground.BackColor = Color.SandyBrown;
             lblQuestion.BackColor = Color.SandyBrown;
             panel1.BackColor = Color.Bisque;
@@ -584,6 +590,12 @@ namespace Login {
         }
 
         private void TouchColours() {
+            topLeftPB2.BackColor = Color.LightYellow;
+            topMidPB2.BackColor = Color.LightYellow;
+            topRightPB2.BackColor = Color.LightYellow;
+            bottomLeftPB2.BackColor = Color.LightYellow;
+            bottomMidPB2.BackColor = Color.LightYellow;
+            bottomRightPB2.BackColor = Color.LightYellow;
             //picturePanel
             picBackground.BackColor = Color.FromArgb(255, 255, 128);
             lblQuestion.BackColor = Color.FromArgb(255, 255, 128);
@@ -592,6 +604,12 @@ namespace Login {
         }
 
         private void SmellColours() {
+            topLeftPB2.BackColor = Color.Honeydew;
+            topMidPB2.BackColor = Color.Honeydew;
+            topRightPB2.BackColor = Color.Honeydew;
+            bottomLeftPB2.BackColor = Color.Honeydew;
+            bottomMidPB2.BackColor = Color.Honeydew;
+            bottomRightPB2.BackColor = Color.Honeydew;
             //picturePanel
             picBackground.BackColor = Color.FromArgb(143, 188, 139);
             lblQuestion.BackColor = Color.FromArgb(143, 188, 139);
@@ -608,10 +626,21 @@ namespace Login {
             lblQuestion.BackColor = tasteHeader;
             panel1.BackColor = tasteBg;
             picSense.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\taste.PNG");
-
+            topLeftPB2.BackColor = tasteBg;
+            topMidPB2.BackColor = tasteBg;
+            topRightPB2.BackColor = tasteBg;
+            bottomLeftPB2.BackColor = tasteBg;
+            bottomMidPB2.BackColor = tasteBg;
+            bottomRightPB2.BackColor = tasteBg;
         }
 
         private void MovementColours() {
+            topLeftPB2.BackColor = Color.Pink;
+            topMidPB2.BackColor = Color.Pink;
+            topRightPB2.BackColor = Color.Pink;
+            bottomLeftPB2.BackColor = Color.Pink;
+            bottomMidPB2.BackColor = Color.Pink;
+            bottomRightPB2.BackColor = Color.Pink;
             //picturePanel
             picBackground.BackColor = Color.PaleVioletRed;
             lblQuestion.BackColor = Color.PaleVioletRed;
@@ -621,6 +650,12 @@ namespace Login {
 
 
         private void EnvironmentColours() {
+            topLeftPB2.BackColor = Color.AliceBlue;
+            topMidPB2.BackColor = Color.AliceBlue;
+            topRightPB2.BackColor = Color.AliceBlue;
+            bottomLeftPB2.BackColor = Color.AliceBlue;
+            bottomMidPB2.BackColor = Color.AliceBlue;
+            bottomRightPB2.BackColor = Color.AliceBlue;
             //picturePanel
             picBackground.BackColor = Color.LightBlue;
             lblQuestion.BackColor = Color.LightBlue;
@@ -630,6 +665,12 @@ namespace Login {
         }
 
         private void OtherColours() {
+            topLeftPB2.BackColor = Color.AntiqueWhite;
+            topMidPB2.BackColor = Color.AntiqueWhite;
+            topRightPB2.BackColor = Color.AntiqueWhite;
+            bottomLeftPB2.BackColor = Color.AntiqueWhite;
+            bottomMidPB2.BackColor = Color.AntiqueWhite;
+            bottomRightPB2.BackColor = Color.AntiqueWhite;
             //picturePanel
             picBackground.BackColor = Color.Tan;
             lblQuestion.BackColor = Color.Tan;
