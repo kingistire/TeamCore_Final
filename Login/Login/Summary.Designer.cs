@@ -111,42 +111,6 @@
             this.tasteBtn = new System.Windows.Forms.Button();
             this.changeSummaryPanelType = new System.Windows.Forms.Button();
             this.shortResponseContainerPanel = new System.Windows.Forms.Panel();
-            this.q4labelc1 = new System.Windows.Forms.Label();
-            this.q3labelc1 = new System.Windows.Forms.Label();
-            this.q2labelc1 = new System.Windows.Forms.Label();
-            this.q1labelc1 = new System.Windows.Forms.Label();
-            this.srAnswer4 = new System.Windows.Forms.TextBox();
-            this.srTopicLabel1 = new System.Windows.Forms.Label();
-            this.srAnswer3 = new System.Windows.Forms.TextBox();
-            this.srAnswer2 = new System.Windows.Forms.TextBox();
-            this.srAnswer1 = new System.Windows.Forms.TextBox();
-            this.q4labelc2 = new System.Windows.Forms.Label();
-            this.q3labelc2 = new System.Windows.Forms.Label();
-            this.q2labelc2 = new System.Windows.Forms.Label();
-            this.q1labelc2 = new System.Windows.Forms.Label();
-            this.srAnswer8 = new System.Windows.Forms.TextBox();
-            this.srTopic2 = new System.Windows.Forms.Label();
-            this.srAnswer7 = new System.Windows.Forms.TextBox();
-            this.srAnswer6 = new System.Windows.Forms.TextBox();
-            this.srAnswer5 = new System.Windows.Forms.TextBox();
-            this.q4labelc3 = new System.Windows.Forms.Label();
-            this.q3labelc3 = new System.Windows.Forms.Label();
-            this.q2labelc3 = new System.Windows.Forms.Label();
-            this.q1labelc3 = new System.Windows.Forms.Label();
-            this.srAnswer12 = new System.Windows.Forms.TextBox();
-            this.srTopic3 = new System.Windows.Forms.Label();
-            this.srAnswer11 = new System.Windows.Forms.TextBox();
-            this.srAnswer10 = new System.Windows.Forms.TextBox();
-            this.srAnswer9 = new System.Windows.Forms.TextBox();
-            this.q4labelc4 = new System.Windows.Forms.Label();
-            this.q3labelc4 = new System.Windows.Forms.Label();
-            this.q2labelc4 = new System.Windows.Forms.Label();
-            this.q1labelc4 = new System.Windows.Forms.Label();
-            this.srAnswer16 = new System.Windows.Forms.TextBox();
-            this.srTopic4 = new System.Windows.Forms.Label();
-            this.srAnswer15 = new System.Windows.Forms.TextBox();
-            this.srAnswer14 = new System.Windows.Forms.TextBox();
-            this.srAnswer13 = new System.Windows.Forms.TextBox();
             this.q4labelc5 = new System.Windows.Forms.Label();
             this.q3labelc5 = new System.Windows.Forms.Label();
             this.q2labelc5 = new System.Windows.Forms.Label();
@@ -156,6 +120,42 @@
             this.srAnswer19 = new System.Windows.Forms.TextBox();
             this.srAnswer18 = new System.Windows.Forms.TextBox();
             this.srAnswer17 = new System.Windows.Forms.TextBox();
+            this.q4labelc4 = new System.Windows.Forms.Label();
+            this.q3labelc4 = new System.Windows.Forms.Label();
+            this.q2labelc4 = new System.Windows.Forms.Label();
+            this.q1labelc4 = new System.Windows.Forms.Label();
+            this.srAnswer16 = new System.Windows.Forms.TextBox();
+            this.srTopic4 = new System.Windows.Forms.Label();
+            this.srAnswer15 = new System.Windows.Forms.TextBox();
+            this.srAnswer14 = new System.Windows.Forms.TextBox();
+            this.srAnswer13 = new System.Windows.Forms.TextBox();
+            this.q4labelc3 = new System.Windows.Forms.Label();
+            this.q3labelc3 = new System.Windows.Forms.Label();
+            this.q2labelc3 = new System.Windows.Forms.Label();
+            this.q1labelc3 = new System.Windows.Forms.Label();
+            this.srAnswer12 = new System.Windows.Forms.TextBox();
+            this.srTopic3 = new System.Windows.Forms.Label();
+            this.srAnswer11 = new System.Windows.Forms.TextBox();
+            this.srAnswer10 = new System.Windows.Forms.TextBox();
+            this.srAnswer9 = new System.Windows.Forms.TextBox();
+            this.q4labelc2 = new System.Windows.Forms.Label();
+            this.q3labelc2 = new System.Windows.Forms.Label();
+            this.q2labelc2 = new System.Windows.Forms.Label();
+            this.q1labelc2 = new System.Windows.Forms.Label();
+            this.srAnswer8 = new System.Windows.Forms.TextBox();
+            this.srTopic2 = new System.Windows.Forms.Label();
+            this.srAnswer7 = new System.Windows.Forms.TextBox();
+            this.srAnswer6 = new System.Windows.Forms.TextBox();
+            this.srAnswer5 = new System.Windows.Forms.TextBox();
+            this.q4labelc1 = new System.Windows.Forms.Label();
+            this.q3labelc1 = new System.Windows.Forms.Label();
+            this.q2labelc1 = new System.Windows.Forms.Label();
+            this.q1labelc1 = new System.Windows.Forms.Label();
+            this.srAnswer4 = new System.Windows.Forms.TextBox();
+            this.srTopicLabel1 = new System.Windows.Forms.Label();
+            this.srAnswer3 = new System.Windows.Forms.TextBox();
+            this.srAnswer2 = new System.Windows.Forms.TextBox();
+            this.srAnswer1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.capstoneDBDataSetBindingSource)).BeginInit();
             this.topic1ResultPanel.SuspendLayout();
             this.resultsTable.SuspendLayout();
@@ -355,72 +355,72 @@
             this.topic1Results1.AutoSize = true;
             this.topic1Results1.Location = new System.Drawing.Point(239, 4);
             this.topic1Results1.Name = "topic1Results1";
-            this.topic1Results1.Size = new System.Drawing.Size(41, 13);
+            this.topic1Results1.Size = new System.Drawing.Size(27, 13);
             this.topic1Results1.TabIndex = 8;
-            this.topic1Results1.Text = "label10";
+            this.topic1Results1.Text = "N/A";
             // 
             // topic1Results2
             // 
             this.topic1Results2.AutoSize = true;
             this.topic1Results2.Location = new System.Drawing.Point(239, 25);
             this.topic1Results2.Name = "topic1Results2";
-            this.topic1Results2.Size = new System.Drawing.Size(41, 13);
+            this.topic1Results2.Size = new System.Drawing.Size(27, 13);
             this.topic1Results2.TabIndex = 9;
-            this.topic1Results2.Text = "label11";
+            this.topic1Results2.Text = "N/A";
             // 
             // topic1Results3
             // 
             this.topic1Results3.AutoSize = true;
             this.topic1Results3.Location = new System.Drawing.Point(239, 49);
             this.topic1Results3.Name = "topic1Results3";
-            this.topic1Results3.Size = new System.Drawing.Size(41, 13);
+            this.topic1Results3.Size = new System.Drawing.Size(27, 13);
             this.topic1Results3.TabIndex = 10;
-            this.topic1Results3.Text = "label12";
+            this.topic1Results3.Text = "N/A";
             // 
             // topic1Results4
             // 
             this.topic1Results4.AutoSize = true;
             this.topic1Results4.Location = new System.Drawing.Point(239, 75);
             this.topic1Results4.Name = "topic1Results4";
-            this.topic1Results4.Size = new System.Drawing.Size(41, 13);
+            this.topic1Results4.Size = new System.Drawing.Size(27, 13);
             this.topic1Results4.TabIndex = 11;
-            this.topic1Results4.Text = "label13";
+            this.topic1Results4.Text = "N/A";
             // 
             // topic1Results5
             // 
             this.topic1Results5.AutoSize = true;
             this.topic1Results5.Location = new System.Drawing.Point(239, 105);
             this.topic1Results5.Name = "topic1Results5";
-            this.topic1Results5.Size = new System.Drawing.Size(41, 13);
+            this.topic1Results5.Size = new System.Drawing.Size(27, 13);
             this.topic1Results5.TabIndex = 12;
-            this.topic1Results5.Text = "label14";
+            this.topic1Results5.Text = "N/A";
             // 
             // topic1Results6
             // 
             this.topic1Results6.AutoSize = true;
             this.topic1Results6.Location = new System.Drawing.Point(239, 132);
             this.topic1Results6.Name = "topic1Results6";
-            this.topic1Results6.Size = new System.Drawing.Size(41, 13);
+            this.topic1Results6.Size = new System.Drawing.Size(27, 13);
             this.topic1Results6.TabIndex = 13;
-            this.topic1Results6.Text = "label15";
+            this.topic1Results6.Text = "N/A";
             // 
             // topic1Results7
             // 
             this.topic1Results7.AutoSize = true;
             this.topic1Results7.Location = new System.Drawing.Point(239, 160);
             this.topic1Results7.Name = "topic1Results7";
-            this.topic1Results7.Size = new System.Drawing.Size(41, 13);
+            this.topic1Results7.Size = new System.Drawing.Size(27, 13);
             this.topic1Results7.TabIndex = 14;
-            this.topic1Results7.Text = "label16";
+            this.topic1Results7.Text = "N/A";
             // 
             // topic1Results8
             // 
             this.topic1Results8.AutoSize = true;
             this.topic1Results8.Location = new System.Drawing.Point(239, 185);
             this.topic1Results8.Name = "topic1Results8";
-            this.topic1Results8.Size = new System.Drawing.Size(41, 13);
+            this.topic1Results8.Size = new System.Drawing.Size(27, 13);
             this.topic1Results8.TabIndex = 15;
-            this.topic1Results8.Text = "label17";
+            this.topic1Results8.Text = "N/A";
             // 
             // topic1Label
             // 
@@ -482,7 +482,7 @@
             this.topic3Results6.Name = "topic3Results6";
             this.topic3Results6.Size = new System.Drawing.Size(63, 22);
             this.topic3Results6.TabIndex = 16;
-            this.topic3Results6.Text = "label11";
+            this.topic3Results6.Text = "N/A";
             // 
             // topic3Image6
             // 
@@ -502,7 +502,7 @@
             this.topic3Results5.Name = "topic3Results5";
             this.topic3Results5.Size = new System.Drawing.Size(63, 20);
             this.topic3Results5.TabIndex = 14;
-            this.topic3Results5.Text = "label7";
+            this.topic3Results5.Text = "N/A";
             // 
             // topic3Image5
             // 
@@ -522,7 +522,7 @@
             this.topic3Results4.Name = "topic3Results4";
             this.topic3Results4.Size = new System.Drawing.Size(63, 20);
             this.topic3Results4.TabIndex = 12;
-            this.topic3Results4.Text = "label2";
+            this.topic3Results4.Text = "N/A";
             // 
             // topic3Image1
             // 
@@ -556,27 +556,27 @@
             this.topic3Results1.AutoSize = true;
             this.topic3Results1.Location = new System.Drawing.Point(239, 4);
             this.topic3Results1.Name = "topic3Results1";
-            this.topic3Results1.Size = new System.Drawing.Size(41, 13);
+            this.topic3Results1.Size = new System.Drawing.Size(27, 13);
             this.topic3Results1.TabIndex = 8;
-            this.topic3Results1.Text = "label24";
+            this.topic3Results1.Text = "N/A";
             // 
             // topic3Results2
             // 
             this.topic3Results2.AutoSize = true;
             this.topic3Results2.Location = new System.Drawing.Point(239, 51);
             this.topic3Results2.Name = "topic3Results2";
-            this.topic3Results2.Size = new System.Drawing.Size(41, 13);
+            this.topic3Results2.Size = new System.Drawing.Size(27, 13);
             this.topic3Results2.TabIndex = 9;
-            this.topic3Results2.Text = "label25";
+            this.topic3Results2.Text = "N/A";
             // 
             // topic3Results3
             // 
             this.topic3Results3.AutoSize = true;
             this.topic3Results3.Location = new System.Drawing.Point(239, 98);
             this.topic3Results3.Name = "topic3Results3";
-            this.topic3Results3.Size = new System.Drawing.Size(41, 13);
+            this.topic3Results3.Size = new System.Drawing.Size(27, 13);
             this.topic3Results3.TabIndex = 10;
-            this.topic3Results3.Text = "label29";
+            this.topic3Results3.Text = "N/A";
             // 
             // topic3Image4
             // 
@@ -654,7 +654,7 @@
             this.topic2Results8.Name = "topic2Results8";
             this.topic2Results8.Size = new System.Drawing.Size(63, 22);
             this.topic2Results8.TabIndex = 20;
-            this.topic2Results8.Text = "label10";
+            this.topic2Results8.Text = "N/A";
             // 
             // topic2Image8
             // 
@@ -674,7 +674,7 @@
             this.topic2Results7.Name = "topic2Results7";
             this.topic2Results7.Size = new System.Drawing.Size(63, 20);
             this.topic2Results7.TabIndex = 18;
-            this.topic2Results7.Text = "label8";
+            this.topic2Results7.Text = "N/A";
             // 
             // topic2Image7
             // 
@@ -694,7 +694,7 @@
             this.topic2Results6.Name = "topic2Results6";
             this.topic2Results6.Size = new System.Drawing.Size(63, 20);
             this.topic2Results6.TabIndex = 16;
-            this.topic2Results6.Text = "label6";
+            this.topic2Results6.Text = "N/A";
             // 
             // topic2Image6
             // 
@@ -714,7 +714,7 @@
             this.topic2Results5.Name = "topic2Results5";
             this.topic2Results5.Size = new System.Drawing.Size(63, 20);
             this.topic2Results5.TabIndex = 14;
-            this.topic2Results5.Text = "label4";
+            this.topic2Results5.Text = "N/A";
             // 
             // topic2Results4
             // 
@@ -724,7 +724,7 @@
             this.topic2Results4.Name = "topic2Results4";
             this.topic2Results4.Size = new System.Drawing.Size(63, 20);
             this.topic2Results4.TabIndex = 13;
-            this.topic2Results4.Text = "label3";
+            this.topic2Results4.Text = "N/A";
             // 
             // topic2Image1
             // 
@@ -758,27 +758,27 @@
             this.topic2Results1.AutoSize = true;
             this.topic2Results1.Location = new System.Drawing.Point(239, 4);
             this.topic2Results1.Name = "topic2Results1";
-            this.topic2Results1.Size = new System.Drawing.Size(41, 13);
+            this.topic2Results1.Size = new System.Drawing.Size(27, 13);
             this.topic2Results1.TabIndex = 8;
-            this.topic2Results1.Text = "label26";
+            this.topic2Results1.Text = "N/A";
             // 
             // topic2Results2
             // 
             this.topic2Results2.AutoSize = true;
             this.topic2Results2.Location = new System.Drawing.Point(239, 37);
             this.topic2Results2.Name = "topic2Results2";
-            this.topic2Results2.Size = new System.Drawing.Size(41, 13);
+            this.topic2Results2.Size = new System.Drawing.Size(27, 13);
             this.topic2Results2.TabIndex = 9;
-            this.topic2Results2.Text = "label27";
+            this.topic2Results2.Text = "N/A";
             // 
             // topic2Results3
             // 
             this.topic2Results3.AutoSize = true;
             this.topic2Results3.Location = new System.Drawing.Point(239, 70);
             this.topic2Results3.Name = "topic2Results3";
-            this.topic2Results3.Size = new System.Drawing.Size(41, 13);
+            this.topic2Results3.Size = new System.Drawing.Size(27, 13);
             this.topic2Results3.TabIndex = 10;
-            this.topic2Results3.Text = "label28";
+            this.topic2Results3.Text = "N/A";
             // 
             // topic2Image4
             // 
@@ -881,27 +881,27 @@
             this.topic4Results1.AutoSize = true;
             this.topic4Results1.Location = new System.Drawing.Point(239, 4);
             this.topic4Results1.Name = "topic4Results1";
-            this.topic4Results1.Size = new System.Drawing.Size(41, 13);
+            this.topic4Results1.Size = new System.Drawing.Size(27, 13);
             this.topic4Results1.TabIndex = 8;
-            this.topic4Results1.Text = "label35";
+            this.topic4Results1.Text = "N/A";
             // 
             // topic4Results2
             // 
             this.topic4Results2.AutoSize = true;
             this.topic4Results2.Location = new System.Drawing.Point(239, 45);
             this.topic4Results2.Name = "topic4Results2";
-            this.topic4Results2.Size = new System.Drawing.Size(41, 13);
+            this.topic4Results2.Size = new System.Drawing.Size(27, 13);
             this.topic4Results2.TabIndex = 9;
-            this.topic4Results2.Text = "label36";
+            this.topic4Results2.Text = "N/A";
             // 
             // topic4Results3
             // 
             this.topic4Results3.AutoSize = true;
             this.topic4Results3.Location = new System.Drawing.Point(239, 86);
             this.topic4Results3.Name = "topic4Results3";
-            this.topic4Results3.Size = new System.Drawing.Size(41, 13);
+            this.topic4Results3.Size = new System.Drawing.Size(27, 13);
             this.topic4Results3.TabIndex = 10;
-            this.topic4Results3.Text = "label37";
+            this.topic4Results3.Text = "N/A";
             // 
             // topic4Image4
             // 
@@ -921,7 +921,7 @@
             this.topic4Results4.Name = "topic4Results4";
             this.topic4Results4.Size = new System.Drawing.Size(63, 40);
             this.topic4Results4.TabIndex = 12;
-            this.topic4Results4.Text = "label40";
+            this.topic4Results4.Text = "N/A";
             // 
             // topic4Image5
             // 
@@ -941,7 +941,7 @@
             this.topic4Results5.Name = "topic4Results5";
             this.topic4Results5.Size = new System.Drawing.Size(63, 41);
             this.topic4Results5.TabIndex = 14;
-            this.topic4Results5.Text = "label42";
+            this.topic4Results5.Text = "N/A";
             // 
             // topic4Label
             // 
@@ -1021,27 +1021,27 @@
             this.topic5Results1.AutoSize = true;
             this.topic5Results1.Location = new System.Drawing.Point(239, 4);
             this.topic5Results1.Name = "topic5Results1";
-            this.topic5Results1.Size = new System.Drawing.Size(41, 13);
+            this.topic5Results1.Size = new System.Drawing.Size(27, 13);
             this.topic5Results1.TabIndex = 8;
-            this.topic5Results1.Text = "label46";
+            this.topic5Results1.Text = "N/A";
             // 
             // topic5Results2
             // 
             this.topic5Results2.AutoSize = true;
             this.topic5Results2.Location = new System.Drawing.Point(239, 55);
             this.topic5Results2.Name = "topic5Results2";
-            this.topic5Results2.Size = new System.Drawing.Size(41, 13);
+            this.topic5Results2.Size = new System.Drawing.Size(27, 13);
             this.topic5Results2.TabIndex = 9;
-            this.topic5Results2.Text = "label47";
+            this.topic5Results2.Text = "N/A";
             // 
             // topic5Results3
             // 
             this.topic5Results3.AutoSize = true;
             this.topic5Results3.Location = new System.Drawing.Point(239, 106);
             this.topic5Results3.Name = "topic5Results3";
-            this.topic5Results3.Size = new System.Drawing.Size(41, 13);
+            this.topic5Results3.Size = new System.Drawing.Size(27, 13);
             this.topic5Results3.TabIndex = 10;
-            this.topic5Results3.Text = "label48";
+            this.topic5Results3.Text = "N/A";
             // 
             // topic5Image4
             // 
@@ -1061,7 +1061,7 @@
             this.topic5Results4.Name = "topic5Results4";
             this.topic5Results4.Size = new System.Drawing.Size(63, 52);
             this.topic5Results4.TabIndex = 12;
-            this.topic5Results4.Text = "label50";
+            this.topic5Results4.Text = "N/A";
             // 
             // topic5Label
             // 
@@ -1148,105 +1148,299 @@
             this.shortResponseContainerPanel.TabIndex = 41;
             this.shortResponseContainerPanel.Visible = false;
             // 
-            // q4labelc1
+            // q4labelc5
             // 
-            this.q4labelc1.AutoSize = true;
-            this.q4labelc1.Enabled = false;
-            this.q4labelc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q4labelc1.Location = new System.Drawing.Point(1, 441);
-            this.q4labelc1.Name = "q4labelc1";
-            this.q4labelc1.Size = new System.Drawing.Size(45, 16);
-            this.q4labelc1.TabIndex = 49;
-            this.q4labelc1.Text = "label4";
-            this.q4labelc1.Visible = false;
+            this.q4labelc5.AutoSize = true;
+            this.q4labelc5.Enabled = false;
+            this.q4labelc5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q4labelc5.Location = new System.Drawing.Point(912, 441);
+            this.q4labelc5.Name = "q4labelc5";
+            this.q4labelc5.Size = new System.Drawing.Size(45, 16);
+            this.q4labelc5.TabIndex = 85;
+            this.q4labelc5.Text = "label4";
+            this.q4labelc5.Visible = false;
             // 
-            // q3labelc1
+            // q3labelc5
             // 
-            this.q3labelc1.AutoSize = true;
-            this.q3labelc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q3labelc1.Location = new System.Drawing.Point(0, 312);
-            this.q3labelc1.Name = "q3labelc1";
-            this.q3labelc1.Size = new System.Drawing.Size(186, 48);
-            this.q3labelc1.TabIndex = 48;
-            this.q3labelc1.Text = "Do you do anything to avoid\r\nthese sounds (e.g. cover your \r\nears, avoid noisy pl" +
-    "aces)?";
+            this.q3labelc5.AutoSize = true;
+            this.q3labelc5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q3labelc5.Location = new System.Drawing.Point(911, 312);
+            this.q3labelc5.Name = "q3labelc5";
+            this.q3labelc5.Size = new System.Drawing.Size(193, 32);
+            this.q3labelc5.TabIndex = 84;
+            this.q3labelc5.Text = "Do the sounds you make seem\r\nto bother other people?";
             // 
-            // q2labelc1
+            // q2labelc5
             // 
-            this.q2labelc1.AutoSize = true;
-            this.q2labelc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q2labelc1.Location = new System.Drawing.Point(3, 208);
-            this.q2labelc1.Name = "q2labelc1";
-            this.q2labelc1.Size = new System.Drawing.Size(169, 16);
-            this.q2labelc1.TabIndex = 47;
-            this.q2labelc1.Text = "Examples in your daily life?";
+            this.q2labelc5.AutoSize = true;
+            this.q2labelc5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q2labelc5.Location = new System.Drawing.Point(914, 208);
+            this.q2labelc5.Name = "q2labelc5";
+            this.q2labelc5.Size = new System.Drawing.Size(169, 16);
+            this.q2labelc5.TabIndex = 83;
+            this.q2labelc5.Text = "Examples in your daily life?";
             // 
-            // q1labelc1
+            // q1labelc5
             // 
-            this.q1labelc1.AutoSize = true;
-            this.q1labelc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q1labelc1.Location = new System.Drawing.Point(23, 74);
-            this.q1labelc1.Name = "q1labelc1";
-            this.q1labelc1.Size = new System.Drawing.Size(136, 32);
-            this.q1labelc1.TabIndex = 46;
-            this.q1labelc1.Text = "Other sounds that you\r\ndon\'t like?";
+            this.q1labelc5.AutoSize = true;
+            this.q1labelc5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q1labelc5.Location = new System.Drawing.Point(917, 74);
+            this.q1labelc5.Name = "q1labelc5";
+            this.q1labelc5.Size = new System.Drawing.Size(180, 16);
+            this.q1labelc5.TabIndex = 82;
+            this.q1labelc5.Text = "Other sounds that you make?";
             // 
-            // srAnswer4
+            // srAnswer20
             // 
-            this.srAnswer4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.srAnswer20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer4.Enabled = false;
-            this.srAnswer4.Location = new System.Drawing.Point(-3, 499);
-            this.srAnswer4.Multiline = true;
-            this.srAnswer4.Name = "srAnswer4";
-            this.srAnswer4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer4.Size = new System.Drawing.Size(191, 65);
-            this.srAnswer4.TabIndex = 45;
-            this.srAnswer4.Visible = false;
+            this.srAnswer20.Enabled = false;
+            this.srAnswer20.Location = new System.Drawing.Point(908, 499);
+            this.srAnswer20.Multiline = true;
+            this.srAnswer20.Name = "srAnswer20";
+            this.srAnswer20.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer20.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer20.TabIndex = 81;
+            this.srAnswer20.Visible = false;
             // 
-            // srTopicLabel1
+            // srTopic5
             // 
-            this.srTopicLabel1.AutoSize = true;
-            this.srTopicLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.srTopicLabel1.Location = new System.Drawing.Point(5, 1);
-            this.srTopicLabel1.Name = "srTopicLabel1";
-            this.srTopicLabel1.Size = new System.Drawing.Size(197, 40);
-            this.srTopicLabel1.TabIndex = 44;
-            this.srTopicLabel1.Text = "Are There Some Sounds \r\nThat You Don\'t Like?";
-            this.srTopicLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.srTopic5.AutoSize = true;
+            this.srTopic5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.srTopic5.Location = new System.Drawing.Point(916, 1);
+            this.srTopic5.Name = "srTopic5";
+            this.srTopic5.Size = new System.Drawing.Size(197, 40);
+            this.srTopic5.TabIndex = 80;
+            this.srTopic5.Text = "Are There Some Sounds \r\nThat You Make A Lot?";
+            this.srTopic5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // srAnswer3
+            // srAnswer19
             // 
-            this.srAnswer3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.srAnswer19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer3.Location = new System.Drawing.Point(-3, 363);
-            this.srAnswer3.Multiline = true;
-            this.srAnswer3.Name = "srAnswer3";
-            this.srAnswer3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer3.Size = new System.Drawing.Size(191, 65);
-            this.srAnswer3.TabIndex = 40;
+            this.srAnswer19.Location = new System.Drawing.Point(908, 363);
+            this.srAnswer19.Multiline = true;
+            this.srAnswer19.Name = "srAnswer19";
+            this.srAnswer19.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer19.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer19.TabIndex = 77;
             // 
-            // srAnswer2
+            // srAnswer18
             // 
-            this.srAnswer2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.srAnswer18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer2.Location = new System.Drawing.Point(0, 235);
-            this.srAnswer2.Multiline = true;
-            this.srAnswer2.Name = "srAnswer2";
-            this.srAnswer2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer2.Size = new System.Drawing.Size(191, 65);
-            this.srAnswer2.TabIndex = 41;
+            this.srAnswer18.Location = new System.Drawing.Point(911, 235);
+            this.srAnswer18.Multiline = true;
+            this.srAnswer18.Name = "srAnswer18";
+            this.srAnswer18.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer18.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer18.TabIndex = 78;
             // 
-            // srAnswer1
+            // srAnswer17
             // 
-            this.srAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.srAnswer17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer1.Location = new System.Drawing.Point(-3, 117);
-            this.srAnswer1.Multiline = true;
-            this.srAnswer1.Name = "srAnswer1";
-            this.srAnswer1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer1.Size = new System.Drawing.Size(191, 65);
-            this.srAnswer1.TabIndex = 42;
+            this.srAnswer17.Location = new System.Drawing.Point(908, 117);
+            this.srAnswer17.Multiline = true;
+            this.srAnswer17.Name = "srAnswer17";
+            this.srAnswer17.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer17.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer17.TabIndex = 79;
+            // 
+            // q4labelc4
+            // 
+            this.q4labelc4.AutoSize = true;
+            this.q4labelc4.Enabled = false;
+            this.q4labelc4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q4labelc4.Location = new System.Drawing.Point(681, 440);
+            this.q4labelc4.Name = "q4labelc4";
+            this.q4labelc4.Size = new System.Drawing.Size(45, 16);
+            this.q4labelc4.TabIndex = 76;
+            this.q4labelc4.Text = "label4";
+            this.q4labelc4.Visible = false;
+            // 
+            // q3labelc4
+            // 
+            this.q3labelc4.AutoSize = true;
+            this.q3labelc4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q3labelc4.Location = new System.Drawing.Point(680, 311);
+            this.q3labelc4.Name = "q3labelc4";
+            this.q3labelc4.Size = new System.Drawing.Size(182, 48);
+            this.q3labelc4.TabIndex = 75;
+            this.q3labelc4.Text = "Are there sounds that you like\r\nto listen to often or for long \r\nperiods?";
+            // 
+            // q2labelc4
+            // 
+            this.q2labelc4.AutoSize = true;
+            this.q2labelc4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q2labelc4.Location = new System.Drawing.Point(683, 207);
+            this.q2labelc4.Name = "q2labelc4";
+            this.q2labelc4.Size = new System.Drawing.Size(169, 16);
+            this.q2labelc4.TabIndex = 74;
+            this.q2labelc4.Text = "Examples in your daily life?";
+            // 
+            // q1labelc4
+            // 
+            this.q1labelc4.AutoSize = true;
+            this.q1labelc4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q1labelc4.Location = new System.Drawing.Point(703, 73);
+            this.q1labelc4.Name = "q1labelc4";
+            this.q1labelc4.Size = new System.Drawing.Size(136, 32);
+            this.q1labelc4.TabIndex = 73;
+            this.q1labelc4.Text = "Other sounds that you\r\nlike?";
+            // 
+            // srAnswer16
+            // 
+            this.srAnswer16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.srAnswer16.Enabled = false;
+            this.srAnswer16.Location = new System.Drawing.Point(677, 498);
+            this.srAnswer16.Multiline = true;
+            this.srAnswer16.Name = "srAnswer16";
+            this.srAnswer16.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer16.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer16.TabIndex = 72;
+            this.srAnswer16.Visible = false;
+            // 
+            // srTopic4
+            // 
+            this.srTopic4.AutoSize = true;
+            this.srTopic4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.srTopic4.Location = new System.Drawing.Point(685, 0);
+            this.srTopic4.Name = "srTopic4";
+            this.srTopic4.Size = new System.Drawing.Size(197, 60);
+            this.srTopic4.TabIndex = 71;
+            this.srTopic4.Text = "Are There Some Sounds \r\nThat You Like to Listen\r\nTo?";
+            this.srTopic4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // srAnswer15
+            // 
+            this.srAnswer15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.srAnswer15.Location = new System.Drawing.Point(677, 362);
+            this.srAnswer15.Multiline = true;
+            this.srAnswer15.Name = "srAnswer15";
+            this.srAnswer15.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer15.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer15.TabIndex = 68;
+            // 
+            // srAnswer14
+            // 
+            this.srAnswer14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.srAnswer14.Location = new System.Drawing.Point(680, 234);
+            this.srAnswer14.Multiline = true;
+            this.srAnswer14.Name = "srAnswer14";
+            this.srAnswer14.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer14.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer14.TabIndex = 69;
+            // 
+            // srAnswer13
+            // 
+            this.srAnswer13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.srAnswer13.Location = new System.Drawing.Point(677, 116);
+            this.srAnswer13.Multiline = true;
+            this.srAnswer13.Name = "srAnswer13";
+            this.srAnswer13.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer13.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer13.TabIndex = 70;
+            // 
+            // q4labelc3
+            // 
+            this.q4labelc3.AutoSize = true;
+            this.q4labelc3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q4labelc3.Location = new System.Drawing.Point(456, 432);
+            this.q4labelc3.Name = "q4labelc3";
+            this.q4labelc3.Size = new System.Drawing.Size(183, 64);
+            this.q4labelc3.TabIndex = 67;
+            this.q4labelc3.Text = "Does noise ever make it hard\r\nfor you to do things (e.g., work\r\nin an office, go " +
+    "to shopping\r\ncentre)?";
+            // 
+            // q3labelc3
+            // 
+            this.q3labelc3.AutoSize = true;
+            this.q3labelc3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q3labelc3.Location = new System.Drawing.Point(459, 311);
+            this.q3labelc3.Name = "q3labelc3";
+            this.q3labelc3.Size = new System.Drawing.Size(156, 48);
+            this.q3labelc3.TabIndex = 66;
+            this.q3labelc3.Text = "Are there noises that you\r\nfind very distracting when\r\nyou have a job to do?";
+            // 
+            // q2labelc3
+            // 
+            this.q2labelc3.AutoSize = true;
+            this.q2labelc3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q2labelc3.Location = new System.Drawing.Point(462, 207);
+            this.q2labelc3.Name = "q2labelc3";
+            this.q2labelc3.Size = new System.Drawing.Size(169, 16);
+            this.q2labelc3.TabIndex = 65;
+            this.q2labelc3.Text = "Examples in your daily life?";
+            // 
+            // q1labelc3
+            // 
+            this.q1labelc3.AutoSize = true;
+            this.q1labelc3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q1labelc3.Location = new System.Drawing.Point(482, 73);
+            this.q1labelc3.Name = "q1labelc3";
+            this.q1labelc3.Size = new System.Drawing.Size(157, 32);
+            this.q1labelc3.TabIndex = 64;
+            this.q1labelc3.Text = "Other sounds that make it\r\nhard to concentrate?";
+            // 
+            // srAnswer12
+            // 
+            this.srAnswer12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.srAnswer12.Location = new System.Drawing.Point(456, 498);
+            this.srAnswer12.Multiline = true;
+            this.srAnswer12.Name = "srAnswer12";
+            this.srAnswer12.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer12.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer12.TabIndex = 63;
+            // 
+            // srTopic3
+            // 
+            this.srTopic3.AutoSize = true;
+            this.srTopic3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.srTopic3.Location = new System.Drawing.Point(464, 0);
+            this.srTopic3.Name = "srTopic3";
+            this.srTopic3.Size = new System.Drawing.Size(197, 60);
+            this.srTopic3.TabIndex = 62;
+            this.srTopic3.Text = "Are There Some Sounds \r\nThat Make It Hard For\r\nYou To Concentrate?";
+            this.srTopic3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // srAnswer11
+            // 
+            this.srAnswer11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.srAnswer11.Location = new System.Drawing.Point(456, 362);
+            this.srAnswer11.Multiline = true;
+            this.srAnswer11.Name = "srAnswer11";
+            this.srAnswer11.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer11.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer11.TabIndex = 59;
+            // 
+            // srAnswer10
+            // 
+            this.srAnswer10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.srAnswer10.Location = new System.Drawing.Point(459, 234);
+            this.srAnswer10.Multiline = true;
+            this.srAnswer10.Name = "srAnswer10";
+            this.srAnswer10.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer10.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer10.TabIndex = 60;
+            // 
+            // srAnswer9
+            // 
+            this.srAnswer9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.srAnswer9.Location = new System.Drawing.Point(456, 116);
+            this.srAnswer9.Multiline = true;
+            this.srAnswer9.Name = "srAnswer9";
+            this.srAnswer9.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer9.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer9.TabIndex = 61;
             // 
             // q4labelc2
             // 
@@ -1352,306 +1546,111 @@
             this.srAnswer5.Size = new System.Drawing.Size(191, 65);
             this.srAnswer5.TabIndex = 52;
             // 
-            // q4labelc3
+            // q4labelc1
             // 
-            this.q4labelc3.AutoSize = true;
-            this.q4labelc3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q4labelc3.Location = new System.Drawing.Point(456, 432);
-            this.q4labelc3.Name = "q4labelc3";
-            this.q4labelc3.Size = new System.Drawing.Size(183, 64);
-            this.q4labelc3.TabIndex = 67;
-            this.q4labelc3.Text = "Does noise ever make it hard\r\nfor you to do things (e.g., work\r\nin an office, go " +
-    "to shopping\r\ncentre)?";
+            this.q4labelc1.AutoSize = true;
+            this.q4labelc1.Enabled = false;
+            this.q4labelc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q4labelc1.Location = new System.Drawing.Point(1, 441);
+            this.q4labelc1.Name = "q4labelc1";
+            this.q4labelc1.Size = new System.Drawing.Size(45, 16);
+            this.q4labelc1.TabIndex = 49;
+            this.q4labelc1.Text = "label4";
+            this.q4labelc1.Visible = false;
             // 
-            // q3labelc3
+            // q3labelc1
             // 
-            this.q3labelc3.AutoSize = true;
-            this.q3labelc3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q3labelc3.Location = new System.Drawing.Point(459, 311);
-            this.q3labelc3.Name = "q3labelc3";
-            this.q3labelc3.Size = new System.Drawing.Size(156, 48);
-            this.q3labelc3.TabIndex = 66;
-            this.q3labelc3.Text = "Are there noises that you\r\nfind very distracting when\r\nyou have a job to do?";
+            this.q3labelc1.AutoSize = true;
+            this.q3labelc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q3labelc1.Location = new System.Drawing.Point(0, 312);
+            this.q3labelc1.Name = "q3labelc1";
+            this.q3labelc1.Size = new System.Drawing.Size(186, 48);
+            this.q3labelc1.TabIndex = 48;
+            this.q3labelc1.Text = "Do you do anything to avoid\r\nthese sounds (e.g. cover your \r\nears, avoid noisy pl" +
+    "aces)?";
             // 
-            // q2labelc3
+            // q2labelc1
             // 
-            this.q2labelc3.AutoSize = true;
-            this.q2labelc3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q2labelc3.Location = new System.Drawing.Point(462, 207);
-            this.q2labelc3.Name = "q2labelc3";
-            this.q2labelc3.Size = new System.Drawing.Size(169, 16);
-            this.q2labelc3.TabIndex = 65;
-            this.q2labelc3.Text = "Examples in your daily life?";
+            this.q2labelc1.AutoSize = true;
+            this.q2labelc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q2labelc1.Location = new System.Drawing.Point(3, 208);
+            this.q2labelc1.Name = "q2labelc1";
+            this.q2labelc1.Size = new System.Drawing.Size(169, 16);
+            this.q2labelc1.TabIndex = 47;
+            this.q2labelc1.Text = "Examples in your daily life?";
             // 
-            // q1labelc3
+            // q1labelc1
             // 
-            this.q1labelc3.AutoSize = true;
-            this.q1labelc3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q1labelc3.Location = new System.Drawing.Point(482, 73);
-            this.q1labelc3.Name = "q1labelc3";
-            this.q1labelc3.Size = new System.Drawing.Size(157, 32);
-            this.q1labelc3.TabIndex = 64;
-            this.q1labelc3.Text = "Other sounds that make it\r\nhard to concentrate?";
+            this.q1labelc1.AutoSize = true;
+            this.q1labelc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q1labelc1.Location = new System.Drawing.Point(23, 74);
+            this.q1labelc1.Name = "q1labelc1";
+            this.q1labelc1.Size = new System.Drawing.Size(136, 32);
+            this.q1labelc1.TabIndex = 46;
+            this.q1labelc1.Text = "Other sounds that you\r\ndon\'t like?";
             // 
-            // srAnswer12
+            // srAnswer4
             // 
-            this.srAnswer12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.srAnswer4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer12.Location = new System.Drawing.Point(456, 498);
-            this.srAnswer12.Multiline = true;
-            this.srAnswer12.Name = "srAnswer12";
-            this.srAnswer12.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer12.Size = new System.Drawing.Size(191, 65);
-            this.srAnswer12.TabIndex = 63;
+            this.srAnswer4.Enabled = false;
+            this.srAnswer4.Location = new System.Drawing.Point(-3, 499);
+            this.srAnswer4.Multiline = true;
+            this.srAnswer4.Name = "srAnswer4";
+            this.srAnswer4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer4.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer4.TabIndex = 45;
+            this.srAnswer4.Visible = false;
             // 
-            // srTopic3
+            // srTopicLabel1
             // 
-            this.srTopic3.AutoSize = true;
-            this.srTopic3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.srTopic3.Location = new System.Drawing.Point(464, 0);
-            this.srTopic3.Name = "srTopic3";
-            this.srTopic3.Size = new System.Drawing.Size(197, 60);
-            this.srTopic3.TabIndex = 62;
-            this.srTopic3.Text = "Are There Some Sounds \r\nThat Make It Hard For\r\nYou To Concentrate?";
-            this.srTopic3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.srTopicLabel1.AutoSize = true;
+            this.srTopicLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.srTopicLabel1.Location = new System.Drawing.Point(5, 1);
+            this.srTopicLabel1.Name = "srTopicLabel1";
+            this.srTopicLabel1.Size = new System.Drawing.Size(197, 40);
+            this.srTopicLabel1.TabIndex = 44;
+            this.srTopicLabel1.Text = "Are There Some Sounds \r\nThat You Don\'t Like?";
+            this.srTopicLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // srAnswer11
+            // srAnswer3
             // 
-            this.srAnswer11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.srAnswer3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer11.Location = new System.Drawing.Point(456, 362);
-            this.srAnswer11.Multiline = true;
-            this.srAnswer11.Name = "srAnswer11";
-            this.srAnswer11.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer11.Size = new System.Drawing.Size(191, 65);
-            this.srAnswer11.TabIndex = 59;
+            this.srAnswer3.Location = new System.Drawing.Point(-3, 363);
+            this.srAnswer3.Multiline = true;
+            this.srAnswer3.Name = "srAnswer3";
+            this.srAnswer3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer3.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer3.TabIndex = 40;
             // 
-            // srAnswer10
+            // srAnswer2
             // 
-            this.srAnswer10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.srAnswer2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer10.Location = new System.Drawing.Point(459, 234);
-            this.srAnswer10.Multiline = true;
-            this.srAnswer10.Name = "srAnswer10";
-            this.srAnswer10.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer10.Size = new System.Drawing.Size(191, 65);
-            this.srAnswer10.TabIndex = 60;
+            this.srAnswer2.Location = new System.Drawing.Point(0, 235);
+            this.srAnswer2.Multiline = true;
+            this.srAnswer2.Name = "srAnswer2";
+            this.srAnswer2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer2.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer2.TabIndex = 41;
             // 
-            // srAnswer9
+            // srAnswer1
             // 
-            this.srAnswer9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.srAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer9.Location = new System.Drawing.Point(456, 116);
-            this.srAnswer9.Multiline = true;
-            this.srAnswer9.Name = "srAnswer9";
-            this.srAnswer9.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer9.Size = new System.Drawing.Size(191, 65);
-            this.srAnswer9.TabIndex = 61;
-            // 
-            // q4labelc4
-            // 
-            this.q4labelc4.AutoSize = true;
-            this.q4labelc4.Enabled = false;
-            this.q4labelc4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q4labelc4.Location = new System.Drawing.Point(681, 440);
-            this.q4labelc4.Name = "q4labelc4";
-            this.q4labelc4.Size = new System.Drawing.Size(45, 16);
-            this.q4labelc4.TabIndex = 76;
-            this.q4labelc4.Text = "label4";
-            this.q4labelc4.Visible = false;
-            // 
-            // q3labelc4
-            // 
-            this.q3labelc4.AutoSize = true;
-            this.q3labelc4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q3labelc4.Location = new System.Drawing.Point(680, 311);
-            this.q3labelc4.Name = "q3labelc4";
-            this.q3labelc4.Size = new System.Drawing.Size(182, 48);
-            this.q3labelc4.TabIndex = 75;
-            this.q3labelc4.Text = "Are there sounds that you like\r\nto listen to often or for long \r\nperiods?";
-            // 
-            // q2labelc4
-            // 
-            this.q2labelc4.AutoSize = true;
-            this.q2labelc4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q2labelc4.Location = new System.Drawing.Point(683, 207);
-            this.q2labelc4.Name = "q2labelc4";
-            this.q2labelc4.Size = new System.Drawing.Size(169, 16);
-            this.q2labelc4.TabIndex = 74;
-            this.q2labelc4.Text = "Examples in your daily life?";
-            // 
-            // q1labelc4
-            // 
-            this.q1labelc4.AutoSize = true;
-            this.q1labelc4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q1labelc4.Location = new System.Drawing.Point(703, 73);
-            this.q1labelc4.Name = "q1labelc4";
-            this.q1labelc4.Size = new System.Drawing.Size(136, 32);
-            this.q1labelc4.TabIndex = 73;
-            this.q1labelc4.Text = "Other sounds that you\r\nlike?";
-            // 
-            // srAnswer16
-            // 
-            this.srAnswer16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer16.Enabled = false;
-            this.srAnswer16.Location = new System.Drawing.Point(677, 498);
-            this.srAnswer16.Multiline = true;
-            this.srAnswer16.Name = "srAnswer16";
-            this.srAnswer16.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer16.Size = new System.Drawing.Size(191, 65);
-            this.srAnswer16.TabIndex = 72;
-            this.srAnswer16.Visible = false;
-            // 
-            // srTopic4
-            // 
-            this.srTopic4.AutoSize = true;
-            this.srTopic4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.srTopic4.Location = new System.Drawing.Point(685, 0);
-            this.srTopic4.Name = "srTopic4";
-            this.srTopic4.Size = new System.Drawing.Size(197, 60);
-            this.srTopic4.TabIndex = 71;
-            this.srTopic4.Text = "Are There Some Sounds \r\nThat You Like to Listen\r\nTo?";
-            this.srTopic4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // srAnswer15
-            // 
-            this.srAnswer15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer15.Location = new System.Drawing.Point(677, 362);
-            this.srAnswer15.Multiline = true;
-            this.srAnswer15.Name = "srAnswer15";
-            this.srAnswer15.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer15.Size = new System.Drawing.Size(191, 65);
-            this.srAnswer15.TabIndex = 68;
-            // 
-            // srAnswer14
-            // 
-            this.srAnswer14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer14.Location = new System.Drawing.Point(680, 234);
-            this.srAnswer14.Multiline = true;
-            this.srAnswer14.Name = "srAnswer14";
-            this.srAnswer14.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer14.Size = new System.Drawing.Size(191, 65);
-            this.srAnswer14.TabIndex = 69;
-            // 
-            // srAnswer13
-            // 
-            this.srAnswer13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer13.Location = new System.Drawing.Point(677, 116);
-            this.srAnswer13.Multiline = true;
-            this.srAnswer13.Name = "srAnswer13";
-            this.srAnswer13.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer13.Size = new System.Drawing.Size(191, 65);
-            this.srAnswer13.TabIndex = 70;
-            // 
-            // q4labelc5
-            // 
-            this.q4labelc5.AutoSize = true;
-            this.q4labelc5.Enabled = false;
-            this.q4labelc5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q4labelc5.Location = new System.Drawing.Point(912, 441);
-            this.q4labelc5.Name = "q4labelc5";
-            this.q4labelc5.Size = new System.Drawing.Size(45, 16);
-            this.q4labelc5.TabIndex = 85;
-            this.q4labelc5.Text = "label4";
-            this.q4labelc5.Visible = false;
-            // 
-            // q3labelc5
-            // 
-            this.q3labelc5.AutoSize = true;
-            this.q3labelc5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q3labelc5.Location = new System.Drawing.Point(911, 312);
-            this.q3labelc5.Name = "q3labelc5";
-            this.q3labelc5.Size = new System.Drawing.Size(193, 32);
-            this.q3labelc5.TabIndex = 84;
-            this.q3labelc5.Text = "Do the sounds you make seem\r\nto bother other people?";
-            // 
-            // q2labelc5
-            // 
-            this.q2labelc5.AutoSize = true;
-            this.q2labelc5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q2labelc5.Location = new System.Drawing.Point(914, 208);
-            this.q2labelc5.Name = "q2labelc5";
-            this.q2labelc5.Size = new System.Drawing.Size(169, 16);
-            this.q2labelc5.TabIndex = 83;
-            this.q2labelc5.Text = "Examples in your daily life?";
-            // 
-            // q1labelc5
-            // 
-            this.q1labelc5.AutoSize = true;
-            this.q1labelc5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q1labelc5.Location = new System.Drawing.Point(917, 74);
-            this.q1labelc5.Name = "q1labelc5";
-            this.q1labelc5.Size = new System.Drawing.Size(180, 16);
-            this.q1labelc5.TabIndex = 82;
-            this.q1labelc5.Text = "Other sounds that you make?";
-            // 
-            // srAnswer20
-            // 
-            this.srAnswer20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer20.Enabled = false;
-            this.srAnswer20.Location = new System.Drawing.Point(908, 499);
-            this.srAnswer20.Multiline = true;
-            this.srAnswer20.Name = "srAnswer20";
-            this.srAnswer20.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer20.Size = new System.Drawing.Size(191, 65);
-            this.srAnswer20.TabIndex = 81;
-            this.srAnswer20.Visible = false;
-            // 
-            // srTopic5
-            // 
-            this.srTopic5.AutoSize = true;
-            this.srTopic5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.srTopic5.Location = new System.Drawing.Point(916, 1);
-            this.srTopic5.Name = "srTopic5";
-            this.srTopic5.Size = new System.Drawing.Size(197, 40);
-            this.srTopic5.TabIndex = 80;
-            this.srTopic5.Text = "Are There Some Sounds \r\nThat You Make A Lot?";
-            this.srTopic5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // srAnswer19
-            // 
-            this.srAnswer19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer19.Location = new System.Drawing.Point(908, 363);
-            this.srAnswer19.Multiline = true;
-            this.srAnswer19.Name = "srAnswer19";
-            this.srAnswer19.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer19.Size = new System.Drawing.Size(191, 65);
-            this.srAnswer19.TabIndex = 77;
-            // 
-            // srAnswer18
-            // 
-            this.srAnswer18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer18.Location = new System.Drawing.Point(911, 235);
-            this.srAnswer18.Multiline = true;
-            this.srAnswer18.Name = "srAnswer18";
-            this.srAnswer18.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer18.Size = new System.Drawing.Size(191, 65);
-            this.srAnswer18.TabIndex = 78;
-            // 
-            // srAnswer17
-            // 
-            this.srAnswer17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer17.Location = new System.Drawing.Point(908, 117);
-            this.srAnswer17.Multiline = true;
-            this.srAnswer17.Name = "srAnswer17";
-            this.srAnswer17.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer17.Size = new System.Drawing.Size(191, 65);
-            this.srAnswer17.TabIndex = 79;
+            this.srAnswer1.Location = new System.Drawing.Point(-3, 117);
+            this.srAnswer1.Multiline = true;
+            this.srAnswer1.Name = "srAnswer1";
+            this.srAnswer1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srAnswer1.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer1.TabIndex = 42;
             // 
             // Summary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1309, 594);
-            this.Controls.Add(this.shortResponseContainerPanel);
             this.Controls.Add(this.changeSummaryPanelType);
             this.Controls.Add(this.tasteBtn);
             this.Controls.Add(this.topic5ResultPanel);
@@ -1664,6 +1663,7 @@
             this.Controls.Add(this.smellBtn);
             this.Controls.Add(this.soundBtn);
             this.Controls.Add(this.hearingBtn);
+            this.Controls.Add(this.shortResponseContainerPanel);
             this.Controls.Add(this.sightBtn);
             this.Name = "Summary";
             this.Text = "Summary";

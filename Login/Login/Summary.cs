@@ -415,6 +415,7 @@ namespace Login {
             conDatabase.Open();
             SqlDataReader dr = command.ExecuteReader();
             List<string> list = new List<string>();
+            list.Clear();
             while (dr.Read()) {
                 //Iterate through loop and add to list
                 for(int i = 0; i < totalImages; i++) {
@@ -423,58 +424,58 @@ namespace Login {
             }
 
             //Update label text according to list index
-            switch (totalImages) {
-                case 2:
-                    labelResultName1.Text = list[0];
-                    labelResultName2.Text = list[1];
-                    break;
-                case 3:
-                    labelResultName1.Text = list[0];
-                    labelResultName2.Text = list[1];
-                    labelResultName3.Text = list[2];
-                    break;
-                case 4:
-                    labelResultName1.Text = list[0];
-                    labelResultName2.Text = list[1];
-                    labelResultName3.Text = list[2];
-                    labelResultName4.Text = list[3];
-                    break;
-                case 5:
-                    labelResultName1.Text = list[0];
-                    labelResultName2.Text = list[1];
-                    labelResultName3.Text = list[2];
-                    labelResultName4.Text = list[3];
-                    labelResultName5.Text = list[4];
-                    break;
-                case 6:
-                    labelResultName1.Text = list[0];
-                    labelResultName2.Text = list[1];
-                    labelResultName3.Text = list[2];
-                    labelResultName4.Text = list[3];
-                    labelResultName5.Text = list[4];
-                    labelResultName6.Text = list[5];
-                    break;
-                case 7:
-                    labelResultName1.Text = list[0];
-                    labelResultName2.Text = list[1];
-                    labelResultName3.Text = list[2];
-                    labelResultName4.Text = list[3];
-                    labelResultName5.Text = list[4];
-                    labelResultName6.Text = list[5];
-                    labelResultName7.Text = list[6];
-                    break;
-                case 8:
-                    labelResultName1.Text = list[0];
-                    labelResultName2.Text = list[1];
-                    labelResultName3.Text = list[2];
-                    labelResultName4.Text = list[3];
-                    labelResultName5.Text = list[4];
-                    labelResultName6.Text = list[5];
-                    labelResultName7.Text = list[6];
-                    labelResultName8.Text = list[7];
-                    break;
+                switch (totalImages) {
+                    case 2:
+                        labelResultName1.Text = list[0];
+                        labelResultName2.Text = list[1];
+                        break;
+                    case 3:
+                        labelResultName1.Text = list[0];
+                        labelResultName2.Text = list[1];
+                        labelResultName3.Text = list[2];
+                        break;
+                    case 4:
+                        labelResultName1.Text = list[0];
+                        labelResultName2.Text = list[1];
+                        labelResultName3.Text = list[2];
+                        labelResultName4.Text = list[3];
+                        break;
+                    case 5:
+                        labelResultName1.Text = list[0];
+                        labelResultName2.Text = list[1];
+                        labelResultName3.Text = list[2];
+                        labelResultName4.Text = list[3];
+                        labelResultName5.Text = list[4];
+                        break;
+                    case 6:
+                        labelResultName1.Text = list[0];
+                        labelResultName2.Text = list[1];
+                        labelResultName3.Text = list[2];
+                        labelResultName4.Text = list[3];
+                        labelResultName5.Text = list[4];
+                        labelResultName6.Text = list[5];
+                        break;
+                    case 7:
+                        labelResultName1.Text = list[0];
+                        labelResultName2.Text = list[1];
+                        labelResultName3.Text = list[2];
+                        labelResultName4.Text = list[3];
+                        labelResultName5.Text = list[4];
+                        labelResultName6.Text = list[5];
+                        labelResultName7.Text = list[6];
+                        break;
+                    case 8:
+                        labelResultName1.Text = list[0];
+                        labelResultName2.Text = list[1];
+                        labelResultName3.Text = list[2];
+                        labelResultName4.Text = list[3];
+                        labelResultName5.Text = list[4];
+                        labelResultName6.Text = list[5];
+                        labelResultName7.Text = list[6];
+                        labelResultName8.Text = list[7];
+                        break;
 
-            }
+                }
             conDatabase.Close();
         }
 
@@ -726,20 +727,68 @@ string text3, string text4, string text5, string text6) {
             srTopic5.Text = topic5;
         }
 
+        /// <summary>
+        /// Call this to reset all labels if exception gets called.
+        /// </summary>
+        private void resetAnswerLabels() {
+            topic1Results1.Text = "N/A";
+            topic1Results2.Text = "N/A";
+            topic1Results3.Text = "N/A";
+            topic1Results4.Text = "N/A";
+            topic1Results5.Text = "N/A";
+            topic1Results6.Text = "N/A";
+            topic1Results7.Text = "N/A";
+            topic1Results8.Text = "N/A";
+
+            topic2Results1.Text = "N/A";
+            topic2Results2.Text = "N/A";
+            topic2Results3.Text = "N/A";
+            topic2Results4.Text = "N/A";
+            topic2Results5.Text = "N/A";
+            topic2Results6.Text = "N/A";
+            topic2Results7.Text = "N/A";
+            topic2Results8.Text = "N/A";
+
+            topic3Results1.Text = "N/A";
+            topic3Results2.Text = "N/A";
+            topic3Results3.Text = "N/A";
+            topic3Results4.Text = "N/A";
+            topic3Results5.Text = "N/A";
+            topic3Results6.Text = "N/A";
+
+            topic4Results1.Text = "N/A";
+            topic4Results2.Text = "N/A";
+            topic4Results3.Text = "N/A";
+            topic4Results4.Text = "N/A";
+            topic4Results5.Text = "N/A";
+
+            topic5Results1.Text = "N/A";
+            topic5Results2.Text = "N/A";
+            topic5Results3.Text = "N/A";
+            topic5Results4.Text = "N/A";
+
+        }
+
         private void button1_Click(object sender, EventArgs e) {
-                if (displayShortResponse) {
+            resetAnswerLabels();
+            if (displayShortResponse) {
                     shortResponseContainerPanel.Visible = true;
                     shortResponseContainerPanel.Enabled = true;
-                    getAdditionalCommentAnswer(3, "dislikeSounds", 1);
-                    getAdditionalCommentAnswer(2, "hardToListen", 2);
-                    getAdditionalCommentAnswer(4, "hardToConcentrate", 3);
-                    getAdditionalCommentAnswer(3, "likeSounds", 4);
-                    getAdditionalCommentAnswer(3, "makeALotSounds", 5);
-                    updateSRTopicLabel("Are there some sounds that you don't like?",
-                        "Are there times when it is hard for you to listen?",
-                        "Are there some sounds that make it hard for you to concentrate?",
-                        "Are there some sounds that you like to listen to?",
-                        "Are there some sounds that you make a lot?");
+                    try {
+                        getAdditionalCommentAnswer(3, "dislikeSounds", 1);
+                        getAdditionalCommentAnswer(2, "hardToListen", 2);
+                        getAdditionalCommentAnswer(4, "hardToConcentrate", 3);
+                        getAdditionalCommentAnswer(3, "likeSounds", 4);
+                        getAdditionalCommentAnswer(3, "makeALotSounds", 5);
+                        updateSRTopicLabel("Are there some sounds that you don't like?",
+                            "Are there times when it is hard for you to listen?",
+                            "Are there some sounds that make it hard for you to concentrate?",
+                            "Are there some sounds that you like to listen to?",
+                            "Are there some sounds that you make a lot?");
+                    } catch (Exception) {
+                    resetAnswerLabels();
+                        MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+                    }
                 } else {
 
                     hidePanels();
@@ -766,12 +815,16 @@ string text3, string text4, string text5, string text6) {
                     updateTopic3ResultLabel(3, "Radio On", "Clock Ticking", "People Talking", "", "", "");
                     updateTopic5ResultLabel(4, "Humming or whistling to myself", "Tapping Feet", "Tapping Fingers", "Clicking Pen", "", "");
                     updateTopic4ResultLabel(5, "Computer Sounds", "Live Music", "Fans", "Music Through My Phone", "Rhythsm", "");
-
+                try {
                     getDBAnser("dislikeSounds", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
                     getDBAnser("hardToListen", 3, topic2Results1, topic2Results2, topic2Results3, null, null, null, null, null);
                     getDBAnser("hardToConcentrate", 3, topic3Results1, topic3Results2, topic3Results3, null, null, null, null, null);
                     getDBAnser("likeSounds", 5, topic4Results1, topic4Results2, topic4Results3, topic4Results4, topic4Results5, null, null, null);
                     getDBAnser("makeALotSounds", 4, topic5Results1, topic5Results2, topic5Results3, topic5Results4, null, null, null, null);
+
+                } catch (Exception ex) {
+                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+                }
 
                     //Re-Add the labels
                     this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
@@ -878,8 +931,8 @@ string text3, string text4, string text5, string text6) {
         }
 
         private void button2_Click(object sender, EventArgs e) {
-            try {
-                clearTable(resultsTable, 5);
+            resetAnswerLabels();
+            clearTable(resultsTable, 5);
                 clearTable(topic2Table, 3);
                 clearTable(topic3Table, 5);
                 hidePanels();
@@ -889,60 +942,65 @@ string text3, string text4, string text5, string text6) {
                     hideColumn4SR();
                     shortResponseContainerPanel.Visible = true;
                     shortResponseContainerPanel.Enabled = true;
-                    getAdditionalCommentAnswer(3, "dontLikeToLookAt", 1);
-                    getAdditionalCommentAnswer(2, "sightHardToConcentrate", 2);
-                    getAdditionalCommentAnswer(3, "likeToLookAt", 3);
+                    try {
+                        getAdditionalCommentAnswer(3, "dontLikeToLookAt", 1);
+                        getAdditionalCommentAnswer(2, "sightHardToConcentrate", 2);
+                        getAdditionalCommentAnswer(3, "likeToLookAt", 3);
+                    } catch(Exception ex) {
+                        MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+                    }
                     updateSRTopicLabel("Are there some things that you don't \n like to look at?",
                     "Are there some things you see that make it \n hard to concentrate?",
                     "Are there some things that you like \n to look at?",
                     "", "");
+                } else {
+                    updateTopicLabel("Are there some things that you don't \n like to look at?",
+                        "Are there some things you see that make it \n hard to concentrate?",
+                        "Are there some things that you like \n to look at?",
+                        "", "");
+                    topic1ResultPanel.Visible = true;
+                    topic2ResultPanel.Visible = true;
+                    topic3ResultPanel.Visible = true;
+                    updateTopic1ResultLabel(5, "Sunlight", "Fluorescent Light", "Light and Shadow", 
+                        "Busy Patterns", "Classroom Light", "", "", "");
+                    updateTopic2ResultLabel(3, "Lots of Things in a Messy Drawer", "People Running Around Me", "Lots of Things Hanging up in \n the classroom", "", "", "", "", "");
+                    updateTopic3ResultLabel(5, "Moving Lights", "Things That Sparkle", "Geometric Patterns", "Spinning Fans", "Spinning Objects", "");
+                        try {
+                            getDBAnser("dontLikeToLookAt", 5, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, null, null, null);
+                            getDBAnser("sightHardToConcentrate", 3, topic2Results1, topic2Results2, topic2Results3, null, null, null, null, null);
+                            getDBAnser("likeToLookAt", 5, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, null, null, null);
+
+                        } catch (Exception error) {
+                            MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+                        }
+                    //Re-Add labels
+                    this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
+                    this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
+                    this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
+                    this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
+                    this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
+                    this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
+                    this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
+                    this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
+                    this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
+                    this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
+                    this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
+                    this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
+                    this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
+                    this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
+                    this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
+                    this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
+                    this.topic3Table.Controls.Add(this.topic3Image1, 0, 0);
+                    this.topic3Table.Controls.Add(this.topic3Image2, 0, 1);
+                    this.topic3Table.Controls.Add(this.topic3Image3, 0, 2);
+                    this.topic3Table.Controls.Add(this.topic3Image4, 0, 3);
+                    this.topic3Table.Controls.Add(this.topic3Image5, 0, 4);
+                    this.topic3Table.Controls.Add(this.topic3Results1, 1, 0);
+                    this.topic3Table.Controls.Add(this.topic3Results2, 1, 1);
+                    this.topic3Table.Controls.Add(this.topic3Results3, 1, 2);
+                    this.topic3Table.Controls.Add(this.topic3Results4, 1, 3);
+                    this.topic3Table.Controls.Add(this.topic3Results5, 1, 4);
                 }
-                updateTopicLabel("Are there some things that you don't \n like to look at?",
-                    "Are there some things you see that make it \n hard to concentrate?",
-                    "Are there some things that you like \n to look at?",
-                    "", "");
-                topic1ResultPanel.Visible = true;
-                topic2ResultPanel.Visible = true;
-                topic3ResultPanel.Visible = true;
-                updateTopic1ResultLabel(5, "Sunlight", "Fluorescent Light", "Light and Shadow", 
-                    "Busy Patterns", "Classroom Light", "", "", "");
-                updateTopic2ResultLabel(3, "Lots of Things in a Messy Drawer", "People Running Around Me", "Lots of Things Hanging up in \n the classroom", "", "", "", "", "");
-                updateTopic3ResultLabel(5, "Moving Lights", "Things That Sparkle", "Geometric Patterns", "Spinning Fans", "Spinning Objects", "");
-
-                getDBAnser("dontLikeToLookAt", 5, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, null, null, null);
-                getDBAnser("sightHardToConcentrate", 3, topic2Results1, topic2Results2, topic2Results3, null, null, null, null, null);
-                getDBAnser("likeToLookAt", 5, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, null, null, null);
-
-                //Re-Add labels
-                this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
-                this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
-                this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
-                this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
-                this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
-                this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
-                this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
-                this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
-                this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
-                this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
-                this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
-                this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
-                this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
-                this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
-                this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
-                this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
-                this.topic3Table.Controls.Add(this.topic3Image1, 0, 0);
-                this.topic3Table.Controls.Add(this.topic3Image2, 0, 1);
-                this.topic3Table.Controls.Add(this.topic3Image3, 0, 2);
-                this.topic3Table.Controls.Add(this.topic3Image4, 0, 3);
-                this.topic3Table.Controls.Add(this.topic3Image5, 0, 4);
-                this.topic3Table.Controls.Add(this.topic3Results1, 1, 0);
-                this.topic3Table.Controls.Add(this.topic3Results2, 1, 1);
-                this.topic3Table.Controls.Add(this.topic3Results3, 1, 2);
-                this.topic3Table.Controls.Add(this.topic3Results4, 1, 3);
-                this.topic3Table.Controls.Add(this.topic3Results5, 1, 4);
-            } catch (Exception error) {
-                MessageBox.Show("An interview has not been completed!");
-            }
         }
 
         /// <summary>
@@ -956,291 +1014,343 @@ string text3, string text4, string text5, string text6) {
         
         //This is for movement
         private void hearingBtn_Click(object sender, EventArgs e) {
-
+            resetAnswerLabels();
             if (displayShortResponse) {
-                hideColumn5SR();
-                shortResponseContainerPanel.Visible = true;
-                shortResponseContainerPanel.Enabled = true;
-                getAdditionalCommentAnswer(4, "movingDontLike", 1);
-                getAdditionalCommentAnswer(1, "hardToStayStill", 2);
-                getAdditionalCommentAnswer(2, "movingThatYouLike", 3);
-                getAdditionalCommentAnswer(4, "moveOverAndOverAgain", 4);
-                hideIndividual(q2labelc2, srAnswer10);
-                hideIndividual(q3labelc2, srAnswer11);
-                hideIndividual(q4labelc2, srAnswer12);
-                hideIndividual(q3labelc3, srAnswer15);
-                hideIndividual(q4labelc3, srAnswer16);
-                updateSRTopicLabel("Are there some ways of moving \n that you don't like?",
-                "Are there times when it is hard for \n you to stay still?",
-                "Are there some ways of moving that \n you don't like?",
-                "Are there some ways that you move over \n and over again?", "");
+                    hideColumn5SR();
+                    shortResponseContainerPanel.Visible = true;
+                    shortResponseContainerPanel.Enabled = true;
+                    try {
 
-            }
-            clearTable(resultsTable, 5);
-            clearTable(topic2Table, 2);
-            clearTable(topic3Table, 5);
-            clearTable(topic4Table, 4);
-            updateTopicLabel("Are there some ways of moving \n that you don't like?",
-                "Are there times when it is hard for \n you to stay still?",
-                "Are there some ways of moving that \n you don't like?",
-                "Are there some ways that you move over \n and over again?", "");
-            updateTopic1ResultLabel(5, "Being Jumped on/Tackled", "Moving when I can't see \n where I am going", "Balancing", "Being Upside Down", "Climbing Up High", "", "", "");
-            updateTopic2ResultLabel(2, "Standing Still", "Sitting Still", "", "", "", "", "", "");
-            updateTopic3ResultLabel(5, "Moving in Water", "Swinging", "Spinning", "Jumping on The Trampoline", "Running", "");
-            updateTopic4ResultLabel(4, "Rocking", "Moving Hands", "Clapping", "Pacing", "", "");
+                        getAdditionalCommentAnswer(4, "movingDontLike", 1);
+                        getAdditionalCommentAnswer(1, "hardToStayStill", 2);
+                        getAdditionalCommentAnswer(2, "movingThatYouLike", 3);
+                        getAdditionalCommentAnswer(4, "moveOverAndOverAgain", 4);
+                    } catch (Exception ex) {
+                        MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+                    }
+                    hideIndividual(q2labelc2, srAnswer10);
+                    hideIndividual(q3labelc2, srAnswer11);
+                    hideIndividual(q4labelc2, srAnswer12);
+                    hideIndividual(q3labelc3, srAnswer15);
+                    hideIndividual(q4labelc3, srAnswer16);
+                    updateSRTopicLabel("Are there some ways of moving \n that you don't like?",
+                    "Are there times when it is hard for \n you to stay still?",
+                    "Are there some ways of moving that \n you don't like?",
+                    "Are there some ways that you move over \n and over again?", "");
 
-            getDBAnser("movingDontLike", 5, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, null, null, null);
-            getDBAnser("hardToStayStill", 2, topic2Results1, topic2Results2, null, null, null, null, null, null);
-            getDBAnser("movingThatYouLike", 5, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, null, null, null);
-            getDBAnser("moveOverAndOverAgain", 4, topic4Results1, topic4Results2, topic4Results3, topic4Results4, null, null, null, null);
+                } else {
 
-            topic1ResultPanel.Visible = true;
-            topic2ResultPanel.Visible = true;
-            topic3ResultPanel.Visible = true;
-            topic4ResultPanel.Visible = true;
+                    clearTable(resultsTable, 5);
+                    clearTable(topic2Table, 2);
+                    clearTable(topic3Table, 5);
+                    clearTable(topic4Table, 4);
+                    updateTopicLabel("Are there some ways of moving \n that you don't like?",
+                        "Are there times when it is hard for \n you to stay still?",
+                        "Are there some ways of moving that \n you don't like?",
+                        "Are there some ways that you move over \n and over again?", "");
+                    updateTopic1ResultLabel(5, "Being Jumped on/Tackled", "Moving when I can't see \n where I am going", "Balancing", "Being Upside Down", "Climbing Up High", "", "", "");
+                    updateTopic2ResultLabel(2, "Standing Still", "Sitting Still", "", "", "", "", "", "");
+                    updateTopic3ResultLabel(5, "Moving in Water", "Swinging", "Spinning", "Jumping on The Trampoline", "Running", "");
+                    updateTopic4ResultLabel(4, "Rocking", "Moving Hands", "Clapping", "Pacing", "", "");
+                    try {
+                        getDBAnser("movingDontLike", 5, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, null, null, null);
+                        getDBAnser("hardToStayStill", 2, topic2Results1, topic2Results2, null, null, null, null, null, null);
+                        getDBAnser("movingThatYouLike", 5, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, null, null, null);
+                        getDBAnser("moveOverAndOverAgain", 4, topic4Results1, topic4Results2, topic4Results3, topic4Results4, null, null, null, null);
 
-            //Re-Add the labels
-            this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
-            this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
-            this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
-            this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
-            this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
-            this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
-            this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
-            this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
-            this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
-            this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
+                    } catch (Exception ex) {
+                        MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+                    }
 
-            this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
-            this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
-            this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
-            this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
+                    topic1ResultPanel.Visible = true;
+                    topic2ResultPanel.Visible = true;
+                    topic3ResultPanel.Visible = true;
+                    topic4ResultPanel.Visible = true;
 
-            this.topic3Table.Controls.Add(this.topic3Image1, 0, 0);
-            this.topic3Table.Controls.Add(this.topic3Image2, 0, 1);
-            this.topic3Table.Controls.Add(this.topic3Image3, 0, 2);
-            this.topic3Table.Controls.Add(this.topic3Image4, 0, 3);
-            this.topic3Table.Controls.Add(this.topic3Image5, 0, 4);
-            this.topic3Table.Controls.Add(this.topic3Results1, 1, 0);
-            this.topic3Table.Controls.Add(this.topic3Results2, 1, 1);
-            this.topic3Table.Controls.Add(this.topic3Results3, 1, 2);
-            this.topic3Table.Controls.Add(this.topic3Results4, 1, 3);
-            this.topic3Table.Controls.Add(this.topic3Results5, 1, 4);
+                    //Re-Add the labels
+                    this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
+                    this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
+                    this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
+                    this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
+                    this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
+                    this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
+                    this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
+                    this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
+                    this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
+                    this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
+
+                    this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
+                    this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
+                    this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
+                    this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
+
+                    this.topic3Table.Controls.Add(this.topic3Image1, 0, 0);
+                    this.topic3Table.Controls.Add(this.topic3Image2, 0, 1);
+                    this.topic3Table.Controls.Add(this.topic3Image3, 0, 2);
+                    this.topic3Table.Controls.Add(this.topic3Image4, 0, 3);
+                    this.topic3Table.Controls.Add(this.topic3Image5, 0, 4);
+                    this.topic3Table.Controls.Add(this.topic3Results1, 1, 0);
+                    this.topic3Table.Controls.Add(this.topic3Results2, 1, 1);
+                    this.topic3Table.Controls.Add(this.topic3Results3, 1, 2);
+                    this.topic3Table.Controls.Add(this.topic3Results4, 1, 3);
+                    this.topic3Table.Controls.Add(this.topic3Results5, 1, 4);
 
 
-            this.topic4Table.Controls.Add(this.topic4Image1, 0, 0);
-            this.topic4Table.Controls.Add(this.topic4Image2, 0, 1);
-            this.topic4Table.Controls.Add(this.topic4Image3, 0, 2);
-            this.topic4Table.Controls.Add(this.topic4Image4, 0, 3);
-            this.topic4Table.Controls.Add(this.topic4Results1, 1, 0);
-            this.topic4Table.Controls.Add(this.topic4Results2, 1, 1);
-            this.topic4Table.Controls.Add(this.topic4Results3, 1, 2);
-            this.topic4Table.Controls.Add(this.topic4Results4, 1, 3);
+                    this.topic4Table.Controls.Add(this.topic4Image1, 0, 0);
+                    this.topic4Table.Controls.Add(this.topic4Image2, 0, 1);
+                    this.topic4Table.Controls.Add(this.topic4Image3, 0, 2);
+                    this.topic4Table.Controls.Add(this.topic4Image4, 0, 3);
+                    this.topic4Table.Controls.Add(this.topic4Results1, 1, 0);
+                    this.topic4Table.Controls.Add(this.topic4Results2, 1, 1);
+                    this.topic4Table.Controls.Add(this.topic4Results3, 1, 2);
+                    this.topic4Table.Controls.Add(this.topic4Results4, 1, 3);
+                }
         }
 
         //This is for Smell
         private void smellBtn_Click(object sender, EventArgs e) {
 
+
+            resetAnswerLabels();
+
             if (displayShortResponse) {
                 hideColumn3SR();
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
-                getAdditionalCommentAnswer(3, "smellDontLike", 1);
-                getAdditionalCommentAnswer(3, "likeToSmell", 2);
+                try {
+                    getAdditionalCommentAnswer(3, "smellDontLike", 1);
+                    getAdditionalCommentAnswer(3, "likeToSmell", 2);
+                } catch (Exception ex) {
+                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+                }
                 hideIndividual(q4labelc1, srAnswer4);
                 hideIndividual(q4labelc2, srAnswer8);
                 updateSRTopicLabel("Are there some smells that you don't like?",
                 "Are there some things that you like to smell?",
                 "", "", "");
+            } else {
+
+                clearTable(resultsTable, 6);
+                clearTable(topic2Table, 5);
+                updateTopicLabel("Are there some smells that you don't like?",
+                    "Are there some things that you like to smell?",
+                    "", "", "");
+                updateTopic1ResultLabel(6, "Cooking Smells", "Food Smells", "Cleaning Products",
+                    "Toilet Smells", "Perfumes", "Body Smells", "", "");
+                updateTopic2ResultLabel(5, "Smelling Foods", "Smelling Plants",
+                    "Smelling Perfume", "Smelling Soap", "Smelling People", "", "", "");
+                try {
+                    getDBAnser("smellDontLike", 6, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, null, null);
+                    getDBAnser("likeToSmell", 5, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, null, null, null);
+
+                } catch (Exception ex) {
+                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+                }
+
+                hidePanels();
+                topic1ResultPanel.Visible = true;
+                topic2ResultPanel.Visible = true;
+
+                //Re-Add the labels
+                this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
+                this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
+                this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
+                this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
+                this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
+                this.resultsTable.Controls.Add(this.topic1Image6, 0, 5);
+                this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
+                this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
+                this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
+                this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
+                this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
+                this.resultsTable.Controls.Add(this.topic1Results6, 1, 5);
+
+                this.topic2Table.Controls.Add(this.topic2Results5, 1, 4);
+                this.topic2Table.Controls.Add(this.topic2Results4, 1, 3);
+                this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
+                this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
+                this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
+                this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
+                this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
+                this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
+                this.topic2Table.Controls.Add(this.topic2Image4, 0, 3);
+                this.topic2Table.Controls.Add(this.topic2Image5, 0, 4);
             }
-            clearTable(resultsTable, 6);
-            clearTable(topic2Table, 5);
-            updateTopicLabel("Are there some smells that you don't like?",
-                "Are there some things that you like to smell?",
-                "", "", "");
-            updateTopic1ResultLabel(6, "Cooking Smells", "Food Smells", "Cleaning Products",
-                "Toilet Smells", "Perfumes", "Body Smells", "", "");
-            updateTopic2ResultLabel(5, "Smelling Foods", "Smelling Plants",
-                "Smelling Perfume", "Smelling Soap", "Smelling People", "", "", "");
-
-            getDBAnser("smellDontLike", 6, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, null, null);
-            getDBAnser("likeToSmell", 5, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, null, null, null);
-
-            hidePanels();
-            topic1ResultPanel.Visible = true;
-            topic2ResultPanel.Visible = true;
-
-            //Re-Add the labels
-            this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
-            this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
-            this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
-            this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
-            this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
-            this.resultsTable.Controls.Add(this.topic1Image6, 0, 5);
-            this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
-            this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
-            this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
-            this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
-            this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
-            this.resultsTable.Controls.Add(this.topic1Results6, 1, 5);
-
-            this.topic2Table.Controls.Add(this.topic2Results5, 1, 4);
-            this.topic2Table.Controls.Add(this.topic2Results4, 1, 3);
-            this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
-            this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
-            this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
-            this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
-            this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
-            this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
-            this.topic2Table.Controls.Add(this.topic2Image4, 0, 3);
-            this.topic2Table.Controls.Add(this.topic2Image5, 0, 4);
         }
 
         private void touchBtn_Click(object sender, EventArgs e) {
+            resetAnswerLabels();
             if (displayShortResponse) {
                 hideColumn4SR();
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
-                getAdditionalCommentAnswer(4, "dontLikeFeelingOf", 1);
-                getAdditionalCommentAnswer(4, "peopleTouchDontLike", 2);
-                getAdditionalCommentAnswer(3, "likeTheFeelingOf", 3);
+                try {
+
+                    getAdditionalCommentAnswer(4, "dontLikeFeelingOf", 1);
+                    getAdditionalCommentAnswer(4, "peopleTouchDontLike", 2);
+                    getAdditionalCommentAnswer(3, "likeTheFeelingOf", 3);
+                } catch (Exception ex) {
+                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+                }
                 hideIndividual(q4labelc3, srAnswer12);
                 updateSRTopicLabel("Are there some things that you don't \n like the feeling of?",
                 "Are there ways that people touch you that \n you don't like?",
                 "Are there some things that you \n like the feeling of?",
                 "", "");
+            } else {
+                clearTable(resultsTable, 8);
+                clearTable(topic2Table, 8);
+                clearTable(topic3Table, 6);
+                updateTopicLabel("Are there some things that you don't \n like the feeling of?",
+                    "Are there ways that people touch you that \n you don't like?",
+                    "Are there some things that you \n like the feeling of?",
+                    "", "");
+                updateTopic1ResultLabel(8, "Sandy", "Sticky", "Grassy", "Wool Clothes", "Tight Clothes", "Stiff Clothes", "Shoes", "Splashing Water");
+                updateTopic2ResultLabel(8, "Being Hugged or Kissed", "Being Crowded", "Being Tapped on The Shoulder", "Having Sunscreen Put on",
+                    "Being Bumped", "Having a Haircut", "Doctor Touching me", "Dentist Touching me");
+                updateTopic3ResultLabel(6, "Soft", "Rubbery", "Furry", "Hugging People", "Touching People", "Being Squashed With a Pillow");
+                try {
+
+                    getDBAnser("dontLikeFeelingOf", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
+                    getDBAnser("peopleTouchDontLike", 8, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, topic2Results7, topic2Results8);
+                    getDBAnser("likeTheFeelingOf", 6, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, topic3Results6, null, null);
+                } catch (Exception ex) {
+                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+                }
+
+                hidePanels();
+                topic1ResultPanel.Visible = true;
+                topic2ResultPanel.Visible = true;
+                topic3ResultPanel.Visible = true;
+
+                //Re-Add the labels
+                this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
+                this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
+                this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
+                this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
+                this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
+                this.resultsTable.Controls.Add(this.topic1Image6, 0, 5);
+                this.resultsTable.Controls.Add(this.topic1Image7, 0, 6);
+                this.resultsTable.Controls.Add(this.topic1Image8, 0, 7);
+                this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
+                this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
+                this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
+                this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
+                this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
+                this.resultsTable.Controls.Add(this.topic1Results6, 1, 5);
+                this.resultsTable.Controls.Add(this.topic1Results7, 1, 6);
+                this.resultsTable.Controls.Add(this.topic1Results8, 1, 7);
+
+                this.topic2Table.Controls.Add(this.topic2Results8, 1, 7);
+                this.topic2Table.Controls.Add(this.topic2Image8, 0, 7);
+                this.topic2Table.Controls.Add(this.topic2Results7, 1, 6);
+                this.topic2Table.Controls.Add(this.topic2Image7, 0, 6);
+                this.topic2Table.Controls.Add(this.topic2Results6, 1, 5);
+                this.topic2Table.Controls.Add(this.topic2Image6, 0, 5);
+                this.topic2Table.Controls.Add(this.topic2Results5, 1, 4);
+                this.topic2Table.Controls.Add(this.topic2Results4, 1, 3);
+                this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
+                this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
+                this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
+                this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
+                this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
+                this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
+                this.topic2Table.Controls.Add(this.topic2Image4, 0, 3);
+                this.topic2Table.Controls.Add(this.topic2Image5, 0, 4);
+
+                this.topic3Table.Controls.Add(this.topic3Image1, 0, 0);
+                this.topic3Table.Controls.Add(this.topic3Image2, 0, 1);
+                this.topic3Table.Controls.Add(this.topic3Image3, 0, 2);
+                this.topic3Table.Controls.Add(this.topic3Image4, 0, 3);
+                this.topic3Table.Controls.Add(this.topic3Image5, 0, 4);
+                this.topic3Table.Controls.Add(this.topic3Image6, 0, 5);
+                this.topic3Table.Controls.Add(this.topic3Results1, 1, 0);
+                this.topic3Table.Controls.Add(this.topic3Results2, 1, 1);
+                this.topic3Table.Controls.Add(this.topic3Results3, 1, 2);
+                this.topic3Table.Controls.Add(this.topic3Results4, 1, 3);
+                this.topic3Table.Controls.Add(this.topic3Results5, 1, 4);
+                this.topic3Table.Controls.Add(this.topic3Results6, 1, 5);
             }
-            clearTable(resultsTable, 8);
-            clearTable(topic2Table, 8);
-            clearTable(topic3Table, 6);
-            updateTopicLabel("Are there some things that you don't \n like the feeling of?",
-                "Are there ways that people touch you that \n you don't like?",
-                "Are there some things that you \n like the feeling of?",
-                "", "");
-            updateTopic1ResultLabel(8, "Sandy", "Sticky", "Grassy", "Wool Clothes", "Tight Clothes", "Stiff Clothes", "Shoes", "Splashing Water");
-            updateTopic2ResultLabel(8, "Being Hugged or Kissed", "Being Crowded", "Being Tapped on The Shoulder", "Having Sunscreen Put on",
-                "Being Bumped", "Having a Haircut", "Doctor Touching me", "Dentist Touching me");
-            updateTopic3ResultLabel(6, "Soft", "Rubbery", "Furry", "Hugging People", "Touching People", "Being Squashed With a Pillow");
-
-            getDBAnser("dontLikeFeelingOf", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
-            getDBAnser("peopleTouchDontLike", 8, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, topic2Results7, topic2Results8);
-            getDBAnser("likeTheFeelingOf", 6, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, topic3Results6, null, null);
-
-            hidePanels();
-            topic1ResultPanel.Visible = true;
-            topic2ResultPanel.Visible = true;
-            topic3ResultPanel.Visible = true;
-
-            //Re-Add the labels
-            this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
-            this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
-            this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
-            this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
-            this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
-            this.resultsTable.Controls.Add(this.topic1Image6, 0, 5);
-            this.resultsTable.Controls.Add(this.topic1Image7, 0, 6);
-            this.resultsTable.Controls.Add(this.topic1Image8, 0, 7);
-            this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
-            this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
-            this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
-            this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
-            this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
-            this.resultsTable.Controls.Add(this.topic1Results6, 1, 5);
-            this.resultsTable.Controls.Add(this.topic1Results7, 1, 6);
-            this.resultsTable.Controls.Add(this.topic1Results8, 1, 7);
-
-            this.topic2Table.Controls.Add(this.topic2Results8, 1, 7);
-            this.topic2Table.Controls.Add(this.topic2Image8, 0, 7);
-            this.topic2Table.Controls.Add(this.topic2Results7, 1, 6);
-            this.topic2Table.Controls.Add(this.topic2Image7, 0, 6);
-            this.topic2Table.Controls.Add(this.topic2Results6, 1, 5);
-            this.topic2Table.Controls.Add(this.topic2Image6, 0, 5);
-            this.topic2Table.Controls.Add(this.topic2Results5, 1, 4);
-            this.topic2Table.Controls.Add(this.topic2Results4, 1, 3);
-            this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
-            this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
-            this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
-            this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
-            this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
-            this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
-            this.topic2Table.Controls.Add(this.topic2Image4, 0, 3);
-            this.topic2Table.Controls.Add(this.topic2Image5, 0, 4);
-
-            this.topic3Table.Controls.Add(this.topic3Image1, 0, 0);
-            this.topic3Table.Controls.Add(this.topic3Image2, 0, 1);
-            this.topic3Table.Controls.Add(this.topic3Image3, 0, 2);
-            this.topic3Table.Controls.Add(this.topic3Image4, 0, 3);
-            this.topic3Table.Controls.Add(this.topic3Image5, 0, 4);
-            this.topic3Table.Controls.Add(this.topic3Image6, 0, 5);
-            this.topic3Table.Controls.Add(this.topic3Results1, 1, 0);
-            this.topic3Table.Controls.Add(this.topic3Results2, 1, 1);
-            this.topic3Table.Controls.Add(this.topic3Results3, 1, 2);
-            this.topic3Table.Controls.Add(this.topic3Results4, 1, 3);
-            this.topic3Table.Controls.Add(this.topic3Results5, 1, 4);
-            this.topic3Table.Controls.Add(this.topic3Results6, 1, 5);
 
         }
 
         private void additionalCommentsBtn_Click(object sender, EventArgs e) {
+            resetAnswerLabels();
             if (displayShortResponse) {
                 hideColumn3SR();
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
-                getAdditionalCommentAnswer(4, "other", 1);
-                getAdditionalCommentAnswer(4, "other", 2);
+                try {
+                    getAdditionalCommentAnswer(4, "other", 1);
+                    getAdditionalCommentAnswer(4, "other", 2);
+                } catch (Exception ex) {
+                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+                }
                 updateSRTopicLabel("Are there some places with lots of things \n happening at once that you don't like?",
                 "Are there other sensations that you \n feel strongly about?",
                 "", "", "");
-            }
-            clearTable(resultsTable, 5);
-            clearTable(topic2Table, 6);
-            updateTopicLabel("Are there some places with lots of things \n happening at once that you don't like?",
-                "Are there other sensations that you \n feel strongly about?",
-                "", "", "");
-            updateTopic1ResultLabel(5, "Supermarket", "Party", "Food Hall", "Show", "Shopping Mall", "", "", "");
-            updateTopic2ResultLabel(6, "Sound", "Smells", "Sights", "Tastes", "Feelings", "Movements", "", "");
+            } else {
+                clearTable(resultsTable, 5);
+                clearTable(topic2Table, 6);
+                updateTopicLabel("Are there some places with lots of things \n happening at once that you don't like?",
+                    "Are there other sensations that you \n feel strongly about?",
+                    "", "", "");
+                updateTopic1ResultLabel(5, "Supermarket", "Party", "Food Hall", "Show", "Shopping Mall", "", "", "");
+                updateTopic2ResultLabel(6, "Sound", "Smells", "Sights", "Tastes", "Feelings", "Movements", "", "");
+                try {
+                    getDBAnser("other", 5, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, null, null, null);
+                    getDBAnser("other", 6, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, null, null);
 
-            getDBAnser("other", 5, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, null, null, null);
-            getDBAnser("other", 6, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, null, null);
+                } catch (Exception ex) {
+                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+                }
 
-            hidePanels();
-            topic1ResultPanel.Visible = true;
-            topic2ResultPanel.Visible = true;
+                hidePanels();
+                topic1ResultPanel.Visible = true;
+                topic2ResultPanel.Visible = true;
 
-            this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
-            this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
-            this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
-            this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
-            this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
-            this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
-            this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
-            this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
-            this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
-            this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
+                this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
+                this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
+                this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
+                this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
+                this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
+                this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
+                this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
+                this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
+                this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
+                this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
 
-            this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
-            this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
-            this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
-            this.topic2Table.Controls.Add(this.topic2Image4, 0, 3);
-            this.topic2Table.Controls.Add(this.topic2Image5, 0, 4);
-            this.topic2Table.Controls.Add(this.topic2Image6, 0, 5);
-            this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
-            this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
-            this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
-            this.topic2Table.Controls.Add(this.topic2Results4, 1, 3);
-            this.topic2Table.Controls.Add(this.topic2Results5, 1, 4);
-            this.topic2Table.Controls.Add(this.topic2Results6, 1, 5);
+                this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
+                this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
+                this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
+                this.topic2Table.Controls.Add(this.topic2Image4, 0, 3);
+                this.topic2Table.Controls.Add(this.topic2Image5, 0, 4);
+                this.topic2Table.Controls.Add(this.topic2Image6, 0, 5);
+                this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
+                this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
+                this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
+                this.topic2Table.Controls.Add(this.topic2Results4, 1, 3);
+                this.topic2Table.Controls.Add(this.topic2Results5, 1, 4);
+                this.topic2Table.Controls.Add(this.topic2Results6, 1, 5);
+
+            } 
         }
 
         private void tasteBtn_Click(object sender, EventArgs e) {
+
+            resetAnswerLabels();
             if (displayShortResponse) {
                 hideColumn5SR();
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
-                getAdditionalCommentAnswer(2, "foodGroupsDontLike", 1);
-                getAdditionalCommentAnswer(3, "tastesOrFeelsInMouthDontLike", 2);
-                getAdditionalCommentAnswer(2, "foodReallyLikeToEat", 3);
-                getAdditionalCommentAnswer(3, "thingsPutInMouthALot", 4);
+                try {
+                    getAdditionalCommentAnswer(2, "foodGroupsDontLike", 1);
+                    getAdditionalCommentAnswer(3, "tastesOrFeelsInMouthDontLike", 2);
+                    getAdditionalCommentAnswer(2, "foodReallyLikeToEat", 3);
+                    getAdditionalCommentAnswer(3, "thingsPutInMouthALot", 4);
+                } catch (Exception ex) {
+                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+                }
                 hideIndividual(q3labelc1, srAnswer3);
                 hideIndividual(q4labelc1, srAnswer4);
                 hideIndividual(q4labelc2, srAnswer8);
@@ -1248,7 +1358,7 @@ string text3, string text4, string text5, string text6) {
                 hideIndividual(q4labelc3, srAnswer12);
                 hideIndividual(q4labelc4, srAnswer16);
             }
-            if (!displayShortResponse) { //For Guided Interview
+            if (!displayShortResponse) {
                 clearTable(resultsTable, 8);
                 clearTable(topic2Table, 8);
                 clearTable(topic3Table, 2);
@@ -1264,11 +1374,14 @@ string text3, string text4, string text5, string text6) {
                 updateTopic3ResultLabel(2, "Familiar Foods, only a few types of foods \n i.e. I Don't Like Trying New Foods",
                     "Unfamiliar Foods, lots of different types of foods \n i.e. I Like Trying New Foods", "", "", "", "");
                 updateTopic4ResultLabel(3, "Shirt", "Hair", "Objects", "", "", "");
-
-                getDBAnser("foodGroupsDontLike", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
-                getDBAnser("tastesOrFeelsInMouthDontLike", 8, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, topic2Results7, topic2Results8);
-                getDBAnser("foodReallyLikeToEat", 2, topic3Results1, topic3Results2, null, null, null, null, null, null);
-                getDBAnser("thingsPutInMouthALot", 3, topic4Results1, topic4Results2, topic4Results3, null, null, null, null, null);
+                try {
+                    getDBAnser("foodGroupsDontLike", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
+                    getDBAnser("tastesOrFeelsInMouthDontLike", 8, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, topic2Results7, topic2Results8);
+                    getDBAnser("foodReallyLikeToEat", 2, topic3Results1, topic3Results2, null, null, null, null, null, null);
+                    getDBAnser("thingsPutInMouthALot", 3, topic4Results1, topic4Results2, topic4Results3, null, null, null, null, null);
+                } catch (Exception ex) {
+                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+                }
 
                 hidePanels();
                 topic1ResultPanel.Visible = true;
@@ -1322,99 +1435,6 @@ string text3, string text4, string text5, string text6) {
                 this.topic4Table.Controls.Add(this.topic4Results1, 1, 0);
                 this.topic4Table.Controls.Add(this.topic4Results2, 1, 1);
                 this.topic4Table.Controls.Add(this.topic4Results3, 1, 2);
-            } else {
-                if (interviewType == "2") {
-                    clearTable(resultsTable, 8);
-                    clearTable(topic2Table, 8);
-                    clearTable(topic3Table, 2);
-                    clearTable(topic4Table, 3);
-                    updateTopicLabel("Are there some food groups that you don't like eating?",
-                        "Are there some ways that food tastes or feels \n in your mouth that you don't like?",
-                        "Are there some things you really like to eat?",
-                        "Are there some things that you put in \n your mouth a lot?",
-                        "");
-                    updateTopic1ResultLabel(8, "Vegetables", "Fruit", "Meat", "Fish", "Eggs",
-                        "Dairy", "Bread", "Pasta");
-                    updateTopic2ResultLabel(8, "Lumpy", "Chewy", "Runny/Slippery", "Mixed", "Sweet", "Sour", "Salty", "Spicy");
-                    updateTopic3ResultLabel(2, "Familiar Foods, only a few types of foods \n i.e. I Don't Like Trying New Foods",
-                        "Unfamiliar Foods, lots of different types of foods \n i.e. I Like Trying New Foods", "", "", "", "");
-                    updateTopic4ResultLabel(3, "Shirt", "Hair", "Objects", "", "", "");
-
-                    getDBAnser("foodGroupsDontLike", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
-                    getDBAnser("tastesOrFeelsInMouthDontLike", 8, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, topic2Results7, topic2Results8);
-                    getDBAnser("foodReallyLikeToEat", 2, topic3Results1, topic3Results2, null, null, null, null, null, null);
-                    getDBAnser("thingsPutInMouthALot", 3, topic4Results1, topic4Results2, topic4Results3, null, null, null, null, null);
-
-                    hidePanels();
-                    topic1ResultPanel.Visible = true;
-                    topic2ResultPanel.Visible = true;
-                    topic3ResultPanel.Visible = true;
-                    topic4ResultPanel.Visible = true;
-
-                    //Re-Add the labels
-                    this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
-                    this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
-                    this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
-                    this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
-                    this.resultsTable.Controls.Add(this.topic1Image5, 0, 4);
-                    this.resultsTable.Controls.Add(this.topic1Image6, 0, 5);
-                    this.resultsTable.Controls.Add(this.topic1Image7, 0, 6);
-                    this.resultsTable.Controls.Add(this.topic1Image8, 0, 7);
-                    this.resultsTable.Controls.Add(this.topic1Results1, 1, 0);
-                    this.resultsTable.Controls.Add(this.topic1Results2, 1, 1);
-                    this.resultsTable.Controls.Add(this.topic1Results3, 1, 2);
-                    this.resultsTable.Controls.Add(this.topic1Results4, 1, 3);
-                    this.resultsTable.Controls.Add(this.topic1Results5, 1, 4);
-                    this.resultsTable.Controls.Add(this.topic1Results6, 1, 5);
-                    this.resultsTable.Controls.Add(this.topic1Results7, 1, 6);
-                    this.resultsTable.Controls.Add(this.topic1Results8, 1, 7);
-
-                    this.topic2Table.Controls.Add(this.topic2Results8, 1, 7);
-                    this.topic2Table.Controls.Add(this.topic2Image8, 0, 7);
-                    this.topic2Table.Controls.Add(this.topic2Results7, 1, 6);
-                    this.topic2Table.Controls.Add(this.topic2Image7, 0, 6);
-                    this.topic2Table.Controls.Add(this.topic2Results6, 1, 5);
-                    this.topic2Table.Controls.Add(this.topic2Image6, 0, 5);
-                    this.topic2Table.Controls.Add(this.topic2Results5, 1, 4);
-                    this.topic2Table.Controls.Add(this.topic2Results4, 1, 3);
-                    this.topic2Table.Controls.Add(this.topic2Image1, 0, 0);
-                    this.topic2Table.Controls.Add(this.topic2Image2, 0, 1);
-                    this.topic2Table.Controls.Add(this.topic2Image3, 0, 2);
-                    this.topic2Table.Controls.Add(this.topic2Results1, 1, 0);
-                    this.topic2Table.Controls.Add(this.topic2Results2, 1, 1);
-                    this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
-                    this.topic2Table.Controls.Add(this.topic2Image4, 0, 3);
-                    this.topic2Table.Controls.Add(this.topic2Image5, 0, 4);
-
-                    this.topic3Table.Controls.Add(this.topic3Image1, 0, 0);
-                    this.topic3Table.Controls.Add(this.topic3Image2, 0, 1);
-                    this.topic3Table.Controls.Add(this.topic3Results1, 1, 0);
-                    this.topic3Table.Controls.Add(this.topic3Results2, 1, 1);
-
-                    this.topic4Table.Controls.Add(this.topic4Image1, 0, 0);
-                    this.topic4Table.Controls.Add(this.topic4Image2, 0, 1);
-                    this.topic4Table.Controls.Add(this.topic4Image3, 0, 2);
-                    this.topic4Table.Controls.Add(this.topic4Results1, 1, 0);
-                    this.topic4Table.Controls.Add(this.topic4Results2, 1, 1);
-                    this.topic4Table.Controls.Add(this.topic4Results3, 1, 2);
-                } else if (interviewType == "3") {
-
-                }
-                clearTable(resultsTable, 8);
-                clearTable(topic2Table, 8);
-                clearTable(topic3Table, 2);
-                clearTable(topic4Table, 3);
-                updateTopicLabel("Are there some food groups that you don't like eating?",
-                "Are there some ways that food tastes or feels \n in your mouth that you don't like?",
-                "Are there some things you really like to eat?",
-                "Are there some things that you put in \n your mouth a lot?",
-                "");
-                updateTopic1ResultLabel(8, "Vegetables", "Fruit", "Meat", "Fish", "Eggs",
-                    "Dairy", "Bread", "Pasta");
-                updateTopic2ResultLabel(8, "Lumpy", "Chewy", "Runny/Slippery", "Mixed", "Sweet", "Sour", "Salty", "Spicy");
-                updateTopic3ResultLabel(2, "Familiar Foods, only a few types of foods \n i.e. I Don't Like Trying New Foods",
-                    "Unfamiliar Foods, lots of different types of foods \n i.e. I Like Trying New Foods", "", "", "", "");
-                updateTopic4ResultLabel(3, "Shirt", "Hair", "Objects", "", "", "");
             }
         }
 
