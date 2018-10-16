@@ -378,11 +378,12 @@ namespace Login {
                 additionalNotesPanel.BringToFront();
             }
         }
-        
+
         /// <summary>
         /// Sound
         /// </summary>
-        private void interviewPage1() {
+        private void interviewPage1()
+        {
             //axWindowsMediaPlayer1.URL = @"..\..\resources\0testsound.mp3";
             lblQuestion.Text = "Are there some sounds that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1 Other People Talking (cropped).png");
@@ -408,7 +409,8 @@ namespace Login {
                 "Bathroom appliances (e.g. hair dryers, hand dryers)");
         }
 
-        private void interviewPage1p2() {
+        private void interviewPage1p2()
+        {
             lblQuestion.Text = "Are there some sounds that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\7 Sirens, alarms, school bells.jpg");
             topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.7Sirens.Wav";
@@ -423,20 +425,23 @@ namespace Login {
             updateLabelText("Sirens, alarms, school bells", "Sudden loud noises (e.g., balloons popping)", "", "", "", "");
         }
 
-        private void interviewPage1p3() {
+        private void interviewPage1p3()
+        {
             panel2lblQuestion.Text = "Are there some sounds that you don't like?";
             lblQuestion1.Text = "Other sounds that you don't like?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void interviewPage2() {
+        private void interviewPage2()
+        {
             panel2lblQuestion.Text = "Are there some sounds that you don't like?";
             lblQuestion1.Text = "Do you do anything to avoid these sounds (e.g., cover your ears, avoid noisy places?";
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
         }
 
-        private void interviewPage3() {
+        private void interviewPage3()
+        {
             lblQuestion.Text = "Are there times when it is hard for you to listen?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1 If I am concentrating on something, I don't notice people talking to me.png");
             topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1.2.1Concentration.wav";
@@ -460,13 +465,15 @@ namespace Login {
                 "");
         }
 
-        private void interviewPage3p2() {
+        private void interviewPage3p2()
+        {
             panel2lblQuestion.Text = "Are there times when it is hard for you to listen?";
             lblQuestion1.Text = "Other times when it is hard to listen?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void interviewPage4() {
+        private void interviewPage4()
+        {
             lblQuestion.Text = "Are there some sounds that make it hard for you to concentrate?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1 Radio on.jpg");
             topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1.3.1Radio.wav";
@@ -482,19 +489,22 @@ namespace Login {
             updateLabelText("Radio on", "Clock ticking", "People talking", "", "", "");
         }
 
-        private void interviewPage4p2() {
+        private void interviewPage4p2()
+        {
             panel2lblQuestion.Text = "Are there some sounds that make it hard for you to concentrate?";
             lblQuestion1.Text = "Other sounds that make it hard to concentrate?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void interviewPage5and6() {
+        private void interviewPage5and6()
+        {
             panel2lblQuestion.Text = "Are there some sounds that make it hard for you to concentrate?";
             lblQuestion1.Text = "Are there noises that you find very distracting when you have a job to do?";
             lblQuestion2.Text = "Does noise ever make it hard for you to do things (e.g., work in an office, go to shopping centres)?";
         }
 
-        private void interviewPage7() {
+        private void interviewPage7()
+        {
             lblQuestion.Text = "Are there some sounds that you like to listen to?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1 Computer sounds.jpg");
             topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1.4.1ComputerSounds.wav";
@@ -515,22 +525,25 @@ namespace Login {
             updateLabelText("Computer sounds", "Live music", "Fans", "Music through my phone", "Rhythms", "");
         }
 
-        private void interviewPage7p2() {
+        private void interviewPage7p2()
+        {
             panel2lblQuestion.Text = "Are there some sounds that you like to listen to?";
             lblQuestion1.Text = "Other sounds that you like?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void interviewPage8() {
+        private void interviewPage8()
+        {
             panel2lblQuestion.Text = "Are there some sounds that you like to listen to?";
             lblQuestion1.Text = "Are there sounds that you like to listen to often or for long periods?";
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
         }
 
-        private void interviewPage9() {
+        private void interviewPage9()
+        {
             lblQuestion.Text = "Are there some sounds that you make a lot?";
-            //topLeftPB.Image = new Bitmap(@"");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\1 Humming or Whistling to myself.jpg");
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\2 Tapping feet.PNG");
             topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1.5.1Feet.wav";
 
@@ -546,13 +559,15 @@ namespace Login {
                 "", "");
         }
 
-        private void interviewPage9p2() {
+        private void interviewPage9p2()
+        {
             panel2lblQuestion.Text = "Are there some sounds that you make a lot?";
             lblQuestion1.Text = "Other sounds that you make:";
             lblQuestion2.Text = "Examples in your daily life:";
         }
 
-        private void interviewPage10() {
+        private void interviewPage10()
+        {
             panel2lblQuestion.Text = "Are there some sounds that you make a lot?";
             lblQuestion1.Text = "Do the sounds you make seem to bother other people?";
             lblQuestion2.Text = "";
@@ -562,7 +577,8 @@ namespace Login {
         /// <summary>
         /// Sight
         /// </summary>
-        private void sightInterviewPage1() {
+        private void sightInterviewPage1()
+        {
             lblQuestion.Text = "Are there some things that you don't like to look at?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\1 Sunlight.jpg");
             topLeftReadOutLoudPath = @"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\2.1.1Sunlight.wav";
@@ -584,20 +600,23 @@ namespace Login {
                 "Lecture room light", "");
         }
 
-        private void sightInterviewPage1p2() {
+        private void sightInterviewPage1p2()
+        {
             panel2lblQuestion.Text = "Are there some things that you don't like to look at?";
             lblQuestion1.Text = "Other things that you don’t like to look at?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void sightInterviewPage2() {
+        private void sightInterviewPage2()
+        {
             panel2lblQuestion.Text = "Are there some things that you don't like to look at?";
             lblQuestion1.Text = "Do you do anything to avoid these things (e.g., shade your eyes, wear sunglasses, avoid fluorescent light)?";
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
         }
 
-        private void sightInterviewPage3() {
+        private void sightInterviewPage3()
+        {
             lblQuestion.Text = "Are there some things you see that make it hard to concentrate?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\1 Lots of things in a messy drawer.jpg");
             topLeftReadOutLoudPath = @"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\2.2.1MessyDrawer.wav";
@@ -614,13 +633,15 @@ namespace Login {
             updateLabelText("Lots of things in a messy drawer", "People running around me", "Lots of clutter in an office or work space", "", "", "");
         }
 
-        private void sightInterviewPage3p2() {
+        private void sightInterviewPage3p2()
+        {
             panel2lblQuestion.Text = "Are there some things you see that make it hard to concentrate?";
             lblQuestion1.Text = "Other things you see that make it hard to concentrate?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void sightInterviewPage4() {
+        private void sightInterviewPage4()
+        {
             lblQuestion.Text = "Are there some things that you like to look at?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you like to look at_\1 Moving lights.jpg");
             topLeftReadOutLoudPath = @"..\..\resources\2. Sight\3. Are there some things that you like to look at_\2.3.1MovingLights.wav";
@@ -640,13 +661,15 @@ namespace Login {
             updateLabelText("Moving lights", "Things that sparkle", "Geometric patterns", "Spinning fans", "Spinning objects", "");
         }
 
-        private void sightInterviewPage4p2() {
+        private void sightInterviewPage4p2()
+        {
             panel2lblQuestion.Text = "Are there some things that you like to look at?";
             lblQuestion1.Text = "Other things that you like to look at?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void sightInterviewPage5() {
+        private void sightInterviewPage5()
+        {
             panel2lblQuestion.Text = "Are there some things that you like to look at?";
             lblQuestion1.Text = "Are there things you look at often or for long periods?";
             lblQuestion2.Text = "";
@@ -656,7 +679,8 @@ namespace Login {
         /// <summary>
         /// Touch
         /// </summary>
-        private void touchInterviewPage1() {
+        private void touchInterviewPage1()
+        {
             lblQuestion.Text = "Are there some things that you don't like the feeling of?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\1 Sandy.jpg");
             topLeftReadOutLoudPath = @"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.1Sandy.wav";
@@ -680,7 +704,8 @@ namespace Login {
                 "Tight clothes", "Stiff clothes");
         }
 
-        private void touchInterviewPage1p2() {
+        private void touchInterviewPage1p2()
+        {
             lblQuestion.Text = "Are there some things that you don't like the feeling of?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\7 Shoes.jpg");
             topLeftReadOutLoudPath = @"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.7Shoes.wav";
@@ -696,19 +721,22 @@ namespace Login {
                 "", "");
         }
 
-        private void touchInterviewPage1p3() {
+        private void touchInterviewPage1p3()
+        {
             panel2lblQuestion.Text = "Are there some things that you don't like the feeling of?";
             lblQuestion1.Text = "Other things you don’t like the feeling of";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void touchInterviewPage2() {
+        private void touchInterviewPage2()
+        {
             panel2lblQuestion.Text = "Are there some things that you don't like the feeling of?";
             lblQuestion1.Text = "Do touch sensations ever make it hard for you to do things (e.g., wear some types of clothing or walk on the grass)?";
             lblQuestion2.Text = "Does you do anything to avoid these things (e.g., avoid certain clothes or textures)?";
         }
 
-        private void touchInterviewPage3() {
+        private void touchInterviewPage3()
+        {
             lblQuestion.Text = "Are there some ways that people touch you that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\1 Being hugged or kissed (cropped).jpg");
             topLeftReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.1Hugged.wav";
@@ -732,7 +760,8 @@ namespace Login {
                 "Being bumped", "Having a haircut");
         }
 
-        private void touchInterviewPage3p2() {
+        private void touchInterviewPage3p2()
+        {
             lblQuestion.Text = "Are there some ways that people touch you that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\7 Doctor touching me.jpg");
             topLeftReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.7Doctor.wav";
@@ -748,19 +777,22 @@ namespace Login {
                 "", "");
         }
 
-        private void touchInterviewPage3p3() {
+        private void touchInterviewPage3p3()
+        {
             panel2lblQuestion.Text = "Are there some ways that people touch you that you don't like?";
             lblQuestion1.Text = "Other ways people touch you that you don’t like?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void touchInterviewPage4() {
+        private void touchInterviewPage4()
+        {
             panel2lblQuestion.Text = "Are there some ways that people touch you that you don't like?";
             lblQuestion1.Text = "Does difficulty coping with being touched make it hard for you to do things (e.g., visit the doctor or the dentist)?";
             lblQuestion2.Text = "Do you do anything to avoid being touched (e.g., avoid crowded places)?";
         }
 
-        private void touchInterviewPage5() {
+        private void touchInterviewPage5()
+        {
             lblQuestion.Text = "Are there some things that you like the feeling of?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\1 Soft.jpg");
             topLeftReadOutLoudPath = @"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.1Soft.wav";
@@ -783,13 +815,15 @@ namespace Login {
                 "Touching people", "Being squashed with a pillow");
         }
 
-        private void touchInterviewPage5p2() {
+        private void touchInterviewPage5p2()
+        {
             panel2lblQuestion.Text = "Are there some things that you like the feeling of?";
             lblQuestion1.Text = "Other things that you like the feeling of?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void touchInterviewPage6() {
+        private void touchInterviewPage6()
+        {
             panel2lblQuestion.Text = "Are there some things that you like the feeling of?";
             lblQuestion1.Text = "Are there things that you like to touch often or for long periods?";
             lblQuestion2.Text = "";
@@ -799,7 +833,8 @@ namespace Login {
         /// <summary>
         /// Smell
         /// </summary>
-        private void smellInterviewPage1() {
+        private void smellInterviewPage1()
+        {
             lblQuestion.Text = "Are there some smells that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\1 Cooking smells (cropped).jpg");
             topLeftReadOutLoudPath = @"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4.1.1CookingSmells.wav";
@@ -823,20 +858,23 @@ namespace Login {
                 "Toilet smells", "Perfumes", "Body smells");
         }
 
-        private void smellInterviewPage1p2() {
+        private void smellInterviewPage1p2()
+        {
             panel2lblQuestion.Text = "Are there some smells that you don't like?";
             lblQuestion1.Text = "Other smells that you don’t like?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void smellInterviewPage2() {
+        private void smellInterviewPage2()
+        {
             panel2lblQuestion.Text = "Are there some smells that you don't like?";
             lblQuestion1.Text = "Do you do anything to avoid these smells (e.g., avoid public toilets or cleaning products aisles at the supermarket)?";
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
         }
 
-        private void smellInterviewPage3() {
+        private void smellInterviewPage3()
+        {
             lblQuestion.Text = "Are there some things that you like to smell?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\4. Smells\2. Are there some things that you like to smell_\1 Smelling foods (cropped).jpg");
             topLeftReadOutLoudPath = @"..\..\resources\4. Smells\2. Are there some things that you like to smell_\4.2.1SmellingFoods.wav";
@@ -858,13 +896,15 @@ namespace Login {
                 "Smelling soap", "Smelling people", "");
         }
 
-        private void smellInterviewPage3p2() {
+        private void smellInterviewPage3p2()
+        {
             panel2lblQuestion.Text = "Are there some things that you like to smell?";
             lblQuestion1.Text = "Other things you like to smell?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void smellInterviewPage4() {
+        private void smellInterviewPage4()
+        {
             panel2lblQuestion.Text = "Are there some things that you like to smell?";
             lblQuestion1.Text = "Are there things that you like to smell often or for long periods?";
             lblQuestion2.Text = "";
@@ -874,7 +914,8 @@ namespace Login {
         /// <summary>
         /// taste
         /// </summary>
-        private void tasteInterviewPage1() {
+        private void tasteInterviewPage1()
+        {
             lblQuestion.Text = "Are there some food groups that you don't like eating?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\1 Vegetables.png");
             topLeftReadOutLoudPath = @"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.1Vegetables.wav";
@@ -896,7 +937,8 @@ namespace Login {
             updateLabelText("Vegetables", "Fruit", "Meat", "Fish", "Eggs", "Dairy");
         }
 
-        private void tasteInterviewPage1p2() {
+        private void tasteInterviewPage1p2()
+        {
             lblQuestion.Text = "Are there some food groups that you don't like eating?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\7 Bread.jpg");
             topLeftReadOutLoudPath = @"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.7Bread.wav";
@@ -911,13 +953,15 @@ namespace Login {
             updateLabelText("Bread", "Pasta", "", "", "", "");
         }
 
-        private void tasteInterviewPage1p3() {
+        private void tasteInterviewPage1p3()
+        {
             panel2lblQuestion.Text = "Are there some food groups that you don't like eating?";
             lblQuestion1.Text = "Other types of food that you don’t like?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void tasteInterviewPage2() {
+        private void tasteInterviewPage2()
+        {
             lblQuestion.Text = "Are there some ways that food tastes or feels in your mouth that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\1 Lumpy.jpg");
             topLeftReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.1Lumpy.wav";
@@ -939,7 +983,8 @@ namespace Login {
 
             updateLabelText("Lumpy", "Chewy", "Runny/Slippery", "Mixed", "Sweet", "Sour");
         }
-        private void tasteInterviewPage2p2() {
+        private void tasteInterviewPage2p2()
+        {
             lblQuestion.Text = "Are there some ways that food tastes or feels in your mouth that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\7 Salty (cropped).jpg");
             topLeftReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.7Salty.wav";
@@ -954,50 +999,56 @@ namespace Login {
             updateLabelText("Salty", "Spicy", "", "", "", "");
         }
 
-        private void tasteInterviewPage2p3() {
+        private void tasteInterviewPage2p3()
+        {
             panel2lblQuestion.Text = "Are there some ways that food tastes or feels in your mouth that you don’t like?";
             lblQuestion1.Text = "Other ways food tastes or feels that you don’t like?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void tasteInterviewPage3() {
+        private void tasteInterviewPage3()
+        {
             panel2lblQuestion.Text = "Are there some ways that food tastes or feels in your mouth that you don’t like?";
             lblQuestion1.Text = "Do you do anything to avoid eating certain foods (e.g., avoid eating in restaurants or at other people’s homes)?";
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
         }
 
-        private void tasteInterviewPage4() {
+        private void tasteInterviewPage4()
+        {
             lblQuestion.Text = "Are there some things that you really like to eat?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\1 Familiar foods, only a few types of foods (i.e, I don’t like trying new foods)1 (cropped).jpg");
             topLeftReadOutLoudPath = @"..\..\resources\5. Taste\3. Are there some things you really like to eat_\5.3.1FamiliarFoods.wav";
 
-            topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\2 Unfamiliar foods, lots of different types of foods (i.e., I like trying new foods)1.jpg");
+            topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\1 Familiar foods, only a few types of foods (i.e, I don’t like trying new foods)2.jpg");
             topMiddleReadOutLoudPath = @"..\..\resources\5. Taste\3. Are there some things you really like to eat_\5.3.2UnfamiliarFoods.wav";
 
 
             //topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Geometric patterns.jpg");
-            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
-            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\2 Unfamiliar foods, lots of different types of foods (i.e., I like trying new foods)1.jpg");
+            bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\2 Unfamiliar foods, lots of different types of foods (i.e., I like trying new foods)2.jpg");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
-            updateLabelText("", "Familiar foods, only a few types of foods (e.g., I don’t like trying new foods)", "", "", 
+            updateLabelText("", "Familiar foods, only a few types of foods (e.g., I don’t like trying new foods)", "", "",
                 "Unfamiliar foods, lots of different types of foods (e.g., I like trying new foods)", "");
         }
 
-        private void tasteInterviewPage4p2() {
+        private void tasteInterviewPage4p2()
+        {
             panel2lblQuestion.Text = "Are there some things that you really like to eat?";
             lblQuestion1.Text = "Examples in your daily life?";
             lblQuestion2.Text = "Are there certain types of foods that you crave and want to eat repeatedly?";
         }
 
-        private void tasteInterviewPage5() {
+        private void tasteInterviewPage5()
+        {
             panel2lblQuestion.Text = "Are there some things that you really like to eat?";
             lblQuestion1.Text = "Are there certain types of foods that you crave and want to eat repeatedly?";
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
         }
 
-        private void tasteInterviewPage6() {
+        private void tasteInterviewPage6()
+        {
             lblQuestion.Text = "Are there some things that you put in your mouth a lot?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\1 Shirt.jpg");
             topLeftReadOutLoudPath = @"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\5.4.1Shirt.wav";
@@ -1008,20 +1059,22 @@ namespace Login {
             topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\3 Objects.jpg");
 
             topRightReadOutLoudPath = @"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\5.4.3Objects.wav";
-            
+
             //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
             //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
             updateLabelText("Shirt", "Hair", "Objects", "", "", "");
         }
 
-        private void tasteInterviewPage6p2() {
+        private void tasteInterviewPage6p2()
+        {
             panel2lblQuestion.Text = "Are there some things that you put in your mouth a lot?";
             lblQuestion1.Text = "Other ways food tastes or feels that you don’t like?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void tasteInterviewPage7() {
+        private void tasteInterviewPage7()
+        {
             panel2lblQuestion.Text = "Are there some things that you put in your mouth a lot?";
             lblQuestion1.Text = "Are there things that you often put in your mouth? Are any of them dangerous or unhygienic?";
             lblQuestion2.Text = "";
@@ -1031,7 +1084,8 @@ namespace Login {
         /// <summary>
         /// Movement
         /// </summary>
-        private void mvmtInterviewPage1() {
+        private void mvmtInterviewPage1()
+        {
             lblQuestion.Text = "Are there some ways of moving that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\1 Being jumped on_tackled.jpg");
             topLeftReadOutLoudPath = @"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.1BeingJumpedOn.wav";
@@ -1053,19 +1107,22 @@ namespace Login {
             updateLabelText("Being jumped on/tackled", "Moving when I can't see where I am going", "Balancing", "Being upside down", "Climbing up high", "");
         }
 
-        private void mvmtInterviewPage1p2() {
+        private void mvmtInterviewPage1p2()
+        {
             panel2lblQuestion.Text = "Are there some ways of moving that you don’t like?";
             lblQuestion1.Text = "Other ways of moving that you don’t like?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void mvmtInterviewPage2() {
+        private void mvmtInterviewPage2()
+        {
             panel2lblQuestion.Text = "Are there some ways of moving that you don’t like?";
             lblQuestion1.Text = "Are there movement experiences that you find scary or unpleasant?";
             lblQuestion2.Text = "Do you do anything to avoid these movements?";
         }
 
-        private void mvmtInterviewPage3() {
+        private void mvmtInterviewPage3()
+        {
             lblQuestion.Text = "Are there times when it is hard for you to stay still?";
             //topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\lumpy.jpg");
             topMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\2. Are there times when it is hard for you to stay still_\1 Sitting Still (self report)(cropped).jpg");
@@ -1081,14 +1138,16 @@ namespace Login {
             updateLabelText("", "Sitting Still", "", "", "Standing still", "");
         }
 
-        private void mvmtInterviewPage3p2() {
+        private void mvmtInterviewPage3p2()
+        {
             panel2lblQuestion.Text = "Are there times when it is hard for you to stay still?";
             lblQuestion1.Text = "Examples in your daily life?";
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
         }
 
-        private void mvmtInterviewPage4() {
+        private void mvmtInterviewPage4()
+        {
             lblQuestion.Text = "Are there some ways of moving that you like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\1 Moving in Water.jpg");
             topLeftReadOutLoudPath = @"..\..\resources\6. Movement\3. Are there ways of moving that you like_\6.3.1MovingInWater.wav";
@@ -1109,13 +1168,15 @@ namespace Login {
             updateLabelText("Moving in water", "Swinging", "Spinning", "Jumping on the trampoline", "Running", "");
         }
 
-        private void mvmtInterviewPage4p2() {
+        private void mvmtInterviewPage4p2()
+        {
             panel2lblQuestion.Text = "Are there some ways of moving that you like?";
             lblQuestion1.Text = "Other ways of moving that you like?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void mvmtInterviewPage5() {
+        private void mvmtInterviewPage5()
+        {
             lblQuestion.Text = "Are there some ways that you move over and over again?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\1 Rocking.png");
             topLeftReadOutLoudPath = @"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.1Rocking.wav";
@@ -1134,13 +1195,15 @@ namespace Login {
             updateLabelText("Rocking", "Moving hands", "Clapping", "Pacing", "", "");
         }
 
-        private void mvmtInterviewPage5p2() {
+        private void mvmtInterviewPage5p2()
+        {
             panel2lblQuestion.Text = "Are there some ways that you move over and over again?";
             lblQuestion1.Text = "Other ways of moving that you like?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void mvmtInterviewPage6() {
+        private void mvmtInterviewPage6()
+        {
             panel2lblQuestion.Text = "Are there some ways that you move over and over again?";
             lblQuestion1.Text = "Are there movements that you make repeatedly when you are anxious?";
             lblQuestion2.Text = "Are there movements that you make repeatedly when you are excited?";
@@ -1149,32 +1212,36 @@ namespace Login {
         /// <summary>
         /// Environment
         /// </summary>
-        private void environmentPage1() {
+        private void environmentPage1()
+        {
             lblQuestion.Text = "Are there some places with lots of things happening at once that you don't like?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\1 Supermarket.png");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\1 Supermarket.png");
             topLeftReadOutLoudPath = @"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\7.1.1Supermarket.wav";
 
-            //topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Pasta.jpg");
-            topRightPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\3 Food Hall.jpg");
+            topMidPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\2 Party (self report)(cropped).jpg");
+
+            topRightPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\3 Food Hall.jpg");
             topRightReadOutLoudPath = @"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\7.1.2Party.wav";
 
-            bottomLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\4 Show (cropped).jpg");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\4 Show (cropped).jpg");
             bottomLeftReadOutLoudPath = @"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\7.1.3FoodHall.wav";
 
-            bottomMidPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\5 Shopping mall.png");
+            bottomMidPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\5 Shopping mall.png");
             bottomMiddleReadOutLoudPath = @"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\7.1.4Show.wav";
 
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
             updateLabelText("Supermarket", "Party", "Food hall", "Show", "Shopping mall", "");
         }
 
-        private void environmentPage1p2() {
+        private void environmentPage1p2()
+        {
             panel2lblQuestion.Text = "Are there some places with lots of things happening at once that you don’t like? (e.g., places with lots of noise, bright lights and people)";
             lblQuestion1.Text = "Other places with lots of things happening at once that you don’t like?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void environmentPage2() {
+        private void environmentPage2()
+        {
             panel2lblQuestion.Text = "Are there some places with lots of things happening at once that you don’t like? (e.g., places with lots of noise, bright lights and people)";
             lblQuestion1.Text = "How do you react to places with lots of things happening at once?";
             lblQuestion2.Text = "Do you do anything to avoid places with lots of things happening at once?";
@@ -1183,24 +1250,27 @@ namespace Login {
         /// <summary>
         /// Other
         /// </summary>
-        private void otherInterviewPage1() {
+        private void otherInterviewPage1()
+        {
             lblQuestion.Text = "Are there any other sensations that you feel strongly about?";
-            //topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\lumpy.jpg");
-            //topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Pasta.jpg");
-            //topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Geometric patterns.jpg");
-            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
-            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\8. Other\1 Sounds.png");
+            topMidPB.Image = new Bitmap(@"..\..\resources\8. Other\2 Smells.PNG");
+            topRightPB.Image = new Bitmap(@"..\..\resources\8. Other\3 Sights.png");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\8. Other\4 Tastes.png");
+            bottomMidPB.Image = new Bitmap(@"..\..\resources\8. Other\5 Feelings.jpg");
+            bottomRightPB.Image = new Bitmap(@"..\..\resources\8. Other\6 Movements (cropped).jpg");
             updateLabelText("Sounds", "Smells", "Sights", "Tastes", "Feelings", "Movements");
         }
 
-        private void otherInterviewPage1p2() {
+        private void otherInterviewPage1p2()
+        {
             panel2lblQuestion.Text = "Are there any other sensations that you feel strongly about?";
             lblQuestion1.Text = "Other sounds, smells, sights, tastes, feelings, or movements?";
             lblQuestion2.Text = "Examples in your daily life?";
         }
 
-        private void otherInterviewPage2() {
+        private void otherInterviewPage2()
+        {
             panel2lblQuestion.Text = "Are there any other sensations that you feel strongly about?";
             lblQuestion1.Text = "How do you react to these other things??";
             lblQuestion2.Text = "Do you do anything to avoid these other things?";
