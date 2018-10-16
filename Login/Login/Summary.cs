@@ -890,6 +890,7 @@ string text3, string text4, string text5, string text6) {
         /// Call this to hide all columns from 3,4,5 for short response
         /// </summary>
         private void hideColumn3SR() {
+            srTopic3.Visible = false;
             srAnswer9.Visible = false;
             srAnswer10.Visible = false;
             srAnswer11.Visible = false;
@@ -905,6 +906,7 @@ string text3, string text4, string text5, string text6) {
         /// Call this to hide columns 4 and 5
         /// </summary>
         private void hideColumn4SR() {
+            srTopic4.Visible = false;
             srAnswer13.Visible = false;
             srAnswer14.Visible = false;
             srAnswer15.Visible = false;
@@ -920,6 +922,7 @@ string text3, string text4, string text5, string text6) {
         /// Call this to hide column 5
         /// </summary>
         private void hideColumn5SR() {
+            srTopic5.Visible = false;
             srAnswer17.Visible = false;
             srAnswer18.Visible = false;
             srAnswer19.Visible = false;
@@ -1272,6 +1275,10 @@ string text3, string text4, string text5, string text6) {
                 this.topic3Table.Controls.Add(this.topic3Results6, 1, 5);
             }
 
+        }
+
+        private void updateSRQuestionLabels(Label labelName, string question) {
+            labelName.Text = question;
         }
 
         private void additionalCommentsBtn_Click(object sender, EventArgs e) {
