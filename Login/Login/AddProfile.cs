@@ -74,7 +74,7 @@ namespace Login {
                 
                 cmd.Parameters.AddWithValue("@phone", tbPhone.Text.Trim());
                 cmd.Parameters.AddWithValue("@email", tbEmail.Text.Trim());
-                cmd.Parameters.AddWithValue("@dob", dateTimePicker1.Value);
+                cmd.Parameters.AddWithValue("@dob", dateTimePicker1.Value.Date);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show(tbFname.Text.Trim() + " " + tbLname.Text.Trim() + " has been added successfully.");
                 this.Close();

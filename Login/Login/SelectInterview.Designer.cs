@@ -180,6 +180,9 @@
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnStart);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(547, 623);
+            this.MinimumSize = new System.Drawing.Size(547, 623);
             this.Name = "SelectInterview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Interview";

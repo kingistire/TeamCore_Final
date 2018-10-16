@@ -1873,8 +1873,6 @@ namespace Login {
             //questionPanel
             pictureBox3.BackColor = Color.SandyBrown;
             panel2lblQuestion.BackColor = Color.SandyBrown;
-            label9.BackColor = Color.SandyBrown;
-            label7.BackColor = Color.SandyBrown;
             questionPanel.BackColor = Color.Bisque;
             topLeftPB2.BackColor = Color.Bisque;
             topMidPB2.BackColor = Color.Bisque;
@@ -1892,8 +1890,6 @@ namespace Login {
             //questionPanel
             pictureBox3.BackColor = Color.FromArgb(255, 255, 128);
             panel2lblQuestion.BackColor = Color.FromArgb(255, 255, 128);
-            label9.BackColor = Color.FromArgb(255, 255, 128);
-            label7.BackColor = Color.FromArgb(255, 255, 128);
             questionPanel.BackColor = Color.LightYellow;
             topLeftPB2.BackColor = Color.LightYellow;
             topMidPB2.BackColor = Color.LightYellow;
@@ -1911,8 +1907,6 @@ namespace Login {
             //questionPanel
             pictureBox3.BackColor = Color.FromArgb(143, 188, 139);
             panel2lblQuestion.BackColor = Color.FromArgb(143, 188, 139);
-            label9.BackColor = Color.FromArgb(143, 188, 139);
-            label7.BackColor = Color.FromArgb(143, 188, 139);
             questionPanel.BackColor = Color.Honeydew;
             topLeftPB2.BackColor = Color.Honeydew;
             topMidPB2.BackColor = Color.Honeydew;
@@ -1932,8 +1926,6 @@ namespace Login {
             //questionPanel
             pictureBox3.BackColor = tasteHeader;
             panel2lblQuestion.BackColor = tasteHeader;
-            label9.BackColor = tasteHeader;
-            label7.BackColor = tasteHeader;
             questionPanel.BackColor = tasteBg;
             topLeftPB2.BackColor = tasteBg;
             topMidPB2.BackColor = tasteBg;
@@ -1951,8 +1943,6 @@ namespace Login {
             //questionPanel
             pictureBox3.BackColor = Color.PaleVioletRed;
             panel2lblQuestion.BackColor = Color.PaleVioletRed;
-            label9.BackColor = Color.PaleVioletRed;
-            label7.BackColor = Color.PaleVioletRed;
             questionPanel.BackColor = Color.Pink;
             topLeftPB2.BackColor = Color.Pink;
             topMidPB2.BackColor = Color.Pink;
@@ -1971,8 +1961,6 @@ namespace Login {
             //questionPanel
             pictureBox3.BackColor = Color.LightBlue;
             panel2lblQuestion.BackColor = Color.LightBlue;
-            label9.BackColor = Color.LightBlue;
-            label7.BackColor = Color.LightBlue;
             questionPanel.BackColor = Color.AliceBlue;
             topLeftPB2.BackColor = Color.AliceBlue;
             topMidPB2.BackColor = Color.AliceBlue;
@@ -1990,8 +1978,6 @@ namespace Login {
             //questionPanel
             pictureBox3.BackColor = Color.Tan;
             panel2lblQuestion.BackColor = Color.Tan;
-            label9.BackColor = Color.Tan;
-            label7.BackColor = Color.Tan;
             questionPanel.BackColor = Color.AntiqueWhite;
             topLeftPB2.BackColor = Color.AntiqueWhite;
             topMidPB2.BackColor = Color.AntiqueWhite;
