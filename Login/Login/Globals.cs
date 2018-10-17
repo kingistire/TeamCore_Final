@@ -12,6 +12,6 @@ namespace Login {
         public static bool shortResponse = true;
         public static string userID = "";
         public static bool previousClicked = false;
-
+        public static bool toggleReadOutLoad = false;
     }
     }

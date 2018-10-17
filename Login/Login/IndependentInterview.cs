@@ -23,6 +23,8 @@ namespace Login {
         private string bottomLeftReadOutLoudPath;
         private string bottomMiddleReadOutLoudPath;
         private string bottomrightReadOutLoudPath;
+        
+
         private void openQuestionPanel()
         {
             questionPanel.BringToFront();
@@ -3460,11 +3462,11 @@ namespace Login {
         /// <param name="e"></param>
         /// 
 
-        private bool toggleReadOutLoad = false; 
+         
 
         private void loadReadOutLoudToggleBtn()
         {
-            if (toggleReadOutLoad)
+            if (Globals.toggleReadOutLoad)
             {
                 readOutLoudToggleBtn.Text = "ReadOutLoud: ON";
             } else
@@ -3475,7 +3477,7 @@ namespace Login {
 
         private void playReadOutLoud()
         {
-            if (toggleReadOutLoad)
+            if (Globals.toggleReadOutLoad)
             {
                 topLeftPBPlayer.Play();
             } 
@@ -3483,7 +3485,12 @@ namespace Login {
 
         private void readOutLoudToggleBtn_Click(object sender, EventArgs e)
         {
-            toggleReadOutLoad = !toggleReadOutLoad;
+            Globals.toggleReadOutLoad = !Globals.toggleReadOutLoad;
+            loadReadOutLoudToggleBtn();
+        }
+
+        private void IndependentInterview_Load(object sender, EventArgs e)
+        {
             loadReadOutLoudToggleBtn();
         }
     }
