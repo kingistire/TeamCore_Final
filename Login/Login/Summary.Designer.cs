@@ -1652,6 +1652,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1309, 594);
             this.Controls.Add(this.changeSummaryPanelType);
+            this.Controls.Add(this.shortResponseContainerPanel);
             this.Controls.Add(this.tasteBtn);
             this.Controls.Add(this.topic5ResultPanel);
             this.Controls.Add(this.topic4ResultPanel);
@@ -1663,7 +1664,6 @@
             this.Controls.Add(this.smellBtn);
             this.Controls.Add(this.soundBtn);
             this.Controls.Add(this.hearingBtn);
-            this.Controls.Add(this.shortResponseContainerPanel);
             this.Controls.Add(this.sightBtn);
             this.Name = "Summary";
             this.Text = "Summary";

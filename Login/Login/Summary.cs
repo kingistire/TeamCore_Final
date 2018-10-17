@@ -775,7 +775,8 @@ string text3, string text4, string text5, string text6) {
                     shortResponseContainerPanel.Visible = true;
                     shortResponseContainerPanel.Enabled = true;
                     try {
-                        getAdditionalCommentAnswer(3, "dislikeSounds", 1);
+                    showAllSR();
+                    getAdditionalCommentAnswer(3, "dislikeSounds", 1);
                         getAdditionalCommentAnswer(2, "hardToListen", 2);
                         getAdditionalCommentAnswer(4, "hardToConcentrate", 3);
                         getAdditionalCommentAnswer(3, "likeSounds", 4);
@@ -933,6 +934,35 @@ string text3, string text4, string text5, string text6) {
             q4labelc5.Visible = false;
         }
 
+        private void showAllSR() {
+            srTopic3.Visible = true;
+            srTopic4.Visible = true;
+            srTopic5.Visible = true;
+            srAnswer1.Visible = true;
+            srAnswer2.Visible = true;
+            srAnswer3.Visible = true;
+            srAnswer4.Visible = true;
+            srAnswer5.Visible = true;
+            srAnswer6.Visible = true;
+            srAnswer7.Visible = true;
+            srAnswer8.Visible = true;
+            srAnswer9.Visible = true;
+            srAnswer10.Visible = true;
+            srAnswer11.Visible = true;
+            srAnswer12.Visible = true;
+            srAnswer13.Visible = true;
+            srAnswer14.Visible = true;
+            srAnswer15.Visible = true;
+            srAnswer16.Visible = true;
+            srAnswer17.Visible = true;
+            srAnswer18.Visible = true;
+            srAnswer19.Visible = true;
+            srAnswer20.Visible = true;
+
+            srAnswer1.Visible = true;
+            srAnswer1.Visible = true;
+        }
+
         private void button2_Click(object sender, EventArgs e) {
             resetAnswerLabels();
             clearTable(resultsTable, 5);
@@ -942,6 +972,7 @@ string text3, string text4, string text5, string text6) {
                 shortResponseContainerPanel.Visible = false;
                 shortResponseContainerPanel.Enabled = false;
                 if (displayShortResponse) {
+                showAllSR();
                     hideColumn4SR();
                     shortResponseContainerPanel.Visible = true;
                     shortResponseContainerPanel.Enabled = true;
@@ -1012,14 +1043,15 @@ string text3, string text4, string text5, string text6) {
         private void hideIndividual(Label labelName, TextBox tbName) {
             labelName.Visible = false;
             tbName.Visible = false;
-            tbName.Enabled = false;
+            tbName.ReadOnly = true;
         }
         
         //This is for movement
         private void hearingBtn_Click(object sender, EventArgs e) {
             resetAnswerLabels();
             if (displayShortResponse) {
-                    hideColumn5SR();
+                showAllSR();
+                hideColumn5SR();
                     shortResponseContainerPanel.Visible = true;
                     shortResponseContainerPanel.Enabled = true;
                     try {
@@ -1031,11 +1063,13 @@ string text3, string text4, string text5, string text6) {
                     } catch (Exception ex) {
                         MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                     }
-                    hideIndividual(q2labelc2, srAnswer10);
                     hideIndividual(q3labelc2, srAnswer11);
                     hideIndividual(q4labelc2, srAnswer12);
+                    hideIndividual(q2labelc3, srAnswer10);
                     hideIndividual(q3labelc3, srAnswer15);
                     hideIndividual(q4labelc3, srAnswer16);
+                    hideIndividual(q3labelc4, srAnswer15);
+                    hideIndividual(q4labelc4, srAnswer16);
                     updateSRTopicLabel("Are there some ways of moving \n that you don't like?",
                     "Are there times when it is hard for \n you to stay still?",
                     "Are there some ways of moving that \n you don't like?",
@@ -1117,6 +1151,7 @@ string text3, string text4, string text5, string text6) {
             resetAnswerLabels();
 
             if (displayShortResponse) {
+                showAllSR();
                 hideColumn3SR();
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
@@ -1184,6 +1219,7 @@ string text3, string text4, string text5, string text6) {
         private void touchBtn_Click(object sender, EventArgs e) {
             resetAnswerLabels();
             if (displayShortResponse) {
+                showAllSR();
                 hideColumn4SR();
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
@@ -1277,13 +1313,56 @@ string text3, string text4, string text5, string text6) {
 
         }
 
-        private void updateSRQuestionLabels(Label labelName, string question) {
-            labelName.Text = question;
+        /// <summary>
+        /// Updates the question labels by column input. For short response
+        /// </summary>
+        /// <param name="question"></param>
+        /// <param name="question2"></param>
+        /// <param name="question3"></param>
+        /// <param name="question4"></param>
+        /// <param name="column"></param>
+        private void updateSRQuestionLabels(string question, string question2, string question3, string question4, int column) {
+            //Updates label depending on input column
+            switch (column) {
+                case 1:
+                    q1labelc1.Text = question;
+                    q2labelc1.Text = question2;
+                    q3labelc1.Text = question3;
+                    q4labelc1.Text = question4;
+                    break;
+                case 2:
+                    q1labelc2.Text = question;
+                    q2labelc2.Text = question2;
+                    q3labelc2.Text = question3;
+                    q4labelc2.Text = question4;
+                    break;
+                case 3:
+                    q1labelc3.Text = question;
+                    q2labelc3.Text = question2;
+                    q3labelc3.Text = question3;
+                    q4labelc3.Text = question4;
+                    break;
+                case 4:
+                    q1labelc3.Text = question;
+                    q2labelc3.Text = question2;
+                    q3labelc3.Text = question3;
+                    q4labelc3.Text = question4;
+                    break;
+                case 5:
+                    q1labelc3.Text = question;
+                    q2labelc3.Text = question2;
+                    q3labelc3.Text = question3;
+                    q4labelc3.Text = question4;
+                    break;
+
+
+            }
         }
 
         private void additionalCommentsBtn_Click(object sender, EventArgs e) {
             resetAnswerLabels();
             if (displayShortResponse) {
+                showAllSR();
                 hideColumn3SR();
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
@@ -1296,6 +1375,7 @@ string text3, string text4, string text5, string text6) {
                 updateSRTopicLabel("Are there some places with lots of things \n happening at once that you don't like?",
                 "Are there other sensations that you \n feel strongly about?",
                 "", "", "");
+
             } else {
                 clearTable(resultsTable, 5);
                 clearTable(topic2Table, 6);
@@ -1347,6 +1427,7 @@ string text3, string text4, string text5, string text6) {
 
             resetAnswerLabels();
             if (displayShortResponse) {
+                showAllSR();
                 hideColumn5SR();
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
