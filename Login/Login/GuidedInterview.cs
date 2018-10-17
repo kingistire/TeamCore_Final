@@ -2103,5 +2103,10 @@ namespace Login {
             Globals.toggleReadOutLoad = !Globals.toggleReadOutLoad;
             loadReadOutLoudToggleBtn();
         }
+
+        private void GuidedInterview_Load(object sender, EventArgs e)
+        {
+            loadReadOutLoudToggleBtn();
+        }
     }
 }

@@ -25,6 +25,8 @@
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GuidedInterview));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.readOutLoudPanel = new System.Windows.Forms.Panel();
+            this.readOutLoudToggleBtn = new System.Windows.Forms.Button();
             this.bottomRightPB = new System.Windows.Forms.PictureBox();
             this.bottomRightALotBtn = new System.Windows.Forms.Button();
             this.bottomRightALittleBtn = new System.Windows.Forms.Button();
@@ -79,9 +81,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.readOutLoudPanel = new System.Windows.Forms.Panel();
-            this.readOutLoudToggleBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.readOutLoudPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightPB2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomMidPB)).BeginInit();
@@ -101,7 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.readOutLoudPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -154,6 +154,35 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1005, 854);
             this.panel1.TabIndex = 0;
+            // 
+            // readOutLoudPanel
+            // 
+            this.readOutLoudPanel.BackColor = System.Drawing.Color.White;
+            this.readOutLoudPanel.Controls.Add(this.readOutLoudToggleBtn);
+            this.readOutLoudPanel.Location = new System.Drawing.Point(857, 16);
+            this.readOutLoudPanel.Name = "readOutLoudPanel";
+            this.readOutLoudPanel.Size = new System.Drawing.Size(129, 48);
+            this.readOutLoudPanel.TabIndex = 57;
+            // 
+            // readOutLoudToggleBtn
+            // 
+            this.readOutLoudToggleBtn.BackColor = System.Drawing.Color.Transparent;
+            this.readOutLoudToggleBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.readOutLoudToggleBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.readOutLoudToggleBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.readOutLoudToggleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.readOutLoudToggleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.readOutLoudToggleBtn.ForeColor = System.Drawing.Color.Navy;
+            this.readOutLoudToggleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.readOutLoudToggleBtn.Location = new System.Drawing.Point(1, 0);
+            this.readOutLoudToggleBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.readOutLoudToggleBtn.Name = "readOutLoudToggleBtn";
+            this.readOutLoudToggleBtn.Size = new System.Drawing.Size(128, 46);
+            this.readOutLoudToggleBtn.TabIndex = 55;
+            this.readOutLoudToggleBtn.Text = "ReadOutLoud: Off";
+            this.readOutLoudToggleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.readOutLoudToggleBtn.UseVisualStyleBackColor = false;
+            this.readOutLoudToggleBtn.Click += new System.EventHandler(this.readOutLoudToggleBtn_Click);
             // 
             // bottomRightPB
             // 
@@ -802,35 +831,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // readOutLoudPanel
-            // 
-            this.readOutLoudPanel.BackColor = System.Drawing.Color.White;
-            this.readOutLoudPanel.Controls.Add(this.readOutLoudToggleBtn);
-            this.readOutLoudPanel.Location = new System.Drawing.Point(857, 16);
-            this.readOutLoudPanel.Name = "readOutLoudPanel";
-            this.readOutLoudPanel.Size = new System.Drawing.Size(129, 48);
-            this.readOutLoudPanel.TabIndex = 57;
-            // 
-            // readOutLoudToggleBtn
-            // 
-            this.readOutLoudToggleBtn.BackColor = System.Drawing.Color.Transparent;
-            this.readOutLoudToggleBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.readOutLoudToggleBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.readOutLoudToggleBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.readOutLoudToggleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.readOutLoudToggleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.readOutLoudToggleBtn.ForeColor = System.Drawing.Color.Navy;
-            this.readOutLoudToggleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.readOutLoudToggleBtn.Location = new System.Drawing.Point(1, 0);
-            this.readOutLoudToggleBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.readOutLoudToggleBtn.Name = "readOutLoudToggleBtn";
-            this.readOutLoudToggleBtn.Size = new System.Drawing.Size(128, 46);
-            this.readOutLoudToggleBtn.TabIndex = 55;
-            this.readOutLoudToggleBtn.Text = "ReadOutLoud: Off";
-            this.readOutLoudToggleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.readOutLoudToggleBtn.UseVisualStyleBackColor = false;
-            this.readOutLoudToggleBtn.Click += new System.EventHandler(this.readOutLoudToggleBtn_Click);
-            // 
             // GuidedInterview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -844,8 +844,10 @@
             this.Name = "GuidedInterview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Guided Interview";
+            this.Load += new System.EventHandler(this.GuidedInterview_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.readOutLoudPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightPB2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomMidPB)).EndInit();
@@ -866,7 +868,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.readOutLoudPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
