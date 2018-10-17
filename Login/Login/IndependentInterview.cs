@@ -23,6 +23,8 @@ namespace Login {
         private string bottomLeftReadOutLoudPath;
         private string bottomMiddleReadOutLoudPath;
         private string bottomrightReadOutLoudPath;
+        
+
         private void openQuestionPanel()
         {
             questionPanel.BringToFront();
@@ -443,7 +445,7 @@ namespace Login {
         private void interviewPage3()
         {
             lblQuestion.Text = "Are there times when it is hard for you to listen?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1 If I am concentrating on something, I don't notice people talking to me.png");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1 If I am concentrating on something, I don't notice people talking to me.jpg");
             topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1.2.1Concentration.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\2 I find it hard to listen in noisy classrooms (self-report version).jpg");
@@ -3446,11 +3448,11 @@ namespace Login {
         /// <param name="e"></param>
         /// 
 
-        private bool toggleReadOutLoad = false; 
+         
 
         private void loadReadOutLoudToggleBtn()
         {
-            if (toggleReadOutLoad)
+            if (Globals.toggleReadOutLoad)
             {
                 readOutLoudToggleBtn.Text = "ReadOutLoud: ON";
             } else
@@ -3461,7 +3463,7 @@ namespace Login {
 
         private void playReadOutLoud()
         {
-            if (toggleReadOutLoad)
+            if (Globals.toggleReadOutLoad)
             {
                 topLeftPBPlayer.Play();
             } 
@@ -3469,7 +3471,12 @@ namespace Login {
 
         private void readOutLoudToggleBtn_Click(object sender, EventArgs e)
         {
-            toggleReadOutLoad = !toggleReadOutLoad;
+            Globals.toggleReadOutLoad = !Globals.toggleReadOutLoad;
+            loadReadOutLoudToggleBtn();
+        }
+
+        private void IndependentInterview_Load(object sender, EventArgs e)
+        {
             loadReadOutLoudToggleBtn();
         }
     }
