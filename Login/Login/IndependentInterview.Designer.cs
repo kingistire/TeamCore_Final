@@ -404,7 +404,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(882, 110);
+            this.label17.Location = new System.Drawing.Point(803, 110);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(37, 13);
@@ -416,7 +416,7 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(832, 110);
+            this.label18.Location = new System.Drawing.Point(753, 110);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(47, 13);
@@ -474,7 +474,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(828, 16);
+            this.pictureBox4.Location = new System.Drawing.Point(749, 16);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(94, 92);
@@ -513,7 +513,7 @@
             this.pictureBox6.Location = new System.Drawing.Point(0, 0);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(986, 146);
+            this.pictureBox6.Size = new System.Drawing.Size(1001, 146);
             this.pictureBox6.TabIndex = 21;
             this.pictureBox6.TabStop = false;
             // 
@@ -1098,9 +1098,9 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1001, 796);
             this.Controls.Add(this.readOutLoudPanel);
+            this.Controls.Add(this.picturePanel);
             this.Controls.Add(this.additionalNotesPanel);
             this.Controls.Add(this.questionPanel);
-            this.Controls.Add(this.picturePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1008, 761);
