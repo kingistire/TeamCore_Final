@@ -772,21 +772,36 @@ string text3, string text4, string text5, string text6) {
         private void button1_Click(object sender, EventArgs e) {
             resetAnswerLabels();
             if (displayShortResponse) {
+                    showAllSR();
                     shortResponseContainerPanel.Visible = true;
                     shortResponseContainerPanel.Enabled = true;
                     try {
-                    showAllSR();
-                    getAdditionalCommentAnswer(3, "dislikeSounds", 1);
-                        getAdditionalCommentAnswer(2, "hardToListen", 2);
-                        getAdditionalCommentAnswer(4, "hardToConcentrate", 3);
-                        getAdditionalCommentAnswer(3, "likeSounds", 4);
-                        getAdditionalCommentAnswer(3, "makeALotSounds", 5);
                         updateSRTopicLabel("Are there some sounds that you don't like?",
                             "Are there times when it is hard for you to listen?",
                             "Are there some sounds that make it hard for you to concentrate?",
                             "Are there some sounds that you like to listen to?",
                             "Are there some sounds that you make a lot?");
-                    } catch (Exception) {
+                    updateSRQuestionLabels("Other sounds that you don't \n like?", "Examples in your daily life?",
+                                            "Do you do anythhing to avoid these sounds \n (e.g. cover your ears, avoid noisy places)?", String.Empty, 1);
+                    updateSRQuestionLabels("Other times when it is hard to listen?", "Examples in your daily life?", String.Empty, String.Empty, 2);
+                    updateSRQuestionLabels("Other sounds that make it hard \n to concentrate?", "Examples in your daily life?", 
+                        "Are there noises that you find \n very distracting when you have \n a job to do?",
+                        "Does nosie ever make it hard \n for you to do things (e.g. work \n in an office, go to shopping centre)?", 3);
+                    updateSRQuestionLabels("Other sounds that you like?", "Examples in your daily life?", "Are there sounds that you like to listen \n to often or for long periods?", String.Empty, 4);
+                    updateSRQuestionLabels("Other sounds that you make?", "Examples in your daily life?", "Do the sounds you make seem to \n bother other people?", String.Empty, 5);
+                    srAnswer7.Visible = false;
+                    q4labelc3.Visible = true;
+                    hideIndividual(q4labelc1, srAnswer4);
+                    hideIndividual(q4labelc2, srAnswer8);
+                    hideIndividual(q4labelc4, srAnswer16);
+                    hideIndividual(q4labelc5, srAnswer20);
+
+                    getAdditionalCommentAnswer(3, "dislikeSounds", 1);
+                        getAdditionalCommentAnswer(2, "hardToListen", 2);
+                        getAdditionalCommentAnswer(4, "hardToConcentrate", 3);
+                        getAdditionalCommentAnswer(3, "likeSounds", 4);
+                        getAdditionalCommentAnswer(3, "makeALotSounds", 5);
+                } catch (Exception) {
                     resetAnswerLabels();
                         MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                     }
@@ -958,9 +973,26 @@ string text3, string text4, string text5, string text6) {
             srAnswer18.Visible = true;
             srAnswer19.Visible = true;
             srAnswer20.Visible = true;
-
-            srAnswer1.Visible = true;
-            srAnswer1.Visible = true;
+            q1labelc1.Visible = true;
+            q2labelc1.Visible = true;
+            q3labelc1.Visible = true;
+            q4labelc1.Visible = true;
+            q1labelc2.Visible = true;
+            q2labelc2.Visible = true;
+            q3labelc2.Visible = true;
+            q4labelc2.Visible = true;
+            q1labelc3.Visible = true;
+            q2labelc3.Visible = true;
+            q3labelc3.Visible = true;
+            q4labelc3.Visible = true;
+            q1labelc4.Visible = true;
+            q2labelc4.Visible = true;
+            q3labelc4.Visible = true;
+            q4labelc4.Visible = true;
+            q1labelc5.Visible = true;
+            q2labelc5.Visible = true;
+            q3labelc5.Visible = true;
+            q4labelc5.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e) {
@@ -977,17 +1009,31 @@ string text3, string text4, string text5, string text6) {
                     shortResponseContainerPanel.Visible = true;
                     shortResponseContainerPanel.Enabled = true;
                     try {
+                        updateSRTopicLabel("Are there some things that you don't \n like to look at?",
+                        "Are there some things you see that make it \n hard to concentrate?",
+                        "Are there some things that you like \n to look at?",
+                        "", "");
+                        hideIndividual(q4labelc3, srAnswer12);
+                        updateSRQuestionLabels("Other things that you don't like to look at?", "Examples in your daily life?",
+                                "Do you do anythhing to avoid these things \n (e.g. shade your eyes, wear sunglasses)?", String.Empty, 1);
+                        updateSRQuestionLabels("Other things that make it hard \n to concentrate?", "Examples in your daily life?", String.Empty, String.Empty, 2);
+                        updateSRQuestionLabels("Other things that you like \n to look at?", "Examples in your daily life?",
+                        "Are there things you look at often or \n for long periods?",
+                        String.Empty, 3);
+                        srAnswer4.Visible = false;
+                        srAnswer7.Visible = false;
+                        srAnswer8.Visible = false;
                         getAdditionalCommentAnswer(3, "dontLikeToLookAt", 1);
                         getAdditionalCommentAnswer(2, "sightHardToConcentrate", 2);
                         getAdditionalCommentAnswer(3, "likeToLookAt", 3);
                     } catch(Exception ex) {
                         MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                     }
-                    updateSRTopicLabel("Are there some things that you don't \n like to look at?",
-                    "Are there some things you see that make it \n hard to concentrate?",
-                    "Are there some things that you like \n to look at?",
-                    "", "");
-                } else {
+
+
+
+
+            } else {
                     updateTopicLabel("Are there some things that you don't \n like to look at?",
                         "Are there some things you see that make it \n hard to concentrate?",
                         "Are there some things that you like \n to look at?",
@@ -1054,9 +1100,13 @@ string text3, string text4, string text5, string text6) {
                 hideColumn5SR();
                     shortResponseContainerPanel.Visible = true;
                     shortResponseContainerPanel.Enabled = true;
+                q4labelc1.Enabled = true;
+                srAnswer4.Enabled = true;
+                srAnswer4.Visible = true;
                     try {
-
-                        getAdditionalCommentAnswer(4, "movingDontLike", 1);
+                    srAnswer7.Visible = false;
+                    srAnswer8.Visible = false;
+                    getAdditionalCommentAnswer(4, "movingDontLike", 1);
                         getAdditionalCommentAnswer(1, "hardToStayStill", 2);
                         getAdditionalCommentAnswer(2, "movingThatYouLike", 3);
                         getAdditionalCommentAnswer(4, "moveOverAndOverAgain", 4);
@@ -1070,12 +1120,25 @@ string text3, string text4, string text5, string text6) {
                     hideIndividual(q4labelc3, srAnswer16);
                     hideIndividual(q3labelc4, srAnswer15);
                     hideIndividual(q4labelc4, srAnswer16);
-                    updateSRTopicLabel("Are there some ways of moving \n that you don't like?",
-                    "Are there times when it is hard for \n you to stay still?",
-                    "Are there some ways of moving that \n you don't like?",
-                    "Are there some ways that you move over \n and over again?", "");
+                updateSRTopicLabel("Are there some ways of moving \n that you don't like?",
+                "Are there times when it is hard for \n you to stay still?",
+                "Are there some ways of moving that \n you don't like?",
+                "Are there some ways that you move over \n and over again?", "");
 
-                } else {
+                updateSRQuestionLabels("Other ways of moving \n that you don't like?", "Examples in your daily life?",
+                        "Are there movement experiences that \n you find scary or unpleasant?", 
+                        "Do you do anything to avoid \n these movements?", 1);
+                updateSRQuestionLabels("Examples in your daily life?", String.Empty, String.Empty, String.Empty, 3);
+                updateSRQuestionLabels("Other ways of moving that you like?", "Examples in your daily life?",
+                    String.Empty,
+                    String.Empty, 3);
+                updateSRQuestionLabels("Other ways that you move \n over and over again?",
+                    "Examples in your daily life?",
+                    "Are there movements that you make \n repeatedly when you are anxious?",
+                    "Are there movements that you make \n repeatedly when you are excited?", 4);
+
+
+            } else {
 
                     clearTable(resultsTable, 5);
                     clearTable(topic2Table, 2);
@@ -1146,8 +1209,6 @@ string text3, string text4, string text5, string text6) {
 
         //This is for Smell
         private void smellBtn_Click(object sender, EventArgs e) {
-
-
             resetAnswerLabels();
 
             if (displayShortResponse) {
@@ -1155,6 +1216,9 @@ string text3, string text4, string text5, string text6) {
                 hideColumn3SR();
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
+                q3labelc2.Visible = true;
+                q3labelc2.Enabled = true;
+                srAnswer7.Enabled = true;
                 try {
                     getAdditionalCommentAnswer(3, "smellDontLike", 1);
                     getAdditionalCommentAnswer(3, "likeToSmell", 2);
@@ -1166,6 +1230,15 @@ string text3, string text4, string text5, string text6) {
                 updateSRTopicLabel("Are there some smells that you don't like?",
                 "Are there some things that you like to smell?",
                 "", "", "");
+
+                updateSRQuestionLabels("Other smells that you don't like?",
+                    "Examples in your daily life?",
+                        "Do you do anythhing to avoid these smells \n (e.g. avoid public toilets)?",
+                        String.Empty, 1);
+                updateSRQuestionLabels("Other things you like to smell?",
+                    "Examples in your daily life?",
+                    "Are there things that you like toi smell \n often or for long periods?", String.Empty, 2);
+
             } else {
 
                 clearTable(resultsTable, 6);
@@ -1223,6 +1296,16 @@ string text3, string text4, string text5, string text6) {
                 hideColumn4SR();
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
+                srAnswer4.Visible = true;
+                srAnswer7.Visible = true;
+                srAnswer8.Visible = true;
+                srAnswer4.Enabled = true;
+                srAnswer7.Enabled = true;
+                srAnswer8.Enabled = true;
+                q4labelc1.Enabled = true;
+                q3labelc2.Enabled = true;
+                q4labelc2.Enabled = true;
+                
                 try {
 
                     getAdditionalCommentAnswer(4, "dontLikeFeelingOf", 1);
@@ -1236,6 +1319,17 @@ string text3, string text4, string text5, string text6) {
                 "Are there ways that people touch you that \n you don't like?",
                 "Are there some things that you \n like the feeling of?",
                 "", "");
+
+                updateSRQuestionLabels("Other things you don't like the \n feeling of?", "Examples in your daily life?",
+                        "Do touch sensations ever make it hard for \n you to do things(e.g. wear some \n types of clothing)?",
+                        "Do you do anything to avoid these \n things  (e.g. avoid certain clothes \n or textures?", 1);
+                updateSRQuestionLabels("Other ways people touch you that \n you don't like?", "Examples in your daily life?",
+                    "Does difficulty coping with being touched \n make it hard for you to do things \n (e.g. visit the doctor or dentist)?",
+                    "Do you do anything to avoid being \n touched (e.g. avoid crowded places?)", 2);
+                updateSRQuestionLabels("Other sounds that you like the \n feeling of?", "Examples in your daily life?",
+                    "Are there things that you like to \n touch often or for long periods?",
+                    String.Empty, 3);
+
             } else {
                 clearTable(resultsTable, 8);
                 clearTable(topic2Table, 8);
@@ -1343,16 +1437,16 @@ string text3, string text4, string text5, string text6) {
                     q4labelc3.Text = question4;
                     break;
                 case 4:
-                    q1labelc3.Text = question;
-                    q2labelc3.Text = question2;
-                    q3labelc3.Text = question3;
-                    q4labelc3.Text = question4;
+                    q1labelc4.Text = question;
+                    q2labelc4.Text = question2;
+                    q3labelc4.Text = question3;
+                    q4labelc4.Text = question4;
                     break;
                 case 5:
-                    q1labelc3.Text = question;
-                    q2labelc3.Text = question2;
-                    q3labelc3.Text = question3;
-                    q4labelc3.Text = question4;
+                    q1labelc5.Text = question;
+                    q2labelc5.Text = question2;
+                    q3labelc5.Text = question3;
+                    q4labelc5.Text = question4;
                     break;
 
 
@@ -1366,6 +1460,12 @@ string text3, string text4, string text5, string text6) {
                 hideColumn3SR();
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
+                srAnswer4.Visible = true;
+                srAnswer7.Visible = true;
+                srAnswer8.Visible = true;
+                q4labelc1.Enabled = true;
+                q3labelc2.Enabled = true;
+                q4labelc2.Enabled = true;
                 try {
                     getAdditionalCommentAnswer(4, "other", 1);
                     getAdditionalCommentAnswer(4, "other", 2);
@@ -1375,6 +1475,16 @@ string text3, string text4, string text5, string text6) {
                 updateSRTopicLabel("Are there some places with lots of things \n happening at once that you don't like?",
                 "Are there other sensations that you \n feel strongly about?",
                 "", "", "");
+                updateSRQuestionLabels("Other places with lots of \n things happening at once \n that you don't like?",
+                    "Examples in your daily life?",
+                        "How do you react to places with \n lots of things happening at once?",
+                        "Do you do anything to avoid places \n with lots of things happening \n once?", 1);
+                updateSRQuestionLabels("Other sounds, smells, sights, \n tastes, feelings, or movements?",
+                    "Examples in your daily life?", 
+                    "How do you react to these \n other things",
+                    "Do you do anything to \n avoid these other things", 2);
+
+
 
             } else {
                 clearTable(resultsTable, 5);
@@ -1445,6 +1555,25 @@ string text3, string text4, string text5, string text6) {
                 hideIndividual(q3labelc3, srAnswer11);
                 hideIndividual(q4labelc3, srAnswer12);
                 hideIndividual(q4labelc4, srAnswer16);
+
+                updateSRQuestionLabels("Other types of food \n that you don't like?",
+                    "Examples in your daily life?",
+                     String.Empty,
+                        String.Empty, 1);
+                updateSRQuestionLabels("Other ways food tastes or \n feels that you don't like?",
+                    "Examples in your daily life?",
+                    "Do you do anything to avoid \n eating certain foods (e.g. avoid \n eating in restaurants or \n at other people's homes)?",
+                    String.Empty, 2);
+                updateSRQuestionLabels("Examples if your daily life?",
+                    "Are there certain types of foods that \n you crave and want to eat repeatedly?",
+                    String.Empty,
+                    String.Empty, 3);
+                updateSRQuestionLabels("Other things you put in \n your mouth?",
+                    "Examples in your daily life?",
+                    "Are there things that you often put \n in your mouth? Are any of them \n dangerous or unhygenic?",
+                    String.Empty, 4);
+
+
             }
             if (!displayShortResponse) {
                 clearTable(resultsTable, 8);
