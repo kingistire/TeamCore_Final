@@ -20,11 +20,23 @@ namespace Login {
             panel1.BringToFront();
             //Dynamically create the circular picture boxes
             createCirclePB(bottomLeftPB);
+            createCirclePB(bottomLeftPB2);
+
             createCirclePB(bottomRightPB);
+            createCirclePB(bottomRightPB2);
+
             createCirclePB(bottomMidPB);
+            createCirclePB(bottomMidPB2);
+
             createCirclePB(topLeftPB);
+            createCirclePB(topLeftPB2);
+
             createCirclePB(topRightPB);
+            createCirclePB(topRightPB2);
+
             createCirclePB(topMidPB);
+            createCirclePB(topMidPB2);
+
             Globals.shortResponse = false;
 
             if (Globals.interview_page >= 2) {
@@ -193,22 +205,22 @@ namespace Login {
         //Code from here will update the pictureboxes when the user has clicked on a button
         private void topLeftPB_Paint(object sender, PaintEventArgs e) {
             //DeterminePenSizeDrawing(sender, topLeftPB, e);
-            determineDrawing(e, 0, 0, topLeftPB.Width, topRightPB.Height, 0);
+            determineDrawing(e, 0, 0, topLeftPB2.Width, topRightPB2.Height, 0);
         }
         private void topMidPB_Paint(object sender, PaintEventArgs e) {
-            determineDrawing(e, 0, 0, topMidPB.Width, topMidPB.Height, 1);
+            determineDrawing(e, 0, 0, topMidPB2.Width, topMidPB2.Height, 1);
         }
         private void topRightPB_Paint(object sender, PaintEventArgs e) {
-            determineDrawing(e, 0, 0, topRightPB.Width, topRightPB.Height, 2);
+            determineDrawing(e, 0, 0, topRightPB2.Width, topRightPB2.Height, 2);
         }
         private void bottomLeftPB_Paint(object sender, PaintEventArgs e) {
-            determineDrawing(e, 0, 0, bottomLeftPB.Width, bottomLeftPB.Height, 3);
+            determineDrawing(e, 0, 0, bottomLeftPB2.Width, bottomLeftPB2.Height, 3);
         }
         private void bottomMidPB_Paint(object sender, PaintEventArgs e) {
-            determineDrawing(e, 0, 0, bottomMidPB.Width, bottomMidPB.Height, 4);
+            determineDrawing(e, 0, 0, bottomMidPB2.Width, bottomMidPB2.Height, 4);
         }
         private void bottomRightPB_Paint(object sender, PaintEventArgs e) {
-            determineDrawing(e, 0, 0, bottomRightPB.Width, bottomRightPB.Height, 5);
+            determineDrawing(e, 0, 0, bottomRightPB2.Width, bottomRightPB2.Height, 5);
         }
 
         //I would simply create an array of size 6, and when they select 'a little' for picture1 (top left)
@@ -637,63 +649,63 @@ namespace Login {
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         private void topLeftPBALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            topLeftPB.Invalidate();
+            topLeftPB2.Invalidate();
             page1Selections[0] = "A Little";
 
         }
         private void topLeftPBALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            topLeftPB.Invalidate();
+            topLeftPB2.Invalidate();
             page1Selections[0] = "A Lot";
         }
         private void topMidALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            topMidPB.Invalidate();
+            topMidPB2.Invalidate();
             page1Selections[1] = "A Little";
         }
         private void topMidALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            topMidPB.Invalidate();
+            topMidPB2.Invalidate();
             page1Selections[1] = "A Lot";
         }
         private void topRightALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            topRightPB.Invalidate();
+            topRightPB2.Invalidate();
             page1Selections[2] = "A Little";
         }
         private void topRightPBALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picturebox
-            topRightPB.Invalidate();
+            topRightPB2.Invalidate();
             page1Selections[2] = "A Lot";
         }
         private void bottomLeftALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            bottomLeftPB.Invalidate();
+            bottomLeftPB2.Invalidate();
             page1Selections[3] = "A Little";
         }
         private void bottomLeftALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            bottomLeftPB.Invalidate();
+            bottomLeftPB2.Invalidate();
             page1Selections[3] = "A Lot";
         }
         private void bottomMidALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            bottomMidPB.Invalidate();
+            bottomMidPB2.Invalidate();
             page1Selections[4] = "A Little";
         }
         private void bottomMidALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            bottomMidPB.Invalidate();
+            bottomMidPB2.Invalidate();
             page1Selections[4] = "A Lot";
         }
         private void bottomRightALittleBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            bottomRightPB.Invalidate();
+            bottomRightPB2.Invalidate();
             page1Selections[5] = "A Little";
         }
         private void bottomRightALotBtn_Click(object sender, EventArgs e) {
             //This will refresh the picture box
-            bottomRightPB.Invalidate();
+            bottomRightPB2.Invalidate();
             page1Selections[5] = "A Lot";
         }
 
