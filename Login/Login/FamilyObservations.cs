@@ -675,7 +675,7 @@ namespace Login {
             topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\3 Runny slippery (cropped).jpg");
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\4 Mixed.JPG");
             bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5 Sweet.jpg");
-            bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\6 Sour.jpg");
+            bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\6 Sour.png");
             updateLabelText("Lumpy", "Chewy", "Runny/Slippery", "Mixed", "Sweet", "Sour");
         }
         private void tasteInterviewPage3p2()
@@ -836,7 +836,7 @@ namespace Login {
         private void environmentPage1()
         {
             lblQuestion.Text = "Are there some places with lots of things happening at once that s/he doesn't like?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\1 Supermarket.jpg");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\1 Supermarket.png");
             topMidPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\2 Party (self report)(cropped).jpg");
             topRightPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\3 Food Hall.jpg");
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\4 Show (cropped).jpg");
@@ -1570,9 +1570,9 @@ namespace Login {
                 this.Hide();
             } else if (Globals.interview_page == 5) {
                 if (!Globals.previousClicked) {
-                    previousUpdate3("concentrating", "hardToListenInClassroom", "hardToListenInGroup", "hardToListen");
-                } else {
                     writeToDBTop3("concentrating", "hardToListenInClassroom", "hardToListenInGroup", "hardToListen");
+                } else {
+                    previousUpdate3("concentrating", "hardToListenInClassroom", "hardToListenInGroup", "hardToListen");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations soundPage3 = new FamilyObservations();
@@ -1587,9 +1587,9 @@ namespace Login {
                 this.Hide();
             } else if (Globals.interview_page == 7) {
                 if (!Globals.previousClicked) {
-                    previousUpdate3("radioOn", "clockTicking", "peopleTalking", "hardToConcentrate");
-                } else {
                     writeToDBTop3("radioOn", "clockTicking", "peopleTalking", "hardToConcentrate");
+                } else {
+                    previousUpdate3("radioOn", "clockTicking", "peopleTalking", "hardToConcentrate");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations soundPage5 = new FamilyObservations();
@@ -1605,9 +1605,9 @@ namespace Login {
                 this.Hide();
             } else if (Globals.interview_page == 9) {
                 if (!Globals.previousClicked) {
-                    previousUpdate5("computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms", "likeSounds");
-                } else {
                     writeToDB5("computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms", "likeSounds");
+                } else {
+                    previousUpdate5("computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms", "likeSounds");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations soundPage7 = new FamilyObservations();
@@ -1622,9 +1622,9 @@ namespace Login {
                 this.Hide();
             } else if (Globals.interview_page == 11) {
                 if (!Globals.previousClicked) {
-                    previousUpdate4("hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen", "makeALotSounds");
-                } else {
                     writeToDB4("hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen", "makeALotSounds");
+                } else {
+                    previousUpdate4("hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen", "makeALotSounds");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations soundPage9 = new FamilyObservations();
@@ -1644,9 +1644,9 @@ namespace Login {
               //-------------
               else if (Globals.interview_page == 13) {
                 if (!Globals.previousClicked) {
-                    previousUpdate5("sunlight", "fluorescentLight", "lightAndShadow", "busyPatterns", "classroomLight", "dontLikeToLookAt");
-                } else {
                     writeToDB5("sunlight", "fluorescentLight", "lightAndShadow", "busyPatterns", "classroomLight", "dontLikeToLookAt");
+                } else {
+                    previousUpdate5("sunlight", "fluorescentLight", "lightAndShadow", "busyPatterns", "classroomLight", "dontLikeToLookAt");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations sightPage1 = new FamilyObservations();
@@ -1662,9 +1662,9 @@ namespace Login {
                 this.Hide();
             } else if (Globals.interview_page == 15) {
                 if (!Globals.previousClicked) {
-                    previousUpdate3("lotsOfThingsInAMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom", "sightHardToConcentrate");
-                } else {
                     writeToDBTop3("lotsOfThingsInAMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom", "sightHardToConcentrate");
+                } else {
+                    previousUpdate3("lotsOfThingsInAMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom", "sightHardToConcentrate");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations sightPage3 = new FamilyObservations();
@@ -1679,9 +1679,9 @@ namespace Login {
                 this.Hide();
             } else if (Globals.interview_page == 17) {
                 if (!Globals.previousClicked) {
-                    previousUpdate5("movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects", "likeToLookAt");
-                } else {
                     writeToDB5("movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects", "likeToLookAt");
+                } else {
+                    previousUpdate5("movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects", "likeToLookAt");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations sightPage5 = new FamilyObservations();
@@ -1701,9 +1701,9 @@ namespace Login {
               //-------------
               else if (Globals.interview_page == 19) {
                 if (!Globals.previousClicked) {
-                    updateOnPreviousClicked("sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes", "dontLikeFeelingOf");
-                } else {
                     writeToDB("sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes", "dontLikeFeelingOf");
+                } else {
+                    updateOnPreviousClicked("sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes", "dontLikeFeelingOf");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations touchPage1 = new FamilyObservations();
@@ -1731,9 +1731,9 @@ namespace Login {
             } *///Add missing question here
             else if (Globals.interview_page == 22) {
                 if (!Globals.previousClicked) {
-                    updateOnPreviousClicked("beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut", "peopleTouchDontLike");
-                } else {
                     writeToDB("beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut", "peopleTouchDontLike");
+                } else {
+                    updateOnPreviousClicked("beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut", "peopleTouchDontLike");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations touchPage3 = new FamilyObservations();
@@ -1756,9 +1756,9 @@ namespace Login {
             } //Add missing question here
               else if (Globals.interview_page == 25) {
                 if (!Globals.previousClicked) {
-                    updateOnPreviousClicked("soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow", "likeTheFeelingOf");
-                } else {
                     writeToDB("soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow", "likeTheFeelingOf");
+                } else {
+                    updateOnPreviousClicked("soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow", "likeTheFeelingOf");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations touchPage5 = new FamilyObservations();
@@ -1778,9 +1778,9 @@ namespace Login {
               //-------------
               else if (Globals.interview_page == 27) {
                 if (!Globals.previousClicked) {
-                    updateOnPreviousClicked("cookingSmells", "foodSmells", "cleaningProducts", "toiletSmells", "perfumes", "bodySmells", "smellDontLike");
-                } else {
                     writeToDB("cookingSmells", "foodSmells", "cleaningProducts", "toiletSmells", "perfumes", "bodySmells", "smellDontLike");
+                } else {
+                    updateOnPreviousClicked("cookingSmells", "foodSmells", "cleaningProducts", "toiletSmells", "perfumes", "bodySmells", "smellDontLike");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations smellPage1 = new FamilyObservations();
@@ -1796,9 +1796,9 @@ namespace Login {
                 this.Hide();
             } else if (Globals.interview_page == 29) {
                 if (!Globals.previousClicked) {
-                    previousUpdate5("smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople", "likeToSmell");
-                } else {
                     writeToDB5("smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople", "likeToSmell");
+                } else {
+                    previousUpdate5("smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople", "likeToSmell");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations smellPage3 = new FamilyObservations();
@@ -1819,9 +1819,9 @@ namespace Login {
               else if (Globals.interview_page == 31) {
 
                 if (!Globals.previousClicked) {
-                    updateOnPreviousClicked("vegetables", "fruit", "meat", "fish", "eggs", "dairy", "foodGroupsDontLike");
-                } else {
                     writeToDB("vegetables", "fruit", "meat", "fish", "eggs", "dairy", "foodGroupsDontLike");
+                } else {
+                    updateOnPreviousClicked("vegetables", "fruit", "meat", "fish", "eggs", "dairy", "foodGroupsDontLike");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations tastePage1 = new FamilyObservations();
@@ -1843,9 +1843,9 @@ namespace Login {
                 this.Hide();
             } else if (Globals.interview_page == 34) {
                 if (!Globals.previousClicked) {
-                    updateOnPreviousClicked("lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour", "tastesOrFeelsInMouthDontLike");
-                } else {
                     writeToDB("lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour", "tastesOrFeelsInMouthDontLike");
+                } else {
+                    updateOnPreviousClicked("lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour", "tastesOrFeelsInMouthDontLike");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations tastePage3 = new FamilyObservations();
@@ -1868,9 +1868,9 @@ namespace Login {
             } //Add missing question here
               else if (Globals.interview_page == 37) {
                 if (!Globals.previousClicked) {
-                    previousUpdate2("familiarFoods", "unfamiliarFoods", "foodReallyLikeToEat");
-                } else {
                     writeToDBTop2("familiarFoods", "unfamiliarFoods", "foodReallyLikeToEat");
+                } else {
+                    previousUpdate2("familiarFoods", "unfamiliarFoods", "foodReallyLikeToEat");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations tastePage5 = new FamilyObservations();
@@ -1885,9 +1885,9 @@ namespace Login {
                 this.Hide();
             } else if (Globals.interview_page == 39) {
                 if (!Globals.previousClicked) {
-                    previousUpdate3("shirt", "hair", "objects", "thingsPutInMouthALot");
-                } else {
                     writeToDBTop3("shirt", "hair", "objects", "thingsPutInMouthALot");
+                } else {
+                    previousUpdate3("shirt", "hair", "objects", "thingsPutInMouthALot");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations tastePage7 = new FamilyObservations();
@@ -1907,9 +1907,9 @@ namespace Login {
               //----------------
               else if (Globals.interview_page == 41) {
                 if (!Globals.previousClicked) {
-                    previousUpdate5("beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
-                } else {
                     writeToDB5("beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
+                } else {
+                    previousUpdate5("beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
                     Globals.previousClicked = false;
                 }
                 this.Hide();
@@ -1925,9 +1925,9 @@ namespace Login {
                 mvmtPage2.Show();
             } else if (Globals.interview_page == 43) {
                 if (!Globals.previousClicked) {
-                    previousUpdate2("standingStill", "sittingStill", "hardToStayStill");
-                } else {
                     writeToDBTop2("standingStill", "sittingStill", "hardToStayStill");
+                } else {
+                    previousUpdate2("standingStill", "sittingStill", "hardToStayStill");
                     Globals.previousClicked = false;
                 }
                 this.Hide();
@@ -1942,9 +1942,9 @@ namespace Login {
                 mvmtPage4.Show();
             } else if (Globals.interview_page == 45) {
                 if (!Globals.previousClicked) {
-                    previousUpdate5("movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running", "movingThatYouLike");
-                } else {
                     writeToDB5("movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running", "movingThatYouLike");
+                } else {
+                    previousUpdate5("movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running", "movingThatYouLike");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations mvmtPage5 = new FamilyObservations();
@@ -1959,9 +1959,9 @@ namespace Login {
                 mvmtPage6.Show();
             } else if (Globals.interview_page == 47) {
                 if (!Globals.previousClicked) {
-                    previousUpdate4("rocking", "movingHands", "clapping", "pacing", "moveOverAndOverAgain");
-                } else {
                     writeToDB4("rocking", "movingHands", "clapping", "pacing", "moveOverAndOverAgain");
+                } else {
+                    previousUpdate4("rocking", "movingHands", "clapping", "pacing", "moveOverAndOverAgain");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations mvmtPage7 = new FamilyObservations();
@@ -1981,9 +1981,9 @@ namespace Login {
               //-------------------
               else if (Globals.interview_page == 49) {
                 if (!Globals.previousClicked) {
-                    previousUpdate5("supermarket", "party", "foodHall", "show", "shoppingMall", "other");
-                } else {
                     writeToDB5("supermarket", "party", "foodHall", "show", "shoppingMall", "other");
+                } else {
+                    previousUpdate5("supermarket", "party", "foodHall", "show", "shoppingMall", "other");
                     Globals.previousClicked = false;
                 }
                 FamilyObservations environmentPage1 = new FamilyObservations();

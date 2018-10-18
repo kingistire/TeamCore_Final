@@ -866,9 +866,9 @@ namespace Login {
             }
             else if (Globals.interview_page == 4) {
                 if (!Globals.previousClicked) {
-                    previousUpdate3("concentrating", "hardToListenInClassroom", "hardToListenInGroup", "hardToListen");
-                } else {
                     writeToDBTop3("concentrating", "hardToListenInClassroom", "hardToListenInGroup", "hardToListen");
+                } else {
+                    previousUpdate3("concentrating", "hardToListenInClassroom", "hardToListenInGroup", "hardToListen");
                     Globals.previousClicked = false;
                 }
                 GuidedInterview interviewForm3 = new GuidedInterview();
@@ -878,9 +878,9 @@ namespace Login {
             }
             else if (Globals.interview_page == 5) {
                 if (!Globals.previousClicked) {
-                    previousUpdate3("radioOn", "clockTicking", "peopleTalking", "hardToConcentrate");
-                } else {
                     writeToDBTop3("radioOn", "clockTicking", "peopleTalking", "hardToConcentrate");
+                } else {
+                    previousUpdate3("radioOn", "clockTicking", "peopleTalking", "hardToConcentrate");
                     Globals.previousClicked = false;
                 }
                 GuidedInterview interviewForm4 = new GuidedInterview();
@@ -890,9 +890,9 @@ namespace Login {
             }
             else if (Globals.interview_page == 6) {
                 if (!Globals.previousClicked) {
-                    previousUpdate5("computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms", "likeSounds");
-                } else {
                     writeToDB5("computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms", "likeSounds");
+                } else {
+                    previousUpdate5("computerSounds", "liveMusic", "fans", "musicThroughMyPhone", "rhythms", "likeSounds");
                     Globals.previousClicked = false;
                 }
                 GuidedInterview interviewForm5 = new GuidedInterview();
@@ -905,9 +905,9 @@ namespace Login {
             //-------------
             else if (Globals.interview_page == 7) {
                 if (!Globals.previousClicked) {
-                    previousUpdate4("hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen", "makeALotSounds");
-                } else {
                     writeToDB4("hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen", "makeALotSounds");
+                } else {
+                    previousUpdate4("hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen", "makeALotSounds");
                     Globals.previousClicked = false;
                 }
                 GuidedInterview sightInterview1 = new GuidedInterview();
@@ -917,9 +917,9 @@ namespace Login {
             }
             else if (Globals.interview_page == 8) {
                 if (!Globals.previousClicked) {
-                    previousUpdate5("sunlight", "fluorescentLight", "lightAndShadow", "busyPatterns", "classroomLight", "dontLikeToLookAt");
-                } else {
                     writeToDB5("sunlight", "fluorescentLight", "lightAndShadow", "busyPatterns", "classroomLight", "dontLikeToLookAt");
+                } else {
+                    previousUpdate5("sunlight", "fluorescentLight", "lightAndShadow", "busyPatterns", "classroomLight", "dontLikeToLookAt");
                     Globals.previousClicked = false;
                 }
                 GuidedInterview sightInterview2 = new GuidedInterview();
@@ -929,9 +929,9 @@ namespace Login {
             }
             else if (Globals.interview_page == 9) {
                 if (!Globals.previousClicked) {
-                    previousUpdate3("lotsOfThingsInAMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom", "sightHardToConcentrate");
-                } else {
                     writeToDBTop3("lotsOfThingsInAMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom", "sightHardToConcentrate");
+                } else {
+                    previousUpdate3("lotsOfThingsInAMessyDrawer", "peopleRunningAroundMe", "lotsOfThingsHangingUpInTheClassroom", "sightHardToConcentrate");
                     Globals.previousClicked = false;
                 }
                 GuidedInterview sightInterview3 = new GuidedInterview();
@@ -941,9 +941,9 @@ namespace Login {
             }
             else if (Globals.interview_page == 10) {
                 if (!Globals.previousClicked) {
-                    previousUpdate5("movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects", "likeToLookAt");
-                } else {
                     writeToDB5("movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects", "likeToLookAt");
+                } else {
+                    previousUpdate5("movingLights", "thingsThatSparkle", "geometricPatterns", "spinningFans", "spinningObjects", "likeToLookAt");
                     Globals.previousClicked = false;
                 }
                 GuidedInterview sightInterview4 = new GuidedInterview();
@@ -956,9 +956,9 @@ namespace Login {
             //-------------
             else if (Globals.interview_page == 11) {
                 if (!Globals.previousClicked) {
-                    updateOnPreviousClicked("sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes", "dontLikeFeelingOf");
-                } else {
                     writeToDB("sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes", "dontLikeFeelingOf");
+                } else {
+                    updateOnPreviousClicked("sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes", "dontLikeFeelingOf");
                     Globals.previousClicked = false;
                 }
                 GuidedInterview touchInterview2 = new GuidedInterview();
@@ -975,9 +975,9 @@ namespace Login {
             }
             else if (Globals.interview_page == 13) {
                 if (!Globals.previousClicked) {
-                    updateOnPreviousClicked("beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut", "peopleTouchDontLike");
-                } else {
                     writeToDB("beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut", "peopleTouchDontLike");
+                } else {
+                    updateOnPreviousClicked("beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut", "peopleTouchDontLike");
                     Globals.previousClicked = false;
                 }
                 GuidedInterview touchInterview4 = new GuidedInterview();
@@ -997,9 +997,9 @@ namespace Login {
             }
             else if (Globals.interview_page == 15) {
                 if (!Globals.previousClicked) {
-                    updateOnPreviousClicked("soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow", "likeTheFeelingOf");
-                } else {
                     writeToDB( "soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow", "likeTheFeelingOf");
+                } else {
+                    updateOnPreviousClicked("soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow", "likeTheFeelingOf");
                     Globals.previousClicked = false;
                 }                GuidedInterview smellInterview2 = new GuidedInterview();
                 smellInterview2.InstanceRef14 = this;
@@ -1011,9 +1011,9 @@ namespace Login {
             //-------------
             else if (Globals.interview_page == 16) {
                 if (!Globals.previousClicked) {
-                    previousUpdate5("smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople", "likeToSmell");
-                } else {
                     writeToDB5("smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople", "likeToSmell");
+                } else {
+                    previousUpdate5("smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople", "likeToSmell");
                     Globals.previousClicked = false;
                 }
                 GuidedInterview tasteInterview1 = new GuidedInterview();
@@ -1023,9 +1023,9 @@ namespace Login {
             }
             else if (Globals.interview_page == 17) {
                 if (!Globals.previousClicked) {
-                    updateOnPreviousClicked("vegetables", "fruit", "meat", "fish", "eggs", "dairy", "foodGroupsDontLike");
-                } else {
                     writeToDB("vegetables", "fruit", "meat", "fish", "eggs", "dairy", "foodGroupsDontLike");
+                } else {
+                    updateOnPreviousClicked("vegetables", "fruit", "meat", "fish", "eggs", "dairy", "foodGroupsDontLike");
                     Globals.previousClicked = false;
                 }
                 GuidedInterview tasteInterview1p2 = new GuidedInterview();
@@ -1042,9 +1042,9 @@ namespace Login {
             }
             else if (Globals.interview_page == 19) {
                 if (!Globals.previousClicked) {
-                    updateOnPreviousClicked("lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour", "tastesOrFeelsInMouthDontLike");
-                } else {
                     writeToDB("lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour", "tastesOrFeelsInMouthDontLike");
+                } else {
+                    updateOnPreviousClicked("lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour", "tastesOrFeelsInMouthDontLike");
                     Globals.previousClicked = false;
                 }
                 GuidedInterview tasteInterview3 = new GuidedInterview();
@@ -1061,9 +1061,9 @@ namespace Login {
             }
             else if (Globals.interview_page == 21) {
                 if (!Globals.previousClicked) {
-                    previousUpdate3("shirt", "hair", "objects", "thingsPutInMouthALot");
-                } else {
                     writeToDBTop3("shirt", "hair", "objects", "thingsPutInMouthALot");
+                } else {
+                    previousUpdate3("shirt", "hair", "objects", "thingsPutInMouthALot");
                     Globals.previousClicked = false;
                 }
                 GuidedInterview mvmtInterview1 = new GuidedInterview();
@@ -1073,9 +1073,9 @@ namespace Login {
             }
             else if (Globals.interview_page == 22) {
                 if (!Globals.previousClicked) {
-                    previousUpdate5("beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
-                } else {
                     writeToDB5("beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
+                } else {
+                    previousUpdate5("beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
                     Globals.previousClicked = false;
                 }
                 GuidedInterview mvmtInterview2 = new GuidedInterview();
@@ -1085,9 +1085,9 @@ namespace Login {
             }
             else if (Globals.interview_page == 23) {
                 if (!Globals.previousClicked) {
-                    previousUpdate2("standingStill", "sittingStill", "hardToStayStill");
-                } else {
                     writeToDBTop2("standingStill", "sittingStill", "hardToStayStill");
+                } else {
+                    previousUpdate2("standingStill", "sittingStill", "hardToStayStill");
                     Globals.previousClicked = false;
                 }
                 this.Hide();
@@ -1097,9 +1097,9 @@ namespace Login {
             }
             else if (Globals.interview_page == 24) {
                 if (!Globals.previousClicked) {
-                    previousUpdate5("movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running", "movingThatYouLike");
-                } else {
                     writeToDB5("movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running", "movingThatYouLike");
+                } else {
+                    previousUpdate5("movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running", "movingThatYouLike");
                     Globals.previousClicked = false;
                 }
                 GuidedInterview mvmtInterview4 = new GuidedInterview();
@@ -1112,9 +1112,9 @@ namespace Login {
             //-------------------
             else if (Globals.interview_page == 25) {
                 if (!Globals.previousClicked) {
-                    previousUpdate4("rocking", "movingHands", "clapping", "pacing", "moveOverAndOverAgain");
-                } else {
                     writeToDB4("rocking", "movingHands", "clapping", "pacing", "moveOverAndOverAgain");
+                } else {
+                    previousUpdate4("rocking", "movingHands", "clapping", "pacing", "moveOverAndOverAgain");
                     Globals.previousClicked = false;
                 }
                 GuidedInterview environmentInterview1 = new GuidedInterview();
@@ -1127,9 +1127,9 @@ namespace Login {
             //-------------
             else if (Globals.interview_page == 26) {
                 if (!Globals.previousClicked) {
-                    previousUpdate5("supermarket", "party", "foodHall", "show", "shoppingMall", "other");
-                } else {
                     writeToDB5("supermarket", "party", "foodHall", "show", "shoppingMall", "other");
+                } else {
+                    previousUpdate5("supermarket", "party", "foodHall", "show", "shoppingMall", "other");
                     Globals.previousClicked = false;
                 }
                 GuidedInterview otherInterview1 = new GuidedInterview();
@@ -1318,9 +1318,12 @@ namespace Login {
         private void interviewPage2()
         {
             lblQuestion.Text = "Are there times when it is hard for you to listen?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1 If I am concentrating on something, I don't notice people talking to me.jpg");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1 If I am concentrating on something, I don't notice people talking to me.png");
             topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1.2.1Concentration.wav";
-            topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\2 I find it hard to listen in noisy classrooms (guided version).jpg");
+            //////////////IMAGE NOT IN FOLDER/////////
+            ///
+            //topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\2 I find it hard to listen in noisy classrooms (guided version).png");
+
             topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\3 I find it hard to listen to someone talking to me when I'm in a group.jpg");
             topRightReadOutLoudPath = @"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1.2.3ListenToSomone.wav";
             //bottomLeftPB.Image = new Bitmap(@"..\..\resources\");
@@ -1429,8 +1432,10 @@ namespace Login {
 
             topMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\2 People running around me.jpg");
             topMiddleReadOutLoudPath = @"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\2.2.2RunningAroundMe.wav";
+            //IMAGE NOT IN FOLDER////////
 
-            topRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\3 Lots of things hanging up in the classroom (guided).jpg");
+            //topRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\3 Lots of things hanging up in the classroom (guided).jpg");
+
             topRightReadOutLoudPath = @"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\2.2.3ClutterOffice.wav";
 
             // bottomLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
@@ -1672,7 +1677,7 @@ namespace Login {
             bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5 Sweet.jpg");
             bottomMiddleReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.5Sweet.wav";
 
-            bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\6 Sour.jpg");
+            bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\6 Sour.png");
             bottomrightReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.6Sour.wav";
             updateLabelText("Lumpy", "Chewy", "Runny/Slippery", "Mixed", "Sweet", "Sour");
         }
@@ -1805,7 +1810,7 @@ namespace Login {
         {
             lblQuestion.Text = "Are there some places with lots of things happening at once that you don't like?";
             //----------File path too long-----------
-            topLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\1 Supermarket.jpg");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\1 Supermarket.png");
             topLeftReadOutLoudPath = @"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\7.1.1Supermarket.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\2 Party (guided) (cropped).png");
