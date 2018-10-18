@@ -1260,7 +1260,7 @@ namespace Login {
             }
         }
 
-        private void updateLabelText(string TL, string TM, string TR, string BL, string BM, string BR) {
+        public void updateLabelText(string TL, string TM, string TR, string BL, string BM, string BR) {
             lblTL.Text = TL;
             lblTM.Text = TM;
             lblTR.Text = TR;

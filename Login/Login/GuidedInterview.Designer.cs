@@ -928,8 +928,8 @@
         private System.Windows.Forms.Button topLeftPBALotBtn;
         private System.Windows.Forms.Button topLeftPBALittleBtn;
         private System.Windows.Forms.PictureBox topLeftPB2;
-        private System.Windows.Forms.Label lblTL;
         private System.Windows.Forms.Panel readOutLoudPanel;
         private System.Windows.Forms.Button readOutLoudToggleBtn;
+        public System.Windows.Forms.Label lblTL;
     }
 }
