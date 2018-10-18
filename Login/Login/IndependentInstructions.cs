@@ -10,8 +10,20 @@ using System.Windows.Forms;
 
 namespace Login {
     public partial class IndependentInstructions : Form {
+        private System.Media.SoundPlayer instructionsPlayer = new System.Media.SoundPlayer();
+        private void SetPlayerPath(string path)
+        {
+            try
+            {
+                instructionsPlayer.SoundLocation = path;
+                instructionsPlayer.Load();
+            }
+            catch { }
+        }
+
         public IndependentInstructions() {
             InitializeComponent();
+            SetPlayerPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
         }
 
         private void btnSave_Click(object sender, EventArgs e) {
@@ -40,6 +52,14 @@ namespace Login {
         {
             Globals.toggleReadOutLoad = !Globals.toggleReadOutLoad;
             loadReadOutLoudToggleBtn();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            if (Globals.toggleReadOutLoad)
+            {
+                instructionsPlayer.Play();
+            }
         }
     }
 }

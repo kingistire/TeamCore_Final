@@ -177,7 +177,7 @@
             // 
             this.pictureBox1.Image = global::Login.Properties.Resources.aLotaLittle;
             this.pictureBox1.Location = new System.Drawing.Point(739, 24);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(108, 92);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -187,6 +187,7 @@
             // panel2lblQuestion
             // 
             this.panel2lblQuestion.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2lblQuestion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2lblQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2lblQuestion.Location = new System.Drawing.Point(278, 7);
             this.panel2lblQuestion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -196,12 +197,13 @@
             this.panel2lblQuestion.TabIndex = 23;
             this.panel2lblQuestion.Text = "Are there some sounds that you make a lot?";
             this.panel2lblQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel2lblQuestion.Click += new System.EventHandler(this.lblQuestion_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(65, 22);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(94, 102);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -212,7 +214,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(1001, 146);
             this.pictureBox3.TabIndex = 21;
@@ -270,7 +272,7 @@
             // 
             this.tbAnswer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAnswer2.Location = new System.Drawing.Point(228, 566);
-            this.tbAnswer2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbAnswer2.Margin = new System.Windows.Forms.Padding(2);
             this.tbAnswer2.Multiline = true;
             this.tbAnswer2.Name = "tbAnswer2";
             this.tbAnswer2.Size = new System.Drawing.Size(521, 128);
@@ -278,6 +280,7 @@
             // 
             // lblQuestion2
             // 
+            this.lblQuestion2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblQuestion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuestion2.Location = new System.Drawing.Point(246, 449);
             this.lblQuestion2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -287,12 +290,13 @@
             this.lblQuestion2.TabIndex = 29;
             this.lblQuestion2.Text = "Fill";
             this.lblQuestion2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblQuestion2.Click += new System.EventHandler(this.lblQuestion2_Click);
             // 
             // tbAnswer1
             // 
             this.tbAnswer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAnswer1.Location = new System.Drawing.Point(228, 314);
-            this.tbAnswer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbAnswer1.Margin = new System.Windows.Forms.Padding(2);
             this.tbAnswer1.Multiline = true;
             this.tbAnswer1.Name = "tbAnswer1";
             this.tbAnswer1.Size = new System.Drawing.Size(521, 128);
@@ -300,6 +304,7 @@
             // 
             // lblQuestion1
             // 
+            this.lblQuestion1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblQuestion1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuestion1.Location = new System.Drawing.Point(246, 198);
             this.lblQuestion1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -309,6 +314,7 @@
             this.lblQuestion1.TabIndex = 29;
             this.lblQuestion1.Text = "Fill";
             this.lblQuestion1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblQuestion1.Click += new System.EventHandler(this.lblQuestion1_Click);
             // 
             // additionalNotesPanel
             // 
@@ -336,7 +342,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(235, 448);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(521, 249);
@@ -421,7 +427,7 @@
             // 
             this.pictureBox4.Image = global::Login.Properties.Resources.aLotaLittle;
             this.pictureBox4.Location = new System.Drawing.Point(739, 32);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(108, 92);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -446,7 +452,7 @@
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(65, 22);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(94, 102);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -457,7 +463,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBox6.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(999, 146);
             this.pictureBox6.TabIndex = 21;
@@ -554,7 +560,7 @@
             // 
             this.picBackground.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.picBackground.Location = new System.Drawing.Point(0, 0);
-            this.picBackground.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBackground.Margin = new System.Windows.Forms.Padding(2);
             this.picBackground.Name = "picBackground";
             this.picBackground.Size = new System.Drawing.Size(1001, 146);
             this.picBackground.TabIndex = 21;
@@ -564,7 +570,7 @@
             // 
             this.picSense.Image = ((System.Drawing.Image)(resources.GetObject("picSense.Image")));
             this.picSense.Location = new System.Drawing.Point(65, 22);
-            this.picSense.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picSense.Margin = new System.Windows.Forms.Padding(2);
             this.picSense.Name = "picSense";
             this.picSense.Size = new System.Drawing.Size(94, 102);
             this.picSense.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -574,6 +580,7 @@
             // lblQuestion
             // 
             this.lblQuestion.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblQuestion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuestion.Location = new System.Drawing.Point(278, 7);
             this.lblQuestion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -589,7 +596,7 @@
             // 
             this.picInstruction.Image = global::Login.Properties.Resources.aLotaLittle;
             this.picInstruction.Location = new System.Drawing.Point(739, 24);
-            this.picInstruction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picInstruction.Margin = new System.Windows.Forms.Padding(2);
             this.picInstruction.Name = "picInstruction";
             this.picInstruction.Size = new System.Drawing.Size(108, 92);
             this.picInstruction.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1019,7 +1026,7 @@
             this.readOutLoudToggleBtn.ForeColor = System.Drawing.Color.Navy;
             this.readOutLoudToggleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.readOutLoudToggleBtn.Location = new System.Drawing.Point(1, 0);
-            this.readOutLoudToggleBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.readOutLoudToggleBtn.Margin = new System.Windows.Forms.Padding(2);
             this.readOutLoudToggleBtn.Name = "readOutLoudToggleBtn";
             this.readOutLoudToggleBtn.Size = new System.Drawing.Size(128, 46);
             this.readOutLoudToggleBtn.TabIndex = 55;
@@ -1043,11 +1050,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 796);
             this.Controls.Add(this.readOutLoudPanel);
-            this.Controls.Add(this.picturePanel);
-            this.Controls.Add(this.additionalNotesPanel);
             this.Controls.Add(this.questionPanel);
+            this.Controls.Add(this.additionalNotesPanel);
+            this.Controls.Add(this.picturePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1008, 760);
             this.Name = "IndependentInterview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

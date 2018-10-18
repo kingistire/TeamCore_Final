@@ -635,6 +635,7 @@
             // lblQuestion
             // 
             this.lblQuestion.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblQuestion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuestion.Location = new System.Drawing.Point(278, 16);
             this.lblQuestion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -644,6 +645,7 @@
             this.lblQuestion.TabIndex = 23;
             this.lblQuestion.Text = "Are there some sounds that you make a lot?";
             this.lblQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblQuestion.Click += new System.EventHandler(this.lblQuestion_Click);
             // 
             // picSense
             // 
