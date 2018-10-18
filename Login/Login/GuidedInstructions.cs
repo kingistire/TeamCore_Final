@@ -19,5 +19,22 @@ namespace Login {
             guidedInt.Show();
             this.Close();
         }
+
+        private void loadReadOutLoudToggleBtn()
+        {
+            if (Globals.toggleReadOutLoad)
+            {
+                readOutLoudToggleBtn.Text = "ReadOutLoud: ON";
+            }
+            else
+            {
+                readOutLoudToggleBtn.Text = "ReadOutLoud: OFF";
+            }
+        }
+        private void readOutLoudToggleBtn_Click(object sender, EventArgs e)
+        {
+            Globals.toggleReadOutLoad = !Globals.toggleReadOutLoad;
+            loadReadOutLoudToggleBtn();
+        }
     }
 }

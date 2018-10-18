@@ -17,12 +17,16 @@ namespace Login {
     public partial class IndependentInterview : Form {
 
         private System.Media.SoundPlayer topLeftPBPlayer = new System.Media.SoundPlayer();
+        private System.Media.SoundPlayer alotPlayer = new System.Media.SoundPlayer();
+        private System.Media.SoundPlayer alittlePlayer = new System.Media.SoundPlayer();
+
         private string topLeftReadOutLoudPath;
         private string topMiddleReadOutLoudPath;
         private string topRightReadOutLoudPath;
         private string bottomLeftReadOutLoudPath;
         private string bottomMiddleReadOutLoudPath;
         private string bottomrightReadOutLoudPath;
+        private string pageLabelReadOutLoudPath;
         
 
         private void openQuestionPanel()
@@ -61,6 +65,14 @@ namespace Login {
 
             createCirclePB(topMidPB);
             createCirclePB(topMidPB2);
+
+
+            //// Proload alittle alot ////
+            alotPlayer.SoundLocation = @"C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\resources\0. System\UiAlotSound.wav";
+            alotPlayer.Load();
+            alittlePlayer.SoundLocation = @"C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\resources\0. System\UiAlittleSound.wav";
+            alittlePlayer.Load();
+
 
             Globals.shortResponse = true;
             openPicturePanel();
@@ -387,6 +399,9 @@ namespace Login {
         private void interviewPage1()
         {
             //axWindowsMediaPlayer1.URL = @"..\..\resources\0testsound.mp3";
+
+            pageLabelReadOutLoudPath = topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav";
+
             lblQuestion.Text = "Are there some sounds that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1 Other People Talking (cropped).png");
             topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.1OtherPeopleTalking.wav";
@@ -1801,8 +1816,18 @@ namespace Login {
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// BUTTON CLICKS FOR A LITT AND A LOT ////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        ////////// Pre-loaded Read out loud ////////////////
+        
+        
+        
+      
+
+
         private void topLeftPBALittleBtn_Click(object sender, EventArgs e) {
+            PlatAlittlePlayer();
             //This will refresh the picture box
+
             topLeftPB2.Invalidate();
             page1Selections[0] = "A Little";
             //this is just to show the array being updated -- can remove after testing
@@ -1811,57 +1836,70 @@ namespace Login {
             //summary.Show();
         }
         private void topLeftPBALotBtn_Click(object sender, EventArgs e) {
+            PlayAlotPlayer();
             //This will refresh the picture box
+
             topLeftPB2.Invalidate();
             page1Selections[0] = "A Lot";
             //summary.LabelText = "Top Left A Lot";
         }
         private void topMidALittleBtn_Click(object sender, EventArgs e) {
+            PlatAlittlePlayer();
             //This will refresh the picture box
+
             topMidPB2.Invalidate();
             page1Selections[1] = "A Little";
         }
         private void topMidALotBtn_Click(object sender, EventArgs e) {
+            PlayAlotPlayer();
             //This will refresh the picture box
             topMidPB2.Invalidate();
             page1Selections[1] = "A Lot";
         }
         private void topRightALittleBtn_Click(object sender, EventArgs e) {
+            PlatAlittlePlayer();
             //This will refresh the picture box
             topRightPB2.Invalidate();
             page1Selections[2] = "A Little";
         }
         private void topRightPBALotBtn_Click(object sender, EventArgs e) {
+            PlayAlotPlayer();
             //This will refresh the picturebox
             topRightPB2.Invalidate();
             page1Selections[2] = "A Lot";
         }
         private void bottomLeftALittleBtn_Click(object sender, EventArgs e) {
+            PlatAlittlePlayer();
             //This will refresh the picture box
             bottomLeftPB2.Invalidate();
             page1Selections[3] = "A Little";
         }
         private void bottomLeftALotBtn_Click(object sender, EventArgs e) {
+            PlayAlotPlayer();
             //This will refresh the picture box
             bottomLeftPB2.Invalidate();
             page1Selections[3] = "A Lot";
         }
         private void bottomMidALittleBtn_Click(object sender, EventArgs e) {
+            PlatAlittlePlayer();
             //This will refresh the picture box
             bottomMidPB2.Invalidate();
             page1Selections[4] = "A Little";
         }
         private void bottomMidALotBtn_Click(object sender, EventArgs e) {
+            PlayAlotPlayer();
             //This will refresh the picture box
             bottomMidPB2.Invalidate();
             page1Selections[4] = "A Lot";
         }
         private void bottomRightALittleBtn_Click(object sender, EventArgs e) {
+            PlatAlittlePlayer();
             //This will refresh the picture box
             bottomRightPB2.Invalidate();
             page1Selections[5] = "A Little";
         }
         private void bottomRightALotBtn_Click(object sender, EventArgs e) {
+            PlayAlotPlayer();
             //This will refresh the picture box
             bottomRightPB2.Invalidate();
             page1Selections[5] = "A Lot";
@@ -2009,6 +2047,7 @@ namespace Login {
             //SOUND SECTION
             //-------------
             if (Globals.interview_page == 2) {
+
                 if (!Globals.previousClicked) {
                     writeToDB("otherPeopleTalking", "fireworks", "loudVoices",
                               "householdAppliances", "vehicles", "bathroomAppliances", "dislikeSounds");
@@ -3430,11 +3469,6 @@ namespace Login {
             set { m_InstanceRef69 = value; }
         }
 
-        private void bottomMidPB2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void picturePanel_Paint(object sender, PaintEventArgs e)
         {
 
@@ -3469,7 +3503,23 @@ namespace Login {
             } 
         }
 
-        private void readOutLoudToggleBtn_Click(object sender, EventArgs e)
+        private void PlayAlotPlayer()
+        {
+            if (Globals.toggleReadOutLoad)
+            {
+                alotPlayer.Play();
+            }
+        }
+        private void PlatAlittlePlayer()
+        {
+            if (Globals.toggleReadOutLoad)
+            {
+                alittlePlayer.Play();
+            }            
+        }
+
+
+        public void readOutLoudToggleBtn_Click(object sender, EventArgs e)
         {
             Globals.toggleReadOutLoad = !Globals.toggleReadOutLoad;
             loadReadOutLoudToggleBtn();
@@ -3478,6 +3528,16 @@ namespace Login {
         private void IndependentInterview_Load(object sender, EventArgs e)
         {
             loadReadOutLoudToggleBtn();
+        }
+
+        private void lblQuestion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                topLeftPBPlayer.SoundLocation = pageLabelReadOutLoudPath;
+                playReadOutLoud();
+            }
+            catch { }
         }
     }
 }
