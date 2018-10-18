@@ -327,3 +327,8 @@ C:\Users\Philip\Desktop\Git2 new\TeamCore_Final\Login\Login\obj\Debug\My Sensory
 C:\Users\Philip\Desktop\Git2 new\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.CoreCompileInputs.cache
 C:\Users\Philip\Desktop\Git2 new\TeamCore_Final\Login\Login\obj\Debug\Login.exe
 C:\Users\Philip\Desktop\Git2 new\TeamCore_Final\Login\Login\obj\Debug\Login.pdb
+C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyInstructions.resources
+C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyInterviewCover.resources
+C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyObservations.resources
+C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInstructions.resources
+C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.IndependentInstructions.resources

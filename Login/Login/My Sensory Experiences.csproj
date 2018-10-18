@@ -284,6 +284,7 @@
     <EmbeddedResource Include="ViewResultsTable.resx">
       <DependentUpon>ViewResultsTable.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\Login.exe.config" />
     <None Include="CapstoneDB\CapstoneDB.xsc">
       <DependentUpon>CapstoneDB.xsd</DependentUpon>
     </None>
@@ -328,6 +329,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\Login.exe" />
+    <Content Include="bin\Debug\Login.pdb" />
     <Content Include="CapstoneDB\CapstoneDB.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

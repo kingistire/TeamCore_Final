@@ -1050,9 +1050,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 796);
             this.Controls.Add(this.readOutLoudPanel);
+            this.Controls.Add(this.picturePanel);
             this.Controls.Add(this.questionPanel);
             this.Controls.Add(this.additionalNotesPanel);
-            this.Controls.Add(this.picturePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1008, 760);

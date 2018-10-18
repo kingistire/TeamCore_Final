@@ -1188,10 +1188,10 @@ namespace Login {
             SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
 
             lblQuestion.Text = "Are there some things that you really like to eat?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\1 Familiar foods, only a few types of foods (i.e, I don’t like trying new foods)1 (cropped).jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\5. Taste\3. Are there some things you really like to eat_\5.3.1FamiliarFoods.wav";//MISSINGFILE - Name Fine
-
-            topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\1 Familiar foods, only a few types of foods (i.e, I don’t like trying new foods)2.jpg");
+            //topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\1 Familiar foods, only a few types of foods (i.e, I don’t like trying new foods)1 (cropped).jpg");
+            //topLeftReadOutLoudPath = @"..\..\resources\5. Taste\3. Are there some things you really like to eat_\5.3.1FamiliarFoods.wav";//MISSINGFILE - Name Fine
+            
+            topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\test.png");
             topMiddleReadOutLoudPath = @"..\..\resources\5. Taste\3. Are there some things you really like to eat_\5.3.2UnfamiliarFoods.wav";//MISSINGFILE - Name Fine
 
 
