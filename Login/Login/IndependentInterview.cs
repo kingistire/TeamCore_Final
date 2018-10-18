@@ -440,12 +440,16 @@ namespace Login {
             lblQuestion.Text = "Are there some sounds that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1 Other People Talking (cropped).png");
             topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.1OtherPeopleTalking.wav";//MISSINGFILE - Name Fine
+            topLeftPB2.Location = new Point(282, 175);
+            topLeftPB.Location = new Point(307, 200);
+
+           topMidPB.Location = new Point(485, 200);
+           topMidPB2.Location = new Point(460, 175);
 
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\2 Fireworks.jpg");
             topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.2Fireworks.wav";//MISSINGFILE - Name Fine
 
-            topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\3 Loud voices.PNG");
-            topRightReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.3LoudVoices.wav";//MISSINGFILE - Name Fine
+            
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\4 Household appliances (e.g., blenders, vacuum).png");
             bottomLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.4HouseholdAppliances.wav";//MISSINGFILE - Name Fine
