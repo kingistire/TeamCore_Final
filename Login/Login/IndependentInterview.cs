@@ -91,6 +91,7 @@ namespace Login {
             //resets to one when the user starts a new interview
             if (Globals.interview_page == 1) {
                 interviewPage1();
+                //tasteInterviewPage4();
             }
             else if (Globals.interview_page == 2) {
                 interviewPage1p2();
@@ -1186,6 +1187,47 @@ namespace Login {
         private void tasteInterviewPage4()
         {
             SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            // TOP ??
+            // Move the picture boxes 
+            topLeftPB2.Location = new Point(282, 175);
+            topLeftPB.Location = new Point(307, 200);
+            topMidPB.Location = new Point(485, 200);
+            topMidPB2.Location = new Point(460, 175);
+            // change the event handlers so the left picture activates mid buttons
+            this.topLeftPB.Click -= new System.EventHandler(this.topLeftPB_Click);
+            this.topLeftPB.Click += new System.EventHandler(this.topMidPB_Click);
+            // change alot and alittle btns
+            this.topMidALittleBtn.Click -= new System.EventHandler(this.topMidALittleBtn_Click);
+            this.topMidALittleBtn.Click += new System.EventHandler(this.twoImageTopMidALittleImageBtn_Click);
+            this.topMidALotBtn.Click -= new System.EventHandler(this.topMidALotBtn_Click);
+            this.topMidALotBtn.Click += new System.EventHandler(this.twoImageTopMidALotBtn_Click);
+            // pb paint events
+            this.topLeftPB2.Paint -= new System.Windows.Forms.PaintEventHandler(this.topLeftPB_Paint);
+            this.topLeftPB2.Paint += new System.Windows.Forms.PaintEventHandler(this.TwoImageTopPB_Paint);
+            this.topMidPB2.Paint -= new System.Windows.Forms.PaintEventHandler(this.topMidPB_Paint);
+            this.topMidPB2.Paint += new System.Windows.Forms.PaintEventHandler(this.TwoImageTopPB_Paint);
+            // bottom 
+            // Move the picture boxes togethertwoImageTopMidALittleImageBtn_Click
+
+            bottomLeftPB2.Location = new Point(282, 491);
+            bottomLeftPB.Location = new Point(307, 516);
+            bottomMidPB.Location = new Point(485, 516);
+            bottomMidPB2.Location = new Point(460, 491);
+            // change the event handlers so the left picture activates mid buttons
+            this.bottomLeftPB.Click -= new System.EventHandler(this.bottomLeftPB_Click);
+            this.bottomLeftPB.Click += new System.EventHandler(this.bottomMidPB_Click);
+            // change alot and alittle btns
+            this.bottomMidALittleBtn.Click -= new System.EventHandler(this.bottomMidALittleBtn_Click);
+            this.bottomMidALittleBtn.Click += new System.EventHandler(this.twoImageBottomMidALittleImageBtn_Click);
+            this.bottomMidALotBtn.Click -= new System.EventHandler(this.bottomMidALotBtn_Click);
+            this.bottomMidALotBtn.Click += new System.EventHandler(this.twoImageBottomMidALotBtn_Click);
+
+            // pb paint events
+            this.bottomLeftPB2.Paint -= new System.Windows.Forms.PaintEventHandler(this.bottomLeftPB_Paint);
+            this.bottomLeftPB2.Paint += new System.Windows.Forms.PaintEventHandler(this.TwoImageBottomPB_Paint);
+            this.bottomMidPB2.Paint -= new System.Windows.Forms.PaintEventHandler(this.bottomMidPB_Paint);
+            this.bottomMidPB2.Paint += new System.Windows.Forms.PaintEventHandler(this.TwoImageBottomPB_Paint);
+
 
             lblQuestion.Text = "Are there some things that you really like to eat?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\1 Familiar foods, only a few types of foods (i.e, I don’t like trying new foods)1 (cropped).jpg");
@@ -1589,6 +1631,12 @@ namespace Login {
             
             determineDrawing(e, 0, 0, topLeftPB2.Width, topLeftPB2.Height, 0);
         }
+        private void TwoImageTopPB_Paint(object sender, PaintEventArgs e)
+        {
+            determineDrawing(e, 0, 0, topLeftPB2.Width, topLeftPB2.Height, 1);
+            determineDrawing(e, 0, 0, topMidPB2.Width, topMidPB2.Height, 1);
+        }
+
         private void topMidPB_Paint(object sender, PaintEventArgs e) {
             determineDrawing(e, 0, 0, topMidPB2.Width, topMidPB2.Height, 1);
         }
@@ -1599,6 +1647,11 @@ namespace Login {
             determineDrawing(e, 0, 0, bottomLeftPB2.Width, bottomLeftPB2.Height, 3);
         }
         private void bottomMidPB_Paint(object sender, PaintEventArgs e) {
+            determineDrawing(e, 0, 0, bottomMidPB2.Width, bottomMidPB2.Height, 4);
+        }
+        private void TwoImageBottomPB_Paint(object sender, PaintEventArgs e)
+        {
+            determineDrawing(e, 0, 0, bottomLeftPB2.Width, bottomLeftPB2.Height, 4);
             determineDrawing(e, 0, 0, bottomMidPB2.Width, bottomMidPB2.Height, 4);
         }
         private void bottomRightPB_Paint(object sender, PaintEventArgs e) {
@@ -2095,6 +2148,50 @@ namespace Login {
             topMidPB2.Invalidate();
             page1Selections[1] = "A Lot";
         }
+
+        private void twoImageTopMidALittleImageBtn_Click(object sender, EventArgs e)
+        {
+            PlayAlittlePlayer();
+            //This will refresh the picture box
+
+            topMidPB2.Invalidate();
+            topLeftPB2.Invalidate();
+            page1Selections[1] = "A Little";
+        }
+
+        
+
+
+        private void twoImageTopMidALotBtn_Click(object sender, EventArgs e)
+        {
+            PlayAlotPlayer();
+            //This will refresh the picture box
+            topMidPB2.Invalidate();
+            topLeftPB2.Invalidate();
+            page1Selections[1] = "A Lot";
+        }
+
+        private void twoImageBottomMidALittleImageBtn_Click(object sender, EventArgs e)
+        {
+            PlayAlittlePlayer();
+            //This will refresh the picture box
+
+            bottomMidPB2.Invalidate();
+            bottomLeftPB2.Invalidate();
+            page1Selections[4] = "A Little";
+        }
+
+
+
+        private void twoImageBottomMidALotBtn_Click(object sender, EventArgs e)
+        {
+            PlayAlotPlayer();
+            //This will refresh the picture box
+            bottomMidPB2.Invalidate();
+            bottomLeftPB2.Invalidate();
+            page1Selections[4] = "A Lot";
+        }
+
         private void topRightALittleBtn_Click(object sender, EventArgs e) {
             PlayAlittlePlayer();
             //This will refresh the picture box
