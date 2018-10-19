@@ -428,6 +428,8 @@ namespace Login {
             }
             catch { }
         }
+
+
         private void interviewPage1()
         {
             //axWindowsMediaPlayer1.URL = @"..\..\resources\0testsound.mp3";
@@ -440,11 +442,60 @@ namespace Login {
             lblQuestion.Text = "Are there some sounds that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1 Other People Talking (cropped).png");
             topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.1OtherPeopleTalking.wav";//MISSINGFILE - Name Fine
+
+
+            // TOP ??
+      
+            // Move the picture boxes together
+
             topLeftPB2.Location = new Point(282, 175);
             topLeftPB.Location = new Point(307, 200);
 
            topMidPB.Location = new Point(485, 200);
            topMidPB2.Location = new Point(460, 175);
+
+            // change the event handlers so the left picture activates mid buttons
+            this.topLeftPB.Click -= new System.EventHandler(this.topLeftPB_Click);
+            this.topLeftPB.Click += new System.EventHandler(this.topMidPB_Click);
+
+            // change alot and alittle btns
+            this.topMidALittleBtn.Click -= new System.EventHandler(this.topMidALittleBtn_Click);
+            this.topMidALittleBtn.Click += new System.EventHandler(this.twoImageTopMidALittleImageBtn_Click);
+            this.topMidALotBtn.Click -= new System.EventHandler(this.topMidALotBtn_Click);
+            this.topMidALotBtn.Click += new System.EventHandler(this.twoImageTopMidALotBtn_Click);
+
+            // pb paint events
+            this.topLeftPB2.Paint -= new System.Windows.Forms.PaintEventHandler(this.topLeftPB_Paint);
+            this.topLeftPB2.Paint += new System.Windows.Forms.PaintEventHandler(this.TwoImageTopPB_Paint);
+            this.topMidPB2.Paint -= new System.Windows.Forms.PaintEventHandler(this.topMidPB_Paint);
+            this.topMidPB2.Paint += new System.Windows.Forms.PaintEventHandler(this.TwoImageTopPB_Paint);
+
+            // bottom ??
+
+            // Move the picture boxes together
+
+            bottomLeftPB2.Location = new Point(282, 491);
+            bottomLeftPB.Location = new Point(307, 516);
+
+            bottomMidPB.Location = new Point(485, 516);
+            bottomMidPB2.Location = new Point(460, 491);
+
+            // change the event handlers so the left picture activates mid buttons
+            this.bottomLeftPB.Click -= new System.EventHandler(this.bottomLeftPB_Click);
+            this.bottomLeftPB.Click += new System.EventHandler(this.bottomMidPB_Click);
+
+            // change alot and alittle btns
+            this.bottomMidALittleBtn.Click -= new System.EventHandler(this.bottomMidALittleBtn_Click);
+            this.bottomMidALittleBtn.Click += new System.EventHandler(this.twoImageBottomMidALittleImageBtn_Click);
+            this.bottomMidALotBtn.Click -= new System.EventHandler(this.bottomMidALotBtn_Click);
+            this.bottomMidALotBtn.Click += new System.EventHandler(this.twoImageBottomMidALotBtn_Click);
+
+            // pb paint events
+            this.bottomLeftPB2.Paint -= new System.Windows.Forms.PaintEventHandler(this.bottomLeftPB_Paint);
+            this.bottomLeftPB2.Paint += new System.Windows.Forms.PaintEventHandler(this.TwoImageBottomPB_Paint);
+            this.bottomMidPB2.Paint -= new System.Windows.Forms.PaintEventHandler(this.bottomMidPB_Paint);
+            this.bottomMidPB2.Paint += new System.Windows.Forms.PaintEventHandler(this.TwoImageBottomPB_Paint);
+
 
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\2 Fireworks.jpg");
             topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.2Fireworks.wav";//MISSINGFILE - Name Fine
@@ -457,9 +508,7 @@ namespace Login {
             bottomMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\5 Vehicles (e.g., trucks, motorbikes) (cropped).jpg");
             bottomMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.5Vehicles.wav";//MISSINGFILE - Name Fine
 
-            bottomRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\6 Bathroom appliances (e.g., hand dryers, hair dryers) (photoshopped).jpg");
-            bottomrightReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.6BathroomAppliances.wav";//MISSINGFILE - Name Fine
-
+            
             updateLabelText("Other people talking", " Fireworks", "Loud voices",
                 "Household appliances (e.g. blenders, vacuum)", "Vehicles (e.g. trucks, motorbikes)",
                 "Bathroom appliances (e.g. hair dryers, hand dryers)");
@@ -1593,6 +1642,12 @@ namespace Login {
             
             determineDrawing(e, 0, 0, topLeftPB2.Width, topLeftPB2.Height, 0);
         }
+
+        private void TwoImageTopPB_Paint(object sender, PaintEventArgs e)
+        {
+            determineDrawing(e, 0, 0, topLeftPB2.Width, topLeftPB2.Height, 1);
+            determineDrawing(e, 0, 0, topMidPB2.Width, topMidPB2.Height, 1);
+        }
         private void topMidPB_Paint(object sender, PaintEventArgs e) {
             determineDrawing(e, 0, 0, topMidPB2.Width, topMidPB2.Height, 1);
         }
@@ -1605,6 +1660,12 @@ namespace Login {
         private void bottomMidPB_Paint(object sender, PaintEventArgs e) {
             determineDrawing(e, 0, 0, bottomMidPB2.Width, bottomMidPB2.Height, 4);
         }
+        private void TwoImageBottomPB_Paint(object sender, PaintEventArgs e)
+        {
+            determineDrawing(e, 0, 0, bottomLeftPB2.Width, bottomLeftPB2.Height, 4);
+            determineDrawing(e, 0, 0, bottomMidPB2.Width, bottomMidPB2.Height, 4);
+        }
+
         private void bottomRightPB_Paint(object sender, PaintEventArgs e) {
             determineDrawing(e, 0, 0, bottomRightPB2.Width, bottomRightPB2.Height, 5);
         }
@@ -2093,16 +2154,58 @@ namespace Login {
             topMidPB2.Invalidate();
             page1Selections[1] = "A Little";
         }
+
         private void topMidALotBtn_Click(object sender, EventArgs e) {
             PlayAlotPlayer();
             //This will refresh the picture box
             topMidPB2.Invalidate();
             page1Selections[1] = "A Lot";
         }
+
+        private void twoImageTopMidALittleImageBtn_Click(object sender, EventArgs e)
+        {
+            PlayAlittlePlayer();
+            //This will refresh the picture box
+
+            topMidPB2.Invalidate();
+            topLeftPB2.Invalidate();
+            page1Selections[1] = "A Little";
+        }
+
+        private void twoImageTopMidALotBtn_Click(object sender, EventArgs e)
+        {
+            PlayAlotPlayer();
+            //This will refresh the picture box
+            topMidPB2.Invalidate();
+            topLeftPB2.Invalidate();
+            page1Selections[1] = "A Lot";
+        }
+
+        private void twoImageBottomMidALittleImageBtn_Click(object sender, EventArgs e)
+        {
+            PlayAlittlePlayer();
+            //This will refresh the picture box
+
+            bottomMidPB2.Invalidate();
+            bottomLeftPB2.Invalidate();
+            page1Selections[4] = "A Little";
+        }
+
+        private void twoImageBottomMidALotBtn_Click(object sender, EventArgs e)
+        {
+            PlayAlotPlayer();
+            //This will refresh the picture box
+            bottomMidPB2.Invalidate();
+            bottomLeftPB2.Invalidate();
+            page1Selections[4] = "A Lot";
+        }
+
         private void topRightALittleBtn_Click(object sender, EventArgs e) {
             PlayAlittlePlayer();
             //This will refresh the picture box
             topRightPB2.Invalidate();
+            topLeftPB2.Invalidate();
+
             page1Selections[2] = "A Little";
         }
         private void topRightPBALotBtn_Click(object sender, EventArgs e) {
