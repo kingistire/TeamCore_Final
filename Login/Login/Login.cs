@@ -32,14 +32,11 @@ namespace Login {
             SqlDataAdapter sda = new SqlDataAdapter("Select fName, lName from Login Where email='" + tbEmail.Text + "' and Password='" + tbPassword.Text + "'",con);
             DataTable dt = new System.Data.DataTable();
             sda.Fill(dt);
-            //change it to == 1 for proper login functionality
-            //matches row to info stored in db
             if (dt.Rows.Count == 1) {
                 this.Hide();
                 MDIParent1 ss = new MDIParent1();
-                ss.Size = new Size(1000, 700);
                 ss.Show();
-                //((Form)ss).Controls["label1"].Text = "You're logged in as: " + dt.Rows[0][0].ToString();
+                Globals.adminID = dt.Rows[0][0].ToString() + " " + dt.Rows[0][1].ToString();
             }
             else {
                 MessageBox.Show("Incorrect Username or Password.\nPlease try again.");

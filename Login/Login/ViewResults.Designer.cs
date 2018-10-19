@@ -36,10 +36,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(204, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(272, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 90);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
@@ -55,10 +55,10 @@
             this.btnSave.ForeColor = System.Drawing.Color.Navy;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.Location = new System.Drawing.Point(118, 220);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Location = new System.Drawing.Point(157, 271);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(162, 43);
+            this.btnSave.Size = new System.Drawing.Size(216, 53);
             this.btnSave.TabIndex = 18;
             this.btnSave.Text = "View Summary";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -69,10 +69,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label7.Location = new System.Drawing.Point(11, 94);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(15, 116);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(240, 57);
+            this.label7.Size = new System.Drawing.Size(297, 72);
             this.label7.TabIndex = 17;
             this.label7.Text = "Find the user\'s ID by clicking \r\nManage users > View user profiles\r\nand enter it " +
     "below";
@@ -82,10 +81,9 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(11, 172);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsername.Location = new System.Drawing.Point(15, 212);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(113, 16);
+            this.lblUsername.Size = new System.Drawing.Size(134, 19);
             this.lblUsername.TabIndex = 16;
             this.lblUsername.Text = "Users Unique ID:";
             // 
@@ -95,35 +93,35 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(10, 20);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(13, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 46);
+            this.label2.Size = new System.Drawing.Size(168, 58);
             this.label2.TabIndex = 15;
             this.label2.Text = "View the user\'s \r\nsummary";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tbID
             // 
-            this.tbID.Location = new System.Drawing.Point(148, 171);
-            this.tbID.Margin = new System.Windows.Forms.Padding(2);
+            this.tbID.Location = new System.Drawing.Point(197, 210);
+            this.tbID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbID.Name = "tbID";
-            this.tbID.Size = new System.Drawing.Size(105, 20);
+            this.tbID.Size = new System.Drawing.Size(139, 22);
             this.tbID.TabIndex = 14;
             // 
             // ViewResults
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(295, 289);
+            this.ClientSize = new System.Drawing.Size(393, 356);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbID);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ViewResults";
-            this.Text = "ViewResults";
+            this.Text = "View Results";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

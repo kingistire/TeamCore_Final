@@ -13,6 +13,9 @@ namespace Login {
         public IndependentCover() {
             InitializeComponent();
             this.Location = new Point(0, 0);
+            label2.Text = Globals.userID;
+            label4.Text = Globals.adminID;
+            label6.Text = DateTime.Now.ToString("d/M/yyyy");
         }
 
         private void button2_Click(object sender, EventArgs e) {

@@ -61,8 +61,6 @@
             this.lblTL = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.picInstruction = new System.Windows.Forms.PictureBox();
             this.lblQuestion = new System.Windows.Forms.Label();
             this.picSense = new System.Windows.Forms.PictureBox();
@@ -74,7 +72,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -82,7 +79,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.readOutLoudPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightPB2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomMidPB)).BeginInit();
@@ -106,8 +102,9 @@
             // 
             // panel1
             // 
-            this.panel1.AutoSize = true;
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel1.Controls.Add(this.readOutLoudToggleBtn);
             this.panel1.Controls.Add(this.readOutLoudPanel);
             this.panel1.Controls.Add(this.bottomRightPB);
             this.panel1.Controls.Add(this.bottomRightALotBtn);
@@ -143,26 +140,21 @@
             this.panel1.Controls.Add(this.lblTL);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.picInstruction);
             this.panel1.Controls.Add(this.lblQuestion);
             this.panel1.Controls.Add(this.picSense);
             this.panel1.Controls.Add(this.picBackground);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel1.MinimumSize = new System.Drawing.Size(1316, 1051);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1340, 1051);
+            this.panel1.Size = new System.Drawing.Size(1565, 980);
             this.panel1.TabIndex = 0;
             // 
             // readOutLoudPanel
             // 
             this.readOutLoudPanel.BackColor = System.Drawing.Color.White;
-            this.readOutLoudPanel.Controls.Add(this.readOutLoudToggleBtn);
-            this.readOutLoudPanel.Location = new System.Drawing.Point(1143, 32);
-            this.readOutLoudPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.readOutLoudPanel.Location = new System.Drawing.Point(1359, 30);
+            this.readOutLoudPanel.Margin = new System.Windows.Forms.Padding(4);
             this.readOutLoudPanel.Name = "readOutLoudPanel";
             this.readOutLoudPanel.Size = new System.Drawing.Size(172, 59);
             this.readOutLoudPanel.TabIndex = 57;
@@ -177,7 +169,7 @@
             this.readOutLoudToggleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.readOutLoudToggleBtn.ForeColor = System.Drawing.Color.Navy;
             this.readOutLoudToggleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.readOutLoudToggleBtn.Location = new System.Drawing.Point(1, 2);
+            this.readOutLoudToggleBtn.Location = new System.Drawing.Point(1359, 30);
             this.readOutLoudToggleBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.readOutLoudToggleBtn.Name = "readOutLoudToggleBtn";
             this.readOutLoudToggleBtn.Size = new System.Drawing.Size(171, 57);
@@ -189,8 +181,8 @@
             // 
             // bottomRightPB
             // 
-            this.bottomRightPB.Location = new System.Drawing.Point(971, 635);
-            this.bottomRightPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomRightPB.Location = new System.Drawing.Point(1176, 635);
+            this.bottomRightPB.Margin = new System.Windows.Forms.Padding(4);
             this.bottomRightPB.MaximumSize = new System.Drawing.Size(481, 432);
             this.bottomRightPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.bottomRightPB.Name = "bottomRightPB";
@@ -202,8 +194,8 @@
             // 
             // bottomRightALotBtn
             // 
-            this.bottomRightALotBtn.Location = new System.Drawing.Point(1085, 862);
-            this.bottomRightALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomRightALotBtn.Location = new System.Drawing.Point(1290, 862);
+            this.bottomRightALotBtn.Margin = new System.Windows.Forms.Padding(4);
             this.bottomRightALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.bottomRightALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.bottomRightALotBtn.Name = "bottomRightALotBtn";
@@ -216,8 +208,8 @@
             // 
             // bottomRightALittleBtn
             // 
-            this.bottomRightALittleBtn.Location = new System.Drawing.Point(971, 862);
-            this.bottomRightALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomRightALittleBtn.Location = new System.Drawing.Point(1176, 862);
+            this.bottomRightALittleBtn.Margin = new System.Windows.Forms.Padding(4);
             this.bottomRightALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.bottomRightALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.bottomRightALittleBtn.Name = "bottomRightALittleBtn";
@@ -231,8 +223,8 @@
             // bottomRightPB2
             // 
             this.bottomRightPB2.BackColor = System.Drawing.Color.AliceBlue;
-            this.bottomRightPB2.Location = new System.Drawing.Point(937, 604);
-            this.bottomRightPB2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomRightPB2.Location = new System.Drawing.Point(1142, 604);
+            this.bottomRightPB2.Margin = new System.Windows.Forms.Padding(4);
             this.bottomRightPB2.MaximumSize = new System.Drawing.Size(481, 432);
             this.bottomRightPB2.MinimumSize = new System.Drawing.Size(215, 186);
             this.bottomRightPB2.Name = "bottomRightPB2";
@@ -245,7 +237,7 @@
             // lblBR
             // 
             this.lblBR.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBR.Location = new System.Drawing.Point(973, 890);
+            this.lblBR.Location = new System.Drawing.Point(1178, 890);
             this.lblBR.MaximumSize = new System.Drawing.Size(200, 75);
             this.lblBR.Name = "lblBR";
             this.lblBR.Size = new System.Drawing.Size(200, 75);
@@ -254,8 +246,8 @@
             // 
             // bottomMidPB
             // 
-            this.bottomMidPB.Location = new System.Drawing.Point(551, 635);
-            this.bottomMidPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomMidPB.Location = new System.Drawing.Point(646, 635);
+            this.bottomMidPB.Margin = new System.Windows.Forms.Padding(4);
             this.bottomMidPB.MaximumSize = new System.Drawing.Size(481, 432);
             this.bottomMidPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.bottomMidPB.Name = "bottomMidPB";
@@ -267,8 +259,8 @@
             // 
             // bottomMidALotBtn
             // 
-            this.bottomMidALotBtn.Location = new System.Drawing.Point(665, 862);
-            this.bottomMidALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomMidALotBtn.Location = new System.Drawing.Point(760, 862);
+            this.bottomMidALotBtn.Margin = new System.Windows.Forms.Padding(4);
             this.bottomMidALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.bottomMidALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.bottomMidALotBtn.Name = "bottomMidALotBtn";
@@ -281,8 +273,8 @@
             // 
             // bottomMidALittleBtn
             // 
-            this.bottomMidALittleBtn.Location = new System.Drawing.Point(551, 862);
-            this.bottomMidALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomMidALittleBtn.Location = new System.Drawing.Point(646, 862);
+            this.bottomMidALittleBtn.Margin = new System.Windows.Forms.Padding(4);
             this.bottomMidALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.bottomMidALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.bottomMidALittleBtn.Name = "bottomMidALittleBtn";
@@ -296,8 +288,8 @@
             // bottomMidPB2
             // 
             this.bottomMidPB2.BackColor = System.Drawing.Color.AliceBlue;
-            this.bottomMidPB2.Location = new System.Drawing.Point(517, 604);
-            this.bottomMidPB2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomMidPB2.Location = new System.Drawing.Point(612, 604);
+            this.bottomMidPB2.Margin = new System.Windows.Forms.Padding(4);
             this.bottomMidPB2.MaximumSize = new System.Drawing.Size(481, 432);
             this.bottomMidPB2.MinimumSize = new System.Drawing.Size(215, 186);
             this.bottomMidPB2.Name = "bottomMidPB2";
@@ -310,7 +302,7 @@
             // lblBM
             // 
             this.lblBM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBM.Location = new System.Drawing.Point(553, 890);
+            this.lblBM.Location = new System.Drawing.Point(648, 890);
             this.lblBM.MaximumSize = new System.Drawing.Size(200, 75);
             this.lblBM.Name = "lblBM";
             this.lblBM.Size = new System.Drawing.Size(200, 75);
@@ -320,7 +312,7 @@
             // bottomLeftPB
             // 
             this.bottomLeftPB.Location = new System.Drawing.Point(135, 635);
-            this.bottomLeftPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomLeftPB.Margin = new System.Windows.Forms.Padding(4);
             this.bottomLeftPB.MaximumSize = new System.Drawing.Size(481, 432);
             this.bottomLeftPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.bottomLeftPB.Name = "bottomLeftPB";
@@ -333,7 +325,7 @@
             // bottomLeftALotBtn
             // 
             this.bottomLeftALotBtn.Location = new System.Drawing.Point(249, 862);
-            this.bottomLeftALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomLeftALotBtn.Margin = new System.Windows.Forms.Padding(4);
             this.bottomLeftALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.bottomLeftALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.bottomLeftALotBtn.Name = "bottomLeftALotBtn";
@@ -347,7 +339,7 @@
             // bottomLeftALittleBtn
             // 
             this.bottomLeftALittleBtn.Location = new System.Drawing.Point(135, 862);
-            this.bottomLeftALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomLeftALittleBtn.Margin = new System.Windows.Forms.Padding(4);
             this.bottomLeftALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.bottomLeftALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.bottomLeftALittleBtn.Name = "bottomLeftALittleBtn";
@@ -362,7 +354,7 @@
             // 
             this.bottomLeftPB2.BackColor = System.Drawing.Color.AliceBlue;
             this.bottomLeftPB2.Location = new System.Drawing.Point(101, 604);
-            this.bottomLeftPB2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bottomLeftPB2.Margin = new System.Windows.Forms.Padding(4);
             this.bottomLeftPB2.MaximumSize = new System.Drawing.Size(481, 432);
             this.bottomLeftPB2.MinimumSize = new System.Drawing.Size(215, 186);
             this.bottomLeftPB2.Name = "bottomLeftPB2";
@@ -384,8 +376,8 @@
             // 
             // topRightPB
             // 
-            this.topRightPB.Location = new System.Drawing.Point(971, 246);
-            this.topRightPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topRightPB.Location = new System.Drawing.Point(1176, 246);
+            this.topRightPB.Margin = new System.Windows.Forms.Padding(4);
             this.topRightPB.MaximumSize = new System.Drawing.Size(481, 432);
             this.topRightPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.topRightPB.Name = "topRightPB";
@@ -397,8 +389,8 @@
             // 
             // topRightALotBtn
             // 
-            this.topRightALotBtn.Location = new System.Drawing.Point(1087, 473);
-            this.topRightALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topRightALotBtn.Location = new System.Drawing.Point(1292, 473);
+            this.topRightALotBtn.Margin = new System.Windows.Forms.Padding(4);
             this.topRightALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.topRightALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.topRightALotBtn.Name = "topRightALotBtn";
@@ -411,8 +403,8 @@
             // 
             // topRightALittleBtn
             // 
-            this.topRightALittleBtn.Location = new System.Drawing.Point(972, 473);
-            this.topRightALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topRightALittleBtn.Location = new System.Drawing.Point(1177, 473);
+            this.topRightALittleBtn.Margin = new System.Windows.Forms.Padding(4);
             this.topRightALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.topRightALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.topRightALittleBtn.Name = "topRightALittleBtn";
@@ -426,8 +418,8 @@
             // topRightPB2
             // 
             this.topRightPB2.BackColor = System.Drawing.Color.AliceBlue;
-            this.topRightPB2.Location = new System.Drawing.Point(939, 215);
-            this.topRightPB2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topRightPB2.Location = new System.Drawing.Point(1144, 215);
+            this.topRightPB2.Margin = new System.Windows.Forms.Padding(4);
             this.topRightPB2.MaximumSize = new System.Drawing.Size(481, 432);
             this.topRightPB2.MinimumSize = new System.Drawing.Size(215, 186);
             this.topRightPB2.Name = "topRightPB2";
@@ -440,7 +432,7 @@
             // lblTR
             // 
             this.lblTR.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTR.Location = new System.Drawing.Point(968, 505);
+            this.lblTR.Location = new System.Drawing.Point(1173, 505);
             this.lblTR.MaximumSize = new System.Drawing.Size(200, 75);
             this.lblTR.Name = "lblTR";
             this.lblTR.Size = new System.Drawing.Size(200, 75);
@@ -449,8 +441,8 @@
             // 
             // topMidPB
             // 
-            this.topMidPB.Location = new System.Drawing.Point(551, 246);
-            this.topMidPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topMidPB.Location = new System.Drawing.Point(646, 246);
+            this.topMidPB.Margin = new System.Windows.Forms.Padding(4);
             this.topMidPB.MaximumSize = new System.Drawing.Size(481, 432);
             this.topMidPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.topMidPB.Name = "topMidPB";
@@ -462,8 +454,8 @@
             // 
             // topMidALotBtn
             // 
-            this.topMidALotBtn.Location = new System.Drawing.Point(665, 473);
-            this.topMidALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topMidALotBtn.Location = new System.Drawing.Point(760, 473);
+            this.topMidALotBtn.Margin = new System.Windows.Forms.Padding(4);
             this.topMidALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.topMidALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.topMidALotBtn.Name = "topMidALotBtn";
@@ -476,8 +468,8 @@
             // 
             // topMidALittleBtn
             // 
-            this.topMidALittleBtn.Location = new System.Drawing.Point(551, 473);
-            this.topMidALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topMidALittleBtn.Location = new System.Drawing.Point(646, 473);
+            this.topMidALittleBtn.Margin = new System.Windows.Forms.Padding(4);
             this.topMidALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.topMidALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.topMidALittleBtn.Name = "topMidALittleBtn";
@@ -491,8 +483,8 @@
             // topMidPB2
             // 
             this.topMidPB2.BackColor = System.Drawing.Color.AliceBlue;
-            this.topMidPB2.Location = new System.Drawing.Point(517, 215);
-            this.topMidPB2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topMidPB2.Location = new System.Drawing.Point(612, 215);
+            this.topMidPB2.Margin = new System.Windows.Forms.Padding(4);
             this.topMidPB2.MaximumSize = new System.Drawing.Size(481, 432);
             this.topMidPB2.MinimumSize = new System.Drawing.Size(215, 186);
             this.topMidPB2.Name = "topMidPB2";
@@ -505,7 +497,7 @@
             // lblTM
             // 
             this.lblTM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTM.Location = new System.Drawing.Point(549, 505);
+            this.lblTM.Location = new System.Drawing.Point(644, 505);
             this.lblTM.MaximumSize = new System.Drawing.Size(200, 75);
             this.lblTM.Name = "lblTM";
             this.lblTM.Size = new System.Drawing.Size(200, 75);
@@ -515,7 +507,7 @@
             // topLeftPB
             // 
             this.topLeftPB.Location = new System.Drawing.Point(135, 246);
-            this.topLeftPB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topLeftPB.Margin = new System.Windows.Forms.Padding(4);
             this.topLeftPB.MaximumSize = new System.Drawing.Size(481, 432);
             this.topLeftPB.MinimumSize = new System.Drawing.Size(215, 186);
             this.topLeftPB.Name = "topLeftPB";
@@ -527,8 +519,8 @@
             // 
             // btnNext1
             // 
-            this.btnNext1.Location = new System.Drawing.Point(1212, 529);
-            this.btnNext1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNext1.Location = new System.Drawing.Point(1417, 529);
+            this.btnNext1.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext1.MaximumSize = new System.Drawing.Size(233, 62);
             this.btnNext1.MinimumSize = new System.Drawing.Size(100, 28);
             this.btnNext1.Name = "btnNext1";
@@ -540,8 +532,8 @@
             // 
             // previousInterviewSlideBtn
             // 
-            this.previousInterviewSlideBtn.Location = new System.Drawing.Point(13, 529);
-            this.previousInterviewSlideBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.previousInterviewSlideBtn.Location = new System.Drawing.Point(13, 533);
+            this.previousInterviewSlideBtn.Margin = new System.Windows.Forms.Padding(4);
             this.previousInterviewSlideBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.previousInterviewSlideBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.previousInterviewSlideBtn.Name = "previousInterviewSlideBtn";
@@ -555,7 +547,7 @@
             // topLeftPBALotBtn
             // 
             this.topLeftPBALotBtn.Location = new System.Drawing.Point(249, 473);
-            this.topLeftPBALotBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topLeftPBALotBtn.Margin = new System.Windows.Forms.Padding(4);
             this.topLeftPBALotBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.topLeftPBALotBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.topLeftPBALotBtn.Name = "topLeftPBALotBtn";
@@ -569,7 +561,7 @@
             // topLeftPBALittleBtn
             // 
             this.topLeftPBALittleBtn.Location = new System.Drawing.Point(135, 473);
-            this.topLeftPBALittleBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topLeftPBALittleBtn.Margin = new System.Windows.Forms.Padding(4);
             this.topLeftPBALittleBtn.MaximumSize = new System.Drawing.Size(233, 62);
             this.topLeftPBALittleBtn.MinimumSize = new System.Drawing.Size(100, 28);
             this.topLeftPBALittleBtn.Name = "topLeftPBALittleBtn";
@@ -584,7 +576,7 @@
             // 
             this.topLeftPB2.BackColor = System.Drawing.Color.AliceBlue;
             this.topLeftPB2.Location = new System.Drawing.Point(101, 215);
-            this.topLeftPB2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topLeftPB2.Margin = new System.Windows.Forms.Padding(4);
             this.topLeftPB2.MaximumSize = new System.Drawing.Size(481, 432);
             this.topLeftPB2.MinimumSize = new System.Drawing.Size(215, 186);
             this.topLeftPB2.Name = "topLeftPB2";
@@ -622,41 +614,24 @@
             this.label8.TabIndex = 27;
             this.label8.Text = "Fill";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1937, 791);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 17);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Fill";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1487, 791);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 17);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Fill";
-            // 
             // picInstruction
             // 
             this.picInstruction.Image = global::Login.Properties.Resources.aLotaLittle;
-            this.picInstruction.Location = new System.Drawing.Point(971, 34);
+            this.picInstruction.Location = new System.Drawing.Point(1197, 30);
             this.picInstruction.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picInstruction.Name = "picInstruction";
             this.picInstruction.Size = new System.Drawing.Size(155, 113);
             this.picInstruction.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picInstruction.TabIndex = 24;
             this.picInstruction.TabStop = false;
+            this.picInstruction.Click += new System.EventHandler(this.picInstruction_Click);
             // 
             // lblQuestion
             // 
             this.lblQuestion.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblQuestion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestion.Location = new System.Drawing.Point(371, 20);
+            this.lblQuestion.Location = new System.Drawing.Point(522, 9);
             this.lblQuestion.MaximumSize = new System.Drawing.Size(500, 150);
             this.lblQuestion.Name = "lblQuestion";
             this.lblQuestion.Size = new System.Drawing.Size(500, 150);
@@ -668,7 +643,7 @@
             // picSense
             // 
             this.picSense.Image = ((System.Drawing.Image)(resources.GetObject("picSense.Image")));
-            this.picSense.Location = new System.Drawing.Point(87, 26);
+            this.picSense.Location = new System.Drawing.Point(231, 25);
             this.picSense.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picSense.Name = "picSense";
             this.picSense.Size = new System.Drawing.Size(125, 126);
@@ -682,12 +657,13 @@
             this.picBackground.Location = new System.Drawing.Point(0, 0);
             this.picBackground.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBackground.Name = "picBackground";
-            this.picBackground.Size = new System.Drawing.Size(1340, 180);
+            this.picBackground.Size = new System.Drawing.Size(1574, 180);
             this.picBackground.TabIndex = 21;
             this.picBackground.TabStop = false;
             // 
             // panel2
             // 
+            this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.BackColor = System.Drawing.Color.AliceBlue;
             this.panel2.Controls.Add(this.tbAnswer1);
             this.panel2.Controls.Add(this.label14);
@@ -695,24 +671,22 @@
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label20);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1340, 985);
+            this.panel2.Size = new System.Drawing.Size(1565, 980);
             this.panel2.TabIndex = 29;
             // 
             // tbAnswer1
             // 
             this.tbAnswer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAnswer1.Location = new System.Drawing.Point(313, 497);
+            this.tbAnswer1.Location = new System.Drawing.Point(414, 550);
             this.tbAnswer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbAnswer1.Multiline = true;
             this.tbAnswer1.Name = "tbAnswer1";
@@ -723,7 +697,7 @@
             // 
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(335, 196);
+            this.label14.Location = new System.Drawing.Point(429, 254);
             this.label14.MaximumSize = new System.Drawing.Size(700, 140);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(651, 85);
@@ -734,7 +708,7 @@
             // lblQuestion1
             // 
             this.lblQuestion1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestion1.Location = new System.Drawing.Point(335, 310);
+            this.lblQuestion1.Location = new System.Drawing.Point(429, 368);
             this.lblQuestion1.MaximumSize = new System.Drawing.Size(700, 175);
             this.lblQuestion1.Name = "lblQuestion1";
             this.lblQuestion1.Size = new System.Drawing.Size(651, 175);
@@ -770,15 +744,6 @@
             this.label12.TabIndex = 27;
             this.label12.Text = "Fill";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(1487, 791);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(25, 17);
-            this.label13.TabIndex = 27;
-            this.label13.Text = "Fill";
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -790,7 +755,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Login.Properties.Resources.aLotaLittle;
-            this.pictureBox1.Location = new System.Drawing.Point(1083, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(1200, 34);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(155, 113);
@@ -801,8 +766,9 @@
             // label21
             // 
             this.label21.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(371, 20);
+            this.label21.Location = new System.Drawing.Point(506, 20);
             this.label21.MaximumSize = new System.Drawing.Size(500, 150);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(500, 150);
@@ -814,7 +780,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(87, 26);
+            this.pictureBox2.Location = new System.Drawing.Point(212, 26);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(125, 126);
@@ -828,14 +794,15 @@
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1315, 180);
+            this.pictureBox3.Size = new System.Drawing.Size(1565, 180);
             this.pictureBox3.TabIndex = 21;
             this.pictureBox3.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1205, 478);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button1.Location = new System.Drawing.Point(1240, 529);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.MaximumSize = new System.Drawing.Size(233, 62);
             this.button1.MinimumSize = new System.Drawing.Size(100, 28);
             this.button1.Name = "button1";
@@ -847,21 +814,22 @@
             // 
             // GuidedInterview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1340, 985);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1559, 981);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1337, 1025);
+            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1357, 1028);
             this.Name = "GuidedInterview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Guided Interview";
             this.Load += new System.EventHandler(this.GuidedInterview_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.readOutLoudPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightPB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomRightPB2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomMidPB)).EndInit();
@@ -883,7 +851,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -892,15 +859,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox picSense;
         private System.Windows.Forms.PictureBox picInstruction;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label21;

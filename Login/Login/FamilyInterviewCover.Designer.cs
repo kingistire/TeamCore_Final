@@ -53,9 +53,8 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(225, 536);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 17);
+            this.label2.Size = new System.Drawing.Size(0, 17);
             this.label2.TabIndex = 3;
-            this.label2.Text = "John";
             // 
             // label3
             // 
@@ -71,9 +70,8 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(225, 581);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 17);
+            this.label4.Size = new System.Drawing.Size(0, 17);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Jill Ashburner";
             // 
             // label5
             // 
@@ -89,9 +87,8 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(225, 623);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 17);
+            this.label6.Size = new System.Drawing.Size(0, 17);
             this.label6.TabIndex = 3;
-            this.label6.Text = "26/08/2018";
             // 
             // button2
             // 
@@ -151,7 +148,7 @@
             this.Controls.Add(this.pictureBox37);
             this.Name = "FamilyInterviewCover";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Family Observations";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).EndInit();

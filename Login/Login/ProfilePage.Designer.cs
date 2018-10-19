@@ -39,8 +39,8 @@
             this.deleteUserBtn = new System.Windows.Forms.Button();
             this.exportProfileBtn = new System.Windows.Forms.Button();
             this.InterviewHistoryDataGrid = new System.Windows.Forms.DataGridView();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.selectInterview = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.InterviewHistoryDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -202,7 +202,7 @@
             this.InterviewHistoryDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.selectInterview});
             this.InterviewHistoryDataGrid.Location = new System.Drawing.Point(251, 208);
-            this.InterviewHistoryDataGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.InterviewHistoryDataGrid.Margin = new System.Windows.Forms.Padding(4);
             this.InterviewHistoryDataGrid.Name = "InterviewHistoryDataGrid";
             this.InterviewHistoryDataGrid.Size = new System.Drawing.Size(904, 268);
             this.InterviewHistoryDataGrid.TabIndex = 37;
@@ -233,9 +233,9 @@
             this.Controls.Add(this.genderLabel);
             this.Controls.Add(this.dobLabel);
             this.Controls.Add(this.nameLabel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProfilePage";
-            this.Text = "ProfilePage";
+            this.Text = "Profile Page";
             this.Load += new System.EventHandler(this.ProfilePage_Load);
             this.Enter += new System.EventHandler(this.ProfilePage_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.InterviewHistoryDataGrid)).EndInit();

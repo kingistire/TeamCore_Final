@@ -75,7 +75,7 @@ namespace Login {
                 famCover.Show();
                 this.Hide();
             }
-            Globals.userID = Convert.ToString(comboBox1.SelectedValue);
+            //Globals.userID = Convert.ToString(comboBox1.SelectedValue);
         }
 
         private void SelectInterview_Load(object sender, EventArgs e) {
@@ -109,8 +109,9 @@ namespace Login {
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e) {
             string comboBoxID = comboBox1.SelectedValue.ToString();
+            //dont delete - used to push to db - please ignore poor coding standard
             label2.Text = comboBox1.SelectedValue.ToString();
-            
+            Globals.userID = comboBox1.Text;
         }
     }
 }

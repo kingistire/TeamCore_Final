@@ -27,10 +27,11 @@ namespace Login {
 
         private string pageLabelReadOutLoudPath;
 
+
         public GuidedInterview() {
 
             InitializeComponent();
-
+            HorizontalScroll.Enabled = false;
             this.Hide();
             panel1.BringToFront();
             //Dynamically create the circular picture boxes
@@ -52,7 +53,7 @@ namespace Login {
             createCirclePB(topMidPB);
             createCirclePB(topMidPB2);
 
-            //// Proload alittle alot ////
+            //// Preload alittle alot ////
             alotPlayer.SoundLocation = @"..\..\resources\0. System\UiAlotSound.wav";//MISSINGFILE
             alotPlayer.Load();
             alittlePlayer.SoundLocation = @"..\..\resources\0. System\UiAlittleSound.wav";//MISSINGFILE
@@ -2258,6 +2259,10 @@ namespace Login {
                 playReadOutLoud();
             }
             catch { }
+        }
+
+        private void picInstruction_Click(object sender, EventArgs e) {
+
         }
     }
 }

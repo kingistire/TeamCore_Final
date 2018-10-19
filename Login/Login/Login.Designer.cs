@@ -66,7 +66,7 @@
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(168, 22);
             this.tbEmail.TabIndex = 0;
-            this.tbEmail.Text = "bw@hotmail";
+            this.tbEmail.Text = "bw@hotmail.com";
             // 
             // lblEmail
             // 

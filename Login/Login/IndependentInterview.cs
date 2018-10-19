@@ -70,10 +70,10 @@ namespace Login {
             createCirclePB(topMidPB2);
 
 
-            //// Proload alittle alot ////
-            alotPlayer.SoundLocation = @"C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\resources\0. System\UiAlotSound.wav";//MISSINGFILE
+            //// Preload alittle alot ////
+            alotPlayer.SoundLocation = @"..\..\resources\0. System\UiAlotSound.wav";//MISSINGFILE
             alotPlayer.Load();
-            alittlePlayer.SoundLocation = @"C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\resources\0. System\UiAlittleSound.wav";//MISSINGFILE
+            alittlePlayer.SoundLocation = @"..\..\resources\0. System\UiAlittleSound.wav";//MISSINGFILE
             alittlePlayer.Load();
 
 
