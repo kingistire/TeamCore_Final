@@ -13,5 +13,7 @@ namespace Login {
         public static string userID = "";
         public static bool previousClicked = false;
         public static bool toggleReadOutLoad = false;
+        public static int interviewRow = 0;
+        public static bool previousInterview = false;
     }
     }

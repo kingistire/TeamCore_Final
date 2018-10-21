@@ -69,9 +69,9 @@ namespace Login {
 
             //// Proload alittle alot ////
             alotPlayer.SoundLocation = @"C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\resources\0. System\UiAlotSound.wav";
-            alotPlayer.Load();
+            //alotPlayer.Load();
             alittlePlayer.SoundLocation = @"C:\Users\Jamie-admin\Documents\TeamCore_Final\Login\Login\resources\0. System\UiAlittleSound.wav";
-            alittlePlayer.Load();
+            //alittlePlayer.Load();
 
 
             Globals.shortResponse = true;
