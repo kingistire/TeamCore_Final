@@ -11,6 +11,7 @@ namespace Login {
         public static bool addUserExists = false;
         public static bool shortResponse = true;
         public static string userID = "";
+        public static string usersName = "";
         public static string adminID = "";
         public static bool previousClicked = false;
         public static bool toggleReadOutLoad = false;

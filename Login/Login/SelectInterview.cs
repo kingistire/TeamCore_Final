@@ -111,7 +111,7 @@ namespace Login {
             string comboBoxID = comboBox1.SelectedValue.ToString();
             //dont delete - used to push to db - please ignore poor coding standard
             label2.Text = comboBox1.SelectedValue.ToString();
-            Globals.userID = comboBox1.Text;
+            Globals.usersName = comboBox1.Text;
         }
     }
 }

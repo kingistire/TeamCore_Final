@@ -926,9 +926,7 @@ namespace Login {
                 interviewForm5.Show();
                 this.Hide();
             }
-            //-------------
-            //SIGHT SECTION
-            //-------------
+
             else if (Globals.interview_page == 7) {
                 if (!Globals.previousClicked) {
                     writeToDB4("hummingOrWhistling", "tappingFeet", "tappingFingers", "clickingPen", "makeALotSounds");
@@ -941,6 +939,9 @@ namespace Login {
                 sightInterview1.Show();
                 this.Hide();
             }
+            //-------------
+            //SIGHT SECTION
+            //-------------
             else if (Globals.interview_page == 8) {
                 if (!Globals.previousClicked) {
                     writeToDB5("sunlight", "fluorescentLight", "lightAndShadow", "busyPatterns", "classroomLight", "dontLikeToLookAt");
@@ -987,16 +988,16 @@ namespace Login {
                     updateOnPreviousClicked("sandy", "sticky", "grassy", "woolClothes", "tightClothes", "stiffClothes", "dontLikeFeelingOf");
                     Globals.previousClicked = false;
                 }
-                GuidedInterview touchInterview2 = new GuidedInterview();
-                touchInterview2.InstanceRef10 = this;
-                touchInterview2.Show();
+                GuidedInterview touchInterview1 = new GuidedInterview();
+                touchInterview1.InstanceRef10 = this;
+                touchInterview1.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 12) {
                 updateDBdontLikeFeelingOf("shoes", "splashingWater", "dontLikeFeelingOf");
-                GuidedInterview touchInterview3 = new GuidedInterview();
-                touchInterview3.InstanceRef11 = this;
-                touchInterview3.Show();
+                GuidedInterview touchInterview1p2 = new GuidedInterview();
+                touchInterview1p2.InstanceRef11 = this;
+                touchInterview1p2.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 13) {
@@ -1006,19 +1007,17 @@ namespace Login {
                     updateOnPreviousClicked("beingHuggedOrKissed", "beingCrowded", "beingTappedOnTheShoulder", "havingSunscreenPutOn", "beingBumped", "havingAHaircut", "peopleTouchDontLike");
                     Globals.previousClicked = false;
                 }
-                GuidedInterview touchInterview4 = new GuidedInterview();
-                touchInterview4.InstanceRef12 = this;
-                touchInterview4.Show();
+                GuidedInterview touchInterview2 = new GuidedInterview();
+                touchInterview2.InstanceRef12 = this;
+                touchInterview2.Show();
                 this.Hide();
             }
-            //-------------
-            //SMELL SECTION
-            //-------------
+
             else if (Globals.interview_page == 14) {
                 updateDBpeopleTouchDontLike("doctorTouchingMe", "dentistTouchingMe", "peopleTouchDontLike");
-                GuidedInterview smellInterview1 = new GuidedInterview();
-                smellInterview1.InstanceRef13 = this;
-                smellInterview1.Show();
+                GuidedInterview touchInterview2p2 = new GuidedInterview();
+                touchInterview2p2.InstanceRef13 = this;
+                touchInterview2p2.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 15) {
@@ -1027,50 +1026,88 @@ namespace Login {
                 } else {
                     updateOnPreviousClicked("soft", "rubbery", "furry", "huggingPeople", "touchingPeople", "beingSquashedWithAPillow", "likeTheFeelingOf");
                     Globals.previousClicked = false;
-                }                GuidedInterview smellInterview2 = new GuidedInterview();
-                smellInterview2.InstanceRef14 = this;
-                smellInterview2.Show();
+                }
+                GuidedInterview touchInterview3 = new GuidedInterview();
+                touchInterview3.InstanceRef14 = this;
+                touchInterview3.Show();
                 this.Hide();
             }
             //-------------
-            //TASTE SECTION
+            //SMELL SECTION
             //-------------
+            //added in as of 22/10
             else if (Globals.interview_page == 16) {
                 if (!Globals.previousClicked) {
-                    writeToDB5("smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople", "likeToSmell");
+                    //writeToDB("cookingSmells", "foodSmells", "cleaningProducts", "toiletSmells", "perfumes", "bodysmells", "dontLikeSmells");
                 } else {
+                    //updateOnPreviousClicked("cookingSmells", "foodSmells", "cleaningProducts", "toiletSmells", "perfumes", "bodysmells", "dontLikeSmells");
+                    Globals.previousClicked = false;
+                }
+                GuidedInterview smellInterview1 = new GuidedInterview();
+                smellInterview1.InstanceRef15 = this;
+                smellInterview1.Show();
+                this.Hide();
+            }
+            
+            else if (Globals.interview_page == 17) {
+                if (!Globals.previousClicked) {
+                    writeToDB5("smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople", "likeToSmell");
+                }
+                else {
                     previousUpdate5("smellingFoods", "smellingPlants", "smellingPerfume", "smellingSoap", "smellingPeople", "likeToSmell");
                     Globals.previousClicked = false;
                 }
-                GuidedInterview tasteInterview1 = new GuidedInterview();
-                tasteInterview1.InstanceRef15 = this;
-                tasteInterview1.Show();
+                GuidedInterview smellInterview2 = new GuidedInterview();
+                smellInterview2.InstanceRef15 = this;
+                smellInterview2.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 17) {
+
+            else if (Globals.interview_page == 18) {
                 if (!Globals.previousClicked) {
                     writeToDB("vegetables", "fruit", "meat", "fish", "eggs", "dairy", "foodGroupsDontLike");
                 } else {
                     updateOnPreviousClicked("vegetables", "fruit", "meat", "fish", "eggs", "dairy", "foodGroupsDontLike");
                     Globals.previousClicked = false;
                 }
-                GuidedInterview tasteInterview1p2 = new GuidedInterview();
-                tasteInterview1p2.InstanceRef16 = this;
-                tasteInterview1p2.Show();
-                this.Hide();
-            }
-            else if (Globals.interview_page == 18) {
-                updateDBfoodGroupsDontLike("bread", "pasta", "foodGroupsDontLike");
-                GuidedInterview tasteInterview2 = new GuidedInterview();
-                tasteInterview2.InstanceRef17 = this;
-                tasteInterview2.Show();
+                GuidedInterview tasteInterview1 = new GuidedInterview();
+                tasteInterview1.InstanceRef16 = this;
+                tasteInterview1.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 19) {
+                updateDBfoodGroupsDontLike("bread", "pasta", "foodGroupsDontLike");
+                GuidedInterview tasteInterview1p2 = new GuidedInterview();
+                tasteInterview1p2.InstanceRef17 = this;
+                tasteInterview1p2.Show();
+                this.Hide();
+            }
+            else if (Globals.interview_page == 20) {
                 if (!Globals.previousClicked) {
                     writeToDB("lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour", "tastesOrFeelsInMouthDontLike");
                 } else {
                     updateOnPreviousClicked("lumpy", "chewy", "runnyOrSlippery", "mixed", "sweet", "sour", "tastesOrFeelsInMouthDontLike");
+                    Globals.previousClicked = false;
+                }
+                GuidedInterview tasteInterview2 = new GuidedInterview();
+                tasteInterview2.InstanceRef18 = this;
+                tasteInterview2.Show();
+                this.Hide();
+            }
+            else if (Globals.interview_page == 21) {
+                updateDBtastesOrFeelsInMouthDontLike("salty", "spicy", "tastesOrFeelsInMouthDontLike");
+                GuidedInterview tasteInterview2p2 = new GuidedInterview();
+                tasteInterview2p2.InstanceRef19 = this;
+                tasteInterview2p2.Show();
+                this.Hide();
+            }
+            //added in as of 22/10
+            else if (Globals.interview_page == 22) {
+                if (!Globals.previousClicked) {
+                    //writeToDBTop2("familiarFoods", "unfamiliarFoods", "likeToEat");
+                }
+                else {
+                    //previousUpdate2("familiarFoods", "unfamiliarFoods", "likeToEat");
                     Globals.previousClicked = false;
                 }
                 GuidedInterview tasteInterview3 = new GuidedInterview();
@@ -1078,38 +1115,31 @@ namespace Login {
                 tasteInterview3.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 20) {
-                updateDBtastesOrFeelsInMouthDontLike("salty", "spicy", "tastesOrFeelsInMouthDontLike");
-                GuidedInterview tasteInterview4 = new GuidedInterview();
-                tasteInterview4.InstanceRef19 = this;
-                tasteInterview4.Show();
-                this.Hide();
-            }
-            else if (Globals.interview_page == 21) {
+            else if (Globals.interview_page == 23) {
                 if (!Globals.previousClicked) {
                     writeToDBTop3("shirt", "hair", "objects", "thingsPutInMouthALot");
                 } else {
                     previousUpdate3("shirt", "hair", "objects", "thingsPutInMouthALot");
                     Globals.previousClicked = false;
                 }
-                GuidedInterview mvmtInterview1 = new GuidedInterview();
-                mvmtInterview1.InstanceRef20 = this;
-                mvmtInterview1.Show();
+                GuidedInterview tasteInterview4 = new GuidedInterview();
+                tasteInterview4.InstanceRef20 = this;
+                tasteInterview4.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 22) {
+            else if (Globals.interview_page == 24) {
                 if (!Globals.previousClicked) {
                     writeToDB5("beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
                 } else {
                     previousUpdate5("beingJumpedOnOrTackled", "movingWhenICantSeeWhereIAmGoing", "balancing", "beingUpsideDown", "climbingUpHigh", "movingDontLike");
                     Globals.previousClicked = false;
                 }
-                GuidedInterview mvmtInterview2 = new GuidedInterview();
-                mvmtInterview2.InstanceRef21 = this;
-                mvmtInterview2.Show();
+                GuidedInterview mvmtInterview1 = new GuidedInterview();
+                mvmtInterview1.InstanceRef21 = this;
+                mvmtInterview1.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 23) {
+            else if (Globals.interview_page == 25) {
                 if (!Globals.previousClicked) {
                     writeToDBTop2("standingStill", "sittingStill", "hardToStayStill");
                 } else {
@@ -1117,53 +1147,53 @@ namespace Login {
                     Globals.previousClicked = false;
                 }
                 this.Hide();
-                GuidedInterview mvmtInterview3 = new GuidedInterview();
-                mvmtInterview3.InstanceRef22 = this;
-                mvmtInterview3.Show();
+                GuidedInterview mvmtInterview2 = new GuidedInterview();
+                mvmtInterview2.InstanceRef22 = this;
+                mvmtInterview2.Show();
             }
-            else if (Globals.interview_page == 24) {
+            else if (Globals.interview_page == 26) {
                 if (!Globals.previousClicked) {
                     writeToDB5("movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running", "movingThatYouLike");
                 } else {
                     previousUpdate5("movingInWater", "swinging", "spinning", "jumpingOnTheTrampoline", "running", "movingThatYouLike");
                     Globals.previousClicked = false;
                 }
-                GuidedInterview mvmtInterview4 = new GuidedInterview();
-                mvmtInterview4.InstanceRef23 = this;
-                mvmtInterview4.Show();
+                GuidedInterview mvmtInterview3 = new GuidedInterview();
+                mvmtInterview3.InstanceRef23 = this;
+                mvmtInterview3.Show();
                 this.Hide();
             }
-            //-------------------
-            //ENVIRONMENT SECTION
-            //-------------------
-            else if (Globals.interview_page == 25) {
+            else if (Globals.interview_page == 27) {
                 if (!Globals.previousClicked) {
                     writeToDB4("rocking", "movingHands", "clapping", "pacing", "moveOverAndOverAgain");
                 } else {
                     previousUpdate4("rocking", "movingHands", "clapping", "pacing", "moveOverAndOverAgain");
                     Globals.previousClicked = false;
                 }
-                GuidedInterview environmentInterview1 = new GuidedInterview();
-                environmentInterview1.InstanceRef24 = this;
-                environmentInterview1.Show();
+                GuidedInterview mvmtInterview4 = new GuidedInterview();
+                mvmtInterview4.InstanceRef24 = this;
+                mvmtInterview4.Show();
                 this.Hide();
             }
-            //-------------
-            //OTHER SECTION
-            //-------------
-            else if (Globals.interview_page == 26) {
+            //-------------------
+            //ENVIRONMENT SECTION
+            //-------------------
+            else if (Globals.interview_page == 28) {
                 if (!Globals.previousClicked) {
                     writeToDB5("supermarket", "party", "foodHall", "show", "shoppingMall", "other");
                 } else {
                     previousUpdate5("supermarket", "party", "foodHall", "show", "shoppingMall", "other");
                     Globals.previousClicked = false;
                 }
-                GuidedInterview otherInterview1 = new GuidedInterview();
-                otherInterview1.InstanceRef25 = this;
-                otherInterview1.Show();
+                GuidedInterview environmentInterview1 = new GuidedInterview();
+                environmentInterview1.InstanceRef25 = this;
+                environmentInterview1.Show();
                 this.Hide();
             }
-            else if (Globals.interview_page == 27) {
+            //-------------
+            //OTHER SECTION
+            //-------------
+            else if (Globals.interview_page == 29) {
                 updateDBother("sounds", "smells", "sights", "tastes", "feelings", "movements", "other");
                 Summary sum = new Summary();
                 sum.Show();

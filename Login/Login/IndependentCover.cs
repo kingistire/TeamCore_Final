@@ -13,7 +13,7 @@ namespace Login {
         public IndependentCover() {
             InitializeComponent();
             this.Location = new Point(0, 0);
-            label2.Text = Globals.userID;
+            label2.Text = Globals.usersName;
             label4.Text = Globals.adminID;
             label6.Text = DateTime.Now.ToString("d/M/yyyy");
         }

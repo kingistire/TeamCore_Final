@@ -866,7 +866,7 @@
             this.readOutLoudToggleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.readOutLoudToggleBtn.ForeColor = System.Drawing.Color.Navy;
             this.readOutLoudToggleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.readOutLoudToggleBtn.Location = new System.Drawing.Point(1359, 30);
+            this.readOutLoudToggleBtn.Location = new System.Drawing.Point(1362, 30);
             this.readOutLoudToggleBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.readOutLoudToggleBtn.Name = "readOutLoudToggleBtn";
             this.readOutLoudToggleBtn.Size = new System.Drawing.Size(171, 57);
