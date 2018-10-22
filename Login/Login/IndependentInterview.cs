@@ -91,6 +91,7 @@ namespace Login {
             //resets to one when the user starts a new interview
             if (Globals.interview_page == 1) {
                 interviewPage1();
+                //tasteInterviewPage4();
             }
             else if (Globals.interview_page == 2) {
                 interviewPage1p2();
@@ -503,10 +504,10 @@ namespace Login {
         {
             SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
             lblQuestion.Text = "Are there times when it is hard for you to listen?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1 If I am concentrating on something, I don't notice people talking to me.png");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1 If I am concentrating on something, I don't notice people talking to me.jpg");
             topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1.2.1Concentration.wav";//MISSINGFILE - Name Fine
 
-            topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\2 I find it hard to listen in noisy classrooms (self-report version).jpg");
+            topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\2 I find it hard to listen in noisy classrooms.jpg");
             topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1.2.2NoisyClassroom.wav";//MISSINGFILE - Name Fine
 
             topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\3 I find it hard to listen to someone talking to me when I'm in a group.jpg");
@@ -546,7 +547,7 @@ namespace Login {
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\2 Clock ticking.jpg");
             topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1.3.2ClockTicking.wav";//MISSINGFILE - Name Fine
 
-            topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\3 People talking.png");
+            topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\3 People talking.jpg");
             topRightReadOutLoudPath = @"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1.3.3PeopleTalking.wav";//MISSINGFILE - Name Fine
             //bottomLeftPB.Image = new Bitmap(@"../../resources/");
             //bottomMidPB.Image = new Bitmap(@"../../resources/");
@@ -854,7 +855,7 @@ namespace Login {
         {
             SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
             lblQuestion.Text = "Are there some ways that people touch you that you don't like?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\1 Being hugged or kissed (cropped).jpg");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\1 Being hugged or kissed (self version).jpg");
             topLeftReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.1Hugged.wav";//MISSINGFILE - Name Fine
 
             topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\2 Being crowded (cropped).jpg");
@@ -927,7 +928,7 @@ namespace Login {
             topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3 Furry.jpg");
             topRightReadOutLoudPath = @"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.3Fury.wav";//MISSINGFILE - Name Fine
 
-            bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\4 Hugging people.jpg");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\4 Hugging people (self version).jpg");
             bottomLeftReadOutLoudPath = @"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.4HuggingPeople.wav";//MISSINGFILE - Name Fine
 
             bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\5 Touching people.jpg");
@@ -1135,7 +1136,7 @@ namespace Login {
             bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5 Sweet.jpg");
             bottomMiddleReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.5Sweet.wav";//MISSINGFILE - Name Fine
 
-            bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\6 Sour.png");
+            bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\6 Sour.jpg");
             bottomrightReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.6Sour.wav";//MISSINGFILE - Name Fine
 
             updateLabelText("Lumpy", "Chewy", "Runny/Slippery", "Mixed", "Sweet", "Sour");
@@ -1186,6 +1187,47 @@ namespace Login {
         private void tasteInterviewPage4()
         {
             SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            // TOP ??
+            // Move the picture boxes 
+            topLeftPB2.Location = new Point(282, 175);
+            topLeftPB.Location = new Point(307, 200);
+            topMidPB.Location = new Point(485, 200);
+            topMidPB2.Location = new Point(460, 175);
+            // change the event handlers so the left picture activates mid buttons
+            this.topLeftPB.Click -= new System.EventHandler(this.topLeftPB_Click);
+            this.topLeftPB.Click += new System.EventHandler(this.topMidPB_Click);
+            // change alot and alittle btns
+            this.topMidALittleBtn.Click -= new System.EventHandler(this.topMidALittleBtn_Click);
+            this.topMidALittleBtn.Click += new System.EventHandler(this.twoImageTopMidALittleImageBtn_Click);
+            this.topMidALotBtn.Click -= new System.EventHandler(this.topMidALotBtn_Click);
+            this.topMidALotBtn.Click += new System.EventHandler(this.twoImageTopMidALotBtn_Click);
+            // pb paint events
+            this.topLeftPB2.Paint -= new System.Windows.Forms.PaintEventHandler(this.topLeftPB_Paint);
+            this.topLeftPB2.Paint += new System.Windows.Forms.PaintEventHandler(this.TwoImageTopPB_Paint);
+            this.topMidPB2.Paint -= new System.Windows.Forms.PaintEventHandler(this.topMidPB_Paint);
+            this.topMidPB2.Paint += new System.Windows.Forms.PaintEventHandler(this.TwoImageTopPB_Paint);
+            // bottom 
+            // Move the picture boxes togethertwoImageTopMidALittleImageBtn_Click
+
+            bottomLeftPB2.Location = new Point(282, 491);
+            bottomLeftPB.Location = new Point(307, 516);
+            bottomMidPB.Location = new Point(485, 516);
+            bottomMidPB2.Location = new Point(460, 491);
+            // change the event handlers so the left picture activates mid buttons
+            this.bottomLeftPB.Click -= new System.EventHandler(this.bottomLeftPB_Click);
+            this.bottomLeftPB.Click += new System.EventHandler(this.bottomMidPB_Click);
+            // change alot and alittle btns
+            this.bottomMidALittleBtn.Click -= new System.EventHandler(this.bottomMidALittleBtn_Click);
+            this.bottomMidALittleBtn.Click += new System.EventHandler(this.twoImageBottomMidALittleImageBtn_Click);
+            this.bottomMidALotBtn.Click -= new System.EventHandler(this.bottomMidALotBtn_Click);
+            this.bottomMidALotBtn.Click += new System.EventHandler(this.twoImageBottomMidALotBtn_Click);
+
+            // pb paint events
+            this.bottomLeftPB2.Paint -= new System.Windows.Forms.PaintEventHandler(this.bottomLeftPB_Paint);
+            this.bottomLeftPB2.Paint += new System.Windows.Forms.PaintEventHandler(this.TwoImageBottomPB_Paint);
+            this.bottomMidPB2.Paint -= new System.Windows.Forms.PaintEventHandler(this.bottomMidPB_Paint);
+            this.bottomMidPB2.Paint += new System.Windows.Forms.PaintEventHandler(this.TwoImageBottomPB_Paint);
+
 
             lblQuestion.Text = "Are there some things that you really like to eat?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\1 Familiar foods, only a few types of foods (i.e, I don’t like trying new foods)1 (cropped).jpg");
@@ -1287,14 +1329,14 @@ namespace Login {
             topMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\2 Moving when I can't see where I am going (self-report) (cropped).jpg");
             topMiddleReadOutLoudPath = @"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.2MovingWhenICantSee.wav";//MISSINGFILE - Name Fine
 
-            topRightPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\3 Balancing (self-report) (cropped).jpg");
+            topRightPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\3 Balancing.jpg");
             topRightReadOutLoudPath = @"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.3Balancing.wav";//MISSINGFILE - Name Fine
 
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\4 Being upside down (cropped).jpg");
             bottomLeftReadOutLoudPath = @"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.4BeingUpsideDown.wav";//MISSINGFILE - Name Fine
 
-            bottomMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\5 Climbing up high (cropped).jpg");
+            bottomMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\5 Climbing up high (self version).jpg");
             bottomMiddleReadOutLoudPath = @"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.5ClimbingUpHigh.wav";//MISSINGFILE - Name Fine
 
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
@@ -1364,10 +1406,10 @@ namespace Login {
             topMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\2 Swinging (cropped).jpg");
             topMiddleReadOutLoudPath = @"..\..\resources\6. Movement\3. Are there ways of moving that you like_\6.3.2Swinging.wav";//MISSINGFILE - Name Fine
 
-            topRightPB.Image = new Bitmap(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\3 Spinning (guided).jpg");
+            topRightPB.Image = new Bitmap(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\3 Spinning (self report) (uncropped).jpeg");
             topRightReadOutLoudPath = @"..\..\resources\6. Movement\3. Are there ways of moving that you like_\6.3.3Spinning.wav";//MISSINGFILE - Name Fine
 
-            bottomLeftPB.Image = new Bitmap(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\4 Jumping on the Trampoline (guided and self report) (cropped).jpg");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\4 Jumping on the Trampoline (self version).jpg");
             bottomLeftReadOutLoudPath = @"..\..\resources\6. Movement\3. Are there ways of moving that you like_\6.3.4JumpingOnTrampoline.wav";
 
             bottomMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\5 Running (self-report) (cropped).jpg");
@@ -1440,7 +1482,7 @@ namespace Login {
             SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
 
             lblQuestion.Text = "Are there some places with lots of things happening at once that you don't like?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\1 Supermarket.png");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\1 Supermarket.jpg");
             topLeftReadOutLoudPath = @"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\7.1.1Supermarket.wav";//MISSINGFILE - Name Fine
 
             topMidPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\2 Party (self report)(cropped).jpg");
@@ -1589,6 +1631,12 @@ namespace Login {
             
             determineDrawing(e, 0, 0, topLeftPB2.Width, topLeftPB2.Height, 0);
         }
+        private void TwoImageTopPB_Paint(object sender, PaintEventArgs e)
+        {
+            determineDrawing(e, 0, 0, topLeftPB2.Width, topLeftPB2.Height, 1);
+            determineDrawing(e, 0, 0, topMidPB2.Width, topMidPB2.Height, 1);
+        }
+
         private void topMidPB_Paint(object sender, PaintEventArgs e) {
             determineDrawing(e, 0, 0, topMidPB2.Width, topMidPB2.Height, 1);
         }
@@ -1599,6 +1647,11 @@ namespace Login {
             determineDrawing(e, 0, 0, bottomLeftPB2.Width, bottomLeftPB2.Height, 3);
         }
         private void bottomMidPB_Paint(object sender, PaintEventArgs e) {
+            determineDrawing(e, 0, 0, bottomMidPB2.Width, bottomMidPB2.Height, 4);
+        }
+        private void TwoImageBottomPB_Paint(object sender, PaintEventArgs e)
+        {
+            determineDrawing(e, 0, 0, bottomLeftPB2.Width, bottomLeftPB2.Height, 4);
             determineDrawing(e, 0, 0, bottomMidPB2.Width, bottomMidPB2.Height, 4);
         }
         private void bottomRightPB_Paint(object sender, PaintEventArgs e) {
@@ -2095,6 +2148,50 @@ namespace Login {
             topMidPB2.Invalidate();
             page1Selections[1] = "A Lot";
         }
+
+        private void twoImageTopMidALittleImageBtn_Click(object sender, EventArgs e)
+        {
+            PlayAlittlePlayer();
+            //This will refresh the picture box
+
+            topMidPB2.Invalidate();
+            topLeftPB2.Invalidate();
+            page1Selections[1] = "A Little";
+        }
+
+        
+
+
+        private void twoImageTopMidALotBtn_Click(object sender, EventArgs e)
+        {
+            PlayAlotPlayer();
+            //This will refresh the picture box
+            topMidPB2.Invalidate();
+            topLeftPB2.Invalidate();
+            page1Selections[1] = "A Lot";
+        }
+
+        private void twoImageBottomMidALittleImageBtn_Click(object sender, EventArgs e)
+        {
+            PlayAlittlePlayer();
+            //This will refresh the picture box
+
+            bottomMidPB2.Invalidate();
+            bottomLeftPB2.Invalidate();
+            page1Selections[4] = "A Little";
+        }
+
+
+
+        private void twoImageBottomMidALotBtn_Click(object sender, EventArgs e)
+        {
+            PlayAlotPlayer();
+            //This will refresh the picture box
+            bottomMidPB2.Invalidate();
+            bottomLeftPB2.Invalidate();
+            page1Selections[4] = "A Lot";
+        }
+
         private void topRightALittleBtn_Click(object sender, EventArgs e) {
             PlayAlittlePlayer();
             //This will refresh the picture box
