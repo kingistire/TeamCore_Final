@@ -485,8 +485,8 @@ namespace Login {
             panel2lblQuestion.Text = "Are there some sounds that you don't like?";
             lblQuestion1.Text = "Other sounds that you don't like?";
             lblQuestion2.Text = "Examples in your daily life?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.9 Other sounds that you don't like.wav");//MISSINGFILE
+            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.9 Other sounds that you don't like.wav");//MISSINGFILE
         }
 
         private void interviewPage2()
@@ -497,7 +497,7 @@ namespace Login {
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
 
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.10 avoiding sounds (self).wav");//MISSINGFILE
         }
 
         private void interviewPage3()
