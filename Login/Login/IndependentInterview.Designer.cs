@@ -82,7 +82,6 @@
             this.bottomLeftALotBtn = new System.Windows.Forms.Button();
             this.bottomLeftPB = new System.Windows.Forms.PictureBox();
             this.picturePanel = new System.Windows.Forms.Panel();
-            this.readOutLoudToggleBtn = new System.Windows.Forms.Button();
             this.bottomRightPB = new System.Windows.Forms.PictureBox();
             this.bottomRightALotBtn = new System.Windows.Forms.Button();
             this.bottomRightALittleBtn = new System.Windows.Forms.Button();
@@ -93,6 +92,7 @@
             this.bottomMidALittleBtn = new System.Windows.Forms.Button();
             this.bottomMidPB2 = new System.Windows.Forms.PictureBox();
             this.lblBM = new System.Windows.Forms.Label();
+            this.readOutLoudToggleBtn = new System.Windows.Forms.Button();
             this.readOutLoudPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -164,7 +164,7 @@
             // 
             this.pictureBox1.Image = global::Login.Properties.Resources.aLotaLittle;
             this.pictureBox1.Location = new System.Drawing.Point(970, 24);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(115, 90);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -190,7 +190,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(194, 20);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 101);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -201,7 +201,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(1248, 144);
             this.pictureBox3.TabIndex = 21;
@@ -258,7 +258,7 @@
             // 
             this.tbAnswer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAnswer2.Location = new System.Drawing.Point(334, 558);
-            this.tbAnswer2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbAnswer2.Margin = new System.Windows.Forms.Padding(2);
             this.tbAnswer2.Multiline = true;
             this.tbAnswer2.Name = "tbAnswer2";
             this.tbAnswer2.Size = new System.Drawing.Size(555, 126);
@@ -281,7 +281,7 @@
             // 
             this.tbAnswer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAnswer1.Location = new System.Drawing.Point(334, 309);
-            this.tbAnswer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbAnswer1.Margin = new System.Windows.Forms.Padding(2);
             this.tbAnswer1.Multiline = true;
             this.tbAnswer1.Name = "tbAnswer1";
             this.tbAnswer1.Size = new System.Drawing.Size(555, 126);
@@ -325,7 +325,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(350, 442);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(555, 246);
@@ -400,7 +400,7 @@
             // 
             this.pictureBox4.Image = global::Login.Properties.Resources.aLotaLittle;
             this.pictureBox4.Location = new System.Drawing.Point(986, 26);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(115, 90);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -426,7 +426,7 @@
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(128, 20);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(100, 101);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -437,7 +437,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBox6.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(1248, 144);
             this.pictureBox6.TabIndex = 21;
@@ -534,7 +534,7 @@
             // 
             this.picBackground.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.picBackground.Location = new System.Drawing.Point(0, 0);
-            this.picBackground.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBackground.Margin = new System.Windows.Forms.Padding(2);
             this.picBackground.Name = "picBackground";
             this.picBackground.Size = new System.Drawing.Size(1246, 144);
             this.picBackground.TabIndex = 21;
@@ -544,7 +544,7 @@
             // 
             this.picSense.Image = ((System.Drawing.Image)(resources.GetObject("picSense.Image")));
             this.picSense.Location = new System.Drawing.Point(185, 20);
-            this.picSense.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picSense.Margin = new System.Windows.Forms.Padding(2);
             this.picSense.Name = "picSense";
             this.picSense.Size = new System.Drawing.Size(100, 101);
             this.picSense.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -570,7 +570,7 @@
             // 
             this.picInstruction.Image = global::Login.Properties.Resources.aLotaLittle;
             this.picInstruction.Location = new System.Drawing.Point(958, 24);
-            this.picInstruction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picInstruction.Margin = new System.Windows.Forms.Padding(2);
             this.picInstruction.Name = "picInstruction";
             this.picInstruction.Size = new System.Drawing.Size(115, 90);
             this.picInstruction.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -854,26 +854,6 @@
             this.picturePanel.TabIndex = 0;
             this.picturePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.picturePanel_Paint);
             // 
-            // readOutLoudToggleBtn
-            // 
-            this.readOutLoudToggleBtn.BackColor = System.Drawing.Color.Transparent;
-            this.readOutLoudToggleBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.readOutLoudToggleBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.readOutLoudToggleBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.readOutLoudToggleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.readOutLoudToggleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.readOutLoudToggleBtn.ForeColor = System.Drawing.Color.Navy;
-            this.readOutLoudToggleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.readOutLoudToggleBtn.Location = new System.Drawing.Point(1362, 30);
-            this.readOutLoudToggleBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.readOutLoudToggleBtn.Name = "readOutLoudToggleBtn";
-            this.readOutLoudToggleBtn.Size = new System.Drawing.Size(137, 46);
-            this.readOutLoudToggleBtn.TabIndex = 55;
-            this.readOutLoudToggleBtn.Text = "ReadOutLoud: Off";
-            this.readOutLoudToggleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.readOutLoudToggleBtn.UseVisualStyleBackColor = false;
-            this.readOutLoudToggleBtn.Click += new System.EventHandler(this.readOutLoudToggleBtn_Click);
-            // 
             // bottomRightPB
             // 
             this.bottomRightPB.Location = new System.Drawing.Point(930, 506);
@@ -998,6 +978,26 @@
             this.lblBM.TabIndex = 48;
             this.lblBM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // readOutLoudToggleBtn
+            // 
+            this.readOutLoudToggleBtn.BackColor = System.Drawing.Color.Transparent;
+            this.readOutLoudToggleBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.readOutLoudToggleBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.readOutLoudToggleBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.readOutLoudToggleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.readOutLoudToggleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.readOutLoudToggleBtn.ForeColor = System.Drawing.Color.Navy;
+            this.readOutLoudToggleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.readOutLoudToggleBtn.Location = new System.Drawing.Point(1362, 30);
+            this.readOutLoudToggleBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.readOutLoudToggleBtn.Name = "readOutLoudToggleBtn";
+            this.readOutLoudToggleBtn.Size = new System.Drawing.Size(137, 46);
+            this.readOutLoudToggleBtn.TabIndex = 55;
+            this.readOutLoudToggleBtn.Text = "ReadOutLoud: Off";
+            this.readOutLoudToggleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.readOutLoudToggleBtn.UseVisualStyleBackColor = false;
+            this.readOutLoudToggleBtn.Click += new System.EventHandler(this.readOutLoudToggleBtn_Click);
+            // 
             // readOutLoudPanel
             // 
             this.readOutLoudPanel.BackColor = System.Drawing.Color.White;
@@ -1013,12 +1013,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1246, 788);
+            this.Controls.Add(this.additionalNotesPanel);
             this.Controls.Add(this.readOutLoudPanel);
             this.Controls.Add(this.picturePanel);
-            this.Controls.Add(this.additionalNotesPanel);
             this.Controls.Add(this.questionPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1090, 831);
             this.Name = "IndependentInterview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
