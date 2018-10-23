@@ -13,6 +13,12 @@ namespace Login {
     public partial class Summary : Form {
         public Summary() {
             InitializeComponent();
+            if (!Globals.previousInterview) { //Get Latest
+                getOTCommentsFromDB();
+            } else { //Get previousHistory
+                getOTHistory();
+            }
+
         }
 
         private const int MAXCATERGORIES = 23;
@@ -75,11 +81,11 @@ namespace Login {
                         srAnswer1.AppendText(list[0]);
                         srAnswer1.ReadOnly = true;
                         srAnswer2.Visible = false;
-                        srAnswer2.Enabled = false;
+                        srAnswer2.ReadOnly = true;
                         srAnswer3.Visible = false;
-                        srAnswer3.Enabled = false;
+                        srAnswer3.ReadOnly = true;
                         srAnswer4.Visible = false;
-                        srAnswer4.Enabled = false;
+                        srAnswer4.ReadOnly = true;
                     } else if (columnNumberInSummary == 2) {
                         srAnswer5.Clear();
                         srAnswer6.Clear();
@@ -88,11 +94,11 @@ namespace Login {
                         srAnswer5.AppendText(list[0]);
                         srAnswer5.ReadOnly = true;
                         srAnswer6.Visible = false;
-                        srAnswer6.Enabled = false;
+                        srAnswer6.ReadOnly = true;
                         srAnswer7.Visible = false;
-                        srAnswer7.Enabled = false;
+                        srAnswer7.ReadOnly = true;
                         srAnswer8.Visible = false;
-                        srAnswer8.Enabled = false;
+                        srAnswer8.ReadOnly = true;
                     } else if (columnNumberInSummary == 3) {
                         srAnswer9.Clear();
                         srAnswer10.Clear();
@@ -101,11 +107,11 @@ namespace Login {
                         srAnswer9.AppendText(list[0]);
                         srAnswer9.ReadOnly = true;
                         srAnswer10.Visible = false;
-                        srAnswer10.Enabled = false;
+                        srAnswer10.ReadOnly = true;
                         srAnswer11.Visible = false;
-                        srAnswer11.Enabled = false;
+                        srAnswer11.ReadOnly = true;
                         srAnswer12.Visible = false;
-                        srAnswer12.Enabled = false;
+                        srAnswer12.ReadOnly = true;
                     } else if (columnNumberInSummary == 4) {
                         srAnswer13.Clear();
                         srAnswer14.Clear();
@@ -114,11 +120,11 @@ namespace Login {
                         srAnswer13.AppendText(list[0]);
                         srAnswer13.ReadOnly = true;
                         srAnswer14.Visible = false;
-                        srAnswer14.Enabled = false;
+                        srAnswer14.ReadOnly = true;
                         srAnswer15.Visible = false;
-                        srAnswer15.Enabled = false;
+                        srAnswer15.ReadOnly = true;
                         srAnswer16.Visible = false;
-                        srAnswer16.Enabled = false;
+                        srAnswer16.ReadOnly = true;
                     } else if (columnNumberInSummary == 5) {
                         srAnswer17.Clear();
                         srAnswer18.Clear();
@@ -127,11 +133,11 @@ namespace Login {
                         srAnswer17.AppendText(list[0]);
                         srAnswer17.ReadOnly = true;
                         srAnswer18.Visible = false;
-                        srAnswer18.Enabled = false;
+                        srAnswer18.ReadOnly = true;
                         srAnswer19.Visible = false;
-                        srAnswer19.Enabled = false;
+                        srAnswer19.ReadOnly = true;
                         srAnswer20.Visible = false;
-                        srAnswer20.Enabled = false;
+                        srAnswer20.ReadOnly = true;
                     }
                     
                     break;
@@ -160,9 +166,9 @@ namespace Login {
                         srAnswer2.AppendText(list1[1]);
                         srAnswer2.ReadOnly = true;
                         srAnswer3.Visible = false;
-                        srAnswer3.Enabled = false;
+                        srAnswer3.ReadOnly = true;
                         srAnswer4.Visible = false;
-                        srAnswer4.Enabled = false;
+                        srAnswer4.ReadOnly = true;
                     } else if (columnNumberInSummary == 2) {
                         srAnswer5.Clear();
                         srAnswer6.Clear();
@@ -173,9 +179,9 @@ namespace Login {
                         srAnswer6.AppendText(list1[1]);
                         srAnswer6.ReadOnly = true;
                         srAnswer7.Visible = false;
-                        srAnswer7.Enabled = false;
+                        srAnswer7.ReadOnly = true;
                         srAnswer8.Visible = false;
-                        srAnswer8.Enabled = false;
+                        srAnswer8.ReadOnly = true;
                     } else if (columnNumberInSummary == 3) {
                         srAnswer9.Clear();
                         srAnswer10.Clear();
@@ -186,9 +192,9 @@ namespace Login {
                         srAnswer10.AppendText(list1[1]);
                         srAnswer10.ReadOnly = true;
                         srAnswer11.Visible = false;
-                        srAnswer11.Enabled = false;
+                        srAnswer11.ReadOnly = true;
                         srAnswer12.Visible = false;
-                        srAnswer12.Enabled = false;
+                        srAnswer12.ReadOnly = true;
                     } else if (columnNumberInSummary == 4) {
                         srAnswer13.Clear();
                         srAnswer14.Clear();
@@ -199,9 +205,9 @@ namespace Login {
                         srAnswer14.AppendText(list1[1]);
                         srAnswer14.ReadOnly = true;
                         srAnswer15.Visible = false;
-                        srAnswer15.Enabled = false;
+                        srAnswer15.ReadOnly = true;
                         srAnswer16.Visible = false;
-                        srAnswer16.Enabled = false;
+                        srAnswer16.ReadOnly = true;
                     } else if (columnNumberInSummary == 5) {
                         srAnswer17.Clear();
                         srAnswer18.Clear();
@@ -212,9 +218,9 @@ namespace Login {
                         srAnswer18.AppendText(list1[1]);
                         srAnswer18.ReadOnly = true;
                         srAnswer19.Visible = false;
-                        srAnswer19.Enabled = false;
+                        srAnswer19.ReadOnly = true;
                         srAnswer20.Visible = false;
-                        srAnswer20.Enabled = false;
+                        srAnswer20.ReadOnly = true;
                     }
                     break;
                 case 3:
@@ -249,7 +255,7 @@ namespace Login {
                             srAnswer3.AppendText(list2[2]);
                             srAnswer3.ReadOnly = true;
                             srAnswer4.Visible = false;
-                            srAnswer4.Enabled = false;
+                            srAnswer4.ReadOnly = true;
                         } else if (columnNumberInSummary == 2) {
                         srAnswer5.Clear();
                         srAnswer6.Clear();
@@ -262,8 +268,8 @@ namespace Login {
                             srAnswer7.AppendText(list2[2]);
                             srAnswer7.ReadOnly = true;
                             srAnswer8.Visible = false;
-                            srAnswer8.Enabled = false;
-                        } else if (columnNumberInSummary == 3) {
+                            srAnswer8.ReadOnly = true;
+                    } else if (columnNumberInSummary == 3) {
                         srAnswer9.Clear();
                         srAnswer10.Clear();
                         srAnswer11.Clear();
@@ -275,8 +281,8 @@ namespace Login {
                             srAnswer11.AppendText(list2[2]);
                             srAnswer11.ReadOnly = true;
                             srAnswer12.Visible = false;
-                            srAnswer12.Enabled = false;
-                        } else if (columnNumberInSummary == 4) {
+                            srAnswer12.ReadOnly = true;
+                    } else if (columnNumberInSummary == 4) {
                         srAnswer13.Clear();
                         srAnswer14.Clear();
                         srAnswer15.Clear();
@@ -288,8 +294,8 @@ namespace Login {
                             srAnswer15.AppendText(list2[2]);
                             srAnswer15.ReadOnly = true;
                             srAnswer16.Visible = false;
-                            srAnswer16.Enabled = false;
-                        } else if (columnNumberInSummary == 5) {
+                            srAnswer16.ReadOnly = true;
+                    } else if (columnNumberInSummary == 5) {
                         srAnswer17.Clear();
                         srAnswer18.Clear();
                         srAnswer19.Clear();
@@ -301,8 +307,8 @@ namespace Login {
                             srAnswer19.AppendText(list2[2]);
                             srAnswer19.ReadOnly = true;
                             srAnswer20.Visible = false;
-                            srAnswer20.Enabled = false;
-                        }
+                            srAnswer20.ReadOnly = true;
+                    }
                     break;
                 case 4:
                     query = "SELECT comment1, comment2, comment3, comment4 FROM " + tableNameParam +
@@ -445,11 +451,11 @@ namespace Login {
                         srAnswer1.AppendText(list[0]);
                         srAnswer1.ReadOnly = true;
                         srAnswer2.Visible = false;
-                        srAnswer2.Enabled = false;
+                        srAnswer2.ReadOnly = true;
                         srAnswer3.Visible = false;
-                        srAnswer3.Enabled = false;
+                        srAnswer3.ReadOnly = true;
                         srAnswer4.Visible = false;
-                        srAnswer4.Enabled = false;
+                        srAnswer4.ReadOnly = true;
                     } else if (columnNumberInSummary == 2) {
                         srAnswer5.Clear();
                         srAnswer6.Clear();
@@ -458,11 +464,11 @@ namespace Login {
                         srAnswer5.AppendText(list[0]);
                         srAnswer5.ReadOnly = true;
                         srAnswer6.Visible = false;
-                        srAnswer6.Enabled = false;
+                        srAnswer6.ReadOnly = true;
                         srAnswer7.Visible = false;
-                        srAnswer7.Enabled = false;
+                        srAnswer7.ReadOnly = true;
                         srAnswer8.Visible = false;
-                        srAnswer8.Enabled = false;
+                        srAnswer8.ReadOnly = true;
                     } else if (columnNumberInSummary == 3) {
                         srAnswer9.Clear();
                         srAnswer10.Clear();
@@ -471,11 +477,11 @@ namespace Login {
                         srAnswer9.AppendText(list[0]);
                         srAnswer9.ReadOnly = true;
                         srAnswer10.Visible = false;
-                        srAnswer10.Enabled = false;
+                        srAnswer10.ReadOnly = true;
                         srAnswer11.Visible = false;
-                        srAnswer11.Enabled = false;
+                        srAnswer11.ReadOnly = true;
                         srAnswer12.Visible = false;
-                        srAnswer12.Enabled = false;
+                        srAnswer12.ReadOnly = true;
                     } else if (columnNumberInSummary == 4) {
                         srAnswer13.Clear();
                         srAnswer14.Clear();
@@ -484,11 +490,11 @@ namespace Login {
                         srAnswer13.AppendText(list[0]);
                         srAnswer13.ReadOnly = true;
                         srAnswer14.Visible = false;
-                        srAnswer14.Enabled = false;
+                        srAnswer14.ReadOnly = true;
                         srAnswer15.Visible = false;
-                        srAnswer15.Enabled = false;
+                        srAnswer15.ReadOnly = true;
                         srAnswer16.Visible = false;
-                        srAnswer16.Enabled = false;
+                        srAnswer16.ReadOnly = true;
                     } else if (columnNumberInSummary == 5) {
                         srAnswer17.Clear();
                         srAnswer18.Clear();
@@ -497,11 +503,11 @@ namespace Login {
                         srAnswer17.AppendText(list[0]);
                         srAnswer17.ReadOnly = true;
                         srAnswer18.Visible = false;
-                        srAnswer18.Enabled = false;
+                        srAnswer18.ReadOnly = true;
                         srAnswer19.Visible = false;
-                        srAnswer19.Enabled = false;
+                        srAnswer19.ReadOnly = true;
                         srAnswer20.Visible = false;
-                        srAnswer20.Enabled = false;
+                        srAnswer20.ReadOnly = true;
                     }
 
                     break;
@@ -538,9 +544,9 @@ namespace Login {
                         srAnswer2.AppendText(list1[1]);
                         srAnswer2.ReadOnly = true;
                         srAnswer3.Visible = false;
-                        srAnswer3.Enabled = false;
+                        srAnswer3.ReadOnly = true;
                         srAnswer4.Visible = false;
-                        srAnswer4.Enabled = false;
+                        srAnswer4.ReadOnly = true;
                     } else if (columnNumberInSummary == 2) {
                         srAnswer5.Clear();
                         srAnswer6.Clear();
@@ -551,9 +557,9 @@ namespace Login {
                         srAnswer6.AppendText(list1[1]);
                         srAnswer6.ReadOnly = true;
                         srAnswer7.Visible = false;
-                        srAnswer7.Enabled = false;
+                        srAnswer7.ReadOnly = true;
                         srAnswer8.Visible = false;
-                        srAnswer8.Enabled = false;
+                        srAnswer8.ReadOnly = true;
                     } else if (columnNumberInSummary == 3) {
                         srAnswer9.Clear();
                         srAnswer10.Clear();
@@ -564,9 +570,9 @@ namespace Login {
                         srAnswer10.AppendText(list1[1]);
                         srAnswer10.ReadOnly = true;
                         srAnswer11.Visible = false;
-                        srAnswer11.Enabled = false;
+                        srAnswer11.ReadOnly = true;
                         srAnswer12.Visible = false;
-                        srAnswer12.Enabled = false;
+                        srAnswer12.ReadOnly = true;
                     } else if (columnNumberInSummary == 4) {
                         srAnswer13.Clear();
                         srAnswer14.Clear();
@@ -577,9 +583,9 @@ namespace Login {
                         srAnswer14.AppendText(list1[1]);
                         srAnswer14.ReadOnly = true;
                         srAnswer15.Visible = false;
-                        srAnswer15.Enabled = false;
+                        srAnswer15.ReadOnly = true;
                         srAnswer16.Visible = false;
-                        srAnswer16.Enabled = false;
+                        srAnswer16.ReadOnly = true;
                     } else if (columnNumberInSummary == 5) {
                         srAnswer17.Clear();
                         srAnswer18.Clear();
@@ -590,9 +596,9 @@ namespace Login {
                         srAnswer18.AppendText(list1[1]);
                         srAnswer18.ReadOnly = true;
                         srAnswer19.Visible = false;
-                        srAnswer19.Enabled = false;
+                        srAnswer19.ReadOnly = true;
                         srAnswer20.Visible = false;
-                        srAnswer20.Enabled = false;
+                        srAnswer20.ReadOnly = true;
                     }
                     break;
                 case 3:
@@ -635,7 +641,7 @@ namespace Login {
                         srAnswer3.AppendText(list2[2]);
                         srAnswer3.ReadOnly = true;
                         srAnswer4.Visible = false;
-                        srAnswer4.Enabled = false;
+                        srAnswer4.ReadOnly = true;
                     } else if (columnNumberInSummary == 2) {
                         srAnswer5.Clear();
                         srAnswer6.Clear();
@@ -648,7 +654,7 @@ namespace Login {
                         srAnswer7.AppendText(list2[2]);
                         srAnswer7.ReadOnly = true;
                         srAnswer8.Visible = false;
-                        srAnswer8.Enabled = false;
+                        srAnswer8.ReadOnly = true;
                     } else if (columnNumberInSummary == 3) {
                         srAnswer9.Clear();
                         srAnswer10.Clear();
@@ -661,7 +667,7 @@ namespace Login {
                         srAnswer11.AppendText(list2[2]);
                         srAnswer11.ReadOnly = true;
                         srAnswer12.Visible = false;
-                        srAnswer12.Enabled = false;
+                        srAnswer12.ReadOnly = true;
                     } else if (columnNumberInSummary == 4) {
                         srAnswer13.Clear();
                         srAnswer14.Clear();
@@ -674,7 +680,7 @@ namespace Login {
                         srAnswer15.AppendText(list2[2]);
                         srAnswer15.ReadOnly = true;
                         srAnswer16.Visible = false;
-                        srAnswer16.Enabled = false;
+                        srAnswer16.ReadOnly = true;
                     } else if (columnNumberInSummary == 5) {
                         srAnswer17.Clear();
                         srAnswer18.Clear();
@@ -687,7 +693,7 @@ namespace Login {
                         srAnswer19.AppendText(list2[2]);
                         srAnswer19.ReadOnly = true;
                         srAnswer20.Visible = false;
-                        srAnswer20.Enabled = false;
+                        srAnswer20.ReadOnly = true;
                     }
                     break;
                 case 4:
@@ -1255,6 +1261,7 @@ string text3, string text4, string text5, string text6) {
         private void button1_Click(object sender, EventArgs e) {
             resetAnswerLabels();
             if (displayShortResponse) {
+                showAllSR();
                     shortResponseContainerPanel.Visible = true;
                     shortResponseContainerPanel.Enabled = true;
                try {
@@ -1293,7 +1300,7 @@ string text3, string text4, string text5, string text6) {
                         "Other sounds that make it hard \n to concentrate?",
                         "Examples in your daily life?",
                         "Are there noises that you find \n very distracting when you have a \n job to do?",
-                        "Does noise ever make it hard \n for you to do things \n (e.g., work in an office, go to \n shopping centres");
+                        "Does noise ever make it hard \n for you to do things \n (e.g., work in an office, go to \n shopping centres?");
                     updateSRLabels(q1labelc4, q2labelc4, q3labelc4, q4labelc4,
                         "Other sounds that you like?",
                         "Examples in your daily life?",
@@ -1464,6 +1471,7 @@ string text3, string text4, string text5, string text6) {
                 shortResponseContainerPanel.Visible = false;
                 shortResponseContainerPanel.Enabled = false;
                 if (displayShortResponse) {
+                showAllSR();
                     hideColumn4SR();
                     shortResponseContainerPanel.Visible = true;
                     shortResponseContainerPanel.Enabled = true;
@@ -1485,7 +1493,22 @@ string text3, string text4, string text5, string text6) {
                     "Are there some things you see that make it \n hard to concentrate?",
                     "Are there some things that you like \n to look at?",
                     "", "");
-                } else {
+                updateSRLabels(q1labelc1, q2labelc1, q3labelc1, q4labelc1,
+                    "Other things that you don’t like to look at?",
+                    "Examples in your daily life?",
+                    "Do you do anything to avoid \n these things (e.g., shade your eyes, \n wear sunglasses, avoid fluorescent light)?",
+                    "");
+                updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
+                    "Other things you see that make \n it hard to concentrate?",
+                    "Examples in your daily life?",
+                    "",
+                    "");
+                updateSRLabels(q1labelc3, q2labelc3, q3labelc3, q4labelc3,
+                    "Other things that you like to look at?",
+                    "Examples in your daily life?",
+                    "Are there things you look at often \n or for long periods?",
+                    "");
+            } else {
                     updateTopicLabel("Are there some things that you don't \n like to look at?",
                         "Are there some things you see that make it \n hard to concentrate?",
                         "Are there some things that you like \n to look at?",
@@ -1553,6 +1576,7 @@ string text3, string text4, string text5, string text6) {
         private void hearingBtn_Click(object sender, EventArgs e) {
             resetAnswerLabels();
             if (displayShortResponse) {
+                showAllSR();
                     hideColumn5SR();
                     shortResponseContainerPanel.Visible = true;
                     shortResponseContainerPanel.Enabled = true;
@@ -1571,17 +1595,40 @@ string text3, string text4, string text5, string text6) {
                     } catch (Exception ex) {
                         MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                     }
-                    hideIndividual(q2labelc2, srAnswer10);
                     hideIndividual(q3labelc2, srAnswer11);
                     hideIndividual(q4labelc2, srAnswer12);
-                    hideIndividual(q3labelc3, srAnswer15);
-                    hideIndividual(q4labelc3, srAnswer16);
+                q4labelc1.Enabled = true;
+                srAnswer4.Enabled = true;
+                srAnswer16.Enabled = true;
+                q4labelc4.Enabled = true;
                     updateSRTopicLabel("Are there some ways of moving \n that you don't like?",
                     "Are there times when it is hard for \n you to stay still?",
                     "Are there some ways of moving that \n you don't like?",
                     "Are there some ways that you move over \n and over again?", "");
 
-                } else {
+
+                updateSRLabels(q1labelc1, q2labelc1, q3labelc1, q4labelc1,
+                    "Other ways of moving that you \n don’t like?",
+                    "Examples in your daily life?",
+                    "Are there movement experiences that you \n find scary or unpleasant?",
+                    "Do you do anything to avoid \n these movements?");
+                updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
+                    "Examples in your daily life?",
+                    "",
+                    "",
+                    "");
+                updateSRLabels(q1labelc3, q2labelc3, q3labelc3, q4labelc3,
+                    "Other ways of moving that \n you like?",
+                    "Examples in your \n daily life?",
+                    "",
+                    "");
+                updateSRLabels(q1labelc4, q2labelc4, q3labelc4, q4labelc4,
+                    "Other ways that you move \n over and over again?",
+                    "Examples in your daily life?",
+                    "Are there movements that you make \n repeatedly when you are anxious?",
+                    "Are there movements that you make \n repeatedly when you are excited?");
+
+            } else {
                     
                     clearTable(resultsTable, 5);
                     clearTable(topic2Table, 2);
@@ -1663,6 +1710,7 @@ string text3, string text4, string text5, string text6) {
             resetAnswerLabels();
 
             if (displayShortResponse) {
+                showAllSR();
                 hideColumn3SR();
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
@@ -1679,9 +1727,23 @@ string text3, string text4, string text5, string text6) {
                 }
                 hideIndividual(q4labelc1, srAnswer4);
                 hideIndividual(q4labelc2, srAnswer8);
+                q3labelc2.Enabled = true;
+                srAnswer7.Enabled = true;
                 updateSRTopicLabel("Are there some smells that you don't like?",
                 "Are there some things that you like to smell?",
                 "", "", "");
+
+                updateSRLabels(q1labelc1, q2labelc1, q3labelc1, q4labelc1,
+                    "Other smells that you don’t like?",
+                    "Examples in your daily life?",
+                    "Do you do anything to avoid these smells \n (e.g., avoid public toilets or cleaning \n products aisles at the supermarket)?",
+                    "");
+                updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
+                    "Other things you like to smell",
+                    "Examples in your daily life?",
+                    "Are there things that you like to \n smell often or for long periods?",
+                    "");
+
             } else {
 
                 clearTable(resultsTable, 6);
@@ -1740,6 +1802,8 @@ string text3, string text4, string text5, string text6) {
         private void touchBtn_Click(object sender, EventArgs e) {
             resetAnswerLabels();
             if (displayShortResponse) {
+                showAllSR();
+
                 hideColumn4SR();
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
@@ -1761,6 +1825,29 @@ string text3, string text4, string text5, string text6) {
                 "Are there ways that people touch you that \n you don't like?",
                 "Are there some things that you \n like the feeling of?",
                 "", "");
+                updateSRLabels(q1labelc1, q2labelc1, q3labelc1, q4labelc1,
+                    "Other things you don’t like the feeling of?",
+                    "Examples in your daily life?",
+                    "Do touch sensations ever make \n it hard for you to do things \n (e.g., wear some types of \n clothing or walk on the grass)?",
+                    "Does you do anything to avoid \n these things (e.g., avoid certain \n clothes or textures)?");
+                updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
+                    "Other ways people touch you \n that you don’t like?",
+                    "Examples in your daily life?",
+                    "Does difficulty coping with being \n touched make it hard for you to do things \n (e.g., visit the doctor or the dentist)?",
+                    "Do you do anything to avoid being touched \n (e.g., avoid crowded places)");
+                updateSRLabels(q1labelc3, q2labelc3, q3labelc3, q4labelc3,
+                    "Other things that you like \n the feeling of?",
+                    "Examples in your daily life?",
+                    "Are there things that you like \n to touch often or for long periods?",
+                    "");
+                q4labelc1.Enabled = true;
+                srAnswer4.Enabled = true;
+                q3labelc2.Enabled = true;
+                q4labelc2.Enabled = true;
+                srAnswer10.Enabled = true;
+                srAnswer11.Enabled = true;
+                srAnswer8.Enabled = true;
+                srAnswer7.Enabled = true;
             } else {
                 clearTable(resultsTable, 8);
                 clearTable(topic2Table, 8);
@@ -1885,7 +1972,7 @@ string text3, string text4, string text5, string text6) {
             //Update comment box and disable it.
             commentsTxtBox.Clear();
             commentsTxtBox.AppendText(list[0]);
-            commentsTxtBox.Enabled = false;
+            commentsTxtBox.ReadOnly = true;
         }
 
         private void getOTHistory() {
@@ -1925,12 +2012,13 @@ string text3, string text4, string text5, string text6) {
             //Update comment box and disable it.
             commentsTxtBox.Clear();
             commentsTxtBox.AppendText(list[0]);
-            commentsTxtBox.Enabled = false;
+            commentsTxtBox.ReadOnly = false;
         }
 
         private void additionalCommentsBtn_Click(object sender, EventArgs e) {
             resetAnswerLabels();
             if (displayShortResponse) {
+                showAllSR();
                 hideColumn3SR();
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
@@ -1938,11 +2026,9 @@ string text3, string text4, string text5, string text6) {
                     if (!Globals.previousInterview) { //Get Latest
                         getAdditionalCommentAnswer(4, "other", 1);
                         getAdditionalCommentAnswer(4, "other", 2);
-                        getOTCommentsFromDB();
                     } else { //Get previousHistory
                         getHistorySRAnswer(4, "other", 1);
                         getHistorySRAnswer(4, "other", 2);
-                        getOTHistory();
                     }
                 } catch (Exception ex) {
                     MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
@@ -1950,6 +2036,18 @@ string text3, string text4, string text5, string text6) {
                 updateSRTopicLabel("Are there some places with lots of things \n happening at once that you don't like?",
                 "Are there other sensations that you \n feel strongly about?",
                 "", "", "");
+
+                updateSRLabels(q1labelc1, q2labelc1, q3labelc1, q4labelc1,
+                    "Other places with lots of \n things happening at once that  \n you don’t like?",
+                    "Examples in your daily life?",
+                    "How do you react to places with \n lots of things happening at once?",
+                    "Do you do anything to avoid places \n with lots of things happening at once?");
+                updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
+                    "Other sounds, smells, sights, \n tastes, feelings, or movements?",
+                    "Examples in your daily life?",
+                    "How do you react to these \n other things?",
+                    "Do you do anything to avoid \n these other things?");
+
             } else {
                 clearTable(resultsTable, 5);
                 clearTable(topic2Table, 6);
@@ -2005,9 +2103,9 @@ string text3, string text4, string text5, string text6) {
         }
 
         private void tasteBtn_Click(object sender, EventArgs e) {
-
             resetAnswerLabels();
             if (displayShortResponse) {
+                showAllSR();
                 hideColumn5SR();
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
@@ -2029,9 +2127,37 @@ string text3, string text4, string text5, string text6) {
                 hideIndividual(q3labelc1, srAnswer3);
                 hideIndividual(q4labelc1, srAnswer4);
                 hideIndividual(q4labelc2, srAnswer8);
-                hideIndividual(q3labelc3, srAnswer11);
                 hideIndividual(q4labelc3, srAnswer12);
                 hideIndividual(q4labelc4, srAnswer16);
+                srAnswer15.Visible = false;
+                updateSRTopicLabel("Are there some food groups that you don't like eating?",
+                    "Are there some ways that food tastes or feels \n in your mouth that you don't like?",
+                    "Are there some things you really like to eat?",
+                    "Are there some things that you put in \n your mouth a lot?",
+                    "");
+
+                updateSRLabels(q1labelc1, q2labelc1, q3labelc1, q4labelc1,
+                    "Other types of food that you \n don’t like?",
+                    "Examples in your daily life?",
+                    "",
+                    "");
+                updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
+                    "Other ways food tastes or feels that you don’t like?",
+                    "Examples in your daily life?",
+                    "Do you do anything to avoid \n eating certain foods (e.g., avoid \n eating in restaurants or at other  \n people’s homes)?",
+                    "");
+                updateSRLabels(q1labelc3, q2labelc3, q3labelc3, q4labelc3,
+                    "Examples in your daily life?",
+                    "Are there certain types of foods \n that you crave and want to eat \n repeatedly?",
+                    "",
+                    "");
+                updateSRLabels(q1labelc4, q2labelc4, q3labelc4, q4labelc4,
+                    "Other things you put in your mouth?",
+                    "Are there things that you often \n put in your mouth? Are any of \n them dangerous or unhygienic?",
+                    "",
+                    "");
+
+
             }
             if (!displayShortResponse) {
                 clearTable(resultsTable, 8);
@@ -2160,6 +2286,54 @@ string text3, string text4, string text5, string text6) {
                 list.Add(dr["InterviewType"].ToString());
             }
             interviewType = list[0];
+        }
+
+        private void showAllSR() {
+            srAnswer1.Visible = true;
+            srAnswer2.Visible = true;
+            srAnswer3.Visible = true;
+            srAnswer4.Visible = true;
+            srAnswer5.Visible = true;
+            srAnswer6.Visible = true;
+            srAnswer7.Visible = true;
+            srAnswer8.Visible = true;
+            srAnswer9.Visible = true;
+            srAnswer10.Visible = true;
+            srAnswer11.Visible = true;
+            srAnswer12.Visible = true;
+            srAnswer13.Visible = true;
+            srAnswer14.Visible = true;
+            srAnswer15.Visible = true;
+            srAnswer16.Visible = true;
+            srAnswer17.Visible = true;
+            srAnswer18.Visible = true;
+            srAnswer19.Visible = true;
+            srAnswer20.Visible = true;
+
+            q1labelc1.Visible = true;
+            q2labelc1.Visible = true;
+            q3labelc1.Visible = true;
+            q4labelc1.Visible = true;
+
+            q1labelc2.Visible = true;
+            q2labelc2.Visible = true;
+            q3labelc2.Visible = true;
+            q4labelc2.Visible = true;
+
+            q1labelc3.Visible = true;
+            q2labelc3.Visible = true;
+            q3labelc3.Visible = true;
+            q4labelc3.Visible = true;
+
+            q1labelc4.Visible = true;
+            q2labelc4.Visible = true;
+            q3labelc4.Visible = true;
+            q4labelc4.Visible = true;
+
+            q1labelc5.Visible = true;
+            q2labelc5.Visible = true;
+            q3labelc5.Visible = true;
+            q4labelc5.Visible = true;
         }
     }
 }

@@ -667,6 +667,26 @@ namespace Login {
             }
         }
 
+        private void writeToOTCommentsDB(string commentName) {
+            SqlCommand cmdDatabase;
+            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            try {
+                string query1 = "INSERT INTO dbo.otComments (OTComments, ID) VALUES (@comment, @userID);";
+                conDatabase.Open();
+                cmdDatabase = new SqlCommand(query1, conDatabase);
+                //cmdDatabase = new SqlCommand("INSERT INTO dbo." + tableName + "(" + columnName + ") VALUES(@text);" , conDatabase);
+                cmdDatabase.Parameters.AddWithValue("@comment", commentName);
+                cmdDatabase.Parameters.AddWithValue("@userID", userID);
+
+                cmdDatabase.ExecuteNonQuery();
+                conDatabase.Close();
+            } catch (Exception ex) {
+                MessageBox.Show("An error has occurred: " + ex.Message);
+            }
+        }
+
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// BUTTON CLICKS FOR A LITT AND A LOT ////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
