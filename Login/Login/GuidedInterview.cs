@@ -27,13 +27,13 @@ namespace Login {
 
         private string pageLabelReadOutLoudPath;
 
-
         public GuidedInterview() {
 
             InitializeComponent();
             HorizontalScroll.Enabled = false;
             this.Hide();
             panel1.BringToFront();
+            readOutLoudPanel.BringToFront();
             //Dynamically create the circular picture boxes
             createCirclePB(bottomLeftPB);
             createCirclePB(bottomLeftPB2);
@@ -1078,7 +1078,7 @@ namespace Login {
                     Globals.previousClicked = false;
                 }
                 GuidedInterview smellInterview2 = new GuidedInterview();
-                smellInterview2.InstanceRef15 = this;
+                smellInterview2.InstanceRef16 = this;
                 smellInterview2.Show();
                 this.Hide();
             }
@@ -1091,14 +1091,14 @@ namespace Login {
                     Globals.previousClicked = false;
                 }
                 GuidedInterview tasteInterview1 = new GuidedInterview();
-                tasteInterview1.InstanceRef16 = this;
+                tasteInterview1.InstanceRef17 = this;
                 tasteInterview1.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 19) {
                 updateDBfoodGroupsDontLike("bread", "pasta", "foodGroupsDontLike");
                 GuidedInterview tasteInterview1p2 = new GuidedInterview();
-                tasteInterview1p2.InstanceRef17 = this;
+                tasteInterview1p2.InstanceRef18 = this;
                 tasteInterview1p2.Show();
                 this.Hide();
             }
@@ -1110,14 +1110,14 @@ namespace Login {
                     Globals.previousClicked = false;
                 }
                 GuidedInterview tasteInterview2 = new GuidedInterview();
-                tasteInterview2.InstanceRef18 = this;
+                tasteInterview2.InstanceRef19 = this;
                 tasteInterview2.Show();
                 this.Hide();
             }
             else if (Globals.interview_page == 21) {
                 updateDBtastesOrFeelsInMouthDontLike("salty", "spicy", "tastesOrFeelsInMouthDontLike");
                 GuidedInterview tasteInterview2p2 = new GuidedInterview();
-                tasteInterview2p2.InstanceRef19 = this;
+                tasteInterview2p2.InstanceRef20 = this;
                 tasteInterview2p2.Show();
                 this.Hide();
             }
@@ -1131,7 +1131,7 @@ namespace Login {
                     Globals.previousClicked = false;
                 }
                 GuidedInterview tasteInterview3 = new GuidedInterview();
-                tasteInterview3.InstanceRef18 = this;
+                tasteInterview3.InstanceRef21 = this;
                 tasteInterview3.Show();
                 this.Hide();
             }
@@ -1143,7 +1143,7 @@ namespace Login {
                     Globals.previousClicked = false;
                 }
                 GuidedInterview tasteInterview4 = new GuidedInterview();
-                tasteInterview4.InstanceRef20 = this;
+                tasteInterview4.InstanceRef22 = this;
                 tasteInterview4.Show();
                 this.Hide();
             }
@@ -1155,7 +1155,7 @@ namespace Login {
                     Globals.previousClicked = false;
                 }
                 GuidedInterview mvmtInterview1 = new GuidedInterview();
-                mvmtInterview1.InstanceRef21 = this;
+                mvmtInterview1.InstanceRef23 = this;
                 mvmtInterview1.Show();
                 this.Hide();
             }
@@ -1168,7 +1168,7 @@ namespace Login {
                 }
                 this.Hide();
                 GuidedInterview mvmtInterview2 = new GuidedInterview();
-                mvmtInterview2.InstanceRef22 = this;
+                mvmtInterview2.InstanceRef24 = this;
                 mvmtInterview2.Show();
             }
             else if (Globals.interview_page == 26) {
@@ -1179,7 +1179,7 @@ namespace Login {
                     Globals.previousClicked = false;
                 }
                 GuidedInterview mvmtInterview3 = new GuidedInterview();
-                mvmtInterview3.InstanceRef23 = this;
+                mvmtInterview3.InstanceRef25 = this;
                 mvmtInterview3.Show();
                 this.Hide();
             }
@@ -1191,7 +1191,7 @@ namespace Login {
                     Globals.previousClicked = false;
                 }
                 GuidedInterview mvmtInterview4 = new GuidedInterview();
-                mvmtInterview4.InstanceRef24 = this;
+                mvmtInterview4.InstanceRef26 = this;
                 mvmtInterview4.Show();
                 this.Hide();
             }
@@ -1206,7 +1206,7 @@ namespace Login {
                     Globals.previousClicked = false;
                 }
                 GuidedInterview environmentInterview1 = new GuidedInterview();
-                environmentInterview1.InstanceRef25 = this;
+                environmentInterview1.InstanceRef27 = this;
                 environmentInterview1.Show();
                 this.Hide();
             }
@@ -1214,6 +1214,7 @@ namespace Login {
             //OTHER SECTION
             //-------------
             else if (Globals.interview_page == 29) {
+                this.Close();
                 updateDBother("sounds", "smells", "sights", "tastes", "feelings", "movements", "other");
                 Summary sum = new Summary();
                 sum.Show();
@@ -2184,6 +2185,16 @@ namespace Login {
         public Form InstanceRef25 {
             get { return m_InstanceRef25; }
             set { m_InstanceRef25 = value; }
+        }
+        private Form m_InstanceRef26 = null;
+        public Form InstanceRef26 {
+            get { return m_InstanceRef26; }
+            set { m_InstanceRef26 = value; }
+        }
+        private Form m_InstanceRef27 = null;
+        public Form InstanceRef27 {
+            get { return m_InstanceRef27; }
+            set { m_InstanceRef27 = value; }
         }
 
         private void button1_Click(object sender, EventArgs e) {
