@@ -1,0 +1,19 @@
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\bin\Debug\CapstoneDB\CapstoneDB.mdf
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\bin\Debug\CapstoneDB\CapstoneDB_log.ldf
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\bin\Debug\My Sensory ExperiencesTests.dll
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\bin\Debug\My Sensory ExperiencesTests.pdb
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\bin\Debug\Login.exe
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\bin\Debug\Login.pdb
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\bin\Debug\Login.exe.config
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\obj\Debug\My Sensory ExperiencesTests.csprojAssemblyReference.cache
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\obj\Debug\My Sensory ExperiencesTests.csproj.CoreCompileInputs.cache
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\obj\Debug\My Sensory ExperiencesTests.csproj.CopyComplete
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\obj\Debug\My Sensory ExperiencesTests.dll
+C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 2\Login\My Sensory ExperiencesTests\obj\Debug\My Sensory ExperiencesTests.pdb

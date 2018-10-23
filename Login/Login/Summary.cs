@@ -388,6 +388,479 @@ namespace Login {
             }
         }
 
+        private void getHistorySRAnswer(int numOfSRQuestions, string tableNameParam, int columnNumberInSummary) {
+            string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            //Get Max interview number
+            string getMaxInterviewID = "SELECT interviewNumber FROM " + tableNameParam +
+                " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ");";
+            SqlCommand maxInterviewCmd = new SqlCommand(getMaxInterviewID, conDatabase);
+            maxInterviewCmd.Parameters.AddWithValue("@id", id);
+            maxInterviewCmd.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
+            conDatabase.Open();
+            SqlDataReader DataReaderMaxInterview = maxInterviewCmd.ExecuteReader();
+            int maxInterviewList = 0;
+            while (DataReaderMaxInterview.Read()) {
+                    maxInterviewList = int.Parse(DataReaderMaxInterview["interviewNumber"].ToString());
+            }
+            conDatabase.Close();
+            string query;
+            //Switch to determine number of comment in Database
+            switch (numOfSRQuestions) {
+                case 1:
+                    //If there are more interviews that comments
+                    if(maxInterviewList < Globals.interviewRow) {
+                        query = "SELECT comment1 FROM " + tableNameParam +
+                        " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ") AND ID = @id;";
+                    } else {
+                        query = "SELECT comment1 FROM " + tableNameParam +
+                    " WHERE interviewNumber = @interviewRow ;";
+                    }
+                    SqlCommand command = new SqlCommand(query, conDatabase);
+                    command.Parameters.AddWithValue("@id", id);
+                    command.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
+                    conDatabase.Open();
+                    SqlDataReader dr = command.ExecuteReader();
+                    List<string> list = new List<string>();
+                    while (dr.Read()) {
+                        //Iterate through loop and add to list
+                        for (int i = 0; i < 1; i++) {
+                            list.Add(dr[i].ToString());
+                        }
+                    }
+                    //If statement for appropriate display of label and textbox
+                    if (columnNumberInSummary == 1) {
+                        srAnswer1.Clear();
+                        srAnswer2.Clear();
+                        srAnswer3.Clear();
+                        srAnswer4.Clear();
+                        srAnswer1.AppendText(list[0]);
+                        srAnswer1.ReadOnly = true;
+                        srAnswer2.Visible = false;
+                        srAnswer2.Enabled = false;
+                        srAnswer3.Visible = false;
+                        srAnswer3.Enabled = false;
+                        srAnswer4.Visible = false;
+                        srAnswer4.Enabled = false;
+                    } else if (columnNumberInSummary == 2) {
+                        srAnswer5.Clear();
+                        srAnswer6.Clear();
+                        srAnswer7.Clear();
+                        srAnswer8.Clear();
+                        srAnswer5.AppendText(list[0]);
+                        srAnswer5.ReadOnly = true;
+                        srAnswer6.Visible = false;
+                        srAnswer6.Enabled = false;
+                        srAnswer7.Visible = false;
+                        srAnswer7.Enabled = false;
+                        srAnswer8.Visible = false;
+                        srAnswer8.Enabled = false;
+                    } else if (columnNumberInSummary == 3) {
+                        srAnswer9.Clear();
+                        srAnswer10.Clear();
+                        srAnswer11.Clear();
+                        srAnswer12.Clear();
+                        srAnswer9.AppendText(list[0]);
+                        srAnswer9.ReadOnly = true;
+                        srAnswer10.Visible = false;
+                        srAnswer10.Enabled = false;
+                        srAnswer11.Visible = false;
+                        srAnswer11.Enabled = false;
+                        srAnswer12.Visible = false;
+                        srAnswer12.Enabled = false;
+                    } else if (columnNumberInSummary == 4) {
+                        srAnswer13.Clear();
+                        srAnswer14.Clear();
+                        srAnswer15.Clear();
+                        srAnswer16.Clear();
+                        srAnswer13.AppendText(list[0]);
+                        srAnswer13.ReadOnly = true;
+                        srAnswer14.Visible = false;
+                        srAnswer14.Enabled = false;
+                        srAnswer15.Visible = false;
+                        srAnswer15.Enabled = false;
+                        srAnswer16.Visible = false;
+                        srAnswer16.Enabled = false;
+                    } else if (columnNumberInSummary == 5) {
+                        srAnswer17.Clear();
+                        srAnswer18.Clear();
+                        srAnswer19.Clear();
+                        srAnswer20.Clear();
+                        srAnswer17.AppendText(list[0]);
+                        srAnswer17.ReadOnly = true;
+                        srAnswer18.Visible = false;
+                        srAnswer18.Enabled = false;
+                        srAnswer19.Visible = false;
+                        srAnswer19.Enabled = false;
+                        srAnswer20.Visible = false;
+                        srAnswer20.Enabled = false;
+                    }
+
+                    break;
+                case 2:
+                    if (maxInterviewList < Globals.interviewRow) {
+                        query = "SELECT comment1 , comment2 FROM " + tableNameParam +
+                        " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ") AND ID = @id;";
+                    } else {
+                        query = "SELECT comment1, comment2 FROM " + tableNameParam +
+                    " WHERE interviewNumber = @interviewRow;";
+                    }
+
+                    SqlCommand command1 = new SqlCommand(query, conDatabase);
+                    command1.Parameters.AddWithValue("@id", id);
+                    command1.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
+
+                    conDatabase.Open();
+                    SqlDataReader dr1 = command1.ExecuteReader();
+                    List<string> list1 = new List<string>();
+                    while (dr1.Read()) {
+                        //Iterate through loop and add to list
+                        for (int i = 0; i < 2; i++) {
+                            list1.Add(dr1[i].ToString());
+                        }
+                    }
+                    //If statement for appropriate display of label and textbox
+                    if (columnNumberInSummary == 1) {
+                        srAnswer1.Clear();
+                        srAnswer2.Clear();
+                        srAnswer3.Clear();
+                        srAnswer4.Clear();
+                        srAnswer1.AppendText(list1[0]);
+                        srAnswer1.ReadOnly = true;
+                        srAnswer2.AppendText(list1[1]);
+                        srAnswer2.ReadOnly = true;
+                        srAnswer3.Visible = false;
+                        srAnswer3.Enabled = false;
+                        srAnswer4.Visible = false;
+                        srAnswer4.Enabled = false;
+                    } else if (columnNumberInSummary == 2) {
+                        srAnswer5.Clear();
+                        srAnswer6.Clear();
+                        srAnswer7.Clear();
+                        srAnswer8.Clear();
+                        srAnswer5.AppendText(list1[0]);
+                        srAnswer5.ReadOnly = true;
+                        srAnswer6.AppendText(list1[1]);
+                        srAnswer6.ReadOnly = true;
+                        srAnswer7.Visible = false;
+                        srAnswer7.Enabled = false;
+                        srAnswer8.Visible = false;
+                        srAnswer8.Enabled = false;
+                    } else if (columnNumberInSummary == 3) {
+                        srAnswer9.Clear();
+                        srAnswer10.Clear();
+                        srAnswer11.Clear();
+                        srAnswer12.Clear();
+                        srAnswer9.AppendText(list1[0]);
+                        srAnswer9.ReadOnly = true;
+                        srAnswer10.AppendText(list1[1]);
+                        srAnswer10.ReadOnly = true;
+                        srAnswer11.Visible = false;
+                        srAnswer11.Enabled = false;
+                        srAnswer12.Visible = false;
+                        srAnswer12.Enabled = false;
+                    } else if (columnNumberInSummary == 4) {
+                        srAnswer13.Clear();
+                        srAnswer14.Clear();
+                        srAnswer15.Clear();
+                        srAnswer16.Clear();
+                        srAnswer13.AppendText(list1[0]);
+                        srAnswer13.ReadOnly = true;
+                        srAnswer14.AppendText(list1[1]);
+                        srAnswer14.ReadOnly = true;
+                        srAnswer15.Visible = false;
+                        srAnswer15.Enabled = false;
+                        srAnswer16.Visible = false;
+                        srAnswer16.Enabled = false;
+                    } else if (columnNumberInSummary == 5) {
+                        srAnswer17.Clear();
+                        srAnswer18.Clear();
+                        srAnswer19.Clear();
+                        srAnswer20.Clear();
+                        srAnswer17.AppendText(list1[0]);
+                        srAnswer17.ReadOnly = true;
+                        srAnswer18.AppendText(list1[1]);
+                        srAnswer18.ReadOnly = true;
+                        srAnswer19.Visible = false;
+                        srAnswer19.Enabled = false;
+                        srAnswer20.Visible = false;
+                        srAnswer20.Enabled = false;
+                    }
+                    break;
+                case 3:
+                    if (maxInterviewList < Globals.interviewRow) {
+                        query = "SELECT comment1 , comment2, comment3 FROM " + tableNameParam +
+                        " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ")AND ID = @id;";
+                    } else {
+                        query = "SELECT comment1, comment2, comment3 FROM " + tableNameParam +
+                    " WHERE interviewNumber = @interviewRow;";
+
+                    }
+                    SqlCommand command2 = new SqlCommand(query, conDatabase);
+                    command2.Parameters.AddWithValue("@id", id);
+                    command2.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
+
+                    conDatabase.Open();
+                    SqlDataReader dr2 = command2.ExecuteReader();
+                    List<string> list2 = new List<string>();
+                    list2.Clear();
+                    try {
+                        while (dr2.Read()) {
+                            //Iterate through loop and add to list
+                            for (int i = 0; i < 3; i++) {
+                                list2.Add(dr2[i].ToString());
+                            }
+                        }
+                    } catch (Exception ex) {
+                        MessageBox.Show(ex.Message);
+                    }
+                    //If statement for appropriate display of label and textbox
+                    if (columnNumberInSummary == 1) {
+                        srAnswer1.Clear();
+                        srAnswer2.Clear();
+                        srAnswer3.Clear();
+                        srAnswer4.Clear();
+                        srAnswer1.AppendText(list2[0]);
+                        srAnswer1.ReadOnly = true;
+                        srAnswer2.AppendText(list2[1]);
+                        srAnswer2.ReadOnly = true;
+                        srAnswer3.AppendText(list2[2]);
+                        srAnswer3.ReadOnly = true;
+                        srAnswer4.Visible = false;
+                        srAnswer4.Enabled = false;
+                    } else if (columnNumberInSummary == 2) {
+                        srAnswer5.Clear();
+                        srAnswer6.Clear();
+                        srAnswer7.Clear();
+                        srAnswer8.Clear();
+                        srAnswer5.AppendText(list2[0]);
+                        srAnswer5.ReadOnly = true;
+                        srAnswer6.AppendText(list2[1]);
+                        srAnswer6.ReadOnly = true;
+                        srAnswer7.AppendText(list2[2]);
+                        srAnswer7.ReadOnly = true;
+                        srAnswer8.Visible = false;
+                        srAnswer8.Enabled = false;
+                    } else if (columnNumberInSummary == 3) {
+                        srAnswer9.Clear();
+                        srAnswer10.Clear();
+                        srAnswer11.Clear();
+                        srAnswer12.Clear();
+                        srAnswer9.AppendText(list2[0]);
+                        srAnswer9.ReadOnly = true;
+                        srAnswer10.AppendText(list2[1]);
+                        srAnswer10.ReadOnly = true;
+                        srAnswer11.AppendText(list2[2]);
+                        srAnswer11.ReadOnly = true;
+                        srAnswer12.Visible = false;
+                        srAnswer12.Enabled = false;
+                    } else if (columnNumberInSummary == 4) {
+                        srAnswer13.Clear();
+                        srAnswer14.Clear();
+                        srAnswer15.Clear();
+                        srAnswer16.Clear();
+                        srAnswer13.AppendText(list2[0]);
+                        srAnswer13.ReadOnly = true;
+                        srAnswer14.AppendText(list2[1]);
+                        srAnswer14.ReadOnly = true;
+                        srAnswer15.AppendText(list2[2]);
+                        srAnswer15.ReadOnly = true;
+                        srAnswer16.Visible = false;
+                        srAnswer16.Enabled = false;
+                    } else if (columnNumberInSummary == 5) {
+                        srAnswer17.Clear();
+                        srAnswer18.Clear();
+                        srAnswer19.Clear();
+                        srAnswer20.Clear();
+                        srAnswer17.AppendText(list2[0]);
+                        srAnswer17.ReadOnly = true;
+                        srAnswer18.AppendText(list2[1]);
+                        srAnswer18.ReadOnly = true;
+                        srAnswer19.AppendText(list2[2]);
+                        srAnswer19.ReadOnly = true;
+                        srAnswer20.Visible = false;
+                        srAnswer20.Enabled = false;
+                    }
+                    break;
+                case 4:
+                    if (maxInterviewList < Globals.interviewRow) {
+                        query = "SELECT comment1 , comment2, comment3, comment4 FROM " + tableNameParam +
+                        " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ")AND ID = @id;";
+                    } else {
+                            query = "SELECT comment1, comment2, comment3, comment4 FROM " + tableNameParam +
+                        " WHERE interviewNumber = @interviewRow;";
+                     
+                    }
+                    SqlCommand command3 = new SqlCommand(query, conDatabase);
+                    command3.Parameters.AddWithValue("@id", id);
+                    command3.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
+
+                    conDatabase.Open();
+                    SqlDataReader dr3 = command3.ExecuteReader();
+                    List<string> list3 = new List<string>();
+                    while (dr3.Read()) {
+                        //Iterate through loop and add to list
+                        for (int i = 0; i < 4; i++) {
+                            list3.Add(dr3[i].ToString());
+                        }
+                    }
+                    if (columnNumberInSummary == 1) {
+                        srAnswer1.Clear();
+                        srAnswer2.Clear();
+                        srAnswer3.Clear();
+                        srAnswer4.Clear();
+                        srAnswer1.AppendText(list3[0]);
+                        srAnswer1.ReadOnly = true;
+                        srAnswer2.AppendText(list3[1]);
+                        srAnswer2.ReadOnly = true;
+                        srAnswer3.AppendText(list3[2]);
+                        srAnswer3.ReadOnly = true;
+                        srAnswer4.AppendText(list3[3]);
+                        srAnswer4.ReadOnly = true;
+                    } else if (columnNumberInSummary == 2) {
+                        srAnswer5.Clear();
+                        srAnswer6.Clear();
+                        srAnswer7.Clear();
+                        srAnswer8.Clear();
+                        srAnswer5.AppendText(list3[0]);
+                        srAnswer5.ReadOnly = true;
+                        srAnswer6.AppendText(list3[1]);
+                        srAnswer6.ReadOnly = true;
+                        srAnswer7.AppendText(list3[2]);
+                        srAnswer7.ReadOnly = true;
+                        srAnswer8.AppendText(list3[3]);
+                        srAnswer8.ReadOnly = true;
+                    } else if (columnNumberInSummary == 3) {
+                        srAnswer9.Clear();
+                        srAnswer10.Clear();
+                        srAnswer11.Clear();
+                        srAnswer12.Clear();
+                        srAnswer9.AppendText(list3[0]);
+                        srAnswer9.ReadOnly = true;
+                        srAnswer10.AppendText(list3[1]);
+                        srAnswer10.ReadOnly = true;
+                        srAnswer11.AppendText(list3[2]);
+                        srAnswer11.ReadOnly = true;
+                        srAnswer12.AppendText(list3[3]);
+                        srAnswer12.ReadOnly = true;
+                    } else if (columnNumberInSummary == 4) {
+                        srAnswer13.Clear();
+                        srAnswer14.Clear();
+                        srAnswer15.Clear();
+                        srAnswer16.Clear();
+                        srAnswer13.AppendText(list3[0]);
+                        srAnswer13.ReadOnly = true;
+                        srAnswer14.AppendText(list3[1]);
+                        srAnswer14.ReadOnly = true;
+                        srAnswer15.AppendText(list3[2]);
+                        srAnswer15.ReadOnly = true;
+                        srAnswer16.AppendText(list3[3]);
+                        srAnswer16.ReadOnly = true;
+                    } else if (columnNumberInSummary == 5) {
+                        srAnswer17.Clear();
+                        srAnswer18.Clear();
+                        srAnswer19.Clear();
+                        srAnswer20.Clear();
+                        srAnswer17.AppendText(list3[0]);
+                        srAnswer17.ReadOnly = true;
+                        srAnswer18.AppendText(list3[1]);
+                        srAnswer18.ReadOnly = true;
+                        srAnswer19.AppendText(list3[2]);
+                        srAnswer19.ReadOnly = true;
+                        srAnswer20.AppendText(list3[3]);
+                        srAnswer20.ReadOnly = true;
+                    }
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// WHen the user clicks on a previous interview in the history panel in profile page
+        /// </summary>
+        /// <param name="tableNameParam"></param>
+        /// <param name="totalImages"></param>
+        /// <param name="labelResultName1"></param>
+        /// <param name="labelResultName2"></param>
+        /// <param name="labelResultName3"></param>
+        /// <param name="labelResultName4"></param>
+        /// <param name="labelResultName5"></param>
+        /// <param name="labelResultName6"></param>
+        /// <param name="labelResultName7"></param>
+        /// <param name="labelResultName8"></param>
+        private void getPreviousInterview(string tableNameParam, int totalImages, Label labelResultName1, Label labelResultName2, Label labelResultName3, Label labelResultName4, Label labelResultName5,
+            Label labelResultName6, Label labelResultName7, Label labelResultName8) {
+            List<string> list = new List<string>();
+            string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            //Replace summary in string with variable for db table name
+            SqlCommand command = new SqlCommand("SELECT * FROM " + tableNameParam + " WHERE interviewNumber = @interviewRow;", conDatabase);
+            command.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
+            conDatabase.Open();
+            SqlDataReader dr = command.ExecuteReader();
+            list.Clear();
+            while (dr.Read()) {
+                //Iterate through loop and add to list
+                for (int i = 0; i < totalImages; i++) {
+                    list.Add(dr[i].ToString());
+                }
+            }
+            switch (totalImages) {
+                case 2:
+                    labelResultName1.Text = list[0];
+                    labelResultName2.Text = list[1];
+                    break;
+                case 3:
+                    labelResultName1.Text = list[0];
+                    labelResultName2.Text = list[1];
+                    labelResultName3.Text = list[2];
+                    break;
+                case 4:
+                    labelResultName1.Text = list[0];
+                    labelResultName2.Text = list[1];
+                    labelResultName3.Text = list[2];
+                    labelResultName4.Text = list[3];
+                    break;
+                case 5:
+                    labelResultName1.Text = list[0];
+                    labelResultName2.Text = list[1];
+                    labelResultName3.Text = list[2];
+                    labelResultName4.Text = list[3];
+                    labelResultName5.Text = list[4];
+                    break;
+                case 6:
+                    labelResultName1.Text = list[0];
+                    labelResultName2.Text = list[1];
+                    labelResultName3.Text = list[2];
+                    labelResultName4.Text = list[3];
+                    labelResultName5.Text = list[4];
+                    labelResultName6.Text = list[5];
+                    break;
+                case 7:
+                    labelResultName1.Text = list[0];
+                    labelResultName2.Text = list[1];
+                    labelResultName3.Text = list[2];
+                    labelResultName4.Text = list[3];
+                    labelResultName5.Text = list[4];
+                    labelResultName6.Text = list[5];
+                    labelResultName7.Text = list[6];
+                    break;
+                case 8:
+                    labelResultName1.Text = list[0];
+                    labelResultName2.Text = list[1];
+                    labelResultName3.Text = list[2];
+                    labelResultName4.Text = list[3];
+                    labelResultName5.Text = list[4];
+                    labelResultName6.Text = list[5];
+                    labelResultName7.Text = list[6];
+                    labelResultName8.Text = list[7];
+                    break;
+
+            }
+            conDatabase.Close();
+        }
+
         /// <summary>
         /// Get data from data base and store into list
         /// </summary>
@@ -407,21 +880,24 @@ namespace Login {
             //Strings
             //List<string> array = new List<string>();
             DataTable dt = new DataTable();
-            string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
-                @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
-            SqlConnection conDatabase = new SqlConnection(constring);
-            //Replace summary in string with variable for db table name
-            SqlCommand command = new SqlCommand("SELECT * FROM " + tableNameParam + " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ");", conDatabase);
-            conDatabase.Open();
-            SqlDataReader dr = command.ExecuteReader();
+            string constring;
+            SqlConnection conDatabase;
+            SqlCommand command;
             List<string> list = new List<string>();
-            list.Clear();
-            while (dr.Read()) {
-                //Iterate through loop and add to list
-                for(int i = 0; i < totalImages; i++) {
-                    list.Add(dr[i].ToString());
+                constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+                 conDatabase = new SqlConnection(constring);
+                //Replace summary in string with variable for db table name
+                command = new SqlCommand("SELECT * FROM " + tableNameParam + " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ");", conDatabase);
+                conDatabase.Open();
+                SqlDataReader dr = command.ExecuteReader();
+                list.Clear();
+                while (dr.Read()) {
+                    //Iterate through loop and add to list
+                    for (int i = 0; i < totalImages; i++) {
+                        list.Add(dr[i].ToString());
+                    }
                 }
-            }
 
             //Update label text according to list index
                 switch (totalImages) {
@@ -774,12 +1250,20 @@ string text3, string text4, string text5, string text6) {
             if (displayShortResponse) {
                     shortResponseContainerPanel.Visible = true;
                     shortResponseContainerPanel.Enabled = true;
-                    try {
-                        getAdditionalCommentAnswer(3, "dislikeSounds", 1);
-                        getAdditionalCommentAnswer(2, "hardToListen", 2);
-                        getAdditionalCommentAnswer(4, "hardToConcentrate", 3);
-                        getAdditionalCommentAnswer(3, "likeSounds", 4);
-                        getAdditionalCommentAnswer(3, "makeALotSounds", 5);
+               try {
+                        if (!Globals.previousInterview) {
+                            getAdditionalCommentAnswer(3, "dislikeSounds", 1);
+                            getAdditionalCommentAnswer(2, "hardToListen", 2);
+                            getAdditionalCommentAnswer(4, "hardToConcentrate", 3);
+                            getAdditionalCommentAnswer(3, "likeSounds", 4);
+                            getAdditionalCommentAnswer(3, "makeALotSounds", 5);
+                        } else {
+                            getHistorySRAnswer(3, "dislikeSounds", 1);
+                            getHistorySRAnswer(2, "hardToListen", 2);
+                            getHistorySRAnswer(4, "hardToConcentrate", 3);
+                            getHistorySRAnswer(3, "likeSounds", 4);
+                            getHistorySRAnswer(3, "makeALotSounds", 5);
+                    }
                         updateSRTopicLabel("Are there some sounds that you don't like?",
                             "Are there times when it is hard for you to listen?",
                             "Are there some sounds that make it hard for you to concentrate?",
@@ -816,18 +1300,24 @@ string text3, string text4, string text5, string text6) {
                     updateTopic5ResultLabel(4, "Humming or whistling to myself", "Tapping Feet", "Tapping Fingers", "Clicking Pen", "", "");
                     updateTopic4ResultLabel(5, "Computer Sounds", "Live Music", "Fans", "Music Through My Phone", "Rhythsm", "");
                 try {
-                    getDBAnser("dislikeSounds", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
-                    getDBAnser("hardToListen", 3, topic2Results1, topic2Results2, topic2Results3, null, null, null, null, null);
-                    getDBAnser("hardToConcentrate", 3, topic3Results1, topic3Results2, topic3Results3, null, null, null, null, null);
-                    getDBAnser("likeSounds", 5, topic4Results1, topic4Results2, topic4Results3, topic4Results4, topic4Results5, null, null, null);
-                    getDBAnser("makeALotSounds", 4, topic5Results1, topic5Results2, topic5Results3, topic5Results4, null, null, null, null);
-
+                    if (!Globals.previousInterview) {
+                        getDBAnser("dislikeSounds", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
+                        getDBAnser("hardToListen", 3, topic2Results1, topic2Results2, topic2Results3, null, null, null, null, null);
+                        getDBAnser("hardToConcentrate", 3, topic3Results1, topic3Results2, topic3Results3, null, null, null, null, null);
+                        getDBAnser("likeSounds", 5, topic4Results1, topic4Results2, topic4Results3, topic4Results4, topic4Results5, null, null, null);
+                        getDBAnser("makeALotSounds", 4, topic5Results1, topic5Results2, topic5Results3, topic5Results4, null, null, null, null);
+                    } else {
+                        getPreviousInterview("dislikeSounds", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
+                        getPreviousInterview("hardToListen", 3, topic2Results1, topic2Results2, topic2Results3, null, null, null, null, null);
+                        getPreviousInterview("hardToConcentrate", 3, topic3Results1, topic3Results2, topic3Results3, null, null, null, null, null);
+                        getPreviousInterview("likeSounds", 5, topic4Results1, topic4Results2, topic4Results3, topic4Results4, topic4Results5, null, null, null);
+                        getPreviousInterview("makeALotSounds", 4, topic5Results1, topic5Results2, topic5Results3, topic5Results4, null, null, null, null);
+                    }
                 } catch (Exception ex) {
                     MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                 }
-
-                    //Re-Add the labels
-                    this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
+                //Re-Add the labels
+                this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
                     this.resultsTable.Controls.Add(this.topic1Image2, 0, 1);
                     this.resultsTable.Controls.Add(this.topic1Image3, 0, 2);
                     this.resultsTable.Controls.Add(this.topic1Image4, 0, 3);
@@ -943,10 +1433,17 @@ string text3, string text4, string text5, string text6) {
                     shortResponseContainerPanel.Visible = true;
                     shortResponseContainerPanel.Enabled = true;
                     try {
+                    if (!Globals.previousInterview) {
                         getAdditionalCommentAnswer(3, "dontLikeToLookAt", 1);
                         getAdditionalCommentAnswer(2, "sightHardToConcentrate", 2);
                         getAdditionalCommentAnswer(3, "likeToLookAt", 3);
-                    } catch(Exception ex) {
+
+                    } else {
+                        getHistorySRAnswer(3, "dontLikeToLookAt", 1);
+                        getHistorySRAnswer(2, "sightHardToConcentrate", 2);
+                        getHistorySRAnswer(3, "likeToLookAt", 3);
+                    }
+                } catch(Exception ex) {
                         MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                     }
                     updateSRTopicLabel("Are there some things that you don't \n like to look at?",
@@ -966,10 +1463,15 @@ string text3, string text4, string text5, string text6) {
                     updateTopic2ResultLabel(3, "Lots of Things in a Messy Drawer", "People Running Around Me", "Lots of Things Hanging up in \n the classroom", "", "", "", "", "");
                     updateTopic3ResultLabel(5, "Moving Lights", "Things That Sparkle", "Geometric Patterns", "Spinning Fans", "Spinning Objects", "");
                         try {
-                            getDBAnser("dontLikeToLookAt", 5, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, null, null, null);
-                            getDBAnser("sightHardToConcentrate", 3, topic2Results1, topic2Results2, topic2Results3, null, null, null, null, null);
-                            getDBAnser("likeToLookAt", 5, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, null, null, null);
-
+                        if (!Globals.previousInterview) {
+                                getDBAnser("dontLikeToLookAt", 5, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, null, null, null);
+                                getDBAnser("sightHardToConcentrate", 3, topic2Results1, topic2Results2, topic2Results3, null, null, null, null, null);
+                                getDBAnser("likeToLookAt", 5, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, null, null, null);
+                        } else {
+                        getPreviousInterview("dontLikeToLookAt", 5, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, null, null, null);
+                        getPreviousInterview("sightHardToConcentrate", 3, topic2Results1, topic2Results2, topic2Results3, null, null, null, null, null);
+                        getPreviousInterview("likeToLookAt", 5, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, null, null, null);
+                            }
                         } catch (Exception error) {
                             MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                         }
@@ -1020,11 +1522,17 @@ string text3, string text4, string text5, string text6) {
                     shortResponseContainerPanel.Visible = true;
                     shortResponseContainerPanel.Enabled = true;
                     try {
-
+                    if (!Globals.previousInterview) {
                         getAdditionalCommentAnswer(4, "movingDontLike", 1);
                         getAdditionalCommentAnswer(1, "hardToStayStill", 2);
                         getAdditionalCommentAnswer(2, "movingThatYouLike", 3);
                         getAdditionalCommentAnswer(4, "moveOverAndOverAgain", 4);
+                    } else {
+                        getHistorySRAnswer(4, "movingDontLike", 1);
+                        getHistorySRAnswer(1, "hardToStayStill", 2);
+                        getHistorySRAnswer(2, "movingThatYouLike", 3);
+                        getHistorySRAnswer(4, "moveOverAndOverAgain", 4);
+                    }
                     } catch (Exception ex) {
                         MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                     }
@@ -1039,7 +1547,7 @@ string text3, string text4, string text5, string text6) {
                     "Are there some ways that you move over \n and over again?", "");
 
                 } else {
-
+                    
                     clearTable(resultsTable, 5);
                     clearTable(topic2Table, 2);
                     clearTable(topic3Table, 5);
@@ -1052,15 +1560,21 @@ string text3, string text4, string text5, string text6) {
                     updateTopic2ResultLabel(2, "Standing Still", "Sitting Still", "", "", "", "", "", "");
                     updateTopic3ResultLabel(5, "Moving in Water", "Swinging", "Spinning", "Jumping on The Trampoline", "Running", "");
                     updateTopic4ResultLabel(4, "Rocking", "Moving Hands", "Clapping", "Pacing", "", "");
-                    try {
+                try {
+                    if (!Globals.previousInterview) {
                         getDBAnser("movingDontLike", 5, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, null, null, null);
                         getDBAnser("hardToStayStill", 2, topic2Results1, topic2Results2, null, null, null, null, null, null);
                         getDBAnser("movingThatYouLike", 5, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, null, null, null);
                         getDBAnser("moveOverAndOverAgain", 4, topic4Results1, topic4Results2, topic4Results3, topic4Results4, null, null, null, null);
-
-                    } catch (Exception ex) {
-                        MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+                    } else {
+                        getPreviousInterview("movingDontLike", 5, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, null, null, null);
+                        getPreviousInterview("hardToStayStill", 2, topic2Results1, topic2Results2, null, null, null, null, null, null);
+                        getPreviousInterview("movingThatYouLike", 5, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, null, null, null);
+                        getPreviousInterview("moveOverAndOverAgain", 4, topic4Results1, topic4Results2, topic4Results3, topic4Results4, null, null, null, null);
                     }
+                } catch (Exception ex) {
+                        MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+                }
 
                     topic1ResultPanel.Visible = true;
                     topic2ResultPanel.Visible = true;
@@ -1118,8 +1632,13 @@ string text3, string text4, string text5, string text6) {
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
                 try {
-                    getAdditionalCommentAnswer(3, "smellDontLike", 1);
-                    getAdditionalCommentAnswer(3, "likeToSmell", 2);
+                    if (!Globals.previousInterview) {
+                        getAdditionalCommentAnswer(3, "smellDontLike", 1);
+                        getAdditionalCommentAnswer(3, "likeToSmell", 2);
+                    } else {
+                        getHistorySRAnswer(3, "smellDontLike", 1);
+                        getHistorySRAnswer(3, "likeToSmell", 2);
+                    }
                 } catch (Exception ex) {
                     MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                 }
@@ -1140,8 +1659,13 @@ string text3, string text4, string text5, string text6) {
                 updateTopic2ResultLabel(5, "Smelling Foods", "Smelling Plants",
                     "Smelling Perfume", "Smelling Soap", "Smelling People", "", "", "");
                 try {
-                    getDBAnser("smellDontLike", 6, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, null, null);
-                    getDBAnser("likeToSmell", 5, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, null, null, null);
+                    if (!Globals.previousInterview) {
+                        getDBAnser("smellDontLike", 6, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, null, null);
+                        getDBAnser("likeToSmell", 5, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, null, null, null);
+                    } else {
+                        getPreviousInterview("smellDontLike", 6, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, null, null);
+                        getPreviousInterview("likeToSmell", 5, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, null, null, null);
+                    }
 
                 } catch (Exception ex) {
                     MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
@@ -1185,10 +1709,15 @@ string text3, string text4, string text5, string text6) {
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
                 try {
-
-                    getAdditionalCommentAnswer(4, "dontLikeFeelingOf", 1);
-                    getAdditionalCommentAnswer(4, "peopleTouchDontLike", 2);
-                    getAdditionalCommentAnswer(3, "likeTheFeelingOf", 3);
+                    if (!Globals.previousInterview) {
+                        getAdditionalCommentAnswer(4, "dontLikeFeelingOf", 1);
+                        getAdditionalCommentAnswer(4, "peopleTouchDontLike", 2);
+                        getAdditionalCommentAnswer(3, "likeTheFeelingOf", 3);
+                    } else {
+                        getHistorySRAnswer(4, "dontLikeFeelingOf", 1);
+                        getHistorySRAnswer(4, "peopleTouchDontLike", 2);
+                        getHistorySRAnswer(3, "likeTheFeelingOf", 3);
+                    }
                 } catch (Exception ex) {
                     MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                 }
@@ -1210,10 +1739,16 @@ string text3, string text4, string text5, string text6) {
                     "Being Bumped", "Having a Haircut", "Doctor Touching me", "Dentist Touching me");
                 updateTopic3ResultLabel(6, "Soft", "Rubbery", "Furry", "Hugging People", "Touching People", "Being Squashed With a Pillow");
                 try {
+                    if (!Globals.previousInterview) {
 
-                    getDBAnser("dontLikeFeelingOf", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
-                    getDBAnser("peopleTouchDontLike", 8, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, topic2Results7, topic2Results8);
-                    getDBAnser("likeTheFeelingOf", 6, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, topic3Results6, null, null);
+                        getDBAnser("dontLikeFeelingOf", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
+                        getDBAnser("peopleTouchDontLike", 8, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, topic2Results7, topic2Results8);
+                        getDBAnser("likeTheFeelingOf", 6, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, topic3Results6, null, null);
+                    } else {
+                        getPreviousInterview("dontLikeFeelingOf", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
+                        getPreviousInterview("peopleTouchDontLike", 8, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, topic2Results7, topic2Results8);
+                        getPreviousInterview("likeTheFeelingOf", 6, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, topic3Results6, null, null);
+                    }
                 } catch (Exception ex) {
                     MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                 }
@@ -1281,8 +1816,13 @@ string text3, string text4, string text5, string text6) {
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
                 try {
-                    getAdditionalCommentAnswer(4, "other", 1);
-                    getAdditionalCommentAnswer(4, "other", 2);
+                    if (!Globals.previousInterview) {
+                        getAdditionalCommentAnswer(4, "other", 1);
+                        getAdditionalCommentAnswer(4, "other", 2);
+                    } else {
+                        getHistorySRAnswer(4, "other", 1);
+                        getHistorySRAnswer(4, "other", 2);
+                    }
                 } catch (Exception ex) {
                     MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                 }
@@ -1298,8 +1838,13 @@ string text3, string text4, string text5, string text6) {
                 updateTopic1ResultLabel(5, "Supermarket", "Party", "Food Hall", "Show", "Shopping Mall", "", "", "");
                 updateTopic2ResultLabel(6, "Sound", "Smells", "Sights", "Tastes", "Feelings", "Movements", "", "");
                 try {
-                    getDBAnser("other", 5, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, null, null, null);
-                    getDBAnser("other", 6, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, null, null);
+                    if (!Globals.previousInterview) {
+                        getDBAnser("other", 5, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, null, null, null);
+                        getDBAnser("other", 6, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, null, null);
+                    } else {
+                        getPreviousInterview("other", 5, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, null, null, null);
+                        getPreviousInterview("other", 6, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, null, null);
+                    }
 
                 } catch (Exception ex) {
                     MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
@@ -1344,10 +1889,17 @@ string text3, string text4, string text5, string text6) {
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
                 try {
-                    getAdditionalCommentAnswer(2, "foodGroupsDontLike", 1);
-                    getAdditionalCommentAnswer(3, "tastesOrFeelsInMouthDontLike", 2);
-                    getAdditionalCommentAnswer(2, "foodReallyLikeToEat", 3);
-                    getAdditionalCommentAnswer(3, "thingsPutInMouthALot", 4);
+                    if (!Globals.previousInterview) {
+                        getAdditionalCommentAnswer(2, "foodGroupsDontLike", 1);
+                        getAdditionalCommentAnswer(3, "tastesOrFeelsInMouthDontLike", 2);
+                        getAdditionalCommentAnswer(2, "foodReallyLikeToEat", 3);
+                        getAdditionalCommentAnswer(3, "thingsPutInMouthALot", 4);
+                    } else {
+                        getHistorySRAnswer(2, "foodGroupsDontLike", 1);
+                        getHistorySRAnswer(3, "tastesOrFeelsInMouthDontLike", 2);
+                        getHistorySRAnswer(2, "foodReallyLikeToEat", 3);
+                        getHistorySRAnswer(3, "thingsPutInMouthALot", 4);
+                    }
                 } catch (Exception ex) {
                     MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                 }
@@ -1375,10 +1927,17 @@ string text3, string text4, string text5, string text6) {
                     "Unfamiliar Foods, lots of different types of foods \n i.e. I Like Trying New Foods", "", "", "", "");
                 updateTopic4ResultLabel(3, "Shirt", "Hair", "Objects", "", "", "");
                 try {
-                    getDBAnser("foodGroupsDontLike", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
-                    getDBAnser("tastesOrFeelsInMouthDontLike", 8, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, topic2Results7, topic2Results8);
-                    getDBAnser("foodReallyLikeToEat", 2, topic3Results1, topic3Results2, null, null, null, null, null, null);
-                    getDBAnser("thingsPutInMouthALot", 3, topic4Results1, topic4Results2, topic4Results3, null, null, null, null, null);
+                    if (!Globals.previousInterview) {
+                        getDBAnser("foodGroupsDontLike", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
+                        getDBAnser("tastesOrFeelsInMouthDontLike", 8, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, topic2Results7, topic2Results8);
+                        getDBAnser("foodReallyLikeToEat", 2, topic3Results1, topic3Results2, null, null, null, null, null, null);
+                        getDBAnser("thingsPutInMouthALot", 3, topic4Results1, topic4Results2, topic4Results3, null, null, null, null, null);
+                    } else {
+                        getPreviousInterview("foodGroupsDontLike", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
+                        getPreviousInterview("tastesOrFeelsInMouthDontLike", 8, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, topic2Results7, topic2Results8);
+                        getPreviousInterview("foodReallyLikeToEat", 2, topic3Results1, topic3Results2, null, null, null, null, null, null);
+                        getPreviousInterview("thingsPutInMouthALot", 3, topic4Results1, topic4Results2, topic4Results3, null, null, null, null, null);
+                    }
                 } catch (Exception ex) {
                     MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                 }
