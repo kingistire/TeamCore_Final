@@ -111,6 +111,8 @@
             this.tasteBtn = new System.Windows.Forms.Button();
             this.changeSummaryPanelType = new System.Windows.Forms.Button();
             this.shortResponseContainerPanel = new System.Windows.Forms.Panel();
+            this.commentsTxtBox = new System.Windows.Forms.TextBox();
+            this.commentsLbl = new System.Windows.Forms.Label();
             this.q4labelc5 = new System.Windows.Forms.Label();
             this.q3labelc5 = new System.Windows.Forms.Label();
             this.q2labelc5 = new System.Windows.Forms.Label();
@@ -156,8 +158,6 @@
             this.srAnswer3 = new System.Windows.Forms.TextBox();
             this.srAnswer2 = new System.Windows.Forms.TextBox();
             this.srAnswer1 = new System.Windows.Forms.TextBox();
-            this.commentsLbl = new System.Windows.Forms.Label();
-            this.commentsTxtBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.capstoneDBDataSetBindingSource)).BeginInit();
             this.topic1ResultPanel.SuspendLayout();
             this.resultsTable.SuspendLayout();
@@ -174,7 +174,7 @@
             // 
             // soundBtn
             // 
-            this.soundBtn.Location = new System.Drawing.Point(28, 65);
+            this.soundBtn.Location = new System.Drawing.Point(28, 83);
             this.soundBtn.Name = "soundBtn";
             this.soundBtn.Size = new System.Drawing.Size(135, 45);
             this.soundBtn.TabIndex = 2;
@@ -184,7 +184,7 @@
             // 
             // sightBtn
             // 
-            this.sightBtn.Location = new System.Drawing.Point(28, 145);
+            this.sightBtn.Location = new System.Drawing.Point(28, 163);
             this.sightBtn.Name = "sightBtn";
             this.sightBtn.Size = new System.Drawing.Size(135, 45);
             this.sightBtn.TabIndex = 3;
@@ -194,7 +194,7 @@
             // 
             // smellBtn
             // 
-            this.smellBtn.Location = new System.Drawing.Point(28, 308);
+            this.smellBtn.Location = new System.Drawing.Point(28, 326);
             this.smellBtn.Name = "smellBtn";
             this.smellBtn.Size = new System.Drawing.Size(135, 45);
             this.smellBtn.TabIndex = 5;
@@ -204,7 +204,7 @@
             // 
             // hearingBtn
             // 
-            this.hearingBtn.Location = new System.Drawing.Point(28, 226);
+            this.hearingBtn.Location = new System.Drawing.Point(28, 244);
             this.hearingBtn.Name = "hearingBtn";
             this.hearingBtn.Size = new System.Drawing.Size(135, 45);
             this.hearingBtn.TabIndex = 4;
@@ -214,7 +214,7 @@
             // 
             // additionalCommentsBtn
             // 
-            this.additionalCommentsBtn.Location = new System.Drawing.Point(28, 542);
+            this.additionalCommentsBtn.Location = new System.Drawing.Point(28, 560);
             this.additionalCommentsBtn.Name = "additionalCommentsBtn";
             this.additionalCommentsBtn.Size = new System.Drawing.Size(135, 45);
             this.additionalCommentsBtn.TabIndex = 7;
@@ -224,7 +224,7 @@
             // 
             // touchBtn
             // 
-            this.touchBtn.Location = new System.Drawing.Point(28, 392);
+            this.touchBtn.Location = new System.Drawing.Point(28, 410);
             this.touchBtn.Name = "touchBtn";
             this.touchBtn.Size = new System.Drawing.Size(135, 45);
             this.touchBtn.TabIndex = 6;
@@ -236,7 +236,7 @@
             // 
             this.topic1ResultPanel.Controls.Add(this.resultsTable);
             this.topic1ResultPanel.Controls.Add(this.topic1Label);
-            this.topic1ResultPanel.Location = new System.Drawing.Point(197, 12);
+            this.topic1ResultPanel.Location = new System.Drawing.Point(197, 30);
             this.topic1ResultPanel.Name = "topic1ResultPanel";
             this.topic1ResultPanel.Size = new System.Drawing.Size(341, 257);
             this.topic1ResultPanel.TabIndex = 16;
@@ -264,9 +264,9 @@
             this.resultsTable.Controls.Add(this.topic1Results6, 1, 5);
             this.resultsTable.Controls.Add(this.topic1Results7, 1, 6);
             this.resultsTable.Controls.Add(this.topic1Results8, 1, 7);
-            this.resultsTable.Location = new System.Drawing.Point(19, 37);
+            this.resultsTable.Location = new System.Drawing.Point(19, 55);
             this.resultsTable.Name = "resultsTable";
-            this.resultsTable.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.resultsTable.Padding = new System.Windows.Forms.Padding(3);
             this.resultsTable.RowCount = 8;
             this.resultsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.83544F));
             this.resultsTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.16456F));
@@ -428,7 +428,7 @@
             // 
             this.topic1Label.AutoSize = true;
             this.topic1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.topic1Label.Location = new System.Drawing.Point(26, 0);
+            this.topic1Label.Location = new System.Drawing.Point(26, 18);
             this.topic1Label.Name = "topic1Label";
             this.topic1Label.Size = new System.Drawing.Size(288, 18);
             this.topic1Label.TabIndex = 16;
@@ -439,7 +439,7 @@
             // 
             this.topic3ResultPanel.Controls.Add(this.topic3Table);
             this.topic3ResultPanel.Controls.Add(this.topic3Label);
-            this.topic3ResultPanel.Location = new System.Drawing.Point(206, 276);
+            this.topic3ResultPanel.Location = new System.Drawing.Point(206, 294);
             this.topic3ResultPanel.Name = "topic3ResultPanel";
             this.topic3ResultPanel.Size = new System.Drawing.Size(332, 256);
             this.topic3ResultPanel.TabIndex = 34;
@@ -463,9 +463,9 @@
             this.topic3Table.Controls.Add(this.topic3Results2, 1, 1);
             this.topic3Table.Controls.Add(this.topic3Results3, 1, 2);
             this.topic3Table.Controls.Add(this.topic3Image4, 0, 3);
-            this.topic3Table.Location = new System.Drawing.Point(12, 41);
+            this.topic3Table.Location = new System.Drawing.Point(12, 59);
             this.topic3Table.Name = "topic3Table";
-            this.topic3Table.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.topic3Table.Padding = new System.Windows.Forms.Padding(3);
             this.topic3Table.RowCount = 6;
             this.topic3Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.topic3Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -594,7 +594,7 @@
             // 
             this.topic3Label.AutoSize = true;
             this.topic3Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.topic3Label.Location = new System.Drawing.Point(41, 3);
+            this.topic3Label.Location = new System.Drawing.Point(41, 21);
             this.topic3Label.Name = "topic3Label";
             this.topic3Label.Size = new System.Drawing.Size(242, 36);
             this.topic3Label.TabIndex = 30;
@@ -605,7 +605,7 @@
             // 
             this.topic2ResultPanel.Controls.Add(this.topic2Table);
             this.topic2ResultPanel.Controls.Add(this.topic2Label);
-            this.topic2ResultPanel.Location = new System.Drawing.Point(578, 12);
+            this.topic2ResultPanel.Location = new System.Drawing.Point(578, 30);
             this.topic2ResultPanel.Name = "topic2ResultPanel";
             this.topic2ResultPanel.Size = new System.Drawing.Size(342, 257);
             this.topic2ResultPanel.TabIndex = 35;
@@ -633,9 +633,9 @@
             this.topic2Table.Controls.Add(this.topic2Results3, 1, 2);
             this.topic2Table.Controls.Add(this.topic2Image4, 0, 3);
             this.topic2Table.Controls.Add(this.topic2Image5, 0, 4);
-            this.topic2Table.Location = new System.Drawing.Point(18, 33);
+            this.topic2Table.Location = new System.Drawing.Point(18, 51);
             this.topic2Table.Name = "topic2Table";
-            this.topic2Table.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.topic2Table.Padding = new System.Windows.Forms.Padding(3);
             this.topic2Table.RowCount = 8;
             this.topic2Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.topic2Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -806,7 +806,7 @@
             // 
             this.topic2Label.AutoSize = true;
             this.topic2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.topic2Label.Location = new System.Drawing.Point(9, -1);
+            this.topic2Label.Location = new System.Drawing.Point(9, 17);
             this.topic2Label.Name = "topic2Label";
             this.topic2Label.Size = new System.Drawing.Size(318, 18);
             this.topic2Label.TabIndex = 28;
@@ -817,7 +817,7 @@
             // 
             this.topic4ResultPanel.Controls.Add(this.topic4Table);
             this.topic4ResultPanel.Controls.Add(this.topic4Label);
-            this.topic4ResultPanel.Location = new System.Drawing.Point(578, 276);
+            this.topic4ResultPanel.Location = new System.Drawing.Point(578, 294);
             this.topic4ResultPanel.Name = "topic4ResultPanel";
             this.topic4ResultPanel.Size = new System.Drawing.Size(342, 256);
             this.topic4ResultPanel.TabIndex = 36;
@@ -839,9 +839,9 @@
             this.topic4Table.Controls.Add(this.topic4Results4, 1, 3);
             this.topic4Table.Controls.Add(this.topic4Image5, 0, 4);
             this.topic4Table.Controls.Add(this.topic4Results5, 1, 4);
-            this.topic4Table.Location = new System.Drawing.Point(18, 40);
+            this.topic4Table.Location = new System.Drawing.Point(18, 58);
             this.topic4Table.Name = "topic4Table";
-            this.topic4Table.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.topic4Table.Padding = new System.Windows.Forms.Padding(3);
             this.topic4Table.RowCount = 5;
             this.topic4Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.topic4Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -949,7 +949,7 @@
             // 
             this.topic4Label.AutoSize = true;
             this.topic4Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.topic4Label.Location = new System.Drawing.Point(17, 2);
+            this.topic4Label.Location = new System.Drawing.Point(17, 20);
             this.topic4Label.Name = "topic4Label";
             this.topic4Label.Size = new System.Drawing.Size(324, 18);
             this.topic4Label.TabIndex = 32;
@@ -960,7 +960,7 @@
             // 
             this.topic5ResultPanel.Controls.Add(this.topic5Table);
             this.topic5ResultPanel.Controls.Add(this.topic5Label);
-            this.topic5ResultPanel.Location = new System.Drawing.Point(955, 136);
+            this.topic5ResultPanel.Location = new System.Drawing.Point(955, 154);
             this.topic5ResultPanel.Name = "topic5ResultPanel";
             this.topic5ResultPanel.Size = new System.Drawing.Size(342, 281);
             this.topic5ResultPanel.TabIndex = 37;
@@ -980,9 +980,9 @@
             this.topic5Table.Controls.Add(this.topic5Results3, 1, 2);
             this.topic5Table.Controls.Add(this.topic5Image4, 0, 3);
             this.topic5Table.Controls.Add(this.topic5Results4, 1, 3);
-            this.topic5Table.Location = new System.Drawing.Point(15, 45);
+            this.topic5Table.Location = new System.Drawing.Point(15, 63);
             this.topic5Table.Name = "topic5Table";
-            this.topic5Table.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.topic5Table.Padding = new System.Windows.Forms.Padding(3);
             this.topic5Table.RowCount = 4;
             this.topic5Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.topic5Table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -1069,7 +1069,7 @@
             // 
             this.topic5Label.AutoSize = true;
             this.topic5Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.topic5Label.Location = new System.Drawing.Point(11, 22);
+            this.topic5Label.Location = new System.Drawing.Point(11, 40);
             this.topic5Label.Name = "topic5Label";
             this.topic5Label.Size = new System.Drawing.Size(299, 18);
             this.topic5Label.TabIndex = 34;
@@ -1078,7 +1078,7 @@
             // 
             // tasteBtn
             // 
-            this.tasteBtn.Location = new System.Drawing.Point(28, 468);
+            this.tasteBtn.Location = new System.Drawing.Point(28, 486);
             this.tasteBtn.Name = "tasteBtn";
             this.tasteBtn.Size = new System.Drawing.Size(135, 45);
             this.tasteBtn.TabIndex = 38;
@@ -1088,7 +1088,7 @@
             // 
             // changeSummaryPanelType
             // 
-            this.changeSummaryPanelType.Location = new System.Drawing.Point(28, 5);
+            this.changeSummaryPanelType.Location = new System.Drawing.Point(28, 23);
             this.changeSummaryPanelType.Name = "changeSummaryPanelType";
             this.changeSummaryPanelType.Size = new System.Drawing.Size(135, 46);
             this.changeSummaryPanelType.TabIndex = 39;
@@ -1098,8 +1098,6 @@
             // 
             // shortResponseContainerPanel
             // 
-            this.shortResponseContainerPanel.Controls.Add(this.commentsTxtBox);
-            this.shortResponseContainerPanel.Controls.Add(this.commentsLbl);
             this.shortResponseContainerPanel.Controls.Add(this.q4labelc5);
             this.shortResponseContainerPanel.Controls.Add(this.q3labelc5);
             this.shortResponseContainerPanel.Controls.Add(this.q2labelc5);
@@ -1146,18 +1144,38 @@
             this.shortResponseContainerPanel.Controls.Add(this.srAnswer2);
             this.shortResponseContainerPanel.Controls.Add(this.srAnswer1);
             this.shortResponseContainerPanel.Enabled = false;
-            this.shortResponseContainerPanel.Location = new System.Drawing.Point(179, 11);
+            this.shortResponseContainerPanel.Location = new System.Drawing.Point(179, 29);
             this.shortResponseContainerPanel.Name = "shortResponseContainerPanel";
-            this.shortResponseContainerPanel.Size = new System.Drawing.Size(1313, 571);
+            this.shortResponseContainerPanel.Size = new System.Drawing.Size(1115, 571);
             this.shortResponseContainerPanel.TabIndex = 41;
             this.shortResponseContainerPanel.Visible = false;
+            // 
+            // commentsTxtBox
+            // 
+            this.commentsTxtBox.Location = new System.Drawing.Point(1310, 49);
+            this.commentsTxtBox.Multiline = true;
+            this.commentsTxtBox.Name = "commentsTxtBox";
+            this.commentsTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.commentsTxtBox.Size = new System.Drawing.Size(182, 514);
+            this.commentsTxtBox.TabIndex = 87;
+            // 
+            // commentsLbl
+            // 
+            this.commentsLbl.AutoSize = true;
+            this.commentsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.commentsLbl.Location = new System.Drawing.Point(1357, 23);
+            this.commentsLbl.Name = "commentsLbl";
+            this.commentsLbl.Size = new System.Drawing.Size(90, 20);
+            this.commentsLbl.TabIndex = 86;
+            this.commentsLbl.Text = "Comments";
+            this.commentsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // q4labelc5
             // 
             this.q4labelc5.AutoSize = true;
             this.q4labelc5.Enabled = false;
             this.q4labelc5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q4labelc5.Location = new System.Drawing.Point(912, 441);
+            this.q4labelc5.Location = new System.Drawing.Point(912, 459);
             this.q4labelc5.Name = "q4labelc5";
             this.q4labelc5.Size = new System.Drawing.Size(45, 16);
             this.q4labelc5.TabIndex = 85;
@@ -1168,7 +1186,7 @@
             // 
             this.q3labelc5.AutoSize = true;
             this.q3labelc5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q3labelc5.Location = new System.Drawing.Point(911, 312);
+            this.q3labelc5.Location = new System.Drawing.Point(911, 330);
             this.q3labelc5.Name = "q3labelc5";
             this.q3labelc5.Size = new System.Drawing.Size(193, 32);
             this.q3labelc5.TabIndex = 84;
@@ -1178,7 +1196,7 @@
             // 
             this.q2labelc5.AutoSize = true;
             this.q2labelc5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q2labelc5.Location = new System.Drawing.Point(914, 208);
+            this.q2labelc5.Location = new System.Drawing.Point(914, 226);
             this.q2labelc5.Name = "q2labelc5";
             this.q2labelc5.Size = new System.Drawing.Size(169, 16);
             this.q2labelc5.TabIndex = 83;
@@ -1188,7 +1206,7 @@
             // 
             this.q1labelc5.AutoSize = true;
             this.q1labelc5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q1labelc5.Location = new System.Drawing.Point(917, 74);
+            this.q1labelc5.Location = new System.Drawing.Point(917, 92);
             this.q1labelc5.Name = "q1labelc5";
             this.q1labelc5.Size = new System.Drawing.Size(180, 16);
             this.q1labelc5.TabIndex = 82;
@@ -1199,11 +1217,11 @@
             this.srAnswer20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.srAnswer20.Enabled = false;
-            this.srAnswer20.Location = new System.Drawing.Point(908, 499);
+            this.srAnswer20.Location = new System.Drawing.Point(908, 517);
             this.srAnswer20.Multiline = true;
             this.srAnswer20.Name = "srAnswer20";
             this.srAnswer20.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer20.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer20.Size = new System.Drawing.Size(0, 65);
             this.srAnswer20.TabIndex = 81;
             this.srAnswer20.Visible = false;
             // 
@@ -1211,7 +1229,7 @@
             // 
             this.srTopic5.AutoSize = true;
             this.srTopic5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.srTopic5.Location = new System.Drawing.Point(916, 1);
+            this.srTopic5.Location = new System.Drawing.Point(916, 19);
             this.srTopic5.Name = "srTopic5";
             this.srTopic5.Size = new System.Drawing.Size(197, 40);
             this.srTopic5.TabIndex = 80;
@@ -1222,33 +1240,33 @@
             // 
             this.srAnswer19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer19.Location = new System.Drawing.Point(908, 363);
+            this.srAnswer19.Location = new System.Drawing.Point(908, 381);
             this.srAnswer19.Multiline = true;
             this.srAnswer19.Name = "srAnswer19";
             this.srAnswer19.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer19.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer19.Size = new System.Drawing.Size(0, 65);
             this.srAnswer19.TabIndex = 77;
             // 
             // srAnswer18
             // 
             this.srAnswer18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer18.Location = new System.Drawing.Point(911, 235);
+            this.srAnswer18.Location = new System.Drawing.Point(911, 253);
             this.srAnswer18.Multiline = true;
             this.srAnswer18.Name = "srAnswer18";
             this.srAnswer18.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer18.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer18.Size = new System.Drawing.Size(0, 65);
             this.srAnswer18.TabIndex = 78;
             // 
             // srAnswer17
             // 
             this.srAnswer17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer17.Location = new System.Drawing.Point(908, 117);
+            this.srAnswer17.Location = new System.Drawing.Point(908, 135);
             this.srAnswer17.Multiline = true;
             this.srAnswer17.Name = "srAnswer17";
             this.srAnswer17.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer17.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer17.Size = new System.Drawing.Size(0, 65);
             this.srAnswer17.TabIndex = 79;
             // 
             // q4labelc4
@@ -1256,7 +1274,7 @@
             this.q4labelc4.AutoSize = true;
             this.q4labelc4.Enabled = false;
             this.q4labelc4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q4labelc4.Location = new System.Drawing.Point(681, 440);
+            this.q4labelc4.Location = new System.Drawing.Point(681, 458);
             this.q4labelc4.Name = "q4labelc4";
             this.q4labelc4.Size = new System.Drawing.Size(45, 16);
             this.q4labelc4.TabIndex = 76;
@@ -1267,7 +1285,7 @@
             // 
             this.q3labelc4.AutoSize = true;
             this.q3labelc4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q3labelc4.Location = new System.Drawing.Point(680, 311);
+            this.q3labelc4.Location = new System.Drawing.Point(680, 329);
             this.q3labelc4.Name = "q3labelc4";
             this.q3labelc4.Size = new System.Drawing.Size(182, 48);
             this.q3labelc4.TabIndex = 75;
@@ -1277,7 +1295,7 @@
             // 
             this.q2labelc4.AutoSize = true;
             this.q2labelc4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q2labelc4.Location = new System.Drawing.Point(683, 207);
+            this.q2labelc4.Location = new System.Drawing.Point(683, 225);
             this.q2labelc4.Name = "q2labelc4";
             this.q2labelc4.Size = new System.Drawing.Size(169, 16);
             this.q2labelc4.TabIndex = 74;
@@ -1287,7 +1305,7 @@
             // 
             this.q1labelc4.AutoSize = true;
             this.q1labelc4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q1labelc4.Location = new System.Drawing.Point(703, 73);
+            this.q1labelc4.Location = new System.Drawing.Point(703, 91);
             this.q1labelc4.Name = "q1labelc4";
             this.q1labelc4.Size = new System.Drawing.Size(136, 32);
             this.q1labelc4.TabIndex = 73;
@@ -1298,11 +1316,11 @@
             this.srAnswer16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.srAnswer16.Enabled = false;
-            this.srAnswer16.Location = new System.Drawing.Point(677, 498);
+            this.srAnswer16.Location = new System.Drawing.Point(677, 516);
             this.srAnswer16.Multiline = true;
             this.srAnswer16.Name = "srAnswer16";
             this.srAnswer16.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer16.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer16.Size = new System.Drawing.Size(0, 65);
             this.srAnswer16.TabIndex = 72;
             this.srAnswer16.Visible = false;
             // 
@@ -1310,7 +1328,7 @@
             // 
             this.srTopic4.AutoSize = true;
             this.srTopic4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.srTopic4.Location = new System.Drawing.Point(685, 0);
+            this.srTopic4.Location = new System.Drawing.Point(685, 18);
             this.srTopic4.Name = "srTopic4";
             this.srTopic4.Size = new System.Drawing.Size(197, 60);
             this.srTopic4.TabIndex = 71;
@@ -1321,40 +1339,40 @@
             // 
             this.srAnswer15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer15.Location = new System.Drawing.Point(677, 362);
+            this.srAnswer15.Location = new System.Drawing.Point(677, 380);
             this.srAnswer15.Multiline = true;
             this.srAnswer15.Name = "srAnswer15";
             this.srAnswer15.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer15.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer15.Size = new System.Drawing.Size(0, 65);
             this.srAnswer15.TabIndex = 68;
             // 
             // srAnswer14
             // 
             this.srAnswer14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer14.Location = new System.Drawing.Point(680, 234);
+            this.srAnswer14.Location = new System.Drawing.Point(680, 252);
             this.srAnswer14.Multiline = true;
             this.srAnswer14.Name = "srAnswer14";
             this.srAnswer14.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer14.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer14.Size = new System.Drawing.Size(0, 65);
             this.srAnswer14.TabIndex = 69;
             // 
             // srAnswer13
             // 
             this.srAnswer13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer13.Location = new System.Drawing.Point(677, 116);
+            this.srAnswer13.Location = new System.Drawing.Point(677, 134);
             this.srAnswer13.Multiline = true;
             this.srAnswer13.Name = "srAnswer13";
             this.srAnswer13.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer13.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer13.Size = new System.Drawing.Size(0, 65);
             this.srAnswer13.TabIndex = 70;
             // 
             // q4labelc3
             // 
             this.q4labelc3.AutoSize = true;
             this.q4labelc3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q4labelc3.Location = new System.Drawing.Point(456, 432);
+            this.q4labelc3.Location = new System.Drawing.Point(456, 450);
             this.q4labelc3.Name = "q4labelc3";
             this.q4labelc3.Size = new System.Drawing.Size(183, 64);
             this.q4labelc3.TabIndex = 67;
@@ -1365,7 +1383,7 @@
             // 
             this.q3labelc3.AutoSize = true;
             this.q3labelc3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q3labelc3.Location = new System.Drawing.Point(459, 311);
+            this.q3labelc3.Location = new System.Drawing.Point(459, 329);
             this.q3labelc3.Name = "q3labelc3";
             this.q3labelc3.Size = new System.Drawing.Size(156, 48);
             this.q3labelc3.TabIndex = 66;
@@ -1375,7 +1393,7 @@
             // 
             this.q2labelc3.AutoSize = true;
             this.q2labelc3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q2labelc3.Location = new System.Drawing.Point(462, 207);
+            this.q2labelc3.Location = new System.Drawing.Point(462, 225);
             this.q2labelc3.Name = "q2labelc3";
             this.q2labelc3.Size = new System.Drawing.Size(169, 16);
             this.q2labelc3.TabIndex = 65;
@@ -1385,7 +1403,7 @@
             // 
             this.q1labelc3.AutoSize = true;
             this.q1labelc3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q1labelc3.Location = new System.Drawing.Point(482, 73);
+            this.q1labelc3.Location = new System.Drawing.Point(482, 91);
             this.q1labelc3.Name = "q1labelc3";
             this.q1labelc3.Size = new System.Drawing.Size(157, 32);
             this.q1labelc3.TabIndex = 64;
@@ -1395,18 +1413,18 @@
             // 
             this.srAnswer12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer12.Location = new System.Drawing.Point(456, 498);
+            this.srAnswer12.Location = new System.Drawing.Point(456, 516);
             this.srAnswer12.Multiline = true;
             this.srAnswer12.Name = "srAnswer12";
             this.srAnswer12.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer12.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer12.Size = new System.Drawing.Size(0, 65);
             this.srAnswer12.TabIndex = 63;
             // 
             // srTopic3
             // 
             this.srTopic3.AutoSize = true;
             this.srTopic3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.srTopic3.Location = new System.Drawing.Point(464, 0);
+            this.srTopic3.Location = new System.Drawing.Point(464, 18);
             this.srTopic3.Name = "srTopic3";
             this.srTopic3.Size = new System.Drawing.Size(197, 60);
             this.srTopic3.TabIndex = 62;
@@ -1417,33 +1435,33 @@
             // 
             this.srAnswer11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer11.Location = new System.Drawing.Point(456, 362);
+            this.srAnswer11.Location = new System.Drawing.Point(456, 380);
             this.srAnswer11.Multiline = true;
             this.srAnswer11.Name = "srAnswer11";
             this.srAnswer11.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer11.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer11.Size = new System.Drawing.Size(0, 65);
             this.srAnswer11.TabIndex = 59;
             // 
             // srAnswer10
             // 
             this.srAnswer10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer10.Location = new System.Drawing.Point(459, 234);
+            this.srAnswer10.Location = new System.Drawing.Point(459, 252);
             this.srAnswer10.Multiline = true;
             this.srAnswer10.Name = "srAnswer10";
             this.srAnswer10.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer10.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer10.Size = new System.Drawing.Size(0, 65);
             this.srAnswer10.TabIndex = 60;
             // 
             // srAnswer9
             // 
             this.srAnswer9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer9.Location = new System.Drawing.Point(456, 116);
+            this.srAnswer9.Location = new System.Drawing.Point(456, 134);
             this.srAnswer9.Multiline = true;
             this.srAnswer9.Name = "srAnswer9";
             this.srAnswer9.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer9.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer9.Size = new System.Drawing.Size(0, 65);
             this.srAnswer9.TabIndex = 61;
             // 
             // q4labelc2
@@ -1451,7 +1469,7 @@
             this.q4labelc2.AutoSize = true;
             this.q4labelc2.Enabled = false;
             this.q4labelc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q4labelc2.Location = new System.Drawing.Point(233, 440);
+            this.q4labelc2.Location = new System.Drawing.Point(233, 458);
             this.q4labelc2.Name = "q4labelc2";
             this.q4labelc2.Size = new System.Drawing.Size(45, 16);
             this.q4labelc2.TabIndex = 58;
@@ -1463,7 +1481,7 @@
             this.q3labelc2.AutoSize = true;
             this.q3labelc2.Enabled = false;
             this.q3labelc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q3labelc2.Location = new System.Drawing.Point(232, 311);
+            this.q3labelc2.Location = new System.Drawing.Point(232, 329);
             this.q3labelc2.Name = "q3labelc2";
             this.q3labelc2.Size = new System.Drawing.Size(198, 48);
             this.q3labelc2.TabIndex = 57;
@@ -1475,7 +1493,7 @@
             // 
             this.q2labelc2.AutoSize = true;
             this.q2labelc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q2labelc2.Location = new System.Drawing.Point(235, 207);
+            this.q2labelc2.Location = new System.Drawing.Point(235, 225);
             this.q2labelc2.Name = "q2labelc2";
             this.q2labelc2.Size = new System.Drawing.Size(170, 16);
             this.q2labelc2.TabIndex = 56;
@@ -1485,7 +1503,7 @@
             // 
             this.q1labelc2.AutoSize = true;
             this.q1labelc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q1labelc2.Location = new System.Drawing.Point(255, 73);
+            this.q1labelc2.Location = new System.Drawing.Point(255, 91);
             this.q1labelc2.Name = "q1labelc2";
             this.q1labelc2.Size = new System.Drawing.Size(131, 32);
             this.q1labelc2.TabIndex = 55;
@@ -1496,11 +1514,11 @@
             this.srAnswer8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.srAnswer8.Enabled = false;
-            this.srAnswer8.Location = new System.Drawing.Point(229, 498);
+            this.srAnswer8.Location = new System.Drawing.Point(229, 516);
             this.srAnswer8.Multiline = true;
             this.srAnswer8.Name = "srAnswer8";
             this.srAnswer8.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer8.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer8.Size = new System.Drawing.Size(0, 65);
             this.srAnswer8.TabIndex = 54;
             this.srAnswer8.Visible = false;
             // 
@@ -1508,7 +1526,7 @@
             // 
             this.srTopic2.AutoSize = true;
             this.srTopic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.srTopic2.Location = new System.Drawing.Point(231, 0);
+            this.srTopic2.Location = new System.Drawing.Point(231, 18);
             this.srTopic2.Name = "srTopic2";
             this.srTopic2.Size = new System.Drawing.Size(219, 40);
             this.srTopic2.TabIndex = 53;
@@ -1520,11 +1538,11 @@
             this.srAnswer7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.srAnswer7.Enabled = false;
-            this.srAnswer7.Location = new System.Drawing.Point(229, 362);
+            this.srAnswer7.Location = new System.Drawing.Point(229, 380);
             this.srAnswer7.Multiline = true;
             this.srAnswer7.Name = "srAnswer7";
             this.srAnswer7.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer7.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer7.Size = new System.Drawing.Size(0, 65);
             this.srAnswer7.TabIndex = 50;
             this.srAnswer7.Visible = false;
             // 
@@ -1532,22 +1550,22 @@
             // 
             this.srAnswer6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer6.Location = new System.Drawing.Point(232, 234);
+            this.srAnswer6.Location = new System.Drawing.Point(232, 252);
             this.srAnswer6.Multiline = true;
             this.srAnswer6.Name = "srAnswer6";
             this.srAnswer6.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer6.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer6.Size = new System.Drawing.Size(0, 65);
             this.srAnswer6.TabIndex = 51;
             // 
             // srAnswer5
             // 
             this.srAnswer5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer5.Location = new System.Drawing.Point(224, 116);
+            this.srAnswer5.Location = new System.Drawing.Point(224, 134);
             this.srAnswer5.Multiline = true;
             this.srAnswer5.Name = "srAnswer5";
             this.srAnswer5.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer5.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer5.Size = new System.Drawing.Size(0, 65);
             this.srAnswer5.TabIndex = 52;
             // 
             // q4labelc1
@@ -1555,7 +1573,7 @@
             this.q4labelc1.AutoSize = true;
             this.q4labelc1.Enabled = false;
             this.q4labelc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q4labelc1.Location = new System.Drawing.Point(1, 441);
+            this.q4labelc1.Location = new System.Drawing.Point(1, 459);
             this.q4labelc1.Name = "q4labelc1";
             this.q4labelc1.Size = new System.Drawing.Size(45, 16);
             this.q4labelc1.TabIndex = 49;
@@ -1566,7 +1584,7 @@
             // 
             this.q3labelc1.AutoSize = true;
             this.q3labelc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q3labelc1.Location = new System.Drawing.Point(0, 312);
+            this.q3labelc1.Location = new System.Drawing.Point(0, 330);
             this.q3labelc1.Name = "q3labelc1";
             this.q3labelc1.Size = new System.Drawing.Size(186, 48);
             this.q3labelc1.TabIndex = 48;
@@ -1577,7 +1595,7 @@
             // 
             this.q2labelc1.AutoSize = true;
             this.q2labelc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q2labelc1.Location = new System.Drawing.Point(3, 208);
+            this.q2labelc1.Location = new System.Drawing.Point(3, 226);
             this.q2labelc1.Name = "q2labelc1";
             this.q2labelc1.Size = new System.Drawing.Size(169, 16);
             this.q2labelc1.TabIndex = 47;
@@ -1587,7 +1605,7 @@
             // 
             this.q1labelc1.AutoSize = true;
             this.q1labelc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.q1labelc1.Location = new System.Drawing.Point(23, 74);
+            this.q1labelc1.Location = new System.Drawing.Point(23, 92);
             this.q1labelc1.Name = "q1labelc1";
             this.q1labelc1.Size = new System.Drawing.Size(136, 32);
             this.q1labelc1.TabIndex = 46;
@@ -1598,11 +1616,11 @@
             this.srAnswer4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.srAnswer4.Enabled = false;
-            this.srAnswer4.Location = new System.Drawing.Point(-3, 499);
+            this.srAnswer4.Location = new System.Drawing.Point(-3, 517);
             this.srAnswer4.Multiline = true;
             this.srAnswer4.Name = "srAnswer4";
             this.srAnswer4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer4.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer4.Size = new System.Drawing.Size(0, 65);
             this.srAnswer4.TabIndex = 45;
             this.srAnswer4.Visible = false;
             // 
@@ -1610,7 +1628,7 @@
             // 
             this.srTopicLabel1.AutoSize = true;
             this.srTopicLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.srTopicLabel1.Location = new System.Drawing.Point(5, 1);
+            this.srTopicLabel1.Location = new System.Drawing.Point(5, 19);
             this.srTopicLabel1.Name = "srTopicLabel1";
             this.srTopicLabel1.Size = new System.Drawing.Size(197, 40);
             this.srTopicLabel1.TabIndex = 44;
@@ -1621,63 +1639,44 @@
             // 
             this.srAnswer3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer3.Location = new System.Drawing.Point(-3, 363);
+            this.srAnswer3.Location = new System.Drawing.Point(-3, 381);
             this.srAnswer3.Multiline = true;
             this.srAnswer3.Name = "srAnswer3";
             this.srAnswer3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer3.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer3.Size = new System.Drawing.Size(0, 65);
             this.srAnswer3.TabIndex = 40;
             // 
             // srAnswer2
             // 
             this.srAnswer2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer2.Location = new System.Drawing.Point(0, 235);
+            this.srAnswer2.Location = new System.Drawing.Point(0, 253);
             this.srAnswer2.Multiline = true;
             this.srAnswer2.Name = "srAnswer2";
             this.srAnswer2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer2.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer2.Size = new System.Drawing.Size(0, 65);
             this.srAnswer2.TabIndex = 41;
             // 
             // srAnswer1
             // 
             this.srAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.srAnswer1.Location = new System.Drawing.Point(-3, 117);
+            this.srAnswer1.Location = new System.Drawing.Point(-3, 135);
             this.srAnswer1.Multiline = true;
             this.srAnswer1.Name = "srAnswer1";
             this.srAnswer1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.srAnswer1.Size = new System.Drawing.Size(191, 65);
+            this.srAnswer1.Size = new System.Drawing.Size(0, 65);
             this.srAnswer1.TabIndex = 42;
-            // 
-            // commentsLbl
-            // 
-            this.commentsLbl.AutoSize = true;
-            this.commentsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.commentsLbl.Location = new System.Drawing.Point(1191, 6);
-            this.commentsLbl.Name = "commentsLbl";
-            this.commentsLbl.Size = new System.Drawing.Size(90, 20);
-            this.commentsLbl.TabIndex = 86;
-            this.commentsLbl.Text = "Comments";
-            this.commentsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // commentsTxtBox
-            // 
-            this.commentsTxtBox.Location = new System.Drawing.Point(1128, 49);
-            this.commentsTxtBox.Multiline = true;
-            this.commentsTxtBox.Name = "commentsTxtBox";
-            this.commentsTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.commentsTxtBox.Size = new System.Drawing.Size(182, 514);
-            this.commentsTxtBox.TabIndex = 87;
             // 
             // Summary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1504, 594);
+            this.Controls.Add(this.commentsLbl);
+            this.Controls.Add(this.commentsTxtBox);
             this.Controls.Add(this.changeSummaryPanelType);
             this.Controls.Add(this.tasteBtn);
-            this.Controls.Add(this.shortResponseContainerPanel);
             this.Controls.Add(this.topic5ResultPanel);
             this.Controls.Add(this.topic4ResultPanel);
             this.Controls.Add(this.topic2ResultPanel);
@@ -1689,6 +1688,7 @@
             this.Controls.Add(this.soundBtn);
             this.Controls.Add(this.hearingBtn);
             this.Controls.Add(this.sightBtn);
+            this.Controls.Add(this.shortResponseContainerPanel);
             this.Name = "Summary";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Summary";
@@ -1717,6 +1717,7 @@
             this.shortResponseContainerPanel.ResumeLayout(false);
             this.shortResponseContainerPanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

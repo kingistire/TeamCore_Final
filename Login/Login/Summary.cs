@@ -1264,26 +1264,6 @@ string text3, string text4, string text5, string text6) {
                             getAdditionalCommentAnswer(4, "hardToConcentrate", 3);
                             getAdditionalCommentAnswer(3, "likeSounds", 4);
                             getAdditionalCommentAnswer(3, "makeALotSounds", 5);
-                        updateSRLabels(q1labelc1, q2labelc1, q3labelc1, q4labelc1,
-                            "Other sounds that you don't like?",
-                            "Examples in your daily life?",
-                            "Do you do anything to avoid \n these sounds (e.g., cover your ears, \n avoid noisy places?)",
-                            "");
-                        updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
-                            "Other times when it is hard to listen?",
-                            "Examples in your daily life?",
-                            "",
-                            "");
-                        updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
-                            "Other times when it is hard to listen?",
-                            "Examples in your daily life?",
-                            "",
-                            "");
-                        updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
-                            "Other times when it is hard to listen?",
-                            "Examples in your daily life?",
-                            "",
-                            "");
 
 
                                 
@@ -1299,7 +1279,32 @@ string text3, string text4, string text5, string text6) {
                             "Are there some sounds that make it hard for you to concentrate?",
                             "Are there some sounds that you like to listen to?",
                             "Are there some sounds that you make a lot?");
-                    } catch (Exception) {
+                    updateSRLabels(q1labelc1, q2labelc1, q3labelc1, q4labelc1,
+                    "Other sounds that you don't like?",
+                    "Examples in your daily life?",
+                    "Do you do anything to avoid \n these sounds (e.g., cover your ears, \n avoid noisy places?)",
+                    "");
+                    updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
+                        "Other times when it is hard to listen?",
+                        "Examples in your daily life?",
+                        "",
+                        "");
+                    updateSRLabels(q1labelc3, q2labelc3, q3labelc3, q4labelc3,
+                        "Other sounds that make it hard \n to concentrate?",
+                        "Examples in your daily life?",
+                        "Are there noises that you find \n very distracting when you have a \n job to do?",
+                        "Does noise ever make it hard \n for you to do things \n (e.g., work in an office, go to \n shopping centres");
+                    updateSRLabels(q1labelc4, q2labelc4, q3labelc4, q4labelc4,
+                        "Other sounds that you like?",
+                        "Examples in your daily life?",
+                        "Are there sounds that you \n like to listen to often \n or for long periods?",
+                        "");
+                    updateSRLabels(q1labelc5, q2labelc5, q3labelc5, q4labelc5,
+                        "Other sounds that you make?",
+                        "Examples in your daily life?",
+                        "Do the sounds you make seem to \n bother other people?",
+                        "");
+                } catch (Exception) {
                     resetAnswerLabels();
                         MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                     }
@@ -1839,14 +1844,13 @@ string text3, string text4, string text5, string text6) {
 
         }
 
-        public void getOTCommentsFromDB(string tableNameParam, int columnNumberInSummary) {
+        public void getOTCommentsFromDB() {
             //Get maxInterview Number from selected table in database
             string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                                 @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
             SqlConnection conDatabase = new SqlConnection(constring);
             //Get Max interview number
-            string getMaxInterviewID = "SELECT interviewNumber FROM " + tableNameParam +
-                " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ");";
+            string getMaxInterviewID = "SELECT interviewNumber FROM otComments WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.otComments);";
             SqlCommand maxInterviewCmd = new SqlCommand(getMaxInterviewID, conDatabase);
             maxInterviewCmd.Parameters.AddWithValue("@id", id);
             maxInterviewCmd.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
@@ -1863,7 +1867,7 @@ string text3, string text4, string text5, string text6) {
             if (maxInterviewList < Globals.interviewRow) {
                 query = "SELECT OTComments FROM otComments WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.otComments) AND ID = @id;";
             } else {
-                query = "SELECT OTComments FROM otComments WHERE interviewNumber = @interviewRow ;";
+                query = "SELECT OTComments FROM otComments WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.otComments) AND ID = @id;";
             }
             SqlCommand command = new SqlCommand(query, conDatabase);
             command.Parameters.AddWithValue("@id", id);
@@ -1880,7 +1884,47 @@ string text3, string text4, string text5, string text6) {
 
             //Update comment box and disable it.
             commentsTxtBox.Clear();
-            commentsTxtBox.Text = list[0];
+            commentsTxtBox.AppendText(list[0]);
+            commentsTxtBox.Enabled = false;
+        }
+
+        private void getOTHistory() {
+            //Get maxInterview Number from selected table in database
+            string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            //Get Max interview number
+            string getMaxInterviewID = "SELECT interviewNumber FROM otComments WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.otComments);";
+            SqlCommand maxInterviewCmd = new SqlCommand(getMaxInterviewID, conDatabase);
+            maxInterviewCmd.Parameters.AddWithValue("@id", id);
+            maxInterviewCmd.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
+            conDatabase.Open();
+            SqlDataReader DataReaderMaxInterview = maxInterviewCmd.ExecuteReader();
+            int maxInterviewList = 0;
+            //Update maxInterList
+            while (DataReaderMaxInterview.Read()) {
+                maxInterviewList = int.Parse(DataReaderMaxInterview["interviewNumber"].ToString());
+            }
+            conDatabase.Close();
+            string query;
+            //Determines if OT Comment interviewNumber is less than the total interview number. If so, select most recent one, else, select the interviewRow number
+                query = "SELECT OTComments FROM otComments WHERE interviewNumber = @interviewRow;";
+            SqlCommand command = new SqlCommand(query, conDatabase);
+            command.Parameters.AddWithValue("@id", id);
+            command.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
+            conDatabase.Open();
+            SqlDataReader dr = command.ExecuteReader();
+            List<string> list = new List<string>();
+            while (dr.Read()) {
+                //Iterate through loop and add to list
+                for (int i = 0; i < 1; i++) {
+                    list.Add(dr[i].ToString());
+                }
+            }
+
+            //Update comment box and disable it.
+            commentsTxtBox.Clear();
+            commentsTxtBox.AppendText(list[0]);
             commentsTxtBox.Enabled = false;
         }
 
@@ -1891,12 +1935,14 @@ string text3, string text4, string text5, string text6) {
                 shortResponseContainerPanel.Visible = true;
                 shortResponseContainerPanel.Enabled = true;
                 try {
-                    if (!Globals.previousInterview) {
+                    if (!Globals.previousInterview) { //Get Latest
                         getAdditionalCommentAnswer(4, "other", 1);
                         getAdditionalCommentAnswer(4, "other", 2);
-                    } else {
+                        getOTCommentsFromDB();
+                    } else { //Get previousHistory
                         getHistorySRAnswer(4, "other", 1);
                         getHistorySRAnswer(4, "other", 2);
+                        getOTHistory();
                     }
                 } catch (Exception ex) {
                     MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
@@ -1916,9 +1962,11 @@ string text3, string text4, string text5, string text6) {
                     if (!Globals.previousInterview) {
                         getDBAnser("other", 5, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, null, null, null);
                         getDBAnser("other", 6, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, null, null);
+                        getOTCommentsFromDB();
                     } else {
                         getPreviousInterview("other", 5, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, null, null, null);
                         getPreviousInterview("other", 6, topic2Results1, topic2Results2, topic2Results3, topic2Results4, topic2Results5, topic2Results6, null, null);
+                        getOTCommentsFromDB();
                     }
 
                 } catch (Exception ex) {
