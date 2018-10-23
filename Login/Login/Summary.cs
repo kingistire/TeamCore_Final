@@ -388,6 +388,13 @@ namespace Login {
             }
         }
 
+        private void updateSRLabels(Label labelName, Label labelName2, Label labelName3, Label labelName4, string q1, string q2, string q3, string q4) {
+            labelName.Text = q1;
+            labelName2.Text = q2;
+            labelName3.Text = q3;
+            labelName4.Text = q4;
+        }
+
         private void getHistorySRAnswer(int numOfSRQuestions, string tableNameParam, int columnNumberInSummary) {
             string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                                 @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
@@ -1257,6 +1264,29 @@ string text3, string text4, string text5, string text6) {
                             getAdditionalCommentAnswer(4, "hardToConcentrate", 3);
                             getAdditionalCommentAnswer(3, "likeSounds", 4);
                             getAdditionalCommentAnswer(3, "makeALotSounds", 5);
+                        updateSRLabels(q1labelc1, q2labelc1, q3labelc1, q4labelc1,
+                            "Other sounds that you don't like?",
+                            "Examples in your daily life?",
+                            "Do you do anything to avoid \n these sounds (e.g., cover your ears, \n avoid noisy places?)",
+                            "");
+                        updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
+                            "Other times when it is hard to listen?",
+                            "Examples in your daily life?",
+                            "",
+                            "");
+                        updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
+                            "Other times when it is hard to listen?",
+                            "Examples in your daily life?",
+                            "",
+                            "");
+                        updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
+                            "Other times when it is hard to listen?",
+                            "Examples in your daily life?",
+                            "",
+                            "");
+
+
+                                
                         } else {
                             getHistorySRAnswer(3, "dislikeSounds", 1);
                             getHistorySRAnswer(2, "hardToListen", 2);
@@ -1807,6 +1837,51 @@ string text3, string text4, string text5, string text6) {
                 this.topic3Table.Controls.Add(this.topic3Results6, 1, 5);
             }
 
+        }
+
+        public void getOTCommentsFromDB(string tableNameParam, int columnNumberInSummary) {
+            //Get maxInterview Number from selected table in database
+            string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
+                                @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
+            SqlConnection conDatabase = new SqlConnection(constring);
+            //Get Max interview number
+            string getMaxInterviewID = "SELECT interviewNumber FROM " + tableNameParam +
+                " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ");";
+            SqlCommand maxInterviewCmd = new SqlCommand(getMaxInterviewID, conDatabase);
+            maxInterviewCmd.Parameters.AddWithValue("@id", id);
+            maxInterviewCmd.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
+            conDatabase.Open();
+            SqlDataReader DataReaderMaxInterview = maxInterviewCmd.ExecuteReader();
+            int maxInterviewList = 0;
+            //Update maxInterList
+            while (DataReaderMaxInterview.Read()) {
+                maxInterviewList = int.Parse(DataReaderMaxInterview["interviewNumber"].ToString());
+            }
+            conDatabase.Close();
+            string query;
+            //Determines if OT Comment interviewNumber is less than the total interview number. If so, select most recent one, else, select the interviewRow number
+            if (maxInterviewList < Globals.interviewRow) {
+                query = "SELECT OTComments FROM otComments WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.otComments) AND ID = @id;";
+            } else {
+                query = "SELECT OTComments FROM otComments WHERE interviewNumber = @interviewRow ;";
+            }
+            SqlCommand command = new SqlCommand(query, conDatabase);
+            command.Parameters.AddWithValue("@id", id);
+            command.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
+            conDatabase.Open();
+            SqlDataReader dr = command.ExecuteReader();
+            List<string> list = new List<string>();
+            while (dr.Read()) {
+                //Iterate through loop and add to list
+                for (int i = 0; i < 1; i++) {
+                    list.Add(dr[i].ToString());
+                }
+            }
+
+            //Update comment box and disable it.
+            commentsTxtBox.Clear();
+            commentsTxtBox.Text = list[0];
+            commentsTxtBox.Enabled = false;
         }
 
         private void additionalCommentsBtn_Click(object sender, EventArgs e) {
