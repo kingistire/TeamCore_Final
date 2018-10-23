@@ -15,3 +15,5 @@ namespace Login {
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
         }
+    }
+}
