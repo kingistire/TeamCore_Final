@@ -71,9 +71,9 @@ namespace Login {
 
 
             //// Preload alittle alot ////
-            alotPlayer.SoundLocation = @"..\..\resources\0. System\UiAlotSound.wav";//MISSINGFILE
+            alotPlayer.SoundLocation = @"..\..\resources\0. System\UiAlotSound.wav";
             alotPlayer.Load();
-            alittlePlayer.SoundLocation = @"..\..\resources\0. System\UiAlittleSound.wav";//MISSINGFILE
+            alittlePlayer.SoundLocation = @"..\..\resources\0. System\UiAlittleSound.wav";
             alittlePlayer.Load();
 
 
@@ -433,29 +433,29 @@ namespace Login {
         {
             //axWindowsMediaPlayer1.URL = @"..\..\resources\0testsound.mp3";
 
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE 
+            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav"); 
 
             topLabelPlayer.SoundLocation = pageLabelReadOutLoudPath;
             topLabelPlayer.Load();
 
             lblQuestion.Text = "Are there some sounds that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1 Other People Talking (cropped).png");
-            topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.1OtherPeopleTalking.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.1OtherPeopleTalking.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\2 Fireworks.jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.2Fireworks.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.2Fireworks.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\3 Loud voices.PNG");
-            topRightReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.3LoudVoices.wav";//MISSINGFILE - Name Fine
+            topRightReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.3LoudVoices.wav";
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\4 Household appliances (e.g., blenders, vacuum).png");
-            bottomLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.4HouseholdAppliances.wav";//MISSINGFILE - Name Fine
+            bottomLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.4HouseholdAppliances.wav";
 
             bottomMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\5 Vehicles (e.g., trucks, motorbikes) (cropped).jpg");
-            bottomMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.5Vehicles.wav";//MISSINGFILE - Name Fine
+            bottomMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.5Vehicles.wav";
 
             bottomRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\6 Bathroom appliances (e.g., hand dryers, hair dryers) (photoshopped).jpg");
-            bottomrightReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.6BathroomAppliances.wav";//MISSINGFILE - Name Fine
+            bottomrightReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.6BathroomAppliances.wav";
 
             updateLabelText("Other people talking", " Fireworks", "Loud voices",
                 "Household appliances (e.g. blenders, vacuum)", "Vehicles (e.g. trucks, motorbikes)",
@@ -464,62 +464,56 @@ namespace Login {
 
         private void interviewPage1p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");
             lblQuestion.Text = "Are there some sounds that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\7 Sirens, alarms, school bells.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.7Sirens.Wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.7Sirens.Wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\8 Sudden loud noises (e.g., balloons popping).jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.8SuddenLoudNoises.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.8SuddenLoudNoises.wav";
 
-            //topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\loud_voices.PNG");
-            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\household_ appliances.PNG");
-            // bottomMidPB.Image = new Bitmap(@"..\..\resources\");
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\");
             updateLabelText("Sirens, alarms, school bells", "Sudden loud noises (e.g., balloons popping)", "", "", "", "");
         }
 
         private void interviewPage1p3()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");
             panel2lblQuestion.Text = "Are there some sounds that you don't like?";
             lblQuestion1.Text = "Other sounds that you don't like?";
             lblQuestion2.Text = "Examples in your daily life?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.9 Other sounds that you don't like.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.9 Other sounds that you don't like.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.9 Other sounds that you don't like.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void interviewPage2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");
             panel2lblQuestion.Text = "Are there some sounds that you don't like?";
             lblQuestion1.Text = "Do you do anything to avoid these sounds (e.g., cover your ears, avoid noisy places?";
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
 
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.10 avoiding sounds (self).wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.10 avoiding sounds (self).wav");
         }
 
         private void interviewPage3()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1.2.0 Are there times when you find it hard to listen.wav");
             lblQuestion.Text = "Are there times when it is hard for you to listen?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1 If I am concentrating on something, I don't notice people talking to me.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1.2.1Concentration.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1.2.1Concentrating.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\2 I find it hard to listen in noisy classrooms.jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1.2.2NoisyClassroom.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1.2.2NoisyLecturer.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\3 I find it hard to listen to someone talking to me when I'm in a group.jpg");
-            topRightReadOutLoudPath = @"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1.2.3ListenToSomone.wav";//MISSINGFILE - Name Fine
-            //bottomLeftPB.Image = new Bitmap(@"../../resources/");
-            //bottomMidPB.Image = new Bitmap(@"../../resources/");
-            //bottomRightPB.Image = new Bitmap(@"../../resources/");
+            topRightReadOutLoudPath = @"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1.2.3ListenToSomone.wav";
+
             lblTL.Size = new Size(200, 60);
             lblTM.Size = new Size(200, 60);
             lblTR.Size = new Size(200, 60);
             updateLabelText("If I am concentrating on something, I don't notice people talking to me",
-                "I find it hard to listen to the teacher in noisy classrooms",
+                "I find it hard to listen to the lecturer/tutor in noisy classrooms",
                 "I find it hard to listen to someone talking to me when I'm in a group",
                 "",
                 "",
@@ -528,138 +522,132 @@ namespace Login {
 
         private void interviewPage3p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1.2.0 Are there times when you find it hard to listen.wav");
             panel2lblQuestion.Text = "Are there times when it is hard for you to listen?";
             lblQuestion1.Text = "Other times when it is hard to listen?";
             lblQuestion2.Text = "Examples in your daily life?";
 
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1.2.x Other times when it is hard for you to listen (self).wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void interviewPage4()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1.3.0 Are there some sounds that make it hard for you to concentrate.wav");
             lblQuestion.Text = "Are there some sounds that make it hard for you to concentrate?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1 Radio on.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1.3.1Radio.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1.3.1Radio.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\2 Clock ticking.jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1.3.2ClockTicking.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1.3.2ClockTicking.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\3 People talking.jpg");
-            topRightReadOutLoudPath = @"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1.3.3PeopleTalking.wav";//MISSINGFILE - Name Fine
-            //bottomLeftPB.Image = new Bitmap(@"../../resources/");
-            //bottomMidPB.Image = new Bitmap(@"../../resources/");
-            //bottomRightPB.Image = new Bitmap(@"../../resources/");
+            topRightReadOutLoudPath = @"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1.3.3PeopleTalking.wav";
+
             updateLabelText("Radio on", "Clock ticking", "People talking", "", "", "");
         }
 
         private void interviewPage4p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1.3.0 Are there some sounds that make it hard for you to concentrate.wav");
             panel2lblQuestion.Text = "Are there some sounds that make it hard for you to concentrate?";
             lblQuestion1.Text = "Other sounds that make it hard to concentrate?";
             lblQuestion2.Text = "Examples in your daily life?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1.3.x Other sounds that make it hard to concentrate.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void interviewPage5and6()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1.3.0 Are there some sounds that make it hard for you to concentrate.wav");
             panel2lblQuestion.Text = "Are there some sounds that make it hard for you to concentrate?";
             lblQuestion1.Text = "Are there noises that you find very distracting when you have a job to do?";
             lblQuestion2.Text = "Does noise ever make it hard for you to do things (e.g., work in an office, go to shopping centres)?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1.3.x noises that are distracting when you have a job to do (self).wav");
+            SetTextQuestion2Player(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1.3.x Does noise make it hard to  do things (self).wav");
         }
 
         private void interviewPage7()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1.4.0 Are there some sounds that you like to listen to.wav");
             lblQuestion.Text = "Are there some sounds that you like to listen to?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1 Computer sounds.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1.4.1ComputerSounds.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1.4.1ComputerSounds.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\2 Live Music.jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1.4.2LiveMusic.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1.4.2LiveMusic.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\3 Fans.PNG");
-            topRightReadOutLoudPath = @"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1.4.3Fans.wav";//MISSINGFILE - Name Fine
+            topRightReadOutLoudPath = @"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1.4.3Fans.wav";
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\4 Music through my phone (cropped).jpg");
-            bottomLeftReadOutLoudPath = @"..\..\resources\1. Hearing\24. Are there sounds that you like to listen to_\1.4.4MusicPhone.wav";//MISSINGFILE - Name Fine
+            bottomLeftReadOutLoudPath = @"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1.4.4MusicPhone.wav";
 
             bottomMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\5 Rhythms.jpg");
-            bottomLeftReadOutLoudPath = @"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1.4.5Rythms.wav";//MISSINGFILE - Name Fine
+            bottomMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1.4.5Rhythms.wav";
 
-            //bottomRightPB.Image = new Bitmap(@"../../resources/");
             updateLabelText("Computer sounds", "Live music", "Fans", "Music through my phone", "Rhythms", "");
         }
 
         private void interviewPage7p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1.4.0 Are there some sounds that you like to listen to.wav");
             panel2lblQuestion.Text = "Are there some sounds that you like to listen to?";
             lblQuestion1.Text = "Other sounds that you like?";
             lblQuestion2.Text = "Examples in your daily life?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1.4.x Other sounds that you like.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void interviewPage8()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1.4.0 Are there some sounds that you like to listen to.wav");
             panel2lblQuestion.Text = "Are there some sounds that you like to listen to?";
             lblQuestion1.Text = "Are there sounds that you like to listen to often or for long periods?";
-            lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1.4.x sound you listen to often or for long periods (self).wav");
             
         }
 
         private void interviewPage9()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\1.5.0 Are there some sounds that you make a lot.wav");
             lblQuestion.Text = "Are there some sounds that you make a lot?";
 
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\1 Humming or Whistling to myself.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1.5.1Feet.wav";//MISSINGFILE
+            topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\1.5.1Humming.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\2 Tapping feet.PNG");
-            topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1.5.1Feet.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\1.5.2Feet.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\3 Tapping fingers.jpg");
-            topRightReadOutLoudPath = @"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\1.5.3Finger.wav";//MISSINGFILE - Name Fine
+            topRightReadOutLoudPath = @"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\1.5.3Finger.wav";
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\4 Clicking pen.jpg");
-            bottomLeftReadOutLoudPath = @"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\1.5.4Pen.wav";//MISSINGFILE - Name Fine
+            bottomLeftReadOutLoudPath = @"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\1.5.4Pen.wav";
 
-            //bottomMidPB.Image = new Bitmap(@"");
-            //bottomRightPB.Image = new Bitmap(@"../../resources/");
             updateLabelText("Humming or whistling to myself", "Tapping feet", "Tapping fingers", "Clicking pen",
                 "", "");
         }
 
         private void interviewPage9p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\1.5.0 Are there some sounds that you make a lot.wav");
             panel2lblQuestion.Text = "Are there some sounds that you make a lot?";
             lblQuestion1.Text = "Other sounds that you make:";
             lblQuestion2.Text = "Examples in your daily life:";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\1.5.x Other sounds that you make (self).wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void interviewPage10()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\1.5.0 Are there some sounds that you make a lot.wav");
             panel2lblQuestion.Text = "Are there some sounds that you make a lot?";
             lblQuestion1.Text = "Do the sounds you make seem to bother other people?";
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\1. Hearing\5. Are there some sounds that you make a lot_\1.5.x do the sounds you make seem to bother other people (self).wav");
             
         }
 
@@ -668,23 +656,23 @@ namespace Login {
         /// </summary>
         private void sightInterviewPage1()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\2.1.x Are there some things that you don't like to look at.wav");
             lblQuestion.Text = "Are there some things that you don't like to look at?";
 
             topLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\1 Sunlight.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\2.1.1Sunlight.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\2.1.1Sunlight.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\2 Fluorescent light.png");
-            topMiddleReadOutLoudPath = @"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\2.1.2Fluorescent.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\2.1.2Fluorescent.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\3 Light and Shadow.jpg");
-            topRightReadOutLoudPath = @"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\2.1.3LightShadow.wav";//MISSINGFILE - Name Fine
+            topRightReadOutLoudPath = @"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\2.1.3LightShadow.wav";
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\4 Busy Patterns.jpg");
-            bottomLeftReadOutLoudPath = @"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\2.1.4BusyPatterms.wav";//MISSINGFILE - Name Fine
+            bottomLeftReadOutLoudPath = @"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\2.1.4BusyPatterns.wav";
 
             bottomMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\5 Lecture room light (self version) (cropped).jpg");
-            bottomMiddleReadOutLoudPath = @"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\2.1.5Lecture.wav";//MISSINGFILE - Name Fine
+            bottomMiddleReadOutLoudPath = @"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\2.1.5Lecture.wav";
 
 
             updateLabelText("Sunlight", "Fluorescent light", "Light and shadow", "Busy patterns",
@@ -693,95 +681,92 @@ namespace Login {
 
         private void sightInterviewPage1p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\2.1.x Are there some things that you don't like to look at.wav");
             panel2lblQuestion.Text = "Are there some things that you don't like to look at?";
             lblQuestion1.Text = "Other things that you don’t like to look at?";
             lblQuestion2.Text = "Examples in your daily life?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\2.1.x Other things that you don't like to look at.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void sightInterviewPage2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\2.1.x Are there some things that you don't like to look at.wav");
             panel2lblQuestion.Text = "Are there some things that you don't like to look at?";
             lblQuestion1.Text = "Do you do anything to avoid these things (e.g., shade your eyes, wear sunglasses, avoid fluorescent light)?";
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\2.1.x avoiding visual stimuli.wav");
             
         }
 
         private void sightInterviewPage3()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\2.2.x Are there some things you see that make it hard to concerntrate.wav");
             lblQuestion.Text = "Are there some things you see that make it hard to concentrate?";
 
             topLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\1 Lots of things in a messy drawer.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\2.2.1MessyDrawer.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\2.2.1MessyDrawer.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\2 People running around me.jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\2.2.2RunningAroundMe.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\2.2.2RunningAroundMe.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\3 Lots of clutter in an office space (self report).jpg");
-            topRightReadOutLoudPath = @"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\2.2.3ClutterOffice.wav";//MISSINGFILE - Name Fine
+            topRightReadOutLoudPath = @"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\2.2.3ClutterOffice.wav";
 
-            // bottomLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
-            //bottomMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\1. Are there some things that you don't like to look at_\");
             updateLabelText("Lots of things in a messy drawer", "People running around me", "Lots of clutter in an office or work space", "", "", "");
         }
 
         private void sightInterviewPage3p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\2.2.x Are there some things you see that make it hard to concerntrate.wav");
             panel2lblQuestion.Text = "Are there some things you see that make it hard to concentrate?";
             lblQuestion1.Text = "Other things you see that make it hard to concentrate?";
             lblQuestion2.Text = "Examples in your daily life?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\2. Sight\2. Are there some things you see that make it hard to concentrate_\2.2.x Other things you see that make it hard to concerntrate.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void sightInterviewPage4()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\2. Sight\3. Are there some things that you like to look at_\2.3.x Are there some things you like to look at.wav");
             lblQuestion.Text = "Are there some things that you like to look at?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you like to look at_\1 Moving lights.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\2. Sight\3. Are there some things that you like to look at_\2.3.1MovingLights.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\2. Sight\3. Are there some things that you like to look at_\2.3.1MovingLights.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you like to look at_\2 Things that sparkle.png");
-            topMiddleReadOutLoudPath = @"..\..\resources\2. Sight\3. Are there some things that you like to look at_\2.3.2ThingsSparkle.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\2. Sight\3. Are there some things that you like to look at_\2.3.2ThingsSparkle.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you like to look at_\3 Geometric patterns.jpg");
-            topRightReadOutLoudPath = @"..\..\resources\2. Sight\3. Are there some things that you like to look at_\2.3.3Geometric.wav";//MISSINGFILE - Name Fine
+            topRightReadOutLoudPath = @"..\..\resources\2. Sight\3. Are there some things that you like to look at_\2.3.3Geometric.wav";
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you like to look at_\4 Spinning fans.png");
-            bottomLeftReadOutLoudPath = @"..\..\resources\2. Sight\3. Are there some things that you like to look at_\2.3.4Fans.wav";//MISSINGFILE - Name Fine
+            bottomLeftReadOutLoudPath = @"..\..\resources\2. Sight\3. Are there some things that you like to look at_\2.3.4Fans.wav";
 
             bottomMidPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you like to look at_\5 Spinning objects1 (use this one) (cropped).jpg");
-            bottomMiddleReadOutLoudPath = @"..\..\resources\2. Sight\3. Are there some things that you like to look at_\2.3.5Spinning.wav";//MISSINGFILE - Name Fine
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\2. Sight\3. Are there some things that you don't like to look at_\");
+            bottomMiddleReadOutLoudPath = @"..\..\resources\2. Sight\3. Are there some things that you like to look at_\2.3.5Spinning.wav";
+
             updateLabelText("Moving lights", "Things that sparkle", "Geometric patterns", "Spinning fans", "Spinning objects", "");
         }
 
         private void sightInterviewPage4p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\2. Sight\3. Are there some things that you like to look at_\2.3.x Are there some things you like to look at.wav");
             panel2lblQuestion.Text = "Are there some things that you like to look at?";
             lblQuestion1.Text = "Other things that you like to look at?";
             lblQuestion2.Text = "Examples in your daily life?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\2. Sight\3. Are there some things that you like to look at_\2.3.x Other things you like to look at.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void sightInterviewPage5()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\2. Sight\3. Are there some things that you like to look at_\2.3.x Are there some things you like to look at.wav");
             panel2lblQuestion.Text = "Are there some things that you like to look at?";
             lblQuestion1.Text = "Are there things you look at often or for long periods?";
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\\resources\2. Sight\3. Are there some things that you like to look at_\2.3.x Are there some things you look at often or for long periods.wav");
         }
 
         /// <summary>
@@ -789,25 +774,25 @@ namespace Login {
         /// </summary>
         private void touchInterviewPage1()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.x Are there some things that you don't like the feeling of.wav");
             lblQuestion.Text = "Are there some things that you don't like the feeling of?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\1 Sandy.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.1Sandy.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.1Sandy.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\2 Sticky.jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.2Sticky.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.2Sticky.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3 Grassy.jpg");
-            topRightReadOutLoudPath = @"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.3Grassy.wav";//MISSINGFILE - Name Fine
+            topRightReadOutLoudPath = @"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.3Grassy.wav";
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\4 Wool clothes.jpg");
-            bottomLeftReadOutLoudPath = @"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.4Wool.wav";//MISSINGFILE - Name Fine
+            bottomLeftReadOutLoudPath = @"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.4Wool.wav";
 
             bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\5 Tight clothes.jpg");
-            bottomMiddleReadOutLoudPath = @"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.5Tight.wav";//MISSINGFILE - Name Fine
+            bottomMiddleReadOutLoudPath = @"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.5Tight.wav";
 
             bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\6 Stiff clothes.jpg");
-            bottomrightReadOutLoudPath = @"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.6Stiff.wav";//MISSINGFILE - Name Fine
+            bottomrightReadOutLoudPath = @"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.6Stiff.wav";
 
             updateLabelText("Sandy", "Sticky", "Grassy", "Wool clothes",
                 "Tight clothes", "Stiff clothes");
@@ -815,63 +800,59 @@ namespace Login {
 
         private void touchInterviewPage1p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.x Are there some things that you don't like the feeling of.wav");
             lblQuestion.Text = "Are there some things that you don't like the feeling of?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\7 Shoes.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.7Shoes.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.7Shoes.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\8 Splashing Water (cropped).jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.8SplashingWater.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.8SplashingWater.wav";
 
-            //topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Geometric patterns.jpg");
-            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\.jpg");
-            //bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\Spinning objects.jpg");
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\");
             updateLabelText("Shoes", "Splashing water (e.g. rain, shower, pool)", "", "",
                 "", "");
         }
 
         private void touchInterviewPage1p3()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.x Are there some things that you don't like the feeling of.wav");
             panel2lblQuestion.Text = "Are there some things that you don't like the feeling of?";
             lblQuestion1.Text = "Other things you don’t like the feeling of";
             lblQuestion2.Text = "Examples in your daily life?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.x other things you don't like the feeling of.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void touchInterviewPage2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.x Are there some things that you don't like the feeling of.wav");
             panel2lblQuestion.Text = "Are there some things that you don't like the feeling of?";
             lblQuestion1.Text = "Do touch sensations ever make it hard for you to do things (e.g., wear some types of clothing or walk on the grass)?";
-            lblQuestion2.Text = "Does you do anything to avoid these things (e.g., avoid certain clothes or textures)?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            lblQuestion2.Text = "Do you do anything to avoid these things (e.g., avoid certain clothes or textures)?";
+            SetTextQuestion1Player(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.x Does touch make things hard.wav");
+            SetTextQuestion2Player(@"..\..\resources\3. Touch\1. Are there some things that you don't like the feeling of_\3.1.x avoiding touch sensation.wav");
         }
 
         private void touchInterviewPage3()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.x Are there ways that people touch you that you don't like.wav");
             lblQuestion.Text = "Are there some ways that people touch you that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\1 Being hugged or kissed (self version).jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.1Hugged.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.1Hugged.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\2 Being crowded (cropped).jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.2Crowded.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.2Crowded.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3 Being tapped on the shoulder (self-report version).jpg");
-            topRightReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.3Tapped.wav";//MISSINGFILE - Name Fine
+            topRightReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.3Tapped.wav";
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\4 Having sunscreen put on.jpg");
-            bottomLeftReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.4Sunscreen.wav";//MISSINGFILE - Name Fine
+            bottomLeftReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.4Sunscreen.wav";
 
             bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\5 Being bumped.jpg");
-            bottomMiddleReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.5Bumped.wav";//MISSINGFILE - Name Fine
+            bottomMiddleReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.5Bumped.wav";
 
             bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\6 Having a haircut (cropped).jpg");
-            bottomrightReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.6Haircut.wav";//MISSINGFILE - Name Fine
+            bottomrightReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.6Haircut.wav";
 
             updateLabelText("Being hugged or kissed", "Being crowded", "Being tapped on the shoulder", "Having sunscreen put on",
                 "Being bumped", "Having a haircut");
@@ -879,85 +860,81 @@ namespace Login {
 
         private void touchInterviewPage3p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.x Are there ways that people touch you that you don't like.wav");
             lblQuestion.Text = "Are there some ways that people touch you that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\7 Doctor touching me.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.7Doctor.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.7Doctor.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\8 Dentist touching me (cropped).jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.8Dentist.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.8Dentist.wav";
 
-            //topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there things that you don't like the feeling of_\Geometric patterns.jpg");
-            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there things that you don't like the feeling of_\.jpg");
-            //bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there things that you don't like the feeling of_\Spinning objects.jpg");
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there things that you don't like the feeling of_\");
             updateLabelText("Doctor touching me", "Dentist touch me", "", "",
                 "", "");
         }
 
         private void touchInterviewPage3p3()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.x Are there ways that people touch you that you don't like.wav");
             panel2lblQuestion.Text = "Are there some ways that people touch you that you don't like?";
             lblQuestion1.Text = "Other ways people touch you that you don’t like?";
             lblQuestion2.Text = "Examples in your daily life?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.x Other ways people touch you that you don't like.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void touchInterviewPage4()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.x Are there ways that people touch you that you don't like.wav");
             panel2lblQuestion.Text = "Are there some ways that people touch you that you don't like?";
             lblQuestion1.Text = "Does difficulty coping with being touched make it hard for you to do things (e.g., visit the doctor or the dentist)?";
             lblQuestion2.Text = "Do you do anything to avoid being touched (e.g., avoid crowded places)?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.x does difficulty coping with being touched make it hard for you to do things.wav");
+            SetTextQuestion2Player(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.x avoiding being touched.wav");
         }
 
         private void touchInterviewPage5()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.x Are there some things that you like the feeling of.wav");
             lblQuestion.Text = "Are there some things that you like the feeling of?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\1 Soft.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.1Soft.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.1Soft.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\2 Rubbery.jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.2Rubbery.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.2Rubbery.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3 Furry.jpg");
-            topRightReadOutLoudPath = @"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.3Fury.wav";//MISSINGFILE - Name Fine
+            topRightReadOutLoudPath = @"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.3Fury.wav";
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\4 Hugging people (self version).jpg");
-            bottomLeftReadOutLoudPath = @"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.4HuggingPeople.wav";//MISSINGFILE - Name Fine
+            bottomLeftReadOutLoudPath = @"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.4HuggingPeople.wav";
 
             bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\5 Touching people.jpg");
-            bottomMiddleReadOutLoudPath = @"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.5TouchingPeople.wav";//MISSINGFILE - Name Fine
+            bottomMiddleReadOutLoudPath = @"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.5TouchingPeople.wav";
 
             bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\6 Being squashed with a pillow.jpg");
-            bottomrightReadOutLoudPath = @"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.6SquashedPillow.wav";//MISSINGFILE - Name Fine
+            bottomrightReadOutLoudPath = @"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.6SquashedPillow.wav";
             updateLabelText("Soft", "Rubbery", "Furry", "Hugging people",
                 "Touching people", "Being squashed with a pillow");
         }
 
         private void touchInterviewPage5p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.x Are there some things that you like the feeling of.wav");
             panel2lblQuestion.Text = "Are there some things that you like the feeling of?";
             lblQuestion1.Text = "Other things that you like the feeling of?";
             lblQuestion2.Text = "Examples in your daily life?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.x Other things that you like the feeling of.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void touchInterviewPage6()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.x Are there some things that you like the feeling of.wav");
             panel2lblQuestion.Text = "Are there some things that you like the feeling of?";
             lblQuestion1.Text = "Are there things that you like to touch often or for long periods?";
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3.3.x things you like to touch often or for long periods.wav");
         }
 
         /// <summary>
@@ -965,25 +942,25 @@ namespace Login {
         /// </summary>
         private void smellInterviewPage1()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4.1.x Are there some smells that you don't like.wav");
             lblQuestion.Text = "Are there some smells that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\1 Cooking smells (cropped).jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4.1.1CookingSmells.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4.1.1CookingSmells.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\2 Food Smells.jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4.1.2FoodSmells.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4.1.2FoodSmells.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\3 Cleaning products.jpg");
-            topRightReadOutLoudPath = @"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4.1.3CleaningProducts.wav";//MISSINGFILE - Name Fine
+            topRightReadOutLoudPath = @"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4.1.3CleaningProducts.wav";
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4 Toilet Smells.jpg");
-            bottomLeftReadOutLoudPath = @"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4.1.4ToiletSmells.wav";//MISSINGFILE - Name Fine
+            bottomLeftReadOutLoudPath = @"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4.1.4ToiletSmells.wav";
 
             bottomMidPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\5 Perfumes.jpg");
-            bottomLeftReadOutLoudPath = @"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4.1.5Perfumes.wav";//MISSINGFILE - Name Fine
+            bottomMiddleReadOutLoudPath = @"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4.1.5Perfumes.wav";
 
             bottomRightPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\6 Body smells (cropped).jpg");
-            bottomrightReadOutLoudPath = @"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4.1.6BodySmells.wav";//MISSINGFILE - Name Fine
+            bottomrightReadOutLoudPath = @"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4.1.6BodySmells.wav";
 
             updateLabelText("Cooking smells", "Food smells", "Cleaning products",
                 "Toilet smells", "Perfumes", "Body smells");
@@ -991,71 +968,70 @@ namespace Login {
 
         private void smellInterviewPage1p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4.1.x Are there some smells that you don't like.wav");
 
             panel2lblQuestion.Text = "Are there some smells that you don't like?";
             lblQuestion1.Text = "Other smells that you don’t like?";
             lblQuestion2.Text = "Examples in your daily life?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4.1.x other smells that you don't like.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void smellInterviewPage2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4.1.x Are there some smells that you don't like.wav");
 
             panel2lblQuestion.Text = "Are there some smells that you don't like?";
             lblQuestion1.Text = "Do you do anything to avoid these smells (e.g., avoid public toilets or cleaning products aisles at the supermarket)?";
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\4. Smells\1. Are there some smells that you don't like_\4.1.x avoiding smells.wav");
         }
 
         private void smellInterviewPage3()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\4. Smells\2. Are there some things that you like to smell_\4.2.x are there some things that you like to smell.wav");
 
             lblQuestion.Text = "Are there some things that you like to smell?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\4. Smells\2. Are there some things that you like to smell_\1 Smelling foods (cropped).jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\4. Smells\2. Are there some things that you like to smell_\4.2.1SmellingFoods.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\4. Smells\2. Are there some things that you like to smell_\4.2.1SmellingFoods.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\4. Smells\2. Are there some things that you like to smell_\2 Smelling plants.jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\4. Smells\2. Are there some things that you like to smell_\4.2.2SmellingPlants.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\4. Smells\2. Are there some things that you like to smell_\4.2.2SmellingPlants.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\4. Smells\2. Are there some things that you like to smell_\3 Smelling perfume.jpg");
-            topRightReadOutLoudPath = @"..\..\resources\4. Smells\2. Are there some things that you like to smell_\4.2.3SmellingPerfumes.wav";//MISSINGFILE - Name Fine
+            topRightReadOutLoudPath = @"..\..\resources\4. Smells\2. Are there some things that you like to smell_\4.2.3SmellingPerfumes.wav";
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\4. Smells\2. Are there some things that you like to smell_\4 Smelling soap.jpg");
-            bottomLeftReadOutLoudPath = @"..\..\resources\4. Smells\2. Are there some things that you like to smell_\4.2.4SmellSoup.wav";//MISSINGFILE - Name Fine
+            bottomLeftReadOutLoudPath = @"..\..\resources\4. Smells\2. Are there some things that you like to smell_\4.2.4SmellSoup.wav";
 
             bottomMidPB.Image = new Bitmap(@"..\..\resources\4. Smells\2. Are there some things that you like to smell_\5 Smelling people.jpg");
-            bottomMiddleReadOutLoudPath = @"..\..\resources\4. Smells\2. Are there some things that you like to smell_\4.2.6SmellingPeople.wav";//MISSINGFILE - Name Fine
+            bottomMiddleReadOutLoudPath = @"..\..\resources\4. Smells\2. Are there some things that you like to smell_\4.2.6SmellingPeople.wav";
 
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\4. Smells\1. Are there some that you don't like_\Body smells.jpg");
             updateLabelText("Smelling foods", "Smelling plants", "Smelling perfume",
                 "Smelling soap", "Smelling people", "");
         }
 
         private void smellInterviewPage3p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\4. Smells\2. Are there some things that you like to smell_\4.2.x are there some things that you like to smell.wav");
 
             panel2lblQuestion.Text = "Are there some things that you like to smell?";
             lblQuestion1.Text = "Other things you like to smell?";
             lblQuestion2.Text = "Examples in your daily life?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\4. Smells\2. Are there some things that you like to smell_\4.2.x Other things you like to smell.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void smellInterviewPage4()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\4. Smells\2. Are there some things that you like to smell_\4.2.x are there some things that you like to smell.wav");
 
             panel2lblQuestion.Text = "Are there some things that you like to smell?";
             lblQuestion1.Text = "Are there things that you like to smell often or for long periods?";
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\4. Smells\2. Are there some things that you like to smell_\4.2.x Are there things you like to smell often or for long periods.wav");
         }
 
         /// <summary>
@@ -1063,130 +1039,122 @@ namespace Login {
         /// </summary>
         private void tasteInterviewPage1()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.x Are there some food groups that you don't like to eat.wav");
 
             lblQuestion.Text = "Are there some food groups that you don't like eating?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\1 Vegetables.png");
-            topLeftReadOutLoudPath = @"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.1Vegetables.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.1Vegetables.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\2 Fruit.png");
-            topMiddleReadOutLoudPath = @"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.2Fruits.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.2Fruits.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\3 Meat.jpg");
-            topRightReadOutLoudPath = @"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.3Meat.wav";//MISSINGFILE - Name Fine
+            topRightReadOutLoudPath = @"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.3Meat.wav";
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\4 Fish.jpg");
-            bottomLeftReadOutLoudPath = @"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.4Fish.wav";//MISSINGFILE - Name Fine
+            bottomLeftReadOutLoudPath = @"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.4Fish.wav";
 
             bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5 Eggs.jpg");
-            bottomMiddleReadOutLoudPath = @"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.5Eggs.wav";//MISSINGFILE - Name Fine
+            bottomMiddleReadOutLoudPath = @"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.5Eggs.wav";
 
             bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\6 Dairy.png");
-            bottomrightReadOutLoudPath = @"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.6Dairy.wav";//MISSINGFILE - Name Fine
+            bottomrightReadOutLoudPath = @"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.6Dairy.wav";
             updateLabelText("Vegetables", "Fruit", "Meat", "Fish", "Eggs", "Dairy");
         }
 
         private void tasteInterviewPage1p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.x Are there some food groups that you don't like to eat.wav");
 
             lblQuestion.Text = "Are there some food groups that you don't like eating?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\7 Bread.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.7Bread.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.7Bread.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\8 Pasta.jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.8Pasta.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.8Pasta.wav";
 
-            //topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Geometric patterns.jpg");
-            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
-            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
             updateLabelText("Bread", "Pasta", "", "", "", "");
         }
 
         private void tasteInterviewPage1p3()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.x Are there some food groups that you don't like to eat.wav");
 
             panel2lblQuestion.Text = "Are there some food groups that you don't like eating?";
             lblQuestion1.Text = "Other types of food that you don’t like?";
             lblQuestion2.Text = "Examples in your daily life?";
 
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\5.1.x other types of food you don't like.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void tasteInterviewPage2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.x are the some ways that food tastes or feels in you mouth that you don't like.wav");
 
             lblQuestion.Text = "Are there some ways that food tastes or feels in your mouth that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\1 Lumpy.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.1Lumpy.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.1Lumpy.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\2 Chewy.jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.2Chewy.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.2Chewy.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\3 Runny slippery (cropped).jpg");
-            topRightReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.3RunnySlippery.wav";//MISSINGFILE - Name Fine
+            topRightReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.3RunnySlippery.wav";
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\4 Mixed.JPG");
-            bottomLeftReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.4Mixed.wav";//MISSINGFILE - Name Fine
+            bottomLeftReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.4Mixed.wav";
 
             bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5 Sweet.jpg");
-            bottomMiddleReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.5Sweet.wav";//MISSINGFILE - Name Fine
+            bottomMiddleReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.5Sweet.wav";
 
             bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\6 Sour.jpg");
-            bottomrightReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.6Sour.wav";//MISSINGFILE - Name Fine
+            bottomrightReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.6Sour.wav";
 
             updateLabelText("Lumpy", "Chewy", "Runny/Slippery", "Mixed", "Sweet", "Sour");
         }
         private void tasteInterviewPage2p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.x are the some ways that food tastes or feels in you mouth that you don't like.wav");
 
             lblQuestion.Text = "Are there some ways that food tastes or feels in your mouth that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\7 Salty (cropped).jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.7Salty.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.7Salty.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\8 Spicy.jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.8Spicy.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.8Spicy.wav";
 
-            //topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Geometric patterns.jpg");
-            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
-            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
             updateLabelText("Salty", "Spicy", "", "", "", "");
         }
 
         private void tasteInterviewPage2p3()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.x are the some ways that food tastes or feels in you mouth that you don't like.wav");
 
             panel2lblQuestion.Text = "Are there some ways that food tastes or feels in your mouth that you don’t like?";
             lblQuestion1.Text = "Other ways food tastes or feels that you don’t like?";
             lblQuestion2.Text = "Examples in your daily life?";
 
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.x other ways food taste or feel that you don't like.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void tasteInterviewPage3()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.x are the some ways that food tastes or feels in you mouth that you don't like.wav");
 
             panel2lblQuestion.Text = "Are there some ways that food tastes or feels in your mouth that you don’t like?";
             lblQuestion1.Text = "Do you do anything to avoid eating certain foods (e.g., avoid eating in restaurants or at other people’s homes)?";
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
 
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5.2.x avoiding eating certain foods.wav");
         }
 
 
         private void tasteInterviewPage4()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\5.3.x are there some things you really like to eat.wav");
             // TOP ??
             // Move the picture boxes 
             topLeftPB2.Location = new Point(282, 175);
@@ -1231,88 +1199,82 @@ namespace Login {
 
             lblQuestion.Text = "Are there some things that you really like to eat?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\1 Familiar foods, only a few types of foods (i.e, I don’t like trying new foods)1 (cropped).jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\5. Taste\3. Are there some things you really like to eat_\5.3.1FamiliarFoods.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\5. Taste\3. Are there some things you really like to eat_\5.3.1FamiliarFoods.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\1 Familiar foods, only a few types of foods (i.e, I don’t like trying new foods)2.jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\5. Taste\3. Are there some things you really like to eat_\5.3.2UnfamiliarFoods.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\5. Taste\3. Are there some things you really like to eat_\5.3.1FamiliarFoods.wav";
 
-
-            //topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Geometric patterns.jpg");
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\2 Unfamiliar foods, lots of different types of foods (i.e., I like trying new foods)1.jpg");
-            bottomLeftReadOutLoudPath = @"..\..\resources\5. Taste\3. Are there some things you really like to eat_\5.3.1FamiliarFoods.wav";//MISSINGFILE 
+            bottomLeftReadOutLoudPath = @"..\..\resources\5. Taste\3. Are there some things you really like to eat_\5.3.2UnfamiliarFoods.wav"; 
 
             bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\2 Unfamiliar foods, lots of different types of foods (i.e., I like trying new foods)2.jpg");
-            bottomMiddleReadOutLoudPath = @"..\..\resources\5. Taste\3. Are there some things you really like to eat_\5.3.1FamiliarFoods.wav";//MISSINGFILE 
+            bottomMiddleReadOutLoudPath = @"..\..\resources\5. Taste\3. Are there some things you really like to eat_\5.3.2UnfamiliarFoods.wav"; 
 
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
             updateLabelText("", "Familiar foods, only a few types of foods (e.g., I don’t like trying new foods)", "", "",
                 "Unfamiliar foods, lots of different types of foods (e.g., I like trying new foods)", "");
         }
 
         private void tasteInterviewPage4p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\5.3.x are there some things you really like to eat.wav");
 
             panel2lblQuestion.Text = "Are there some things that you really like to eat?";
             lblQuestion1.Text = "Examples in your daily life?";
             lblQuestion2.Text = "Are there certain types of foods that you crave and want to eat repeatedly?";
 
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\0. System\Examples in your daily life.wav");
+            SetTextQuestion2Player(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\5.3.x food you crave and want to eat repeatedly.wav");
         }
 
         private void tasteInterviewPage5()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\5.3.x are there some things you really like to eat.wav");
 
             panel2lblQuestion.Text = "Are there some things that you really like to eat?";
             lblQuestion1.Text = "Are there certain types of foods that you crave and want to eat repeatedly?";
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\5. Taste\3. Are there some things you really like to eat_\5.3.x food you crave and want to eat repeatedly.wav");
         }
 
         private void tasteInterviewPage6()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\5.4.x are there some things that you put in your mouth a lot.wav");
 
             lblQuestion.Text = "Are there some things that you put in your mouth a lot?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\1 Shirt.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\5.4.1Shirt.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\5.4.1Shirt.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\2 Hair.jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\5.4.2Hair.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\5.4.2Hair.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\3 Objects.jpg");
 
-            topRightReadOutLoudPath = @"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\5.4.3Objects.wav";//MISSINGFILE - Name Fine
+            topRightReadOutLoudPath = @"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\5.4.3Objects.wav";
 
-            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
-            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
             updateLabelText("Shirt", "Hair", "Objects", "", "", "");
         }
 
         private void tasteInterviewPage6p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\5.4.x are there some things that you put in your mouth a lot.wav");
 
             panel2lblQuestion.Text = "Are there some things that you put in your mouth a lot?";
-            lblQuestion1.Text = "Other ways food tastes or feels that you don’t like?";
+            lblQuestion1.Text = "Other things you put in your mouth";
             lblQuestion2.Text = "Examples in your daily life?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\5.4.x other things you put in your mouth.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void tasteInterviewPage7()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\5.4.x are there some things that you put in your mouth a lot.wav");
 
             panel2lblQuestion.Text = "Are there some things that you put in your mouth a lot?";
             lblQuestion1.Text = "Are there things that you often put in your mouth? Are any of them dangerous or unhygienic?";
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\5.4.x Things you put in your mouth. Dangerous or unhygienic.wav");
         }
 
         /// <summary>
@@ -1320,158 +1282,150 @@ namespace Login {
         /// </summary>
         private void mvmtInterviewPage1()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.x are there some ways of moving that you don't like.wav");
 
             lblQuestion.Text = "Are there some ways of moving that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\1 Being jumped on_tackled.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.1BeingJumpedOn.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.1BeingJumpedOn.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\2 Moving when I can't see where I am going (self-report) (cropped).jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.2MovingWhenICantSee.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.2MovingWhenICantSee.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\3 Balancing.jpg");
-            topRightReadOutLoudPath = @"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.3Balancing.wav";//MISSINGFILE - Name Fine
+            topRightReadOutLoudPath = @"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.3Balancing.wav";
 
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\4 Being upside down (cropped).jpg");
-            bottomLeftReadOutLoudPath = @"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.4BeingUpsideDown.wav";//MISSINGFILE - Name Fine
+            bottomLeftReadOutLoudPath = @"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.4BeingUpsideDown.wav";
 
             bottomMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\5 Climbing up high (self version).jpg");
-            bottomMiddleReadOutLoudPath = @"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.5ClimbingUpHigh.wav";//MISSINGFILE - Name Fine
+            bottomMiddleReadOutLoudPath = @"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.5ClimbingUpHigh.wav";
 
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
             updateLabelText("Being jumped on/tackled", "Moving when I can't see where I am going", "Balancing", "Being upside down", "Climbing up high", "");
         }
 
         private void mvmtInterviewPage1p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.x are there some ways of moving that you don't like.wav");
 
             panel2lblQuestion.Text = "Are there some ways of moving that you don’t like?";
             lblQuestion1.Text = "Other ways of moving that you don’t like?";
             lblQuestion2.Text = "Examples in your daily life?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.x other ways of moving that you don't like.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void mvmtInterviewPage2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.x are there some ways of moving that you don't like.wav");
 
             panel2lblQuestion.Text = "Are there some ways of moving that you don’t like?";
             lblQuestion1.Text = "Are there movement experiences that you find scary or unpleasant?";
             lblQuestion2.Text = "Do you do anything to avoid these movements?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.x movement experiences that are scary or unpleasant.wav");
+            SetTextQuestion2Player(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\6.1.x avoiding unpleasant movements.wav");
         }
 
         private void mvmtInterviewPage3()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\6. Movement\2. Are there times when it is hard for you to stay still_\6.2.x are there times when its hard for you to stay still.wav");
 
             lblQuestion.Text = "Are there times when it is hard for you to stay still?";
-            //topLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\lumpy.jpg");
+
             topMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\2. Are there times when it is hard for you to stay still_\1 Sitting Still (self report)(cropped).jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\6. Movement\2. Are there times when it is hard for you to stay still_\6.2.1SittingStill.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\6. Movement\2. Are there times when it is hard for you to stay still_\6.2.1SittingStill.wav";
 
-            //topRightPB.Image = new Bitmap(@"..\..\");
-            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Fish.jpg");
             bottomMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\2. Are there times when it is hard for you to stay still_\2 Standing Still (self-report).jpg");
-            bottomMiddleReadOutLoudPath = @"..\..\resources\6. Movement\2. Are there times when it is hard for you to stay still_\6.2.2StandStill.wav";//MISSINGFILE - Name Fine
+            bottomMiddleReadOutLoudPath = @"..\..\resources\6. Movement\2. Are there times when it is hard for you to stay still_\6.2.2StandStill.wav";
 
-
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
             updateLabelText("", "Sitting Still", "", "", "Standing still", "");
         }
 
         private void mvmtInterviewPage3p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\6. Movement\2. Are there times when it is hard for you to stay still_\6.2.x are there times when its hard for you to stay still.wav");
 
             panel2lblQuestion.Text = "Are there times when it is hard for you to stay still?";
             lblQuestion1.Text = "Examples in your daily life?";
             lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void mvmtInterviewPage4()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\6.3.x are there some ways of moving that you like.wav");
 
             lblQuestion.Text = "Are there some ways of moving that you like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\1 Moving in Water.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\6. Movement\3. Are there ways of moving that you like_\6.3.1MovingInWater.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\6. Movement\3. Are there ways of moving that you like_\6.3.1MovingInWater.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\2 Swinging (cropped).jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\6. Movement\3. Are there ways of moving that you like_\6.3.2Swinging.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\6. Movement\3. Are there ways of moving that you like_\6.3.2Swinging.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\3 Spinning (self report) (uncropped).jpeg");
-            topRightReadOutLoudPath = @"..\..\resources\6. Movement\3. Are there ways of moving that you like_\6.3.3Spinning.wav";//MISSINGFILE - Name Fine
+            topRightReadOutLoudPath = @"..\..\resources\6. Movement\3. Are there ways of moving that you like_\6.3.3Spinning.wav";
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\4 Jumping on the Trampoline (self version).jpg");
             bottomLeftReadOutLoudPath = @"..\..\resources\6. Movement\3. Are there ways of moving that you like_\6.3.4JumpingOnTrampoline.wav";
 
             bottomMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\5 Running (self-report) (cropped).jpg");
-            bottomrightReadOutLoudPath = @"..\..\resources\6. Movement\3. Are there ways of moving that you like_\6.3.5Running.wav";//MISSINGFILE - Name Fine
+            bottomMiddleReadOutLoudPath = @"..\..\resources\6. Movement\3. Are there ways of moving that you like_\6.3.5Running.wav";
 
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
             updateLabelText("Moving in water", "Swinging", "Spinning", "Jumping on the trampoline", "Running", "");
         }
 
         private void mvmtInterviewPage4p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\6.3.x are there some ways of moving that you like.wav");
 
             panel2lblQuestion.Text = "Are there some ways of moving that you like?";
             lblQuestion1.Text = "Other ways of moving that you like?";
             lblQuestion2.Text = "Examples in your daily life?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\6. Movement\3. Are there ways of moving that you like_\6.3.x other ways of moving that you like.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void mvmtInterviewPage5()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.x are there some ways that you move over and over again.wav");
 
             lblQuestion.Text = "Are there some ways that you move over and over again?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\1 Rocking.png");
-            topLeftReadOutLoudPath = @"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.1Rocking.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.1Rocking.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\2 Moving hands.jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.2MovingHands.wav";//MISSINGFILE - Name Fine
+            topMiddleReadOutLoudPath = @"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.2MovingHands.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\3 Clapping.jpg");
-            topRightReadOutLoudPath = @"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.3Clapping.wav";//MISSINGFILE - Name Fine
+            topRightReadOutLoudPath = @"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.3Clapping.wav";
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\4 Pacing.PNG");
-            bottomLeftReadOutLoudPath = @"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.4Pacing.wav";//MISSINGFILE - Name Fine
+            bottomLeftReadOutLoudPath = @"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.4Pacing.wav";
 
-            //bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some that you don't like_\Spinning objects.jpg");
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
             updateLabelText("Rocking", "Moving hands", "Clapping", "Pacing", "", "");
         }
 
         private void mvmtInterviewPage5p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.x are there some ways that you move over and over again.wav");
 
             panel2lblQuestion.Text = "Are there some ways that you move over and over again?";
-            lblQuestion1.Text = "Other ways of moving that you like?";
+            lblQuestion1.Text = "Other ways that you move over and over again?";
             lblQuestion2.Text = "Examples in your daily life?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.x other ways that you move over and over again.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void mvmtInterviewPage6()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.x are there some ways that you move over and over again.wav");
 
             panel2lblQuestion.Text = "Are there some ways that you move over and over again?";
             lblQuestion1.Text = "Are there movements that you make repeatedly when you are anxious?";
             lblQuestion2.Text = "Are there movements that you make repeatedly when you are excited?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.x anxious movements.wav");
+            SetTextQuestion2Player(@"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.x excited movements.wav");
         }
 
         /// <summary>
@@ -1479,48 +1433,47 @@ namespace Login {
         /// </summary>
         private void environmentPage1()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\7. Environment\1. Are there some places\7.1.x places with lots happening that you don't like.wav");
 
             lblQuestion.Text = "Are there some places with lots of things happening at once that you don't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\1 Supermarket.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\7.1.1Supermarket.wav";//MISSINGFILE - Name Fine
+            topLeftReadOutLoudPath = @"..\..\resources\7. Environment\1. Are there some places\7.1.1Supermarket.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\2 Party (self report)(cropped).jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\7.1.1Supermarket.wav";//MISSINGFILE
+            topMiddleReadOutLoudPath = @"..\..\resources\7. Environment\1. Are there some places\7.1.2Party.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\3 Food Hall.jpg");
-            topRightReadOutLoudPath = @"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\7.1.2Party.wav";//MISSINGFILE - Name Fine
+            topRightReadOutLoudPath = @"..\..\resources\7. Environment\1. Are there some places\7.1.3FoodHall.wav";
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\4 Show (cropped).jpg");
-            bottomLeftReadOutLoudPath = @"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\7.1.3FoodHall.wav";//MISSINGFILE - Name Fine
+            bottomLeftReadOutLoudPath = @"..\..\resources\7. Environment\1. Are there some places\7.1.4Show.wav";
 
             bottomMidPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\5 Shopping mall.png");
-            bottomMiddleReadOutLoudPath = @"..\..\resources\7. Environment\1. Are there some places with lots of things happening at once that you don’t like_ (e.g. places with lots of noise, bright lights and people)\7.1.4Show.wav";//MISSINGFILE - Name Fine
+            bottomMiddleReadOutLoudPath = @"..\..\resources\7. Environment\1. Are there some places\7.1.5ShoppingMall.wav";
 
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
             updateLabelText("Supermarket", "Party", "Food hall", "Show", "Shopping mall", "");
         }
 
         private void environmentPage1p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\8. Other\");
 
             panel2lblQuestion.Text = "Are there some places with lots of things happening at once that you don’t like? (e.g., places with lots of noise, bright lights and people)";
             lblQuestion1.Text = "Other places with lots of things happening at once that you don’t like?";
             lblQuestion2.Text = "Examples in your daily life?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\7. Environment\1. Are there some places\7.1.x other places with lots of things happening that you don't like.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void environmentPage2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\7. Environment\1. Are there some places\7.1.x places with lots happening that you don't like.wav");
 
             panel2lblQuestion.Text = "Are there some places with lots of things happening at once that you don’t like? (e.g., places with lots of noise, bright lights and people)";
             lblQuestion1.Text = "How do you react to places with lots of things happening at once?";
             lblQuestion2.Text = "Do you do anything to avoid places with lots of things happening at once?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\7. Environment\1. Are there some places\7.1.x how do you react to places with lots of things happening at once.wav");
+            SetTextQuestion2Player(@"..\..\resources\7. Environment\1. Are there some places\7.1.x avoiding places with lots of things happening.wav");
         }
 
         /// <summary>
@@ -1528,50 +1481,50 @@ namespace Login {
         /// </summary>
         private void otherInterviewPage1()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\8. Other\8.1.x are there any other sensations that you feel strongly about.wav");
 
             lblQuestion.Text = "Are there any other sensations that you feel strongly about?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\8. Other\1 Sounds.png");
-            topLeftReadOutLoudPath = @"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.4Pacing.wav";//MISSINGFILE
+            topLeftReadOutLoudPath = @"..\..\resources\8. Other\8.1.1Sounds.wav";
 
             topMidPB.Image = new Bitmap(@"..\..\resources\8. Other\2 Smells.PNG");
-            topMiddleReadOutLoudPath = @"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.4Pacing.wav";//MISSINGFILE
+            topMiddleReadOutLoudPath = @"..\..\resources\8. Other\8.1.2Smells.wav";
 
             topRightPB.Image = new Bitmap(@"..\..\resources\8. Other\3 Sights.png");
-            topRightReadOutLoudPath = @"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.4Pacing.wav";//MISSINGFILE
+            topRightReadOutLoudPath = @"..\..\resources\8. Other\8.1.3Sights.wav";
 
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\8. Other\4 Tastes.png");
-            bottomLeftReadOutLoudPath = @"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.4Pacing.wav";//MISSINGFILE
+            bottomLeftReadOutLoudPath = @"..\..\resources\8. Other\8.1.4Tastes.wav";
 
             bottomMidPB.Image = new Bitmap(@"..\..\resources\8. Other\5 Feelings.jpg");
-            bottomMiddleReadOutLoudPath = @"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.4Pacing.wav";//MISSINGFILE
+            bottomMiddleReadOutLoudPath = @"..\..\resources\8. Other\8.1.5Feelings.wav";
 
             bottomRightPB.Image = new Bitmap(@"..\..\resources\8. Other\6 Movements (cropped).jpg");
-            bottomrightReadOutLoudPath = @"..\..\resources\6. Movement\4. Are there some ways that you move over and over again_\6.4.4Pacing.wav";//MISSINGFILE
+            bottomrightReadOutLoudPath = @"..\..\resources\8. Other\8.1.6Movements.wav";
 
             updateLabelText("Sounds", "Smells", "Sights", "Tastes", "Feelings", "Movements");
         }
 
         private void otherInterviewPage1p2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\8. Other\8.1.x are there any other sensations that you feel strongly about.wav");
 
             panel2lblQuestion.Text = "Are there any other sensations that you feel strongly about?";
             lblQuestion1.Text = "Other sounds, smells, sights, tastes, feelings, or movements?";
             lblQuestion2.Text = "Examples in your daily life?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\8. Other\8.1.x Other sounds, smells, sights tastes or movements.wav");
+            SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");
         }
 
         private void otherInterviewPage2()
         {
-            SetPageLabelPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPageLabelPath(@"..\..\resources\8. Other\8.1.x are there any other sensations that you feel strongly about.wav");
 
             panel2lblQuestion.Text = "Are there any other sensations that you feel strongly about?";
-            lblQuestion1.Text = "How do you react to these other things??";
+            lblQuestion1.Text = "How do you react to these other things?";
             lblQuestion2.Text = "Do you do anything to avoid these other things?";
-            SetTextQuestion1Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
-            SetTextQuestion2Player(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetTextQuestion1Player(@"..\..\resources\8. Other\8.1.x how do you react to these other things.wav");
+            SetTextQuestion2Player(@"..\..\resources\8. Other\8.1.x avoiding other things.wav");
         }
 
         //Pen variables to draw
