@@ -2011,7 +2011,11 @@ string text3, string text4, string text5, string text6) {
 
             //Update comment box and disable it.
             commentsTxtBox.Clear();
-            commentsTxtBox.AppendText(list[0]);
+            try {
+                commentsTxtBox.AppendText(list[0]);
+            } catch (Exception ex) {
+                MessageBox.Show("Additional Comments have not been set");
+            }
             commentsTxtBox.ReadOnly = false;
         }
 
