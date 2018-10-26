@@ -232,16 +232,12 @@ namespace Login {
                     SqlDataReader dr2 = command2.ExecuteReader();
                     List<string> list2 = new List<string>();
                     list2.Clear();
-                    try {
                         while (dr2.Read()) {
                             //Iterate through loop and add to list
                             for (int i = 0; i < 3; i++) {
                                 list2.Add(dr2[i].ToString());
                             }
                         }
-                    } catch (Exception ex) {
-                        MessageBox.Show(ex.Message);
-                    }
                     //If statement for appropriate display of label and textbox
                         if (columnNumberInSummary == 1) {
                         srAnswer1.Clear();
@@ -618,16 +614,12 @@ namespace Login {
                     SqlDataReader dr2 = command2.ExecuteReader();
                     List<string> list2 = new List<string>();
                     list2.Clear();
-                    try {
                         while (dr2.Read()) {
                             //Iterate through loop and add to list
                             for (int i = 0; i < 3; i++) {
                                 list2.Add(dr2[i].ToString());
                             }
                         }
-                    } catch (Exception ex) {
-                        MessageBox.Show(ex.Message);
-                    }
                     //If statement for appropriate display of label and textbox
                     if (columnNumberInSummary == 1) {
                         srAnswer1.Clear();
@@ -1261,9 +1253,7 @@ string text3, string text4, string text5, string text6) {
         private void button1_Click(object sender, EventArgs e) {
             resetAnswerLabels();
             if (displayShortResponse) {
-                showAllSR();
-                    shortResponseContainerPanel.Visible = true;
-                    shortResponseContainerPanel.Enabled = true;
+
                try {
                         if (!Globals.previousInterview) {
                             getAdditionalCommentAnswer(3, "dislikeSounds", 1);
@@ -1281,11 +1271,25 @@ string text3, string text4, string text5, string text6) {
                             getHistorySRAnswer(3, "likeSounds", 4);
                             getHistorySRAnswer(3, "makeALotSounds", 5);
                     }
-                        updateSRTopicLabel("Are there some sounds that you don't like?",
-                            "Are there times when it is hard for you to listen?",
-                            "Are there some sounds that make it hard for you to concentrate?",
-                            "Are there some sounds that you like to listen to?",
-                            "Are there some sounds that you make a lot?");
+
+                } catch (Exception) {
+                    //resetAnswerLabels();
+                }
+                showAllSR();
+                shortResponseContainerPanel.Visible = true;
+                shortResponseContainerPanel.Enabled = true;
+                srAnswer4.Visible = false;
+                srAnswer8.Visible = false;
+                srAnswer16.Visible = false;
+                srAnswer20.Visible = false;
+                srAnswer12.Enabled = true;
+                q3labelc2.Enabled = true;
+                srAnswer7.Enabled = true;
+                updateSRTopicLabel("Are there some sounds that you don't like?",
+                    "Are there times when it is hard for you to listen?",
+                    "Are there some sounds that make it hard for you to concentrate?",
+                    "Are there some sounds that you like to listen to?",
+                    "Are there some sounds that you make a lot?");
                     updateSRLabels(q1labelc1, q2labelc1, q3labelc1, q4labelc1,
                     "Other sounds that you don't like?",
                     "Examples in your daily life?",
@@ -1294,7 +1298,7 @@ string text3, string text4, string text5, string text6) {
                     updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
                         "Other times when it is hard to listen?",
                         "Examples in your daily life?",
-                        "",
+                        "Do You Do Anything To Avoid \n These Sonuds(e.g.Cover Your \n Ears, Avoid Noise Places)?",
                         "");
                     updateSRLabels(q1labelc3, q2labelc3, q3labelc3, q4labelc3,
                         "Other sounds that make it hard \n to concentrate?",
@@ -1311,11 +1315,7 @@ string text3, string text4, string text5, string text6) {
                         "Examples in your daily life?",
                         "Do the sounds you make seem to \n bother other people?",
                         "");
-                } catch (Exception) {
-                    resetAnswerLabels();
-                        MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
-                    }
-                } else {
+            } else {
 
                     hidePanels();
                     topic1ResultPanel.Visible = true;
@@ -1356,7 +1356,6 @@ string text3, string text4, string text5, string text6) {
                         getPreviousInterview("makeALotSounds", 4, topic5Results1, topic5Results2, topic5Results3, topic5Results4, null, null, null, null);
                     }
                 } catch (Exception ex) {
-                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                 }
                 //Re-Add the labels
                 this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
@@ -1471,10 +1470,6 @@ string text3, string text4, string text5, string text6) {
                 shortResponseContainerPanel.Visible = false;
                 shortResponseContainerPanel.Enabled = false;
                 if (displayShortResponse) {
-                showAllSR();
-                    hideColumn4SR();
-                    shortResponseContainerPanel.Visible = true;
-                    shortResponseContainerPanel.Enabled = true;
                     try {
                     if (!Globals.previousInterview) {
                         getAdditionalCommentAnswer(3, "dontLikeToLookAt", 1);
@@ -1487,8 +1482,16 @@ string text3, string text4, string text5, string text6) {
                         getHistorySRAnswer(3, "likeToLookAt", 3);
                     }
                 } catch(Exception ex) {
-                        MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
-                    }
+                }
+                    showAllSR();
+                    hideColumn4SR();
+                    shortResponseContainerPanel.Visible = true;
+                    shortResponseContainerPanel.Enabled = true;
+                srAnswer4.Visible = false;
+                srAnswer7.Visible = false;
+                srAnswer8.Visible = false;
+                srAnswer12.Visible = false;
+                srAnswer11.Enabled = true;
                     updateSRTopicLabel("Are there some things that you don't \n like to look at?",
                     "Are there some things you see that make it \n hard to concentrate?",
                     "Are there some things that you like \n to look at?",
@@ -1531,7 +1534,6 @@ string text3, string text4, string text5, string text6) {
                         getPreviousInterview("likeToLookAt", 5, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, null, null, null);
                             }
                         } catch (Exception error) {
-                            MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                         }
                     //Re-Add labels
                     this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
@@ -1576,31 +1578,34 @@ string text3, string text4, string text5, string text6) {
         private void hearingBtn_Click(object sender, EventArgs e) {
             resetAnswerLabels();
             if (displayShortResponse) {
-                showAllSR();
-                    hideColumn5SR();
-                    shortResponseContainerPanel.Visible = true;
-                    shortResponseContainerPanel.Enabled = true;
+
                     try {
-                    if (!Globals.previousInterview) {
-                        getAdditionalCommentAnswer(4, "movingDontLike", 1);
-                        getAdditionalCommentAnswer(1, "hardToStayStill", 2);
-                        getAdditionalCommentAnswer(2, "movingThatYouLike", 3);
-                        getAdditionalCommentAnswer(4, "moveOverAndOverAgain", 4);
-                    } else {
-                        getHistorySRAnswer(4, "movingDontLike", 1);
-                        getHistorySRAnswer(1, "hardToStayStill", 2);
-                        getHistorySRAnswer(2, "movingThatYouLike", 3);
-                        getHistorySRAnswer(4, "moveOverAndOverAgain", 4);
-                    }
+                        if (!Globals.previousInterview) {
+                            getAdditionalCommentAnswer(4, "movingDontLike", 1);
+                            getAdditionalCommentAnswer(1, "hardToStayStill", 2);
+                            getAdditionalCommentAnswer(2, "movingThatYouLike", 3);
+                            getAdditionalCommentAnswer(4, "moveOverAndOverAgain", 4);
+                        } else {
+                            getHistorySRAnswer(4, "movingDontLike", 1);
+                            getHistorySRAnswer(1, "hardToStayStill", 2);
+                            getHistorySRAnswer(2, "movingThatYouLike", 3);
+                            getHistorySRAnswer(4, "moveOverAndOverAgain", 4);
+                        }
                     } catch (Exception ex) {
-                        MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                     }
-                    hideIndividual(q3labelc2, srAnswer11);
-                    hideIndividual(q4labelc2, srAnswer12);
-                q4labelc1.Enabled = true;
-                srAnswer4.Enabled = true;
-                srAnswer16.Enabled = true;
-                q4labelc4.Enabled = true;
+                            showAllSR();
+                            hideColumn5SR();
+                            shortResponseContainerPanel.Visible = true;
+                            shortResponseContainerPanel.Enabled = true;
+                            hideIndividual(q3labelc2, srAnswer11);
+                            hideIndividual(q4labelc2, srAnswer12);
+                            q4labelc1.Enabled = true;
+                            srAnswer4.Enabled = true;
+                            srAnswer16.Enabled = true;
+                            q4labelc4.Enabled = true;
+                srAnswer6.Visible = false;
+                srAnswer7.Visible = false;
+                srAnswer8.Visible = false;
                     updateSRTopicLabel("Are there some ways of moving \n that you don't like?",
                     "Are there times when it is hard for \n you to stay still?",
                     "Are there some ways of moving that \n you don't like?",
@@ -1655,7 +1660,6 @@ string text3, string text4, string text5, string text6) {
                         getPreviousInterview("moveOverAndOverAgain", 4, topic4Results1, topic4Results2, topic4Results3, topic4Results4, null, null, null, null);
                     }
                 } catch (Exception ex) {
-                        MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                 }
 
                     topic1ResultPanel.Visible = true;
@@ -1710,10 +1714,6 @@ string text3, string text4, string text5, string text6) {
             resetAnswerLabels();
 
             if (displayShortResponse) {
-                showAllSR();
-                hideColumn3SR();
-                shortResponseContainerPanel.Visible = true;
-                shortResponseContainerPanel.Enabled = true;
                 try {
                     if (!Globals.previousInterview) {
                         getAdditionalCommentAnswer(3, "smellDontLike", 1);
@@ -1723,8 +1723,11 @@ string text3, string text4, string text5, string text6) {
                         getHistorySRAnswer(3, "likeToSmell", 2);
                     }
                 } catch (Exception ex) {
-                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                 }
+                    showAllSR();
+                    hideColumn3SR();
+                    shortResponseContainerPanel.Visible = true;
+                    shortResponseContainerPanel.Enabled = true;
                 hideIndividual(q4labelc1, srAnswer4);
                 hideIndividual(q4labelc2, srAnswer8);
                 q3labelc2.Enabled = true;
@@ -1765,7 +1768,6 @@ string text3, string text4, string text5, string text6) {
                     }
 
                 } catch (Exception ex) {
-                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                 }
 
                 hidePanels();
@@ -1802,11 +1804,7 @@ string text3, string text4, string text5, string text6) {
         private void touchBtn_Click(object sender, EventArgs e) {
             resetAnswerLabels();
             if (displayShortResponse) {
-                showAllSR();
 
-                hideColumn4SR();
-                shortResponseContainerPanel.Visible = true;
-                shortResponseContainerPanel.Enabled = true;
                 try {
                     if (!Globals.previousInterview) {
                         getAdditionalCommentAnswer(4, "dontLikeFeelingOf", 1);
@@ -1818,9 +1816,13 @@ string text3, string text4, string text5, string text6) {
                         getHistorySRAnswer(3, "likeTheFeelingOf", 3);
                     }
                 } catch (Exception ex) {
-                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                 }
-                hideIndividual(q4labelc3, srAnswer12);
+                    showAllSR();
+
+                    hideColumn4SR();
+                    shortResponseContainerPanel.Visible = true;
+                    shortResponseContainerPanel.Enabled = true;
+                    hideIndividual(q4labelc3, srAnswer12);
                 updateSRTopicLabel("Are there some things that you don't \n like the feeling of?",
                 "Are there ways that people touch you that \n you don't like?",
                 "Are there some things that you \n like the feeling of?",
@@ -1872,7 +1874,6 @@ string text3, string text4, string text5, string text6) {
                         getPreviousInterview("likeTheFeelingOf", 6, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, topic3Results6, null, null);
                     }
                 } catch (Exception ex) {
-                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                 }
 
                 hidePanels();
@@ -2014,7 +2015,7 @@ string text3, string text4, string text5, string text6) {
             try {
                 commentsTxtBox.AppendText(list[0]);
             } catch (Exception ex) {
-                MessageBox.Show("Additional Comments have not been set");
+                commentsTxtBox.AppendText("No comments saved");
             }
             commentsTxtBox.ReadOnly = false;
         }
@@ -2022,10 +2023,7 @@ string text3, string text4, string text5, string text6) {
         private void additionalCommentsBtn_Click(object sender, EventArgs e) {
             resetAnswerLabels();
             if (displayShortResponse) {
-                showAllSR();
-                hideColumn3SR();
-                shortResponseContainerPanel.Visible = true;
-                shortResponseContainerPanel.Enabled = true;
+
                 try {
                     if (!Globals.previousInterview) { //Get Latest
                         getAdditionalCommentAnswer(4, "other", 1);
@@ -2035,8 +2033,16 @@ string text3, string text4, string text5, string text6) {
                         getHistorySRAnswer(4, "other", 2);
                     }
                 } catch (Exception ex) {
-                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+ 
                 }
+                showAllSR();
+                hideColumn3SR();
+                shortResponseContainerPanel.Visible = true;
+                shortResponseContainerPanel.Enabled = true;
+                srAnswer4.Enabled = true;
+                srAnswer3.Enabled = true;
+                srAnswer7.Enabled = true;
+                srAnswer8.Enabled = true;
                 updateSRTopicLabel("Are there some places with lots of things \n happening at once that you don't like?",
                 "Are there other sensations that you \n feel strongly about?",
                 "", "", "");
@@ -2072,7 +2078,7 @@ string text3, string text4, string text5, string text6) {
                     }
 
                 } catch (Exception ex) {
-                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+ 
                 }
 
                 hidePanels();
@@ -2109,10 +2115,7 @@ string text3, string text4, string text5, string text6) {
         private void tasteBtn_Click(object sender, EventArgs e) {
             resetAnswerLabels();
             if (displayShortResponse) {
-                showAllSR();
-                hideColumn5SR();
-                shortResponseContainerPanel.Visible = true;
-                shortResponseContainerPanel.Enabled = true;
+
                 try {
                     if (!Globals.previousInterview) {
                         getAdditionalCommentAnswer(2, "foodGroupsDontLike", 1);
@@ -2126,27 +2129,32 @@ string text3, string text4, string text5, string text6) {
                         getHistorySRAnswer(3, "thingsPutInMouthALot", 4);
                     }
                 } catch (Exception ex) {
-                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+ 
                 }
+                showAllSR();
+                hideColumn5SR();
+                shortResponseContainerPanel.Visible = true;
+                shortResponseContainerPanel.Enabled = true;
                 hideIndividual(q3labelc1, srAnswer3);
                 hideIndividual(q4labelc1, srAnswer4);
                 hideIndividual(q4labelc2, srAnswer8);
                 hideIndividual(q4labelc3, srAnswer12);
                 hideIndividual(q4labelc4, srAnswer16);
+                srAnswer11.Visible = false;
                 srAnswer15.Visible = false;
-                updateSRTopicLabel("Are there some food groups that you don't like eating?",
-                    "Are there some ways that food tastes or feels \n in your mouth that you don't like?",
-                    "Are there some things you really like to eat?",
+                updateSRTopicLabel("Are there some food groups \n that you don't like eating?",
+                    "Are there some ways that food tastes or \n feels  in your mouth that you don't like?",
+                    "Are there some things you \n really like to eat?",
                     "Are there some things that you put in \n your mouth a lot?",
                     "");
 
                 updateSRLabels(q1labelc1, q2labelc1, q3labelc1, q4labelc1,
-                    "Other types of food that you \n don’t like?",
+                    "Other types of food that \n you  don’t like?",
                     "Examples in your daily life?",
                     "",
                     "");
                 updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
-                    "Other ways food tastes or feels that you don’t like?",
+                    "Other ways food tastes or \n feels that you don’t like?",
                     "Examples in your daily life?",
                     "Do you do anything to avoid \n eating certain foods (e.g., avoid \n eating in restaurants or at other  \n people’s homes)?",
                     "");
@@ -2192,7 +2200,7 @@ string text3, string text4, string text5, string text6) {
                         getPreviousInterview("thingsPutInMouthALot", 3, topic4Results1, topic4Results2, topic4Results3, null, null, null, null, null);
                     }
                 } catch (Exception ex) {
-                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+ 
                 }
 
                 hidePanels();
@@ -2253,6 +2261,11 @@ string text3, string text4, string text5, string text6) {
         private void Summary_Load(object sender, EventArgs e) {
             shortResponseButton();
             //getInterviewType();
+            topic1ResultPanel.Visible = true;
+            topic2ResultPanel.Visible = true;
+            topic3ResultPanel.Visible = true;
+            topic4ResultPanel.Visible = true;
+            topic5ResultPanel.Visible = true;
         }
 
         bool displayShortResponse = false;
@@ -2261,8 +2274,8 @@ string text3, string text4, string text5, string text6) {
             hidePanels();
             shortResponseContainerPanel.Visible = false;
             if (!displayShortResponse) { //Non SR Panel
-                shortResponseContainerPanel.Visible = false;
-                shortResponseContainerPanel.Enabled = false;
+                shortResponseContainerPanel.Visible = true;
+                shortResponseContainerPanel.Enabled = true;
                 changeSummaryPanelType.Text = "View Image Answers";
                 Globals.shortResponse = true;
                 displayShortResponse = true;
@@ -2270,7 +2283,12 @@ string text3, string text4, string text5, string text6) {
                 displayShortResponse = false;
                 Globals.shortResponse = false;
                 changeSummaryPanelType.Text = "View Short Response Answers";
-                hidePanels();
+                topic1ResultPanel.Visible = true;
+                topic2ResultPanel.Visible = true;
+                topic3ResultPanel.Visible = true;
+                topic4ResultPanel.Visible = true;
+                topic5ResultPanel.Visible = true;
+                //hidePanels();
             }
         }
 

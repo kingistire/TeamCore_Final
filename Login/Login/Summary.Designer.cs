@@ -1143,7 +1143,6 @@
             this.shortResponseContainerPanel.Controls.Add(this.srAnswer3);
             this.shortResponseContainerPanel.Controls.Add(this.srAnswer2);
             this.shortResponseContainerPanel.Controls.Add(this.srAnswer1);
-            this.shortResponseContainerPanel.Enabled = false;
             this.shortResponseContainerPanel.Location = new System.Drawing.Point(169, 29);
             this.shortResponseContainerPanel.Name = "shortResponseContainerPanel";
             this.shortResponseContainerPanel.Size = new System.Drawing.Size(1125, 576);
@@ -1673,8 +1672,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1504, 634);
-            this.Controls.Add(this.shortResponseContainerPanel);
             this.Controls.Add(this.commentsLbl);
+            this.Controls.Add(this.shortResponseContainerPanel);
             this.Controls.Add(this.commentsTxtBox);
             this.Controls.Add(this.changeSummaryPanelType);
             this.Controls.Add(this.tasteBtn);

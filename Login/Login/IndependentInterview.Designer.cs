@@ -981,6 +981,7 @@
             // readOutLoudToggleBtn
             // 
             this.readOutLoudToggleBtn.BackColor = System.Drawing.Color.Transparent;
+            this.readOutLoudToggleBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.readOutLoudToggleBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.readOutLoudToggleBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.readOutLoudToggleBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -988,10 +989,10 @@
             this.readOutLoudToggleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.readOutLoudToggleBtn.ForeColor = System.Drawing.Color.Navy;
             this.readOutLoudToggleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.readOutLoudToggleBtn.Location = new System.Drawing.Point(1362, 30);
+            this.readOutLoudToggleBtn.Location = new System.Drawing.Point(0, 0);
             this.readOutLoudToggleBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.readOutLoudToggleBtn.Name = "readOutLoudToggleBtn";
-            this.readOutLoudToggleBtn.Size = new System.Drawing.Size(137, 46);
+            this.readOutLoudToggleBtn.Size = new System.Drawing.Size(138, 47);
             this.readOutLoudToggleBtn.TabIndex = 55;
             this.readOutLoudToggleBtn.Text = "ReadOutLoud: Off";
             this.readOutLoudToggleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1013,8 +1014,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1246, 788);
-            this.Controls.Add(this.additionalNotesPanel);
             this.Controls.Add(this.readOutLoudPanel);
+            this.Controls.Add(this.additionalNotesPanel);
             this.Controls.Add(this.picturePanel);
             this.Controls.Add(this.questionPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
