@@ -1312,8 +1312,7 @@ string text3, string text4, string text5, string text6) {
                         "Do the sounds you make seem to \n bother other people?",
                         "");
                 } catch (Exception) {
-                    resetAnswerLabels();
-                        MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+                    //resetAnswerLabels();
                     }
                 } else {
 
@@ -1340,7 +1339,7 @@ string text3, string text4, string text5, string text6) {
                         "I find it hard to listen to someone \n talking to me when I'm in a group", "", "", "", "", "");
                     updateTopic3ResultLabel(3, "Radio On", "Clock Ticking", "People Talking", "", "", "");
                     updateTopic5ResultLabel(4, "Humming or whistling to myself", "Tapping Feet", "Tapping Fingers", "Clicking Pen", "", "");
-                    updateTopic4ResultLabel(5, "Computer Sounds", "Live Music", "Fans", "Music Through My Phone", "Rhythsm", "");
+                    updateTopic4ResultLabel(5, "Computer Sounds", "Live Music", "Fans", "Music Through My Phone", "Rhythms", "");
                 try {
                     if (!Globals.previousInterview) {
                         getDBAnser("dislikeSounds", 8, topic1Results1, topic1Results2, topic1Results3, topic1Results4, topic1Results5, topic1Results6, topic1Results7, topic1Results8);
@@ -1356,7 +1355,6 @@ string text3, string text4, string text5, string text6) {
                         getPreviousInterview("makeALotSounds", 4, topic5Results1, topic5Results2, topic5Results3, topic5Results4, null, null, null, null);
                     }
                 } catch (Exception ex) {
-                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
                 }
                 //Re-Add the labels
                 this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
@@ -2014,7 +2012,7 @@ string text3, string text4, string text5, string text6) {
             try {
                 commentsTxtBox.AppendText(list[0]);
             } catch (Exception ex) {
-                MessageBox.Show("Additional Comments have not been set");
+                commentsTxtBox.AppendText("No comments saved");
             }
             commentsTxtBox.ReadOnly = false;
         }

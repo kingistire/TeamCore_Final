@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Summary));
             this.capstoneDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.soundBtn = new System.Windows.Forms.Button();
             this.sightBtn = new System.Windows.Forms.Button();
@@ -1674,12 +1675,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1504, 634);
             this.Controls.Add(this.shortResponseContainerPanel);
+            this.Controls.Add(this.topic4ResultPanel);
             this.Controls.Add(this.commentsLbl);
             this.Controls.Add(this.commentsTxtBox);
             this.Controls.Add(this.changeSummaryPanelType);
             this.Controls.Add(this.tasteBtn);
             this.Controls.Add(this.topic5ResultPanel);
-            this.Controls.Add(this.topic4ResultPanel);
             this.Controls.Add(this.topic2ResultPanel);
             this.Controls.Add(this.topic3ResultPanel);
             this.Controls.Add(this.topic1ResultPanel);
@@ -1689,6 +1690,7 @@
             this.Controls.Add(this.soundBtn);
             this.Controls.Add(this.hearingBtn);
             this.Controls.Add(this.sightBtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Summary";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Summary";

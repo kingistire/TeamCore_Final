@@ -92,7 +92,7 @@ namespace Login
         }
 
         private void ProfilePage_Load(object sender, EventArgs e) {
-            InterviewHistoryDataGrid.Rows[0].Cells[0].Selected = false;
+            //InterviewHistoryDataGrid.Rows[0].Cells[0].Selected = false;
             string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                         @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
             SqlConnection conDatabase = new SqlConnection(constring);

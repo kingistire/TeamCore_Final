@@ -31,25 +31,20 @@ namespace Login {
 
             InitializeComponent();
             HorizontalScroll.Enabled = false;
-            this.Hide();
             panel1.BringToFront();
             readOutLoudPanel.BringToFront();
+
             //Dynamically create the circular picture boxes
             createCirclePB(bottomLeftPB);
             createCirclePB(bottomLeftPB2);
-
             createCirclePB(bottomRightPB);
             createCirclePB(bottomRightPB2);
-
             createCirclePB(bottomMidPB);
             createCirclePB(bottomMidPB2);
-
             createCirclePB(topLeftPB);
             createCirclePB(topLeftPB2);
-
             createCirclePB(topRightPB);
             createCirclePB(topRightPB2);
-
             createCirclePB(topMidPB);
             createCirclePB(topMidPB2);
 
@@ -59,15 +54,14 @@ namespace Login {
             alittlePlayer.SoundLocation = @"..\..\resources\0. System\UiAlittleSound.wav";
             alittlePlayer.Load();
 
-
             Globals.shortResponse = false;
-
             if (Globals.interview_page >= 2) {
                 previousInterviewSlideBtn.Visible = true;
             }
             else {
                 previousInterviewSlideBtn.Visible = false;
             }
+
             //determines which page to display when the interview form is loaded
             //resets to one when the user starts a new interview
             if (Globals.interview_page == 1) {
@@ -175,6 +169,34 @@ namespace Login {
             else if (Globals.interview_page == 28) {
                 otherInterviewPage1();
                 OtherColours();
+            }
+            else if (Globals.interview_page == 29) {
+                panel2.BringToFront();
+            }
+
+            bool isNullOrEmptyTL = topLeftPB.Image == null;
+            if (isNullOrEmptyTL == true) {
+                topLeftPB.Enabled = false;
+            }
+            bool isNullOrEmptyTM = topMidPB.Image == null;
+            if (isNullOrEmptyTM == true) {
+                topMidPB.Enabled = false;
+            }
+            bool isNullOrEmptyTR = topRightPB.Image == null;
+            if (isNullOrEmptyTR == true) {
+                topRightPB.Enabled = false;
+            }
+            bool isNullOrEmptyBL = bottomLeftPB.Image == null;
+            if (isNullOrEmptyBL == true) {
+                bottomLeftPB.Enabled = false;
+            }
+            bool isNullOrEmptyBM = bottomMidPB.Image == null;
+            if (isNullOrEmptyBM == true) {
+                bottomMidPB.Enabled = false;
+            }
+            bool isNullOrEmptyBR = bottomRightPB.Image == null;
+            if (isNullOrEmptyBR == true) {
+                bottomRightPB.Enabled = false;
             }
         }
 
@@ -848,8 +870,7 @@ namespace Login {
             picBackground.BackColor = Color.LightBlue;
             lblQuestion.BackColor = Color.LightBlue;
             panel1.BackColor = Color.AliceBlue;
-            //picSense.Image = new Bitmap(@"");
-
+            picSense.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\environment.PNG");
         }
 
         private void OtherColours() {
@@ -863,7 +884,7 @@ namespace Login {
             picBackground.BackColor = Color.Tan;
             lblQuestion.BackColor = Color.Tan;
             panel1.BackColor = Color.AntiqueWhite;
-            //picSense.Image = new Bitmap(@"");
+            picSense.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\other.PNG");
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1216,6 +1237,13 @@ namespace Login {
             else if (Globals.interview_page == 29) {
                 this.Close();
                 updateDBother("sounds", "smells", "sights", "tastes", "feelings", "movements", "other");
+                GuidedInterview otComments = new GuidedInterview();
+                panel2.BringToFront();
+                picSense.Image = new Bitmap(@"..\..\resources\aqicon_PrI_icon.ico");
+                otComments.Show();
+            }
+            else if (Globals.interview_page == 30) {
+                writeToOTCommentsDB(tbAnswer1.Text.ToString());
                 Summary sum = new Summary();
                 sum.Show();
             }
@@ -1334,6 +1362,14 @@ namespace Login {
             else if (Globals.interview_page == 25) {
                 this.Hide();
                 InstanceRef25.Show();
+            }
+            else if (Globals.interview_page == 26) {
+                this.Hide();
+                InstanceRef26.Show();
+            }
+            else if (Globals.interview_page == 27) {
+                this.Hide();
+                InstanceRef27.Show();
             }
         }
 
@@ -2195,6 +2231,11 @@ namespace Login {
         public Form InstanceRef27 {
             get { return m_InstanceRef27; }
             set { m_InstanceRef27 = value; }
+        }
+        private Form m_InstanceRef28 = null;
+        public Form InstanceRef28 {
+            get { return m_InstanceRef28; }
+            set { m_InstanceRef28 = value; }
         }
 
         private void button1_Click(object sender, EventArgs e) {

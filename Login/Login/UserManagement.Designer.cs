@@ -47,9 +47,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1069, 60);
+            this.pictureBox1.Location = new System.Drawing.Point(749, 39);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(155, 143);
+            this.pictureBox1.Size = new System.Drawing.Size(103, 93);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
@@ -60,9 +61,10 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label8.Location = new System.Drawing.Point(321, 78);
+            this.label8.Location = new System.Drawing.Point(250, 51);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(388, 54);
+            this.label8.Size = new System.Drawing.Size(262, 36);
             this.label8.TabIndex = 23;
             this.label8.Text = "Here you can view all of the user profiles \r\nyou have created for your patients";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -73,9 +75,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(385, 41);
+            this.label2.Location = new System.Drawing.Point(293, 27);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(224, 35);
+            this.label2.Size = new System.Drawing.Size(149, 23);
             this.label2.TabIndex = 24;
             this.label2.Text = "View user profiles";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -88,11 +91,11 @@
             this.userProfileManagmentGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.editProfileBtnCol,
             this.viewProfileBtnCol});
-            this.userProfileManagmentGrid.Location = new System.Drawing.Point(69, 261);
-            this.userProfileManagmentGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.userProfileManagmentGrid.Location = new System.Drawing.Point(45, 171);
             this.userProfileManagmentGrid.Name = "userProfileManagmentGrid";
             this.userProfileManagmentGrid.ReadOnly = true;
-            this.userProfileManagmentGrid.Size = new System.Drawing.Size(1279, 418);
+            this.userProfileManagmentGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.userProfileManagmentGrid.Size = new System.Drawing.Size(936, 326);
             this.userProfileManagmentGrid.TabIndex = 26;
             this.userProfileManagmentGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.userProfileManagmentGrid_CellContentClick);
             // 
@@ -121,9 +124,10 @@
             this.importProfilesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.importProfilesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.importProfilesBtn.ForeColor = System.Drawing.Color.Navy;
-            this.importProfilesBtn.Location = new System.Drawing.Point(391, 155);
+            this.importProfilesBtn.Location = new System.Drawing.Point(297, 101);
+            this.importProfilesBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.importProfilesBtn.Name = "importProfilesBtn";
-            this.importProfilesBtn.Size = new System.Drawing.Size(192, 71);
+            this.importProfilesBtn.Size = new System.Drawing.Size(128, 46);
             this.importProfilesBtn.TabIndex = 35;
             this.importProfilesBtn.Text = "Import Profiles";
             this.importProfilesBtn.UseVisualStyleBackColor = false;
@@ -138,9 +142,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Navy;
-            this.button1.Location = new System.Drawing.Point(212, 155);
+            this.button1.Location = new System.Drawing.Point(177, 101);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 71);
+            this.button1.Size = new System.Drawing.Size(114, 46);
             this.button1.TabIndex = 36;
             this.button1.Text = "Create Profile";
             this.button1.UseVisualStyleBackColor = false;
@@ -155,9 +160,10 @@
             this.exportAllProfilesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exportAllProfilesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exportAllProfilesBtn.ForeColor = System.Drawing.Color.Navy;
-            this.exportAllProfilesBtn.Location = new System.Drawing.Point(589, 155);
+            this.exportAllProfilesBtn.Location = new System.Drawing.Point(429, 101);
+            this.exportAllProfilesBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.exportAllProfilesBtn.Name = "exportAllProfilesBtn";
-            this.exportAllProfilesBtn.Size = new System.Drawing.Size(230, 71);
+            this.exportAllProfilesBtn.Size = new System.Drawing.Size(153, 46);
             this.exportAllProfilesBtn.TabIndex = 37;
             this.exportAllProfilesBtn.Text = "Export All Profiles";
             this.exportAllProfilesBtn.UseVisualStyleBackColor = false;
@@ -169,9 +175,9 @@
             // 
             // UserManagment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1407, 735);
+            this.ClientSize = new System.Drawing.Size(1026, 543);
             this.Controls.Add(this.exportAllProfilesBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.importProfilesBtn);
@@ -179,7 +185,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "UserManagment";

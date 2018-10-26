@@ -38,37 +38,15 @@ namespace Login {
             //label1.Text = ((Form)this.MdiParent).Controls.["label1"]
         }
 
-
-        private void viewUserProfilesToolStripMenuItem_Click(object sender, EventArgs e) {           
-            UserManagment viewUserManagment = new UserManagment();
-            viewUserManagment.MdiParent = this;
-            viewUserManagment.Show();
-        }
-
-        //private void deleteUserToolStripMenuItem1_Click(object sender, EventArgs e) {
-          //  DeleteUser deleteUserProfile = new DeleteUser();
-           // deleteUserProfile.MdiParent = this;
-           // deleteUserProfile.Show();
-        //}//
-
-        private void editExistingUserToolStripMenuItem_Click(object sender, EventArgs e) {
-            EditUser1 editUserProfile1 = new EditUser1();
-            editUserProfile1.MdiParent = this;
-            editUserProfile1.Show();
-        }
-
         private void fileToolStripMenuItem_Click(object sender, EventArgs e) {
             SelectInterview selectInterview = new SelectInterview();
             selectInterview.Show();
         }
 
-        private void viewUserSummaryToolStripMenuItem_Click(object sender, EventArgs e) {
-            ViewResultsTable vrt = new ViewResultsTable();
-            vrt.Show();
-            Summary sum = new Summary();
-            //sum.MdiParent = this;
-            sum.Show();
-
+        private void userManagementToolStripMenuItem_Click(object sender, EventArgs e) {
+            UserManagment viewUserManagment = new UserManagment();
+            viewUserManagment.MdiParent = this;
+            viewUserManagment.Show();
         }
     }
 }

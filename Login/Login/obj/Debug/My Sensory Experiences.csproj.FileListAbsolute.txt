@@ -327,3 +327,76 @@ C:\Users\Philip\Desktop\Git2 new\TeamCore_Final\Login\Login\obj\Debug\My Sensory
 C:\Users\Philip\Desktop\Git2 new\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.CoreCompileInputs.cache
 C:\Users\Philip\Desktop\Git2 new\TeamCore_Final\Login\Login\obj\Debug\Login.exe
 C:\Users\Philip\Desktop\Git2 new\TeamCore_Final\Login\Login\obj\Debug\Login.pdb
+E:\Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB.mdf
+E:\Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB_log.ldf
+E:\Final\Login\Login\bin\Debug\Login.exe.config
+E:\Final\Login\Login\bin\Debug\Login.exe
+E:\Final\Login\Login\bin\Debug\Login.pdb
+E:\Final\Login\Login\bin\Debug\Interop.WMPLib.dll
+E:\Final\Login\Login\bin\Debug\AxInterop.WMPLib.dll
+E:\Final\Login\Login\obj\Debug\My Sensory Experiences.csprojAssemblyReference.cache
+E:\Final\Login\Login\obj\Debug\Interop.WMPLib.dll
+E:\Final\Login\Login\obj\Debug\AxInterop.WMPLib.dll
+E:\Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.ResolveComReference.cache
+E:\Final\Login\Login\obj\Debug\Login.AddUser.resources
+E:\Final\Login\Login\obj\Debug\Login.EditProfile.resources
+E:\Final\Login\Login\obj\Debug\Login.EditUser1.resources
+E:\Final\Login\Login\obj\Debug\Login.DeleteUser.resources
+E:\Final\Login\Login\obj\Debug\Login.FamilyInstructions.resources
+E:\Final\Login\Login\obj\Debug\Login.FamilyInterviewCover.resources
+E:\Final\Login\Login\obj\Debug\Login.FamilyObservations.resources
+E:\Final\Login\Login\obj\Debug\Login.GuidedInstructions.resources
+E:\Final\Login\Login\obj\Debug\Login.IndependentInstructions.resources
+E:\Final\Login\Login\obj\Debug\Login.IndependentInterview.resources
+E:\Final\Login\Login\obj\Debug\Login.IndependentCover.resources
+E:\Final\Login\Login\obj\Debug\Login.GuidedInterviewCover.resources
+E:\Final\Login\Login\obj\Debug\Login.ProfilePage.resources
+E:\Final\Login\Login\obj\Debug\Login.SelectInterview.resources
+E:\Final\Login\Login\obj\Debug\Login.NewOTAccount.resources
+E:\Final\Login\Login\obj\Debug\Login.GuidedInterview.resources
+E:\Final\Login\Login\obj\Debug\Login.Login.resources
+E:\Final\Login\Login\obj\Debug\Login.MDIParent1.resources
+E:\Final\Login\Login\obj\Debug\Login.Properties.Resources.resources
+E:\Final\Login\Login\obj\Debug\Login.Summary.resources
+E:\Final\Login\Login\obj\Debug\Login.UserManagment.resources
+E:\Final\Login\Login\obj\Debug\Login.ViewResults.resources
+E:\Final\Login\Login\obj\Debug\Login.ViewResultsTable.resources
+E:\Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.GenerateResource.cache
+E:\Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.CoreCompileInputs.cache
+E:\Final\Login\Login\obj\Debug\Login.exe
+E:\Final\Login\Login\obj\Debug\Login.pdb
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB.mdf
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\bin\Debug\CapstoneDB\CapstoneDB_log.ldf
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\bin\Debug\Login.exe.config
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\bin\Debug\Login.exe
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\bin\Debug\Login.pdb
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\bin\Debug\Interop.WMPLib.dll
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csprojAssemblyReference.cache
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Interop.WMPLib.dll
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.ResolveComReference.cache
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.AddUser.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.EditProfile.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.DeleteUser.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyInstructions.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyInterviewCover.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyObservations.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInstructions.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.IndependentInstructions.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.IndependentInterview.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.IndependentCover.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInterviewCover.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.ProfilePage.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.SelectInterview.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.NewOTAccount.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.GuidedInterview.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.Login.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.MDIParent1.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.Summary.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.UserManagment.resources
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.GenerateResource.cache
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.CoreCompileInputs.cache
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.exe
+C:\Users\bryce\Desktop\LiveDemo\TeamCore_Final\Login\Login\obj\Debug\Login.pdb

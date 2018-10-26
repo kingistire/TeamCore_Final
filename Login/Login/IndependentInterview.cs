@@ -233,7 +233,7 @@ namespace Login {
             }
             else if (Globals.interview_page == 35) {
                 smellInterviewPage1();
-                TouchColours();
+                SmellColours();
             }
             else if (Globals.interview_page == 36) {
                 smellInterviewPage1p2();
@@ -294,15 +294,12 @@ namespace Login {
                 tasteInterviewPage4();
                 TasteColours();
             }
+            //added Globals.interview_page++ to skip over page 50 (duplicate)
             else if (Globals.interview_page == 49) {
                 tasteInterviewPage4p2();
                 openQuestionPanel();
                 TasteColours();
-            }
-            else if (Globals.interview_page == 50) {
-                tasteInterviewPage5();
-                openQuestionPanel();
-                TasteColours();
+                Globals.interview_page++;
             }
             else if (Globals.interview_page == 51) {
                 tasteInterviewPage6();
@@ -394,6 +391,31 @@ namespace Login {
             }
             else if (Globals.interview_page == 70) {
                 additionalNotesPanel.BringToFront();
+            }
+
+            bool isNullOrEmptyTL = topLeftPB.Image == null;
+            if (isNullOrEmptyTL == true) {
+                topLeftPB.Enabled = false;
+            }
+            bool isNullOrEmptyTM = topMidPB.Image == null;
+            if (isNullOrEmptyTM == true) {
+                topMidPB.Enabled = false;
+            }
+            bool isNullOrEmptyTR = topRightPB.Image == null;
+            if (isNullOrEmptyTR == true) {
+                topRightPB.Enabled = false;
+            }
+            bool isNullOrEmptyBL = bottomLeftPB.Image == null;
+            if (isNullOrEmptyBL == true) {
+                bottomLeftPB.Enabled = false;
+            }
+            bool isNullOrEmptyBM = bottomMidPB.Image == null;
+            if (isNullOrEmptyBM == true) {
+                bottomMidPB.Enabled = false;
+            }
+            bool isNullOrEmptyBR = bottomRightPB.Image == null;
+            if (isNullOrEmptyBR == true) {
+                bottomRightPB.Enabled = false;
             }
         }
 
@@ -604,6 +626,7 @@ namespace Login {
             SetPageLabelPath(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1.4.0 Are there some sounds that you like to listen to.wav");
             panel2lblQuestion.Text = "Are there some sounds that you like to listen to?";
             lblQuestion1.Text = "Are there sounds that you like to listen to often or for long periods?";
+            lblQuestion2.Text = "";
             tbAnswer2.Visible = false;
             SetTextQuestion1Player(@"..\..\resources\1. Hearing\4. Are there sounds that you like to listen to_\1.4.x sound you listen to often or for long periods (self).wav");
             
@@ -2229,6 +2252,8 @@ namespace Login {
             bottomLeftPB2.BackColor = Color.Bisque;
             bottomMidPB2.BackColor = Color.Bisque;
             bottomRightPB2.BackColor = Color.Bisque;
+            picSense.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\sight.PNG");
+            pictureBox2.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\sight.PNG");
         }
 
         private void TouchColours() {
@@ -2246,6 +2271,8 @@ namespace Login {
             bottomLeftPB2.BackColor = Color.LightYellow;
             bottomMidPB2.BackColor = Color.LightYellow;
             bottomRightPB2.BackColor = Color.LightYellow;
+            picSense.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\touch.PNG");
+            pictureBox2.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\touch.PNG");
         }
 
         private void SmellColours() {
@@ -2263,6 +2290,8 @@ namespace Login {
             bottomLeftPB2.BackColor = Color.Honeydew;
             bottomMidPB2.BackColor = Color.Honeydew;
             bottomRightPB2.BackColor = Color.Honeydew;
+            picSense.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\smell.PNG");
+            pictureBox2.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\smell.PNG");
         }
 
         private void TasteColours() {
@@ -2282,6 +2311,8 @@ namespace Login {
             bottomLeftPB2.BackColor = tasteBg;
             bottomMidPB2.BackColor = tasteBg;
             bottomRightPB2.BackColor = tasteBg;
+            picSense.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\taste.PNG");
+            pictureBox2.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\taste.PNG");
         }
 
         private void MovementColours() {
@@ -2299,9 +2330,11 @@ namespace Login {
             bottomLeftPB2.BackColor = Color.Pink;
             bottomMidPB2.BackColor = Color.Pink;
             bottomRightPB2.BackColor = Color.Pink;
+            picSense.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\movement.PNG");
+            pictureBox2.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\movement.PNG");
         }
-        
-        
+
+
         private void EnvironmentColours() {
             //picturePanel
             picBackground.BackColor = Color.LightBlue;
@@ -2317,6 +2350,8 @@ namespace Login {
             bottomLeftPB2.BackColor = Color.AliceBlue;
             bottomMidPB2.BackColor = Color.AliceBlue;
             bottomRightPB2.BackColor = Color.AliceBlue;
+            picSense.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\environment.PNG");
+            pictureBox2.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\environment.PNG");
         }
 
         private void OtherColours() {
@@ -2334,6 +2369,8 @@ namespace Login {
             bottomLeftPB2.BackColor = Color.AntiqueWhite;
             bottomMidPB2.BackColor = Color.AntiqueWhite;
             bottomRightPB2.BackColor = Color.AntiqueWhite;
+            picSense.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\other.PNG");
+            pictureBox2.Image = new Bitmap(@"..\..\resources\TopLeftInterviewImage(sense)\other.PNG");
         }
 
         string textboxAnswer1;
@@ -3016,11 +3053,12 @@ namespace Login {
                 saveWrittenAnswerToDB("other", "comment8", tbAnswer2.Text.ToString());
                 IndependentInterview additionalNotes = new IndependentInterview();
                 additionalNotesPanel.BringToFront();
+                picSense.Image = new Bitmap(@"..\..\resources\aqicon_PrI_icon.ico");
             }
         }
 
         private void button2_Click(object sender, EventArgs e) {
-            //saveWrittenAnswerToDB("otComments", "OTComments", textBox1.Text.ToString());
+            saveWrittenAnswerToDB("otComments", "OTComments", textBox1.Text.ToString());
             writeToOTCommentsDB(textBox1.Text.ToString());
             Summary sum = new Summary();
             sum.Show();

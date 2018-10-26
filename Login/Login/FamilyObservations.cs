@@ -16,14 +16,6 @@ using WMPLib;
 namespace Login {
     public partial class FamilyObservations : Form {
 
-        private System.Media.SoundPlayer topLeftPBPlayer = new System.Media.SoundPlayer();
-        private string topLeftReadOutLoudPath;
-        private string topMiddleReadOutLoudPath;
-        private string topRightReadOutLoudPath;
-        private string bottomLeftReadOutLoudPath;
-        private string bottomMiddleReadOutLoudPath;
-        private string bottomrightReadOutLoudPath;
-
         public FamilyObservations() {
             Globals.shortResponse = true;
             InitializeComponent();
@@ -275,26 +267,13 @@ namespace Login {
         /// </summary>
         private void interviewPage1()
         {
-            //axWindowsMediaPlayer1.URL = @"..\..\resources\0testsound.mp3";
             lblQuestion.Text = "Are there some sounds that s/he doesn't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1 Other People Talking (cropped).png");
-            topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.1OtherPeopleTalking.wav";
-
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\2 Fireworks.jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.2Fireworks.wav";
-
             topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\3 Loud voices.PNG");
-            topRightReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.3LoudVoices.wav";
-
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\4 Household appliances (e.g., blenders, vacuum).png");
-            bottomLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.4HouseholdAppliances.wav";
-
             bottomMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\5 Vehicles (e.g., trucks, motorbikes) (cropped).jpg");
-            bottomMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.5Vehicles.wav";
-
             bottomRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\6 Bathroom appliances (e.g., hand dryers, hair dryers) (photoshopped).jpg");
-            bottomrightReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.6BathroomAppliances.wav";
-
             updateLabelText("Other people talking", " Fireworks", "Loud voices",
                 "Household appliances (e.g. blenders, vacuum)", "Vehicles (e.g. trucks, motorbikes)",
                 "Bathroom appliances (e.g. hair dryers, hand dryers)");
@@ -304,15 +283,7 @@ namespace Login {
         {
             lblQuestion.Text = "Are there some sounds that s/he doesn't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\7 Sirens, alarms, school bells.jpg");
-            topLeftReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.7Sirens.Wav";
-
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\8 Sudden loud noises (e.g., balloons popping).jpg");
-            topMiddleReadOutLoudPath = @"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.8SuddenLoudNoises.wav";
-
-            //topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\loud_voices.PNG");
-            //bottomLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\household_ appliances.PNG");
-            // bottomMidPB.Image = new Bitmap(@"..\..\resources\");
-            //bottomRightPB.Image = new Bitmap(@"..\..\resources\");
             updateLabelText("Sirens, alarms, school bells", "Sudden loud noises (e.g., balloons popping)", "", "", "", "");
         }
 
@@ -326,8 +297,8 @@ namespace Login {
         private void interviewPage3()
         {
             lblQuestion.Text = "Are there times when it is hard for him/her to listen?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1 If I am concentrating on something, I don't notice people talking to me.png");
-            topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\2 I find it hard to listen in noisy classrooms (self-report version).jpg");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\1 If I am concentrating on something, I don't notice people talking to me.jpg");
+            topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\2 I find it hard to listen in noisy classrooms.jpg");
             topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\2. Are there times when it is hard to listen_\3 I find it hard to listen to someone talking to me when I'm in a group.jpg");
             //bottomLeftPB.Image = new Bitmap(@"../../resources/");
             //bottomMidPB.Image = new Bitmap(@"../../resources/");
@@ -353,7 +324,7 @@ namespace Login {
             lblQuestion.Text = "Are there some sounds that make it hard for him/her to concentrate?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\1 Radio on.jpg");
             topMidPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\2 Clock ticking.jpg");
-            topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\3 People talking.png");
+            topRightPB.Image = new Bitmap(@"..\..\resources\1. Hearing\3. Are there some sounds that make it hard for you to concentrate_\3 People talking.jpg");
             //bottomLeftPB.Image = new Bitmap(@"../../resources/");
             //bottomMidPB.Image = new Bitmap(@"../../resources/");
             //bottomRightPB.Image = new Bitmap(@"../../resources/");
@@ -523,7 +494,7 @@ namespace Login {
         private void touchInterviewPage3()
         {
             lblQuestion.Text = "Are there some ways that people touch him/her that h/she doesn't like?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\1 Being hugged or kissed (cropped).jpg");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\1 Being hugged or kissed (self version).jpg");
             topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\2 Being crowded (cropped).jpg");
             topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3 Being tapped on the shoulder (self-report version).jpg");
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\4 Having sunscreen put on.jpg");
@@ -574,7 +545,7 @@ namespace Login {
             topLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\1 Soft.jpg");
             topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\2 Rubbery.jpg");
             topRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\3 Furry.jpg");
-            bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\4 Hugging people.jpg");
+            bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\4 Hugging people (self version).jpg");
             bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\5 Touching people.jpg");
             bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\3. Are there some things that you like the feeling of_\6 Being squashed with a pillow.jpg");
             updateLabelText("Soft", "Rubbery", "Furry", "Hugging people",
@@ -675,7 +646,7 @@ namespace Login {
             topRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\3 Runny slippery (cropped).jpg");
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\4 Mixed.JPG");
             bottomMidPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\5 Sweet.jpg");
-            bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\6 Sour.png");
+            bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\2. Are there some ways that food tastes or feels in your mouth that you don't like_\6 Sour.jpg");
             updateLabelText("Lumpy", "Chewy", "Runny/Slippery", "Mixed", "Sweet", "Sour");
         }
         private void tasteInterviewPage3p2()
@@ -757,9 +728,9 @@ namespace Login {
             lblQuestion.Text = "Are there some ways of moving that s/he doesn't like?";
             topLeftPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\1 Being jumped on_tackled.jpg");
             topMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\2 Moving when I can't see where I am going (self-report) (cropped).jpg");
-            topRightPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\3 Balancing (self-report) (cropped).jpg");
+            topRightPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\3 Balancing.jpg");
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\4 Being upside down (cropped).jpg");
-            bottomMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\5 Climbing up high (cropped).jpg");
+            bottomMidPB.Image = new Bitmap(@"..\..\resources\6. Movement\1. Are there some ways of moving that you don’t like_\5 Climbing up high (self version).jpg");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\5. Taste\1. Are there some food groups that you don't like eating_\Dairy.jpg");
             updateLabelText("Being jumped on/tackled", "Moving when s/he can't see where s/he is going", "Balancing", "Being upside down", "Climbing up high", "");
         }
@@ -836,7 +807,7 @@ namespace Login {
         private void environmentPage1()
         {
             lblQuestion.Text = "Are there some places with lots of things happening at once that s/he doesn't like?";
-            topLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\1 Supermarket.png");
+            topLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\1 Supermarket.jpg");
             topMidPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\2 Party (self report)(cropped).jpg");
             topRightPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\3 Food Hall.jpg");
             bottomLeftPB.Image = new Bitmap(@"..\..\resources\7. Environment\1. Are there some places\4 Show (cropped).jpg");
@@ -2021,8 +1992,7 @@ namespace Login {
         }
 
         private void button2_Click(object sender, EventArgs e) {
-            //saveWrittenAnswerToDB("otComments", "OTComments", textBox1.Text.ToString());
-            writeToOTCommentsDB(textBox1.Text.ToString());
+            saveWrittenAnswerToDB("otComments", "OTComments", textBox1.Text.ToString());
             Summary sum = new Summary();
             sum.Show();
         }
@@ -2047,27 +2017,6 @@ namespace Login {
             }
 
         }
-
-        private void writeToOTCommentsDB(string commentName) {
-            SqlCommand cmdDatabase;
-            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
-                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
-            SqlConnection conDatabase = new SqlConnection(constring);
-            try {
-                string query1 = "INSERT INTO dbo.otComments (OTComments, ID) VALUES (@comment, @userID);";
-                conDatabase.Open();
-                cmdDatabase = new SqlCommand(query1, conDatabase);
-                //cmdDatabase = new SqlCommand("INSERT INTO dbo." + tableName + "(" + columnName + ") VALUES(@text);" , conDatabase);
-                cmdDatabase.Parameters.AddWithValue("@comment", commentName);
-                cmdDatabase.Parameters.AddWithValue("@userID", userID);
-
-                cmdDatabase.ExecuteNonQuery();
-                conDatabase.Close();
-            } catch (Exception ex) {
-                MessageBox.Show("An error has occurred: " + ex.Message);
-            }
-        }
-
         /// <summary>
         /// Previous button functionality
         /// </summary>
@@ -2346,41 +2295,26 @@ namespace Login {
         }
 
         private void topLeftPB_Click(object sender, EventArgs e) {
-
-            topLeftPBPlayer.SoundLocation = topLeftReadOutLoudPath;
-            topLeftPBPlayer.Play();
-
             hideButtons();
             displayButtons(topLeftPBALittleBtn, topLeftPBALotBtn);
         }
         private void topMidPB_Click(object sender, EventArgs e) {
-            topLeftPBPlayer.SoundLocation = topMiddleReadOutLoudPath;
-            topLeftPBPlayer.Play();
             hideButtons();
             displayButtons(topMidALittleBtn, topMidALotBtn);
         }
         private void topRightPB_Click(object sender, EventArgs e) {
-            topLeftPBPlayer.SoundLocation = topRightReadOutLoudPath;
-            topLeftPBPlayer.Play();
             hideButtons();
             displayButtons(topRightALittleBtn, topRightALotBtn);
         }
         private void bottomLeftPB_Click(object sender, EventArgs e) {
-            topLeftPBPlayer.SoundLocation = bottomLeftReadOutLoudPath;
-            topLeftPBPlayer.Play();
             hideButtons();
             displayButtons(bottomLeftALittleBtn, bottomLeftALotBtn);
         }
         private void bottomMidPB_Click(object sender, EventArgs e) {
-            topLeftPBPlayer.SoundLocation = bottomMiddleReadOutLoudPath;
-            topLeftPBPlayer.Play();
             hideButtons();
             displayButtons(bottomMidALittleBtn, bottomMidALotBtn);
         }
         private void bottomRightPB_Click(object sender, EventArgs e) {
-            topLeftPBPlayer.SoundLocation = bottomrightReadOutLoudPath;
-            topLeftPBPlayer.Play();
-
             hideButtons();
             displayButtons(bottomRightALittleBtn, bottomRightALotBtn);
         }

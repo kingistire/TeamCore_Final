@@ -94,12 +94,6 @@
     <Compile Include="EditProfile.Designer.cs">
       <DependentUpon>EditProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditUser1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditUser1.Designer.cs">
-      <DependentUpon>EditUser1.cs</DependentUpon>
-    </Compile>
     <Compile Include="DeleteUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,26 +191,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewResults.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewResults.Designer.cs">
-      <DependentUpon>ViewResults.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewResultsTable.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewResultsTable.Designer.cs">
-      <DependentUpon>ViewResultsTable.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AddProfile.resx">
       <DependentUpon>AddProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditProfile.resx">
       <DependentUpon>EditProfile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditUser1.resx">
-      <DependentUpon>EditUser1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteUser.resx">
       <DependentUpon>DeleteUser.cs</DependentUpon>
@@ -278,12 +257,6 @@
     <EmbeddedResource Include="UserManagement.resx">
       <DependentUpon>UserManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewResults.resx">
-      <DependentUpon>ViewResults.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewResultsTable.resx">
-      <DependentUpon>ViewResultsTable.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="CapstoneDB\CapstoneDB.xsc">
       <DependentUpon>CapstoneDB.xsd</DependentUpon>
     </None>
@@ -327,6 +300,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="resources\aqicon_PrI_icon.ico" />
     <Content Include="CapstoneDB\CapstoneDB.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
