@@ -689,26 +689,6 @@ namespace Login {
             }
         }
 
-        private void writeToOTCommentsDB(string commentName) {
-            SqlCommand cmdDatabase;
-            const string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
-                                    @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
-            SqlConnection conDatabase = new SqlConnection(constring);
-            try {
-                string query1 = "INSERT INTO dbo.otComments (OTComments, ID) VALUES (@comment, @userID);";
-                conDatabase.Open();
-                cmdDatabase = new SqlCommand(query1, conDatabase);
-                //cmdDatabase = new SqlCommand("INSERT INTO dbo." + tableName + "(" + columnName + ") VALUES(@text);" , conDatabase);
-                cmdDatabase.Parameters.AddWithValue("@comment", commentName);
-                cmdDatabase.Parameters.AddWithValue("@userID", userID);
-
-                cmdDatabase.ExecuteNonQuery();
-                conDatabase.Close();
-            } catch (Exception ex) {
-                MessageBox.Show("An error has occurred: " + ex.Message);
-            }
-        }
-
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////////// BUTTON CLICKS FOR A LITT AND A LOT ////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -2258,11 +2238,12 @@ namespace Login {
             string query;
             //Determine if a little or a lot
             try {
-                query = query = "INSERT INTO dbo.otComments (OTComments) VALUES (@additionalCommentText);";
+                query = query = "INSERT INTO dbo.otComments (OTComments, ID) VALUES (@additionalCommentText, @id);";
                 conDatabase.Open();
                 cmdDatabase = new SqlCommand(query, conDatabase);
                 //cmdDatabase = new SqlCommand("INSERT INTO dbo." + tableName + "(" + columnName + ") VALUES(@text);" , conDatabase);
                 cmdDatabase.Parameters.AddWithValue("@additionalCommentText", comment);
+                cmdDatabase.Parameters.AddWithValue("@id", userID);
                 cmdDatabase.ExecuteNonQuery();
                 conDatabase.Close();
             } catch (Exception ex) {
