@@ -84,6 +84,7 @@ namespace Login
             if (e.RowIndex >= 0 && e.ColumnIndex == 0){ // IF EDIT
                 Globals.interviewRow = (int) InterviewHistoryDataGrid.Rows[e.RowIndex].Cells[1].Value;
                 Globals.userID = InterviewHistoryDataGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
+                Globals.previousInterviewType = (int)InterviewHistoryDataGrid.Rows[e.RowIndex].Cells[3].Value;
                 //Console.WriteLine(Globals.userID);
                 Globals.previousInterview = true;
                 Summary sum = new Summary();

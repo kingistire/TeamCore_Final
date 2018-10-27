@@ -1674,7 +1674,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1504, 634);
-            this.Controls.Add(this.shortResponseContainerPanel);
             this.Controls.Add(this.topic4ResultPanel);
             this.Controls.Add(this.commentsLbl);
             this.Controls.Add(this.commentsTxtBox);
@@ -1683,6 +1682,7 @@
             this.Controls.Add(this.topic5ResultPanel);
             this.Controls.Add(this.topic2ResultPanel);
             this.Controls.Add(this.topic3ResultPanel);
+            this.Controls.Add(this.shortResponseContainerPanel);
             this.Controls.Add(this.topic1ResultPanel);
             this.Controls.Add(this.additionalCommentsBtn);
             this.Controls.Add(this.touchBtn);

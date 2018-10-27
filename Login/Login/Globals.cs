@@ -17,5 +17,6 @@ namespace Login {
         public static bool toggleReadOutLoad = false;
         public static int interviewRow = 0;
         public static bool previousInterview = false;
+        public static int previousInterviewType = 1;
     }
     }

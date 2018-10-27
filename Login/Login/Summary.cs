@@ -18,7 +18,6 @@ namespace Login {
             } else { //Get previousHistory
                 getOTHistory();
             }
-
         }
 
         private const int MAXCATERGORIES = 23;
@@ -38,7 +37,7 @@ namespace Login {
         }
 
         private void shortResponseButton() {
-            if (Globals.shortResponse) {
+            if (Globals.previousInterviewType != 1) {
                 changeSummaryPanelType.Visible = true;
                 changeSummaryPanelType.Enabled = true;
             } else {
@@ -1485,7 +1484,7 @@ string text3, string text4, string text5, string text6) {
                         getHistorySRAnswer(3, "likeToLookAt", 3);
                     }
                 } catch(Exception ex) {
-                        MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+     
                     }
                     updateSRTopicLabel("Are there some things that you don't \n like to look at?",
                     "Are there some things you see that make it \n hard to concentrate?",
@@ -1529,7 +1528,7 @@ string text3, string text4, string text5, string text6) {
                         getPreviousInterview("likeToLookAt", 5, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, null, null, null);
                             }
                         } catch (Exception error) {
-                            MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+         
                         }
                     //Re-Add labels
                     this.resultsTable.Controls.Add(this.topic1Image1, 0, 0);
@@ -1591,7 +1590,7 @@ string text3, string text4, string text5, string text6) {
                         getHistorySRAnswer(4, "moveOverAndOverAgain", 4);
                     }
                     } catch (Exception ex) {
-                        MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+     
                     }
                     hideIndividual(q3labelc2, srAnswer11);
                     hideIndividual(q4labelc2, srAnswer12);
@@ -1653,7 +1652,7 @@ string text3, string text4, string text5, string text6) {
                         getPreviousInterview("moveOverAndOverAgain", 4, topic4Results1, topic4Results2, topic4Results3, topic4Results4, null, null, null, null);
                     }
                 } catch (Exception ex) {
-                        MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+     
                 }
 
                     topic1ResultPanel.Visible = true;
@@ -1721,7 +1720,7 @@ string text3, string text4, string text5, string text6) {
                         getHistorySRAnswer(3, "likeToSmell", 2);
                     }
                 } catch (Exception ex) {
-                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+ 
                 }
                 hideIndividual(q4labelc1, srAnswer4);
                 hideIndividual(q4labelc2, srAnswer8);
@@ -1763,7 +1762,7 @@ string text3, string text4, string text5, string text6) {
                     }
 
                 } catch (Exception ex) {
-                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+ 
                 }
 
                 hidePanels();
@@ -1816,7 +1815,7 @@ string text3, string text4, string text5, string text6) {
                         getHistorySRAnswer(3, "likeTheFeelingOf", 3);
                     }
                 } catch (Exception ex) {
-                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+ 
                 }
                 hideIndividual(q4labelc3, srAnswer12);
                 updateSRTopicLabel("Are there some things that you don't \n like the feeling of?",
@@ -1870,7 +1869,7 @@ string text3, string text4, string text5, string text6) {
                         getPreviousInterview("likeTheFeelingOf", 6, topic3Results1, topic3Results2, topic3Results3, topic3Results4, topic3Results5, topic3Results6, null, null);
                     }
                 } catch (Exception ex) {
-                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+ 
                 }
 
                 hidePanels();
@@ -1993,7 +1992,12 @@ string text3, string text4, string text5, string text6) {
             conDatabase.Close();
             string query;
             //Determines if OT Comment interviewNumber is less than the total interview number. If so, select most recent one, else, select the interviewRow number
-                query = "SELECT OTComments FROM otComments WHERE interviewNumber = @interviewRow;";
+            if (maxInterviewList < Globals.interviewRow) {
+                query = "SELECT OTComments FROM otComments WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.otComments) AND ID = @id;";
+            } else {
+                query = "SELECT OTComments FROM otComments WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.otComments) AND ID = @id;";
+            }
+            query = "SELECT OTComments FROM otComments WHERE interviewNumber = @interviewRow;";
             SqlCommand command = new SqlCommand(query, conDatabase);
             command.Parameters.AddWithValue("@id", id);
             command.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
@@ -2033,7 +2037,7 @@ string text3, string text4, string text5, string text6) {
                         getHistorySRAnswer(4, "other", 2);
                     }
                 } catch (Exception ex) {
-                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+ 
                 }
                 updateSRTopicLabel("Are there some places with lots of things \n happening at once that you don't like?",
                 "Are there other sensations that you \n feel strongly about?",
@@ -2070,7 +2074,7 @@ string text3, string text4, string text5, string text6) {
                     }
 
                 } catch (Exception ex) {
-                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+ 
                 }
 
                 hidePanels();
@@ -2124,7 +2128,7 @@ string text3, string text4, string text5, string text6) {
                         getHistorySRAnswer(3, "thingsPutInMouthALot", 4);
                     }
                 } catch (Exception ex) {
-                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+ 
                 }
                 hideIndividual(q3labelc1, srAnswer3);
                 hideIndividual(q4labelc1, srAnswer4);
@@ -2190,7 +2194,7 @@ string text3, string text4, string text5, string text6) {
                         getPreviousInterview("thingsPutInMouthALot", 3, topic4Results1, topic4Results2, topic4Results3, null, null, null, null, null);
                     }
                 } catch (Exception ex) {
-                    MessageBox.Show("This interview section has not been fully completed yet! The selected answers will be displayed");
+ 
                 }
 
                 hidePanels();
@@ -2250,6 +2254,12 @@ string text3, string text4, string text5, string text6) {
 
         private void Summary_Load(object sender, EventArgs e) {
             shortResponseButton();
+            topic1ResultPanel.Visible = true;       
+            topic2ResultPanel.Visible = true;       
+            topic3ResultPanel.Visible = true;       
+            topic4ResultPanel.Visible = true;       
+            topic5ResultPanel.Visible = true;       
+
             //getInterviewType();
         }
 
@@ -2259,8 +2269,8 @@ string text3, string text4, string text5, string text6) {
             hidePanels();
             shortResponseContainerPanel.Visible = false;
             if (!displayShortResponse) { //Non SR Panel
-                shortResponseContainerPanel.Visible = false;
-                shortResponseContainerPanel.Enabled = false;
+                shortResponseContainerPanel.Visible = true;
+                shortResponseContainerPanel.Enabled = true;
                 changeSummaryPanelType.Text = "View Image Answers";
                 Globals.shortResponse = true;
                 displayShortResponse = true;
@@ -2268,7 +2278,12 @@ string text3, string text4, string text5, string text6) {
                 displayShortResponse = false;
                 Globals.shortResponse = false;
                 changeSummaryPanelType.Text = "View Short Response Answers";
-                hidePanels();
+                topic1ResultPanel.Visible = true;
+                topic2ResultPanel.Visible = true;
+                topic3ResultPanel.Visible = true;
+                topic4ResultPanel.Visible = true;
+                topic5ResultPanel.Visible = true;
+                //hidePanels();
             }
         }
 
