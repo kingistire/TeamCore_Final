@@ -85,7 +85,7 @@ namespace Login
                 Globals.interviewRow = (int) InterviewHistoryDataGrid.Rows[e.RowIndex].Cells[1].Value;
                 Globals.userID = InterviewHistoryDataGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
                 Globals.previousInterviewType = (int)InterviewHistoryDataGrid.Rows[e.RowIndex].Cells[3].Value;
-                //Console.WriteLine(Globals.userID);
+                Console.WriteLine(Globals.interviewRow);
                 Globals.previousInterview = true;
                 Summary sum = new Summary();
                 sum.Show();
@@ -98,7 +98,7 @@ namespace Login
                         @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
             SqlConnection conDatabase = new SqlConnection(constring);
             SqlCommand cmdDatabase = new SqlCommand(" select * from linkProfileInterview WHERE ProfileID = @id;", conDatabase);
-            //SqlCommand cmdDatabase = new SqlCommand("Select * From otComments WHERE ID = @id;", conDatabase);
+            //SqlCommand cmdDatabase = new SqlCommand("Select * From dislikeSounds WHERE ID = @id;", conDatabase);
             cmdDatabase.Parameters.AddWithValue("@id", thisProfileId);
             try {
                 SqlDataAdapter sda = new SqlDataAdapter();

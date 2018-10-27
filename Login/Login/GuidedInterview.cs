@@ -55,6 +55,7 @@ namespace Login {
             alittlePlayer.Load();
 
             Globals.shortResponse = false;
+            Globals.previousInterview = false;
             if (Globals.interview_page >= 2) {
                 previousInterviewSlideBtn.Visible = true;
             }
@@ -1222,11 +1223,6 @@ namespace Login {
                 picSense.Image = new Bitmap(@"..\..\resources\aqicon_PrI_icon.ico");
                 otComments.Show();
             }
-            else if (Globals.interview_page == 30) {
-                saveWrittenAnswerToDB(tbAnswer1.Text.ToString());
-                Summary sum = new Summary();
-                sum.Show();
-            }
         }
 
         /// <summary>
@@ -2220,6 +2216,7 @@ namespace Login {
 
         private void button1_Click(object sender, EventArgs e) {
             saveWrittenAnswerToDB(tbAnswer1.Text.ToString());
+            this.Close();
             Summary sum = new Summary();
             sum.Show();
         }

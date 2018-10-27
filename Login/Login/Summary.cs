@@ -1992,12 +1992,7 @@ string text3, string text4, string text5, string text6) {
             conDatabase.Close();
             string query;
             //Determines if OT Comment interviewNumber is less than the total interview number. If so, select most recent one, else, select the interviewRow number
-            if (maxInterviewList < Globals.interviewRow) {
-                query = "SELECT OTComments FROM otComments WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.otComments) AND ID = @id;";
-            } else {
-                query = "SELECT OTComments FROM otComments WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.otComments) AND ID = @id;";
-            }
-            query = "SELECT OTComments FROM otComments WHERE interviewNumber = @interviewRow;";
+                query = "SELECT OTComments FROM otComments WHERE interviewNumber = @interviewRow;";
             SqlCommand command = new SqlCommand(query, conDatabase);
             command.Parameters.AddWithValue("@id", id);
             command.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
