@@ -412,9 +412,9 @@ namespace Login {
             maxInterviewCmd.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
             conDatabase.Open();
             SqlDataReader DataReaderMaxInterview = maxInterviewCmd.ExecuteReader();
-            int maxInterviewList = 0;
+            int maxInterviewNumber = 0;
             while (DataReaderMaxInterview.Read()) {
-                    maxInterviewList = int.Parse(DataReaderMaxInterview["interviewNumber"].ToString());
+                    maxInterviewNumber = int.Parse(DataReaderMaxInterview["interviewNumber"].ToString());
             }
             conDatabase.Close();
             string query;
@@ -422,13 +422,9 @@ namespace Login {
             switch (numOfSRQuestions) {
                 case 1:
                     //If there are more interviews that comments
-                    if(maxInterviewList < Globals.interviewRow) {
                         query = "SELECT comment1 FROM " + tableNameParam +
-                        " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ") AND ID = @id;";
-                    } else {
-                        query = "SELECT comment1 FROM " + tableNameParam +
-                    " WHERE interviewNumber = @interviewRow ;";
-                    }
+                    " WHERE interviewNumber = @interviewRow AND ID = @id;";
+                    Globals.interviewRow--;
                     SqlCommand command = new SqlCommand(query, conDatabase);
                     command.Parameters.AddWithValue("@id", id);
                     command.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
@@ -511,14 +507,9 @@ namespace Login {
 
                     break;
                 case 2:
-                    if (maxInterviewList < Globals.interviewRow) {
-                        query = "SELECT comment1 , comment2 FROM " + tableNameParam +
-                        " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ") AND ID = @id;";
-                    } else {
                         query = "SELECT comment1, comment2 FROM " + tableNameParam +
-                    " WHERE interviewNumber = @interviewRow;";
-                    }
-
+                    " WHERE interviewNumber = @interviewRow AND ID = @id;";
+                    Globals.interviewRow--;
                     SqlCommand command1 = new SqlCommand(query, conDatabase);
                     command1.Parameters.AddWithValue("@id", id);
                     command1.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
@@ -601,16 +592,11 @@ namespace Login {
                     }
                     break;
                 case 3:
-                    if (maxInterviewList < Globals.interviewRow) {
-                        query = "SELECT comment1 , comment2, comment3 FROM " + tableNameParam +
-                        " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ")AND ID = @id;";
-                    } else {
                         query = "SELECT comment1, comment2, comment3 FROM " + tableNameParam +
-                    " WHERE interviewNumber = @interviewRow;";
-
-                    }
+                    " WHERE interviewNumber = @interviewRow AND ID = @id;";
                     SqlCommand command2 = new SqlCommand(query, conDatabase);
                     command2.Parameters.AddWithValue("@id", id);
+                    Globals.interviewRow--;
                     command2.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
 
                     conDatabase.Open();
@@ -696,16 +682,11 @@ namespace Login {
                     }
                     break;
                 case 4:
-                    if (maxInterviewList < Globals.interviewRow) {
-                        query = "SELECT comment1 , comment2, comment3, comment4 FROM " + tableNameParam +
-                        " WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo." + tableNameParam + ")AND ID = @id;";
-                    } else {
                             query = "SELECT comment1, comment2, comment3, comment4 FROM " + tableNameParam +
-                        " WHERE interviewNumber = @interviewRow;";
-                     
-                    }
+                        " WHERE interviewNumber = @interviewRow AND ID = @id;";
                     SqlCommand command3 = new SqlCommand(query, conDatabase);
                     command3.Parameters.AddWithValue("@id", id);
+                    Globals.interviewRow--;
                     command3.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
 
                     conDatabase.Open();
@@ -807,7 +788,9 @@ namespace Login {
                     @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
             SqlConnection conDatabase = new SqlConnection(constring);
             //Replace summary in string with variable for db table name
-            SqlCommand command = new SqlCommand("SELECT * FROM " + tableNameParam + " WHERE interviewNumber = @interviewRow;", conDatabase);
+            SqlCommand command = new SqlCommand("SELECT * FROM " + tableNameParam + " WHERE interviewNumber = @interviewRow AND ID = @userID;", conDatabase);
+            command.Parameters.AddWithValue("@userID", id);
+            Globals.interviewRow--;
             command.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
             conDatabase.Open();
             SqlDataReader dr = command.ExecuteReader();
@@ -1259,6 +1242,13 @@ string text3, string text4, string text5, string text6) {
 
         private void button1_Click(object sender, EventArgs e) {
             resetAnswerLabels();
+            soundBtn.Enabled = false;
+            sightBtn.Enabled = true;
+            hearingBtn.Enabled = true;
+            smellBtn.Enabled = true;
+            touchBtn.Enabled = true;
+            tasteBtn.Enabled = true;
+            additionalCommentsBtn.Enabled = true;
             if (displayShortResponse) {
                 showAllSR();
                     shortResponseContainerPanel.Visible = true;
@@ -1310,10 +1300,21 @@ string text3, string text4, string text5, string text6) {
                         "Examples in your daily life?",
                         "Do the sounds you make seem to \n bother other people?",
                         "");
+
                 } catch (Exception) {
                     //resetAnswerLabels();
                     }
-                } else {
+                srAnswer4.Visible = false;
+                srAnswer8.Visible = false;
+                srAnswer16.Visible = false;
+                srAnswer20.Visible = false;
+                q3labelc2.Enabled = true;
+                srAnswer7.Enabled = true;
+                q4labelc1.Visible = false;
+                q4labelc2.Visible = false;
+                q4labelc4.Visible = false;
+                q4labelc5.Visible = false;
+            } else {
 
                     hidePanels();
                     topic1ResultPanel.Visible = true;
@@ -1467,7 +1468,15 @@ string text3, string text4, string text5, string text6) {
                 hidePanels();
                 shortResponseContainerPanel.Visible = false;
                 shortResponseContainerPanel.Enabled = false;
-                if (displayShortResponse) {
+            soundBtn.Enabled = true;
+            sightBtn.Enabled = false;
+            hearingBtn.Enabled = true;
+            smellBtn.Enabled = true;
+            touchBtn.Enabled = true;
+            tasteBtn.Enabled = true;
+            additionalCommentsBtn.Enabled = true;
+
+            if (displayShortResponse) {
                 showAllSR();
                     hideColumn4SR();
                     shortResponseContainerPanel.Visible = true;
@@ -1571,6 +1580,14 @@ string text3, string text4, string text5, string text6) {
         
         //This is for movement
         private void hearingBtn_Click(object sender, EventArgs e) {
+            soundBtn.Enabled = true;
+            sightBtn.Enabled = true;
+            hearingBtn.Enabled = false;
+            smellBtn.Enabled = true;
+            touchBtn.Enabled = true;
+            tasteBtn.Enabled = true;
+            additionalCommentsBtn.Enabled = true;
+
             resetAnswerLabels();
             if (displayShortResponse) {
                 showAllSR();
@@ -1702,7 +1719,13 @@ string text3, string text4, string text5, string text6) {
 
         //This is for Smell
         private void smellBtn_Click(object sender, EventArgs e) {
-
+            soundBtn.Enabled = true;
+            sightBtn.Enabled = true;
+            hearingBtn.Enabled = true;
+            smellBtn.Enabled = false;
+            touchBtn.Enabled = true;
+            tasteBtn.Enabled = true;
+            additionalCommentsBtn.Enabled = true;
 
             resetAnswerLabels();
 
@@ -1797,6 +1820,14 @@ string text3, string text4, string text5, string text6) {
         }
 
         private void touchBtn_Click(object sender, EventArgs e) {
+            soundBtn.Enabled = true;
+            sightBtn.Enabled = true;
+            hearingBtn.Enabled = true;
+            smellBtn.Enabled = true;
+            touchBtn.Enabled = false;
+            tasteBtn.Enabled = true;
+            additionalCommentsBtn.Enabled = true;
+
             resetAnswerLabels();
             if (displayShortResponse) {
                 showAllSR();
@@ -1973,6 +2004,7 @@ string text3, string text4, string text5, string text6) {
         }
 
         private void getOTHistory() {
+
             //Get maxInterview Number from selected table in database
             string constring = @"Data Source =(LocalDB)\MSSQLLocalDB;" +
                                 @"AttachDbFilename = |DataDirectory|\CapstoneDB\CapstoneDB.mdf; Integrated Security = True";
@@ -1984,18 +2016,23 @@ string text3, string text4, string text5, string text6) {
             maxInterviewCmd.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
             conDatabase.Open();
             SqlDataReader DataReaderMaxInterview = maxInterviewCmd.ExecuteReader();
-            int maxInterviewList = 0;
+            int maxInterviewNumber = 0;
             //Update maxInterList
             while (DataReaderMaxInterview.Read()) {
-                maxInterviewList = int.Parse(DataReaderMaxInterview["interviewNumber"].ToString());
+                maxInterviewNumber = int.Parse(DataReaderMaxInterview["interviewNumber"].ToString());
             }
             conDatabase.Close();
             string query;
             //Determines if OT Comment interviewNumber is less than the total interview number. If so, select most recent one, else, select the interviewRow number
-                query = "SELECT OTComments FROM otComments WHERE interviewNumber = @interviewRow;";
+            /*if (maxInterviewNumber > Globals.interviewRow) {
+                query = "SELECT OTComments FROM otComments WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.otComments) AND ID = @id;";
+            } else {
+                //query = "SELECT OTComments FROM otComments WHERE interviewNumber = (SELECT MAX(interviewNumber) FROM dbo.otComments) AND ID = @id;";
+            }*/
+            query = "SELECT OTComments FROM otComments WHERE interviewNumber = @interviewRow AND ID = @id;";
             SqlCommand command = new SqlCommand(query, conDatabase);
             command.Parameters.AddWithValue("@id", id);
-            command.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow;
+            command.Parameters.Add("@interviewRow", SqlDbType.Int).Value = Globals.interviewRow++;
             conDatabase.Open();
             SqlDataReader dr = command.ExecuteReader();
             List<string> list = new List<string>();
@@ -2017,6 +2054,14 @@ string text3, string text4, string text5, string text6) {
         }
 
         private void additionalCommentsBtn_Click(object sender, EventArgs e) {
+            soundBtn.Enabled = true;
+            sightBtn.Enabled = true;
+            hearingBtn.Enabled = true;
+            smellBtn.Enabled = true;
+            touchBtn.Enabled = true;
+            tasteBtn.Enabled = true;
+            additionalCommentsBtn.Enabled = false;
+
             resetAnswerLabels();
             if (displayShortResponse) {
                 showAllSR();
@@ -2048,6 +2093,14 @@ string text3, string text4, string text5, string text6) {
                     "Examples in your daily life?",
                     "How do you react to these \n other things?",
                     "Do you do anything to avoid \n these other things?");
+                q3labelc1.Enabled = true;
+                q4labelc1.Enabled = true;
+                q3labelc2.Enabled = true;
+                q4labelc2.Enabled = true;
+                srAnswer3.Enabled = true;
+                srAnswer4.Enabled = true;
+                srAnswer7.Enabled = true;
+                srAnswer8.Enabled = true;
 
             } else {
                 clearTable(resultsTable, 5);
@@ -2104,6 +2157,13 @@ string text3, string text4, string text5, string text6) {
         }
 
         private void tasteBtn_Click(object sender, EventArgs e) {
+            soundBtn.Enabled = true;
+            sightBtn.Enabled = true;
+            hearingBtn.Enabled = true;
+            smellBtn.Enabled = true;
+            touchBtn.Enabled = true;
+            tasteBtn.Enabled = false;
+            additionalCommentsBtn.Enabled = true;
             resetAnswerLabels();
             if (displayShortResponse) {
                 showAllSR();
@@ -2130,6 +2190,9 @@ string text3, string text4, string text5, string text6) {
                 hideIndividual(q4labelc2, srAnswer8);
                 hideIndividual(q4labelc3, srAnswer12);
                 hideIndividual(q4labelc4, srAnswer16);
+                srAnswer11.Visible = false;
+                q3labelc2.Enabled = true;
+                srAnswer7.Enabled = true;
                 srAnswer15.Visible = false;
                 updateSRTopicLabel("Are there some food groups that you don't like eating?",
                     "Are there some ways that food tastes or feels \n in your mouth that you don't like?",

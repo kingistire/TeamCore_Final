@@ -18,5 +18,6 @@ namespace Login {
         public static int interviewRow = 0;
         public static bool previousInterview = false;
         public static int previousInterviewType = 1;
+        public static int interviewType = 0;
     }
     }

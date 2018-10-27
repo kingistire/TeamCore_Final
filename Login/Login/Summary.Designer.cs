@@ -237,9 +237,9 @@
             // 
             this.topic1ResultPanel.Controls.Add(this.resultsTable);
             this.topic1ResultPanel.Controls.Add(this.topic1Label);
-            this.topic1ResultPanel.Location = new System.Drawing.Point(197, 30);
+            this.topic1ResultPanel.Location = new System.Drawing.Point(197, 23);
             this.topic1ResultPanel.Name = "topic1ResultPanel";
-            this.topic1ResultPanel.Size = new System.Drawing.Size(341, 257);
+            this.topic1ResultPanel.Size = new System.Drawing.Size(341, 268);
             this.topic1ResultPanel.TabIndex = 16;
             this.topic1ResultPanel.Visible = false;
             // 
@@ -358,72 +358,72 @@
             this.topic1Results1.AutoSize = true;
             this.topic1Results1.Location = new System.Drawing.Point(239, 4);
             this.topic1Results1.Name = "topic1Results1";
-            this.topic1Results1.Size = new System.Drawing.Size(27, 13);
+            this.topic1Results1.Size = new System.Drawing.Size(61, 20);
             this.topic1Results1.TabIndex = 8;
-            this.topic1Results1.Text = "N/A";
+            this.topic1Results1.Text = "                                   ";
             // 
             // topic1Results2
             // 
             this.topic1Results2.AutoSize = true;
             this.topic1Results2.Location = new System.Drawing.Point(239, 25);
             this.topic1Results2.Name = "topic1Results2";
-            this.topic1Results2.Size = new System.Drawing.Size(27, 13);
+            this.topic1Results2.Size = new System.Drawing.Size(61, 23);
             this.topic1Results2.TabIndex = 9;
-            this.topic1Results2.Text = "N/A";
+            this.topic1Results2.Text = "                                   ";
             // 
             // topic1Results3
             // 
             this.topic1Results3.AutoSize = true;
             this.topic1Results3.Location = new System.Drawing.Point(239, 49);
             this.topic1Results3.Name = "topic1Results3";
-            this.topic1Results3.Size = new System.Drawing.Size(27, 13);
+            this.topic1Results3.Size = new System.Drawing.Size(61, 25);
             this.topic1Results3.TabIndex = 10;
-            this.topic1Results3.Text = "N/A";
+            this.topic1Results3.Text = "                                   ";
             // 
             // topic1Results4
             // 
             this.topic1Results4.AutoSize = true;
             this.topic1Results4.Location = new System.Drawing.Point(239, 75);
             this.topic1Results4.Name = "topic1Results4";
-            this.topic1Results4.Size = new System.Drawing.Size(27, 13);
+            this.topic1Results4.Size = new System.Drawing.Size(61, 26);
             this.topic1Results4.TabIndex = 11;
-            this.topic1Results4.Text = "N/A";
+            this.topic1Results4.Text = "                                   ";
             // 
             // topic1Results5
             // 
             this.topic1Results5.AutoSize = true;
             this.topic1Results5.Location = new System.Drawing.Point(239, 105);
             this.topic1Results5.Name = "topic1Results5";
-            this.topic1Results5.Size = new System.Drawing.Size(27, 13);
+            this.topic1Results5.Size = new System.Drawing.Size(61, 26);
             this.topic1Results5.TabIndex = 12;
-            this.topic1Results5.Text = "N/A";
+            this.topic1Results5.Text = "                                   ";
             // 
             // topic1Results6
             // 
             this.topic1Results6.AutoSize = true;
             this.topic1Results6.Location = new System.Drawing.Point(239, 132);
             this.topic1Results6.Name = "topic1Results6";
-            this.topic1Results6.Size = new System.Drawing.Size(27, 13);
+            this.topic1Results6.Size = new System.Drawing.Size(61, 26);
             this.topic1Results6.TabIndex = 13;
-            this.topic1Results6.Text = "N/A";
+            this.topic1Results6.Text = "                                   ";
             // 
             // topic1Results7
             // 
             this.topic1Results7.AutoSize = true;
             this.topic1Results7.Location = new System.Drawing.Point(239, 160);
             this.topic1Results7.Name = "topic1Results7";
-            this.topic1Results7.Size = new System.Drawing.Size(27, 13);
+            this.topic1Results7.Size = new System.Drawing.Size(61, 24);
             this.topic1Results7.TabIndex = 14;
-            this.topic1Results7.Text = "N/A";
+            this.topic1Results7.Text = "                                   ";
             // 
             // topic1Results8
             // 
             this.topic1Results8.AutoSize = true;
             this.topic1Results8.Location = new System.Drawing.Point(239, 185);
             this.topic1Results8.Name = "topic1Results8";
-            this.topic1Results8.Size = new System.Drawing.Size(27, 13);
+            this.topic1Results8.Size = new System.Drawing.Size(61, 24);
             this.topic1Results8.TabIndex = 15;
-            this.topic1Results8.Text = "N/A";
+            this.topic1Results8.Text = "                                   ";
             // 
             // topic1Label
             // 
@@ -442,7 +442,7 @@
             this.topic3ResultPanel.Controls.Add(this.topic3Label);
             this.topic3ResultPanel.Location = new System.Drawing.Point(206, 294);
             this.topic3ResultPanel.Name = "topic3ResultPanel";
-            this.topic3ResultPanel.Size = new System.Drawing.Size(332, 256);
+            this.topic3ResultPanel.Size = new System.Drawing.Size(332, 272);
             this.topic3ResultPanel.TabIndex = 34;
             this.topic3ResultPanel.Visible = false;
             // 
@@ -485,7 +485,7 @@
             this.topic3Results6.Name = "topic3Results6";
             this.topic3Results6.Size = new System.Drawing.Size(63, 22);
             this.topic3Results6.TabIndex = 16;
-            this.topic3Results6.Text = "N/A";
+            this.topic3Results6.Text = "                                   ";
             // 
             // topic3Image6
             // 
@@ -495,7 +495,7 @@
             this.topic3Image6.Name = "topic3Image6";
             this.topic3Image6.Size = new System.Drawing.Size(225, 22);
             this.topic3Image6.TabIndex = 15;
-            this.topic3Image6.Text = "label9";
+            this.topic3Image6.Text = "                                   ";
             // 
             // topic3Results5
             // 
@@ -505,7 +505,7 @@
             this.topic3Results5.Name = "topic3Results5";
             this.topic3Results5.Size = new System.Drawing.Size(63, 20);
             this.topic3Results5.TabIndex = 14;
-            this.topic3Results5.Text = "N/A";
+            this.topic3Results5.Text = "                                   ";
             // 
             // topic3Image5
             // 
@@ -515,7 +515,7 @@
             this.topic3Image5.Name = "topic3Image5";
             this.topic3Image5.Size = new System.Drawing.Size(225, 20);
             this.topic3Image5.TabIndex = 13;
-            this.topic3Image5.Text = "label5";
+            this.topic3Image5.Text = "                                   ";
             // 
             // topic3Results4
             // 
@@ -525,7 +525,7 @@
             this.topic3Results4.Name = "topic3Results4";
             this.topic3Results4.Size = new System.Drawing.Size(63, 20);
             this.topic3Results4.TabIndex = 12;
-            this.topic3Results4.Text = "N/A";
+            this.topic3Results4.Text = "                                   ";
             // 
             // topic3Image1
             // 
@@ -559,27 +559,27 @@
             this.topic3Results1.AutoSize = true;
             this.topic3Results1.Location = new System.Drawing.Point(239, 4);
             this.topic3Results1.Name = "topic3Results1";
-            this.topic3Results1.Size = new System.Drawing.Size(27, 13);
+            this.topic3Results1.Size = new System.Drawing.Size(61, 26);
             this.topic3Results1.TabIndex = 8;
-            this.topic3Results1.Text = "N/A";
+            this.topic3Results1.Text = "                                   ";
             // 
             // topic3Results2
             // 
             this.topic3Results2.AutoSize = true;
             this.topic3Results2.Location = new System.Drawing.Point(239, 51);
             this.topic3Results2.Name = "topic3Results2";
-            this.topic3Results2.Size = new System.Drawing.Size(27, 13);
+            this.topic3Results2.Size = new System.Drawing.Size(61, 26);
             this.topic3Results2.TabIndex = 9;
-            this.topic3Results2.Text = "N/A";
+            this.topic3Results2.Text = "                                   ";
             // 
             // topic3Results3
             // 
             this.topic3Results3.AutoSize = true;
             this.topic3Results3.Location = new System.Drawing.Point(239, 98);
             this.topic3Results3.Name = "topic3Results3";
-            this.topic3Results3.Size = new System.Drawing.Size(27, 13);
+            this.topic3Results3.Size = new System.Drawing.Size(61, 26);
             this.topic3Results3.TabIndex = 10;
-            this.topic3Results3.Text = "N/A";
+            this.topic3Results3.Text = "                                   ";
             // 
             // topic3Image4
             // 
@@ -589,7 +589,7 @@
             this.topic3Image4.Name = "topic3Image4";
             this.topic3Image4.Size = new System.Drawing.Size(225, 20);
             this.topic3Image4.TabIndex = 11;
-            this.topic3Image4.Text = "topic3Image4";
+            this.topic3Image4.Text = "                                   ";
             // 
             // topic3Label
             // 
@@ -606,9 +606,9 @@
             // 
             this.topic2ResultPanel.Controls.Add(this.topic2Table);
             this.topic2ResultPanel.Controls.Add(this.topic2Label);
-            this.topic2ResultPanel.Location = new System.Drawing.Point(578, 30);
+            this.topic2ResultPanel.Location = new System.Drawing.Point(578, 23);
             this.topic2ResultPanel.Name = "topic2ResultPanel";
-            this.topic2ResultPanel.Size = new System.Drawing.Size(342, 257);
+            this.topic2ResultPanel.Size = new System.Drawing.Size(342, 268);
             this.topic2ResultPanel.TabIndex = 35;
             this.topic2ResultPanel.Visible = false;
             // 
@@ -657,7 +657,7 @@
             this.topic2Results8.Name = "topic2Results8";
             this.topic2Results8.Size = new System.Drawing.Size(63, 22);
             this.topic2Results8.TabIndex = 20;
-            this.topic2Results8.Text = "N/A";
+            this.topic2Results8.Text = "                                   ";
             // 
             // topic2Image8
             // 
@@ -667,7 +667,7 @@
             this.topic2Image8.Name = "topic2Image8";
             this.topic2Image8.Size = new System.Drawing.Size(225, 22);
             this.topic2Image8.TabIndex = 19;
-            this.topic2Image8.Text = "label9";
+            this.topic2Image8.Text = "                                   ";
             // 
             // topic2Results7
             // 
@@ -677,7 +677,7 @@
             this.topic2Results7.Name = "topic2Results7";
             this.topic2Results7.Size = new System.Drawing.Size(63, 20);
             this.topic2Results7.TabIndex = 18;
-            this.topic2Results7.Text = "N/A";
+            this.topic2Results7.Text = "                                   ";
             // 
             // topic2Image7
             // 
@@ -687,7 +687,7 @@
             this.topic2Image7.Name = "topic2Image7";
             this.topic2Image7.Size = new System.Drawing.Size(225, 20);
             this.topic2Image7.TabIndex = 17;
-            this.topic2Image7.Text = "label7";
+            this.topic2Image7.Text = "                                   ";
             // 
             // topic2Results6
             // 
@@ -697,7 +697,7 @@
             this.topic2Results6.Name = "topic2Results6";
             this.topic2Results6.Size = new System.Drawing.Size(63, 20);
             this.topic2Results6.TabIndex = 16;
-            this.topic2Results6.Text = "N/A";
+            this.topic2Results6.Text = "                                   ";
             // 
             // topic2Image6
             // 
@@ -707,7 +707,7 @@
             this.topic2Image6.Name = "topic2Image6";
             this.topic2Image6.Size = new System.Drawing.Size(225, 20);
             this.topic2Image6.TabIndex = 15;
-            this.topic2Image6.Text = "label5";
+            this.topic2Image6.Text = "                                   ";
             // 
             // topic2Results5
             // 
@@ -717,7 +717,7 @@
             this.topic2Results5.Name = "topic2Results5";
             this.topic2Results5.Size = new System.Drawing.Size(63, 20);
             this.topic2Results5.TabIndex = 14;
-            this.topic2Results5.Text = "N/A";
+            this.topic2Results5.Text = "                                   ";
             // 
             // topic2Results4
             // 
@@ -727,7 +727,7 @@
             this.topic2Results4.Name = "topic2Results4";
             this.topic2Results4.Size = new System.Drawing.Size(63, 20);
             this.topic2Results4.TabIndex = 13;
-            this.topic2Results4.Text = "N/A";
+            this.topic2Results4.Text = "                                   ";
             // 
             // topic2Image1
             // 
@@ -761,27 +761,27 @@
             this.topic2Results1.AutoSize = true;
             this.topic2Results1.Location = new System.Drawing.Point(239, 4);
             this.topic2Results1.Name = "topic2Results1";
-            this.topic2Results1.Size = new System.Drawing.Size(27, 13);
+            this.topic2Results1.Size = new System.Drawing.Size(61, 26);
             this.topic2Results1.TabIndex = 8;
-            this.topic2Results1.Text = "N/A";
+            this.topic2Results1.Text = "                                   ";
             // 
             // topic2Results2
             // 
             this.topic2Results2.AutoSize = true;
             this.topic2Results2.Location = new System.Drawing.Point(239, 37);
             this.topic2Results2.Name = "topic2Results2";
-            this.topic2Results2.Size = new System.Drawing.Size(27, 13);
+            this.topic2Results2.Size = new System.Drawing.Size(61, 26);
             this.topic2Results2.TabIndex = 9;
-            this.topic2Results2.Text = "N/A";
+            this.topic2Results2.Text = "                                   ";
             // 
             // topic2Results3
             // 
             this.topic2Results3.AutoSize = true;
             this.topic2Results3.Location = new System.Drawing.Point(239, 70);
             this.topic2Results3.Name = "topic2Results3";
-            this.topic2Results3.Size = new System.Drawing.Size(27, 13);
+            this.topic2Results3.Size = new System.Drawing.Size(61, 26);
             this.topic2Results3.TabIndex = 10;
-            this.topic2Results3.Text = "N/A";
+            this.topic2Results3.Text = "                                   ";
             // 
             // topic2Image4
             // 
@@ -791,7 +791,7 @@
             this.topic2Image4.Name = "topic2Image4";
             this.topic2Image4.Size = new System.Drawing.Size(225, 20);
             this.topic2Image4.TabIndex = 11;
-            this.topic2Image4.Text = "label1";
+            this.topic2Image4.Text = "                                   ";
             // 
             // topic2Image5
             // 
@@ -801,7 +801,7 @@
             this.topic2Image5.Name = "topic2Image5";
             this.topic2Image5.Size = new System.Drawing.Size(225, 20);
             this.topic2Image5.TabIndex = 12;
-            this.topic2Image5.Text = "label2";
+            this.topic2Image5.Text = "                                   ";
             // 
             // topic2Label
             // 
@@ -820,7 +820,7 @@
             this.topic4ResultPanel.Controls.Add(this.topic4Label);
             this.topic4ResultPanel.Location = new System.Drawing.Point(578, 294);
             this.topic4ResultPanel.Name = "topic4ResultPanel";
-            this.topic4ResultPanel.Size = new System.Drawing.Size(342, 256);
+            this.topic4ResultPanel.Size = new System.Drawing.Size(342, 272);
             this.topic4ResultPanel.TabIndex = 36;
             this.topic4ResultPanel.Visible = false;
             // 
@@ -884,27 +884,27 @@
             this.topic4Results1.AutoSize = true;
             this.topic4Results1.Location = new System.Drawing.Point(239, 4);
             this.topic4Results1.Name = "topic4Results1";
-            this.topic4Results1.Size = new System.Drawing.Size(27, 13);
+            this.topic4Results1.Size = new System.Drawing.Size(61, 26);
             this.topic4Results1.TabIndex = 8;
-            this.topic4Results1.Text = "N/A";
+            this.topic4Results1.Text = "                                   ";
             // 
             // topic4Results2
             // 
             this.topic4Results2.AutoSize = true;
             this.topic4Results2.Location = new System.Drawing.Point(239, 45);
             this.topic4Results2.Name = "topic4Results2";
-            this.topic4Results2.Size = new System.Drawing.Size(27, 13);
+            this.topic4Results2.Size = new System.Drawing.Size(61, 26);
             this.topic4Results2.TabIndex = 9;
-            this.topic4Results2.Text = "N/A";
+            this.topic4Results2.Text = "                                   ";
             // 
             // topic4Results3
             // 
             this.topic4Results3.AutoSize = true;
             this.topic4Results3.Location = new System.Drawing.Point(239, 86);
             this.topic4Results3.Name = "topic4Results3";
-            this.topic4Results3.Size = new System.Drawing.Size(27, 13);
+            this.topic4Results3.Size = new System.Drawing.Size(61, 26);
             this.topic4Results3.TabIndex = 10;
-            this.topic4Results3.Text = "N/A";
+            this.topic4Results3.Text = "                                   ";
             // 
             // topic4Image4
             // 
@@ -924,7 +924,7 @@
             this.topic4Results4.Name = "topic4Results4";
             this.topic4Results4.Size = new System.Drawing.Size(63, 40);
             this.topic4Results4.TabIndex = 12;
-            this.topic4Results4.Text = "N/A";
+            this.topic4Results4.Text = "                                   ";
             // 
             // topic4Image5
             // 
@@ -944,7 +944,7 @@
             this.topic4Results5.Name = "topic4Results5";
             this.topic4Results5.Size = new System.Drawing.Size(63, 41);
             this.topic4Results5.TabIndex = 14;
-            this.topic4Results5.Text = "N/A";
+            this.topic4Results5.Text = "                                   ";
             // 
             // topic4Label
             // 
@@ -1024,27 +1024,27 @@
             this.topic5Results1.AutoSize = true;
             this.topic5Results1.Location = new System.Drawing.Point(239, 4);
             this.topic5Results1.Name = "topic5Results1";
-            this.topic5Results1.Size = new System.Drawing.Size(27, 13);
+            this.topic5Results1.Size = new System.Drawing.Size(61, 26);
             this.topic5Results1.TabIndex = 8;
-            this.topic5Results1.Text = "N/A";
+            this.topic5Results1.Text = "                                   ";
             // 
             // topic5Results2
             // 
             this.topic5Results2.AutoSize = true;
             this.topic5Results2.Location = new System.Drawing.Point(239, 55);
             this.topic5Results2.Name = "topic5Results2";
-            this.topic5Results2.Size = new System.Drawing.Size(27, 13);
+            this.topic5Results2.Size = new System.Drawing.Size(61, 26);
             this.topic5Results2.TabIndex = 9;
-            this.topic5Results2.Text = "N/A";
+            this.topic5Results2.Text = "                                   ";
             // 
             // topic5Results3
             // 
             this.topic5Results3.AutoSize = true;
             this.topic5Results3.Location = new System.Drawing.Point(239, 106);
             this.topic5Results3.Name = "topic5Results3";
-            this.topic5Results3.Size = new System.Drawing.Size(27, 13);
+            this.topic5Results3.Size = new System.Drawing.Size(61, 26);
             this.topic5Results3.TabIndex = 10;
-            this.topic5Results3.Text = "N/A";
+            this.topic5Results3.Text = "                                   ";
             // 
             // topic5Image4
             // 
@@ -1064,7 +1064,7 @@
             this.topic5Results4.Name = "topic5Results4";
             this.topic5Results4.Size = new System.Drawing.Size(63, 52);
             this.topic5Results4.TabIndex = 12;
-            this.topic5Results4.Text = "N/A";
+            this.topic5Results4.Text = "                                   ";
             // 
             // topic5Label
             // 
@@ -1674,6 +1674,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1504, 634);
+            this.Controls.Add(this.shortResponseContainerPanel);
             this.Controls.Add(this.topic4ResultPanel);
             this.Controls.Add(this.commentsLbl);
             this.Controls.Add(this.commentsTxtBox);
@@ -1682,7 +1683,6 @@
             this.Controls.Add(this.topic5ResultPanel);
             this.Controls.Add(this.topic2ResultPanel);
             this.Controls.Add(this.topic3ResultPanel);
-            this.Controls.Add(this.shortResponseContainerPanel);
             this.Controls.Add(this.topic1ResultPanel);
             this.Controls.Add(this.additionalCommentsBtn);
             this.Controls.Add(this.touchBtn);
