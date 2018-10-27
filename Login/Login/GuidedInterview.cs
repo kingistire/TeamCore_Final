@@ -1223,7 +1223,7 @@ namespace Login {
                 otComments.Show();
             }
             else if (Globals.interview_page == 30) {
-                writeToOTCommentsDB(tbAnswer1.Text.ToString());
+                saveWrittenAnswerToDB(tbAnswer1.Text.ToString());
                 Summary sum = new Summary();
                 sum.Show();
             }
