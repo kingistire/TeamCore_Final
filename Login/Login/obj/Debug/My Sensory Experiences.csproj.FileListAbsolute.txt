@@ -185,7 +185,6 @@ C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\AxInterop.WMPLib.d
 C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.ResolveComReference.cache
 C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.AddUser.resources
 C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.EditProfile.resources
-C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.EditUser1.resources
 C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.DeleteUser.resources
 C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyInstructions.resources
 C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.FamilyInterviewCover.resources
@@ -203,9 +202,6 @@ C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.Login.resour
 C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.MDIParent1.resources
 C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.Properties.Resources.resources
 C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.Summary.resources
-C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.UserManagment.resources
-C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.ViewResults.resources
-C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.ViewResultsTable.resources
 C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.GenerateResource.cache
 C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\My Sensory Experiences.csproj.CoreCompileInputs.cache
 C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.exe
@@ -435,3 +431,4 @@ C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 3\Login\Login\obj\Debug\My Sens
 C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 3\Login\Login\obj\Debug\My Sensory Experiences.csproj.CoreCompileInputs.cache
 C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 3\Login\Login\obj\Debug\Login.exe
 C:\Users\Jason\Documents\Uni\Capstone\Sem2\Final 3\Login\Login\obj\Debug\Login.pdb
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Debug\Login.UserManagement.resources

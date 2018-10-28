@@ -1,0 +1,35 @@
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Release\CapstoneDB\CapstoneDB.mdf
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Release\CapstoneDB\CapstoneDB_log.ldf
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Release\Login.exe.config
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Release\Login.exe
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Release\Login.pdb
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Release\Interop.WMPLib.dll
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\bin\Release\AxInterop.WMPLib.dll
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Interop.WMPLib.dll
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\AxInterop.WMPLib.dll
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\My Sensory Experiences.csproj.ResolveComReference.cache
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.AddUser.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.EditProfile.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.DeleteUser.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.FamilyInstructions.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.FamilyInterviewCover.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.FamilyObservations.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.GuidedInstructions.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.IndependentInstructions.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.IndependentInterview.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.IndependentCover.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.GuidedInterviewCover.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.ProfilePage.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.SelectInterview.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.NewOTAccount.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.GuidedInterview.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.Login.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.MDIParent1.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.Properties.Resources.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.Summary.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.UserManagment.resources
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\My Sensory Experiences.csproj.GenerateResource.cache
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\My Sensory Experiences.csproj.CoreCompileInputs.cache
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.exe
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\Login.pdb
+C:\Users\bryce\Documents\TeamCore_Final\Login\Login\obj\Release\My Sensory Experiences.csprojAssemblyReference.cache

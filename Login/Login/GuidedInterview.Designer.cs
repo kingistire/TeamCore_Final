@@ -793,7 +793,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Login.Properties.Resources.AQ_login;
+            this.pictureBox2.Image = global::Login.Properties.Resources.AQ_icon;
             this.pictureBox2.Location = new System.Drawing.Point(175, 26);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";

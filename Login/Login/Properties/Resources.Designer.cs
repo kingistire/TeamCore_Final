@@ -73,9 +73,9 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap AQ_login {
+        internal static System.Drawing.Bitmap AQ_icon {
             get {
-                object obj = ResourceManager.GetObject("AQ login", resourceCulture);
+                object obj = ResourceManager.GetObject("AQ_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
