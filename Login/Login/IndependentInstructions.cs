@@ -23,7 +23,7 @@ namespace Login {
 
         public IndependentInstructions() {
             InitializeComponent();
-            SetPlayerPath(@"..\..\resources\1. Hearing\1. Are there some sounds that you don't like_\1.1.0soundDontLikePath.wav");//MISSINGFILE
+            SetPlayerPath(@"..\..\resources\0. System\SelfInterview.wav");
         }
 
         private void btnSave_Click(object sender, EventArgs e) {
