@@ -8,6 +8,7 @@ namespace Login
 {
     class ProfileData
     {
+        private string userID;
         private string firstName;
         private string lastName;
         private DateTime dob;
@@ -15,6 +16,7 @@ namespace Login
         private string phNumber;
         private string emailAddress;
 
+        public string UserID { get { return userID; } set { userID = value; } }
         public string FirstName { get { return firstName; } set { firstName = value; } }
         public string LastName { get { return lastName; } set { lastName = value; } }
         public DateTime Dob { get { return dob; } set { dob = value; } }

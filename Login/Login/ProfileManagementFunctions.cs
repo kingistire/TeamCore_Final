@@ -85,7 +85,7 @@ namespace Login
         } // end get Data
 
 
-        public void ExportProfileData(FolderBrowserDialog folderBrowserDialog1, List<ProfileData> intervieweeProfile, int thisProfileLocalId)
+        public void ExportProfileData(FolderBrowserDialog folderBrowserDialog1, List<ProfileData> intervieweeProfile)
         {
             if (folderBrowserDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -99,7 +99,7 @@ namespace Login
                     fileName = intervieweeProfile[0].LastName.Trim() +
                     ".csv";
                 }
-                string strFilePath = folderBrowserDialog1.SelectedPath + "\\SensoryExperience" + thisProfileLocalId +
+                string strFilePath = folderBrowserDialog1.SelectedPath + "\\SensoryExperience" + intervieweeProfile[0].UserID.Trim() +
                     intervieweeProfile[0].FirstName.Trim() + fileName;
 
                 string strSeparator = ",";
@@ -108,7 +108,7 @@ namespace Login
 
                 string[][] inaOutput = new string[][]
                 {
-                new string [] {thisProfileLocalId.ToString(), intervieweeProfile[0].FirstName.Trim(),
+                new string [] {intervieweeProfile[0].UserID.Trim(), intervieweeProfile[0].FirstName.Trim(),
                     intervieweeProfile[0].LastName.Trim(), intervieweeProfile[0].Dob.ToString().Trim(),
                     intervieweeProfile[0].Gender.Trim(), intervieweeProfile[0].PhNumber.Trim(),
                     intervieweeProfile[0].EmailAddress.Trim()}
@@ -117,10 +117,10 @@ namespace Login
                 List<String[]> toExportData = new List<String[]>();
                 for (int i = 0; i < intervieweeProfile.Count(); i++)
                 {
-                    toExportData.Add(new string[] {thisProfileLocalId.ToString(), intervieweeProfile[0].FirstName.Trim(),
-                    intervieweeProfile[0].LastName.Trim(), intervieweeProfile[0].Dob.ToString().Trim(),
-                    intervieweeProfile[0].Gender.Trim(), intervieweeProfile[0].PhNumber.Trim(),
-                    intervieweeProfile[0].EmailAddress.Trim()});
+                    toExportData.Add(new string[] {intervieweeProfile[i].UserID.Trim(), intervieweeProfile[i].FirstName.Trim(),
+                    intervieweeProfile[i].LastName.Trim(), intervieweeProfile[i].Dob.ToString().Trim(),
+                    intervieweeProfile[i].Gender.Trim(), intervieweeProfile[i].PhNumber.Trim(),
+                    intervieweeProfile[i].EmailAddress.Trim()});
                 }
 
                 int iLength = inaOutput.GetLength(0);

@@ -15,7 +15,7 @@ using System.Data.SqlClient;
 
 namespace Login
 {
-    public partial class UserManagment : Form
+    public partial class UserManagement : Form
     {
         private ProfileManagementFunctions profileManagementFunctionsClassObject = new ProfileManagementFunctions();
         SqlCommand cmd;
@@ -23,7 +23,7 @@ namespace Login
         private DataTable dbdataset = new DataTable();
         
         
-        public UserManagment()
+        public UserManagement()
         {
             InitializeComponent();
         }
@@ -109,13 +109,14 @@ namespace Login
 
         private void exportAllProfilesBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature has not been BUG TESTED yet!");
+            MessageBox.Show("This feature has not been BUG TESTED!");
 
             // get all data
             List<ProfileData> toExport = new List<ProfileData>();
             foreach(DataRow profile in dbdataset.Rows)
             {
                 ProfileData thisProfile = new ProfileData();
+                thisProfile.UserID = profile[0].ToString();
                 thisProfile.FirstName = profile[1].ToString();
                 thisProfile.LastName = profile[2].ToString();
                 thisProfile.Dob = Convert.ToDateTime(profile[4]);
@@ -126,8 +127,7 @@ namespace Login
                 toExport.Add(thisProfile);
             }
             // run export with list
-            int randomInt = 4;
-            profileManagementFunctionsClassObject.ExportProfileData(folderBrowserDialog1, toExport, randomInt);
+            profileManagementFunctionsClassObject.ExportProfileData(folderBrowserDialog1, toExport);
         }
     }
 }

@@ -76,7 +76,7 @@ namespace Login
             MessageBox.Show("This feature has not been BUG TESTED yet!");
             List<ProfileData> toExport = new List<ProfileData>();
             toExport.Add(intervieweeProfile);
-            profileManagementFunctionsClassObject.ExportProfileData(folderBrowserDialog1, toExport, thisProfileId);
+            profileManagementFunctionsClassObject.ExportProfileData(folderBrowserDialog1, toExport);
             
         }
 
@@ -86,6 +86,7 @@ namespace Login
                 Globals.userID = InterviewHistoryDataGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
                 Globals.previousInterviewType = (int)InterviewHistoryDataGrid.Rows[e.RowIndex].Cells[3].Value;
                 Globals.previousInterview = true;
+                Globals.usersName = nameLabel.Text;
                 Summary sum = new Summary();
                 sum.Show();
             }

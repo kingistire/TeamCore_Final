@@ -18,6 +18,13 @@ namespace Login {
             } else { //Get previousHistory
                 getOTHistory();
             }
+            touchBtn.BackColor = Color.FromArgb(255, 255, 128);
+            smellBtn.BackColor = Color.FromArgb(143, 188, 139);
+            System.Drawing.Color tasteHeader = System.Drawing.ColorTranslator.FromHtml("#C2B4E2");
+            tasteBtn.BackColor = tasteHeader;
+            summaryHeader.Text = "Summary of " + Globals.usersName + "'s interview";
+            commentsTxtBox.Enabled = false;
+            this.ActiveControl = null;
         }
 
         private const int MAXCATERGORIES = 23;
@@ -1242,6 +1249,7 @@ string text3, string text4, string text5, string text6) {
 
         private void button1_Click(object sender, EventArgs e) {
             resetAnswerLabels();
+
             soundBtn.Enabled = false;
             sightBtn.Enabled = true;
             hearingBtn.Enabled = true;
@@ -1249,6 +1257,8 @@ string text3, string text4, string text5, string text6) {
             touchBtn.Enabled = true;
             tasteBtn.Enabled = true;
             additionalCommentsBtn.Enabled = true;
+            this.ActiveControl = sightBtn;
+
             if (displayShortResponse) {
                 showAllSR();
                     shortResponseContainerPanel.Visible = true;
@@ -1278,7 +1288,7 @@ string text3, string text4, string text5, string text6) {
                     updateSRLabels(q1labelc1, q2labelc1, q3labelc1, q4labelc1,
                     "Other sounds that you don't like?",
                     "Examples in your daily life?",
-                    "Do you do anything to avoid \n these sounds (e.g., cover your ears, \n avoid noisy places?)",
+                    "Do you do anything to avoid these sounds (e.g., cover your ears, avoid noisy places?)",
                     "");
                     updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
                         "Other times when it is hard to listen?",
@@ -1286,19 +1296,19 @@ string text3, string text4, string text5, string text6) {
                         "",
                         "");
                     updateSRLabels(q1labelc3, q2labelc3, q3labelc3, q4labelc3,
-                        "Other sounds that make it hard \n to concentrate?",
+                        "Other sounds that make it hard to concentrate?",
                         "Examples in your daily life?",
-                        "Are there noises that you find \n very distracting when you have a \n job to do?",
-                        "Does noise ever make it hard \n for you to do things \n (e.g., work in an office, go to \n shopping centres?");
+                        "Are there noises that you find very distracting when you have a job to do?",
+                        "Does noise ever make it hard for you to do things (e.g., work in an office, go to shopping centres?");
                     updateSRLabels(q1labelc4, q2labelc4, q3labelc4, q4labelc4,
                         "Other sounds that you like?",
                         "Examples in your daily life?",
-                        "Are there sounds that you \n like to listen to often \n or for long periods?",
+                        "Are there sounds that you like to listen to often or for long periods?",
                         "");
                     updateSRLabels(q1labelc5, q2labelc5, q3labelc5, q4labelc5,
                         "Other sounds that you make?",
                         "Examples in your daily life?",
-                        "Do the sounds you make seem to \n bother other people?",
+                        "Do the sounds you make seem to bother other people?",
                         "");
 
                 } catch (Exception) {
@@ -1334,9 +1344,9 @@ string text3, string text4, string text5, string text6) {
                         "Are there some sounds that you make a lot?");
                     updateTopic1ResultLabel(8, "Other People Talking", "Fireworks", "Loud Voices", "Household Appliances", "Vehicles",
                         "Bathroom Appliances", "Sirens/Alarms/School Bells", "Sudden Loud Noises");
-                    updateTopic2ResultLabel(3, "If I am concentrating on something, \n I don't notice people talking to me",
-                        "I find it hard to listen to the teacher \n in noisy classrooms",
-                        "I find it hard to listen to someone \n talking to me when I'm in a group", "", "", "", "", "");
+                    updateTopic2ResultLabel(3, "If I am concentrating on something, I don't notice people talking to me",
+                        "I find it hard to listen to the teacher in noisy classrooms",
+                        "I find it hard to listen to someone talking to me when I'm in a group", "", "", "", "", "");
                     updateTopic3ResultLabel(3, "Radio On", "Clock Ticking", "People Talking", "", "", "");
                     updateTopic5ResultLabel(4, "Humming or whistling to myself", "Tapping Feet", "Tapping Fingers", "Clicking Pen", "", "");
                     updateTopic4ResultLabel(5, "Computer Sounds", "Live Music", "Fans", "Music Through My Phone", "Rhythms", "");
@@ -1404,7 +1414,7 @@ string text3, string text4, string text5, string text6) {
                     this.topic5Table.Controls.Add(this.topic5Image4, 0, 3);
                     this.topic5Table.Controls.Add(this.topic5Results4, 1, 3);
                 }
-            
+
 
         }
 
@@ -1475,7 +1485,7 @@ string text3, string text4, string text5, string text6) {
             touchBtn.Enabled = true;
             tasteBtn.Enabled = true;
             additionalCommentsBtn.Enabled = true;
-
+            this.ActiveControl = touchBtn;
             if (displayShortResponse) {
                 showAllSR();
                     hideColumn4SR();
@@ -1495,36 +1505,36 @@ string text3, string text4, string text5, string text6) {
                 } catch(Exception ex) {
      
                     }
-                    updateSRTopicLabel("Are there some things that you don't \n like to look at?",
-                    "Are there some things you see that make it \n hard to concentrate?",
-                    "Are there some things that you like \n to look at?",
+                    updateSRTopicLabel("Are there some things that you don't like to look at?",
+                    "Are there some things you see that make it hard to concentrate?",
+                    "Are there some things that you like to look at?",
                     "", "");
                 updateSRLabels(q1labelc1, q2labelc1, q3labelc1, q4labelc1,
                     "Other things that you don’t like to look at?",
                     "Examples in your daily life?",
-                    "Do you do anything to avoid \n these things (e.g., shade your eyes, \n wear sunglasses, avoid fluorescent light)?",
+                    "Do you do anything to avoid these things (e.g., shade your eyes, wear sunglasses)?",
                     "");
                 updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
-                    "Other things you see that make \n it hard to concentrate?",
+                    "Other things you see that make it hard to concentrate?",
                     "Examples in your daily life?",
                     "",
                     "");
                 updateSRLabels(q1labelc3, q2labelc3, q3labelc3, q4labelc3,
                     "Other things that you like to look at?",
                     "Examples in your daily life?",
-                    "Are there things you look at often \n or for long periods?",
+                    "Are there things you look at often or for long periods?",
                     "");
             } else {
-                    updateTopicLabel("Are there some things that you don't \n like to look at?",
-                        "Are there some things you see that make it \n hard to concentrate?",
-                        "Are there some things that you like \n to look at?",
+                    updateTopicLabel("Are there some things that you don't like to look at?",
+                        "Are there some things you see that make it hard to concentrate?",
+                        "Are there some things that you like to look at?",
                         "", "");
                     topic1ResultPanel.Visible = true;
                     topic2ResultPanel.Visible = true;
                     topic3ResultPanel.Visible = true;
                     updateTopic1ResultLabel(5, "Sunlight", "Fluorescent Light", "Light and Shadow", 
                         "Busy Patterns", "Classroom Light", "", "", "");
-                    updateTopic2ResultLabel(3, "Lots of Things in a Messy Drawer", "People Running Around Me", "Lots of Things Hanging up in \n the classroom", "", "", "", "", "");
+                    updateTopic2ResultLabel(3, "Lots of Things in a Messy Drawer", "People Running Around Me", "Lots of Things Hanging up in the classroom", "", "", "", "", "");
                     updateTopic3ResultLabel(5, "Moving Lights", "Things That Sparkle", "Geometric Patterns", "Spinning Fans", "Spinning Objects", "");
                         try {
                         if (!Globals.previousInterview) {
@@ -1587,7 +1597,7 @@ string text3, string text4, string text5, string text6) {
             touchBtn.Enabled = true;
             tasteBtn.Enabled = true;
             additionalCommentsBtn.Enabled = true;
-
+            this.ActiveControl = additionalCommentsBtn;
             resetAnswerLabels();
             if (displayShortResponse) {
                 showAllSR();
@@ -1615,32 +1625,32 @@ string text3, string text4, string text5, string text6) {
                 srAnswer4.Enabled = true;
                 srAnswer16.Enabled = true;
                 q4labelc4.Enabled = true;
-                    updateSRTopicLabel("Are there some ways of moving \n that you don't like?",
-                    "Are there times when it is hard for \n you to stay still?",
-                    "Are there some ways of moving that \n you don't like?",
-                    "Are there some ways that you move over \n and over again?", "");
+                    updateSRTopicLabel("Are there some ways of moving that you don't like?",
+                    "Are there times when it is hard for you to stay still?",
+                    "Are there some ways of moving that you don't like?",
+                    "Are there some ways that you move over and over again?", "");
 
 
                 updateSRLabels(q1labelc1, q2labelc1, q3labelc1, q4labelc1,
-                    "Other ways of moving that you \n don’t like?",
+                    "Other ways of moving that you don’t like?",
                     "Examples in your daily life?",
-                    "Are there movement experiences that you \n find scary or unpleasant?",
-                    "Do you do anything to avoid \n these movements?");
+                    "Are there movement experiences that you find scary or unpleasant?",
+                    "Do you do anything to avoid these movements?");
                 updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
                     "Examples in your daily life?",
                     "",
                     "",
                     "");
                 updateSRLabels(q1labelc3, q2labelc3, q3labelc3, q4labelc3,
-                    "Other ways of moving that \n you like?",
-                    "Examples in your \n daily life?",
+                    "Other ways of moving that you like?",
+                    "Examples in your daily life?",
                     "",
                     "");
                 updateSRLabels(q1labelc4, q2labelc4, q3labelc4, q4labelc4,
-                    "Other ways that you move \n over and over again?",
+                    "Other ways that you move over and over again?",
                     "Examples in your daily life?",
-                    "Are there movements that you make \n repeatedly when you are anxious?",
-                    "Are there movements that you make \n repeatedly when you are excited?");
+                    "Are there movements that you make repeatedly when you are anxious?",
+                    "Are there movements that you make repeatedly when you are excited?");
 
             } else {
                     
@@ -1648,11 +1658,11 @@ string text3, string text4, string text5, string text6) {
                     clearTable(topic2Table, 2);
                     clearTable(topic3Table, 5);
                     clearTable(topic4Table, 4);
-                    updateTopicLabel("Are there some ways of moving \n that you don't like?",
-                        "Are there times when it is hard for \n you to stay still?",
-                        "Are there some ways of moving that \n you don't like?",
-                        "Are there some ways that you move over \n and over again?", "");
-                    updateTopic1ResultLabel(5, "Being Jumped on/Tackled", "Moving when I can't see \n where I am going", "Balancing", "Being Upside Down", "Climbing Up High", "", "", "");
+                    updateTopicLabel("Are there some ways of moving that you don't like?",
+                        "Are there times when it is hard for you to stay still?",
+                        "Are there some ways of moving that you don't like?",
+                        "Are there some ways that you move over and over again?", "");
+                    updateTopic1ResultLabel(5, "Being Jumped on/Tackled", "Moving when I can't see where I am going", "Balancing", "Being Upside Down", "Climbing Up High", "", "", "");
                     updateTopic2ResultLabel(2, "Standing Still", "Sitting Still", "", "", "", "", "", "");
                     updateTopic3ResultLabel(5, "Moving in Water", "Swinging", "Spinning", "Jumping on The Trampoline", "Running", "");
                     updateTopic4ResultLabel(4, "Rocking", "Moving Hands", "Clapping", "Pacing", "", "");
@@ -1726,6 +1736,7 @@ string text3, string text4, string text5, string text6) {
             touchBtn.Enabled = true;
             tasteBtn.Enabled = true;
             additionalCommentsBtn.Enabled = true;
+            this.ActiveControl = tasteBtn;
 
             resetAnswerLabels();
 
@@ -1756,12 +1767,12 @@ string text3, string text4, string text5, string text6) {
                 updateSRLabels(q1labelc1, q2labelc1, q3labelc1, q4labelc1,
                     "Other smells that you don’t like?",
                     "Examples in your daily life?",
-                    "Do you do anything to avoid these smells \n (e.g., avoid public toilets or cleaning \n products aisles at the supermarket)?",
+                    "Do you do anything to avoid these smells (e.g., avoid public toilets)?",
                     "");
                 updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
                     "Other things you like to smell",
                     "Examples in your daily life?",
-                    "Are there things that you like to \n smell often or for long periods?",
+                    "Are there things that you like to smell often or for long periods?",
                     "");
 
             } else {
@@ -1827,6 +1838,7 @@ string text3, string text4, string text5, string text6) {
             touchBtn.Enabled = false;
             tasteBtn.Enabled = true;
             additionalCommentsBtn.Enabled = true;
+            this.ActiveControl = smellBtn;
 
             resetAnswerLabels();
             if (displayShortResponse) {
@@ -1849,24 +1861,24 @@ string text3, string text4, string text5, string text6) {
  
                 }
                 hideIndividual(q4labelc3, srAnswer12);
-                updateSRTopicLabel("Are there some things that you don't \n like the feeling of?",
-                "Are there ways that people touch you that \n you don't like?",
-                "Are there some things that you \n like the feeling of?",
+                updateSRTopicLabel("Are there some things that you don't like the feeling of?",
+                "Are there ways that people touch you that you don't like?",
+                "Are there some things that you like the feeling of?",
                 "", "");
                 updateSRLabels(q1labelc1, q2labelc1, q3labelc1, q4labelc1,
                     "Other things you don’t like the feeling of?",
                     "Examples in your daily life?",
-                    "Do touch sensations ever make \n it hard for you to do things \n (e.g., wear some types of \n clothing or walk on the grass)?",
-                    "Does you do anything to avoid \n these things (e.g., avoid certain \n clothes or textures)?");
+                    "Do touch sensations ever make it hard for you to do things?",
+                    "Do you do anything to avoid these things (e.g., avoid certain clothes)?");
                 updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
-                    "Other ways people touch you \n that you don’t like?",
+                    "Other ways people touch you that you don’t like?",
                     "Examples in your daily life?",
-                    "Does difficulty coping with being \n touched make it hard for you to do things \n (e.g., visit the doctor or the dentist)?",
-                    "Do you do anything to avoid being touched \n (e.g., avoid crowded places)");
+                    "Does difficulty coping with being touched make it hard for you to do things (e.g., visit the doctor or the dentist)?",
+                    "Do you do anything to avoid being touched (e.g., avoid crowded places)");
                 updateSRLabels(q1labelc3, q2labelc3, q3labelc3, q4labelc3,
-                    "Other things that you like \n the feeling of?",
+                    "Other things that you like the feeling of?",
                     "Examples in your daily life?",
-                    "Are there things that you like \n to touch often or for long periods?",
+                    "Are there things that you like to touch often or for long periods?",
                     "");
                 q4labelc1.Enabled = true;
                 srAnswer4.Enabled = true;
@@ -1880,9 +1892,9 @@ string text3, string text4, string text5, string text6) {
                 clearTable(resultsTable, 8);
                 clearTable(topic2Table, 8);
                 clearTable(topic3Table, 6);
-                updateTopicLabel("Are there some things that you don't \n like the feeling of?",
-                    "Are there ways that people touch you that \n you don't like?",
-                    "Are there some things that you \n like the feeling of?",
+                updateTopicLabel("Are there some things that you don't like the feeling of?",
+                    "Are there ways that people touch you that you don't like?",
+                    "Are there some things that you like the feeling of?",
                     "", "");
                 updateTopic1ResultLabel(8, "Sandy", "Sticky", "Grassy", "Wool Clothes", "Tight Clothes", "Stiff Clothes", "Shoes", "Splashing Water");
                 updateTopic2ResultLabel(8, "Being Hugged or Kissed", "Being Crowded", "Being Tapped on The Shoulder", "Having Sunscreen Put on",
@@ -2061,6 +2073,7 @@ string text3, string text4, string text5, string text6) {
             touchBtn.Enabled = true;
             tasteBtn.Enabled = true;
             additionalCommentsBtn.Enabled = false;
+            this.ActiveControl = changeSummaryPanelType;
 
             resetAnswerLabels();
             if (displayShortResponse) {
@@ -2079,20 +2092,20 @@ string text3, string text4, string text5, string text6) {
                 } catch (Exception ex) {
  
                 }
-                updateSRTopicLabel("Are there some places with lots of things \n happening at once that you don't like?",
-                "Are there other sensations that you \n feel strongly about?",
+                updateSRTopicLabel("Are there some places with lots of things happening at once that you don't like?",
+                "Are there other sensations that you feel strongly about?",
                 "", "", "");
 
                 updateSRLabels(q1labelc1, q2labelc1, q3labelc1, q4labelc1,
-                    "Other places with lots of \n things happening at once that  \n you don’t like?",
+                    "Other places with lots of things happening at once that you don’t like?",
                     "Examples in your daily life?",
-                    "How do you react to places with \n lots of things happening at once?",
-                    "Do you do anything to avoid places \n with lots of things happening at once?");
+                    "How do you react to places with lots of things happening at once?",
+                    "Do you do anything to avoid places with lots of things happening at once?");
                 updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
-                    "Other sounds, smells, sights, \n tastes, feelings, or movements?",
+                    "Other sounds, smells, sights, tastes, feelings, or movements?",
                     "Examples in your daily life?",
-                    "How do you react to these \n other things?",
-                    "Do you do anything to avoid \n these other things?");
+                    "How do you react to these other things?",
+                    "Do you do anything to avoid these other things?");
                 q3labelc1.Enabled = true;
                 q4labelc1.Enabled = true;
                 q3labelc2.Enabled = true;
@@ -2105,8 +2118,8 @@ string text3, string text4, string text5, string text6) {
             } else {
                 clearTable(resultsTable, 5);
                 clearTable(topic2Table, 6);
-                updateTopicLabel("Are there some places with lots of things \n happening at once that you don't like?",
-                    "Are there other sensations that you \n feel strongly about?",
+                updateTopicLabel("Are there some places with lots of things happening at once that you don't like?",
+                    "Are there other sensations that you feel strongly about?",
                     "", "", "");
                 updateTopic1ResultLabel(5, "Supermarket", "Party", "Food Hall", "Show", "Shopping Mall", "", "", "");
                 updateTopic2ResultLabel(6, "Sound", "Smells", "Sights", "Tastes", "Feelings", "Movements", "", "");
@@ -2164,6 +2177,8 @@ string text3, string text4, string text5, string text6) {
             touchBtn.Enabled = true;
             tasteBtn.Enabled = false;
             additionalCommentsBtn.Enabled = true;
+            this.ActiveControl = hearingBtn;
+
             resetAnswerLabels();
             if (displayShortResponse) {
                 showAllSR();
@@ -2195,29 +2210,29 @@ string text3, string text4, string text5, string text6) {
                 srAnswer7.Enabled = true;
                 srAnswer15.Visible = false;
                 updateSRTopicLabel("Are there some food groups that you don't like eating?",
-                    "Are there some ways that food tastes or feels \n in your mouth that you don't like?",
+                    "Are there some ways that food tastes or feels in your mouth that you don't like?",
                     "Are there some things you really like to eat?",
-                    "Are there some things that you put in \n your mouth a lot?",
+                    "Are there some things that you put in your mouth a lot?",
                     "");
 
                 updateSRLabels(q1labelc1, q2labelc1, q3labelc1, q4labelc1,
-                    "Other types of food that you \n don’t like?",
+                    "Other types of food that you don’t like?",
                     "Examples in your daily life?",
                     "",
                     "");
                 updateSRLabels(q1labelc2, q2labelc2, q3labelc2, q4labelc2,
                     "Other ways food tastes or feels that you don’t like?",
                     "Examples in your daily life?",
-                    "Do you do anything to avoid \n eating certain foods (e.g., avoid \n eating in restaurants or at other  \n people’s homes)?",
+                    "Do you do anything to avoid eating certain foods (e.g., avoid eating in restaurants)?",
                     "");
                 updateSRLabels(q1labelc3, q2labelc3, q3labelc3, q4labelc3,
                     "Examples in your daily life?",
-                    "Are there certain types of foods \n that you crave and want to eat \n repeatedly?",
+                    "Are there certain types of foods that you crave and want to eat repeatedly?",
                     "",
                     "");
                 updateSRLabels(q1labelc4, q2labelc4, q3labelc4, q4labelc4,
                     "Other things you put in your mouth?",
-                    "Are there things that you often \n put in your mouth? Are any of \n them dangerous or unhygienic?",
+                    "Are there things that you often put in your mouth? Are any of them dangerous or unhygienic?",
                     "",
                     "");
 
@@ -2229,15 +2244,15 @@ string text3, string text4, string text5, string text6) {
                 clearTable(topic3Table, 2);
                 clearTable(topic4Table, 3);
                 updateTopicLabel("Are there some food groups that you don't like eating?",
-                    "Are there some ways that food tastes or feels \n in your mouth that you don't like?",
+                    "Are there some ways that food tastes or feels in your mouth that you don't like?",
                     "Are there some things you really like to eat?",
-                    "Are there some things that you put in \n your mouth a lot?",
+                    "Are there some things that you put in your mouth a lot?",
                     "");
                 updateTopic1ResultLabel(8, "Vegetables", "Fruit", "Meat", "Fish", "Eggs",
                     "Dairy", "Bread", "Pasta");
                 updateTopic2ResultLabel(8, "Lumpy", "Chewy", "Runny/Slippery", "Mixed", "Sweet", "Sour", "Salty", "Spicy");
-                updateTopic3ResultLabel(2, "Familiar Foods, only a few types of foods \n i.e. I Don't Like Trying New Foods",
-                    "Unfamiliar Foods, lots of different types of foods \n i.e. I Like Trying New Foods", "", "", "", "");
+                updateTopic3ResultLabel(2, "Familiar Foods, only a few types of foods i.e. I Don't Like Trying New Foods",
+                    "Unfamiliar Foods, lots of different types of foods i.e. I Like Trying New Foods", "", "", "", "");
                 updateTopic4ResultLabel(3, "Shirt", "Hair", "Objects", "", "", "");
                 try {
                     if (!Globals.previousInterview) {
@@ -2316,8 +2331,7 @@ string text3, string text4, string text5, string text6) {
             topic2ResultPanel.Visible = true;       
             topic3ResultPanel.Visible = true;       
             topic4ResultPanel.Visible = true;       
-            topic5ResultPanel.Visible = true;       
-
+            topic5ResultPanel.Visible = true;
             //getInterviewType();
         }
 

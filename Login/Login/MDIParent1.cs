@@ -16,7 +16,7 @@ namespace Login {
         public MDIParent1() {
             InitializeComponent();
 
-            UserManagment userMngment = new UserManagment();
+            UserManagement userMngment = new UserManagement();
             userMngment.MdiParent = this;
             userMngment.Show();
 
@@ -44,7 +44,7 @@ namespace Login {
         }
 
         private void userManagementToolStripMenuItem_Click(object sender, EventArgs e) {
-            UserManagment viewUserManagment = new UserManagment();
+            UserManagement viewUserManagment = new UserManagement();
             viewUserManagment.MdiParent = this;
             viewUserManagment.Show();
         }
