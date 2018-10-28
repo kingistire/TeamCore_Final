@@ -293,6 +293,8 @@ namespace Login {
             else if (Globals.interview_page == 48) {
                 tasteInterviewPage4();
                 TasteColours();
+                lblTM.Size = new Size(250, 75);
+                lblBM.Size = new Size(250, 75);
             }
             //added Globals.interview_page++ to skip over page 50 (duplicate)
             else if (Globals.interview_page == 49) {
@@ -891,7 +893,7 @@ namespace Login {
             topMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\8 Dentist touching me (cropped).jpg");
             topMiddleReadOutLoudPath = @"..\..\resources\3. Touch\2. Are there ways that people touch you that you don't like_\3.2.8Dentist.wav";
 
-            updateLabelText("Doctor touching me", "Dentist touch me", "", "",
+            updateLabelText("Doctor touching me", "Dentist touching me", "", "",
                 "", "");
         }
 
@@ -1283,7 +1285,7 @@ namespace Login {
             SetPageLabelPath(@"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\5.4.x are there some things that you put in your mouth a lot.wav");
 
             panel2lblQuestion.Text = "Are there some things that you put in your mouth a lot?";
-            lblQuestion1.Text = "Other things you put in your mouth";
+            lblQuestion1.Text = "Other things you put in your mouth?";
             lblQuestion2.Text = "Examples in your daily life?";
             SetTextQuestion1Player(@"..\..\resources\5. Taste\4. Are there some things that you put in your mouth a lot_\5.4.x other things you put in your mouth.wav");
             SetTextQuestion2Player(@"..\..\resources\0. System\Examples in your daily life.wav");

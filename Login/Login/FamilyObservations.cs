@@ -513,7 +513,7 @@ namespace Login {
             //bottomLeftPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there things that you don't like the feeling of_\.jpg");
             //bottomMidPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there things that you don't like the feeling of_\Spinning objects.jpg");
             //bottomRightPB.Image = new Bitmap(@"..\..\resources\3. Touch\1. Are there things that you don't like the feeling of_\");
-            updateLabelText("Doctor touching him/her", "Dentist touch him/her", "", "",
+            updateLabelText("Doctor touching him/her", "Dentist touching him/her", "", "",
                 "", "");
         }
 
